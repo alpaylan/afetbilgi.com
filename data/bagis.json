@@ -29,7 +29,7 @@
             "credit_card": "https://ahbap.org/bagis-kategorisi/5"
         }
     ],
-    "international": [
+    "international_urls": [
         {
             "country": "ABD",
             "name": "Turkish Philantrophy Funds",
@@ -49,7 +49,9 @@
             "name": "Time to Help(UK)",
             "country": "Birleşik Krallık",
             "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-        },
+        }
+    ],
+    "international_bank_accounts": [
         {
             "name": "AFAD",
             "country": "TR",
