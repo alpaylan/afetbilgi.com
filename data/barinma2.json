@@ -8,7 +8,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Adana",
                             "name": "Gündoğdu Koleji",
@@ -85,7 +85,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Gaziantep",
                             "name": "ASKON Gaziantep Şubesi",
@@ -252,7 +252,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Malatya",
                             "name": "ASKON Malatya Şubesi",
@@ -353,7 +353,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Diyarbakır",
                             "name": "ASKON Diyarbakır Şubesi",
@@ -670,7 +670,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Şanlıurfa",
                             "name": "ASKON Şanlıurfa Şubesi",
@@ -813,7 +813,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "K. Maraş",
                             "name": "ASKON K.Maraş Şubesi",
@@ -872,7 +872,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Osmaniye",
                             "name": "ASKON Osmaniye Şubesi",
@@ -979,7 +979,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Adıyaman",
                             "name": "ASKON Adıyaman Şubesi",
@@ -1002,7 +1002,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Kilis",
                             "name": "ASKON Kilis Şubesi",
@@ -1031,7 +1031,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Mardin",
                             "name": "Midyat Çadırkent",
@@ -1048,7 +1048,7 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": [
+                    "items": [
                         {
                             "city": "Hatay",
                             "name": "Altınözü Konteynerkent",
