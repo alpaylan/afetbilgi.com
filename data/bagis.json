@@ -165,7 +165,7 @@
         {
             "name": "AKUT",
             "country": "TR",
-            "description": [
+            "accounts": [
                 {
                     "name": "T. İş Bankası",
                     "branch": "Gayrettepe Şubesi",
@@ -203,7 +203,7 @@
         {
             "name": "Kızılay",
             "country": "Almanya",
-            "description": [
+            "accounts": [
                 {
                     "name": "Ziraat Bankası",
                     "branch": "Frankfurt",
@@ -216,7 +216,7 @@
         {
             "name": "AHBAP",
             "country": "TR",
-            "description": [
+            "accounts": [
                 {
                     "name": "TÜRKİYE İŞ BANKASI",
                     "branch": "Frankfurt",
