@@ -85,6 +85,7 @@
                     {
                         "name": "Kızılhaç",
                         "value": {
+                            "type": "data",
                             "data": {
                                 "data-type": "international-url-donation",
                                 "country": "Avusturya",

@@ -85,16 +85,6 @@
                 "type": "data",
                 "data": {
                     "data-type": "city-barinma",
-                    "values": []
-                }
-            }
-        },
-        {
-            "name": "Gaziantep",
-            "value": {
-                "type": "data",
-                "data": {
-                    "data-type": "city-barinma",
                     "values": [
                         {
                             "city": "Gaziantep",
