@@ -1,0 +1,90 @@
+[
+    {
+        "name": "AFAD Kahramanmaraş",
+        "phone_number": "(0344) 221 49 91"
+    },
+    {
+        "name": "AFAD Adana",
+        "phone_number": "(0322) 227 28 54"
+    },
+    {
+        "name": "AFAD Hatay",
+        "phone_number": "(0326) 233 54 15"
+    },
+    {
+        "name": "AFAD Gaziantep",
+        "phone_number": "(0342) 428 11 18"
+    },
+    {
+        "name": "AFAD Diyarbakır",
+        "phone_number": "(0412) 326 11 58"
+    },
+    {
+        "name": "AFAD Adıyaman",
+        "phone_number": "(0416) 216 12 31"
+    },
+    {
+        "name": "AFAD Şanlıurfa",
+        "phone_number": "(0414) 313 72 90"
+    },
+    {
+        "name": "AFAD Malatya",
+        "phone_number": "(0422) 212 84 32"
+    },
+    {
+        "name": "AFAD Osmaniye",
+        "phone_number": "(0328) 826 20 02"
+    },
+    {
+        "name": "AFAD Kilis",
+        "phone_number": "(0348) 813 44 78"
+    },
+    {
+        "name": "AKUT Genel Merkez ",
+        "phone_number": "0(212) 217 04 10"
+    },
+    {
+        "name": "KIZILAY ÇAĞRI MERKEZİ",
+        "phone_number": "168"
+    },
+    {
+        "name": "POLİS",
+        "phone_number": "112"
+    },
+    {
+        "name": "ITFAİYE",
+        "phone_number": "112"
+    },
+    {
+        "name": "AMBULANS",
+        "phone_number": "112"
+    },
+    {
+        "name": "JANDARMA",
+        "phone_number": "112"
+    },
+    {
+        "name": "SAHİL GÜVENLİK",
+        "phone_number": "112"
+    },
+    {
+        "name": "ORMAN YANGINI İHBAR",
+        "phone_number": "112"
+    },
+    {
+        "name": "AFET ARAMA KURTARMA",
+        "phone_number": "112"
+    },
+    {
+        "name": "SU ARIZA İHBAR",
+        "phone_number": "185"
+    },
+    {
+        "name": "ELEKTRİK ARIZA İHBAR",
+        "phone_number": "186"
+    },
+    {
+        "name": "DOĞALGAZ ARIZA İHBAR",
+        "phone_number": "187"
+    }
+]
