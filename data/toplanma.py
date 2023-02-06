@@ -18,7 +18,6 @@ with open("data/toplanma.json", "r", encoding="utf-8") as f:
                 },
             },
         })
-        print(key)
 
     result = {
         "type": "question",
