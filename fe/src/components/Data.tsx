@@ -4,7 +4,7 @@ import BankData from './data/BankData';
 import CityAccommodation from './data/CityAccommodation';
 import CreditCardData from './data/CreditCardData';
 import HelpItemData from './data/HelpItemData';
-import ItemData from './data/ItemData';
+import GatheringData from './data/GatheringData';
 import URLData from './data/URLData';
 import SMSData from './data/SMSData';
 
@@ -31,8 +31,8 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
       return <URLData value={dataNode.data as any} />
     }
 
-    if (dataNode.data.dataType === 'item-list') {
-      return <ItemData value={dataNode.data as any} />
+    if (dataNode.data.dataType === 'gathering-list') {
+      return <GatheringData value={dataNode.data as any} />
     }
 
     if (dataNode.data.dataType === 'help-item-list') {

@@ -48,7 +48,8 @@ export interface CreditCardNode extends DataNode {
     url: string;
 }
 
-export interface ItemDataNode extends DataNode {
+export interface GatheringDataNode extends DataNode {
+  city: string;
   items: string[];
 }
 
