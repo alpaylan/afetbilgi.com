@@ -14,12 +14,20 @@ import ArticleData from './data/ArticleData';
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
-    if (dataNode.data.dataType === 'city-accommodation') {
-      return <CityAccommodation value={dataNode.data as any} />
-    }
-
     if (dataNode.data.dataType === 'bank-account-donation') {
       return <BankData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'beneficial-articles') {
+      return <ArticleData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'blood-donation') {
+      return <BloodDonationData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'city-accommodation') {
+      return <CityAccommodation value={dataNode.data as any} />
     }
 
     if (dataNode.data.dataType === 'credit-card-donation') {
@@ -42,24 +50,16 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
       return <HelpItemData value={dataNode.data as any} />
     }
 
-    if (dataNode.data.dataType === 'url-donation') {
-      return <URLData value={dataNode.data as any} />
+    if (dataNode.data.dataType === 'phone-number-list') {
+      return <TelephoneData value={dataNode.data as any} />
     }
 
     if (dataNode.data.dataType === 'sms-donation') {
       return <SMSData value={dataNode.data as any} />
     }
 
-    if (dataNode.data.dataType === 'blood-donation') {
-      return <BloodDonationData value={dataNode.data as any} />
-    }
-
-    if (dataNode.data.dataType === 'phone-number-list') {
-      return <TelephoneData value={dataNode.data as any} />
-    }
-
-    if (dataNode.data.dataType === 'beneficial-articles') {
-      return <ArticleData value={dataNode.data as any} />
+    if (dataNode.data.dataType === 'url-donation') {
+      return <URLData value={dataNode.data as any} />
     }
 
     return <></>;
