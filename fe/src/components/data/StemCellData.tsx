@@ -25,7 +25,7 @@ export default function StemCellData({ value }: { value: StemCellDataNode }) {
                             {item.area}
                         </TableCell>
                         <TableCell>{item.city}</TableCell>
-                        <TableCell>{item.address}</TableCell>
+                        <TableCell><a href={item.address}>{item.address}</a></TableCell>
                         <TableCell><a href={`tel:+90${item.phone.replace(/^0/, "").replace(/ /g, "")}`}>{item.phone}</a></TableCell>
                         </TableRow>
                     ))}
