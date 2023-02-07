@@ -3,7 +3,7 @@ import json
 
 out = {
     "type": "question",
-    "text": "Hangi şehirde kalacak yer arıyorsunuz?",
+    "text": "Hangi şehirde kan verebilirsiniz?",
     "options": []
 }
 with open(f"blood_1.json", "r") as f:
