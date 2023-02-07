@@ -1,6 +1,7 @@
 {
     "type": "question",
     "text": "Hangi şehirde kalacak yer arıyorsunuz?",
+    "autocompleteHint": "Şehir",
     "options": [
         {
             "name": "Adana",

@@ -33,6 +33,7 @@ for i in range(1, 3):
 out = {
     "type": "question",
     "text": "Hangi şehirde kalacak yer arıyorsunuz?",
+    "autocompleteHint": "Şehir",
     "options": []
 }
 

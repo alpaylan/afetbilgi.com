@@ -1,6 +1,7 @@
 {
     "type": "question",
     "text": "Hangi şehirde kan verebilirsiniz?",
+    "autocompleteHint": "Şehir",
     "options": [
         {
             "name": "ADANA",

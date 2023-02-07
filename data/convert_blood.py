@@ -4,6 +4,7 @@ import json
 out = {
     "type": "question",
     "text": "Hangi şehirde kan verebilirsiniz?",
+    "autocompleteHint": "Şehir",
     "options": []
 }
 with open(f"blood_1.json", "r") as f:
