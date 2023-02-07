@@ -32,11 +32,11 @@ const App = () => {
           {location.pathname !== '/' && location.pathname !== '/en' && (
               <>
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(location.pathname.startsWith('/en') ? '/en': '/')}>
-                ANA SAYFA
+              {lang === 'en' ? 'ANA SAYFA' : 'MAIN PAGE'}
               </Button>
 
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-                GERİ
+              {lang === 'en' ? 'GERİ' : 'BACK'}
               </Button>
               </>
           )}
