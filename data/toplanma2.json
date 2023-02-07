@@ -6,7 +6,7 @@
             "name": "Malatya",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "Akçadağ Belediye Binası ve Lojman Alanı (Akçadağ, Doğu Mahallesi)",
@@ -93,7 +93,7 @@
             "name": "Maraş",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "(Pazarcık) Mehmet Emin Arikoglu Parkı",
@@ -131,7 +131,7 @@
             "name": "Hatay",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "Pac Yeşil Alanı(Barbaros)",
@@ -182,7 +182,7 @@
             "name": "Diyarbakır",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "Koşuyolu Parkı (Bağlar)",
@@ -212,7 +212,7 @@
             "name": "Antep",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "ALLEBEN VADI PARK",
@@ -233,7 +233,7 @@
             "name": "Urfa",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "AKÇAKALE ADNAN MENDERES PARKI",
@@ -366,7 +366,7 @@
             "name": "Adana",
             "value": {
                 "type": "data",
-                "value": {
+                "data": {
                     "dataType": "item-list",
                     "items": [
                         "Aski Atatürk Kapali Spor Salonu",
