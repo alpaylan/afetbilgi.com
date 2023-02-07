@@ -9,6 +9,7 @@ export default function BankData({ value }: { value: BankDataNode }) {
           <List>
             {account.name && <ListItem>{account.name}</ListItem>}
             {account.branch && <ListItem>{account.branch}</ListItem>}
+            {account.ownerName && <ListItem>{account.ownerName}</ListItem>}
             {account.tl && <ListItem>TL Hesabı: {account.tl}</ListItem>}
             {account.usd && <ListItem>USD Hesabı: {account.usd}</ListItem>}
             {account.eur && <ListItem>USD Hesabı: {account.eur}</ListItem>}

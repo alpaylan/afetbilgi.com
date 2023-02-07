@@ -93,8 +93,14 @@
                                         "type": "data",
                                         "data": {
                                             "dataType": "bank-account-donation",
-                                            "name": "AHBAP",
-                                            "iban": "TR120006400000110211380059"
+                                            "country": "TR",
+                                            "accounts": [
+                                                {
+                                                "name": "TÜRKİYE İŞ BANKASI",
+                                                "ownerName": "AHBAP",
+                                                "tl": "TR120006400000110211380059"
+                                                }
+                                            ]
                                         }
                                     }
                                 },

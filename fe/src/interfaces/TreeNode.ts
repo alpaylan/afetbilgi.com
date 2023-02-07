@@ -24,6 +24,7 @@ export interface BankDataNode extends DataNode {
   accounts: {
     name: string;
     branch: string;
+    ownerName?: string;
     tl: string;
     eur?: string;
     usd?: string;
