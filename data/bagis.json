@@ -51,11 +51,18 @@
                                     "name": "Banka Hesabından Havale/EFT",
                                     "value": {
                                         "type": "data",
-                                        "data": [{
+                                        "data": {
                                             "dataType": "bank-account-donation",
                                             "name": "Kızılay",
-                                            "iban": "TR480001002110000028685254"
-                                        }]
+                                            "country": "TR",
+                                            "accounts": [
+                                                {
+                                                "name": "Ziraat Bankası",
+                                                "tl": "TR480001002110000028685254"
+                                                }
+                                            ]
+                                            
+                                        }
                                     }
                                 },
                                 {
