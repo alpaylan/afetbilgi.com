@@ -1,76 +1,67 @@
 {
     "type": "question",
-    "text": "Hangi şehirde barınabilirsiniz?",
+    "text": "Hangi şehirde kalacak yer arıyorsunuz?",
     "options": [
         {
             "name": "Adana",
             "value": {
                 "type": "data",
                 "data": {
+                    "city": "Adana",
                     "dataType": "city-accommodation",
                     "items": [
                         {
-                            "city": "Adana",
                             "name": "Gündoğdu Koleji",
                             "is_validated": false,
                             "url": "https://twitter.com/amofesor/status/1622607644832804865"
                         },
                         {
-                            "city": "Adana",
                             "name": "Bahçeşehir Koleji",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Uğur Okulları",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Altıneller 100.Yıl ve Mavi Bulvar Kampüsü",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Eral İlokul ve Ortaokul",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Minecan Anaokulu",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Adana Koleji",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "Adana Final Okulları",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "TED Adana Koleji",
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
                         },
                         {
-                            "city": "Adana",
                             "name": "İstanbul Otel(Seyhan)",
                             "is_validated": true,
-                            "url": "3224333333"
+                            "phone_number": "0322 433 33 33",
+                            "url": "https://www.google.com/travel/hotels/istanbul%20otel%20seyhan/entity/CgoIjNqS8fzx59VAEAE/reviews"
                         },
                         {
-                            "city": "Adana",
                             "name": "ASKON Adana Şubesi",
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"

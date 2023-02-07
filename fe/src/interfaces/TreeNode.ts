@@ -34,8 +34,10 @@ export interface BankDataNode extends DataNode {
 }
 
 export interface CityAccommodationNode extends DataNode {
+  city: string;
   items: {
     name: string;
+    phone_number?: string;
     url: string;
   }[];
 }
