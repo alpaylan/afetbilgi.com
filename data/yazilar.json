@@ -1,0 +1,53 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "articles",
+        "articles": [
+            {
+                "title": "Deprem Sonrası Yardımlaşma Dosyası",
+                "author": "Armen Dayıgiloğlu",
+                "url": "https://docs.google.com/document/d/15f4zS5tc9-XalVChLlKTIHOgYpWNpTJ-qR9CygmSJxQ/edit?usp=sharing"
+            },
+            {
+                "title": "Takip Listesi",
+                "author": "imeceplatformu",
+                "url": "https://www.instagram.com/imeceplatformu/guide/takip-listesi-depremler/18005172658575421/"
+            },
+            {
+                "title": "Depremzede İlk Yardım",
+                "author": "AHBAP",
+                "url": "https://twitter.com/ahbapacil/status/1622641519323754497"
+            },
+            {
+                "title": "Deprem Sonrası Çocuklara Nasıl Yaklaşılmalı",
+                "author": "TRT Çocuk",
+                "url": "https://www.trtcocuk.net.tr/ebeveyn-akademisi/ebeveyn-olmak/deprem-sonrasi-cocuklara-nasil-yaklasilmali"
+            },
+            {
+                "title": "Depremden Etkilenenlere Nasıl Yardım Edebiliriz",
+                "author": "Faynstudio",
+                "url": "https://www.instagram.com/p/CoUZguwoIv3/?hl=en"
+            },
+            {
+                "title": "Depremden Etkilenenlere Yardım Paketi Hazırlarken Dikkat Etmemiz Gerekenler",
+                "author": "Faynstudio",
+                "url": "https://www.instagram.com/p/CoUjUISI1Lf/?hl=en"
+            },
+            {
+                "title": "Psikososyal Hizmet",
+                "author": "AFAD",
+                "url": "https://drive.google.com/file/d/1PPMQe9olalSD7JzhpwRE6qQP3AWw7bP4/view?usp=share_link"
+            },
+            {
+                "title": "Afet Sahası Rehberi",
+                "author": "Prof. Dr. Mehmet Şükrü Sever",
+                "url": "https://drive.google.com/file/d/1rQ3i7wL8mwkYpSKaGMeDwTH55sCoeUm6/view?usp=share_link"
+            },
+            {
+                "title": "Kök Hücre Bağışı Hakkında Sıkça Sorulan Sorular ",
+                "author": "Sağlık Hizmetleri Genel Müdürlüğü Türkiye Kök Hücre Koordinasyon Merkezi",
+                "url": "https://turkok.saglik.gov.tr/TR-90496/sikca-sorulan-sorular.html"
+            }
+        ]
+    }
+}

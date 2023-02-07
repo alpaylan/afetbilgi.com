@@ -20,6 +20,14 @@ export interface OptionNode {
   value: TreeNode;
 }
 
+export interface ArticleDataNode extends DataNode {
+  articles: { 
+    title: string;
+    author: string;
+    url: string;
+  }[];
+}
+
 export interface BankDataNode extends DataNode {
   accounts: {
     name: string;

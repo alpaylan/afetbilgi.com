@@ -9,6 +9,7 @@ import URLData from './data/URLData';
 import SMSData from './data/SMSData';
 import BloodDonationData from './data/BloodDonationData';
 import TelephoneData from './data/PhoneData';
+import ArticleData from './data/ArticleData';
 
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
@@ -55,6 +56,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'phone-number-list') {
       return <TelephoneData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'articles') {
+      return <ArticleData value={dataNode.data as any} />
     }
 
     return <></>;
