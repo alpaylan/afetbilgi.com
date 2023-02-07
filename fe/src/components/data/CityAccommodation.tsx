@@ -18,7 +18,8 @@ export default function CityAccommodation({ value }: { value: CityAccommodationN
              <br />
             </>
           )}
-
+          <br />
+          {item.phone_number && (Telefon Numarası: <b>{item.phone_number}</b>)}
           <br />
           {item.address && (
             <p>
