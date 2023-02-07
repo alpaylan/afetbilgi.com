@@ -1,13 +1,13 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: #fafafa;
 }
 
 #root {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   margin-bottom: 60px;
 }

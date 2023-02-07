@@ -26,7 +26,7 @@ export default function Question({ paths }: { paths: string[] }) {
           return;
         }
 
-        currNode = currNode.options[intPath].value;
+        currNode = currNode.options[intPath].value as any;
       }
 
       setSelectedNode(currNode);
@@ -42,27 +42,19 @@ export default function Question({ paths }: { paths: string[] }) {
   return selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION ? (
     <Data dataNode={(selectedNode as any)} />
   ) : (
-    <Box sx={{ height: '100%' }}>
-      {location.pathname !== '/' && (
-        <Box sx={{ mt: 3, textAlign: 'center' }}>
-          <Button size="large" onClick={() => navigate(-1)}>
-            Geri
-          </Button>
-        </Box>
-      )}
-
-      <Box sx={{ textAlign: 'center', height: '80%', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
+    <Box>
+      <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
         <Typography variant="h2">
           {selectedNode.text}
         </Typography>
 
-        <Box sx={{ display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
+        <Box sx={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
           {selectedNode.options.map((option, i) => (
             <Button
               key={`button-${i}`}
               variant="contained"
               size="large"
-              sx={{ m: 2 }}
+              sx={{ m: 2, minWidth: '400px' }}
               onClick={() => {
                 if (location.pathname === '/') {
                   navigate(`/${i}`);
