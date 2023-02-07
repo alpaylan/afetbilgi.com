@@ -8,7 +8,7 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
       {value.items.map((item, i) => (
         <Paper key={`help-item-${i}`} sx={{ m: 2, p: 2 }}>
           <p><b>{item.name}</b>'in {(item.location && <b>{item.location}</b>)}'de düzenlediği eşya yardımı kampanyasına yardım etmek için <a href={item.url} target="_blank" rel="noreferrer">bu linke</a> tıklayınız.</p>
-          {(item.phone_number && <p>Detaylı bilgi için <b>{item.phone_number}</b>'i arayabilirsiniz.</p>)}
+          {(item.phone_number && <p>Detaylı bilgi için <b><a href={`tel:+90${item.phone_number.replace(/^0/, "").replace(/ /g, "")}`}>{item.phone_number}</a></b>'i arayabilirsiniz.</p>)}
         </Paper>
       ))}
     </Box>
