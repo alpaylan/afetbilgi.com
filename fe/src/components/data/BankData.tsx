@@ -38,6 +38,8 @@ export default function BankData({ value }: { value: BankDataNode }) {
             {account.bep && <ListItem><b>BEP20: </b>{account.bep} <CopyToClipboard text={account.bep}>
               <IconButton size="small"><ContentCopyIcon /></IconButton>
             </CopyToClipboard></ListItem>}
+
+            {account.url && <ListItem><a href={account.url} target="_blank">{account.url}</a></ListItem>}
           </List>
         </Paper>
       ))}
