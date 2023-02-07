@@ -362,18 +362,6 @@
                     "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
                 }
             }
-        },
-        {
-            "name": "TIME TO HELP (UK) - Time to Help (UK)",
-            "value": {
-                "type": "data",
-                "data": {
-                    "dataType": "international-url-donation",
-                    "country": "United Kingdom",
-                    "name": "Time to Help(UK)",
-                    "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-                }
-            }
         }
     ]
 }
