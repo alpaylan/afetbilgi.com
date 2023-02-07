@@ -31,13 +31,18 @@ export const useQuestionData = (paths: string[]) => useQuery(`questionData-${pat
   let currNode = await baseQuestionData;
 
   for (const path of paths) {
-    if (currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
+    if (!currNode || currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
       throw new Error('this is not a question node');
     }
 
     const decodedPath = decodeURIComponent(path);
 
-    currNode = currNode.options.find(o => o.name === decodedPath)?.value as any;
+    let nextNode = currNode.options.find(o => o.name === decodedPath)?.value as any;
+    if (!nextNode && Number.isInteger(Number(decodedPath))) {
+      nextNode = currNode.options[Number(decodedPath)]?.value as any;
+    }
+
+    currNode = nextNode;
   }
 
   return currNode;
