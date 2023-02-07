@@ -44,7 +44,7 @@ export default function Question({ paths }: { paths: string[] }) {
   ) : (
     <Box>
       <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
-        <Typography variant="h2">
+        <Typography variant="h4">
           {selectedNode.text}
         </Typography>
 
@@ -54,7 +54,7 @@ export default function Question({ paths }: { paths: string[] }) {
               key={`button-${i}`}
               variant="contained"
               size="large"
-              sx={{ m: 2, minWidth: '400px' }}
+              sx={{ m: 2, minWidth: '120px' }}
               onClick={() => {
                 if (location.pathname === '/') {
                   navigate(`/${i}`);
