@@ -5,8 +5,8 @@ export default function CreditCardData({ value }: { value: CreditCardNode }) {
   return (
     <Box>
         <Paper sx={{ p: 2, m: 2 }}>
-          <Box>{value.name}</Box>
-          <a href={value.url} target="_blank" rel="noreferrer">{value.url}</a>
+        <b>{value.name}</b> kredi kartı yoluyla bağış yapılmasına izin vermektedir. 
+          <a href={value.url} target="_blank" rel="noreferrer">bu linke</a> tıklayarak ilgili sayfaya ulaşabilir ve bağışınızı gerçekleştirebilirsiniz.
         </Paper>
     </Box>
   )

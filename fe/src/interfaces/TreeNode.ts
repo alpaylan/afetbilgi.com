@@ -64,6 +64,8 @@ export interface HelpItemNode extends DataNode {
 }
 
 export interface URLDataNode extends DataNode {
+  name: string;
+  short_description?: string;
   url: string;
 }
 

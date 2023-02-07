@@ -425,6 +425,7 @@
                 "data": {
                     "dataType": "international-url-donation",
                     "country": "Avusturya/Austria",
+                    "name": "Kızıl Haç - Red Cross",
                     "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
                 }
             }
@@ -436,6 +437,7 @@
                 "data": {
                     "dataType": "international-url-donation",
                     "country": "ABD",
+                    "name": "Turkish Philantrophy Funds",
                     "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
                 }
             }
@@ -447,6 +449,7 @@
                 "data": {
                     "dataType": "international-url-donation",
                     "country": "Birleşik Krallık/United Kingdom",
+                    "name": "Time to Help(UK)",
                     "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
                 }
             }
