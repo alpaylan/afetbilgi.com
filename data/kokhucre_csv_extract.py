@@ -38,7 +38,10 @@ def main():
     print(json.dumps({
         "type": "data",
         "text": "Kök Hücre Bağış Noktaları",
-        "data": data
+        "data": {
+            "dataType": "stem-cell-donation",
+            "items": data
+        }
     }, ensure_ascii=False, indent=4))
 
 if __name__ == "__main__":
