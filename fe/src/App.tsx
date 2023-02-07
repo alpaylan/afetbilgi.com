@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 
@@ -9,37 +9,49 @@ import Waiting from './components/Waiting';
 import Question from './components/Question';
 import { useQuestionData } from './hooks';
 
-function RootQuestion() {
+function RootQuestion({lang}: {lang?: string}) {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question paths={paths} />;
+  return <Question lang={lang} paths={paths} />;
 }
 
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isLoading } = useQuestionData([]);
+  const { isLoading } = useQuestionData('tr', []);
+  const { isLoading: isLoadingEN } = useQuestionData('en', []);
+
+  const [lang, setLang] = useState('');
 
   return (
     <Box>
-      <Waiting open={isLoading} />
+      <Waiting open={isLoading || isLoadingEN} />
 
-      {location.pathname !== '/' ? (
         <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
-          <Button sx={{ m: 1 }} size="large" onClick={() => navigate('/')}>
-            ANA SAYFA
-          </Button>
+          {location.pathname !== '/' && location.pathname !== '/en' && (
+              <>
+              <Button sx={{ m: 1 }} size="large" onClick={() => navigate(location.pathname.startsWith('/en') ? '/en': '/')}>
+                ANA SAYFA
+              </Button>
 
-          <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-            GERİ
+              <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
+                GERİ
+              </Button>
+              </>
+          )}
+
+          <Button sx={{ m: 1 }} size="large" onClick={() => {
+            setLang(lang === 'en' ? 'tr' : 'en');
+            navigate('/');
+          }}>
+            {lang === 'en' ? 'DİLİ DEĞİŞTİR' : 'CHANGE LANGUAGE'}
           </Button>
         </Box>
-      ) : <Box sx={{ pt: '60px' }} />}
 
       <Container sx={{ pt: '15vh' }}>
         <Routes>
-          <Route path="/*" element={<RootQuestion />} />
+          <Route path="/*" element={<RootQuestion lang={lang} />} />
         </Routes>
       </Container>
     </Box>
