@@ -367,7 +367,18 @@
                 "text": "Lütfen AHBAP'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "Banka Hesabından Havale/EFT",
+                        "name": "Kredi kartı ile Bağış",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "credit-card-donation",
+                                "name": "AHBAP",
+                                "url": "https://ahbap.org/bagis-kategorisi/5"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
                         "value": {
                             "type": "data",
                             "data": {
@@ -384,18 +395,7 @@
                         }
                     },
                     {
-                        "name": "Kredi kartı ile Bağış",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "credit-card-donation",
-                                "name": "AHBAP",
-                                "url": "https://ahbap.org/bagis-kategorisi/5"
-                            }
-                        }
-                    },
-                    {
-                        "name": "AHBAP",
+                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
