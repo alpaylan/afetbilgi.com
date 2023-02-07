@@ -30,5 +30,5 @@ for data_point in data_points:
             'value': data,
         })
 
-print(json.dumps(result, indent=4, ensure_ascii=False))
+print(json.dumps(result, ensure_ascii=False))
 

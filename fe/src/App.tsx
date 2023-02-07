@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './App.css';
 
-import { Box, Button, Container } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select } from '@mui/material';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Waiting from './components/Waiting';
@@ -54,20 +54,30 @@ const App = () => {
 
         <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
           {location.pathname !== '/' && location.pathname !== '/en' && (
-              <>
+            <>
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(location.pathname.startsWith('/en') ? '/en': '/')}>
-              {lang === 'en' ? 'MAIN PAGE' : 'ANA SAYFA'}
+                {lang === 'en' ? 'MAIN PAGE' : 'ANA SAYFA'}
               </Button>
 
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-              {lang === 'en' ? 'BACK' : 'GERİ'}
+                {lang === 'en' ? 'BACK' : 'GERİ'}
               </Button>
-              </>
+            </>
           )}
 
-          <Button sx={{ m: 1 }} size="large" onClick={() => setLang(lang === 'en' ? 'tr' : 'en')}>
-            {lang === 'en' ? 'CHANGE LANGUAGE' : 'DİLİ DEĞİŞTİR'}
-          </Button>
+          <Select
+            value={'tr'}
+            sx={{ m: 1 }}
+            size="small"
+            label="Language"
+            onChange={(event) => {
+              setLang(event.target.value);
+            }}
+          >
+            <MenuItem value={'tr'}>Türkçe</MenuItem>
+            <MenuItem value={'en'}>English</MenuItem>
+            <MenuItem value={'ku'}>Kurdish</MenuItem>
+          </Select>
         </Box>
 
       <Container sx={{ pt: '15vh' }}>
