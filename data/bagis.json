@@ -1,6 +1,6 @@
 {
     "type": "question",
-    "text": "Nereden yardımda bulunmak istiyorsunuz? (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
+    "text": "Nereden bağış yapmak istiyorsunuz? (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
     "options": [
         {
             "name": "Yurt İçi",
@@ -12,21 +12,10 @@
                         "name": "AFAD",
                         "value": {
                             "type": "question",
-                            "text": "AFAD'dan yardım almak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "text": "AFAD'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
                             "options": [
                                 {
-                                    "name": "AFAD'a bağışta bulun",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "url-donation",
-                                            "name": "AFAD",
-                                            "url": "https://www.afad.gov.tr/"
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "AFAD'a SMS ile yardım et",
+                                    "name": "SMS ile Bağış",
                                     "value": {
                                         "type": "data",
                                         "data": {
@@ -38,27 +27,116 @@
                                     }
                                 },
                                 {
-                                    "name": "AFAD'a bağışta bulunmak için banka hesabına para yatır",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "bank-account-donation",
-                                            "name": "AFAD",
-                                            "iban": null
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "AFAD'a bağışta bulunmak için kredi kartı ile yardım et",
+                                    "name": "Kredi kartı ile Bağış",
                                     "value": {
                                         "type": "data",
                                         "data": {
                                             "dataType": "credit-card-donation",
                                             "name": "AFAD",
-                                            "url": "https://www.afad.gov.tr/"
+                                            "url": "https://www.afad.gov.tr/depremkampanyasi2"
                                         }
                                     }
                                 }
+                            ]
+                        },
+                        "name": "Kızılay",
+                        "value": {
+                            "type": "question",
+                            "text": "Kızılay'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "options": [
+                                {
+                                    "name": "Banka Hesabından Havale/EFT",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "bank-account-donation",
+                                            "name": "Kızılay",
+                                            "iban": "TR480001002110000028685254"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "SMS ile Bağış",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "sms-donation",
+                                            "name": "Kızılay",
+                                            "sms": "AFET",
+                                            "number": "2868"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "name": "AHBAP",
+                        "value": {
+                            "type": "question",
+                            "text": "AHBAP'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "options": [
+                                {
+                                    "name": "Banka Hesabından Havale/EFT",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "bank-account-donation",
+                                            "name": "AHBAP",
+                                            "iban": "TR120006400000110211380059"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Kredi kartı ile Bağış",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "credit-card-donation",
+                                            "name": "AHBAP",
+                                            "url": "https://ahbap.org/bagis-kategorisi/5"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "name": "AKUT",
+                        "value": {
+                            "type": "question",
+                            "text": "AKUT'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "options": [
+                                {
+                                    "name": "Banka Hesabından Havale/EFT",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "bank-account-donation",
+                                            "name": "AKUT",
+                                            "iban": "TR140006400000110800666663"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Kredi kartı ile Bağış",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "credit-card-donation",
+                                            "name": "AKUT",
+                                            "url": "https://www.akut.org.tr/bagis-yap"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "SMS ile Bağış",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "sms-donation",
+                                            "name": "AKUT",
+                                            "sms": "AKUT",
+                                            "number": "2930"
+                                        }
+                                    }
+                                },
                             ]
                         }
                     }
