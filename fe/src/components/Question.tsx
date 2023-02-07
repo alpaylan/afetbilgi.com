@@ -15,7 +15,6 @@ const getOptionName = (option: any, lang: string) => option[`name_${lang}`] || o
 export default function Question({ lang, paths }: { lang: string, paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const language = lang === 'en' ? 'EN' : 'TR';
 
   const { data: selectedNode, isLoading } = useQuestionData(lang, paths);
 
@@ -93,7 +92,7 @@ export default function Question({ lang, paths }: { lang: string, paths: string[
                   }
                 }}
               >
-                {getOptionName(option, lang).toLocaleUpperCase(language)}
+                {getOptionName(option, lang).toLocaleUpperCase(lang)}
               </Button>
             ))
           )}

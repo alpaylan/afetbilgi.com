@@ -66,7 +66,7 @@ const App = () => {
           )}
 
           <Select
-            value={'tr'}
+            value={lang}
             sx={{ m: 1 }}
             size="small"
             label="Language"
@@ -76,7 +76,7 @@ const App = () => {
           >
             <MenuItem value={'tr'}>Türkçe</MenuItem>
             <MenuItem value={'en'}>English</MenuItem>
-            <MenuItem value={'ku'}>Kurdish</MenuItem>
+            <MenuItem value={'ku'}>Kurmancî</MenuItem>
           </Select>
         </Box>
 
