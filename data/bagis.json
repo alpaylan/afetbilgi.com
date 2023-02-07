@@ -1,262 +1,56 @@
 {
     "type": "question",
-    "text": "Lütfen yurt içinde mi, yurt dışında mı yaşadığınızı seçiniz.",
+    "text": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
     "options": [
         {
-            "name": "Yurt İçi",
-            "value": {
+            "name": "AFAD",
+            "value" : {
                 "type": "question",
-                "text": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
+                "text": "Lütfen AFAD'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "AFAD",
-                        "value": {
-                            "type": "question",
-                            "text": "Lütfen AFAD'a nasıl başvurmak istediğinizi seçin.",
-                            "options": [
-                                {
-                                    "name": "SMS ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "sms-donation",
-                                            "name": "AFAD",
-                                            "sms": "DEPREM",
-                                            "number": "1866",
-                                            "amount": "20"
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Kredi kartı ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "credit-card-donation",
-                                            "name": "AFAD",
-                                            "url": "https://www.afad.gov.tr/depremkampanyasi2"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Kızılay",
-                        "value": {
-                            "type": "question",
-                            "text": "Kızılay'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
-                            "options": [
-                                {
-                                    "name": "Banka Hesabından Havale/EFT",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "bank-account-donation",
-                                            "name": "Kızılay",
-                                            "country": "TR",
-                                            "accounts": [
-                                                {
-                                                "name": "Ziraat Bankası",
-                                                "tl": "TR480001002110000028685254"
-                                                }
-                                            ]
-                                            
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "SMS ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "sms-donation",
-                                            "name": "Kızılay",
-                                            "sms": "AFET",
-                                            "number": "2868",
-                                            "amount": "15"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "AHBAP",
-                        "value": {
-                            "type": "question",
-                            "text": "AHBAP'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
-                            "options": [
-                                {
-                                    "name": "Banka Hesabından Havale/EFT",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "bank-account-donation",
-                                            "country": "TR",
-                                            "accounts": [
-                                                {
-                                                "name": "TÜRKİYE İŞ BANKASI",
-                                                "ownerName": "AHBAP",
-                                                "tl": "TR120006400000110211380059"
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Kredi kartı ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "credit-card-donation",
-                                            "name": "AHBAP",
-                                            "url": "https://ahbap.org/bagis-kategorisi/5"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "AKUT",
-                        "value": {
-                            "type": "question",
-                            "text": "AKUT'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
-                            "options": [
-                                {
-                                    "name": "Banka Hesabından Havale/EFT",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "bank-account-donation",
-                                            "country": "TR",
-                                            "accounts": [
-                                                {
-                                                "name": "TÜRKİYE İŞ BANKASI",
-                                                "branch": "Gayrettepe Şubesi",
-                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                                "tl": "TR140006400000110800666663"
-                                                },
-                                                {
-                                                "name": "QNB Finansbank",
-                                                "branch": "Gayrettepe Şubesi",
-                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                                "tl": "TR92 0011 1000 0000 0001 9576 70"
-                                                },
-                                                {
-                                                "name": "Garanti BBVA",
-                                                "branch": "Ortaklar Cad. Şubesi",
-                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                                "tl": "TR26 0006 2000 3570 0000 0029 30"
-                                                },
-                                                {
-                                                "name": "Yapı Kredi Bankası",
-                                                "branch": "Fulya Şubesi",
-                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                                "tl": "TR23 0006 7010 0000 0075 0775 87"
-                                                },
-                                                {
-                                                "name": "ŞEKERBANK T.A.Ş.",
-                                                "branch": "Mecidiyeköy  Şubesi",
-                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                                "tl": "TR50 0005 9002 1053 6000 0029 30"
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Kredi kartı ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "credit-card-donation",
-                                            "name": "AKUT",
-                                            "url": "https://www.akut.org.tr/bagis-yap"
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "SMS ile Bağış",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "sms-donation",
-                                            "name": "AKUT",
-                                            "sms": "AKUT",
-                                            "number": "2930",
-                                            "amount": "10"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "name": "İngilizce Bağış Sayfaları",
-            "value": {
-                "type": "question",
-                "text": "Please pick an organization to donate.",
-                "options": [
-                    {
-                        "name": "Turkish Philantrophy Funds",
+                        "name": "SMS ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
-                                "dataType": "international-url-donation",
-                                "country": "ABD",
-                                "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
+                                "dataType": "sms-donation",
+                                "name": "AFAD",
+                                "sms": "DEPREM",
+                                "number": "1866",
+                                "amount": "20"
                             }
                         }
                     },
                     {
-                        "name": "Red Cross",
+                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
-                                "dataType": "international-url-donation",
-                                "country": "Avusturya/Austria",
-                                "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
+                                "dataType": "credit-card-donation",
+                                "name": "AFAD",
+                                "url": "https://www.afad.gov.tr/depremkampanyasi2"
                             }
                         }
                     },
                     {
-                        "name": "Kızılay",
+                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
                         "value": {
                             "type": "data",
                             "data": {
-                                "dataType": "international-url-donation",
-                                "country": "Almanya/Germany",
-                                "url": "https://www.kizilay.org.tr/Bagis/BagisYap/405/donations-for-earthquake-in-pazarcik"
+                                "dataType": "bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                    "name": "Ziraat Bankası",
+                                    "tl": "TR480001002110000028685254"
+                                    }
+                                ]
+                                
                             }
                         }
                     },
                     {
-                        "name": "Time to Help(UK)",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "international-url-donation",
-                                "country": "Birleşik Krallık/United Kingdom",
-                                "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Yurt Dışı Banka",
-            "value": {
-                "type": "question",
-                "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
-                "options": [
-                    {
-                        "name": "AFAD",
+                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -368,55 +162,181 @@
                                         "swift": "AKBKTRIS"
                                     }
                                 ]
+                                
+                            }
+                        }
+                    }
+
+                ]
+            }
+        },
+        {
+            "name": "AKUT",
+            "value" : {
+                "type": "question",
+                "text": "Lütfen AKUT'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "options": [   
+                    {
+                        "name": "SMS ile Bağış",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "sms-donation",
+                                "name": "AKUT",
+                                "sms": "AKUT",
+                                "number": "2930",
+                                "amount": "10"
                             }
                         }
                     },
                     {
-                        "name": "AKUT",
+                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
-                                "dataType": "international-bank-account-donation",
+                                "dataType": "credit-card-donation",
+                                "name": "AKUT",
+                                "url": "https://www.akut.org.tr/bagis-yap"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "bank-account-donation",
                                 "country": "TR",
                                 "accounts": [
                                     {
-                                        "name": "T. İş Bankası",
-                                        "branch": "Gayrettepe Şubesi",
-                                        "tl": "TR14 0006 4000 0011 0800 6666 63",
-                                        "usd": "TR48 0006 4000 0021 0806 6666 60 ",
-                                        "eur": "TR12 0006 4000 0021 0806 6661 44",
-                                        "swift": "ISBKTRIS"
+                                    "name": "TÜRKİYE İŞ BANKASI",
+                                    "branch": "Gayrettepe Şubesi",
+                                    "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                    "tl": "TR140006400000110800666663"
                                     },
                                     {
-                                        "name": "QNB Finansbank",
-                                        "branch": "Gayrettepe Şubesi",
-                                        "tl": "TR92 0011 1000 0000 0001 9576 70 ",
-                                        "usd": "TR82 0011 1000 0000 0032 4941 29 ",
-                                        "eur": "TR66 0011 1000 0000 0032 4941 26",
-                                        "swift": "FNNBTRIS"
+                                    "name": "QNB Finansbank",
+                                    "branch": "Gayrettepe Şubesi",
+                                    "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                    "tl": "TR92 0011 1000 0000 0001 9576 70"
                                     },
                                     {
-                                        "name": "Garanti BBVA",
-                                        "branch": "Ortaklar Cad. Şubesi",
-                                        "tl": "TR26 0006 2000 3570 0000 0029 30 ",
-                                        "usd": "TR83 0006 2000 3570 0009 0813 95",
-                                        "eur": "TR56 0006 2000 3570 0009 0813 96",
-                                        "swift": "TGBATRIS"
+                                    "name": "Garanti BBVA",
+                                    "branch": "Ortaklar Cad. Şubesi",
+                                    "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                    "tl": "TR26 0006 2000 3570 0000 0029 30"
                                     },
                                     {
-                                        "name": "Yapı Kredi Bankası",
-                                        "branch": "Fulya Şubesi",
-                                        "tl": "TR23 0006 7010 0000 0075 0775 87",
-                                        "usd": "TR17 0006 7010 0000 0075 1625 70",
-                                        "eur": "TR75 0006 7010 0000 0075 0554 08",
-                                        "swift": "YAPITRIS"
+                                    "name": "Yapı Kredi Bankası",
+                                    "branch": "Fulya Şubesi",
+                                    "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                    "tl": "TR23 0006 7010 0000 0075 0775 87"
+                                    },
+                                    {
+                                    "name": "ŞEKERBANK T.A.Ş.",
+                                    "branch": "Mecidiyeköy  Şubesi",
+                                    "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                    "tl": "TR50 0005 9002 1053 6000 0029 30"
                                     }
                                 ]
                             }
                         }
                     },
                     {
-                        "name": "Kızılay",
+                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
+                        "type": "data",
+                        "data": {
+                            "dataType": "international-bank-account-donation",
+                            "country": "TR",
+                            "accounts": [
+                                {
+                                    "name": "T. İş Bankası",
+                                    "branch": "Gayrettepe Şubesi",
+                                    "tl": "TR14 0006 4000 0011 0800 6666 63",
+                                    "usd": "TR48 0006 4000 0021 0806 6666 60 ",
+                                    "eur": "TR12 0006 4000 0021 0806 6661 44",
+                                    "swift": "ISBKTRIS"
+                                },
+                                {
+                                    "name": "QNB Finansbank",
+                                    "branch": "Gayrettepe Şubesi",
+                                    "tl": "TR92 0011 1000 0000 0001 9576 70 ",
+                                    "usd": "TR82 0011 1000 0000 0032 4941 29 ",
+                                    "eur": "TR66 0011 1000 0000 0032 4941 26",
+                                    "swift": "FNNBTRIS"
+                                },
+                                {
+                                    "name": "Garanti BBVA",
+                                    "branch": "Ortaklar Cad. Şubesi",
+                                    "tl": "TR26 0006 2000 3570 0000 0029 30 ",
+                                    "usd": "TR83 0006 2000 3570 0009 0813 95",
+                                    "eur": "TR56 0006 2000 3570 0009 0813 96",
+                                    "swift": "TGBATRIS"
+                                },
+                                {
+                                    "name": "Yapı Kredi Bankası",
+                                    "branch": "Fulya Şubesi",
+                                    "tl": "TR23 0006 7010 0000 0075 0775 87",
+                                    "usd": "TR17 0006 7010 0000 0075 1625 70",
+                                    "eur": "TR75 0006 7010 0000 0075 0554 08",
+                                    "swift": "YAPITRIS"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Kızılay",
+            "value" : {
+                "type": "question",
+                "text": "Lütfen Kızılay'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "options": [
+                    {
+                        "name": "SMS ile Bağış",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "sms-donation",
+                                "name": "Kızılay",
+                                "sms": "AFET",
+                                "number": "2868",
+                                "amount": "15"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Kredi kartı ile Bağış",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "credit-card-donation",
+                                "name": "Kızılay",
+                                "url": "https://www.kizilay.org.tr/Bagis/BagisYap/215/afet-acil-durum-bagisi"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "bank-account-donation",
+                                "name": "Kızılay",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                    "name": "Ziraat Bankası",
+                                    "tl": "TR480001002110000028685254"
+                                    }
+                                ]
+                                
+                            }
+                        }
+                    },
+                    {
+                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -431,6 +351,44 @@
                                         "swift": "KONTO NO: 1080000001\nBLZ: 512 20 700\nSWIFT KOD: TCZBDEFF"
                                     }
                                 ]
+                            }
+                        }
+                    }
+                ]
+
+            }
+        },
+        {
+            "name": "AHBAP",
+            "value" : {
+                "type": "question",
+                "text": "Lütfen AHBAP'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "options": [
+                    {
+                        "name": "Banka Hesabından Havale/EFT",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                    "name": "TÜRKİYE İŞ BANKASI",
+                                    "ownerName": "AHBAP",
+                                    "tl": "TR120006400000110211380059"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Kredi kartı ile Bağış",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "credit-card-donation",
+                                "name": "AHBAP",
+                                "url": "https://ahbap.org/bagis-kategorisi/5"
                             }
                         }
                     },
@@ -456,6 +414,39 @@
                         }
                     }
                 ]
+            }
+        },
+        {
+            "name": "Kızıl Haç - Red Cross",
+            "value" : {
+                "type": "data",
+                "data": {
+                    "dataType": "international-url-donation",
+                    "country": "Avusturya/Austria",
+                    "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
+                }
+            }
+        },
+        {
+            "name": "Turkish Philantrophy Funds",
+            "value" : {
+                "type": "data",
+                "data": {
+                    "dataType": "international-url-donation",
+                    "country": "ABD",
+                    "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
+                }
+            }
+        },
+        {
+            "name": "Time to Help(UK)",
+            "value" : {
+                "type": "data",
+                "data": {
+                    "dataType": "international-url-donation",
+                    "country": "Birleşik Krallık/United Kingdom",
+                    "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
+                }
             }
         }
     ]
