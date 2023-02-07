@@ -109,3 +109,10 @@ export interface URLDataNode extends DataNode {
   short_description?: string;
   url: string;
 }
+
+export interface UsefulLinksDataNode extends DataNode {
+  usefulLinks: { 
+    name: string;
+    url: string;
+  }[];
+}
