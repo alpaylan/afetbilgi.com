@@ -1,12 +1,12 @@
 {
     "type": "question",
-    "text": "Nereden yardımda bulunmak istiyorsunuz? (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
+    "text": "Lütfen yurt içinde mi, yurt dışında mı yaşadığınızı seçiniz. (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
     "options": [
         {
             "name": "Yurt İçi",
             "value": {
                 "type": "question",
-                "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
+                "text": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
                 "options": [
                     {
                         "name": "AFAD",
