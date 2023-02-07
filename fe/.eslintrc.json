@@ -1,0 +1,26 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.eslint.json"
+    },
+    "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:jest/recommended",
+        "prettier"
+    ],
+    "plugins": ["react-hooks", "@typescript-eslint"],
+    "rules": {
+        "no-bitwise": "off",
+        "@typescript-eslint/no-use-before-define": ["off"],
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "@typescript-eslint/no-unused-vars":  ["error", {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+        }]
+    }
+}
