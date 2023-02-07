@@ -76,7 +76,7 @@ const App = () => {
           >
             <MenuItem value={'tr'}>Türkçe</MenuItem>
             <MenuItem value={'en'}>English</MenuItem>
-            <MenuItem value={'ku'}>Kurmancî</MenuItem>
+            {/* <MenuItem value={'ku'}>Kurmancî</MenuItem> */}
           </Select>
         </Box>
 
