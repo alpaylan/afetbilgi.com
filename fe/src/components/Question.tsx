@@ -13,11 +13,11 @@ import { TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
 import { OptionNode } from '../interfaces/TreeNode';
 
-export default function Question({ paths }: { paths: string[] }) {
+export default function Question({ lang, paths }: { lang?: string, paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { data: selectedNode, isLoading } = useQuestionData(paths);
+  const { data: selectedNode, isLoading } = useQuestionData(lang, paths);
 
   if (isLoading || !selectedNode) {
     return <></>;

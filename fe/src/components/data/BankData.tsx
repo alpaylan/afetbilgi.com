@@ -34,6 +34,10 @@ export default function BankData({ value }: { value: BankDataNode }) {
             {account.swift && <ListItem><b>Swift Kodu: </b>{account.swift} <CopyToClipboard text={account.swift}>
               <IconButton size="small"><ContentCopyIcon /></IconButton>
             </CopyToClipboard></ListItem>}
+
+            {account.bep && <ListItem><b>BEP20: </b>{account.bep} <CopyToClipboard text={account.bep}>
+              <IconButton size="small"><ContentCopyIcon /></IconButton>
+            </CopyToClipboard></ListItem>}
           </List>
         </Paper>
       ))}

@@ -30,6 +30,7 @@ export interface BankDataNode extends DataNode {
     usd?: string;
     gbp?: string;
     swift?: string;
+    bep?: string;
   }[];
 }
 
