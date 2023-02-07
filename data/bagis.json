@@ -33,24 +33,7 @@
                         }
                     },
                     {
-                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "bank-account-donation",
-                                "country": "TR",
-                                "accounts": [
-                                    {
-                                    "name": "Ziraat Bankası",
-                                    "tl": "TR480001002110000028685254"
-                                    }
-                                ]
-                                
-                            }
-                        }
-                    },
-                    {
-                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
+                        "name": "Banka Hesabından Havale/EFT/SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
