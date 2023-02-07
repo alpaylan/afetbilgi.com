@@ -3,7 +3,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useQuestionData } from '../hooks';
+import { useMobile, useQuestionData } from '../hooks';
 import { QuestionNode } from '../interfaces/TreeNode';
 import { TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
@@ -11,6 +11,8 @@ import Data from './Data';
 export default function Question({ paths }: { paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const isMobile = useMobile();
+
   const { data: questionData } = useQuestionData();
 
   const [selectedNode, setSelectedNode] = useState<QuestionNode | null>(null);
@@ -44,7 +46,7 @@ export default function Question({ paths }: { paths: string[] }) {
   ) : (
     <Box>
       <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
-        <Typography variant="h4">
+        <Typography variant={isMobile ? "h4": "h2"}>
           {selectedNode.text}
         </Typography>
 

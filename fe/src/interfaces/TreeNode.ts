@@ -47,3 +47,11 @@ export interface CityBarinmaNode extends DataNode {
     url: string;
   }[];
 }
+
+
+export interface HelpItemNode extends DataNode {
+  items: {
+    name: string;
+    phone_number: string;
+  }[];
+}
