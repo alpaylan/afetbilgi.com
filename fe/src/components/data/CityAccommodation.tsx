@@ -19,7 +19,7 @@ export default function CityAccommodation({ value }: { value: CityAccommodationN
             </>
           )}
           <br />
-          Telefon Numarası: <b>{item.phone_number}</b>
+          {item.phone_number && (Telefon Numarası: <b>{item.phone_number}</b>)}
           <br />
           {item.address && (
             <p>
