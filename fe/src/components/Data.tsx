@@ -3,6 +3,7 @@ import { DataNode } from '../interfaces/TreeNode';
 import BankData from './data/BankData';
 import CityAccommodation from './data/CityAccommodation';
 import CreditCardData from './data/CreditCardData';
+import HelpItemData from './data/HelpItemData';
 import ItemData from './data/ItemData';
 import URLData from './data/URLData';
 
@@ -26,6 +27,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'item-list') {
       return <ItemData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'help-item-list') {
+      return <HelpItemData value={dataNode.data as any} />
     }
 
     if (dataNode.data.dataType === 'url-donation') {

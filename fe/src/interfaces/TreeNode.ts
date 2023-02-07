@@ -50,6 +50,13 @@ export interface ItemDataNode extends DataNode {
   items: string[];
 }
 
+export interface HelpItemNode extends DataNode {
+  items: {
+    name: string;
+    phone_number: string;
+  }[];
+}
+
 export interface URLDataNode extends DataNode {
   url: string;
 }
