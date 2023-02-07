@@ -9,7 +9,6 @@ data_points = [
   { 'name': 'Önemli Telefon Numaraları', 'path': 'combined/telefon.json' },
   { 'name': 'Önemli Web Siteleri', 'path': 'faydali_linkler.json' },
   { 'name': 'Faydalı Yazılar', 'path': 'yazilar.json' },
-  { 'name': 'Faydalı Yazılar', 'path': 'yazilar.json' },
   { 'name': 'Kök Hücre Bağış Noktaları', 'path': 'kokhucre.json' },
 ]
 
