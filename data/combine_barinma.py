@@ -9,8 +9,9 @@ for i in range(1, 3):
         data = json.loads(text)
 
         for item in data:
-            if item['city'] not in result:
-                result[item['city']] = []
+            city = item['city'].strip()
+            if city not in result:
+                result[city] = []
 
             if item['name'] in already_added:
                 continue
@@ -27,7 +28,7 @@ for i in range(1, 3):
             if not item['address'].startswith('http'):
                item['address'] = None
 
-            result[item['city']].append(item)
+            result[city].append(item)
 
 out = {
     "type": "question",
