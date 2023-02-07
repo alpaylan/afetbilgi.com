@@ -7,7 +7,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Adana",
@@ -84,7 +84,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Gaziantep",
@@ -251,7 +251,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Malatya",
@@ -352,7 +352,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Diyarbakır",
@@ -669,7 +669,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Şanlıurfa",
@@ -812,7 +812,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "K. Maraş",
@@ -871,7 +871,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Osmaniye",
@@ -978,7 +978,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Adıyaman",
@@ -1001,7 +1001,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Kilis",
@@ -1030,7 +1030,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Mardin",
@@ -1047,7 +1047,7 @@
             "value": {
                 "type": "data",
                 "data": {
-                    "dataType": "city-barinma",
+                    "dataType": "city-accommodation",
                     "items": [
                         {
                             "city": "Hatay",

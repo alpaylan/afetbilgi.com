@@ -1,7 +1,7 @@
 import { Box, Paper } from "@mui/material";
-import { CityBarinmaNode } from "../../interfaces/TreeNode";
+import { CreditCardNode } from "../../interfaces/TreeNode";
 
-export default function CityBarinma({ value }: { value: CityBarinmaNode }) {
+export default function CreditCardData({ value }: { value: CreditCardNode }) {
   return (
     <Box>
       {value.items.map((item) => (
