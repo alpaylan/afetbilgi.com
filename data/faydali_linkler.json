@@ -4,6 +4,10 @@
         "dataType": "useful-links",
         "usefulLinks": [
             {
+                "name": "Karayolları Genel Müdürlüğü Twitter (Yol durumu)",
+                "url": "https://twitter.com/KarayollariGM"
+            },
+            {
                 "name": "AHBAP",
                 "url": "https://ahbap.org/"
             },
