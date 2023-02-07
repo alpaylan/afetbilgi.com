@@ -26,6 +26,7 @@ export default function CityAccommodation({ value }: { value: CityAccommodationN
               <br />
             </p>
           )}
+          {(item.phone_number && <p>Detaylı bilgi için <b><a href={`tel:+90${item.phone_number.replace(/^0/, "").replace(/ /g, "")}`}>{item.phone_number}</a></b>'i arayabilirsiniz.</p>)}
           {(!item.is_validated && <p><b>Not: Bu bilgiyi telefonla doğrulayamadık.</b></p>)}
         </Paper>
       ))}
