@@ -89,3 +89,13 @@ export interface BloodDonationNode extends DataNode {
   fax?: string;
   url?: string;
 }
+
+export interface TelephoneDataNode extends DataNode {
+  phones: Phone[];
+}
+
+export interface Phone {
+  name: string;
+  phone_number: string;
+  is_plain: boolean;
+}
