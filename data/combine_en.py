@@ -6,6 +6,7 @@ data_points = [
   { 'name': 'Money Donation', 'path': 'en/bagis.json' },
   { 'name': 'Other Donation', 'path': 'yardim_toplama_merkezleri.json' },
   { 'name': 'Kızılay Blood Donation Places', 'path': 'blood.json' },
+  { 'name': 'Important Phone Numbers', 'path': 'telefon.json' },
 ]
 
 result = {
