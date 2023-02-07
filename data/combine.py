@@ -1,11 +1,11 @@
 import json
 
 data_points = [
-  { 'name': 'Geçici Barınma Alanları', 'path': 'combined/barinma.json' },
-  { 'name': 'Güvenli Toplanma Alanları', 'path': 'combined/toplanma.json' },
-  { 'name': 'Para Bağışı İmkanları', 'path': 'combined/bagis.json' },
-  { 'name': 'Eşya Bağışı İmkanları', 'path': 'combined/yardim_toplama_merkezleri.json' },
-  { 'name': 'Kızılay Kan Bağış Noktaları', 'path': 'combined/blood.json' },
+  { 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'path': 'combined/barinma.json' },
+  { 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'path': 'combined/toplanma.json' },
+  { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'combined/bagis.json' },
+  { 'name_tr': 'Eşya Bağışı İmkanları','name_en': 'Other Donation',  'path': 'combined/yardim_toplama_merkezleri.json' },
+  { 'name_tr': 'Kızılay Kan Bağış Noktaları', 'name_en': 'Kızılay Blood Donation Places', 'path': 'combined/blood.json' },
   { 'name': 'Önemli Telefon Numaraları', 'path': 'combined/telefon.json' },
   { 'name': 'Önemli Web Siteleri', 'path': 'faydali_linkler.json' },
   { 'name': 'Faydalı Yazılar', 'path': 'yazilar.json' },
@@ -15,7 +15,8 @@ data_points = [
 
 result = {
     'type': 'question',
-    'text': 'Lütfen bilgi almak istediğiniz konuyu seçiniz.',
+    'text_tr': 'Lütfen bilgi almak istediğiniz konuyu seçiniz.',
+    'text_en': 'Please select a topic.',
     'options': []
 }
 
@@ -26,7 +27,7 @@ for data_point in data_points:
         data = json.loads(text)
 
         result['options'].append({
-            'name': data_point['name'],
+            **data_point,
             'value': data,
         })
 
