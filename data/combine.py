@@ -1,35 +1,28 @@
 import json
 
-with open("data/yardim_toplama_merkezleri.json", "r", encoding="utf-8") as f:
-    text = f.read().encode("utf-8")
+data_points = [
+  { 'name': 'Geçici Barınma Alanları', 'path': 'barinma.json' },
+  { 'name': 'Güvenli Toplanma Alanları', 'path': 'toplanma.json' },
+  { 'name': 'Para Bağışı İmkanları', 'path': 'bagis.json' },
+  { 'name': 'Eşya Bağışı İmkanları', 'path': 'yardim_toplama_merkezleri.json' },
+]
 
-    data = json.loads(text)
+result = {
+    'type': 'question',
+    'text': 'Lütfen bilgi almak istediğiniz konuyu seçiniz.',
+    'options': []
+}
 
-    result = dict()
-    for item in data:
-        if item["city"] not in result:
-            result[item["city"]] = {
-                "type": "data",
-                "data": {
-                    "dataType": "item-list",
-                    "items": [],
-                }
-            }
+for data_point in data_points:
+    with open(f"{data_point['path']}", "r", encoding="utf-8") as f:
+        text = f.read().encode("utf-8")
 
-        result[item["city"]]["data"]["items"].append(item)
+        data = json.loads(text)
 
-    result2 = []
-
-    for key in result.keys():
-        result2.append({
-            "name": key,
-            "value": result[key]
+        result['options'].append({
+            'name': data_point['name'],
+            'value': data,
         })
 
-    result = {
-        "type": "question",
-        "text": "Hangi şehir?",
-        "options": result2
-    }
+print(json.dumps(result, ensure_ascii=False))
 
-    print(json.dumps(result, indent=4, ensure_ascii=False))

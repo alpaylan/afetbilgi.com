@@ -1,35 +1,30 @@
+/* eslint-disable no-restricted-syntax */
+
 import axios from "axios";
 import { useQuery } from "react-query";
-// import { Theme, useMediaQuery } from '@mui/material'
 
-import { QuestionNode } from "./interfaces/TreeNode";
+import { TreeNodeType } from "./variables/TreeNode";
 
-const dataPoints = [
-  { name: 'Geçici Barınma Alanları', path: 'barinma.json' },
-  { name: 'Güvenli Toplanma Alanları', path: 'toplanma.json' },
-  { name: 'Para Bağışı İmkanları', path: 'bagis.json' },
-  { name: 'Eşya Bağışı İmkanları', path: 'yardim_toplama_merkezleri.json' },
-];
+const baseQuestionData = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.json?v=1`)
+  .then(res => res.data);
 
-export const useQuestionData = () => useQuery('questionData', async () => {
-  const data = await Promise.all(dataPoints.map(async (dp) => {
-    const res = await axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/${dp.path}?v=2`);
+export const useQuestionData = (paths: string[]) => useQuery(`questionData-${paths.join(',')}`, async () => {
+  let currNode = await baseQuestionData;
 
-    return res.data;
-  }));
+  for (const path of paths) {
+    if (!currNode || currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
+      throw new Error('this is not a question node');
+    }
 
-  return {
-    type: 'question',
-    text: 'Lütfen bilgi almak istediğiniz konuyu seçiniz.',
-    options: dataPoints.map((dp, i) => ({
-      name: dp.name,
-      value: data[i],
-    })),
-  } as QuestionNode;
+    const decodedPath = decodeURIComponent(path);
+
+    let nextNode = currNode.options.find((o: any) => o.name === decodedPath)?.value as any;
+    if (!nextNode && Number.isInteger(Number(decodedPath))) {
+      nextNode = currNode.options[Number(decodedPath)]?.value as any;
+    }
+
+    currNode = nextNode;
+  }
+
+  return currNode;
 });
-
-// export const useMobile = () => {
-//   const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
-
-//   return isMobile;
-// };
