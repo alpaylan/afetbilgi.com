@@ -49,7 +49,7 @@ export default function Question({ paths }: { paths: string[] }) {
           {selectedNode.text}
         </Typography>
 
-        <Box sx={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
+        <Box sx={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center', paddingBottom: '50px' }}>
           {selectedNode.options.map((option, i) => (
             <Button
               key={`button-${i}`}

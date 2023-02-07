@@ -26,8 +26,12 @@ const App = () => {
       <Waiting open={isLoading} />
 
       {location.pathname !== '/' ? (
-        <Box sx={{ mt: 3, textAlign: 'center' }}>
-          <Button size="large" onClick={() => navigate(-1)}>
+        <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
+          <Button sx={{ m: 1 }} size="large" onClick={() => navigate('/')}>
+            Ana Sayfa
+          </Button>
+
+          <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
             Geri
           </Button>
         </Box>

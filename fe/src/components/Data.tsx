@@ -51,10 +51,8 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
   };
 
   return (
-    <Box>
-      <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center', alignItems: 'center' }}>
-        {renderData()}
-      </Box>
+    <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center', alignItems: 'center', paddingBottom: '50px' }}>
+      {renderData()}
     </Box>
   );
 };
