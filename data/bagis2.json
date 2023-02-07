@@ -19,7 +19,7 @@
                                     "value": {
                                         "type": "data",
                                         "data": {
-                                            "data-type": "url-donation",
+                                            "dataType": "url-donation",
                                             "name": "AFAD",
                                             "url": "https://www.afad.gov.tr/"
                                         }
@@ -30,7 +30,7 @@
                                     "value": {
                                         "type": "data",
                                         "data": {
-                                            "data-type": "sms-donation",
+                                            "dataType": "sms-donation",
                                             "name": "AFAD",
                                             "sms": "DEPREM",
                                             "number": "1866"
@@ -42,7 +42,7 @@
                                     "value": {
                                         "type": "data",
                                         "data": {
-                                            "data-type": "bank-account-donation",
+                                            "dataType": "bank-account-donation",
                                             "name": "AFAD",
                                             "iban": null
                                         }
@@ -53,7 +53,7 @@
                                     "value": {
                                         "type": "data",
                                         "data": {
-                                            "data-type": "credit-card-donation",
+                                            "dataType": "credit-card-donation",
                                             "name": "AFAD",
                                             "url": "https://www.afad.gov.tr/"
                                         }
@@ -76,7 +76,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-url-donation",
+                                "dataType": "international-url-donation",
                                 "country": "ABD",
                                 "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
                             }
@@ -87,7 +87,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-url-donation",
+                                "dataType": "international-url-donation",
                                 "country": "Avusturya",
                                 "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
                             }
@@ -98,7 +98,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-url-donation",
+                                "dataType": "international-url-donation",
                                 "country": "Almanya",
                                 "url": "https://www.kizilay.org.tr/bagis-yontemleri/yurt-disindan-bagis"
                             }
@@ -109,7 +109,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-url-donation",
+                                "dataType": "international-url-donation",
                                 "country": "Birleşik Krallık",
                                 "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
                             }
@@ -127,7 +127,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-bank-account-donation",
+                                "dataType": "international-bank-account-donation",
                                 "country": "TR",
                                 "accounts": [
                                     {
@@ -243,7 +243,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-bank-account-donation",
+                                "dataType": "international-bank-account-donation",
                                 "country": "TR",
                                 "accounts": [
                                     {
@@ -287,7 +287,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-bank-account-donation",
+                                "dataType": "international-bank-account-donation",
                                 "country": "Almanya",
                                 "accounts": [
                                     {
@@ -306,7 +306,7 @@
                         "value": {
                             "type": "data",
                             "data": {
-                                "data-type": "international-bank-account-donation",
+                                "dataType": "international-bank-account-donation",
                                 "country": "TR",
                                 "accounts": [
                                     {

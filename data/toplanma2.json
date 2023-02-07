@@ -7,7 +7,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "Akçadağ Belediye Binası ve Lojman Alanı (Akçadağ, Doğu Mahallesi)",
                         "Akçadağ Anadolu Lisesi (Akçadağ, Doğu Mahallesi)",
@@ -94,7 +94,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "(Pazarcık) Mehmet Emin Arikoglu Parkı",
                         "(Pazarcık) Sevgi Parkı",
@@ -132,7 +132,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "Pac Yeşil Alanı(Barbaros)",
                         "Eski Bit Pazarı Yeri(Çay)",
@@ -183,7 +183,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "Koşuyolu Parkı (Bağlar)",
                         "Körhat Parkı (Bağlar)",
@@ -213,7 +213,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "ALLEBEN VADI PARK",
                         "ALLEBEN GÖLETI",
@@ -234,7 +234,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "AKÇAKALE ADNAN MENDERES PARKI",
                         "FEVZİ ÇAKMAK PARKI",
@@ -367,7 +367,7 @@
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [
                         "Aski Atatürk Kapali Spor Salonu",
                         "Spor Park Yurt Mahallesi",

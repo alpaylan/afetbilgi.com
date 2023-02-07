@@ -11,7 +11,7 @@ with open("data/yardim_toplama_merkezleri.json", "r", encoding="utf-8") as f:
             result[item["city"]] = {
                 "type": "data",
                 "data": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": [],
                 }
             }

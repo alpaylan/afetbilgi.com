@@ -13,7 +13,7 @@ with open("data/toplanma.json", "r", encoding="utf-8") as f:
             "value": {
                 "type": "data",
                 "value": {
-                    "data-type": "item-list",
+                    "dataType": "item-list",
                     "items": data[key],
                 },
             },
