@@ -16,6 +16,7 @@ import { OptionNode } from '../interfaces/TreeNode';
 export default function Question({ lang, paths }: { lang?: string, paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const language = lang === 'en' ? 'EN' : 'TR';
 
   const { data: selectedNode, isLoading } = useQuestionData(lang, paths);
 
@@ -91,7 +92,7 @@ export default function Question({ lang, paths }: { lang?: string, paths: string
                   }
                 }}
               >
-                {option.name.toLocaleUpperCase('TR')}
+                {option.name.toLocaleUpperCase(language)}
               </Button>
             ))
           )}

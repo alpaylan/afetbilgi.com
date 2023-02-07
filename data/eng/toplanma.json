@@ -91,11 +91,11 @@
             }
         },
         {
-            "name": "Maraş",
+            "name": "Kahramanmaraş",
             "value": {
                 "type": "data",
                 "data": {
-                    "city": "Maraş",
+                    "city": "Kahramanmaraş",
                     "dataType": "gathering-list",
                     "items": [
                         "(Pazarcık) Mehmet Emin Arikoglu Parkı",
@@ -213,11 +213,11 @@
             }
         },
         {
-            "name": "Antep",
+            "name": "Gaziantep",
             "value": {
                 "type": "data",
                 "data": {
-                    "city": "Antep",
+                    "city": "Gaziantep",
                     "dataType": "gathering-list",
                     "items": [
                         "ALLEBEN VADI PARK",
