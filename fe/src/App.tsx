@@ -32,11 +32,11 @@ const App = () => {
           {location.pathname !== '/' && location.pathname !== '/en' && (
               <>
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(location.pathname.startsWith('/en') ? '/en': '/')}>
-              {lang === 'en' ? 'ANA SAYFA' : 'MAIN PAGE'}
+              {lang === 'en' ? 'MAIN PAGE' : 'ANA SAYFA'}
               </Button>
 
               <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-              {lang === 'en' ? 'GERİ' : 'BACK'}
+              {lang === 'en' ? 'BACK' : 'GERİ'}
               </Button>
               </>
           )}
@@ -45,7 +45,7 @@ const App = () => {
             setLang(lang === 'en' ? 'tr' : 'en');
             navigate('/');
           }}>
-            {lang === 'en' ? 'DİLİ DEĞİŞTİR' : 'CHANGE LANGUAGE'}
+            {lang === 'en' ? 'CHANGE LANGUAGE' : 'DİLİ DEĞİŞTİR'}
           </Button>
         </Box>
 
