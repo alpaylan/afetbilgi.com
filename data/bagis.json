@@ -1,6 +1,6 @@
 {
     "type": "question",
-    "text": "Lütfen yurt içinde mi, yurt dışında mı yaşadığınızı seçiniz. (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
+    "text": "Lütfen yurt içinde mi, yurt dışında mı yaşadığınızı seçiniz.",
     "options": [
         {
             "name": "Yurt İçi",
@@ -66,7 +66,7 @@
             }
         },
         {
-            "name": "Yurt Dışı URL",
+            "name": "English Websites for Donation",
             "value": {
                 "type": "question",
                 "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
@@ -83,7 +83,7 @@
                         }
                     },
                     {
-                        "name": "Kızılhaç",
+                        "name": "Red Cross",
                         "value": {
                             "type": "data",
                             "data": {
@@ -100,7 +100,7 @@
                             "data": {
                                 "dataType": "international-url-donation",
                                 "country": "Almanya",
-                                "url": "https://www.kizilay.org.tr/bagis-yontemleri/yurt-disindan-bagis"
+                                "url": "https://www.kizilay.org.tr/Bagis/BagisYap/405/donations-for-earthquake-in-pazarcik"
                             }
                         }
                     },
