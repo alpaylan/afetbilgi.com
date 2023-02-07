@@ -20,6 +20,14 @@ export interface OptionNode {
   value: TreeNode;
 }
 
+export interface ArticleDataNode extends DataNode {
+  articles: { 
+    title: string;
+    author: string;
+    url: string;
+  }[];
+}
+
 export interface BankDataNode extends DataNode {
   accounts: {
     name: string;
@@ -31,8 +39,21 @@ export interface BankDataNode extends DataNode {
     gbp?: string;
     swift?: string;
     bep?: string;
+    erc?: string;
+    avalanche?: string;
     url?: string;
   }[];
+}
+
+export interface BloodDonationNode extends DataNode {
+  city: string;
+  name?: string;
+  head?: string;
+  address?: string;
+  phone_number?: string;
+  cell_phone_number?: string;
+  fax?: string;
+  url?: string;
 }
 
 export interface CityAccommodationNode extends DataNode {
@@ -66,10 +87,10 @@ export interface HelpItemNode extends DataNode {
   }[];
 }
 
-export interface URLDataNode extends DataNode {
+export interface Phone {
   name: string;
-  short_description?: string;
-  url: string;
+  phone_number: string;
+  is_plain: boolean;
 }
 
 export interface SMSDataNode extends DataNode {
@@ -79,13 +100,12 @@ export interface SMSDataNode extends DataNode {
   amount: string;
 }
 
-export interface BloodDonationNode extends DataNode {
-  city: string;
-  name?: string;
-  head?: string;
-  address?: string;
-  phone_number?: string;
-  cell_phone_number?: string;
-  fax?: string;
-  url?: string;
+export interface TelephoneDataNode extends DataNode {
+  phones: Phone[];
+}
+
+export interface URLDataNode extends DataNode {
+  name: string;
+  short_description?: string;
+  url: string;
 }
