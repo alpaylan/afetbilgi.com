@@ -4,6 +4,7 @@ import './App.css';
 import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { toast } from 'material-react-toastify';
+
 import { QuestionNode } from './interfaces/TreeNode';
 import { getData } from './services/data';
 import Waiting from './components/Waiting';
