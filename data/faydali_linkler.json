@@ -1,0 +1,44 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "useful-links",
+        "usefulLinks": [
+            {
+                "name": "AHBAP",
+                "url": "https://ahbap.org/"
+            },
+            {
+                "name": "AFAD",
+                "url": "https://www.afad.gov.tr/"
+            },
+            {
+                "name": "AKUT",
+                "url": "https://www.akut.org.tr/"
+            },
+            {
+                "name": "Kızılay",
+                "url": "https://www.kizilay.org.tr/"
+            },
+            {
+                "name": "Afet Harita",
+                "url": "https://afetharita.com/"
+            },
+            {
+                "name": "Ahbap Deprem Güvenli Bölgeler Haritası",
+                "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=9"
+            },
+            {
+                "name": "Afet Haritası (İhtiyaç Haritası)",
+                "url": "https://afetharitasi.org/"
+            },
+            {
+                "name": "Otelz.com (Deprem Zedelere Destekte Bulunan Konaklama Yerleri",
+                "url": "https://www.otelz.com/tr/gecmisolsunturkiyem"
+            },
+            {
+                "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
+                "url": "deprem.io"
+            }
+        ]
+    }
+}

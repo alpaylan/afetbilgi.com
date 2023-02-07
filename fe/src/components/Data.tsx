@@ -10,6 +10,7 @@ import SMSData from './data/SMSData';
 import BloodDonationData from './data/BloodDonationData';
 import TelephoneData from './data/PhoneData';
 import ArticleData from './data/ArticleData';
+import UsefulLinksData from './data/UsefulLinksdata';
 
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
@@ -60,6 +61,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'url-donation') {
       return <URLData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'useful-links') {
+      return <UsefulLinksData value={dataNode.data as any} />
     }
 
     return <></>;
