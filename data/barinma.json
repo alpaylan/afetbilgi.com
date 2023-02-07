@@ -2291,25 +2291,6 @@
             }
         },
         {
-            "name": "Şehir",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Şehir",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Şehir",
-                            "name": "İsim",
-                            "address": null,
-                            "phone_number": "İletişim Bilgisi",
-                            "is_validated": true
-                        }
-                    ]
-                }
-            }
-        },
-        {
             "name": "Amasya",
             "value": {
                 "type": "data",

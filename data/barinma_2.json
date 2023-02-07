@@ -1,12 +1,5 @@
 [
     {
-        "city": "Şehir",
-        "name": "İsim",
-        "address": "Konum Linki",
-        "phone_number": "İletişim Bilgisi",
-        "is_validated": true
-    },
-    {
         "city": "Adana",
         "name": "Adana Yeşiloba Hipodromu",
         "address": "https://www.google.com/maps/place/Adana+Ye%C5%9Filoba+Hipodromu/@36.9951666,35.2300152,15z/data=!4m2!3m1!1s0x0:0x5f9e98b19f95eaa6?sa=X&ved=2ahUKEwihksWS7IH9AhVzhf0HHe__AiEQ_BJ6BQiAARAI",
