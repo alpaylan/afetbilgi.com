@@ -1785,75 +1785,89 @@
             }
         },
         {
-            "name": "K. Maraş",
+            "name": "Kahramanmaraş",
             "value": {
                 "type": "data",
                 "data": {
-                    "city": "K. Maraş",
+                    "city": "Kahramanmaraş",
                     "dataType": "city-accommodation",
                     "items": [
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "ASKON K.Maraş Şubesi",
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Maraş Cemevi",
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Merkez Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Saim Çotur Spor Salonu",
                             "is_validated": false,
                             "url": "",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Batıpark",
                             "is_validated": false,
                             "url": "",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "12 Şubat Stadyumu",
                             "is_validated": false,
                             "url": "",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Hanefi Mahçiçek Stadyumu",
                             "is_validated": false,
                             "url": "",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Kafum",
                             "is_validated": false,
                             "url": "",
                             "address": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Atatürk Parkı",
                             "is_validated": false,
                             "url": "",
                             "address": null
+                        },
+                        {
+                            "city": "Kahramanmaraş ",
+                            "name": "Batıpark Spor Salonu",
+                            "address": "https://maps.app.goo.gl/BeVxNFpaLsMkBU2T6?g_st=ic",
+                            "phone_number": "(0344) 223 42 91",
+                            "is_validated": true
+                        },
+                        {
+                            "city": "Kahramanmaraş ",
+                            "name": "12 Şubat Stadı",
+                            "address": "https://maps.app.goo.gl/y5PUMht7r5zG6kB6A?g_st=ic",
+                            "phone_number": "",
+                            "is_validated": true
                         }
                     ]
                 }
@@ -2957,32 +2971,6 @@
                             "name": "Park Dedeman Eskişehir",
                             "address": "https://www.google.com/maps/place/Park+Dedeman+Eski%C5%9Fehir/@39.7588048,30.496868,17z/data=!3m1!4b1!4m8!3m7!1s0x14cc1772b85036bb:0xc57929e045374b16!5m2!4m1!1i2!8m2!3d39.7588007!4d30.4990567",
                             "phone_number": "(0222) 233 12 22",
-                            "is_validated": true
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Kahramanmaraş",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Kahramanmaraş",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Kahramanmaraş ",
-                            "name": "Batıpark Spor Salonu",
-                            "address": "https://maps.app.goo.gl/BeVxNFpaLsMkBU2T6?g_st=ic",
-                            "phone_number": "(0344) 223 42 91",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Kahramanmaraş ",
-                            "name": "12 Şubat Stadı",
-                            "address": "https://maps.app.goo.gl/y5PUMht7r5zG6kB6A?g_st=ic",
-                            "phone_number": "",
                             "is_validated": true
                         }
                     ]
