@@ -262,13 +262,13 @@
             }
         },
         {
-            "name_tr": "Maraş",
-            "name_en": "Maraş",
+            "name_tr": "Kahramanmaraş",
+            "name_en": "Kahramanmaraş",
             "name_ku": "Maraş- Gurgum",
             "value_tr": {
                 "type": "data",
                 "data": {
-                    "city": "Maraş",
+                    "city": "Kahramanmaraş",
                     "dataType": "gathering-list",
                     "items": [
                         "(Pazarcık) Mehmet Emin Arikoglu Parkı",
@@ -304,7 +304,7 @@
             "value_en": {
                 "type": "data",
                 "data": {
-                    "city": "Maraş",
+                    "city": "Kahramanmaraş",
                     "dataType": "gathering-list",
                     "items": [
                         "(Pazarcık) Mehmet Emin Arikoglu Parkı",
@@ -616,13 +616,13 @@
             }
         },
         {
-            "name_tr": "Antep",
-            "name_en": "Antep",
-            "name_ku": "Antep",
+            "name_tr": "Gaziantep",
+            "name_en": "Gaziantep",
+            "name_ku": "Gaziantep",
             "value_tr": {
                 "type": "data",
                 "data": {
-                    "city": "Antep",
+                    "city": "Gaziantep",
                     "dataType": "gathering-list",
                     "items": [
                         "ALLEBEN VADI PARK",
@@ -641,7 +641,7 @@
             "value_en": {
                 "type": "data",
                 "data": {
-                    "city": "Antep",
+                    "city": "Gaziantep",
                     "dataType": "gathering-list",
                     "items": [
                         "ALLEBEN VADI PARK",
@@ -660,7 +660,7 @@
             "value_ku": {
                 "type": "data",
                 "data": {
-                    "city": "Antep",
+                    "city": "Gaziantep",
                     "dataType": "gathering-list",
                     "items": [
                         "ALLEBEN VADI PARK",

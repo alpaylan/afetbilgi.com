@@ -1119,38 +1119,6 @@
                     "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
                 }
             }
-        },
-        {
-            "name_tr": "Time to Help(UK)",
-            "name_en": "TIME TO HELP (UK) - Time to Help (UK)",
-            "name_ku": "Time to Help(UK)",
-            "value_tr": {
-                "type": "data",
-                "data": {
-                    "dataType": "international-url-donation",
-                    "country": "Birleşik Krallık/United Kingdom",
-                    "name": "Time to Help(UK)",
-                    "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-                }
-            },
-            "value_en": {
-                "type": "data",
-                "data": {
-                    "dataType": "international-url-donation",
-                    "country": "United Kingdom",
-                    "name": "Time to Help(UK)",
-                    "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-                }
-            },
-            "value_ku": {
-                "type": "data",
-                "data": {
-                    "dataType": "international-url-donation",
-                    "country": "Birleşik Krallık/United Kingdom",
-                    "name": "Time to Help(UK)",
-                    "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-                }
-            }
         }
     ],
     "text_tr": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
