@@ -58,6 +58,7 @@ const App = () => {
           textAlign: 'center',
           display: 'flex',
           flexFlow: 'row nowrap',
+          alignItems: 'center',
           justifyContent: 'center',
         }}
       >
