@@ -116,3 +116,14 @@ export interface UsefulLinksDataNode extends DataNode {
     url: string;
   }[];
 }
+
+export interface StemCellDataNode extends DataNode {
+  items: StemCellDataItem[];
+}
+
+export interface StemCellDataItem {
+  area: string;
+  city: string;
+  address: string;
+  phone: string;
+}

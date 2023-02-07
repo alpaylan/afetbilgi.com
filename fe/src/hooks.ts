@@ -5,14 +5,11 @@ import { useQuery } from "react-query";
 
 import { TreeNodeType } from "./variables/TreeNode";
 
-const baseQuestionData = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.1.json?v=3.3`)
+const baseQuestionData = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/combined_3.json?v=1`)
   .then(res => res.data);
 
-const baseQuestionDataEN = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.1.en.json?v=3.3`)
-.then(res => res.data);
-
 export const useQuestionData = (lang: string | undefined, paths: string[]) => useQuery(`questionData-${lang}-${paths.join(',')}`, async () => {
-  let currNode = lang === 'en' ? await baseQuestionDataEN : await baseQuestionData;
+  let currNode = await baseQuestionData;
 
   for (const path of paths) {
     if (!currNode || currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
@@ -21,12 +18,9 @@ export const useQuestionData = (lang: string | undefined, paths: string[]) => us
 
     const decodedPath = decodeURIComponent(path);
 
-    let nextNode = currNode.options.find((o: any) => o.name === decodedPath)?.value as any;
-    if (!nextNode && Number.isInteger(Number(decodedPath))) {
-      nextNode = currNode.options[Number(decodedPath)]?.value as any;
-    }
+    const foundNode = currNode.options.find((o: any) => o.name_tr === decodedPath || o.name === decodedPath);
 
-    currNode = nextNode;
+    currNode = (foundNode?.[`value_${lang}`] || foundNode?.value) as any;
   }
 
   return currNode;

@@ -11,6 +11,7 @@ import BloodDonationData from './data/BloodDonationData';
 import TelephoneData from './data/PhoneData';
 import ArticleData from './data/ArticleData';
 import UsefulLinksData from './data/UsefulLinksdata';
+import StemCellData from './data/StemCellData';
 
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
@@ -65,6 +66,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'useful-links') {
       return <UsefulLinksData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'stem-cell-donation') {
+      return <StemCellData value={dataNode.data as any} />
     }
 
     return <></>;

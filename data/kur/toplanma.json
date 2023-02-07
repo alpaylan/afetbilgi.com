@@ -213,11 +213,11 @@
             }
         },
         {
-            "name": "Antep",
+            "name": "Gaziantep",
             "value": {
                 "type": "data",
                 "data": {
-                    "city": "Antep",
+                    "city": "Gaziantep",
                     "dataType": "gathering-list",
                     "items": [
                         "ALLEBEN VADI PARK",
