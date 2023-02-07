@@ -91,7 +91,7 @@ export default function Question({ paths }: { paths: string[] }) {
                   }
                 }}
               >
-                {option.name}
+                {option.name.toLocaleUpperCase('TR')}
               </Button>
             ))
           )}

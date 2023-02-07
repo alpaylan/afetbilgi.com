@@ -28,11 +28,11 @@ const App = () => {
       {location.pathname !== '/' ? (
         <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
           <Button sx={{ m: 1 }} size="large" onClick={() => navigate('/')}>
-            Ana Sayfa
+            ANA SAYFA
           </Button>
 
           <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-            Geri
+            GERİ
           </Button>
         </Box>
       ) : <Box sx={{ pt: '60px' }} />}
