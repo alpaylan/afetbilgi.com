@@ -26,7 +26,7 @@ export default function Question({ paths }: { paths: string[] }) {
         </Typography>
 
         <Box sx={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center', paddingBottom: '50px' }}>
-          {selectedNode.options.map((option) => (
+          {selectedNode.options.map((option: any) => (
             <Button
               key={`button-${option.name}`}
               variant="contained"
