@@ -2,7 +2,6 @@
 
 import axios from "axios";
 import { useQuery } from "react-query";
-// import { Theme, useMediaQuery } from '@mui/material'
 
 import { TreeNodeType } from "./variables/TreeNode";
 
@@ -47,9 +46,3 @@ export const useQuestionData = (paths: string[]) => useQuery(`questionData-${pat
 
   return currNode;
 });
-
-// export const useMobile = () => {
-//   const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
-
-//   return isMobile;
-// };
