@@ -39,6 +39,7 @@ export interface CityAccommodationNode extends DataNode {
     name: string;
     phone_number?: string;
     url: string;
+    address?: string;
     is_validated: boolean;
   }[];
 }
