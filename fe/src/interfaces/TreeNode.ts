@@ -53,6 +53,7 @@ export interface HelpItemNode extends DataNode {
   city: string;
   items: {
     name: string;
+    location?: string;
     url: string;
     phone_number: string;
   }[];
