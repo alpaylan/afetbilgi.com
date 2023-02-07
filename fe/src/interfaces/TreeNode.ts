@@ -40,10 +40,8 @@ export interface CityAccommodationNode extends DataNode {
 }
 
 export interface CreditCardNode extends DataNode {
-  items: {
     name: string;
     url: string;
-  }[];
 }
 
 export interface ItemDataNode extends DataNode {
