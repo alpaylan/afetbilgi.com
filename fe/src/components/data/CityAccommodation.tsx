@@ -19,7 +19,7 @@ export default function CityAccommodation({ value }: { value: CityAccommodationN
             </>
           )}
           <br />
-          {(item.phone_number != "" && <p>Telefon Numarası:<b>{item.phone_number}</b></p>)}
+          Telefon Numarası: <b>{item.phone_number}</b>
           <br />
           {item.address && (
             <p>
