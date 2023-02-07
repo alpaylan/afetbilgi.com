@@ -11,7 +11,14 @@ export default function CityAccommodation({ value }: { value: CityAccommodationN
       {value.items.map((item, i) => (
         <Paper sx={{ p: 2, m: 2 }} key={`item-${i}`}>
           <b>{item.name}</b> depremzedelere kalacak yer sağladığını bildirdi.
-          Detaylı bilgiye <a href={item.url} target="_blank" rel="noreferrer">bu linkten</a> ulaşabilirsiniz.
+
+          {item.url && (
+            <>
+              Detaylı bilgiye <a href={item.url} target="_blank" rel="noreferrer">bu linkten</a> ulaşabilirsiniz.
+             <br />
+            </>
+          )}
+
           <br />
           {item.address && (
             <p>
