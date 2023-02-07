@@ -76,3 +76,14 @@ export interface SMSDataNode extends DataNode {
   number: string;
   amount: string;
 }
+
+export interface BloodDonationNode extends DataNode {
+  city: string;
+  name?: string;
+  head?: string;
+  address?: string;
+  phone_number?: string;
+  cell_phone_number?: string;
+  fax?: string;
+  url?: string;
+}
