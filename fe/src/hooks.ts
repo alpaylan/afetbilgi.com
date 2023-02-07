@@ -5,10 +5,10 @@ import { useQuery } from "react-query";
 
 import { TreeNodeType } from "./variables/TreeNode";
 
-const baseQuestionData = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.json?v=3.1`)
+const baseQuestionData = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.json?v=3.2`)
   .then(res => res.data);
 
-const baseQuestionDataEN = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.en.json?v=3`)
+const baseQuestionDataEN = axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.en.json?v=3.2`)
 .then(res => res.data);
 
 export const useQuestionData = (lang: string | undefined, paths: string[]) => useQuery(`questionData-${lang}-${paths.join(',')}`, async () => {
