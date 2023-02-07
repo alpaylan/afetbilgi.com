@@ -60,3 +60,10 @@ export interface HelpItemNode extends DataNode {
 export interface URLDataNode extends DataNode {
   url: string;
 }
+
+export interface SMSDataNode extends DataNode {
+  name: string;
+  sms: string;
+  number: string;
+  amount: string;
+}

@@ -6,11 +6,17 @@ import CreditCardData from './data/CreditCardData';
 import HelpItemData from './data/HelpItemData';
 import ItemData from './data/ItemData';
 import URLData from './data/URLData';
+import SMSData from './data/SMSData';
+
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
     if (dataNode.data.dataType === 'city-accommodation') {
       return <CityAccommodation value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'bank-account-donation') {
+      return <BankData value={dataNode.data as any} />
     }
 
     if (dataNode.data.dataType === 'credit-card-donation') {
@@ -35,6 +41,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'url-donation') {
       return <URLData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'sms-donation') {
+      return <SMSData value={dataNode.data as any} />
     }
 
     return <></>;
