@@ -1,11 +1,11 @@
 import json
 
 data_points = [
-  { 'name': 'Geçici Barınma Alanları', 'path': 'barinma.json' },
-  { 'name': 'Güvenli Toplanma Alanları', 'path': 'toplanma.json' },
-  { 'name': 'Donation', 'path': 'en/bagis.json' },
-  { 'name': 'Eşya Bağışı İmkanları', 'path': 'yardim_toplama_merkezleri.json' },
-  { 'name': 'Kızılay Kan Bağış Noktaları', 'path': 'blood.json' },
+  { 'name': 'Temporary Accommodation Places', 'path': 'barinma.json' },
+  { 'name': 'Safe Gathering Places', 'path': 'toplanma.json' },
+  { 'name': 'Money Donation', 'path': 'en/bagis.json' },
+  { 'name': 'Other Donation', 'path': 'yardim_toplama_merkezleri.json' },
+  { 'name': 'Kızılay Blood Donation Places', 'path': 'blood.json' },
 ]
 
 result = {
