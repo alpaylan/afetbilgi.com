@@ -19,7 +19,7 @@ function RootQuestion() {
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isLoading } = useQuestionData();
+  const { isLoading } = useQuestionData([]);
 
   return (
     <Box>
