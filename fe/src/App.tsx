@@ -71,7 +71,7 @@ const App = () => {
                 navigate(location.pathname.startsWith('/en') ? '/en' : '/')
               }
             >
-              {t('page.title.main')}
+              {t('page.main.title')}
             </Button>
 
             <Button sx={{ m: 1 }} size='large' onClick={() => navigate(-1)}>

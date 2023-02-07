@@ -1,6 +1,6 @@
 {
-  "page.title.main": "Ana Sayfa",
-  "page.subtitle.main": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
+  "page.main.title": "Ana Sayfa",
+  "page.main.subtitle": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
 
   "button.back": "Geri",
   "button.language": "Dili Değiştir",

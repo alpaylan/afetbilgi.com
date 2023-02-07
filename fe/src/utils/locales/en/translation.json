@@ -1,6 +1,6 @@
 {
-  "page.title.main": "Main Page",
-  "page.subtitle.main": "Please select a topic.",
+  "page.main.title": "Main Page",
+  "page.main.subtitle": "Please select a topic.",
 
   "button.back": "Back",
   "button.language": "Change Language",
