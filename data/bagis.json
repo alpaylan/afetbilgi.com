@@ -244,44 +244,46 @@
                     },
                     {
                         "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
-                        "type": "data",
-                        "data": {
-                            "dataType": "international-bank-account-donation",
-                            "country": "TR",
-                            "accounts": [
-                                {
-                                    "name": "T. İş Bankası",
-                                    "branch": "Gayrettepe Şubesi",
-                                    "tl": "TR14 0006 4000 0011 0800 6666 63",
-                                    "usd": "TR48 0006 4000 0021 0806 6666 60 ",
-                                    "eur": "TR12 0006 4000 0021 0806 6661 44",
-                                    "swift": "ISBKTRIS"
-                                },
-                                {
-                                    "name": "QNB Finansbank",
-                                    "branch": "Gayrettepe Şubesi",
-                                    "tl": "TR92 0011 1000 0000 0001 9576 70 ",
-                                    "usd": "TR82 0011 1000 0000 0032 4941 29 ",
-                                    "eur": "TR66 0011 1000 0000 0032 4941 26",
-                                    "swift": "FNNBTRIS"
-                                },
-                                {
-                                    "name": "Garanti BBVA",
-                                    "branch": "Ortaklar Cad. Şubesi",
-                                    "tl": "TR26 0006 2000 3570 0000 0029 30 ",
-                                    "usd": "TR83 0006 2000 3570 0009 0813 95",
-                                    "eur": "TR56 0006 2000 3570 0009 0813 96",
-                                    "swift": "TGBATRIS"
-                                },
-                                {
-                                    "name": "Yapı Kredi Bankası",
-                                    "branch": "Fulya Şubesi",
-                                    "tl": "TR23 0006 7010 0000 0075 0775 87",
-                                    "usd": "TR17 0006 7010 0000 0075 1625 70",
-                                    "eur": "TR75 0006 7010 0000 0075 0554 08",
-                                    "swift": "YAPITRIS"
-                                }
-                            ]
+                        "value" : {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                        "name": "T. İş Bankası",
+                                        "branch": "Gayrettepe Şubesi",
+                                        "tl": "TR14 0006 4000 0011 0800 6666 63",
+                                        "usd": "TR48 0006 4000 0021 0806 6666 60 ",
+                                        "eur": "TR12 0006 4000 0021 0806 6661 44",
+                                        "swift": "ISBKTRIS"
+                                    },
+                                    {
+                                        "name": "QNB Finansbank",
+                                        "branch": "Gayrettepe Şubesi",
+                                        "tl": "TR92 0011 1000 0000 0001 9576 70 ",
+                                        "usd": "TR82 0011 1000 0000 0032 4941 29 ",
+                                        "eur": "TR66 0011 1000 0000 0032 4941 26",
+                                        "swift": "FNNBTRIS"
+                                    },
+                                    {
+                                        "name": "Garanti BBVA",
+                                        "branch": "Ortaklar Cad. Şubesi",
+                                        "tl": "TR26 0006 2000 3570 0000 0029 30 ",
+                                        "usd": "TR83 0006 2000 3570 0009 0813 95",
+                                        "eur": "TR56 0006 2000 3570 0009 0813 96",
+                                        "swift": "TGBATRIS"
+                                    },
+                                    {
+                                        "name": "Yapı Kredi Bankası",
+                                        "branch": "Fulya Şubesi",
+                                        "tl": "TR23 0006 7010 0000 0075 0775 87",
+                                        "usd": "TR17 0006 7010 0000 0075 1625 70",
+                                        "eur": "TR75 0006 7010 0000 0075 0554 08",
+                                        "swift": "YAPITRIS"
+                                    }
+                                ]
+                            }
                         }
                     }
                 ]
