@@ -11,60 +11,89 @@
                     "dataType": "city-accommodation",
                     "items": [
                         {
+                            "city": "Adana",
                             "name": "Gündoğdu Koleji",
                             "is_validated": false,
-                            "url": "https://twitter.com/amofesor/status/1622607644832804865"
+                            "url": "https://twitter.com/amofesor/status/1622607644832804865",
+                            "address": "https://goo.gl/maps/cKUEe6vz8jVaViz7A"
                         },
                         {
+                            "city": "Adana",
                             "name": "Bahçeşehir Koleji",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://www.google.com/maps/place/Adana+Bah%C3%A7e%C5%9Fehir+Koleji/@37.0185809,35.2488164,17z/data=!3m1!4b1!4m5!3m4!1s0x152888787df976fd:0xf773cfb466b9266!8m2!3d37.0185766!4d35.2510051"
                         },
                         {
+                            "city": "Adana",
                             "name": "Uğur Okulları",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/cDxySwiAkQhdgDCG9"
                         },
                         {
+                            "city": "Adana",
                             "name": "Altıneller 100.Yıl ve Mavi Bulvar Kampüsü",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ZoXRmSFZhUyp4KLN7"
                         },
                         {
+                            "city": "Adana",
                             "name": "Eral İlokul ve Ortaokul",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ECYJQAkggKqE2n9x9"
                         },
                         {
+                            "city": "Adana",
                             "name": "Minecan Anaokulu",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/j4y7VURWexzvdHAg6"
                         },
                         {
+                            "city": "Adana",
                             "name": "Adana Koleji",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/9BKy6eEGGeu6Q1UU6"
                         },
                         {
+                            "city": "Adana",
                             "name": "Adana Final Okulları",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/s2D21TCA48JmjQFF9"
                         },
                         {
+                            "city": "Adana",
                             "name": "TED Adana Koleji",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/D7ZrE6ovF1PyP6dV8"
                         },
                         {
+                            "city": "Adana",
                             "name": "İstanbul Otel(Seyhan)",
                             "is_validated": true,
-                            "phone_number": "0322 433 33 33",
-                            "url": "https://www.google.com/travel/hotels/istanbul%20otel%20seyhan/entity/CgoIjNqS8fzx59VAEAE/reviews"
+                            "phone_number": "3224333333",
+                            "url": "https://www.google.com/travel/hotels/istanbul%20otel%20seyhan/entity/CgoIjNqS8fzx59VAEAE/reviews",
+                            "address": "https://goo.gl/maps/d9uQWeCRHYXBk1dY6"
                         },
                         {
+                            "city": "Adana",
+                            "name": "Adana Cemevi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
+                        },
+                        {
+                            "city": "Adana",
                             "name": "ASKON Adana Şubesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/TmogwCLNiiQQ2pQr9"
                         }
                     ]
                 }
@@ -79,134 +108,193 @@
                     "dataType": "city-accommodation",
                     "items": [
                         {
+                            "city": "Gaziantep",
                             "name": "ASKON Gaziantep Şubesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/gAY4JPT9Rizi2xUr7"
                         },
                         {
+                            "city": "Gaziantep",
+                            "name": "Antep Cemevi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/RG8DJvh3BV7mBT938"
+                        },
+                        {
+                            "city": "Gaziantep",
                             "name": "Çiçek Plaza Düğün Salonu",
                             "is_validated": true,
-                            "url": "https://instagram.com/stories/cicekplazagaziantep/3032241723521749525?utm_source=ig_story_item_share&igshid=NTdlMDg3MTY="
+                            "url": "https://instagram.com/stories/cicekplazagaziantep/3032241723521749525?utm_source=ig_story_item_share&igshid=NTdlMDg3MTY=",
+                            "address": "https://goo.gl/maps/t7396QCJrYsRoWdy7"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Uğur Okulları Gaziantep Kampüsü",
                             "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoTp-OFqsSy/?igshid=NTdlMDg3MTY="
+                            "url": "https://www.instagram.com/p/CoTp-OFqsSy/?igshid=NTdlMDg3MTY=",
+                            "address": "https://goo.gl/maps/Ws91SZ14gLJiR3pu8"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "İncilikaya Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/pmAvhGJ5UznrfFK87"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Şehitkamil Belediyesi Beykent Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/sehitkamilbel/status/1622637257189470210?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/sehitkamilbel/status/1622637257189470210?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/HTorv2F6otkfdJub8"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Kuzeyşehir Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/mGvk9NJJ8dTtNboZ7"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Talat Özkarslı Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/xpejamsginRAWRSS6"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Hasan Doğan Spor Kompleksi",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ZDcvcCfRUETJfdV48"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Karakedi Saklı Bahçe ",
                             "is_validated": true,
-                            "url": "https://www.instagram.com/reel/CoU7UwfKCtE/?igshid=NTdlMDg3MTY="
+                            "url": "https://www.instagram.com/reel/CoU7UwfKCtE/?igshid=NTdlMDg3MTY=",
+                            "address": "https://goo.gl/maps/xsSE8auC3sm8sXUu9"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Müzeyyen Erkul Bilim ve Sanat Merkezi",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/aTnqgFXXpmsHjmQm7"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Goap",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Panaroma Müzesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/MsXiqteNnrZoJKNT9"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Onat Kutlar",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/2ZRFt4mXfvnAvfAHA"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Kamil Ocak Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/Yqi98dCUkte8qnxh9"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Gazikent Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/EVe7AKH6xyQGkbT89"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "8 Şubat Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/xNP97UZUSuwC9gMU7"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Perilikaya Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/dAJm8scy2P3nwB2T8"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Ertuğrul Gazi Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Yeşilevler Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Beykent Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/HTorv2F6otkfdJub8"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Dumlupınar Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Ulaş Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Fıstıklı Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "M. Vehbi Dinçerler Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/RQVpds3MBUXnNWxg7"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Yeditepe Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/znpyW3eMoxZhv4AZ6"
                         },
                         {
+                            "city": "Gaziantep",
                             "name": "Gaziler Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A"
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": ""
                         }
                     ]
                 }
