@@ -1,43 +1,51 @@
+/* eslint-disable no-restricted-syntax */
+
 import { Box, Button, Typography } from '@mui/material';
-import { useState } from 'react';
-import { DataNode, QuestionNode, TreeNode } from '../interfaces/TreeNode';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useQuestionData } from '../hooks';
+import { QuestionNode } from '../interfaces/TreeNode';
 import { TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
 
-interface QuestionProps {
-  questionNode: QuestionNode;
-  onBack?: () => void;
-}
+export default function Question({ paths }: { paths: string[] }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { data: questionData } = useQuestionData();
 
-export default function Question(props: QuestionProps) {
-  const [answer, setAnswer] = useState<TreeNode | undefined>(undefined);
+  const [selectedNode, setSelectedNode] = useState<QuestionNode | null>(null);
 
-  const renderAnswer = () => {
-    if (!answer) {
-      return <></>;
+  useEffect(() => {
+    if (questionData) {
+      let currNode = questionData;
+
+      for (const path of paths) {
+        const intPath = Number(path);
+
+        if (currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
+          return;
+        }
+
+        currNode = currNode.options[intPath].value;
+      }
+
+      setSelectedNode(currNode);
+    } else {
+      setSelectedNode(null);
     }
+  }, [questionData, paths]);
 
-    if (answer.type === TreeNodeType.NODE_TYPE_QUESTION) {
-      return (
-        <Question
-          questionNode={answer as QuestionNode}
-          onBack={() => setAnswer(undefined)}
-        />
-      );
-    }
+  if (!selectedNode) {
+    return <></>;
+  }
 
-    return (
-      <Data dataNode={answer as DataNode} onBack={() => setAnswer(undefined)} />
-    );
-  };
-
-  return answer ? (
-    renderAnswer()
+  return selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION ? (
+    <Data dataNode={(selectedNode as any)} />
   ) : (
     <Box sx={{ height: '100%' }}>
-      {props.onBack && (
+      {location.pathname !== '/' && (
         <Box sx={{ mt: 3, textAlign: 'center' }}>
-          <Button size="large" onClick={props.onBack}>
+          <Button size="large" onClick={() => navigate(-1)}>
             Geri
           </Button>
         </Box>
@@ -45,16 +53,23 @@ export default function Question(props: QuestionProps) {
 
       <Box sx={{ textAlign: 'center', height: '80%', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
         <Typography variant="h2">
-          {props.questionNode.text}
+          {selectedNode.text}
         </Typography>
 
         <Box sx={{ display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
-          {props.questionNode.options.map((option) => (
+          {selectedNode.options.map((option, i) => (
             <Button
+              key={`button-${i}`}
               variant="contained"
               size="large"
               sx={{ m: 2 }}
-              onClick={() => setAnswer(option.value)}
+              onClick={() => {
+                if (location.pathname === '/') {
+                  navigate(`/${i}`);
+                } else {
+                  navigate(`${location.pathname}/${i}`);
+                }
+              }}
             >
               {option.name}
             </Button>

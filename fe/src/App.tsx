@@ -1,34 +1,32 @@
 import * as React from 'react';
 
 import './App.css';
-import { Box, Container } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { toast } from 'material-react-toastify';
 
-import { QuestionNode } from './interfaces/TreeNode';
-import { getData } from './services/data';
+import { Box, Container } from '@mui/material';
+
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Waiting from './components/Waiting';
 import Question from './components/Question';
+import { useQuestionData } from './hooks';
+
+function RootQuestion() {
+  const location = useLocation();
+  const paths = location.pathname.split('/').filter((p) => p !== '');
+
+  return <Question paths={paths} />;
+}
 
 const App = () => {
-  const [rootQuestion, setRootQuestion] = useState<QuestionNode | undefined>(
-    undefined,
-  );
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    getData()
-      .then((data) => setRootQuestion(data))
-      .catch((err) => toast.error(err.message))
-      .finally(() => setLoading(false));
-  }, []);
+  const { isLoading } = useQuestionData();
 
   return (
     <Box sx={{ height: '100%' }}>
-      <Waiting open={loading} />
+      <Waiting open={isLoading} />
+
       <Container sx={{ height: '100%' }}>
-        {rootQuestion && <Question questionNode={rootQuestion} />}
+        <Routes>
+          <Route path="/*" element={<RootQuestion />} />
+        </Routes>
       </Container>
     </Box>
   );
