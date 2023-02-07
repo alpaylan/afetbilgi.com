@@ -39,6 +39,14 @@ export default function BankData({ value }: { value: BankDataNode }) {
               <IconButton size="small"><ContentCopyIcon /></IconButton>
             </CopyToClipboard></ListItem>}
 
+            {account.erc && <ListItem><b>ERC20: </b>{account.erc} <CopyToClipboard text={account.erc}>
+              <IconButton size="small"><ContentCopyIcon /></IconButton>
+            </CopyToClipboard></ListItem>}
+
+            {account.avalanche && <ListItem><b>Avalanche: </b>{account.avalanche} <CopyToClipboard text={account.avalanche}>
+              <IconButton size="small"><ContentCopyIcon /></IconButton>
+            </CopyToClipboard></ListItem>}
+
             {account.url && <ListItem><a href={account.url} target="_blank">{account.url}</a></ListItem>}
           </List>
         </Paper>
