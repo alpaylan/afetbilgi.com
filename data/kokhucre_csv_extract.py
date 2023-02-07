@@ -37,7 +37,6 @@ def main():
 
     print(json.dumps({
         "type": "data",
-        "text": "Kök Hücre Bağış Noktaları",
         "data": {
             "dataType": "stem-cell-donation",
             "items": data
