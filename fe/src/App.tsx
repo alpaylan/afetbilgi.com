@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.css';
 
@@ -9,7 +9,7 @@ import Waiting from './components/Waiting';
 import Question from './components/Question';
 import { useQuestionData } from './hooks';
 
-function RootQuestion({lang}: {lang?: string}) {
+function RootQuestion({ lang }: {lang: string}) {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
 
@@ -19,14 +19,38 @@ function RootQuestion({lang}: {lang?: string}) {
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isLoading } = useQuestionData('tr', []);
-  const { isLoading: isLoadingEN } = useQuestionData('en', []);
+
+  const { isLoading } = useQuestionData('', []);
 
   const [lang, setLang] = useState('');
 
+  useEffect(() => {
+    const savedLang = window.localStorage.getItem('lang');
+
+    if (savedLang) {
+      setLang(savedLang);
+    } else {
+      setLang('tr');
+    }
+  }, []);
+
+  useEffect(() => {
+    if (lang) {
+      window.localStorage.setItem('lang', lang);
+    }
+  }, [lang]);
+
+  if (!lang) {
+    return (
+      <Box>
+        <Waiting open={isLoading} />
+      </Box>
+    );
+  }
+
   return (
     <Box>
-      <Waiting open={isLoading || isLoadingEN} />
+      <Waiting open={isLoading} />
 
         <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
           {location.pathname !== '/' && location.pathname !== '/en' && (
@@ -41,10 +65,7 @@ const App = () => {
               </>
           )}
 
-          <Button sx={{ m: 1 }} size="large" onClick={() => {
-            setLang(lang === 'en' ? 'tr' : 'en');
-            navigate('/');
-          }}>
+          <Button sx={{ m: 1 }} size="large" onClick={() => setLang(lang === 'en' ? 'tr' : 'en')}>
             {lang === 'en' ? 'CHANGE LANGUAGE' : 'DİLİ DEĞİŞTİR'}
           </Button>
         </Box>

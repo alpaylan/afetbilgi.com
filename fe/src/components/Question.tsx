@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-
 import {
   Autocomplete,
   Box,
@@ -11,9 +9,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useQuestionData } from '../hooks';
 import { TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
-import { OptionNode } from '../interfaces/TreeNode';
 
-export default function Question({ lang, paths }: { lang?: string, paths: string[] }) {
+const getOptionName = (option: any, lang: string) => option[`name_${lang}`] || option.name_tr || option.name;
+
+export default function Question({ lang, paths }: { lang: string, paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
   const language = lang === 'en' ? 'EN' : 'TR';
@@ -24,9 +23,11 @@ export default function Question({ lang, paths }: { lang?: string, paths: string
     return <></>;
   }
 
-  return selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION ? (
-    <Data dataNode={selectedNode as any} />
-  ) : (
+  if (selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
+    return <Data dataNode={selectedNode as any} />;
+  }
+
+  return (
     <Box>
       <Box
         sx={{
@@ -36,7 +37,7 @@ export default function Question({ lang, paths }: { lang?: string, paths: string
           justifyContent: 'center',
         }}
       >
-        <Typography variant='h4'>{selectedNode.text}</Typography>
+        <Typography variant='h4'>{selectedNode[`text_${lang}`] || selectedNode.text}</Typography>
 
         <Box
           sx={{
@@ -58,18 +59,18 @@ export default function Question({ lang, paths }: { lang?: string, paths: string
                 />
               )}
               options={selectedNode.options}
-              getOptionLabel={(option: OptionNode) => option.name}
-              onChange={(_, selectedOption) => {
+              getOptionLabel={(option: any) => getOptionName(option, lang)}
+              onChange={(_, selectedOption: any) => {
                 if (!selectedOption) {
                   return;
                 }
 
                 if (location.pathname === '/') {
-                  navigate(`/${encodeURIComponent(selectedOption.name)}`);
+                  navigate(`/${encodeURIComponent(getOptionName(selectedOption, 'tr'))}`);
                 } else {
                   navigate(
                     `${location.pathname}/${encodeURIComponent(
-                      selectedOption.name,
+                      getOptionName(selectedOption, 'tr')
                     )}`,
                   );
                 }
@@ -78,21 +79,21 @@ export default function Question({ lang, paths }: { lang?: string, paths: string
           ) : (
             selectedNode.options.map((option: any) => (
               <Button
-                key={`button-${option.name}`}
+                key={`button-${getOptionName(option, lang)}`}
                 variant='contained'
                 size='medium'
                 sx={{ m: 2, minWidth: '300px' }}
                 onClick={() => {
                   if (location.pathname === '/') {
-                    navigate(`/${encodeURIComponent(option.name)}`);
+                    navigate(`/${encodeURIComponent(getOptionName(option, 'tr'))}`);
                   } else {
                     navigate(
-                      `${location.pathname}/${encodeURIComponent(option.name)}`,
+                      `${location.pathname}/${encodeURIComponent(getOptionName(option, 'tr'))}`,
                     );
                   }
                 }}
               >
-                {option.name.toLocaleUpperCase(language)}
+                {getOptionName(option, lang).toLocaleUpperCase(language)}
               </Button>
             ))
           )}
