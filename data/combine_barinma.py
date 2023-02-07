@@ -1,6 +1,7 @@
 import json
 
 result = dict()
+already_added = set()
 for i in range(1, 3):
     with open(f"barinma_{i}.json", "r") as f:
         text = f.read().encode("utf-8")
@@ -10,6 +11,11 @@ for i in range(1, 3):
         for item in data:
             if item['city'] not in result:
                 result[item['city']] = []
+
+            if item['name'] in already_added:
+                continue
+
+            already_added.add(item['name'])
 
             if item['is_validated'] == 'Doğrulandı':
                 item['is_validated'] = True

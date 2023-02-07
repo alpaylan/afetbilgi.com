@@ -131,13 +131,6 @@
                         },
                         {
                             "city": "Adana",
-                            "name": "Gündoğdu Koleji",
-                            "address": "https://goo.gl/maps/cKUEe6vz8jVaViz7A",
-                            "phone_number": "4448801",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Adana",
                             "name": "Kutul Amare Ögrenci Yurdu",
                             "address": "https://goo.gl/maps/JNGm35qJAVjgkwXh8",
                             "phone_number": "0322 503 09 03",
@@ -472,13 +465,6 @@
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Çok Amaçlı Spor Salonu",
-                            "address": "https://www.google.com/maps/place/Gaziantep+Çok+Amaçli+Spor+Salonu/@37.0781227,37.4118275,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e43a1015152f:0x13714f99e7c7fde!8m2!3d37.0781184!4d37.4140215",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep",
                             "name": "Şahinbey Spor Salonu",
                             "address": "https://www.google.com/maps/place/Şahinbey+Belediyesi+Kapalı+Spor+Salonu/@37.0205335,37.2796843,13z/data=!4m10!1m2!2m1!1sGaziantep+Şahinbey+Spor+Salonu!3m6!1s0x1531e08401810311:0x56d848c45d5760e6!8m2!3d37.0205293!4d37.3455922!15sCh9HYXppYW50ZXAgxZ5haGluYmV5IFNwb3IgU2Fsb251WiEiH2dhemlhbnRlcCDFn2FoaW5iZXkgc3BvciBzYWxvbnWSARBiYXNrZXRiYWxsX2NvdXJ0mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5YTjB4Zk5XNUJSUkFC4AEA!16s%2Fg%2F11b7hfk3ld",
                             "phone_number": "",
@@ -659,30 +645,9 @@
                         },
                         {
                             "city": "Malatya",
-                            "name": "Hürriyet Parkı",
-                            "address": "https://www.google.com/maps/place/H%C3%BCrriyet+Park%C4%B1/@38.3479195,38.3243961,17z/data=!4m10!1m2!2m1!1zSMO8cnJpeWV0IFBhcmvEsQ!3m6!1s0x407636c2f6364067:0x9a0dca4af1c19f4f!8m2!3d38.3483791!4d38.3274481!15sChBIw7xycml5ZXQgUGFya8SxWhIiEGjDvHJyaXlldCBwYXJrxLGSAQRwYXJr4AEA!16s%2Fg%2F1tp0c4sr",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
                             "name": "Arapgir Nazar Otel",
                             "address": "https://maps.app.goo.gl/1NZ5LX4FNMy93tXq6?g_st=ic",
                             "phone_number": "5357288782",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Dedekorkut Sosyal Tesisleri",
-                            "address": "https://www.google.com/maps/place/Belsos+Dedekorkut+Restaurant/@38.3478362,38.2856143,17z/data=!3m1!4b1!4m5!3m4!1s0x407636b0222438a5:0x91285efcce2e8790!8m2!3d38.3478184!4d38.2878024",
-                            "phone_number": "(0422) 211 21 01",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Salköprü Semt Konağı",
-                            "address": "https://www.google.com/maps/place/Salk%C3%B6pr%C3%BC+Semt+Kona%C4%9F%C4%B1,Malatya/@38.3551866,38.3049724,17z/data=!3m1!4b1!4m5!3m4!1s0x407636a3297042a1:0x5c510c9fe3f5fdf3!8m2!3d38.3551853!4d38.3071853",
-                            "phone_number": "",
                             "is_validated": true
                         },
                         {
@@ -694,58 +659,9 @@
                         },
                         {
                             "city": "Malatya",
-                            "name": "Akçadağ Belediyesi",
-                            "address": "https://www.google.com/maps/place/Ak%C3%A7ada%C4%9F+Belediyesi/@38.3438762,37.9685067,17z/data=!3m1!4b1!4m5!3m4!1s0x1532d4db95555555:0xbd12be4c158fa408!8m2!3d38.343872!4d37.9706954",
-                            "phone_number": "(0422) 417 10 36",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Akçadağ Anadolu Lisesi",
-                            "address": "https://www.google.com/maps/place/Ak%C3%A7ada%C4%9F+ANADOLU+L%C4%B0SES%C4%B0/@38.3442368,37.9747976,17z/data=!3m1!4b1!4m5!3m4!1s0x4077d16ee2c4b729:0xec13eac02a0619c6!8m2!3d38.3442326!4d37.9769863",
-                            "phone_number": "(0422) 417 10 33",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
                             "name": "Akçadağ Şehit Alper Güde Teknik Lise Ve Çok Programlı Lise",
                             "address": "https://www.google.com/maps/place/Ak%C3%A7ada%C4%9F+%C5%9Eehit+Alper+G%C3%BCde+Teknik+Lise+Ve+%C3%87ok+Programl%C4%B1+Lise/@38.3445314,37.9536283,14z/data=!3m1!4b1!4m5!3m4!1s0x407636c17bf3728d:0x4cf622a82c03cd2e!8m2!3d38.344499!4d37.9711379",
                             "phone_number": "(0422) 417 13 33",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Arapgir Belediyesi",
-                            "address": "https://www.google.com/maps/place/Arapgir+Belediyesi/@39.0416415,38.4902505,17z/data=!3m1!4b1!4m5!3m4!1s0x4077451daaaaaaab:0x44bf804b55f45e0!8m2!3d39.0416374!4d38.4924392",
-                            "phone_number": "(0422) 811 30 03",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Darende Hükümet Konağı",
-                            "address": "https://www.google.com/maps/place/Darende+H%C3%BCk%C3%BCmet+Kona%C4%9F%C4%B1/@38.5605661,37.4886132,17z/data=!3m1!4b1!4m5!3m4!1s0x4077f9ea9a3f4c9d:0xe290791676e804b3!8m2!3d38.5604146!4d37.4908327",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Battalgazi Belediyesi",
-                            "address": "https://www.google.com/maps/place/Battalgazi%2FMalatya/@38.3116521,38.3719709,11z/data=!3m1!4b1!4m5!3m4!1s0x40764e9538fa05bb:0xc486d06cfc01ffb0!8m2!3d38.4422947!4d38.4668656",
-                            "phone_number": "(0422) 328 44 44",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Doğanyol Lisesi",
-                            "address": "https://www.google.com/maps/place/Do%C4%9Fanyol+Lisesi/@38.3130062,39.0367173,17z/data=!3m1!4b1!4m5!3m4!1s0x40767bd2594437f3:0x6321a65ae5691423!8m2!3d38.313002!4d39.038906",
-                            "phone_number": "0(422)8816004",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Malatya Kuluncak İlçe Milli Eğitim Müdürlüğü",
-                            "address": "https://www.google.com/maps/place/Malatya+Kuluncak+%C4%B0l%C3%A7e+Milli+E%C4%9Fitim+M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC/@38.8825824,37.6680081,17z/data=!3m1!4b1!4m5!3m4!1s0x40782ddb8376a371:0xdc9076bf004fcb19!8m2!3d38.8825782!4d37.6701484",
-                            "phone_number": "(0422) 681 22 06",
                             "is_validated": true
                         },
                         {
@@ -766,13 +682,6 @@
                             "city": "Malatya",
                             "name": "Yeşilyurt Merkez Spor Salonu",
                             "address": "https://goo.gl/maps/B61BxedPJRE44AZaA",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Çok Amaçlı Spor Salonu",
-                            "address": "https://goo.gl/maps/D6wMmrDYYoP5A623A",
                             "phone_number": "",
                             "is_validated": true
                         },
@@ -1196,13 +1105,6 @@
                         },
                         {
                             "city": "Diyarbakır",
-                            "name": "Şehit Halit Gülser Kız Anadolu İmam Hatip Lisesi",
-                            "address": "https://www.google.com/maps/place/%C5%9Eehit+Halit+G%C3%BClser+K%C4%B1z+Anadolu+%C4%B0mam+Hatip+Lisesi/@37.3642415,40.4666352,8.11z/data=!4m5!3m4!1s0x40751f942d74f0b5:0x5310eca21e3d2498!8m2!3d37.9541983!4d40.1737705",
-                            "phone_number": "0 412 257 65 86",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Diyarbakır",
                             "name": "Yenişehir Gençlik Merkezi",
                             "address": "https://www.google.com/maps/place/Yeni%C5%9Fehir+Gen%C3%A7lik+Merkezi/@37.8316981,40.034691,10.75z/data=!4m5!3m4!1s0x407521bbdda316cf:0x7603b2aaaf4186f1!8m2!3d37.8964665!4d40.2195628",
                             "phone_number": "324-327-8577",
@@ -1329,13 +1231,6 @@
                         },
                         {
                             "city": "Diyarbakır",
-                            "name": "Hazreti Süleyman Camii",
-                            "address": "https://www.google.com/maps/place/Hazreti+S%C3%BCleyman+Camii/@37.9149009,40.2398629,17z/data=!3m1!4b1!4m5!3m4!1s0x4075203f32a55abf:0xbddd47048a6064a9!8m2!3d37.9148967!4d40.2420516",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Diyarbakır",
                             "name": "Hayırseverler Cami",
                             "address": "https://www.google.com/maps/place/Hay%C4%B1rseverler+Cami/@37.9493852,40.1836821,17z/data=!3m1!4b1!4m5!3m4!1s0x40751e31f18c9f93:0x306f01e8f23337da!8m2!3d37.949388!4d40.1858696",
                             "phone_number": "",
@@ -1380,13 +1275,6 @@
                             "city": "Diyarbakır",
                             "name": "Kayapınar Şehit Halit Gülser Kompleksi",
                             "address": "https://maps.app.goo.gl/8ZGKvgLNkyvhu7yZ9?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Diyarbakır Stadyumu",
-                            "address": "https://maps.app.goo.gl/8nrG5FPCxEj9Kqgk9?g_st=ic",
                             "phone_number": "",
                             "is_validated": true
                         },
@@ -1698,21 +1586,7 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Viranşehir Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Viran%C5%9Fehir+Gen%C3%A7lik+Merkezi/@37.2250321,39.7645697,17z/data=!3m1!4b1!4m5!3m4!1s0x15356938d14a010f:0x5328179c9f0f6ac5!8m2!3d37.2251579!4d39.767143",
-                            "phone_number": "0542 637 47 19",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
                             "name": "Siverek Spor Salonu",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Siverek Gençlik Merkezi",
                             "address": null,
                             "phone_number": "",
                             "is_validated": true
@@ -1726,51 +1600,9 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Suruç Gençlik Merkezi",
-                            "address": null,
-                            "phone_number": "0414 611 91 60",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Ahmet Yesevi Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/search/Ahmet+Yesevi+Gen%C3%A7lik+Merkezi/@37.1794624,38.7728122,16z/data=!3m1!4b1",
-                            "phone_number": "0507 561 64 39",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Birecik Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Birecik+Gen%C3%A7lik+Merkezi/@37.0148818,37.9711553,17z/data=!3m1!4b1!4m5!3m4!1s0x153181b65e95692f:0x492feb8808644b59!8m2!3d37.0148775!4d37.9733439",
-                            "phone_number": "0507 352 99 79",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Bozova Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Bozova+Gen%C3%A7lik+Merkezi/@37.3646078,38.5262392,17z/data=!3m1!4b1!4m5!3m4!1s0x153385f142320e8f:0x6996c04814cbbf5f!8m2!3d37.3646036!4d38.5284279",
-                            "phone_number": "(0414) 711 54 49",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Ceylanpınar Büyükşehir Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Ceylanp%C4%B1nar+B%C3%BCy%C3%BCk%C5%9Fehir+Gen%C3%A7lik+Merkezi/@36.8588765,40.0464371,17z/data=!3m1!4b1!4m5!3m4!1s0x154a8156482a26e7:0x5797781f5ebd6d14!8m2!3d36.8589018!4d40.04872",
-                            "phone_number": "0544 663 54 34",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
                             "name": "Ceylanpınar Spor Salonu",
                             "address": "https://www.google.com/maps/place/Ceylanp%C4%B1nar+spor+salonu/@37.0385431,38.7610774,9z/data=!4m10!1m2!2m1!1sceylanp%C4%B1nar+spor+salonu!3m6!1s0x154a7f0f6f10d1d5:0xa1c04ea15851d651!8m2!3d36.8440965!4d40.0469733!15sChhjZXlsYW5wxLFuYXIgc3BvciBzYWxvbnWSAQ5zcG9ydHNfY29tcGxleOABAA!16s%2Fg%2F11gmx85ydp",
                             "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Halfeti Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Halfeti+Gen%C3%A7lik+Merkezi/@37.2287272,37.941766,17z/data=!3m1!4b1!4m5!3m4!1s0x15322d7a61cbc609:0xffe5345485c2814e!8m2!3d37.2287229!4d37.9439547",
-                            "phone_number": "0542 558 52 10",
                             "is_validated": true
                         },
                         {
@@ -1782,13 +1614,6 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Hilvan Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Hilvan+Gen%C3%A7lik+Merkezi/@37.5846476,38.9511271,17z/data=!3m1!4b1!4m5!3m4!1s0x1534bfd6db8f6f07:0xae2adb2e8ebfecf0!8m2!3d37.5846434!4d38.9533158",
-                            "phone_number": "0414 681 20 05",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
                             "name": "Hilvan Spor Salonu",
                             "address": "https://www.google.com/maps/place/Hilvan+Spor+Salonu/@37.5951818,38.972966,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc399e2a3808a2ff!8m2!3d37.5951818!4d38.972966",
                             "phone_number": "",
@@ -1796,43 +1621,8 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Hayati Harrani Gençlik Merkezi",
-                            "address": "https://www.google.com/maps/place/Hayati+Harrani+Gen%C3%A7lik+Merkezi/@37.1214447,38.810531,17z/data=!3m1!4b1!4m5!3m4!1s0x15347325e396c677:0xa24834a7ba28f458!8m2!3d37.1214446!4d38.8127289",
-                            "phone_number": "(0414) 247 34 28",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Şehitlik İlkokulu",
-                            "address": "https://www.google.com/maps/place/%C5%9Eehitlik+%C4%B0lkokulu/@37.1648183,38.7813073,17z/data=!3m1!4b1!4m5!3m4!1s0x153471a8ae595a51:0x9e47f5aa9e6e32a4!8m2!3d37.1648039!4d38.78347",
-                            "phone_number": "(0414) 351 21 25",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
                             "name": "İbrahim Halil Yıldım Parkı",
                             "address": "https://www.google.com/maps/place/%C4%B0brahim+Halil+Y%C4%B1ld%C4%B1m+Park%C4%B1/@37.1713794,38.7661498,17z/data=!3m1!4b1!4m5!3m4!1s0x1534710535627095:0x453c5dfdfdd88cf5!8m2!3d37.1713751!4d38.7683385",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Sırrın Cami",
-                            "address": "https://www.google.com/maps/place/S%C4%B1rr%C4%B1n+Cami/@37.1623533,38.8256934,17z/data=!3m1!4b1!4m5!3m4!1s0x15346fd10e7cbb99:0x30867922eb6eca6c!8m2!3d37.1624167!4d38.8278811",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Harran Kapı Caddesi",
-                            "address": "https://www.google.com/maps/place/Yakubiye,+Harran+Kap%C4%B1+Cd.,+Eyy%C3%BCbiye%2F%C5%9Eanl%C4%B1urfa/@37.1442716,38.7785308,17z/data=!3m1!4b1!4m5!3m4!1s0x15347185298e8015:0xfe3e9ab3d6015a7!8m2!3d37.1442673!4d38.7807195",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Rabia Meydanı",
-                            "address": "https://www.google.com/maps/place/Rabia+Meydan%C4%B1/@37.16058,38.7886198,17z/data=!3m1!4b1!4m5!3m4!1s0x153471ba9386261b:0xe6d01f5da1a84ac5!8m2!3d37.1605757!4d38.7908085",
                             "phone_number": "",
                             "is_validated": true
                         },
@@ -2065,85 +1855,8 @@
                         },
                         {
                             "city": "Osmaniye",
-                            "name": "Osmaniye Kız Yurdu",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kayıboyu Kız Yurdu",
-                            "address": "https://maps.app.goo.gl/NjXojrtjbFpfqCqQ8?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Karacaoğlan Erkek Yurdu",
-                            "address": "https://maps.app.goo.gl/JFEDqDGzy6DkZg2h6?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kadirli Karma Yurt Müdürlüğü",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Gençlik Merkezi",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Tosyalı Spor Salonu",
-                            "address": "https://maps.app.goo.gl/JUEsUxmxfA7n42gUA?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Çok Amaçlı Spor Salonu",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Olimpik Havuz",
-                            "address": "https://maps.app.goo.gl/YYojKiY3Qai4hHxM8?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye İl Müdürlüğü Ana Bina",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
                             "name": "Kadirli Spor Salonu",
                             "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kadirli Gençlik Merkezi",
-                            "address": "https://maps.app.goo.gl/yphGr6NJdC1repgo8?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Düziçi Spor Salonu ve Gençlik Merkezi",
-                            "address": "https://maps.app.goo.gl/rrZrdpCxr8QFQmdd8?g_st=ic",
                             "phone_number": "",
                             "is_validated": true
                         },
@@ -2152,20 +1865,6 @@
                             "name": "Bahçe Spor Salonu",
                             "address": null,
                             "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "OKÜ Genç Ofis ve Otağ Çadırı",
-                            "address": "https://maps.app.goo.gl/eMnFoJBJhM4mLgKu5?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Cevdetiye Spor Eğitim Merkezi",
-                            "address": "https://maps.app.goo.gl/WGNAfA8oqihdMoUF9?g_st=ic",
-                            "phone_number": "(0328) 834 26 24",
                             "is_validated": true
                         }
                     ]
@@ -2578,13 +2277,6 @@
                             "name": "Artes Hotel",
                             "address": "https://maps.app.goo.gl/WXFPcEitN2dpbc379?g_st=ic",
                             "phone_number": "(0326) 211 24 34",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Merkez Spor Salonu",
-                            "address": "https://www.google.com/maps/search/hatay+merkez+spor+salonu/@36.2005892,36.1087554,13z/data=!3m1!4b1",
-                            "phone_number": "",
                             "is_validated": true
                         },
                         {
@@ -3167,20 +2859,6 @@
                     "items": [
                         {
                             "city": "Gaziantep ",
-                            "name": "Çiçek Plaza Düğün Salonu",
-                            "address": "https://maps.app.goo.gl/BNPhgzPKsbqT6pZe9?g_st=ic",
-                            "phone_number": "0552 555 74 04",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Uğur Okulları Gaziantep Kampüsü",
-                            "address": "https://maps.app.goo.gl/YQsRpcQvzaVvVboh7?g_st=ic",
-                            "phone_number": "(0342) 341 33 03",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
                             "name": "İncilikaya spor salonu",
                             "address": "https://maps.app.goo.gl/SQ5dqMhLYAFs9ZF6A?g_st=ic",
                             "phone_number": "0342 335 27 00",
@@ -3195,37 +2873,9 @@
                         },
                         {
                             "city": "Gaziantep ",
-                            "name": "Kuzeyşehir Spor Salonu",
-                            "address": "https://maps.app.goo.gl/etkYWbwcCV4btZFDA?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Talat Özkarslı Spor Salonu",
-                            "address": "https://maps.app.goo.gl/G2XiCKSMR4gJAjqq6?g_st=ic",
-                            "phone_number": "(0342) 232 46 06",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Hasan Doğan Spor Kompleksi",
-                            "address": "https://maps.app.goo.gl/mvaD23M2RSbNdybD9?g_st=ic",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
                             "name": "Karakedi Saklı Bahçe",
                             "address": "https://maps.app.goo.gl/McuzQvDYufi61Qju8?g_st=ic",
                             "phone_number": "0530 353 95 95 ",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Müzeyyen Erkul Bilim ve Sanat Merkezi",
-                            "address": "https://maps.app.goo.gl/kWE1RXGHbZjR3RBS8?g_st=ic",
-                            "phone_number": "",
                             "is_validated": true
                         },
                         {
@@ -3307,36 +2957,8 @@
                         },
                         {
                             "city": "Gaziantep ",
-                            "name": "Kamil Ocak Yüzme Havuzu",
-                            "address": "https://www.google.com/maps/place/Kamil+Ocak+Kapal%C4%B1+Y%C3%BCzme+Havuzu/@37.0610474,37.3995447,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e764d231169f:0xac222c6577699727!8m2!3d37.0610431!4d37.4017334",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Gazikent Yüzme Havuzu",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "8 Şubat Yüzme Havuzu",
-                            "address": "https://www.google.com/maps/place/8+%C5%9EUBAT+Y%C3%9CZME+HAVUZU/@37.0912296,37.3726421,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e3d46f84743b:0x81cc1fe6e2a4ad77!8m2!3d37.0912253!4d37.3748308",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
                             "name": "Gaziler Yüzme Havuzu",
                             "address": "https://www.google.com/search?q=gaziler%20y%C3%BCzme%20havuzu&sxsrf=AJOqlzWtRXLkqryRQykcXrGddSuohRrqzA:1675721161061&ei=oHnhY9ieO-uTxc8P2JuSyAk&oq=gaziler+y%C3%BCzme+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgQIABBDMgUIABCABDIFCAAQgAQyBggAEBYQHjIGCAAQFhAeOgcIIxDqAhAnOgQIIxAnOg0ILhCxAxCDARDUAhBDOggIABCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwguEIMBELEDEIAEOgsILhCABBCxAxCDAToOCC4QsQMQgwEQxwEQrwE6CwgAEIAEELEDEIMBOgQIABADOgQILhBDOgsILhCABBDHARCvAToJCAAQQxBGEIECOgUILhCABEoECEEYAEoECEYYAFDZAlioGGDJIWgBcAF4AIABwAKIAawSkgEIMC4xMi4xLjGYAQCgAQGwAQrAAQE&sclient=gws-wiz-serp&tbs=lf:1,lf_ui:2&tbm=lcl&rflfq=1&num=10&rldimm=8142903245475782976&lqi=ChVnYXppbGVyIHnDvHptZSBoYXZ1enVaFyIVZ2F6aWxlciB5w7x6bWUgaGF2dXp1kgEDZ3ltqgFICggvbS8wYl9ycxABGh8QASIbA-KD1vaE8F6HnsR-TqVbW4mZNdD8IINTQK2dKhkiFWdhemlsZXIgecO8em1lIGhhdnV6dSgh&ved=2ahUKEwjQt7Dk84H9AhX6SvEDHb9LAgEQvS56BAgPEAE&sa=X&rlst=f#rlfi=hd:;si:8142903245475782976,l,ChVnYXppbGVyIHnDvHptZSBoYXZ1enVaFyIVZ2F6aWxlciB5w7x6bWUgaGF2dXp1kgEDZ3ltqgFICggvbS8wYl9ycxABGh8QASIbA-KD1vaE8F6HnsR-TqVbW4mZNdD8IINTQK2dKhkiFWdhemlsZXIgecO8em1lIGhhdnV6dSgh;mv:[[41.248288599999995,38.0449124],[36.7326425,26.5550514]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2",
-                            "phone_number": "",
-                            "is_validated": true
-                        },
-                        {
-                            "city": "Gaziantep ",
-                            "name": "Perilikaya Spor Salonu",
-                            "address": "https://www.google.com/maps/place/Perilikaya+Spor+Salonu/@37.0518133,37.3829097,14z/data=!4m10!1m2!2m1!1sPerilikaya+Spor+Salonu!3m6!1s0x1531e68efd9e7ac9:0xd76cd0d34640c5f8!8m2!3d37.0518133!4d37.4179286!15sChZQZXJpbGlrYXlhIFNwb3IgU2Fsb251kgEFc3RvcmXgAQA!16s%2Fg%2F11klvy6nfr",
                             "phone_number": "",
                             "is_validated": true
                         },
@@ -3380,13 +3002,6 @@
                     "city": "Kahramanmaraş ",
                     "dataType": "city-accommodation",
                     "items": [
-                        {
-                            "city": "Kahramanmaraş ",
-                            "name": "Merkez Spor Salonu",
-                            "address": null,
-                            "phone_number": "",
-                            "is_validated": true
-                        },
                         {
                             "city": "Kahramanmaraş ",
                             "name": "Batıpark Spor Salonu",
