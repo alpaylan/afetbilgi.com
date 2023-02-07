@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import './App.css';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { toast } from 'material-react-toastify';
 
@@ -25,9 +25,11 @@ const App = () => {
   }, []);
 
   return (
-    <Box component='div'>
+    <Box sx={{ height: '100%' }}>
       <Waiting open={loading} />
-      {rootQuestion && <Question questionNode={rootQuestion} />}
+      <Container sx={{ height: '100%' }}>
+        {rootQuestion && <Question questionNode={rootQuestion} />}
+      </Container>
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { DataNode } from '../interfaces/TreeNode';
 import BankData from './data/BankData';
 import CityBarinma from './data/CityBarinmaData';
@@ -37,23 +37,15 @@ export default function Data(props: DataProps) {
 
   return (
     <Box>
-      <Box component="div">
-        <Button onClick={props.onBack}>
+      <Box sx={{ mt: 3, textAlign: 'center' }}>
+        <Button size="large" onClick={props.onBack}>
           Geri
         </Button>
       </Box>
 
-      <Grid
-        container
-        spacing={0.75}
-        direction='column'
-        alignItems='center'
-        style={{ minHeight: '100vh' }}
-      >
-        <Grid item xs={4}>
-          {renderData()}
-        </Grid>
-      </Grid>
+      <Box sx={{ textAlign: 'center', height: '80%', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center', alignItems: 'center' }}>
+        {renderData()}
+      </Box>
     </Box>
   );
 };
