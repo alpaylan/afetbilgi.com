@@ -4,7 +4,9 @@ import { ArticleDataNode } from "../../interfaces/TreeNode";
 export default function ArticleData({ value }: { value: ArticleDataNode }) {
     return (
         <Box>
-            <h3>Depremle İlgili Yazılar</h3>
+            <h3>Faydalı Yazılar</h3>
+
+            <p><b>Deprem sonrası ile alakalı faydalı yazıları aşağıda bulabilirsiniz.</b></p>
     
             {value.articles.map((item, i) => (
 
