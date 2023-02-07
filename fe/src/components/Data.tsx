@@ -1,8 +1,11 @@
 import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 import { makeStyles } from 'tss-react/mui';
 import { DataNode, DataValue } from '../interfaces/TreeNode';
-import { knownDataTypes } from '../variables/TreeNode';
 import { useSharedStyles } from '../utilities/Styles';
+import BankData from './data/BankData';
+import CityBarinma from './data/CityBarinmaData';
+import ItemData from './data/ItemData';
+import URLData from './data/URLData';
 
 interface DataProps {
   dataNode: DataNode;
@@ -14,9 +17,26 @@ const Data = (props: DataProps) => {
   const sharedClasses = useSharedStyles().classes;
 
   const renderData = () => {
-    if (knownDataTypes.includes(props.dataNode.data.dataType)) {
-      return <>Known Type</>;
+    if (props.dataNode.data.dataType === 'city-barinma') {
+      return <CityBarinma value={props.dataNode.data as any} />
     }
+
+    if (props.dataNode.data.dataType === 'item-list') {
+      return <ItemData value={props.dataNode.data as any} />
+    }
+
+    if (props.dataNode.data.dataType === 'url-donation') {
+      return <URLData value={props.dataNode.data as any} />
+    }
+
+    if (props.dataNode.data.dataType === 'international-url-donation') {
+      return <URLData value={props.dataNode.data as any} />
+    }
+
+    if (props.dataNode.data.dataType === 'international-bank-account-donation') {
+      return <BankData value={props.dataNode.data as any} />
+    }
+
     return (
       <Paper className={classes.paper}>
         {Object.keys(props.dataNode.data)
@@ -42,6 +62,7 @@ const Data = (props: DataProps) => {
           Geri
         </Button>
       </Box>
+
       <Grid
         container
         spacing={0.75}

@@ -1,6 +1,9 @@
+import axios from 'axios';
+
 import { QuestionNode } from '../interfaces/TreeNode';
-import mockData from '../data/mockQuestion';
 
 export const getData = async (): Promise<QuestionNode> => {
-  return mockData;
+  const res = await axios.get('http://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/barinma.json');
+
+  return res.data;
 };
