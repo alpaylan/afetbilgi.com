@@ -12,7 +12,7 @@
                         "name": "AFAD",
                         "value": {
                             "type": "question",
-                            "text": "AFAD'a bağışta bulunmak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "text": "Lütfen AFAD'a nasıl başvurmak istediğinizi seçin.",
                             "options": [
                                 {
                                     "name": "SMS ile Bağış",
@@ -22,7 +22,8 @@
                                             "dataType": "sms-donation",
                                             "name": "AFAD",
                                             "sms": "DEPREM",
-                                            "number": "1866"
+                                            "number": "1866",
+                                            "amount": "20"
                                         }
                                     }
                                 },
@@ -38,7 +39,9 @@
                                     }
                                 }
                             ]
-                        },
+                        }
+                    },
+                    {
                         "name": "Kızılay",
                         "value": {
                             "type": "question",
@@ -68,7 +71,9 @@
                                     }
                                 }
                             ]
-                        },
+                        }
+                    },
+                    {
                         "name": "AHBAP",
                         "value": {
                             "type": "question",
@@ -97,7 +102,9 @@
                                     }
                                 }
                             ]
-                        },
+                        }
+                    },
+                    {
                         "name": "AKUT",
                         "value": {
                             "type": "question",
@@ -136,7 +143,7 @@
                                             "number": "2930"
                                         }
                                     }
-                                },
+                                }
                             ]
                         }
                     }
