@@ -121,6 +121,8 @@
         {
             "name": "Yurt Dışı Banka",
             "value": {
+                "type": "question",
+                "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
                 "options": [
                     {
                         "name": "AFAD",
