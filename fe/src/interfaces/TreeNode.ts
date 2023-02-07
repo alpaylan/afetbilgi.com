@@ -50,8 +50,10 @@ export interface ItemDataNode extends DataNode {
 }
 
 export interface HelpItemNode extends DataNode {
+  city: string;
   items: {
     name: string;
+    url: string;
     phone_number: string;
   }[];
 }

@@ -8,27 +8,25 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "İstanbul",
                     "items": [
                         {
-                            "city": "İstanbul",
                             "name": "İstanbul Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ekrem_imamoglu/status/1622530883000406016",
-                            "phone_number": "4442566"
+                            "phone_number": "444  2 5 66"
                         },
                         {
-                            "city": "İstanbul",
                             "name": "Doğa Koleji",
+                            "location": "İstanbul Ataşehir 1 Kampüsü ve İstanbul Güneşli Kampüsü",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
                             "phone_number": ""
                         },
                         {
-                            "city": "İstanbul",
                             "name": "İTÜ",
                             "url": "https://twitter.com/ProfDrKoyuncu/status/1622521627467546625?s=20&t=W9Bp9sdtzSoa9HO5Wd93Eg",
                             "phone_number": "0536 659 87 06"
                         },
                         {
-                            "city": "İstanbul",
                             "name": "Boğaziçi Üniversitesi",
                             "url": "https://twitter.com/UniBogazici/status/1622635223233036291",
                             "phone_number": "0212 359 44 49"
@@ -43,27 +41,24 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Ankara",
                     "items": [
                         {
-                            "city": "Ankara",
                             "name": "Ankara Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mansuryavas06/status/1622553611770241027",
-                            "phone_number": "3124409420"
+                            "phone_number": "0312 440 94 20"
                         },
                         {
-                            "city": "Ankara",
                             "name": "Ankara Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ankarabbld/status/1622575424642351112",
-                            "phone_number": "3125969000"
+                            "phone_number": "0312 596 90 00"
                         },
                         {
-                            "city": "Ankara",
                             "name": "ODTÜ Mezunlar Derneği",
                             "url": "https://twitter.com/odtu_md/status/1622486496103092224",
-                            "phone_number": "3122867979"
+                            "phone_number": "0312 286 79 79"
                         },
                         {
-                            "city": "Ankara",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
                             "phone_number": ""
@@ -78,21 +73,19 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "İzmir",
                     "items": [
                         {
-                            "city": "İzmir",
                             "name": "İzmir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tuncsoyer/status/1622552098872127489",
-                            "phone_number": "2322934781"
+                            "phone_number": "0232 293 47 81"
                         },
                         {
-                            "city": "İzmir",
                             "name": "İzmir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tuncsoyer/status/1622552098872127489",
-                            "phone_number": "2322931200"
+                            "phone_number": "0232 293 12 00"
                         },
                         {
-                            "city": "İzmir",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
                             "phone_number": ""
@@ -112,7 +105,7 @@
                             "city": "Bursa",
                             "name": "Bursa Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Alinuraktas70/status/1622558627725824006",
-                            "phone_number": "4441600"
+                            "phone_number": "444 16 00"
                         },
                         {
                             "city": "Bursa",
@@ -141,7 +134,7 @@
                             "city": "Antalya",
                             "name": "Antalya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/BocekMuhittin/status/1622541607697321987",
-                            "phone_number": "4449420"
+                            "phone_number": "444 94 20"
                         }
                     ]
                 }
@@ -158,7 +151,7 @@
                             "city": "Konya",
                             "name": "Konya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Konyabuyuksehir/status/1622540858439393281",
-                            "phone_number": "3323229924"
+                            "phone_number": "0332 322 99 24"
                         }
                     ]
                 }
@@ -175,7 +168,7 @@
                             "city": "Adana",
                             "name": "Adana Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Adana_Bld/status/1622541147674497025",
-                            "phone_number": "3222272854"
+                            "phone_number": "0322 227 28 54"
                         }
                     ]
                 }
@@ -192,13 +185,13 @@
                             "city": "Kocaeli",
                             "name": "Kocaeli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/kocaelibld/status/1622584987781324801",
-                            "phone_number": "3122582323"
+                            "phone_number": "0312 258 23 23"
                         },
                         {
                             "city": "Kocaeli",
                             "name": "Kocaeli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/kocaelibld/status/1622584987781324801",
-                            "phone_number": "2623181000"
+                            "phone_number": "0262 318 10 00"
                         },
                         {
                             "city": "Kocaeli",
@@ -221,7 +214,7 @@
                             "city": "Mersin",
                             "name": "Mersin Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mersin_bld/status/1622574562876485634",
-                            "phone_number": "3243232123"
+                            "phone_number": "0324 323 21 23"
                         }
                     ]
                 }
@@ -238,7 +231,7 @@
                             "city": "Manisa",
                             "name": "Manisa Valiliği",
                             "url": "https://twitter.com/ManisaValiligi/status/1622534241257914368",
-                            "phone_number": "2362377723"
+                            "phone_number": "0236 237 77 23"
                         }
                     ]
                 }
@@ -255,7 +248,7 @@
                             "city": "Aydın",
                             "name": "Aydın Büyükşehir Belediyesi",
                             "url": "https://twitter.com/aydinbuyuksehir?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4444009"
+                            "phone_number": "444 40 09"
                         }
                     ]
                 }
@@ -272,7 +265,7 @@
                             "city": "Balıkesir",
                             "name": "Balıkesir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/balikesirbld/status/1622527583106568192",
-                            "phone_number": "4444010"
+                            "phone_number": "444 40 10"
                         }
                     ]
                 }
@@ -289,7 +282,7 @@
                             "city": "Denizli",
                             "name": "Denizli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/denizlibld/status/1622554661852004352/photo/1",
-                            "phone_number": "2582652137"
+                            "phone_number": "0258 265 21 37"
                         }
                     ]
                 }
@@ -306,7 +299,7 @@
                             "city": "Diyarbakır",
                             "name": "Diyarbakır Büyükşehir Belediyesi",
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "phone_number": "412294880"
+                            "phone_number": "0412 229 48 80"
                         }
                     ]
                 }
@@ -323,7 +316,7 @@
                             "city": "Erzurum",
                             "name": "Erzurum Büyükşehir Belediyesi",
                             "url": "https://twitter.com/erzurumbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4441625"
+                            "phone_number": "444 16 25"
                         }
                     ]
                 }
@@ -340,7 +333,7 @@
                             "city": "Eskişehir",
                             "name": "Eskişehir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/eskisehirbb/status/1622532888003592194",
-                            "phone_number": "2222115500"
+                            "phone_number": "0222 211 55 00"
                         }
                     ]
                 }
@@ -357,7 +350,7 @@
                             "city": "Gaziantep",
                             "name": "Gaziantep Büyükşehir Belediyesi",
                             "url": "https://twitter.com/FatmaSahin/status/1622499495853322242",
-                            "phone_number": "3422111200"
+                            "phone_number": "0342 211 12 00"
                         }
                     ]
                 }
@@ -374,7 +367,7 @@
                             "city": "Hatay",
                             "name": "Hatay Büyükşehir Belediyesi",
                             "url": "https://twitter.com/hataybsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "3262149190"
+                            "phone_number": "0326 214 91 90"
                         }
                     ]
                 }
@@ -391,7 +384,7 @@
                             "city": "Kahramanmaraş",
                             "name": "Kahramanmaraş Büyükşehir Belediyesi",
                             "url": "https://twitter.com/buyuksehirkm?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "3442284600"
+                            "phone_number": "0344 228 46 00"
                         }
                     ]
                 }
@@ -408,7 +401,7 @@
                             "city": "Kayseri",
                             "name": "Kayseri Büyükşehir Belediyesi",
                             "url": "https://twitter.com/baskanmemduhbyk/status/1622570654426972160",
-                            "phone_number": "3522228960"
+                            "phone_number": "0352 222 89 60"
                         }
                     ]
                 }
@@ -425,7 +418,7 @@
                             "city": "Malatya",
                             "name": "Malatya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/malatyabeltr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4445144"
+                            "phone_number": "444 51 44"
                         }
                     ]
                 }
@@ -442,7 +435,7 @@
                             "city": "Mardin",
                             "name": "Mardin Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mardinbuyukshr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4822151930"
+                            "phone_number": "0482 215 19 30"
                         }
                     ]
                 }
@@ -459,7 +452,7 @@
                             "city": "Muğla",
                             "name": "Muğla Büyükşehir Belediyesi",
                             "url": "https://twitter.com/muglabsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4444801"
+                            "phone_number": "444 48 01"
                         }
                     ]
                 }
@@ -476,7 +469,7 @@
                             "city": "Ordu",
                             "name": "Ordu Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ordubbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4441052"
+                            "phone_number": "444 10 52"
                         }
                     ]
                 }
@@ -493,7 +486,7 @@
                             "city": "Sakarya",
                             "name": "Sakarya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/sakaryabld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "2642893000"
+                            "phone_number": "0264 289 30 00"
                         }
                     ]
                 }
@@ -510,7 +503,7 @@
                             "city": "Samsun",
                             "name": "Samsun Büyükşehir Belediyesi",
                             "url": "https://twitter.com/samsunbsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "3624311012"
+                            "phone_number": "0362 431 10 12"
                         }
                     ]
                 }
@@ -527,7 +520,7 @@
                             "city": "Şanlıurfa",
                             "name": "Şanlıurfa Büyükşehir Belediyesi",
                             "url": "https://twitter.com/sanliurfabld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4141530000"
+                            "phone_number": "0414 153 00 00"
                         }
                     ]
                 }
@@ -544,7 +537,7 @@
                             "city": "Tekirdağ",
                             "name": "Tekirdağ Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tdagbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "8504595959"
+                            "phone_number": "0850 459 59 59"
                         }
                     ]
                 }
@@ -561,7 +554,7 @@
                             "city": "Trabzon",
                             "name": "Trabzon Büyükşehir Belediyesi",
                             "url": "https://twitter.com/trabzonbeltr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4622246161"
+                            "phone_number": "0462 224 61 61"
                         }
                     ]
                 }
@@ -578,7 +571,7 @@
                             "city": "Van",
                             "name": "Van Büyükşehir Belediyesi",
                             "url": "https://twitter.com/vanbuyuksehirbb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "4444465"
+                            "phone_number": "444 44 65"
                         }
                     ]
                 }
@@ -595,7 +588,7 @@
                             "city": "Kütahya",
                             "name": "Kütahya Belediyesi",
                             "url": "https://twitter.com/kutahyabel?s=21&t=TRGXu5zjRo1q39XxBdIDXg",
-                            "phone_number": "2749991943"
+                            "phone_number": "0274 999 19 43"
                         }
                     ]
                 }
