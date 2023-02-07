@@ -130,8 +130,39 @@
                                         "type": "data",
                                         "data": {
                                             "dataType": "bank-account-donation",
-                                            "name": "AKUT",
-                                            "iban": "TR140006400000110800666663"
+                                            "country": "TR",
+                                            "accounts": [
+                                                {
+                                                "name": "TÜRKİYE İŞ BANKASI",
+                                                "branch": "Gayrettepe Şubesi",
+                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                                "tl": "TR140006400000110800666663"
+                                                },
+                                                {
+                                                "name": "QNB Finansbank",
+                                                "branch": "Gayrettepe Şubesi",
+                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                                "tl": "TR92 0011 1000 0000 0001 9576 70"
+                                                },
+                                                {
+                                                "name": "Garanti BBVA",
+                                                "branch": "Ortaklar Cad. Şubesi",
+                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                                "tl": "TR26 0006 2000 3570 0000 0029 30"
+                                                },
+                                                {
+                                                "name": "Yapı Kredi Bankası",
+                                                "branch": "Fulya Şubesi",
+                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                                "tl": "TR23 0006 7010 0000 0075 0775 87"
+                                                },
+                                                {
+                                                "name": "ŞEKERBANK T.A.Ş.",
+                                                "branch": "Mecidiyeköy  Şubesi",
+                                                "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
+                                                "tl": "TR50 0005 9002 1053 6000 0029 30"
+                                                }
+                                            ]
                                         }
                                     }
                                 },
