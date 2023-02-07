@@ -20,15 +20,6 @@ export interface OptionNode {
   value: TreeNode;
 }
 
-export interface ItemDataNode extends DataNode {
-  items: string[];
-}
-
-export interface URLDataNode extends DataNode {
-  url: string;
-}
-
-
 export interface BankDataNode extends DataNode {
   accounts: {
     name: string;
@@ -41,9 +32,24 @@ export interface BankDataNode extends DataNode {
   }[];
 }
 
-export interface CityBarinmaNode extends DataNode {
+export interface CityAccommodationNode extends DataNode {
   items: {
     name: string;
     url: string;
   }[];
+}
+
+export interface CreditCardNode extends DataNode {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}
+
+export interface ItemDataNode extends DataNode {
+  items: string[];
+}
+
+export interface URLDataNode extends DataNode {
+  url: string;
 }
