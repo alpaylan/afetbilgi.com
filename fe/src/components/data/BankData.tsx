@@ -7,14 +7,14 @@ export default function BankData({ value }: { value: BankDataNode }) {
       {value.accounts.map((account) => (
         <Paper sx={{ p: 2, m: 2 }}>
           <List>
-            {account.name && <ListItem>{account.name}</ListItem>}
-            {account.branch && <ListItem>{account.branch}</ListItem>}
-            {account.ownerName && <ListItem>{account.ownerName}</ListItem>}
-            {account.tl && <ListItem>TL Hesabı: {account.tl}</ListItem>}
-            {account.usd && <ListItem>USD Hesabı: {account.usd}</ListItem>}
-            {account.eur && <ListItem>USD Hesabı: {account.eur}</ListItem>}
-            {account.gbp && <ListItem>GBP Hesabı: {account.gbp}</ListItem>}
-            {account.swift && <ListItem>Swift Hesabı: {account.swift}</ListItem>}
+            {account.name && <ListItem><b>Banka: </b>{account.name}</ListItem>}
+            {account.branch && <ListItem><b>Şube: </b>{account.branch}</ListItem>}
+            {account.ownerName && <ListItem><b>Hesap Sahibi: </b>{account.ownerName}</ListItem>}
+            {account.tl && <ListItem><b>TL IBAN: </b>{account.tl}</ListItem>}
+            {account.usd && <ListItem><b>USD IBAN: </b>{account.usd}</ListItem>}
+            {account.eur && <ListItem><b>EUR IBAN: </b>{account.eur}</ListItem>}
+            {account.gbp && <ListItem><b>GBP IBAN: </b>{account.gbp}</ListItem>}
+            {account.swift && <ListItem><b>Swift Kodu: </b>{account.swift}</ListItem>}
           </List>
         </Paper>
       ))}
