@@ -34,9 +34,9 @@ export default function Question({ paths }: { paths: string[] }) {
               sx={{ m: 2, minWidth: '300px' }}
               onClick={() => {
                 if (location.pathname === '/') {
-                  navigate(`/${option.name}`);
+                  navigate(`/${encodeURIComponent(option.name)}`);
                 } else {
-                  navigate(`${location.pathname}/${option.name}`);
+                  navigate(`${location.pathname}/${encodeURIComponent(option.name)}`);
                 }
               }}
             >
