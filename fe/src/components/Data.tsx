@@ -58,7 +58,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
       return <TelephoneData value={dataNode.data as any} />
     }
 
-    if (dataNode.data.dataType === 'articles') {
+    if (dataNode.data.dataType === 'beneficial-articles') {
       return <ArticleData value={dataNode.data as any} />
     }
 

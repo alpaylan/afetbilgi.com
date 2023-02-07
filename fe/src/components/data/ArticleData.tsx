@@ -19,5 +19,5 @@ export default function ArticleData({ value }: { value: ArticleDataNode }) {
             </Paper>
             ))}
         </Box>
-    )
+    );
 }
