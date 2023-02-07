@@ -4,8 +4,8 @@ import { BankDataNode } from "../../interfaces/TreeNode";
 export default function BankData({ value }: { value: BankDataNode }) {
   return (
     <Box>
-      {value.accounts.map((account) => (
-        <Paper sx={{ p: 2, m: 2 }}>
+      {value.accounts.map((account, i) => (
+        <Paper sx={{ p: 2, m: 2 }} key={`account-${i}`}>
           <List>
             {account.name && <ListItem><b>Banka: </b>{account.name}</ListItem>}
             {account.branch && <ListItem><b>Şube: </b>{account.branch}</ListItem>}

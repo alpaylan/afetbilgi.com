@@ -21,13 +21,13 @@ export default function Question({ paths }: { paths: string[] }) {
       let currNode = questionData;
 
       for (const path of paths) {
-        const intPath = Number(path);
-
         if (currNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
           return;
         }
 
-        currNode = currNode.options[intPath].value as any;
+        const decodedPath = decodeURIComponent(path);
+
+        currNode = currNode.options.find(o => o.name === decodedPath)?.value as any;
       }
 
       setSelectedNode(currNode);
@@ -50,17 +50,17 @@ export default function Question({ paths }: { paths: string[] }) {
         </Typography>
 
         <Box sx={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center', paddingBottom: '50px' }}>
-          {selectedNode.options.map((option, i) => (
+          {selectedNode.options.map((option) => (
             <Button
-              key={`button-${i}`}
+              key={`button-${option.name}`}
               variant="contained"
               size="medium"
               sx={{ m: 2, minWidth: '300px' }}
               onClick={() => {
                 if (location.pathname === '/') {
-                  navigate(`/${i}`);
+                  navigate(`/${option.name}`);
                 } else {
-                  navigate(`${location.pathname}/${i}`);
+                  navigate(`${location.pathname}/${option.name}`);
                 }
               }}
             >
