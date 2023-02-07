@@ -1,232 +1,329 @@
 {
-    "domestic": [
+    "type": "question",
+    "text": "Nereden yardımda bulunmak istiyorsunuz? (Yurt İçi / Yurt Dışı URL / Yurt Dışı Banka)",
+    "options": [
         {
-            "name": "AFAD",
-            "url": "https://www.afad.gov.tr/",
-            "iban": null,
-            "credit_card": null,
-            "sms": "DEPREM 1866"
+            "name": "Yurt İçi",
+            "value": {
+                "type": "question",
+                "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
+                "options": [
+                    {
+                        "name": "AFAD",
+                        "value": {
+                            "type": "question",
+                            "text": "AFAD'dan yardım almak istiyorsanız, lütfen aşağıdaki seçeneklerden birini seçiniz.",
+                            "options": [
+                                {
+                                    "name": "AFAD'a bağışta bulun",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "url-donation",
+                                            "name": "AFAD",
+                                            "url": "https://www.afad.gov.tr/"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "AFAD'a SMS ile yardım et",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "sms-donation",
+                                            "name": "AFAD",
+                                            "sms": "DEPREM",
+                                            "number": "1866"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "AFAD'a bağışta bulunmak için banka hesabına para yatır",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "bank-account-donation",
+                                            "name": "AFAD",
+                                            "iban": null
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "AFAD'a bağışta bulunmak için kredi kartı ile yardım et",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "credit-card-donation",
+                                            "name": "AFAD",
+                                            "url": "https://www.afad.gov.tr/"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
         },
         {
-            "name": "AKUT",
-            "url": "https://yonetim.ziraatbank.com.tr/v4/DonationUI/Donation/DataSave/b950aafd-2ebc-4842-81bf-70619e32dc12",
-            "iban": "TR14 0006 4000 0011 0800 6666 63",
-            "credit_card": "https://www.akut.org.tr/bagis-yap",
-            "sms": "AKUT 2930"
+            "name": "Yurt Dışı URL",
+            "value": {
+                "type": "question",
+                "text": "Hangi kuruma bağışta bulunmak istiyorsunuz?",
+                "options": [
+                    {
+                        "name": "Turkish Philantrophy Funds",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-url-donation",
+                                "country": "ABD",
+                                "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Kızılhaç",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-url-donation",
+                                "country": "Avusturya",
+                                "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Kızılay",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-url-donation",
+                                "country": "Almanya",
+                                "url": "https://www.kizilay.org.tr/bagis-yontemleri/yurt-disindan-bagis"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Time to Help(UK)",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-url-donation",
+                                "country": "Birleşik Krallık",
+                                "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
+                            }
+                        }
+                    }
+                ]
+            }
         },
         {
-            "name": "Kızılay",
-            "url": "https://www.kizilay.org.tr/bagis",
-            "iban": "TR480001002110000028685254",
-            "sms": "AFET 2868",
-            "credit_card": "https://www.kizilay.org.tr/Bagis/BagisYap/215/afet-acil-durum-bagisi"
-        },
-        {
-            "name": "AHBAP",
-            "url": "https://ahbap.org",
-            "iban": "TR120006400000110211380059",
-            "sms": null,
-            "credit_card": "https://ahbap.org/bagis-kategorisi/5"
-        }
-    ],
-    "international_urls": [
-        {
-            "country": "ABD",
-            "name": "Turkish Philantrophy Funds",
-            "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
-        },
-        {
-            "country": "Avusturya",
-            "name": "Kızılhaç",
-            "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
-        },
-        {
-            "country": "Almanya",
-            "name": "Kızılay",
-            "url": "https://www.kizilay.org.tr/bagis-yontemleri/yurt-disindan-bagis"
-        },
-        {
-            "name": "Time to Help(UK)",
-            "country": "Birleşik Krallık",
-            "url": "https://timetohelp.enthuse.com/cf/turkey-earthquake"
-        }
-    ],
-    "international_bank_accounts": [
-        {
-            "name": "AFAD",
-            "country": "TR",
-            "accounts": [
-                {
-                    "name": "T.C. ZİRAAT BANKASI A.Ş.",
-                    "branch": "ANKARA KAMU KURUMSAL ŞUBESİ",
-                    "tl": "TR73 0001 0017 4555 5555 5552 04",
-                    "usd": "TR 46 0001 0017 4555 5555 5552 05",
-                    "eur": "TR 19 0001 0017 4555 5555 5552 06",
-                    "swift": "TCZBTR2A"
-                },
-                {
-                    "name": "TÜRKİYE VAKIFLAR BANKASI T.A.O",
-                    "branch": "KIZILAY TİCARİ ŞUBE",
-                    "tl": "TR62 0001 5001 5800 7299 3175 99",
-                    "usd": "TR43 0001 5001 5804 8013 0940 88",
-                    "eur": "TR32 0001 5001 5804 8013 0940 92",
-                    "swift": "TVBATR2A"
-                },
-                {
-                    "name": "TÜRKİYE HALK BANKASI A.Ş",
-                    "branch": "BAKANLIKLAR ŞUBESİ",
-                    "tl": "TR88 0001 2009 4080 0005 0002 28",
-                    "usd": "TR75 0001 2009 4080 0058 0002 92",
-                    "eur": "TR48 0001 2009 4080 0058 0002 93",
-                    "swift": "TRHBTR2A"
-                },
-                {
-                    "name": "KUVEYT TÜRK KATILIM BANKASI A.Ş.",
-                    "branch": "BALGAT ŞUBESİ",
-                    "tl": " TR67 0020 5000 0951 0603 5000 09",
-                    "usd": " TR61 0020 5000 0951 0603 5001 17",
-                    "eur": "TR34 0020 5000 0951 0603 5001 18",
-                    "swift": "KTEFTRIS"
-                },
-                {
-                    "name": "VAKIF KATILIM BANKASI A.Ş.",
-                    "branch": "KURUMSAL ANKARA ŞUBESİ",
-                    "tl": "TR25 0021 0000 0001 6349 0000 06",
-                    "usd": "TR57 0021 0000 0001 6349 0001 09",
-                    "eur": "TR30 0021 0000 0001 6349 0001 10",
-                    "swift": "VAKFTRIS"
-                },
-                {
-                    "name": "ALBARAKA TÜRK KATILIM BANKASI A.Ş.",
-                    "branch": "BAŞKENT KURUMSAL ŞUBESİ",
-                    "tl": "TR02 0020 3000 0779 2009 0000 10",
-                    "usd": "TR72 0020 3000 0779 2009 0000 11",
-                    "eur": "TR45 0020 3000 0779 2009 0000 12",
-                    "swift": "BTFHTRIS"
-                },
-                {
-                    "name": "TÜRKİYE EMLAK KATILIM BANKASI A.Ş",
-                    "branch": "ANKARA ŞUBESİ",
-                    "tl": "TR80 0021 1000 0005 1027 4000 11",
-                    "usd": "TR31 0021 1000 0005 1027 4001 17",
-                    "eur": "TR04 0021 1000 0005 1027 4001 18",
-                    "swift": "EMLATRIS"
-                },
-                {
-                    "name": "DENİZBANK A.Ş.",
-                    "branch": "BAŞKENT TİCARİ MERKEZ ve KAMU FİNANSMANI ŞUBESİ",
-                    "tl": "TR84 0013 4000 0155 9775 9000 11",
-                    "usd": "TR14 0013 4000 0155 9775 9000 10",
-                    "eur": "TR57 0013 4000 0155 9775 9000 12",
-                    "swift": "DENITRIS"
-                },
-                {
-                    "name": "TÜRKİYE İŞ BANKASI A.Ş.",
-                    "branch": "BAŞKENT ŞUBESİ",
-                    "tl": "TR16 0006 4000 0014 2990 9890 45",
-                    "usd": "TR09 0006 4000 0024 2992 5862 71",
-                    "eur": "TR19 0006 4000 0024 2992 5862 85",
-                    "swift": "ISBKTRIS"
-                },
-                {
-                    "name": "ŞEKERBANK T.A.Ş.",
-                    "branch": "ANKARA ŞUBESİ",
-                    "tl": "TR18 0005 9000 6013 0006 0089 34",
-                    "usd": "TR88 0005 9000 6013 0006 0089 35",
-                    "eur": "TR61 0005 9000 6013 0006 0089 36",
-                    "swift": "SEKETR2A"
-                },
-                {
-                    "name": "TÜRK EKONOMİ BANKASI A.Ş.",
-                    "branch": "ÇANKAYA ANKARA ŞUBESİ",
-                    "tl": "TR90 0003 2000 0000 0077 3407 66",
-                    "usd": "TR13 0003 2000 0000 0077 3407 94",
-                    "eur": "TR34 0003 2000 0000 0077 3408 04",
-                    "swift": "TEBUTRIS"
-                },
-                {
-                    "name": "QNB FİNANSBANK A.Ş.",
-                    "branch": "ÜMİTKÖY ŞUBESİ",
-                    "tl": "TR03 0011 1000 0000 0091 7684 68",
-                    "usd": "TR48 0011 1000 0000 0091 7685 31",
-                    "eur": "TR32 0011 1000 0000 0091 7686 25",
-                    "swift": "FNNBTRIS"
-                },
-                {
-                    "name": "AKBANK T.A.Ş.",
-                    "branch": "BAŞKENT KURUMSAL ŞUBESİ",
-                    "tl": "TR83 0004 6008 3288 8000 1486 21",
-                    "usd": "TR07 0004 6008 3200 1000 1486 22",
-                    "eur": "TR54 0004 6008 3203 6000 1486 23",
-                    "swift": "AKBKTRIS"
-                }
-            ]
-        },
-        {
-            "name": "AKUT",
-            "country": "TR",
-            "accounts": [
-                {
-                    "name": "T. İş Bankası",
-                    "branch": "Gayrettepe Şubesi",
-                    "tl": "TR14 0006 4000 0011 0800 6666 63",
-                    "usd": "TR48 0006 4000 0021 0806 6666 60 ",
-                    "eur": "TR12 0006 4000 0021 0806 6661 44",
-                    "swift": "ISBKTRIS"
-                },
-                {
-                    "name": "QNB Finansbank",
-                    "branch": "Gayrettepe Şubesi",
-                    "tl": "TR92 0011 1000 0000 0001 9576 70 ",
-                    "usd": "TR82 0011 1000 0000 0032 4941 29 ",
-                    "eur": "TR66 0011 1000 0000 0032 4941 26",
-                    "swift": "FNNBTRIS"
-                },
-                {
-                    "name": "Garanti BBVA",
-                    "branch": "Ortaklar Cad. Şubesi",
-                    "tl": "TR26 0006 2000 3570 0000 0029 30 ",
-                    "usd": "TR83 0006 2000 3570 0009 0813 95",
-                    "eur": "TR56 0006 2000 3570 0009 0813 96",
-                    "swift": "TGBATRIS"
-                },
-                {
-                    "name": "Yapı Kredi Bankası",
-                    "branch": "Fulya Şubesi",
-                    "tl": "TR23 0006 7010 0000 0075 0775 87",
-                    "usd": "TR17 0006 7010 0000 0075 1625 70",
-                    "eur": "TR75 0006 7010 0000 0075 0554 08",
-                    "swift": "YAPITRIS"
-                }
-            ]
-        },
-        {
-            "name": "Kızılay",
-            "country": "Almanya",
-            "accounts": [
-                {
-                    "name": "Ziraat Bankası",
-                    "branch": "Frankfurt",
-                    "tl": "TR23 0006 7010 0000 0075 0775 87",
-                    "usd": "TR17 0006 7010 0000 0075 1625 70",
-                    "swift": "KONTO NO: 1080000001\nBLZ: 512 20 700\nSWIFT KOD: TCZBDEFF"
-                }
-            ]
-        },
-        {
-            "name": "AHBAP",
-            "country": "TR",
-            "accounts": [
-                {
-                    "name": "TÜRKİYE İŞ BANKASI",
-                    "branch": "Frankfurt",
-                    "tl": "TR120006400000110211380059",
-                    "usd": "TR320006400000210212150262",
-                    "eur": "TR150006400000210212150277",
-                    "gbp": "TR370006400000210212260849",
-                    "swift": "ISBKTRIS"
-                }
-            ]
+            "name": "Yurt Dışı Banka",
+            "value": {
+                "options": [
+                    {
+                        "name": "AFAD",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                        "name": "T.C. ZİRAAT BANKASI A.Ş.",
+                                        "branch": "ANKARA KAMU KURUMSAL ŞUBESİ",
+                                        "tl": "TR73 0001 0017 4555 5555 5552 04",
+                                        "usd": "TR 46 0001 0017 4555 5555 5552 05",
+                                        "eur": "TR 19 0001 0017 4555 5555 5552 06",
+                                        "swift": "TCZBTR2A"
+                                    },
+                                    {
+                                        "name": "TÜRKİYE VAKIFLAR BANKASI T.A.O",
+                                        "branch": "KIZILAY TİCARİ ŞUBE",
+                                        "tl": "TR62 0001 5001 5800 7299 3175 99",
+                                        "usd": "TR43 0001 5001 5804 8013 0940 88",
+                                        "eur": "TR32 0001 5001 5804 8013 0940 92",
+                                        "swift": "TVBATR2A"
+                                    },
+                                    {
+                                        "name": "TÜRKİYE HALK BANKASI A.Ş",
+                                        "branch": "BAKANLIKLAR ŞUBESİ",
+                                        "tl": "TR88 0001 2009 4080 0005 0002 28",
+                                        "usd": "TR75 0001 2009 4080 0058 0002 92",
+                                        "eur": "TR48 0001 2009 4080 0058 0002 93",
+                                        "swift": "TRHBTR2A"
+                                    },
+                                    {
+                                        "name": "KUVEYT TÜRK KATILIM BANKASI A.Ş.",
+                                        "branch": "BALGAT ŞUBESİ",
+                                        "tl": " TR67 0020 5000 0951 0603 5000 09",
+                                        "usd": " TR61 0020 5000 0951 0603 5001 17",
+                                        "eur": "TR34 0020 5000 0951 0603 5001 18",
+                                        "swift": "KTEFTRIS"
+                                    },
+                                    {
+                                        "name": "VAKIF KATILIM BANKASI A.Ş.",
+                                        "branch": "KURUMSAL ANKARA ŞUBESİ",
+                                        "tl": "TR25 0021 0000 0001 6349 0000 06",
+                                        "usd": "TR57 0021 0000 0001 6349 0001 09",
+                                        "eur": "TR30 0021 0000 0001 6349 0001 10",
+                                        "swift": "VAKFTRIS"
+                                    },
+                                    {
+                                        "name": "ALBARAKA TÜRK KATILIM BANKASI A.Ş.",
+                                        "branch": "BAŞKENT KURUMSAL ŞUBESİ",
+                                        "tl": "TR02 0020 3000 0779 2009 0000 10",
+                                        "usd": "TR72 0020 3000 0779 2009 0000 11",
+                                        "eur": "TR45 0020 3000 0779 2009 0000 12",
+                                        "swift": "BTFHTRIS"
+                                    },
+                                    {
+                                        "name": "TÜRKİYE EMLAK KATILIM BANKASI A.Ş",
+                                        "branch": "ANKARA ŞUBESİ",
+                                        "tl": "TR80 0021 1000 0005 1027 4000 11",
+                                        "usd": "TR31 0021 1000 0005 1027 4001 17",
+                                        "eur": "TR04 0021 1000 0005 1027 4001 18",
+                                        "swift": "EMLATRIS"
+                                    },
+                                    {
+                                        "name": "DENİZBANK A.Ş.",
+                                        "branch": "BAŞKENT TİCARİ MERKEZ ve KAMU FİNANSMANI ŞUBESİ",
+                                        "tl": "TR84 0013 4000 0155 9775 9000 11",
+                                        "usd": "TR14 0013 4000 0155 9775 9000 10",
+                                        "eur": "TR57 0013 4000 0155 9775 9000 12",
+                                        "swift": "DENITRIS"
+                                    },
+                                    {
+                                        "name": "TÜRKİYE İŞ BANKASI A.Ş.",
+                                        "branch": "BAŞKENT ŞUBESİ",
+                                        "tl": "TR16 0006 4000 0014 2990 9890 45",
+                                        "usd": "TR09 0006 4000 0024 2992 5862 71",
+                                        "eur": "TR19 0006 4000 0024 2992 5862 85",
+                                        "swift": "ISBKTRIS"
+                                    },
+                                    {
+                                        "name": "ŞEKERBANK T.A.Ş.",
+                                        "branch": "ANKARA ŞUBESİ",
+                                        "tl": "TR18 0005 9000 6013 0006 0089 34",
+                                        "usd": "TR88 0005 9000 6013 0006 0089 35",
+                                        "eur": "TR61 0005 9000 6013 0006 0089 36",
+                                        "swift": "SEKETR2A"
+                                    },
+                                    {
+                                        "name": "TÜRK EKONOMİ BANKASI A.Ş.",
+                                        "branch": "ÇANKAYA ANKARA ŞUBESİ",
+                                        "tl": "TR90 0003 2000 0000 0077 3407 66",
+                                        "usd": "TR13 0003 2000 0000 0077 3407 94",
+                                        "eur": "TR34 0003 2000 0000 0077 3408 04",
+                                        "swift": "TEBUTRIS"
+                                    },
+                                    {
+                                        "name": "QNB FİNANSBANK A.Ş.",
+                                        "branch": "ÜMİTKÖY ŞUBESİ",
+                                        "tl": "TR03 0011 1000 0000 0091 7684 68",
+                                        "usd": "TR48 0011 1000 0000 0091 7685 31",
+                                        "eur": "TR32 0011 1000 0000 0091 7686 25",
+                                        "swift": "FNNBTRIS"
+                                    },
+                                    {
+                                        "name": "AKBANK T.A.Ş.",
+                                        "branch": "BAŞKENT KURUMSAL ŞUBESİ",
+                                        "tl": "TR83 0004 6008 3288 8000 1486 21",
+                                        "usd": "TR07 0004 6008 3200 1000 1486 22",
+                                        "eur": "TR54 0004 6008 3203 6000 1486 23",
+                                        "swift": "AKBKTRIS"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "AKUT",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                        "name": "T. İş Bankası",
+                                        "branch": "Gayrettepe Şubesi",
+                                        "tl": "TR14 0006 4000 0011 0800 6666 63",
+                                        "usd": "TR48 0006 4000 0021 0806 6666 60 ",
+                                        "eur": "TR12 0006 4000 0021 0806 6661 44",
+                                        "swift": "ISBKTRIS"
+                                    },
+                                    {
+                                        "name": "QNB Finansbank",
+                                        "branch": "Gayrettepe Şubesi",
+                                        "tl": "TR92 0011 1000 0000 0001 9576 70 ",
+                                        "usd": "TR82 0011 1000 0000 0032 4941 29 ",
+                                        "eur": "TR66 0011 1000 0000 0032 4941 26",
+                                        "swift": "FNNBTRIS"
+                                    },
+                                    {
+                                        "name": "Garanti BBVA",
+                                        "branch": "Ortaklar Cad. Şubesi",
+                                        "tl": "TR26 0006 2000 3570 0000 0029 30 ",
+                                        "usd": "TR83 0006 2000 3570 0009 0813 95",
+                                        "eur": "TR56 0006 2000 3570 0009 0813 96",
+                                        "swift": "TGBATRIS"
+                                    },
+                                    {
+                                        "name": "Yapı Kredi Bankası",
+                                        "branch": "Fulya Şubesi",
+                                        "tl": "TR23 0006 7010 0000 0075 0775 87",
+                                        "usd": "TR17 0006 7010 0000 0075 1625 70",
+                                        "eur": "TR75 0006 7010 0000 0075 0554 08",
+                                        "swift": "YAPITRIS"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Kızılay",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-bank-account-donation",
+                                "country": "Almanya",
+                                "accounts": [
+                                    {
+                                        "name": "Ziraat Bankası",
+                                        "branch": "Frankfurt",
+                                        "tl": "TR23 0006 7010 0000 0075 0775 87",
+                                        "usd": "TR17 0006 7010 0000 0075 1625 70",
+                                        "swift": "KONTO NO: 1080000001\nBLZ: 512 20 700\nSWIFT KOD: TCZBDEFF"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "AHBAP",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "international-bank-account-donation",
+                                "country": "TR",
+                                "accounts": [
+                                    {
+                                        "name": "TÜRKİYE İŞ BANKASI",
+                                        "branch": "Frankfurt",
+                                        "tl": "TR120006400000110211380059",
+                                        "usd": "TR320006400000210212150262",
+                                        "eur": "TR150006400000210212150277",
+                                        "gbp": "TR370006400000210212260849",
+                                        "swift": "ISBKTRIS"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
