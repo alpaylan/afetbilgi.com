@@ -1,33 +1,28 @@
-import { Box, Paper, Table, TableContainer, TableHead, TableRow,TableCell, TableBody } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import { UsefulLinksDataNode } from "../../interfaces/TreeNode";
 
 export default function UsefulLinksData({ value }: { value: UsefulLinksDataNode }) {
     return (
         <Box>
             <h3>Önemli Websiteleri</h3>
-            <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
-                <Table sx={{ maxWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                    <TableRow>
-                        <TableCell>Birim</TableCell>
-                        <TableCell>Website</TableCell>
-                    </TableRow>
-                    </TableHead>
-                    <TableBody>
-                    {value.usefulLinks.map((item) => (
-                        <TableRow
-                        key={item.name}
-                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                        <TableCell component="th" scope="row">
-                            {item.name}
-                        </TableCell>
-                        <TableCell><a href={item.url}>{item.url}</a></TableCell>
-                        </TableRow>
-                    ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+
+            <p><b>İhtiyacınız olabilecek linklere buradan ulaşabilirsiniz.</b></p>
+
+            {value.usefulLinks.map((item, i) => (
+                <Paper sx={{ p: 2, m: 2 }} key={`item-${i}`}>
+                <b>{item.name}</b>
+                <br />
+
+                {item.url && (
+                    <>
+                    Sayfaya <a href={item.url} target="_blank" rel="noreferrer">bu linkten</a> ulaşabilirsiniz.
+                    <br />
+                    </>
+                )}
+
+                <br />
+                </Paper>
+            ))}
         </Box>
       );
 }
