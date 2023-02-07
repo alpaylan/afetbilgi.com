@@ -12,7 +12,7 @@ const dataPoints = [
 
 export const useQuestionData = () => useQuery('questionData', async () => {
   const data = await Promise.all(dataPoints.map(async (dp) => {
-    const res = await axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/${dp.path}`);
+    const res = await axios.get(`https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/${dp.path}?v=1`);
 
     return res.data;
   }));
