@@ -44,8 +44,8 @@
                                         "name": "T.C. ZİRAAT BANKASI A.Ş.",
                                         "branch": "ANKARA KAMU KURUMSAL ŞUBESİ",
                                         "tl": "TR73 0001 0017 4555 5555 5552 04",
-                                        "usd": "TR 46 0001 0017 4555 5555 5552 05",
-                                        "eur": "TR 19 0001 0017 4555 5555 5552 06",
+                                        "usd": "TR46 0001 0017 4555 5555 5552 05",
+                                        "eur": "TR19 0001 0017 4555 5555 5552 06",
                                         "swift": "TCZBTR2A"
                                     },
                                     {
@@ -195,7 +195,7 @@
                                     "name": "TÜRKİYE İŞ BANKASI",
                                     "branch": "Gayrettepe Şubesi",
                                     "ownerName": "ARAMA KURTARMA DERNEĞİ - AKUT",
-                                    "tl": "TR140006400000110800666663"
+                                    "tl": "TR14 0006 4000 0011 0800 6666 63"
                                     },
                                     {
                                     "name": "QNB Finansbank",
@@ -313,7 +313,7 @@
                                 "accounts": [
                                     {
                                     "name": "Ziraat Bankası",
-                                    "tl": "TR480001002110000028685254"
+                                    "tl": "TR48 0001 0021 1000 0028 6852 54"
                                     }
                                 ]
                                 
