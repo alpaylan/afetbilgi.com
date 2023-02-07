@@ -298,6 +298,23 @@
                         }
                     },
                     {
+                        "name": "Cryptocurrency",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "bank-account-donation",
+                                "country": "Kripto",
+                                "accounts": [
+                                    {
+                                        "name": "BEP20",
+                                        "ownerName": "AHBAP",
+                                        "bep": "0xB67705398fEd380a1CE02e77095fed64f8aCe463"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
                         "name": "Bank transfer (SWIFT/WISE)",
                         "value": {
                             "type": "data",
