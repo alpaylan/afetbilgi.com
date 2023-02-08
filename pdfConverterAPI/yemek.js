@@ -95,9 +95,9 @@ const createMealPdf = (doc, allData, city) => {
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
             if(el.phone_number) {
-                doc.text(`\u2022 ${el.name} -- Telefon No: ${el.phone_number}`, 16, y)  
+                doc.text(`\u2022 ${el.name} -- Telefon No: ${el.phone_number}`, x, y)  
             } else {
-                doc.text(`\u2022 ${el.name}`, 16, y)  
+                doc.text(`\u2022 ${el.name}`, x, y)  
             }
             
             doc.setFontSize(smallTextSize)

@@ -20,7 +20,7 @@ const createPDF = async () => {
     const data = await fetchData()
 
  
-    let cityName = "Hatay"
+    let cityName = "Adana"
     createSafeGatheringPlacePDF(doc, data, cityName)
     createAccomodationPDF(data, doc, cityName);
     createMealPdf(doc, data, cityName)
