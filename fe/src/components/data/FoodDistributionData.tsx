@@ -1,8 +1,9 @@
 import { Box, Paper } from '@mui/material';
+import { TFunction } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { FoodDistributionDataNode } from '../../interfaces/TreeNode';
 
-const detailedInfo = (phone_number?: string, url?: string) => {
+const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
   if (!phone_number && !url) {
     return null;
   }
@@ -11,7 +12,7 @@ const detailedInfo = (phone_number?: string, url?: string) => {
     return (
       <div>
         <p>
-          Detaylı bilgi için{' '}
+          {t('data.food_distribution.detail_main')}
           <b>
             <a
               href={`tel:+90${phone_number
@@ -21,7 +22,7 @@ const detailedInfo = (phone_number?: string, url?: string) => {
               {phone_number}
             </a>
           </b>
-          'i arayabilirsiniz.
+          {t('data.food_distribution.detail_call')}
         </p>
       </div>
     );
@@ -31,11 +32,11 @@ const detailedInfo = (phone_number?: string, url?: string) => {
     return (
       <div>
         <p>
-          Detaylı bilgi için{' '}
+          {t('data.food_distribution.detail_main')}
           <a href={url} target='_blank' rel='noreferrer'>
-            bu web sitesini
+            {t('data.food_distribution.detail_website')}
           </a>{' '}
-          inceleyebilirsiniz
+          {t('data.food_distribution.detail_inspect')}
         </p>
       </div>
     );
@@ -43,17 +44,17 @@ const detailedInfo = (phone_number?: string, url?: string) => {
 
   return (
     <p>
-      Detaylı bilgi için{' '}
+      {t('data.food_distribution.detail_main')}
       <b>
         <a href={`tel:+90${phone_number.replace(/^0/, '').replace(/ /g, '')}`}>
           {phone_number}
         </a>
       </b>
-      'i arayabilirsiniz ya da{' '}
+      {t('data.food_distribution.detail_mix')}
       <a href={url} target='_blank' rel='noreferrer'>
-        bu web sitesini
+        {t('data.food_distribution.detail_website')}
       </a>{' '}
-      inceleyebilirsiniz.
+      {t('data.food_distribution.detail_inspect')}
     </p>
   );
 };
@@ -67,15 +68,14 @@ export default function FoodDistributionData({
   return (
     <Box>
       <h3>
-        {value.city}, {value.county} Ücretsiz Yemek Dağıtım Yerleri
+        {t('data.food_distribution.title', {
+          city: value.city,
+          county: value.county,
+        })}
       </h3>
 
       <p>
-        <b>
-          Bu sayfadaki tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta
-          saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi
-          araştırmanızı yapmanız önemle rica edilir.
-        </b>
+        <b>{t('data.food_distribution.subtitle')}</b>
       </p>
 
       {value.items.map((item, i) => (
@@ -84,12 +84,12 @@ export default function FoodDistributionData({
           <br />
           <p>
             <a href={item.maps_url} target='_blank' rel='noreferrer'>
-              Google Maps Linki
+              {t('button.google_maps')}
             </a>
             <br />
           </p>
 
-          {detailedInfo(item.phone_number, item.url)}
+          {detailedInfo(t, item.phone_number, item.url)}
         </Paper>
       ))}
     </Box>
