@@ -99,11 +99,11 @@ const createMealPdf = (doc, allData, city) => {
             }
             
             doc.setFontSize(smallTextSize)
-            y += yRange;
+            y += yRange * 0.8;
             doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
-            y += yRange
+            y += yRange * 1.5
         });
-        y += yRange * 2
+        y += yRange
     } ) 
 
 
