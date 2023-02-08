@@ -26,8 +26,7 @@ const createPDF = async () => {
         accomodation.createAccomodationPDF(data, doc, city);
     })
 
-    const phoneData = getPhoneNumberData(data);
-    writePhoneNumbersToPdf(doc, phoneData)
+    writePhoneNumbersToPdf(doc, data)
 
     doc.save("allData.pdf");
 
