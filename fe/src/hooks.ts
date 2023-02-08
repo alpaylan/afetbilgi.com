@@ -6,7 +6,7 @@ import { useQuery } from 'react-query';
 
 import { TreeNodeType } from './variables/TreeNode';
 
-const baseQuestionData = axios.get(`https://s3.eu-central-1.amazonaws.com/cdn.afetbilgi.com/latest.json`)
+const baseQuestionData = axios.get(`https://cdn.afetbilgi.com/latest.json?v=1`)
   .then(res => res.data);
 
 export const useQuestionData = (paths: string[]) => {
