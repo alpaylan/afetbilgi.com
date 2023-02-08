@@ -68,6 +68,19 @@ def main():
                 "address": index_or_none(row, 4),
                 "validation_date": index_or_none(row, 5),
             })
+            
+        else:
+            options.append({
+                "name": city_name,
+                "value": {
+                    "type": "data",
+                    "data": {
+                        "city": city_name,
+                        "dataType": "city-accommodation",
+                        "items": parsed
+                    }
+                }
+            })
 
     data = {
         "type": "question",
