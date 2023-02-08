@@ -1,0 +1,56 @@
+name: Data upload (cronjob)
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/10 * * * *' # Run every 10 minutes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip" # caching pip dependencies
+
+      - run: pip install -r requirements.txt
+
+      - name: Prepare working dir
+        run: |
+          cd data
+          mkdir to_upload
+          mkdir latest_datasets
+
+      - name: Run parsers
+        run: |
+          python ./parsers/barinma_parser.py > ./latest_datasets/barinma.json
+          python ./parsers/toplanma_parser.py > ./latest_datasets/toplanma.json
+          python ./parsers/yemek_parser.py > ./latest_datasets/yemek.json
+          python ./parsers/telefonnumaralari_parser.py > ./latest_datasets/telefon.json
+          python ./parsers/faydalilinkler_parser.py > ./latest_datasets/faydali_linkler.json
+          python ./parsers/veteriner_parser.py > ./latest_datasets/veteriner.json
+          python ./parsers/yazilar_parser.py > ./latest_datasets/yazilar.json
+
+          cp ./datasets/yardim_toplama_merkezleri.json ./latest_datasets/yardim_toplama_merkezleri.json          
+          cp ./datasets/kokhucre.json ./latest_datasets/kokhucre.json
+          cp ./datasets/blood.json ./latest_datasets/blood.json
+          cp ./datasets/vpn.json ./latest_datasets/vpn.json
+
+      - name: Merge datasets
+        run: |
+          python combine.py ./latest_datasets > to_upload/latest.json
+          gzip -9 -c to_upload/latest.json > "to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
+
+      - name: Sync JSON files
+        # TODO: Change s3://cdn.afetbilgi.com/sazak-test-data to s3://cdn.afetbilgi.com
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/sazak-test-data

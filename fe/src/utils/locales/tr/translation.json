@@ -46,5 +46,6 @@
   "region": "Bölge",
   "location": "Konum",
   "details": "Detaylar",
-  "website": "Websitesi"
+  "website": "Websitesi",
+  "source": "Kaynak"
 }
