@@ -11,7 +11,6 @@ const { setFont, registerFont } = require("./docFunctions");
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 const myFont = require("./fonts/Roboto-Black-normal");
 
-
 const createPDF = async () => {
 
     const doc = new jsPDF({
@@ -19,10 +18,11 @@ const createPDF = async () => {
         unit: "px",
         format: "a4"
     })
-    const data = await fetchData();
-    //createSafeGatheringPlacePDF(doc, data, "Malatya")
-
     registerFont(doc)
+
+    const data = await fetchData()
+    createSafeGatheringPlacePDF(doc, data, "Malatya")
+
     setFont(doc, "regular")
 
     //accomodation.createAccomodationPDF(data, doc, 'Malatya');
