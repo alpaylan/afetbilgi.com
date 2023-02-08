@@ -4,8 +4,9 @@ const SGP = require("./safeGatheringPlaces")
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 //const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
+const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 
-const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
+const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.1.json";
 
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
@@ -13,7 +14,9 @@ const registerFont = (doc) => {
     doc.addFont("./fonts/Roboto-Black.ttf", "Roboto-Black", "normal");
     doc.addFont("./fonts/Roboto-Regular.ttf", "Roboto-Regular", "normal");
     doc.setFont('Roboto-Regular', 'normal');
+
 }
+
 
 const setFont = (doc, type) => {
     if (type == "regular") {
@@ -24,8 +27,14 @@ const setFont = (doc, type) => {
 }
 
 const createPDF = async () => {
+    const doc = new jsPDF()
     const data = await fetchData();
     createSafeGatheringPlacePDF(data, "Malatya")
+
+    const phoneData = getPhoneNumberData(data);
+    writePhoneNumbersToPdf(doc, phoneData)
+
+    doc.save("c.pdf");
 }
 
 const createSafeGatheringPlacePDF = (data, city) => {
