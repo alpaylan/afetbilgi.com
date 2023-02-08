@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf")
-const SGP = require("./safeGatheringPlaces")
+const { getSafeGatheringPlace } = require("./safeGatheringPlaces")
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 //const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
@@ -15,7 +15,6 @@ const registerFont = (doc) => {
     doc.addFont("./fonts/Roboto-Black.ttf", "Roboto-Black", "normal");
     doc.addFont("./fonts/Roboto-Regular.ttf", "Roboto-Regular", "normal");
     doc.setFont('Roboto-Regular', 'normal');
-
 }
 
 
@@ -42,7 +41,7 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     registerFont(doc)
     const pageHeight = doc.internal.pageSize.height
 
-    const cityObj = SGP.getSafeGatheringPlace(data, city)
+    const cityObj = getSafeGatheringPlace(data, city)
     const cityName = cityObj.name_tr
 
     setFont(doc, "bold")
