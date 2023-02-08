@@ -10,7 +10,7 @@ def index_or_none(l, i):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python csv_extract.py <csv_file>")
+        print("Usage: python barinma_csv_extract.py <csv_file>")
         return
 
     csv_file = sys.argv[1]
