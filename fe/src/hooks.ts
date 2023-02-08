@@ -6,7 +6,7 @@ import { useQuery } from 'react-query';
 
 import { TreeNodeType } from './variables/TreeNode';
 
-const baseQuestionData = axios.get(`https://d3gdc0s7xqcoyz.cloudfront.net/latest.json?v=1`)
+const baseQuestionData = axios.get(`https://d3gdc0s7xqcoyz.cloudfront.net/2023-02-08_13-59-44.json`)
   .then(res => res.data);
 
 export const useQuestionData = (paths: string[]) => {
