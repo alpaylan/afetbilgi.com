@@ -1,3 +1,6 @@
+const boldFont = require("./fonts/Roboto-Black-normal");
+const regularFont = require("./fonts/Roboto-Regular-normal")
+
 const getTime = () => {
     const date = new Date()
     let hours = date.getHours()
@@ -10,6 +13,15 @@ const getTime = () => {
 }
 
 
+const registerFont = (doc) => {
+    doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
+    doc.addFileToVFS("./fonts/Roboto-Regular.ttf", regularFont.font);
+    doc.addFont("./fonts/Roboto-Black.ttf", "Roboto-Black", "normal");
+    doc.addFont("./fonts/Roboto-Regular.ttf", "Roboto-Regular", "normal");
+    doc.setFont('Roboto-Regular', 'normal');
+
+}
+
 const setFont = (doc, type) => {
     if (type == "regular") {
         doc.setFont('Roboto-Regular', 'normal');
@@ -20,5 +32,6 @@ const setFont = (doc, type) => {
 
 module.exports = {
     setFont,
+    registerFont,
     getTime
 }
