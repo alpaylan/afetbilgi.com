@@ -16,7 +16,7 @@ function padNumber(num: number) {
 
 const buildTimestamp = preval`module.exports = new Date().getTime();`
 const buildDate = new Date(buildTimestamp);
-const buildDateString = `${padNumber(buildDate.getDay())}.${padNumber(buildDate.getMonth() + 1)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(buildDate.getMinutes())}`;
+const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(buildDate.getMonth() + 1)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(buildDate.getMinutes())}`;
 
 function RootQuestion({ lang }: {lang: string}) {
   const location = useLocation();
