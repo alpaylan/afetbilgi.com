@@ -1,0 +1,488 @@
+{
+    "Adana": {
+        "tr": "Adana",
+        "en": "Adana",
+        "ku": "Adana - Edene",
+        "ar": "أضنة"
+    },
+    "Adıyaman": {
+        "tr": "Adıyaman",
+        "en": "Adiyaman",
+        "ku": "Adiyaman - Semsûr",
+        "ar": "أديامان"
+    },
+    "Afyonkarahisar": {
+        "tr": "Afyonkarahisar",
+        "en": "Afyonkarahisar",
+        "ku": "Afyonkarahisar - Efûnkarahîşar",
+        "ar": "أفيونكاراهيسار"
+    },
+    "Ağrı": {
+        "tr": "Ağrı",
+        "en": "Agri",
+        "ku": "Agri - Eğrî",
+        "ar": "آغري"
+    },
+    "Aksaray": {
+        "tr": "Aksaray",
+        "en": "Aksaray",
+        "ku": "Aksaray - Aksaray",
+        "ar": "أكساراي"
+    },
+    "Amasya": {
+        "tr": "Amasya",
+        "en": "Amasya",
+        "ku": "Amasya - Amasya",
+        "ar": "أماصيا"
+    },
+    "Ankara": {
+        "tr": "Ankara",
+        "en": "Ankara",
+        "ku": "Ankara - Enqere",
+        "ar": "أنقرة"
+    },
+    "Antalya": {
+        "tr": "Antalya",
+        "en": "Antalya",
+        "ku": "Antalya - Antalya",
+        "ar": "أنطاليا"
+    },
+    "Ardahan": {
+        "tr": "Ardahan",
+        "en": "Ardahan",
+        "ku": "Ardahan - Erdêxan",
+        "ar": "أرداهان"
+    },
+    "Artvin": {
+        "tr": "Artvin",
+        "en": "Artvin",
+        "ku": "Artvin - Artvin",
+        "ar": "أرتوين"
+    },
+    "Aydın": {
+        "tr": "Aydın",
+        "en": "Aydin",
+        "ku": "Aydin - Aydîn",
+        "ar": "آيدن"
+    },
+    "Balıkesir": {
+        "tr": "Balıkesir",
+        "en": "Balikesir",
+        "ku": "Balikesir - Balîkesir",
+        "ar": "بالق أسير"
+    },
+    "Bartın": {
+        "tr": "Bartın",
+        "en": "Bartin",
+        "ku": "Bartin - Bartîn",
+        "ar": "بارتين"
+    },
+    "Batman": {
+        "tr": "Batman",
+        "en": "Batman",
+        "ku": "Batman - Êlih",
+        "ar": "بطمان"
+    },
+    "Bayburt": {
+        "tr": "Bayburt",
+        "en": "Bayburt",
+        "ku": "Bayburt - Bayburt",
+        "ar": "بايبورت"
+    },
+    "Bilecik": {
+        "tr": "Bilecik",
+        "en": "Bilecik",
+        "ku": "Bilecik - Bîleçik",
+        "ar": "بيليجيك"
+    },
+    "Bingöl": {
+        "tr": "Bingöl",
+        "en": "Bingol",
+        "ku": "Bingol - Çevlik",
+        "ar": "بينجول"
+    },
+    "Bitlis": {
+        "tr": "Bitlis",
+        "en": "Bitlis",
+        "ku": "Bitlis - Bedlîs",
+        "ar": "بيتليس"
+    },
+    "Bolu": {
+        "tr": "Bolu",
+        "en": "Bolu",
+        "ku": "Bolu - Bolu",
+        "ar": "بولو"
+    },
+    "Burdur": {
+        "tr": "Burdur",
+        "en": "Burdur",
+        "ku": "Burdur - Burdur",
+        "ar": "بوردور"
+    },
+    "Bursa": {
+        "tr": "Bursa",
+        "en": "Bursa",
+        "ku": "Bursa - Bursa",
+        "ar": "بورصة"
+    },
+    "Çanakkale": {
+        "tr": "Çanakkale",
+        "en": "Canakkale",
+        "ku": "Canakkale - Çanakkale",
+        "ar": "كاناكالي"
+    },
+    "Çankırı": {
+        "tr": "Çankırı",
+        "en": "Cankiri",
+        "ku": "Cankiri - Çankırı",
+        "ar": "كانكيري"
+    },
+    "Çorum": {
+        "tr": "Çorum",
+        "en": "Corum",
+        "ku": "Corum - Çorum",
+        "ar": "كوروم"
+    },
+    "Denizli": {
+        "tr": "Denizli",
+        "en": "Denizli",
+        "ku": "Denizli - Denizli",
+        "ar": "دينيزلي"
+    },
+    "Diyarbakır": {
+        "tr": "Diyarbakır",
+        "en": "Diyarbakir",
+        "ku": "Diyarbakir - Amed",
+        "ar": "دياربكر"
+    },
+    "Düzce": {
+        "tr": "Düzce",
+        "en": "Duzce",
+        "ku": "Duzce - Düzce",
+        "ar": "دوزجي"
+    },
+    "Edirne": {
+        "tr": "Edirne",
+        "en": "Edirne",
+        "ku": "Edirne - Edirne",
+        "ar": "إديرنة"
+    },
+    "Elazığ": {
+        "tr": "Elazığ",
+        "en": "Elazig",
+        "ku": "Elazig - Xarpêt",
+        "ar": "إلاظيغ"
+    },
+    "Erzincan": {
+        "tr": "Erzincan",
+        "en": "Erzincan",
+        "ku": "Erzincan - Erzingan",
+        "ar": "إرزينجان"
+    },
+    "Erzurum": {
+        "tr": "Erzurum",
+        "en": "Erzurum",
+        "ku": "Erzurum - Erzirom",
+        "ar": "إرزوروم"
+    },
+    "Eskişehir": {
+        "tr": "Eskişehir",
+        "en": "Eskisehir",
+        "ku": "Eskisehir - Eskişehir",
+        "ar": "إسكيشير"
+    },
+    "Gaziantep": {
+        "tr": "Gaziantep",
+        "en": "Gaziantep",
+        "ku": "Gaziantep - Dîlok",
+        "ar": "غزيانتب"
+    },
+    "Giresun": {
+        "tr": "Giresun",
+        "en": "Giresun",
+        "ku": "Giresun - Giresun",
+        "ar": "جيريسون"
+    },
+    "Gümüşhane": {
+        "tr": "Gümüşhane",
+        "en": "Gumushane",
+        "ku": "Gumushane - Gümüşhane",
+        "ar": "جموشان"
+    },
+    "Hakkâri": {
+        "tr": "Hakkâri",
+        "en": "Hakkari",
+        "ku": "Hakkari - Colemêrg",
+        "ar": "حكاري"
+    },
+    "Hatay": {
+        "tr": "Hatay",
+        "en": "Hatay",
+        "ku": "Hatay - Xetay",
+        "ar": "حاتاي"
+    },
+    "Iğdır": {
+        "tr": "Iğdır",
+        "en": "Igdir",
+        "ku": "Igdir - Îdir",
+        "ar": "إيغدير"
+    },
+    "Isparta": {
+        "tr": "Isparta",
+        "en": "Isparta",
+        "ku": "Isparta - Isparta",
+        "ar": "إسبارتا"
+    },
+    "İstanbul": {
+        "tr": "İstanbul",
+        "en": "Istanbul",
+        "ku": "Istanbul - Stenbol",
+        "ar": "إسطنبول"
+    },
+    "İzmir": {
+        "tr": "İzmir",
+        "en": "Izmir",
+        "ku": "Izmir - Îzmîr",
+        "ar": "إزمير"
+    },
+    "Kahramanmaraş": {
+        "tr": "Kahramanmaraş",
+        "en": "Kahramanmaras",
+        "ku": "Kahramanmaras - Mereş",
+        "ar": "كهرمانماراس"
+    },
+    "Karabük": {
+        "tr": "Karabük",
+        "en": "Karabuk",
+        "ku": "Karabuk - Karabük",
+        "ar": "كارابوك"
+    },
+    "Karaman": {
+        "tr": "Karaman",
+        "en": "Karaman",
+        "ku": "Karaman - Karaman",
+        "ar": "كارامان"
+    },
+    "Kars": {
+        "tr": "Kars",
+        "en": "Kars",
+        "ku": "Kars - Qers",
+        "ar": "كارس"
+    },
+    "Kastamonu": {
+        "tr": "Kastamonu",
+        "en": "Kastamonu",
+        "ku": "Kastamonu - Kastamonu",
+        "ar": "كاستامونو"
+    },
+    "Kayseri": {
+        "tr": "Kayseri",
+        "en": "Kayseri",
+        "ku": "Kayseri - Kayseri",
+        "ar": "كايسيري"
+    },
+    "Kırıkkale": {
+        "tr": "Kırıkkale",
+        "en": "Kirikkale",
+        "ku": "Kirikkale - Kırıkkale",
+        "ar": "كيريككالي"
+    },
+    "Kırklareli": {
+        "tr": "Kırklareli",
+        "en": "Kirklareli",
+        "ku": "Kirklareli - Kırklareli",
+        "ar": "كيركلاريلي"
+    },
+    "Kırşehir": {
+        "tr": "Kırşehir",
+        "en": "Kirsehir",
+        "ku": "Kirsehir - Kırşehir",
+        "ar": "كيرشير"
+    },
+    "Kilis": {
+        "tr": "Kilis",
+        "en": "Kilis",
+        "ku": "Kilis - Kilis",
+        "ar": "كيليس"
+    },
+    "Kocaeli": {
+        "tr": "Kocaeli",
+        "en": "Kocaeli",
+        "ku": "Kocaeli - Kocaeli",
+        "ar": "كوكايلي"
+    },
+    "Konya": {
+        "tr": "Konya",
+        "en": "Konya",
+        "ku": "Konya - Qonye",
+        "ar": "كونيا"
+    },
+    "Kütahya": {
+        "tr": "Kütahya",
+        "en": "Kutahya",
+        "ku": "Kutahya - Kütahya",
+        "ar": "كوتاهيا"
+    },
+    "Malatya": {
+        "tr": "Malatya",
+        "en": "Malatya",
+        "ku": "Malatya - Meletî",
+        "ar": "مالاتيا"
+    },
+    "Manisa": {
+        "tr": "Manisa",
+        "en": "Manisa",
+        "ku": "Manisa - Manisa",
+        "ar": "مانيسا"
+    },
+    "Mardin": {
+        "tr": "Mardin",
+        "en": "Mardin",
+        "ku": "Mardin - Mêrdîn",
+        "ar": "ماردين"
+    },
+    "Mersin": {
+        "tr": "Mersin",
+        "en": "Mersin",
+        "ku": "Mersin - Mêrsîn",
+        "ar": "مرسين"
+    },
+    "Muğla": {
+        "tr": "Muğla",
+        "en": "Mugla",
+        "ku": "Mugla - Muğla",
+        "ar": "موغلا"
+    },
+    "Muş": {
+        "tr": "Muş",
+        "en": "Mus",
+        "ku": "Mus - Mûş",
+        "ar": "موش"
+    },
+    "Nevşehir": {
+        "tr": "Nevşehir",
+        "en": "Nevsehir",
+        "ku": "Nevsehir - Nevşehir",
+        "ar": "نيفشير"
+    },
+    "Niğde": {
+        "tr": "Niğde",
+        "en": "Nigde",
+        "ku": "Nigde - Niğde",
+        "ar": "نيجدي"
+    },
+    "Ordu": {
+        "tr": "Ordu",
+        "en": "Ordu",
+        "ku": "Ordu - Ordu",
+        "ar": "اردو"
+    },
+    "Osmaniye": {
+        "tr": "Osmaniye",
+        "en": "Osmaniye",
+        "ku": "Osmaniye - Kınıkan",
+        "ar": "اسمانيا"
+    },
+    "Rize": {
+        "tr": "Rize",
+        "en": "Rize",
+        "ku": "Rize - Rize",
+        "ar": "ريز"
+    },
+    "Sakarya": {
+        "tr": "Sakarya",
+        "en": "Sakarya",
+        "ku": "Sakarya - Sakarya",
+        "ar": "ساكاريا"
+    },
+    "Samsun": {
+        "tr": "Samsun",
+        "en": "Samsun",
+        "ku": "Samsun - Samsun",
+        "ar": "سامسون"
+    },
+    "Siirt": {
+        "tr": "Siirt",
+        "en": "Siirt",
+        "ku": "Siirt - Sêrt",
+        "ar": "سييرت"
+    },
+    "Sinop": {
+        "tr": "Sinop",
+        "en": "Sinop",
+        "ku": "Sinop - Sinop",
+        "ar": "سينوب"
+    },
+    "Sivas": {
+        "tr": "Sivas",
+        "en": "Sivas",
+        "ku": "Sivas - Sêwas",
+        "ar": "سيفاس"
+    },
+    "Şanlıurfa": {
+        "tr": "Şanlıurfa",
+        "en": "Sanliurfa",
+        "ku": "Sanliurfa - Rîha",
+        "ar": "سانليورفا"
+    },
+    "Şırnak": {
+        "tr": "Şırnak",
+        "en": "Sirnak",
+        "ku": "Sirnak - Şırnex",
+        "ar": "سيرناك"
+    },
+    "Tekirdağ": {
+        "tr": "Tekirdağ",
+        "en": "Tekirdag",
+        "ku": "Tekirdag - Tekirdağ",
+        "ar": "تكيرداج"
+    },
+    "Tokat": {
+        "tr": "Tokat",
+        "en": "Tokat",
+        "ku": "Tokat - Tokat",
+        "ar": "توكات"
+    },
+    "Trabzon": {
+        "tr": "Trabzon",
+        "en": "Trabzon",
+        "ku": "Trabzon - Trabzon",
+        "ar": "ترابزون"
+    },
+    "Tunceli": {
+        "tr": "Tunceli",
+        "en": "Tunceli",
+        "ku": "Tunceli - Dêrsim",
+        "ar": "تونسيلي"
+    },
+    "Uşak": {
+        "tr": "Uşak",
+        "en": "Usak",
+        "ku": "Usak - Uşak",
+        "ar": "اوساك"
+    },
+    "Van": {
+        "tr": "Van",
+        "en": "Van",
+        "ku": "Van - Wan",
+        "ar": "فان"
+    },
+    "Yalova": {
+        "tr": "Yalova",
+        "en": "Yalova",
+        "ku": "Yalova - Yalova",
+        "ar": "يالوفا"
+    },
+    "Yozgat": {
+        "tr": "Yozgat",
+        "en": "Yozgat",
+        "ku": "Yozgat - Yozgat",
+        "ar": "يوزكات"
+    },
+    "Zonguldak": {
+        "tr": "Zonguldak",
+        "en": "Zonguldak",
+        "ku": "Zonguldak - Zonguldak",
+        "ar": "زونقولداك"
+    }
+}
