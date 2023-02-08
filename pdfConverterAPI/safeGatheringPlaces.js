@@ -9,7 +9,6 @@ const getSafeGatheringPlace = (data, city) => {
 
 const createSafeGatheringPlacePDF = (doc, data, city) => {
 
-    registerFont(doc)
     const pageHeight = doc.internal.pageSize.height
 
     const cityObj = getSafeGatheringPlace(data, city)
@@ -26,7 +25,7 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     let isNewPage = true
     let y = 60
     doc.setFontSize(8)
-    cityObj.value_tr.data.items.forEach((el, index) => {
+    cityObj.value.data.items.forEach((el, index) => {
         if (y >= pageHeight) {
             doc.addPage();
             isNewPage = true
