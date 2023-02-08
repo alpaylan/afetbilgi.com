@@ -115,7 +115,6 @@ dist
 # production
 /build
 
-/pdfConverterAPI.pdf
 
 # misc
 .DS_Store
