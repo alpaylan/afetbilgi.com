@@ -11,7 +11,6 @@ const getPhoneNumberData = (data) => {
     for(let i = 0; i < options.length; i++) {
         value = options[i];
         if(value.name) {
-            console.log(value.name)
             if(value.name == PHONE_DATA_TITLE) {
                 return value.value.data.phones;
             }
@@ -48,7 +47,6 @@ const writePhoneNumbersToPdf = (doc, data) => {
         const pageHeight = doc.internal.pageSize.height
 
         doc.setFontSize(8)
-        console.log(pageHeight)
             if (y >= pageHeight) {
                 
                 doc.addPage();
@@ -66,8 +64,6 @@ const writePhoneNumbersToPdf = (doc, data) => {
                 isNewPage = false
               
             }
-
-            console.log(y)
     
             doc.setFontSize(8)
             doc.text("\u2022 " + value.name + " - " + value.phone_number, x, y);
@@ -83,8 +79,6 @@ const writePhoneNumbersToPdf = (doc, data) => {
         //doc.text(value.phone_number, finalXP, y + phoneRangeY);
 
     } );
-    
-    return doc;
 }
 
 module.exports = {
