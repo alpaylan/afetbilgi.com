@@ -21,7 +21,7 @@ const createAllInOnePDF = async () => {
         format: "a4"
     })
     registerFont(doc)
-
+//
     const data = await fetchData()
 
     createCoverPage(doc, "Tüm Şehirler")
@@ -32,8 +32,7 @@ const createAllInOnePDF = async () => {
         accomodation.createAccomodationPDF(data, doc, city);
         createMealPdf(doc, data, city)
     })
-
-
+    
     writePhoneNumbersToPdf(doc, data)
 
     doc.save("output/" + "Tüm Şehirler.pdf");

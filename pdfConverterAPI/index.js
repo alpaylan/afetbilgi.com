@@ -1,10 +1,13 @@
 require("dotenv").config()
-const express = require("express");
 const { createAllInOnePDF, createForEachCityPDF } = require("./allDataToPDF");
+const express = require("express")
+const cors = require("cors")
 const app = express()
 
 
 const PORT = process.env.PORT || 3000;
+
+app.use(cors())
 
 app.get("/pdf-uret", (req, res) => {
     try {
@@ -16,7 +19,9 @@ app.get("/pdf-uret", (req, res) => {
         res.status(500).json({message:"Hata"})
     }
 
-}) 
+})
 
 
-app.listen(PORT)
+
+
+app.listen(PORT);
