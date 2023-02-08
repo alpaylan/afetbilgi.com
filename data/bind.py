@@ -29,13 +29,9 @@ def convert(translations):
                 [[lang, tr['value']] for lang, tr in translations]
             )
         else:
-            for lang, tr in translations:
-                base_data[f"value_{lang}"] = tr['value']
+            pass
 
-                if 'value' in base_data:
-                    del base_data['value']
-
-files = ['bagis.json', 'blood.json', 'barinma.json', 'telefon.json', 'yardim_toplama_merkezleri.json', 'toplanma.json']
+files = ['bagis.json', 'toplanma.json']
 
 try:
     os.mkdir('combined')
