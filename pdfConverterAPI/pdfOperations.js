@@ -10,7 +10,6 @@ const createPDF = async () => {
     doc.save("b.pdf")
 }
 
-
 //fetches data
 const fetchData = async () => {
     const dataAll = await axios.get(DATA_URL);
@@ -18,8 +17,7 @@ const fetchData = async () => {
     return data;
 }
 
-
-
 module.exports = {
-    createPDF
+    createPDF,
+    fetchData
 }
