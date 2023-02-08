@@ -132,3 +132,6 @@ yarn-error.log*
 !deploy/charts/*tgz
 .local
 .render
+
+# for PDF files
+*.pdf

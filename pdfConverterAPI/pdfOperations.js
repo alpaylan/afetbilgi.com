@@ -3,7 +3,6 @@ const { jsPDF } = require("jspdf")
 const { getSafeGatheringPlace } = require("./safeGatheringPlaces")
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
-//const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { setFont, getTime } = require("./docFunctions");
 
@@ -16,8 +15,6 @@ const registerFont = (doc) => {
     doc.addFont("./fonts/Roboto-Regular.ttf", "Roboto-Regular", "normal");
     doc.setFont('Roboto-Regular', 'normal');
 }
-
-
 
 const createPDF = async () => {
     const doc = new jsPDF({
@@ -84,9 +81,8 @@ const fetchData = async () => {
     const data = dataAll.data
     return data;
 }
+
 createPDF()
-
-
 
 module.exports = {
     createPDF,
