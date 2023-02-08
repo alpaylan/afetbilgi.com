@@ -89,6 +89,7 @@
             },
             "name_tr": "Malatya",
             "name_en": "Malatya",
+            "name_ar": "Malatya",
             "name_ku": "Malatya- Meletî"
         },
         {
@@ -130,6 +131,7 @@
             },
             "name_tr": "Kahramanmaraş",
             "name_en": "Kahramanmaraş",
+            "name_ar": "Kahramanmaraş",
             "name_ku": "Maraş- Gurgum"
         },
         {
@@ -184,6 +186,7 @@
             },
             "name_tr": "Hatay",
             "name_en": "Hatay",
+            "name_ar": "Hatay",
             "name_ku": "Hatay- Xetay"
         },
         {
@@ -217,6 +220,7 @@
             },
             "name_tr": "Diyarbakır",
             "name_en": "Diyarbakır",
+            "name_ar": "Diyarbakır",
             "name_ku": "Diyarbakır- Amed"
         },
         {
@@ -241,6 +245,7 @@
             },
             "name_tr": "Gaziantep",
             "name_en": "Gaziantep",
+            "name_ar": "Gaziantep",
             "name_ku": "Gaziantep"
         },
         {
@@ -377,6 +382,7 @@
             },
             "name_tr": "Şanlıurfa",
             "name_en": "Şanlıurfa",
+            "name_ar": "Şanlıurfa",
             "name_ku": "Şanlıurfa- Riha"
         },
         {
@@ -413,10 +419,12 @@
             },
             "name_tr": "Adana",
             "name_en": "Adana",
+            "name_ar": "Adana",
             "name_ku": "Adana- Edene"
         }
     ],
     "text_tr": "Hangi şehirde toplanacak yer arıyorsunuz?",
     "text_en": "In which city are you looking for safe assembly area?",
-    "text_ku": "Hûn Li Kîjan Bajarî Cihên Ewle Bo Kombûnê Digerin?"
+    "text_ku": "Hûn Li Kîjan Bajarî Cihên Ewle Bo Kombûnê Digerin?",
+    "text_ar": "في أي مدينة تبحث عن مناطق تجمع الأمنة"
 }
