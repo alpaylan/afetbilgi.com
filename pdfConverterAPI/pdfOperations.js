@@ -10,6 +10,7 @@ const { setFont, registerFont } = require("./docFunctions");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 const myFont = require("./fonts/Roboto-Black-normal");
+const { createMealPdf } = require("./yemek");
 
 const createPDF = async () => {
 
@@ -21,14 +22,15 @@ const createPDF = async () => {
     registerFont(doc)
 
     const data = await fetchData()
-    createSafeGatheringPlacePDF(doc, data, "Malatya")
+    //createSafeGatheringPlacePDF(doc, data, "Malatya")
 
     setFont(doc, "regular")
 
     //accomodation.createAccomodationPDF(data, doc, 'Malatya');
 
-    const phoneData = getPhoneNumberData(data);
-    writePhoneNumbersToPdf(doc, phoneData)
+    createMealPdf(doc, data, "Malatya")
+
+    writePhoneNumbersToPdf(doc, data)
 
     doc.save("out.pdf");
 

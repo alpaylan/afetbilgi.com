@@ -24,8 +24,9 @@ const getPhoneNumberData = (data) => {
 
 }
 
-const writePhoneNumbersToPdf = (doc, data) => {
+const writePhoneNumbersToPdf = (doc, allData) => {
     //const doc = new jsPDF();
+    const data = getPhoneNumberData(allData);
     doc.addPage()
     const xStart = 16;
     const xEnd = 160;

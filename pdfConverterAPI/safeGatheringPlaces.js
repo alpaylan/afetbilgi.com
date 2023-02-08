@@ -1,4 +1,4 @@
-const { setFont, registerFont, getTime } = require("./docFunctions");
+const { setFont, getTime } = require("./docFunctions");
 
 // gets safe gathering place data of given city
 const getSafeGatheringPlace = (data, city) => {
