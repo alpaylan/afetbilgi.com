@@ -30,10 +30,9 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     doc.text(`${cityName} - Güvenli Toplanma Alanları`, 16, 24)
     setFont(doc, "regular")
     doc.setFontSize(8)
-    doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
+    doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, 16, 36)
 
     let isNewPage = true
-    let y = 60
     doc.setFontSize(8)
     cityObj?.value.data.items.forEach((el, index) => {
         if (y >= pageHeight) {

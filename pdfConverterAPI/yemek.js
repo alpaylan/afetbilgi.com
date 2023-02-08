@@ -44,6 +44,10 @@ const createMealPdf = (doc, allData, city) => {
     console.log("test")
     console.log(cityData);
 
+    if(!cityData) {
+        return;
+    }
+
     doc.addPage();
     let isNewPage = true
 

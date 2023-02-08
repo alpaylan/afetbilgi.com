@@ -19,16 +19,19 @@ const createPDF = async () => {
 
     const data = await fetchData()
 
+ 
     createSafeGatheringPlacePDF(doc, data, "Malatya")
+
 
     createAccomodationPDF(data, doc, 'Malatya');
 
     //accomodation.createAccomodationPDF(data, doc, 'Malatya');
 
-    createMealPdf(doc, data, "Gaziantep")
+    createMealPdf(doc, data, "Malatya")
 
     writePhoneNumbersToPdf(doc, data)
 
+    doc.deletePage(1)
     doc.save("out.pdf");
 }
 
