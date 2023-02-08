@@ -43,12 +43,12 @@ export default function GatheringData({ value }: { value: GatheringDataNode }) {
                 </TableCell>
                 <TableCell>
                   <a href={item.url} target='_blank' rel='noreferrer'>
-                    {item.url}
+                    {t('map')}
                   </a>
                 </TableCell>
                 <TableCell>
                   <a href={item.source} target='_blank' rel='noreferrer'>
-                    Source
+                    {t('source')}
                   </a>
                 </TableCell>
               </TableRow>
