@@ -25,7 +25,7 @@ const getMealData = (data) => {
 const getCityData = (data, city) => {
     let output;
     data.value.options.forEach( value => {
-        if(value.name == "Hatay") {
+        if(value.name == city) {
             output = value.value.options;
         }
     } )
@@ -71,7 +71,7 @@ const createMealPdf = (doc, allData, city) => {
         }
 
         setFont(doc, "bold")
-        doc.setFontSize(titleFontSize)
+        doc.setFontSize(12)
         doc.text(value.name, 16, y)
         y += 18
 console.log(value)
@@ -95,7 +95,12 @@ console.log(value)
 
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
-            doc.text(`\u2022 ${el.name}`, 16, y)  
+            if(el.phone_number) {
+                doc.text(`\u2022 ${el.name} -- Telefon No: ${el.phone_number}`, 16, y)  
+            } else {
+                doc.text(`\u2022 ${el.name}`, 16, y)  
+            }
+            
             doc.setFontSize(smallTextSize)
             y += 4;
             //doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
