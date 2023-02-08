@@ -25,7 +25,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: cd data && mkdir to_upload && python combine.py > to_upload/latest.json && cp to_upload/latest.json "to_upload/`date +%Y-%m-%d_%H-%M-%S`.json"
+      - run: cd data && mkdir to_upload && python combine.py > to_upload/latest.json
 
       - name: Sync JSON files
         run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com

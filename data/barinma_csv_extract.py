@@ -74,6 +74,7 @@ def main():
         "text_tr": "Hangi şehirde kalacak yer arıyorsunuz?",
         "text_en": "In which city are you looking for temporary accommodation?",
         "text_ku": "Hûn li Kîjan Bajarî Cihên Lêhihewinê yên Demkî Digerin?",
+        "text_ar": "في أي مدينة تبحث عن مساكن مؤقة",
         "autocompleteHint": "Şehir",
         "options": options
     }
