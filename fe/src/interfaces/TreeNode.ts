@@ -20,12 +20,14 @@ export interface OptionNode {
   value: TreeNode;
 }
 
+export interface Article {
+  title: string;
+  author: string;
+  url: string;
+}
+
 export interface ArticleDataNode extends DataNode {
-  articles: { 
-    title: string;
-    author: string;
-    url: string;
-  }[];
+  articles: Article[];
 }
 
 export interface BankDataNode extends DataNode {
@@ -77,10 +79,9 @@ export interface VetNode extends DataNode {
   }[];
 }
 
-
 export interface CreditCardNode extends DataNode {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }
 
 export interface GatheringDataNode extends DataNode {
@@ -88,14 +89,16 @@ export interface GatheringDataNode extends DataNode {
   items: string[];
 }
 
+export interface HelpItem {
+  name: string;
+  location?: string;
+  url: string;
+  phone_number: string;
+}
+
 export interface HelpItemNode extends DataNode {
   city: string;
-  items: {
-    name: string;
-    location?: string;
-    url: string;
-    phone_number: string;
-  }[];
+  items: HelpItem[];
 }
 
 export interface Phone {
@@ -121,11 +124,13 @@ export interface URLDataNode extends DataNode {
   url: string;
 }
 
+export interface UsefulLink {
+  name: string;
+  url: string;
+}
+
 export interface UsefulLinksDataNode extends DataNode {
-  usefulLinks: { 
-    name: string;
-    url: string;
-  }[];
+  usefulLinks: UsefulLink[];
 }
 
 export interface StemCellDataNode extends DataNode {
