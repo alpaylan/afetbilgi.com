@@ -1,9 +1,7 @@
 {
     "type": "question",
-    "text": " Hûn li Kîjan Bajarî Ji Bo Tiştan Bibexşînin Cîh Digerin?",
     "options": [
         {
-            "name": "İstanbul",
             "value": {
                 "type": "data",
                 "data": {
@@ -33,10 +31,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "İstanbul",
+            "name_en": "İstanbul",
+            "name_ku": "İstanbul"
         },
         {
-            "name": "Ankara",
             "value": {
                 "type": "data",
                 "data": {
@@ -65,10 +65,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Ankara",
+            "name_en": "Ankara",
+            "name_ku": "Ankara"
         },
         {
-            "name": "İzmir",
             "value": {
                 "type": "data",
                 "data": {
@@ -92,10 +94,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "İzmir",
+            "name_en": "İzmir",
+            "name_ku": "İzmir"
         },
         {
-            "name": "Bursa",
             "value": {
                 "type": "data",
                 "data": {
@@ -121,10 +125,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Bursa",
+            "name_en": "Bursa",
+            "name_ku": "Bursa"
         },
         {
-            "name": "Antalya",
             "value": {
                 "type": "data",
                 "data": {
@@ -138,10 +144,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Antalya",
+            "name_en": "Antalya",
+            "name_ku": "Antalya"
         },
         {
-            "name": "Konya",
             "value": {
                 "type": "data",
                 "data": {
@@ -155,10 +163,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Konya",
+            "name_en": "Konya",
+            "name_ku": "Konya"
         },
         {
-            "name": "Adana",
             "value": {
                 "type": "data",
                 "data": {
@@ -172,10 +182,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Adana",
+            "name_en": "Adana",
+            "name_ku": "Adana"
         },
         {
-            "name": "Kocaeli",
             "value": {
                 "type": "data",
                 "data": {
@@ -201,10 +213,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Kocaeli",
+            "name_en": "Kocaeli",
+            "name_ku": "Kocaeli"
         },
         {
-            "name": "Mersin",
             "value": {
                 "type": "data",
                 "data": {
@@ -218,10 +232,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Mersin",
+            "name_en": "Mersin",
+            "name_ku": "Mersin"
         },
         {
-            "name": "Manisa",
             "value": {
                 "type": "data",
                 "data": {
@@ -235,10 +251,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Manisa",
+            "name_en": "Manisa",
+            "name_ku": "Manisa"
         },
         {
-            "name": "Aydın",
             "value": {
                 "type": "data",
                 "data": {
@@ -252,10 +270,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Aydın",
+            "name_en": "Aydın",
+            "name_ku": "Aydın"
         },
         {
-            "name": "Balıkesir",
             "value": {
                 "type": "data",
                 "data": {
@@ -269,10 +289,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Balıkesir",
+            "name_en": "Balıkesir",
+            "name_ku": "Balıkesir"
         },
         {
-            "name": "Denizli",
             "value": {
                 "type": "data",
                 "data": {
@@ -286,10 +308,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Denizli",
+            "name_en": "Denizli",
+            "name_ku": "Denizli"
         },
         {
-            "name": "Diyarbakır",
             "value": {
                 "type": "data",
                 "data": {
@@ -303,10 +327,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Diyarbakır",
+            "name_en": "Diyarbakır",
+            "name_ku": "Diyarbakır"
         },
         {
-            "name": "Erzurum",
             "value": {
                 "type": "data",
                 "data": {
@@ -320,10 +346,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Erzurum",
+            "name_en": "Erzurum",
+            "name_ku": "Erzurum"
         },
         {
-            "name": "Eskişehir",
             "value": {
                 "type": "data",
                 "data": {
@@ -337,10 +365,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Eskişehir",
+            "name_en": "Eskişehir",
+            "name_ku": "Eskişehir"
         },
         {
-            "name": "Gaziantep",
             "value": {
                 "type": "data",
                 "data": {
@@ -354,10 +384,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Gaziantep",
+            "name_en": "Gaziantep",
+            "name_ku": "Gaziantep"
         },
         {
-            "name": "Hatay",
             "value": {
                 "type": "data",
                 "data": {
@@ -371,10 +403,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Hatay",
+            "name_en": "Hatay",
+            "name_ku": "Hatay"
         },
         {
-            "name": "Kahramanmaraş",
             "value": {
                 "type": "data",
                 "data": {
@@ -388,10 +422,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Kahramanmaraş",
+            "name_en": "Kahramanmaraş",
+            "name_ku": "Kahramanmaraş"
         },
         {
-            "name": "Kayseri",
             "value": {
                 "type": "data",
                 "data": {
@@ -405,10 +441,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Kayseri",
+            "name_en": "Kayseri",
+            "name_ku": "Kayseri"
         },
         {
-            "name": "Malatya",
             "value": {
                 "type": "data",
                 "data": {
@@ -422,10 +460,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Malatya",
+            "name_en": "Malatya",
+            "name_ku": "Malatya"
         },
         {
-            "name": "Mardin",
             "value": {
                 "type": "data",
                 "data": {
@@ -439,10 +479,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Mardin",
+            "name_en": "Mardin",
+            "name_ku": "Mardin"
         },
         {
-            "name": "Muğla",
             "value": {
                 "type": "data",
                 "data": {
@@ -456,10 +498,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Muğla",
+            "name_en": "Muğla",
+            "name_ku": "Muğla"
         },
         {
-            "name": "Ordu",
             "value": {
                 "type": "data",
                 "data": {
@@ -473,10 +517,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Ordu",
+            "name_en": "Ordu",
+            "name_ku": "Ordu"
         },
         {
-            "name": "Sakarya",
             "value": {
                 "type": "data",
                 "data": {
@@ -490,10 +536,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Sakarya",
+            "name_en": "Sakarya",
+            "name_ku": "Sakarya"
         },
         {
-            "name": "Samsun",
             "value": {
                 "type": "data",
                 "data": {
@@ -507,10 +555,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Samsun",
+            "name_en": "Samsun",
+            "name_ku": "Samsun"
         },
         {
-            "name": "Şanlıurfa",
             "value": {
                 "type": "data",
                 "data": {
@@ -524,10 +574,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Şanlıurfa",
+            "name_en": "Şanlıurfa",
+            "name_ku": "Şanlıurfa"
         },
         {
-            "name": "Tekirdağ",
             "value": {
                 "type": "data",
                 "data": {
@@ -541,10 +593,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Tekirdağ",
+            "name_en": "Tekirdağ",
+            "name_ku": "Tekirdağ"
         },
         {
-            "name": "Trabzon",
             "value": {
                 "type": "data",
                 "data": {
@@ -558,10 +612,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Trabzon",
+            "name_en": "Trabzon",
+            "name_ku": "Trabzon"
         },
         {
-            "name": "Van",
             "value": {
                 "type": "data",
                 "data": {
@@ -575,10 +631,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Van",
+            "name_en": "Van",
+            "name_ku": "Van"
         },
         {
-            "name": "Kütahya",
             "value": {
                 "type": "data",
                 "data": {
@@ -592,7 +650,13 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Kütahya",
+            "name_en": "Kütahya",
+            "name_ku": "Kütahya"
         }
-    ]
+    ],
+    "text_tr": "Hangi şehirde eşya toplanacak yer arıyorsunuz?",
+    "text_en": "In which city are you looking for item-donation?",
+    "text_ku": " Hûn li Kîjan Bajarî Ji Bo Tiştan Bibexşînin Cîh Digerin?"
 }
