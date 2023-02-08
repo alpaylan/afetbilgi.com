@@ -37,7 +37,7 @@ export default function VpnData({ value }: { value: VpnDataNode }) {
                   {item.name}
                 </TableCell>
                 <TableCell>
-                  <a href={item.url}>{item.url}</a>
+                  <a href={item.url}>Link</a>
                 </TableCell>
               </TableRow>
             ))}
