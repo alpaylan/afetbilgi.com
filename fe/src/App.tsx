@@ -14,18 +14,6 @@ import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
 
-function padNumber(num: number) {
-  return num < 10 ? `0${num}` : num;
-}
-
-const buildTimestamp = preval`module.exports = new Date().getTime();`;
-const buildDate = new Date(buildTimestamp);
-const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
-  buildDate.getMonth() + 1,
-)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(
-  buildDate.getMinutes(),
-)}`;
-
 function RootQuestion() {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
