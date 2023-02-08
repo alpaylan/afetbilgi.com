@@ -5,6 +5,7 @@ const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/
 
 const createPDF = () => {
     const doc = new jsPDF()
+    const data = fetchData();
     doc.text("Deneme", 10, 10)
     doc.save("b.pdf")
 }
