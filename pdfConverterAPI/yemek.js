@@ -1,6 +1,6 @@
 const { setFont, getDateAndTime, slug } = require("./docFunctions");
 const tempData = require("./data.json");
-const { smallTextSize, textFontSize, titleFontSize, xStart, yStart, yRange, smallTitleFontSize } = require("./constants");
+const { smallTextSize, textFontSize, titleFontSize, xStart, yStart, yRange, smallTitleFontSize, pageStartText } = require("./constants");
 
 const MEAL_DATA_TITLE = "Yemek"
 
@@ -65,7 +65,7 @@ const createMealPdf = (doc, allData, city) => {
 
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
-            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, x, yRange * 3)
+            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}` + pageStartText, x, yRange * 3)
             y = yStart
             isNewPage = false
         }

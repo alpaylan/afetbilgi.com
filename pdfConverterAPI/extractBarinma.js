@@ -1,6 +1,6 @@
 
 const { getDateAndTime, slug } = require("./docFunctions");
-const { titleFontSize, textFontSize, xStart, yStart, yRange, smallTextSize} = require("./constants");
+const { titleFontSize, textFontSize, xStart, yStart, yRange, smallTextSize, pageStartText} = require("./constants");
 
 const trProvincesForAccommodations = ( data ) => {
     const provinces = {}
@@ -96,7 +96,7 @@ const createAccomodationPDF = (data, doc, city) => {
             doc.text(`${city} - Geçici Konaklama Yerleri`, x, yRange * 2)
             doc.setFont('Roboto-Regular', 'normal');     
             doc.setFontSize(textFontSize)   
-            doc.text(`Dosyanın oluşturulma tarihi: ${ getDateAndTime() }`, x, yRange * 3)
+            doc.text(`Dosyanın oluşturulma tarihi: ${ getDateAndTime() }` + pageStartText, x, yRange * 3)
             isNewPage = false
             y = 60
         }
