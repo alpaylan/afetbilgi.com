@@ -2,6 +2,8 @@ const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf")
 const myFont = require("./fonts/Roboto-Black-normal")
 const SGP = require("./safeGatheringPlaces")
+const myFont = require("./fonts/Roboto-Black-normal");
+const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
 
