@@ -3,7 +3,6 @@
     "text": "Hangi şehirde veteriner arıyorsunuz?",
     "options": [
         {
-            "name": "Diyarbakır",
             "value": {
                 "type": "data",
                 "data": {
@@ -36,10 +35,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Diyarbakır",
+            "name_en": "Diyarbakır",
+            "name_ku": "Diyarbakır- Amed"
         },
         {
-            "name": "Gaziantep ",
             "value": {
                 "type": "data",
                 "data": {
@@ -60,10 +61,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Gaziantep",
+            "name_en": "Gaziantep",
+            "name_ku": "Gaziantep- Dîlok"
         },
         {
-            "name": "Şanlıurfa",
             "value": {
                 "type": "data",
                 "data": {
@@ -78,10 +81,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Şanlıurfa",
+            "name_en": "Şanlıurfa",
+            "name_ku": "Şanlıurfa- Riha"
         },
         {
-            "name": "Adana",
             "value": {
                 "type": "data",
                 "data": {
@@ -108,10 +113,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Adana",
+            "name_en": "Adana",
+            "name_ku": "Adana- Edene"
         },
         {
-            "name": "Mersin",
             "value": {
                 "type": "data",
                 "data": {
@@ -132,10 +139,12 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Mersin",
+            "name_en": "Mersin",
+            "name_ku": "Mersin- Mêrsîn"
         },
         {
-            "name": "Malatya",
             "value": {
                 "type": "data",
                 "data": {
@@ -150,7 +159,10 @@
                         }
                     ]
                 }
-            }
+            },
+            "name_tr": "Malatya",
+            "name_en": "Malatya",
+            "name_ku": "Malatya- Meletî"
         }
     ]
 }

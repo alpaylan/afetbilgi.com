@@ -1,9 +1,7 @@
 {
     "type": "question",
-    "text": "Hangi şehirde toplanacak yer arıyorsunuz?",
     "options": [
         {
-            "name": "Malatya",
             "value": {
                 "type": "data",
                 "data": {
@@ -88,10 +86,13 @@
                         "Kale Hükümet Konağı (Kale, Soğukpınar Mh.)"
                     ]
                 }
-            }
+            },
+            "name_tr": "Malatya",
+            "name_en": "Malatya",
+            "name_ar": "Malatya",
+            "name_ku": "Malatya- Meletî"
         },
         {
-            "name": "Kahramanmaraş",
             "value": {
                 "type": "data",
                 "data": {
@@ -127,10 +128,13 @@
                         "(Nurhak) Cumhuriyet Meydanı"
                     ]
                 }
-            }
+            },
+            "name_tr": "Kahramanmaraş",
+            "name_en": "Kahramanmaraş",
+            "name_ar": "Kahramanmaraş",
+            "name_ku": "Maraş- Gurgum"
         },
         {
-            "name": "Hatay",
             "value": {
                 "type": "data",
                 "data": {
@@ -179,10 +183,13 @@
                         "İDÇ Stadyum(Karayılan)"
                     ]
                 }
-            }
+            },
+            "name_tr": "Hatay",
+            "name_en": "Hatay",
+            "name_ar": "Hatay",
+            "name_ku": "Hatay- Xetay"
         },
         {
-            "name": "Diyarbakır",
             "value": {
                 "type": "data",
                 "data": {
@@ -210,10 +217,13 @@
                         "Amerikan kültür (Silvan yolu)"
                     ]
                 }
-            }
+            },
+            "name_tr": "Diyarbakır",
+            "name_en": "Diyarbakır",
+            "name_ar": "Diyarbakır",
+            "name_ku": "Diyarbakır- Amed"
         },
         {
-            "name": "Gaziantep",
             "value": {
                 "type": "data",
                 "data": {
@@ -232,10 +242,13 @@
                         "MEHMET GÖGUS ANNAÇ PARKI"
                     ]
                 }
-            }
+            },
+            "name_tr": "Gaziantep",
+            "name_en": "Gaziantep",
+            "name_ar": "Gaziantep",
+            "name_ku": "Gaziantep"
         },
         {
-            "name": "Şanlıurfa",
             "value": {
                 "type": "data",
                 "data": {
@@ -366,10 +379,13 @@
                         "ŞEHİT ŞEFİK ŞEFKATLİOĞLU PARKI"
                     ]
                 }
-            }
+            },
+            "name_tr": "Şanlıurfa",
+            "name_en": "Şanlıurfa",
+            "name_ar": "Şanlıurfa",
+            "name_ku": "Şanlıurfa- Riha"
         },
         {
-            "name": "Adana",
             "value": {
                 "type": "data",
                 "data": {
@@ -400,7 +416,15 @@
                         "Merkez Park Derman"
                     ]
                 }
-            }
+            },
+            "name_tr": "Adana",
+            "name_en": "Adana",
+            "name_ar": "Adana",
+            "name_ku": "Adana- Edene"
         }
-    ]
+    ],
+    "text_tr": "Hangi şehirde toplanacak yer arıyorsunuz?",
+    "text_en": "In which city are you looking for safe assembly area?",
+    "text_ku": "Hûn Li Kîjan Bajarî Cihên Ewle Bo Kombûnê Digerin?",
+    "text_ar": "في أي مدينة تبحث عن مناطق تجمع الأمنة"
 }

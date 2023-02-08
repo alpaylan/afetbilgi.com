@@ -1,10 +1,15 @@
 {
     "type": "question",
-    "text": "Hangi şehirde kalacak yer arıyorsunuz?",
+    "text_tr": "Hangi şehirde kalacak yer arıyorsunuz?",
+    "text_en": "In which city are you looking for temporary accommodation?",
+    "text_ku": "Hûn li Kîjan Bajarî Cihên Lêhihewinê yên Demkî Digerin?",
+    "text_ar": "في أي مدينة تبحث عن مساكن مؤقة",
     "autocompleteHint": "Şehir",
     "options": [
         {
-            "name": "Adana",
+            "name_tr": "Adana",
+            "name_en": "Adana",
+            "name_ku": "Adana- Edene",
             "value": {
                 "type": "data",
                 "data": {
@@ -120,7 +125,9 @@
             }
         },
         {
-            "name": "Gaziantep",
+            "name_tr": "Gaziantep",
+            "name_en": "Gaziantep",
+            "name_ku": "Gaziantep- Dîlok",
             "value": {
                 "type": "data",
                 "data": {
@@ -356,7 +363,9 @@
             }
         },
         {
-            "name": "Malatya",
+            "name_tr": "Malatya",
+            "name_en": "Malatya",
+            "name_ku": "Malatya- Meletî",
             "value": {
                 "type": "data",
                 "data": {
@@ -504,7 +513,9 @@
             }
         },
         {
-            "name": "Diyarbakır",
+            "name_tr": "Diyarbakır",
+            "name_en": "Diyarbakır",
+            "name_ku": "Diyarbakır- Amed",
             "value": {
                 "type": "data",
                 "data": {
@@ -932,7 +943,9 @@
             }
         },
         {
-            "name": "Şanlıurfa",
+            "name_tr": "Şanlıurfa",
+            "name_en": "Şanlıurfa",
+            "name_ku": "Şanlıurfa- Riha",
             "value": {
                 "type": "data",
                 "data": {
@@ -1096,7 +1109,9 @@
             }
         },
         {
-            "name": "K. Maraş",
+            "name_tr": "Kahramanmaraş",
+            "name_en": "Kahramanmaraş",
+            "name_ku": "Kahramanmaraş- Gurgum",
             "value": {
                 "type": "data",
                 "data": {
@@ -1156,7 +1171,9 @@
             }
         },
         {
-            "name": "Osmaniye",
+            "name_tr": "Osmaniye",
+            "name_en": "Osmaniye",
+            "name_ku": "Osmaniye",
             "value": {
                 "type": "data",
                 "data": {
@@ -1296,7 +1313,9 @@
             }
         },
         {
-            "name": "Adıyaman",
+            "name_tr": "Adıyaman",
+            "name_en": "Adıyaman",
+            "name_ku": "Adıyaman- Semsûr",
             "value": {
                 "type": "data",
                 "data": {
@@ -1332,7 +1351,9 @@
             }
         },
         {
-            "name": "Kilis",
+            "name_tr": "Kilis",
+            "name_en": "Kilis",
+            "name_ku": "Kilis- Kilîs",
             "value": {
                 "type": "data",
                 "data": {
@@ -1360,7 +1381,9 @@
             }
         },
         {
-            "name": "Mardin",
+            "name_tr": "Mardin",
+            "name_en": "Mardin",
+            "name_ku": "Mardin- Mêrdîn",
             "value": {
                 "type": "data",
                 "data": {
@@ -1374,6 +1397,308 @@
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
                             "address": "",
                             "validation_date": ""
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Hatay",
+            "name_en": "Hatay",
+            "name_ku": "Hatay- Xetay",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Hatay",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Hatay",
+                            "name": "Altınözü Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": "",
+                            "validation_date": ""
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Yayladağı Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": "",
+                            "validation_date": ""
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Apaydın Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": "",
+                            "validation_date": ""
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Güveççi Çadırkenti",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": "",
+                            "validation_date": ""
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Antakya ve Samandağ Cemevi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/UaANoswaFJi6Wuv5A birden fazla cemevi konumu var",
+                            "validation_date": ""
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Atatürk Parkı Düğün Salonu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/MtFc8Sraad3rw7DQ9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Cennet Ana Kız Anadolu İmamhatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/txV7n2CgEqcxRAzc6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Anadolu İmamhatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/1nU9Z7KdVobvdmLj8",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Harun Taş İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/xQgY2UFX4N526W7j6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlk Adım Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/MrKp86DQzfRokPET8",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Makbule Hanım Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/mMLobqfGcRjnMNEH7",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Kuzuculu Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/nKzvByPZNQaYorwU8",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/1RTjLuC17rVrhsZeA",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yeşilköy 19 Aralık Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/naitX6XHa1VdQD34A",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yeniyurt Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/PsfUpApYoaVY5q5L7",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlk Kurşun İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/LEpBPA7eCzpjkytj6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Süleyman Demirel Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/gXzb3LuVi25FZ9k87",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Ayhan Kıymacı İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/Wi7y5ctMQrGqNeJk9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Atatürk Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/dzcx7mwHg5A4RZ1A9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Gazi İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/gN7E4WEvR8SdijW89",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yunus Emre Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/F3GPhDdDxLL1XRHo7",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Ocaklı Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/Tbkdkej8rpXkjVGU7",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Hacı Ahmet İlhan İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/2i2eMxWWXkZ3eYyX9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Çaylı Barbaros İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/VURh3jQShCYLBLuv5",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Konaklı İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/bnBMKz6awrhec2Mt6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Necip Fazıl Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/xSqyht2K5voXeMti9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Karakese İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/ohmQaRUf2pFyC1Y38",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Otogar Girişi Pazar Yeri",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/oG8ryshLvosh36tN8",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Öğretmenevi ASO",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/jTHzQfmnRveCTbMG6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Recep Atakaş Mesleki Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/bqri3K71iLM6CvQp9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Ayhan Say ÇPL Ana Binası",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/kfTk4WQmSBhCzLpZA",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Erdi 2 Kapalı Halısaha",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/vMVCabWp9HERgkar9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Berat Kapalı Halısaha",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/euZxaChWGphqoyGX6",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Belediyesi Karahasanpaşa Sosyal Tesisi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/ovfGx3B3z8iXh94L9",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlçe Emniyet Müdürlüğü Bahçesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/aRWYH7kyUQFs1HAF7",
+                            "validation_date": "08.02.2023 14:00"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlçe Jandarma Komutanlığı Bahçesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/8kaDG8o3kBudt91g9",
+                            "validation_date": "08.02.2023 14:00"
                         }
                     ]
                 }

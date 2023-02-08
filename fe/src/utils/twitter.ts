@@ -4,7 +4,7 @@
 // Example:
 // CreateIntentURL(['🚨 Istanbul Siginma Alanlari'], 'https://afetbilgi.com')
 export function createIntentURL(lines: string[], url: string) {
-    let text = lines.join('\n');
+    const text = lines.join('\n');
   return `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     text
   )}&url=${encodeURIComponent(url)}`;

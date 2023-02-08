@@ -41,5 +41,6 @@
   "city": "Şehir",
   "district": "İlçe",
   "region": "Bölge",
-  "location": "Konum"
+  "location": "Konum",
+  "details": "Detaylar"
 }
