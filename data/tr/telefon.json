@@ -101,6 +101,24 @@
                 "name": "DOĞALGAZ ARIZA İHBAR",
                 "phone_number": "187",
                 "is_plain": true
+            },
+            {
+                "name": "SABİM (YAKINLARIM HANGİ HASTANEDE)",
+                "phone_number": "184",
+                "is_plain": true
+            },
+            {
+                "name": "SOSYAL DESTEK HATTI (KAYIPLAR İÇİN)",
+                "phone_number": "183",
+                "is_plain": true
+            },
+            {
+                "name": "Türkiye Kadın Dernekleri Federasyonu",
+                "phone_number": "0212 656 96 96"
+            },
+            {
+                "name": "Türkiye Kadın Dernekleri Federasyonu",
+                "phone_number": "0549 656 96 96"
             }
         ]
     }

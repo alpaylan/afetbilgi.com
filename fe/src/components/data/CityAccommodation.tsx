@@ -24,11 +24,11 @@ export default function CityAccommodation({
           <b>{item.name}</b> {t('data.city_accommodation.explanation')}
           {item.url && (
             <>
-              Detaylı bilgiye{' '}
+              {t('data.city_accommodation.link_explanation_p1')}{' '}
               <a href={item.url} target='_blank' rel='noreferrer'>
-                bu linkten
+              {t('data.city_accommodation.link_explanation_p2')}.
               </a>{' '}
-              ulaşabilirsiniz.
+              
               <br />
             </>
           )}

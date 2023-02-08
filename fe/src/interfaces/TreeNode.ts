@@ -67,6 +67,17 @@ export interface CityAccommodationNode extends DataNode {
   }[];
 }
 
+export interface VetNode extends DataNode {
+  city: string;
+  vets: {
+    name: string;
+    phone_number: string;
+    address: string;
+    maps_url: string;
+  }[];
+}
+
+
 export interface CreditCardNode extends DataNode {
     name: string;
     url: string;

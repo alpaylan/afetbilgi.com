@@ -12,6 +12,7 @@ import TelephoneData from './data/PhoneData';
 import ArticleData from './data/ArticleData';
 import UsefulLinksData from './data/UsefulLinksdata';
 import StemCellData from './data/StemCellData';
+import VetData from './data/VetData';
 
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
@@ -70,6 +71,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'stem-cell-donation') {
       return <StemCellData value={dataNode.data as any} />
+    }
+
+    if (dataNode.data.dataType === 'data-vet') {
+      return <VetData value={dataNode.data as any} />
     }
 
     return <></>;
