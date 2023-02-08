@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/missing-translations
 
 jobs:
   deploy:
@@ -25,7 +26,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: cd data && mkdir to_upload && python combine.py > to_upload/latest.json
+      - run: cd data && mkdir to_upload && python combine.py > to_upload/latest_translated.json
 
       - name: Sync JSON files
         run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
