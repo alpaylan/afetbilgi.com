@@ -9,7 +9,7 @@ data_points = [
   { 'name_ar': 'أرقام هواتف مهمة', 'name': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'name_ku': 'Numareyên Girîng', 'path': 'datasets/telefon.json' },
   { 'name_ar': 'مُرْتَادِي الشَّبَكَة مهمة', 'name': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'name_ku': ' Malperên Kêrhatî', 'path': 'datasets/faydali_linkler.json' },
   { 'name_ar': 'نصوص مفيدة', 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'name_ku': 'Agahiyên Kêrhatî', 'path': 'datasets/yazilar.json' },
-  { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'XZY', 'path': 'datasets/kokhucre.json' },
+  { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê', 'path': 'datasets/kokhucre.json' },
   { 'name_ar': 'بَيَاطير', 'name': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner', 'path': 'datasets/veteriner.json' },
   { 'name_ar': 'مواقع توصيل الطعام', 'name': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê', 'path': 'datasets/yemek.json' },
   { 'name': 'VPN', 'path': 'datasets/vpn.json' },
