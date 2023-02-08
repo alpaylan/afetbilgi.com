@@ -27,7 +27,6 @@ const createPDF = async () => {
         accomodation.createAccomodationPDF(data, doc, city);
         createMealPdf(doc, data, city)
     })
-
     
     writePhoneNumbersToPdf(doc, data)
 
