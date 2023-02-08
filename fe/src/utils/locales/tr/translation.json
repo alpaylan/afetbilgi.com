@@ -5,6 +5,8 @@
   "data.city_accommodation.title": "{{city}} Şehrinde Kalacak Yerler",
   "data.city_accommodation.subtitle": "Bu sayfada, içerisinde belirtilenler hariç tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
   "data.city_accommodation.explanation": "depremzedelere kalacak yer sağlayacağını bildirdi.",
+  "data.city-accommodation.link_explanation_p1": "Detaylı bilgiye",
+  "data.city-accommodation.link_explanation_p2": "bu linkten ulaşabilirsiniz",
   "data.city_accommodation.not_validated": "Not: Bu bilgiyi telefonla doğrulayamadık.",
   "data.gathering.title": "{{city}} Şehrinde Güvenli Toplanma Alanları",
   "data.help_item.title": "{{city}} Eşya Yardım Alanları",
