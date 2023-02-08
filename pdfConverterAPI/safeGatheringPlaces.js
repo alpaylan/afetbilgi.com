@@ -19,6 +19,7 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     if(!cityObj) {
         return;
     }
+    doc.addPage()
 
     const cityName = cityObj?.name_tr
 
