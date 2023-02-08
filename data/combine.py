@@ -6,10 +6,10 @@ data_points = [
 #   { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'combined/bagis.json' },
   { 'name_tr': 'Eşya Bağışı İmkanları','name_en': 'Other Donation',  'path': 'combined/yardim_toplama_merkezleri.json' },
   { 'name_tr': 'Kızılay Kan Bağış Noktaları', 'name_en': 'Kızılay Blood Donation Places', 'path': 'combined/blood.json' },
-  { 'name': 'Önemli Telefon Numaraları', 'path': 'combined/telefon.json' },
-  { 'name': 'Önemli Web Siteleri', 'path': 'faydali_linkler.json' },
-  { 'name': 'Faydalı Yazılar', 'path': 'yazilar.json' },
-  { 'name': 'Kök Hücre Bağış Noktaları', 'path': 'kokhucre.json' },
+  { 'name': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'path': 'combined/telefon.json' },
+  { 'name': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'path': 'faydali_linkler.json' },
+  { 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'path': 'yazilar.json' },
+  { 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'path': 'kokhucre.json' },
 ]
 
 result = {
