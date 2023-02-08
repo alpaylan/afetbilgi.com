@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import preval from 'preval.macro';
 
 import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Box, Button, Container, Input, MenuItem, Select } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import LocalStorage from './utils/LocalStorage';
