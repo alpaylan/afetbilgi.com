@@ -28,11 +28,14 @@
   "data.phone_number.link_explanation_p1": "Bo Hûgulî",
   "data.phone_number.link_explanation_p2": "Hûn dikarin li vê numareyê bigerin",
   "data_blood_donation": "Cihên bo bexşîna xwînê",
+  "data.vpn.title": "Hûn bo înternetê karin VPNên belaş yên li jêr bikar bînin",
+  "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
 
   "button.back": "paş  ",
   "button.language": "Ziman biguherîne",
   "button.google_maps": "Girêdana Google Mapsê ",
   "last_update": "nûvekirina dawîn",
+  "name": "Nav",
   "map": "Qert",
   "in_charge": "Berpirsiyar",
   "unit": "Yekîne",
@@ -41,5 +44,7 @@
   "city": "Bajar",
   "district": "Navçe",
   "region": "Herêm",
-  "location": "Cîh"
+  "location": "Cîh",
+  "details": " Hûrgilî",
+  "website": " Malper"
 }
