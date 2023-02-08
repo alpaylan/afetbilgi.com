@@ -5,6 +5,12 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 import { BankDataNode } from "../../interfaces/TreeNode";
 
+function BankDataClipboardItem({label, value}: { label: string, value: string }) {
+  return (<ListItem><b>{label}: </b> <span style={{ wordBreak: "break-all"}}>{value}</span> <CopyToClipboard text={value} >
+    <IconButton size="small"><ContentCopyIcon/></IconButton>
+  </CopyToClipboard></ListItem>);
+}
+
 export default function BankData({ value }: { value: BankDataNode }) {
   return (
     <Box>
@@ -14,40 +20,15 @@ export default function BankData({ value }: { value: BankDataNode }) {
             {account.name && <ListItem><b>Banka: </b>{account.name}</ListItem>}
             {account.branch && <ListItem><b>Şube: </b>{account.branch}</ListItem>}
             {account.ownerName && <ListItem><b>Hesap Sahibi: </b>{account.ownerName}</ListItem>}
-
-            {account.tl && <ListItem><b>TL IBAN: </b>{account.tl} <CopyToClipboard text={account.tl}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.usd && <ListItem><b>USD IBAN: </b>{account.usd} <CopyToClipboard text={account.usd}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.eur && <ListItem><b>EUR IBAN: </b>{account.eur} <CopyToClipboard text={account.eur}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.gbp && <ListItem><b>GBP IBAN: </b>{account.gbp} <CopyToClipboard text={account.gbp}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.swift && <ListItem><b>Swift Kodu: </b>{account.swift} <CopyToClipboard text={account.swift}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.bep && <ListItem><b>BEP20: </b>{account.bep} <CopyToClipboard text={account.bep}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.erc && <ListItem><b>ERC20: </b>{account.erc} <CopyToClipboard text={account.erc}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.avalanche && <ListItem><b>Avalanche: </b>{account.avalanche} <CopyToClipboard text={account.avalanche}>
-              <IconButton size="small"><ContentCopyIcon /></IconButton>
-            </CopyToClipboard></ListItem>}
-
-            {account.url && <ListItem><a href={account.url} target="_blank">{account.url}</a></ListItem>}
+            {account.tl && <BankDataClipboardItem label="TL IBAN" value={account.tl} />}
+            {account.usd && <BankDataClipboardItem label="USD IBAN" value={account.usd} />}
+            {account.eur && <BankDataClipboardItem label="EUR IBAN" value={account.eur} />}
+            {account.gbp && <BankDataClipboardItem label="GBP IBAN" value={account.gbp} />}
+            {account.swift && <BankDataClipboardItem label="Swift Kodu" value={account.swift} />}
+            {account.bep && <BankDataClipboardItem label="BEP20" value={account.bep} />}
+            {account.erc && <BankDataClipboardItem label="ERC20" value={account.erc} />}
+            {account.avalanche && <BankDataClipboardItem label="Avalanche" value={account.avalanche} />}
+            {account.url && <ListItem><b>URL: </b><a href={account.url} target="_blank" style={{ wordBreak: "break-word"}}>{account.url}</a></ListItem>}
           </List>
         </Paper>
       ))}
