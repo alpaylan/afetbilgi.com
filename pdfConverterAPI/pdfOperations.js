@@ -6,7 +6,7 @@ const regularFont = require("./fonts/Roboto-Regular-normal")
 //const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 
-const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.1.json";
+const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
 
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
@@ -30,6 +30,8 @@ const createPDF = async () => {
     const doc = new jsPDF()
     const data = await fetchData();
     createSafeGatheringPlacePDF(data, "Malatya")
+
+    setFont(doc, "regular")
 
     const phoneData = getPhoneNumberData(data);
     writePhoneNumbersToPdf(doc, phoneData)
