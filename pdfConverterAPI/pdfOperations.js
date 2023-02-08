@@ -78,7 +78,7 @@ const createSafeGatheringPlacePDF = (data, city) => {
             y = 60
             isNewPage = false
         }
-        doc.text(el, 16, y)  
+        doc.text(`\u2022 ${el}`, 16, y)  
         y += 12
     });
 
