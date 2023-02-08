@@ -11,10 +11,25 @@
   "data.gathering.title": "{{city}} Şehrinde Güvenli Toplanma Alanları",
   "data.help_item.title": "{{city}} Eşya Yardım Alanları",
   "data.important_phone_numbers.title": "Önemli Telefon Numaraları",
+  "data.important_web_sites.title": "Önemli Web Siteleri",
+  "data.important_web_sites.subtitle": "İhtiyacınız olabilecek linklere buradan ulaşabilirsiniz.",
+  "data.important_articles.title": "Faydalı Yazılar",
+  "data.important_articles.subtitle": "Deprem sonrası ile alakalı faydalı yazıları aşağıda bulabilirsiniz.",
+  "data.stem_cell.title": "Kök Hücre Bağış Noktaları",
   "data.phone_number.link_explanation_p1": "Detaylar için",
-  "data.phone_number.link_explanation_p2": " numarasını arayabilirsiniz",
+  "data.phone_number.link_explanation_p2": "numarasını arayabilirsiniz",
+  "data_blood_donation": "Kan Bağış Noktası",
+
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
   "last_update": "Son güncelleme",
-  "map": "Harita"
+  "map": "Harita",
+  "in_charge": "Sorumlu",
+  "unit": "Birim",
+  "telephone": "Telefon",
+  "address": "Adres",
+  "city": "Şehir",
+  "district": "İlçe",
+  "region": "Bölge",
+  "location": "Konum"
 }

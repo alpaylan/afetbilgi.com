@@ -20,8 +20,8 @@ export default function TelephoneData({ value }: { value: TelephoneDataNode }) {
         <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
           <TableHead>
             <TableRow>
-              <TableCell>Birim</TableCell>
-              <TableCell>Telefon&nbsp;(g)</TableCell>
+              <TableCell>{t('unit')}</TableCell>
+              <TableCell>{t('telephone')}&nbsp;(g)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
