@@ -1,6 +1,6 @@
 const { setFont, getDateAndTime } = require("./docFunctions");
 const tempData = require("./data.json");
-const { smallTextSize, textFontSize, titleFontSize } = require("./constants");
+const { smallTextSize, textFontSize, titleFontSize, xStart, yStart, yRange, smallTitleFontSize } = require("./constants");
 
 const MEAL_DATA_TITLE = "Yemek"
 
@@ -36,7 +36,6 @@ const getCityData = (data, city) => {
 
 
 const createMealPdf = (doc, allData, city) => {
-
     const data = getMealData(allData)
 
     const pageHeight = doc.internal.pageSize.height
@@ -47,34 +46,33 @@ const createMealPdf = (doc, allData, city) => {
 
     doc.addPage();
     let isNewPage = true
-    let y = 60
-    doc.setFontSize(8)
 
+    let x = xStart
+    let y = yStart
+
+    doc.setFontSize(textFontSize)
     cityData.forEach( (value, index) => {
-
-
-
         if (y >= pageHeight) {
             doc.addPage();
             isNewPage = true
         }
         if (isNewPage) {
             setFont(doc, "bold")
-            doc.setFontSize(18)
-            doc.text(`${city} - Yemek Sağlanan Yerler`, 16, 24)
+            doc.setFontSize(titleFontSize)
+            doc.text(`${city} - Yemek Sağlanan Yerler`, x, yRange * 2)
 
             setFont(doc, "regular")
-            doc.setFontSize(8)
-            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, 16, 36)
-            y = 60
+            doc.setFontSize(textFontSize)
+            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, x, yRange * 3)
+            y = yStart
             isNewPage = false
         }
 
         setFont(doc, "bold")
-        doc.setFontSize(titleFontSize)
-        doc.text(value.name, 16, y)
-        y += 18
-console.log(value)
+        doc.setFontSize(smallTitleFontSize)
+        doc.text(value.name, x, y)
+        y += yRange
+        console.log(value)
         value.value.data.items.forEach((el, index) => {
             if (y >= pageHeight) {
                 doc.addPage();
@@ -82,33 +80,44 @@ console.log(value)
             }
             if (isNewPage) {
                 setFont(doc, "bold")
-                doc.setFontSize(18)
-                doc.text(`${city} - Yemek Sağlanan Yerler`, 16, 24)
+                doc.setFontSize(titleFontSize)
+                doc.text(`${city} - Yemek Sağlanan Yerler`, x, yRange * 2)
     
                 setFont(doc, "regular")
-                doc.setFontSize(8)
-                doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, 16, 36)
-                y = 60
+                doc.setFontSize(textFontSize)
+                doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, x, yRange * 3)
+                y = yStart
                 isNewPage = false
             }
 
-
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
-            doc.text(`\u2022 ${el.name}`, 16, y)  
+            doc.text(`\u2022 ${el.name}`, x, y)  
             doc.setFontSize(smallTextSize)
-            y += 4;
-            //doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
-            y += 12
+            y += yRange;
+            doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
+            y += yRange
         });
-
+        y += yRange * 2
     } ) 
 
 
 }
 
 const convertToDate = (el) => {
-//TO-DO
+    let time = (el.updated_at_time + '').split('.');
+
+    console.log(time[1])
+
+    time[0] = parseInt(time[0])
+    time[1] = time[1] ? parseInt(time[1]) : 0
+
+    console.log(time[1])
+
+    if (time[0] < 10) time[0] = '0' + time[0] 
+    if (time[1] < 10) time[1] = '0' + time[1] 
+
+    return el.updated_at_date.split('/').join('.') + ' - ' + time.join('.');
 }
 
 //getSafeGatheringPlace("Malatya")
