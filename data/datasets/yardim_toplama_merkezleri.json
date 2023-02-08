@@ -287,6 +287,12 @@
                             "name": "Adana Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Adana_Bld/status/1622541147674497025",
                             "phone_number": "0322 227 28 54"
+                        },
+                        {
+                            "city": "Adana ",
+                            "name": "Cafe Green Peace",
+                            "url": "https://maps.app.goo.gl/X1ivM9QQ5zkCxjTSA?g_st=iwb",
+                            "phone_number": "0538 981 71 08"
                         }
                     ]
                 }
@@ -817,7 +823,7 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
-                    "city": "Afyonkarahisar ",
+                    "city": "Afyonkarahisar",
                     "items": [
                         {
                             "city": "Afyonkarahisar ",
@@ -1183,7 +1189,7 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
-                    "city": "Amasya ",
+                    "city": "Amasya",
                     "items": [
                         {
                             "city": "Amasya ",
@@ -1246,21 +1252,21 @@
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
-                    "city": "Adana ",
+                    "city": "Kırıkkale",
                     "items": [
                         {
-                            "city": "Adana ",
-                            "name": "Cafe Green Peace",
-                            "url": "https://maps.app.goo.gl/X1ivM9QQ5zkCxjTSA?g_st=iwb",
-                            "phone_number": "0538 981 71 08"
+                            "city": "Kırıkkale",
+                            "name": "Cumhuriyet meydanı",
+                            "url": "https://goo.gl/maps/fPPZThn8tBjAyduJ9",
+                            "phone_number": ""
                         }
                     ]
                 }
             },
-            "name_tr": "Adana",
-            "name_en": "Adana",
-            "name_ku": "Adana",
-            "name_ar": "Adana"
+            "name_tr": "Kırıkkale",
+            "name_en": "Kırıkkale",
+            "name_ku": "Kırıkkale",
+            "name_ar": "Kırıkkale"
         }
     ]
 }

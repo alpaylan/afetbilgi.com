@@ -4,7 +4,7 @@ data_points = [
   { 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'path': 'datasets/barinma.json' },
   { 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'path': 'datasets/toplanma.json' },
 #   { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'datasets/bagis.json' },
-  { 'name_tr': 'Eşya Bağışı İmkanları','name_en': 'Other Donation',  'path': 'datasets/yardim_toplama_merkezleri.json' },
+  { 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation',  'path': 'datasets/yardim_toplama_merkezleri.json' },
   { 'name_tr': 'Kızılay Kan Bağış Noktaları', 'name_en': 'Kızılay Blood Donation Places', 'path': 'datasets/blood.json' },
   { 'name': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'path': 'datasets/telefon.json' },
   { 'name': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'path': 'datasets/faydali_linkler.json' },
