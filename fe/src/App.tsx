@@ -96,7 +96,7 @@ const App = () => {
         </Select>
       </Box>
 
-      <Container sx={{ pt: '15vh' }}>
+      <Container>
         <Routes>
           <Route path='/*' element={<RootQuestion />} />
         </Routes>
