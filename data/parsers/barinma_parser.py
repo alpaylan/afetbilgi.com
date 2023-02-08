@@ -81,7 +81,31 @@ def main():
         "text_ku": "Hûn li Kîjan Bajarî Cihên Lêhihewinê yên Demkî Digerin?",
         "text_ar": "في أي مدينة تبحث عن مساكن مؤقة",
         "autocompleteHint": "Şehir",
-        "options": options
+        "options": options,
+        'externalData' : {
+            "text_tr": 'Kalacak yer imkanı sağlayan diğer kaynaklar',
+            "text_en": 'Other sources that provide temporary accommodation',
+            "text_ku": 'Çavkaniyên din dijital li ser cihên lêhihewinê',
+            "text_ar": 'مصادر أخرى توفر مساكن مؤقة',
+            "usefulLinks": [
+                {
+                    "name":'Otels.com',
+                    "url": 'https://gsb.gov.tr/haber-detay.html/968',
+                },
+                {
+                    "name": "Turkish Airlines Holidays",
+                    "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller"
+                },
+                {
+                    "name": "Ahbap Güvenli Bölgeler Haritası",
+                    "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8"
+                },
+                {
+                    "name": "HepsiEmlak Dostluk Çatısı",
+                    "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s"
+                }
+            ],
+        }
     }
 
     with open(json_name, "w+", encoding="utf-8") as f:
