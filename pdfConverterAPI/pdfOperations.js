@@ -5,6 +5,7 @@ const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 //const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
+const { setFont, getTime } = require("./docFunctions");
 
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
 
@@ -18,33 +19,26 @@ const registerFont = (doc) => {
 }
 
 
-const setFont = (doc, type) => {
-    if (type == "regular") {
-        doc.setFont('Roboto-Regular', 'normal');
-    } else {
-        doc.setFont('Roboto-Black', 'normal');
-    }
-}
 
 const createPDF = async () => {
-    const doc = new jsPDF()
+    const doc = new jsPDF({
+        orientation: "p",
+        unit: "px",
+        format: "a4"
+    })
     const data = await fetchData();
-    createSafeGatheringPlacePDF(data, "Malatya")
+    createSafeGatheringPlacePDF(doc, data, "Malatya")
 
     setFont(doc, "regular")
 
     const phoneData = getPhoneNumberData(data);
     writePhoneNumbersToPdf(doc, phoneData)
 
-    doc.save("c.pdf");
+    doc.save("out.pdf");
 }
 
-const createSafeGatheringPlacePDF = (data, city) => {
-    const doc = new jsPDF({
-        orientation: "p",
-        unit: "px",
-        format: "a4"
-    })
+const createSafeGatheringPlacePDF = (doc, data, city) => {
+
     registerFont(doc)
     const pageHeight = doc.internal.pageSize.height
 
@@ -82,7 +76,7 @@ const createSafeGatheringPlacePDF = (data, city) => {
         y += 12
     });
 
-    doc.save(cityName + ".pdf")
+    
 }
 
 //fetches data
@@ -93,18 +87,9 @@ const fetchData = async () => {
 }
 createPDF()
 
-const getTime = () => {
-    const date = new Date()
-    let hours = date.getHours()
-    let minutes = date.getMinutes();
 
-    if (hours < 10) hours = "0" + hours;
-    if (minutes < 10) minutes = "0" + minutes;
-
-    return hours + ":" + minutes;
-}
 
 module.exports = {
     createPDF,
-    fetchData
+    fetchData,
 }

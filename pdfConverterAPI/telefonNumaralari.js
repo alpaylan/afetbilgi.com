@@ -1,5 +1,8 @@
 const { jsPDF } = require("jspdf")
-const tempData = require("./data.json")
+const tempData = require("./data.json");
+const { getTime } = require("./docFunctions");
+
+
 
 const PHONE_DATA_TITLE = "Önemli Telefon Numaraları";
 
@@ -25,23 +28,52 @@ const getPhoneNumberData = (data) => {
 const writePhoneNumbersToPdf = (doc, data) => {
     //const doc = new jsPDF();
     doc.addPage()
-    const xStart = 10;
+    const xStart = 16;
     const xEnd = 160;
     const yStart = 10;
     const xRange = 50;
-    const yRange = 10;
+    const yRange = 12;
 
     const phoneRangeY = 10;
-
+    let x = xStart;
+    let y = yStart;
+    let isNewPage = true
     //tempData.options[4].value.data.phones.forEach
     data.forEach
     ( (value, index) => {
-        let x = xStart;
-        let y = yStart;
-        y += yRange * index
 
-        doc.setFontSize(16);
-        doc.text(value.name + " - " + value.phone_number, x, y);
+      
+        y += yRange 
+
+        const pageHeight = doc.internal.pageSize.height
+
+        doc.setFontSize(8)
+        console.log(pageHeight)
+            if (y >= pageHeight) {
+                
+                doc.addPage();
+                isNewPage = true
+            }
+            if (isNewPage) {
+                doc.setFont('Roboto-Black', 'normal');
+                doc.setFontSize(18)
+                doc.text(`Önemli Telefon Numaraları`, 16, 24)
+    
+                doc.setFont('Roboto-Regular', 'normal');
+                doc.setFontSize(8)
+                doc.text(`Dosyanın oluşturulma tarihi: ${ getTime() }`, 16, 36)
+                y = 60
+                isNewPage = false
+              
+            }
+
+            console.log(y)
+    
+            doc.setFontSize(8)
+            doc.text("\u2022 " + value.name + " - " + value.phone_number, x, y);
+      
+
+
 
         //let phone = doc.getTextDimensions(value.phone_number);
         
