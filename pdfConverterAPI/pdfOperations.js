@@ -3,7 +3,7 @@ const { jsPDF } = require("jspdf")
 const myFont = require("./fonts/Roboto-Black-normal")
 const SGP = require("./safeGatheringPlaces")
 
-const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.1.json";
+const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
 
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", myFont.font);
@@ -39,18 +39,30 @@ const createSafeGatheringPlacePDF = (data, city) => {
 
     setFont(doc, "bold")
     doc.setFontSize(18)
-    doc.text(cityName + " - " + "Güvenli Toplanma Alanları", 16, 24)
+    doc.text(`${cityName} - Güvenli Toplanma Alanları`, 16, 24)
 
     setFont(doc, "regular")
     doc.setFontSize(8)
-    doc.text("Dosyanın oluşturulma tarihi: " + getTime(), 16, 36)
+    doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
 
+    let isNewPage = true
     let y = 60
     doc.setFontSize(8)
     cityObj.value_tr.data.items.forEach((el, index) => {
         if (y >= pageHeight) {
             doc.addPage();
-            y = 12
+            isNewPage = true
+        }
+        if (isNewPage) {
+            setFont(doc, "bold")
+            doc.setFontSize(18)
+            doc.text(`${cityName} - Güvenli Toplanma Alanları`, 16, 24)
+
+            setFont(doc, "regular")
+            doc.setFontSize(8)
+            doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
+            y = 60
+            isNewPage = false
         }
         doc.text(el, 16, y)  
         y += 12
