@@ -14,80 +14,93 @@ import UsefulLinksData from './data/UsefulLinksdata';
 import StemCellData from './data/StemCellData';
 import VetData from './data/VetData';
 import FoodDistributionData from './data/FoodDistributionData';
-
+import VpnData from './data/VpnData';
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
     if (dataNode.data.dataType === 'bank-account-donation') {
-      return <BankData value={dataNode.data as any} />
+      return <BankData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'beneficial-articles') {
-      return <ArticleData value={dataNode.data as any} />
+      return <ArticleData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'blood-donation') {
-      return <BloodDonationData value={dataNode.data as any} />
+      return <BloodDonationData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'city-accommodation') {
-      return <CityAccommodation value={dataNode.data as any} />
+      return <CityAccommodation value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'credit-card-donation') {
-      return <CreditCardData value={dataNode.data as any} />
+      return <CreditCardData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'international-bank-account-donation') {
-      return <BankData value={dataNode.data as any} />
+      return <BankData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'international-url-donation') {
-      return <URLData value={dataNode.data as any} />
+      return <URLData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'gathering-list') {
-      return <GatheringData value={dataNode.data as any} />
+      return <GatheringData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'help-item-list') {
-      return <HelpItemData value={dataNode.data as any} />
+      return <HelpItemData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'phone-number-list') {
-      return <TelephoneData value={dataNode.data as any} />
+      return <TelephoneData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'sms-donation') {
-      return <SMSData value={dataNode.data as any} />
+      return <SMSData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'url-donation') {
-      return <URLData value={dataNode.data as any} />
+      return <URLData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'useful-links') {
-      return <UsefulLinksData value={dataNode.data as any} />
+      return <UsefulLinksData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'stem-cell-donation') {
-      return <StemCellData value={dataNode.data as any} />
+      return <StemCellData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'data-vet') {
-      return <VetData value={dataNode.data as any} />
+      return <VetData value={dataNode.data as any} />;
     }
 
     if (dataNode.data.dataType === 'food-items') {
-      return <FoodDistributionData value={dataNode.data as any} />
+      return <FoodDistributionData value={dataNode.data as any} />;
+    }
+
+    if (dataNode.data.dataType === 'vpn') {
+      return <VpnData value={dataNode.data as any} />;
     }
 
     return <></>;
   };
 
   return (
-    <Box sx={{ textAlign: 'center', display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center', alignItems: 'center', paddingBottom: '50px' }}>
+    <Box
+      sx={{
+        textAlign: 'center',
+        display: 'flex',
+        flexFlow: 'column nowrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: '50px',
+      }}
+    >
       {renderData()}
     </Box>
   );
-};
+}

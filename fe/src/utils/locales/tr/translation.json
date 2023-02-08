@@ -19,10 +19,13 @@
   "data.phone_number.link_explanation_p1": "Detaylar için",
   "data.phone_number.link_explanation_p2": "numarasını arayabilirsiniz",
   "data_blood_donation": "Kan Bağış Noktası",
+  "data.vpn.title": "Internete bağlanmak için aşapıdaki ücretsiz VPN'leri kullanabilirsiniz.",
+  "data.vpn.subtitle": "VPN bloklanan sitelere girmenizi sağlar.",
 
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
   "last_update": "Son güncelleme",
+  "name": "İsim",
   "map": "Harita",
   "in_charge": "Sorumlu",
   "unit": "Birim",
@@ -32,5 +35,6 @@
   "district": "İlçe",
   "region": "Bölge",
   "location": "Konum",
-  "details": "Detaylar"
+  "details": "Detaylar",
+  "website": "Websitesi"
 }
