@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next';
 
 import translationEN from './utils/locales/en/translation.json';
 import translationTR from './utils/locales/tr/translation.json';
+import translationKU from './utils/locales/ku/translation.json';
+import translationAR from './utils/locales/ar/translation.json';
 import LocalStorage from './utils/LocalStorage';
 import { Language } from './utils/types';
 
@@ -13,6 +15,12 @@ const resources = {
   },
   tr: {
     translation: translationTR,
+  },
+  ku: {
+    translation: translationKU,
+  },
+  ar: {
+    translation: translationAR,
   },
 };
 

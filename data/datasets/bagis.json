@@ -1,15 +1,11 @@
 {
     "type": "question",
-    "text": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
     "options": [
         {
-            "name": "AFAD",
             "value": {
                 "type": "question",
-                "text": "Lütfen AFAD'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "SMS ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -19,10 +15,12 @@
                                 "number": "1866",
                                 "amount": "20"
                             }
-                        }
+                        },
+                        "name_tr": "SMS ile Bağış",
+                        "name_en": "Via SMS.",
+                        "name_ku": "SMS ile Bağış"
                     },
                     {
-                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -30,10 +28,12 @@
                                 "name": "AFAD",
                                 "url": "https://www.afad.gov.tr/depremkampanyasi2"
                             }
-                        }
+                        },
+                        "name_tr": "Kredi kartı ile Bağış",
+                        "name_en": "Via Credit/Debit Card.",
+                        "name_ku": "Kredi kartı ile Bağış"
                     },
                     {
-                        "name": "Banka Hesabından Havale/EFT/SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -146,19 +146,25 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Banka Hesabından Havale/EFT/SWIFT/Wise",
+                        "name_en": "Bank transfer (WIRE/EFT/SWIFT/WISE)",
+                        "name_ku": "Banka Hesabından Havale/EFT/SWIFT/Wise"
                     }
-                ]
-            }
+                ],
+                "text_tr": "Lütfen AFAD'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "text_en": "Please select how you would like to donate to AFAD.",
+                "text_ku": "Lütfen AFAD'a nasıl bağışta bulunmak istediğinizi seçin."
+            },
+            "name_tr": "AFAD",
+            "name_en": "AFAD - Disaster and Emergency Management Presidency",
+            "name_ku": "AFAD"
         },
         {
-            "name": "AKUT",
             "value": {
                 "type": "question",
-                "text": "Lütfen AKUT'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "SMS ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -168,10 +174,12 @@
                                 "number": "2930",
                                 "amount": "10"
                             }
-                        }
+                        },
+                        "name_tr": "SMS ile Bağış",
+                        "name_en": "Via SMS.",
+                        "name_ku": "SMS ile Bağış"
                     },
                     {
-                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -179,10 +187,12 @@
                                 "name": "AKUT",
                                 "url": "https://www.akut.org.tr/bagis-yap"
                             }
-                        }
+                        },
+                        "name_tr": "Kredi kartı ile Bağış",
+                        "name_en": "Via Credit/Debit Card.",
+                        "name_ku": "Kredi kartı ile Bağış"
                     },
                     {
-                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
                         "value": {
                             "type": "data",
                             "data": {
@@ -221,10 +231,12 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt İçi Banka Hesabından Havale/EFT",
+                        "name_en": "Bank transfer (SWIFT/WISE)",
+                        "name_ku": "Yurt İçi Banka Hesabından Havale/EFT"
                     },
                     {
-                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -265,19 +277,24 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt Dışı Banka Hesabından SWIFT/Wise",
+                        "name_ku": "Yurt Dışı Banka Hesabından SWIFT/Wise"
                     }
-                ]
-            }
+                ],
+                "text_tr": "Lütfen AKUT'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "text_en": "Please select how you would like to donate to AKUT.",
+                "text_ku": "Lütfen AKUT'a nasıl bağışta bulunmak istediğinizi seçin."
+            },
+            "name_tr": "AKUT",
+            "name_en": "AKUT - Search and Rescue Association",
+            "name_ku": "AKUT"
         },
         {
-            "name": "Kızılay",
             "value": {
                 "type": "question",
-                "text": "Lütfen Kızılay'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "SMS ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -287,10 +304,12 @@
                                 "number": "2868",
                                 "amount": "15"
                             }
-                        }
+                        },
+                        "name_tr": "SMS ile Bağış",
+                        "name_en": "Via SMS.",
+                        "name_ku": "SMS ile Bağış"
                     },
                     {
-                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -298,10 +317,12 @@
                                 "name": "Kızılay",
                                 "url": "https://www.kizilay.org.tr/Bagis/BagisYap/215/afet-acil-durum-bagisi"
                             }
-                        }
+                        },
+                        "name_tr": "Kredi kartı ile Bağış",
+                        "name_en": "Via Credit/Debit Card.",
+                        "name_ku": "Kredi kartı ile Bağış"
                     },
                     {
-                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
                         "value": {
                             "type": "data",
                             "data": {
@@ -315,10 +336,12 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt İçi Banka Hesabından Havale/EFT",
+                        "name_en": "Bank transfer (SWIFT/WISE)",
+                        "name_ku": "Yurt İçi Banka Hesabından Havale/EFT"
                     },
                     {
-                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -334,19 +357,24 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt Dışı Banka Hesabından SWIFT/Wise",
+                        "name_ku": "Yurt Dışı Banka Hesabından SWIFT/Wise"
                     }
-                ]
-            }
+                ],
+                "text_tr": "Lütfen Kızılay'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "text_en": "Please select how you would like to donate to Kizilay.",
+                "text_ku": "Lütfen Kızılay'a nasıl bağışta bulunmak istediğinizi seçin."
+            },
+            "name_tr": "Kızılay",
+            "name_en": "KIZILAY - Kizilay",
+            "name_ku": "Kızılay"
         },
         {
-            "name": "AHBAP",
             "value": {
                 "type": "question",
-                "text": "Lütfen AHBAP'a nasıl bağışta bulunmak istediğinizi seçin.",
                 "options": [
                     {
-                        "name": "Kredi kartı ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -354,10 +382,12 @@
                                 "name": "AHBAP",
                                 "url": "https://ahbap.org/bagis-kategorisi/5"
                             }
-                        }
+                        },
+                        "name_tr": "Kredi kartı ile Bağış",
+                        "name_en": "Via Credit/Debit Card.",
+                        "name_ku": "Kredi kartı ile Bağış"
                     },
                     {
-                        "name": "Kripto ile Bağış",
                         "value": {
                             "type": "data",
                             "data": {
@@ -374,10 +404,12 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Kripto ile Bağış",
+                        "name_en": "Cryptocurrency",
+                        "name_ku": "Kripto ile Bağış"
                     },
                     {
-                        "name": "Yurt İçi Banka Hesabından Havale/EFT",
                         "value": {
                             "type": "data",
                             "data": {
@@ -391,10 +423,12 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt İçi Banka Hesabından Havale/EFT",
+                        "name_en": "Bank transfer (SWIFT/WISE)",
+                        "name_ku": "Yurt İçi Banka Hesabından Havale/EFT"
                     },
                     {
-                        "name": "Yurt Dışı Banka Hesabından SWIFT/Wise",
                         "value": {
                             "type": "data",
                             "data": {
@@ -412,13 +446,20 @@
                                     }
                                 ]
                             }
-                        }
+                        },
+                        "name_tr": "Yurt Dışı Banka Hesabından SWIFT/Wise",
+                        "name_ku": "Yurt Dışı Banka Hesabından SWIFT/Wise"
                     }
-                ]
-            }
+                ],
+                "text_tr": "Lütfen AHBAP'a nasıl bağışta bulunmak istediğinizi seçin.",
+                "text_en": "Please select how you would like to donate to AHBAP.",
+                "text_ku": "Lütfen AHBAP'a nasıl bağışta bulunmak istediğinizi seçin."
+            },
+            "name_tr": "AHBAP",
+            "name_en": "AHBAP - AHBAP Platform",
+            "name_ku": "AHBAP"
         },
         {
-            "name": "Kızıl Haç - Red Cross",
             "value": {
                 "type": "data",
                 "data": {
@@ -427,10 +468,12 @@
                     "name": "Kızıl Haç - Red Cross",
                     "url": "https://participate.roteskreuz.at/erdbeben-in-syrien-und-tuerkei/"
                 }
-            }
+            },
+            "name_tr": "Kızıl Haç - Red Cross",
+            "name_en": "KIZIL HAC - Kizil Hac",
+            "name_ku": "Kızıl Haç - Red Cross"
         },
         {
-            "name": "Turkish Philantrophy Funds",
             "value": {
                 "type": "data",
                 "data": {
@@ -439,7 +482,14 @@
                     "name": "Turkish Philantrophy Funds",
                     "url": "https://donate.tpfund.org/campaign/tpf-tuerkiye-earthquake/c465112"
                 }
-            }
+            },
+            "name_tr": "Turkish Philantrophy Funds",
+            "name_en": "TURKISH PHILANTROPHY FUNDS - Turkish Philantrophy Funds",
+            "name_ku": "Turkish Philantrophy Funds"
         }
-    ]
+    ],
+    "text_tr": "Lütfen bağışta bulunmak istediğiniz kurumu seçiniz.",
+    "text_en": "Please select the organization you would like to donate.",
+    "text_ku": "Bo Kerema Xwe Saziyek Bo Bexşînê Hilbijêrin.",
+    "text_ar": "الرجاء تحديد المنظمة التي ترغب في التبرع لها"
 }
