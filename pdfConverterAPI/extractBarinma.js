@@ -1,8 +1,6 @@
 
-const { getTime } = require("./docFunctions");
-
-const xOffset = 20;
-const yOffset = 60;
+const { getDateAndTime } = require("./docFunctions");
+const { titleFontSize, textFontSize, xStart, yStart, yRange, smallTextSize} = require("./constants");
 
 const trProvincesForAccommodations = ( data ) => {
     const provinces = {}
@@ -47,7 +45,7 @@ const kuProvincesForAccommodations = ( data ) => {
 }
 
 const accommodationAcordingToProvince = ( data, provinceIndex) => {
-    const accommadations = data.options[0].value.options[provinceIndex].value_tr.data.items;
+    const accommadations = data.options[0].value.options[provinceIndex].value.data.items;
     accommadations.filter(item => {
         return item.is_validated = true;
     })
@@ -55,17 +53,13 @@ const accommodationAcordingToProvince = ( data, provinceIndex) => {
     const pureData = []
 
     for(let i = 0; i < accommadations.length; i += 1) {
-        pureData.push({name: accommadations[i].name, phone: accommadations[i].phone_number});
+        pureData.push({name: accommadations[i].name, phone: accommadations[i].phone_number, date: accommadations[i].validation_date});
     }
     return pureData;
 }
 
 const createAccomodationPDF = (data, doc, city) => {
-
     doc.addPage()
-    const xStart = 16;
-    const yStart = 10;
-    const yRange = 12;
 
     let x = xStart;
     let y = yStart;
@@ -82,22 +76,22 @@ const createAccomodationPDF = (data, doc, city) => {
 
         const pageHeight = doc.internal.pageSize.height
 
-        doc.setFontSize(8)
+        doc.setFontSize(textFontSize)
         if (y >= pageHeight) {
             doc.addPage();
             isNewPage = true
         }
         if (isNewPage) {
             doc.setFont('Roboto-Black', 'normal');
-            doc.setFontSize(18)
-            doc.text(`${city} - Geçici Konaklama Yerleri`, 16, 24)
+            doc.setFontSize(titleFontSize)
+            doc.text(`${city} - Geçici Konaklama Yerleri`, x, yRange * 2)
             doc.setFont('Roboto-Regular', 'normal');     
-            doc.setFontSize(8)   
-            doc.text(`Dosyanın oluşturulma tarihi: ${ getTime() }`, 16, 36)
+            doc.setFontSize(textFontSize)   
+            doc.text(`Dosyanın oluşturulma tarihi: ${ getDateAndTime() }`, x, yRange * 3)
             isNewPage = false
             y = 60
         }
-        doc.setFontSize(10)
+        doc.setFontSize(textFontSize)
 
         const name = place.name.split(" ");
         for(let i = 0; i < name.length; i += 1) {
@@ -105,10 +99,10 @@ const createAccomodationPDF = (data, doc, city) => {
         }
 
         doc.text("\u2022 " + `${name.join(' ')}`, x, y);
-        if(place.phone) {
+        if(place.date) {
             y += 8;
-            doc.setFontSize(8)
-            doc.text(`${place.phone}`, x + 7, y);
+            doc.setFontSize(smallTextSize)
+            doc.text(`Geçerli olduğu tarih: ${place.date}`, x + 7, y);
         }
 
     })

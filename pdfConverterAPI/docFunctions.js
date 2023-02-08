@@ -1,17 +1,13 @@
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
+const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
+const moment = require('moment');
+require('moment/locale/fr.js');
 
-const getTime = () => {
-    const date = new Date()
-    let hours = date.getHours()
-    let minutes = date.getMinutes();
-
-    if (hours < 10) hours = "0" + hours;
-    if (minutes < 10) minutes = "0" + minutes;
-
-    return hours + ":" + minutes;
+const getDateAndTime = () => {
+    moment.locale('tr')
+    return moment().format('L') + ' - ' + moment().format('LT')
 }
-
 
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
@@ -33,5 +29,5 @@ const setFont = (doc, type) => {
 module.exports = {
     setFont,
     registerFont,
-    getTime
+    getDateAndTime
 }
