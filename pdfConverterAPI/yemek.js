@@ -95,15 +95,17 @@ const createMealPdf = (doc, allData, city) => {
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
             if(el.phone_number) {
-                doc.text(`\u2022 ${el.name} -- Telefon No: ${el.phone_number}`, 16, y)  
+                doc.text(`\u2022 ${el.name.trim()} -- Telefon No: ${el.phone_number}`, 16, y)  
             } else {
-                doc.text(`\u2022 ${el.name}`, 16, y)  
+                doc.text(`\u2022 ${el.name.trim()}`, 16, y)  
             }
             
             doc.setFontSize(smallTextSize)
             y += yRange * 0.8;
-            doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
-            y += yRange * 1.5
+            if( el. updated_at_time &&  el.updated_at_date) {
+                doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
+                y += yRange * 1.5
+            }
         });
         y += yRange
     } ) 
