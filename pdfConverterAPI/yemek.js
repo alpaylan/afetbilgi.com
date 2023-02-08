@@ -98,7 +98,7 @@ const createMealPdf = (doc, allData, city) => {
             doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
             y += yRange
         });
-        y += yRange * 2
+        y += yRange * 1.5
     } ) 
 
 
@@ -117,7 +117,7 @@ const convertToDate = (el) => {
     if (time[0] < 10) time[0] = '0' + time[0] 
     if (time[1] < 10) time[1] = '0' + time[1] 
 
-    return el.updated_at_date.split('/').join('.') + ' - ' + time.join('.');
+    return el.updated_at_date.split('/').join('.') + ' - ' + time.join(':');
 }
 
 //getSafeGatheringPlace("Malatya")
