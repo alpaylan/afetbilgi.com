@@ -3,7 +3,7 @@ name: Data upload (cronjob)
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/5 * * * *' # Run every 5 minutes
+    - cron:  '*/10 * * * *' # Run every 10 minutes
 
 jobs:
   deploy:
@@ -25,14 +25,12 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Prepare working dir
+      - name: Run parsers
         run: |
           cd data
           mkdir to_upload
           mkdir latest_datasets
 
-      - name: Run parsers
-        run: |
           python ./parsers/toplanma_parser.py > ./latest_datasets/toplanma.json
           python ./parsers/faydalilinkler_parser.py > ./latest_datasets/faydali_linkler.json
           python ./parsers/veteriner_parser.py > ./latest_datasets/veteriner.json
@@ -53,8 +51,8 @@ jobs:
 
       - name: Merge datasets
         run: |
-          python combine.py ./latest_datasets > to_upload/latest.json
-          gzip -9 -c to_upload/latest.json > "to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
+          python combine.py ./data/latest_datasets > ./data/to_upload/latest.json
+          gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
         # TODO: Change s3://cdn.afetbilgi.com/sazak-test-data to s3://cdn.afetbilgi.com
