@@ -4,6 +4,7 @@ const { createSafeGatheringPlacePDF } = require("./safeGatheringPlaces")
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { createAccomodationPDF } = require("./extractBarinma");
 const { setFont, registerFont } = require("./docFunctions");
+const { createMealPdf } = require("./yemek");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 
@@ -22,8 +23,11 @@ const createPDF = async () => {
 
     createAccomodationPDF(data, doc, 'Malatya');
 
-    const phoneData = getPhoneNumberData(data);
-    writePhoneNumbersToPdf(doc, phoneData)
+    //accomodation.createAccomodationPDF(data, doc, 'Malatya');
+
+    createMealPdf(doc, data, "Gaziantep")
+
+    writePhoneNumbersToPdf(doc, data)
 
     doc.save("out.pdf");
 }

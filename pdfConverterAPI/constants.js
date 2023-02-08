@@ -1,4 +1,5 @@
 const titleFontSize = 18;
+const smallTitleFontSize = 14;
 const textFontSize = 10;
 const smallTextSize = 8;
 
@@ -10,6 +11,7 @@ module.exports = {
     titleFontSize,
     textFontSize,
     smallTextSize,
+    smallTitleFontSize,
     yRange,
     xStart,
     yStart
