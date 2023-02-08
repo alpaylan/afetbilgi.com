@@ -45,21 +45,24 @@ const kuProvincesForAccommodations = ( data ) => {
 }
 
 const accommodationAcordingToProvince = ( data, provinceIndex) => {
-    const accommadations = data.options[0].value.options[provinceIndex].value.data.items;
-    accommadations.filter(item => {
+    const accommadations = data.options[0].value.options[provinceIndex]?.value.data.items;
+    accommadations?.filter(item => {
         return item.is_validated = true;
     })
 
     const pureData = []
 
-    for(let i = 0; i < accommadations.length; i += 1) {
+    for(let i = 0; i < accommadations?.length; i += 1) {
         pureData.push({name: accommadations[i].name, phone: accommadations[i].phone_number, date: accommadations[i].validation_date});
     }
     return pureData;
 }
 
 const createAccomodationPDF = (data, doc, city) => {
-    doc.addPage()
+
+    const xStart = 16;
+    const yStart = 10;
+    const yRange = 12;
 
     let x = xStart;
     let y = yStart;
@@ -71,6 +74,11 @@ const createAccomodationPDF = (data, doc, city) => {
     const provinces = trProvincesForAccommodations(data);
     const places = accommodationAcordingToProvince(data, provinces[fixedCity]);
 
+    if(places.length == 0) {
+        return;
+    }
+
+    doc.addPage()
     places.forEach((place) => {
         y += yRange 
 
