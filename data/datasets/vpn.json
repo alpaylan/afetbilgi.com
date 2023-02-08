@@ -2,7 +2,7 @@
     "type": "data",
     "data": {
         "dataType": "vpn",
-        "usefulLinks": [
+        "items": [
             {
                 "name": "ProtonVPN",
                 "url": "https://protonvpn.com/tr/"
