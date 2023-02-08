@@ -1,6 +1,6 @@
 const { jsPDF } = require("jspdf")
 const tempData = require("./data.json");
-const { getTime } = require("./docFunctions");
+const { getDateAndTime } = require("./docFunctions");
 const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
 
 const PHONE_DATA_TITLE = "Önemli Telefon Numaraları";
@@ -50,10 +50,9 @@ const writePhoneNumbersToPdf = (doc, data) => {
     
                 doc.setFont('Roboto-Regular', 'normal');
                 doc.setFontSize(textFontSize)
-                doc.text(`Dosyanın oluşturulma tarihi: ${ getTime() }`, x, yRange * 3)
+                doc.text(`Dosyanın oluşturulma tarihi: ${ getDateAndTime() }`, x, yRange * 3)
                 y = yStart
                 isNewPage = false
-              
             }
     
             doc.text("\u2022 " + value.name + " - " + value.phone_number, x, y);
