@@ -1,0 +1,17 @@
+{
+  "page.main.title": "Main Page",
+  "page.main.subtitle": "Please select a topic.",
+
+  "data.city_accommodation.title": "Places to stay in {{city}}",
+  "data.city_accommodation.subtitle": "All locations on this page have been verified by phone, except those mentioned in it. However, since this information can change within days or even hours, you are kindly requested to do your own research.",
+  "data.city_accommodation.explanation": "stated that it will provide accommodation for earthquake victims.",
+  "data.city_accommodation.not_validated": "Note: This information has not been verified by phone.",
+  "data.gathering.title": "Safe Gathering Areas in {{city}}",
+  "data.help_item.title": "Goods Help Areas in {{city}}",
+  "data.important_phone_numbers.title": "Important Phone Numbers",
+
+  "button.back": "Back",
+  "button.language": "Change Language",
+  "last_update": "Last Update",
+  "map": "Map"
+}

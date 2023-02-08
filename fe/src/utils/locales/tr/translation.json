@@ -1,0 +1,17 @@
+{
+  "page.main.title": "Ana Sayfa",
+  "page.main.subtitle": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
+
+  "data.city_accommodation.title": "{{city}} Şehrinde Kalacak Yerler",
+  "data.city_accommodation.subtitle": "Bu sayfada, içerisinde belirtilenler hariç tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
+  "data.city_accommodation.explanation": "depremzedelere kalacak yer sağlayacağını bildirdi.",
+  "data.city_accommodation.not_validated": "Not: Bu bilgiyi telefonla doğrulayamadık.",
+  "data.gathering.title": "{{city}} Şehrinde Güvenli Toplanma Alanları",
+  "data.help_item.title": "{{city}} Eşya Yardım Alanları",
+  "data.important_phone_numbers.title": "Önemli Telefon Numaraları",
+
+  "button.back": "Geri",
+  "button.language": "Dili Değiştir",
+  "last_update": "Son güncelleme",
+  "map": "Harita"
+}
