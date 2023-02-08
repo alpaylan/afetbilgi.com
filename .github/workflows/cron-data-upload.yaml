@@ -54,7 +54,7 @@ jobs:
 
       - name: Merge datasets
         run: |
-          python combine.py ./data/latest_datasets > ./data/to_upload/latest.json
+          python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
