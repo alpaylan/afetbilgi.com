@@ -1,0 +1,31 @@
+name: Data upload
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip" # caching pip dependencies
+
+      - run: pip install -r requirements.txt
+
+      - run: cd data && mkdir to_upload && python combine.py > to_upload/latest.json && cp to_upload/latest.json "to_upload/`date +%Y-%m-%d_%H-%M-%S`.json"
+
+      - name: Sync JSON files
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com

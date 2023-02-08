@@ -2,6 +2,12 @@ import sys
 import csv
 import json
 
+cities = {
+    'tr': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
+    'en': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
+    'ku': ['Adana- Edene', 'Gaziantep- Dîlok', 'Malatya- Meletî', 'Diyarbakır- Amed', 'Şanlıurfa- Riha', 'Kahramanmaraş- Gurgum', 'Osmaniye', 'Adıyaman- Semsûr', 'Kilis- Kilîs', 'Mardin- Mêrdîn', 'Hatay- Xetay', 'Amasya', 'Ankara- Enqere', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis- Bedlîs', 'Bursa', 'Denizli', 'Erzurum- Erzêrom', 'Eskişehir', 'Kayseri- Qeyserî', 'Kırklareli', 'Konya- Qonye', 'Kütahya', 'Mersin- Mêrsîn', 'Muğla', 'Muş- Mûş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas- Sêwas', 'Şırnak-Şirnex', 'Trabzon', 'Uşak', 'Van- Wan']
+}
+
 def index_or_none(l, i):
     if len(l) > i:
         return l[i]
@@ -29,13 +35,17 @@ def main():
             if is_first_row:
                 is_first_row = False
                 continue
-                
+
             if row[0] != city_name:
                 if city_name is None:
                     city_name = row[0]
                 else:
+                    city_name_2 = 'Kahramanmaraş' if city_name == 'K. Maraş' else city_name
+
                     options.append({
-                        "name": city_name,
+                        "name_tr": city_name_2,
+                        "name_en": cities['en'][cities['tr'].index(city_name_2)],
+                        "name_ku": cities['ku'][cities['tr'].index(city_name_2)],
                         "value": {
                             "type": "data",
                             "data": {
@@ -48,8 +58,8 @@ def main():
                     city_name = row[0]
 
                     parsed = []
-                
-            
+
+
             parsed.append({
                 "city": index_or_none(row, 0),
                 "name": index_or_none(row, 1),
@@ -61,7 +71,9 @@ def main():
 
     data = {
         "type": "question",
-        "text": "Hangi şehirde kalacak yer arıyorsunuz?",
+        "text_tr": "Hangi şehirde kalacak yer arıyorsunuz?",
+        "text_en": "In which city are you looking for temporary accommodation?",
+        "text_ku": "Hûn li Kîjan Bajarî Cihên Lêhihewinê yên Demkî Digerin?",
         "autocompleteHint": "Şehir",
         "options": options
     }

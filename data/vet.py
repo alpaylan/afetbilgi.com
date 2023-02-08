@@ -2,6 +2,11 @@
 import pandas as pd
 import json
 
+city_map = {
+    'tr': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
+    'en': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
+    'ku': ['Adana- Edene', 'Gaziantep- Dîlok', 'Malatya- Meletî', 'Diyarbakır- Amed', 'Şanlıurfa- Riha', 'Kahramanmaraş- Gurgum', 'Osmaniye', 'Adıyaman- Semsûr', 'Kilis- Kilîs', 'Mardin- Mêrdîn', 'Hatay- Xetay', 'Amasya', 'Ankara- Enqere', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis- Bedlîs', 'Bursa', 'Denizli', 'Erzurum- Erzêrom', 'Eskişehir', 'Kayseri- Qeyserî', 'Kırklareli', 'Konya- Qonye', 'Kütahya', 'Mersin- Mêrsîn', 'Muğla', 'Muş- Mûş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas- Sêwas', 'Şırnak-Şirnex', 'Trabzon', 'Uşak', 'Van- Wan']
+}
 
 def todict(obj, classkey=None):
     if isinstance(obj, dict):
@@ -14,8 +19,8 @@ def todict(obj, classkey=None):
     elif hasattr(obj, "__iter__") and not isinstance(obj, str):
         return [todict(v, classkey) for v in obj]
     elif hasattr(obj, "__dict__"):
-        data = dict([(key, todict(value, classkey)) 
-            for key, value in obj.__dict__.items() 
+        data = dict([(key, todict(value, classkey))
+            for key, value in obj.__dict__.items()
             if not callable(value) and not key.startswith('_')])
         if classkey is not None and hasattr(obj, "__class__"):
             data[classkey] = obj.__class__.__name__
@@ -31,7 +36,7 @@ if __name__ == "__main__":
     sheet_name = "Veterinerler"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "veteriner.json"
+    json_name = "datasets/veteriner.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     print(df)
@@ -49,7 +54,10 @@ if __name__ == "__main__":
         "type": "question",
         "text": "Hangi şehirde veteriner arıyorsunuz?",
         "options": [
-            {"name": city, "value": None} for city in cities
+            {
+                "name": city,
+                "value": None,
+            } for city in cities
         ]
     }
 
@@ -62,6 +70,12 @@ if __name__ == "__main__":
 
         for option in json_obj['options']:
             if option['name'] == city:
+                city_name = city.strip()
+
+                option['name_tr'] = city_map['tr'][city_map['tr'].index(city_name)]
+                option['name_en'] = city_map['en'][city_map['tr'].index(city_name)]
+                option['name_ku'] = city_map['ku'][city_map['tr'].index(city_name)]
+
                 option['value'] = {
                     "type": "data",
                     "data": {
@@ -70,6 +84,10 @@ if __name__ == "__main__":
                         "vets": city_dict
                     }
                 }
+                continue
+
+    for option in json_obj['options']:
+        del option['name']
 
     with open(json_name, "w", encoding="utf-8") as f:
         json.dump(json_obj, f, ensure_ascii=False, indent=4)
