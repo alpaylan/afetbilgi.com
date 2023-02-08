@@ -5,11 +5,11 @@ const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaral
 const { createAccomodationPDF } = require("./extractBarinma");
 const { setFont, registerFont } = require("./docFunctions");
 const { createMealPdf } = require("./yemek");
+const { createCoverPage } = require("./coverPage");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 
 const createPDF = async () => {
-
     const doc = new jsPDF({
         orientation: "p",
         unit: "px",
@@ -18,13 +18,12 @@ const createPDF = async () => {
     registerFont(doc)
 
     const data = await fetchData()
-
- 
     let cityName = "Adana"
+    
+    createCoverPage(doc, cityName)
     createSafeGatheringPlacePDF(doc, data, cityName)
     createAccomodationPDF(data, doc, cityName);
     createMealPdf(doc, data, cityName)
-
 
     writePhoneNumbersToPdf(doc, data)
 

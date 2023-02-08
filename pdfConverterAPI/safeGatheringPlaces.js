@@ -24,7 +24,7 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     const cityName = cityObj?.name_tr
 
     let isNewPage = true
-    doc.setFontSize(8)
+    doc.setFontSize(textFontSize)
     cityObj?.value.data.items.forEach((el, index) => {
         if (y >= pageHeight) {
             doc.addPage();

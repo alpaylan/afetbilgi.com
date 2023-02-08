@@ -1,3 +1,5 @@
+const coverTitleFontSize = 54;
+
 const titleFontSize = 18;
 const smallTitleFontSize = 14;
 const textFontSize = 10;
@@ -21,6 +23,7 @@ const affectedCities = [
 ];
 
 module.exports = {
+    coverTitleFontSize,
     titleFontSize,
     textFontSize,
     smallTextSize,
