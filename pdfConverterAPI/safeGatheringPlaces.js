@@ -1,10 +1,10 @@
-const { setFont, registerFont, getDateAndTime } = require("./docFunctions");
-const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
+const { setFont, registerFont, getDateAndTime, slug } = require("./docFunctions");
+const { titleFontSize, textFontSize, xStart, yStart, yRange, pageStartText} = require("./constants");
 
 // gets safe gathering place data of given city
 const getSafeGatheringPlace = (data, city) => {
     const safeGatheringPlaceData = data.options.filter(op => op.name_tr == "Güvenli Toplanma Alanları")
-    const cityData = safeGatheringPlaceData[0].value.options.filter(op => op.name_tr == city)
+    const cityData = safeGatheringPlaceData[0].value.options.filter(op => slug( op.name_tr) == slug(city) )
     return cityData[0];
 }
 
@@ -37,7 +37,7 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
 
             setFont(doc, "regular")
             doc.setFontSize(textFontSize)
-            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, x, yRange * 3)
+            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}` + pageStartText, x, yRange * 3)
             y = yStart
             isNewPage = false
         }

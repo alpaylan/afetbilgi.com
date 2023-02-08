@@ -22,6 +22,8 @@ const affectedCities = [
     'Adana'
 ];
 
+const pageStartText = " Bilgiler güncel olmayabilir. Güncel bilgi için afetbilgi.com ziyaret edin."
+
 module.exports = {
     coverTitleFontSize,
     titleFontSize,
@@ -31,5 +33,6 @@ module.exports = {
     yRange,
     xStart,
     yStart,
-    affectedCities
+    affectedCities,
+    pageStartText,
 }
