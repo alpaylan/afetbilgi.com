@@ -143,3 +143,16 @@ export interface StemCellDataItem {
   address: string;
   phone: string;
 }
+
+export interface FoodDistributionDataNode extends DataNode {
+  city: string;
+  county: string;
+  items: {
+          name: string;
+          maps_url?: string;
+          url?: string;
+          phone_number?: string;
+          updated_at_date: string;
+          updated_at_time: string;
+      }[];
+}
