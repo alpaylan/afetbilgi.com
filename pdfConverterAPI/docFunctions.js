@@ -12,7 +12,6 @@ const getTime = () => {
     return hours + ":" + minutes;
 }
 
-
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
     doc.addFileToVFS("./fonts/Roboto-Regular.ttf", regularFont.font);

@@ -1,8 +1,7 @@
 const { jsPDF } = require("jspdf")
 const tempData = require("./data.json");
 const { getTime } = require("./docFunctions");
-
-
+const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
 
 const PHONE_DATA_TITLE = "Önemli Telefon Numaraları";
 
@@ -27,61 +26,45 @@ const getPhoneNumberData = (data) => {
 const writePhoneNumbersToPdf = (doc, data) => {
     //const doc = new jsPDF();
     doc.addPage()
-    const xStart = 16;
-    const xEnd = 160;
-    const yStart = 10;
-    const xRange = 50;
-    const yRange = 12;
 
-    const phoneRangeY = 10;
     let x = xStart;
     let y = yStart;
     let isNewPage = true
     //tempData.options[4].value.data.phones.forEach
     data.forEach
     ( (value, index) => {
-
-      
         y += yRange 
 
         const pageHeight = doc.internal.pageSize.height
 
-        doc.setFontSize(8)
+        doc.setFontSize(textFontSize)
             if (y >= pageHeight) {
-                
                 doc.addPage();
                 isNewPage = true
             }
+
             if (isNewPage) {
                 doc.setFont('Roboto-Black', 'normal');
-                doc.setFontSize(18)
-                doc.text(`Önemli Telefon Numaraları`, 16, 24)
+                doc.setFontSize(titleFontSize)
+                doc.text(`Önemli Telefon Numaraları`, x, yRange * 2)
     
                 doc.setFont('Roboto-Regular', 'normal');
-                doc.setFontSize(8)
-                doc.text(`Dosyanın oluşturulma tarihi: ${ getTime() }`, 16, 36)
-                y = 60
+                doc.setFontSize(textFontSize)
+                doc.text(`Dosyanın oluşturulma tarihi: ${ getTime() }`, x, yRange * 3)
+                y = yStart
                 isNewPage = false
               
             }
     
-            doc.setFontSize(8)
             doc.text("\u2022 " + value.name + " - " + value.phone_number, x, y);
       
-
-
-
         //let phone = doc.getTextDimensions(value.phone_number);
-        
         //let finalXP = x - phone.w/2
-
-
         //doc.text(value.phone_number, finalXP, y + phoneRangeY);
-
     } );
 }
 
 module.exports = {
-getPhoneNumberData,
-writePhoneNumbersToPdf,
+    getPhoneNumberData,
+    writePhoneNumbersToPdf,
 }
