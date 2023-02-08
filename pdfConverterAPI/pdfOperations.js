@@ -1,6 +1,7 @@
 const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf")
-const myFont = require("./fonts/Roboto-Black-normal")
+const myFont = require("./fonts/Roboto-Black-normal");
+const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.1.json";
 
@@ -12,11 +13,14 @@ const setFont = (doc) => {
 
 const createPDF = async () => {
     const doc = new jsPDF()
+
     const data = await fetchData();
-
     setFont(doc)
+//console.log(data)
+doc.text("bçşğüa", 10, 10)
+    const phoneData = getPhoneNumberData(data);
+    writePhoneNumbersToPdf(doc, phoneData)
 
-    doc.text("bçşğüa", 10, 10)
     doc.save("b.pdf")
 
 }
