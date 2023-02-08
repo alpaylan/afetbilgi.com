@@ -156,4 +156,3 @@ export interface FoodDistributionDataNode extends DataNode {
           updated_at_time: string;
       }[];
 }
-
