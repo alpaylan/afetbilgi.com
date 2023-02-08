@@ -25,7 +25,7 @@ const createPDF = async () => {
 
     setFont(doc, "regular")
 
-    //accomodation.createAccomodationPDF(data, doc, 'Malatya');
+    accomodation.createAccomodationPDF(data, doc, 'Malatya');
 
     const phoneData = getPhoneNumberData(data);
     writePhoneNumbersToPdf(doc, phoneData)

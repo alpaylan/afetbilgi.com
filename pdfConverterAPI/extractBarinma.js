@@ -47,7 +47,7 @@ const kuProvincesForAccommodations = ( data ) => {
 }
 
 const accommodationAcordingToProvince = ( data, provinceIndex) => {
-    const accommadations = data.options[0].value.options[provinceIndex].value_tr.data.items;
+    const accommadations = data.options[0].value.options[provinceIndex].value.data.items;
     accommadations.filter(item => {
         return item.is_validated = true;
     })
@@ -55,7 +55,7 @@ const accommodationAcordingToProvince = ( data, provinceIndex) => {
     const pureData = []
 
     for(let i = 0; i < accommadations.length; i += 1) {
-        pureData.push({name: accommadations[i].name, phone: accommadations[i].phone_number});
+        pureData.push({name: accommadations[i].name, phone: accommadations[i].phone_number, date: accommadations[i].validation_date});
     }
     return pureData;
 }
@@ -105,10 +105,10 @@ const createAccomodationPDF = (data, doc, city) => {
         }
 
         doc.text("\u2022 " + `${name.join(' ')}`, x, y);
-        if(place.phone) {
+        if(place.date) {
             y += 8;
             doc.setFontSize(8)
-            doc.text(`${place.phone}`, x + 7, y);
+            doc.text(`Geçerli olduğu tarih: ${place.date}`, x + 7, y);
         }
 
     })
