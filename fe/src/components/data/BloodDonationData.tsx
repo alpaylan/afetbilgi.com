@@ -21,6 +21,17 @@ export default function BloodDonationData({
         <ListItem>
           {t('in_charge')}: {value.head} - {value.cell_phone_number}
         </ListItem>
+        {value.address && (
+          <ListItem>
+            <a
+              href={`https://maps.google.com/?q=${value.address
+                .replace('(', '')
+                .replace(')', '')} ${value.city}`}
+            >
+              Konum
+            </a>
+          </ListItem>
+        )}
       </List>
     </Paper>
   );
