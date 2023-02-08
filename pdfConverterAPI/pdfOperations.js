@@ -6,7 +6,7 @@ const { createSafeGatheringPlacePDF } = require("./safeGatheringPlaces")
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
-const { setFont } = require("./docFunctions");
+const { setFont, registerFont } = require("./docFunctions");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 const myFont = require("./fonts/Roboto-Black-normal");
@@ -20,11 +20,12 @@ const createPDF = async () => {
         format: "a4"
     })
     const data = await fetchData();
-    createSafeGatheringPlacePDF(doc, data, "Malatya")
+    //createSafeGatheringPlacePDF(doc, data, "Malatya")
 
+    registerFont(doc)
     setFont(doc, "regular")
 
-    accomodation.createAccomodationPDF(data, doc, 'Malatya');
+    //accomodation.createAccomodationPDF(data, doc, 'Malatya');
 
     const phoneData = getPhoneNumberData(data);
     writePhoneNumbersToPdf(doc, phoneData)
