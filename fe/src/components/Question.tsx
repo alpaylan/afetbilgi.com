@@ -11,6 +11,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useQuestionData } from '../hooks';
 import { TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
+import UsefulLinksData from './data/UsefulLinksdata';
 
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
@@ -114,6 +115,16 @@ export default function Question({ paths }: { paths: string[] }) {
               </Button>
             ))
           )}
+          {selectedNode.externalData &&
+            selectedNode.externalData.usefulLinks?.length > 0 && (
+              <Box width='100%' mt={8}>
+                <Typography variant='h4'>
+                  {selectedNode.externalData?.[`text_${i18n.language}`] ||
+                    selectedNode.externalData?.text}
+                </Typography>
+                <UsefulLinksData value={selectedNode.externalData} noTitle />
+              </Box>
+            )}
         </Box>
       </Box>
     </Box>

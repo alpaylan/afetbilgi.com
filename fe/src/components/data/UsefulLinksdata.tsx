@@ -54,18 +54,23 @@ const UsefulLinksLanguageHelper = ({
 
 export default function UsefulLinksData({
   value,
+  noTitle,
 }: {
   value: UsefulLinksDataNode;
+  noTitle?: boolean;
 }) {
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>{t('data.important_web_sites.title')}</h3>
+      {!noTitle && (
+        <>
+          <h3>{t('data.important_web_sites.title')}</h3>
 
-      <p>
-        <b>{t('data.important_web_sites.subtitle')}</b>
-      </p>
-
+          <p>
+            <b>{t('data.important_web_sites.subtitle')}</b>
+          </p>
+        </>
+      )}
       {value.usefulLinks.map((item, i) => (
         <UsefulLinksLanguageHelper key={i} item={item} index={i} />
       ))}
