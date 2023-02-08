@@ -1,4 +1,4 @@
-name: Data upload
+name: Data upload (cronjob)
 
 on:
   schedule:
