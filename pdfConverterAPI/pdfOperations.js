@@ -5,7 +5,7 @@ const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaral
 
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.1.json?v=1";
 
-const createPDF = () => {
+const createPDF = async () => {
     const doc = new jsPDF()
 
     const data = await fetchData();
