@@ -88,7 +88,11 @@ export interface CreditCardNode extends DataNode {
 
 export interface GatheringDataNode extends DataNode {
   city: string;
-  items: string[];
+  items: {
+    name: string;
+    url: string;
+    source: string;
+  }[];
 }
 
 export interface HelpItem {

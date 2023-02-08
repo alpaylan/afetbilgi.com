@@ -35,7 +35,7 @@ def main():
                         "value": {
                             "type": "data",
                             "data": {
-                                "dataType": "gathering-list",
+                                "dataType": "new-gathering-list",
                                 "items": items
                             }
                         }
@@ -62,7 +62,7 @@ def main():
                 "value": {
                     "type": "data",
                     "data": {
-                        "dataType": "gathering-list",
+                        "dataType": "new-gathering-list",
                         "items": items
                     }
                 }
@@ -77,7 +77,7 @@ def main():
         "text_ku": "Hûn Li Kîjan Bajarî Cihên Ewle Bo Kombûnê Digerin?",
         "text_ar": "في أي مدينة تبحث عن مناطق تجمع الأمنة"
     }
-            
+
     with open(json_name, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 

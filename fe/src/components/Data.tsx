@@ -46,7 +46,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
       return <URLData value={dataNode.data as any} />;
     }
 
-    if (dataNode.data.dataType === 'gathering-list') {
+    if (dataNode.data.dataType === 'new-gathering-list') {
       return <GatheringData value={dataNode.data as any} />;
     }
 
