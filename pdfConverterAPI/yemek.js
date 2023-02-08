@@ -1,4 +1,4 @@
-const { setFont, getDateAndTime } = require("./docFunctions");
+const { setFont, getDateAndTime, slug } = require("./docFunctions");
 const tempData = require("./data.json");
 const { smallTextSize, textFontSize, titleFontSize, xStart, yStart, yRange, smallTitleFontSize } = require("./constants");
 
@@ -25,7 +25,7 @@ const getMealData = (data) => {
 const getCityData = (data, city) => {
     let output;
     data.value.options.forEach( value => {
-        if(value.name == city) {
+        if(slug(value.name) == slug(city)) {
             output = value.value.options;
         }
     } )

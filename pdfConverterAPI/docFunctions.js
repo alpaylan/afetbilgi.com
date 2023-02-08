@@ -2,6 +2,7 @@ const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
 const moment = require('moment');
+const { default: slugify } = require("slugify");
 require('moment/locale/fr.js');
 
 const getDateAndTime = () => {
@@ -26,8 +27,17 @@ const setFont = (doc, type) => {
     }
 }
 
+const slug = (text) => {
+    return slugify(text, {
+        trim: true         // trim leading and trailing replacement chars, defaults to `true`
+      })
+}
+
+
 module.exports = {
     setFont,
     registerFont,
-    getDateAndTime
+    getDateAndTime,
+    slug,
+
 }

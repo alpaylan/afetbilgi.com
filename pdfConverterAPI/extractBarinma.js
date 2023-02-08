@@ -1,18 +1,19 @@
 
-const { getDateAndTime } = require("./docFunctions");
+const { getDateAndTime, slug } = require("./docFunctions");
 const { titleFontSize, textFontSize, xStart, yStart, yRange, smallTextSize} = require("./constants");
 
 const trProvincesForAccommodations = ( data ) => {
     const provinces = {}
     const extractedData = data.options[0].value.options;
     let index = 0;
-
+    
     extractedData.map(option => {
         if(!(option.name_tr in provinces)) {
-            provinces[option.name_tr] = index;
+            provinces[slug(option.name_tr)] = index;
             index += 1;
         }
     })
+
     return provinces;
 }
 
@@ -72,7 +73,7 @@ const createAccomodationPDF = (data, doc, city) => {
 
 
     const provinces = trProvincesForAccommodations(data);
-    const places = accommodationAcordingToProvince(data, provinces[fixedCity]);
+    const places = accommodationAcordingToProvince(data, provinces[slug(fixedCity)]);
 
     if(places.length == 0) {
         return;

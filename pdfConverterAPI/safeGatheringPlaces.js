@@ -1,10 +1,10 @@
-const { setFont, registerFont, getDateAndTime } = require("./docFunctions");
+const { setFont, registerFont, getDateAndTime, slug } = require("./docFunctions");
 const { titleFontSize, textFontSize, xStart, yStart, yRange} = require("./constants");
 
 // gets safe gathering place data of given city
 const getSafeGatheringPlace = (data, city) => {
     const safeGatheringPlaceData = data.options.filter(op => op.name_tr == "Güvenli Toplanma Alanları")
-    const cityData = safeGatheringPlaceData[0].value.options.filter(op => op.name_tr == city)
+    const cityData = safeGatheringPlaceData[0].value.options.filter(op => slug( op.name_tr) == slug(city) )
     return cityData[0];
 }
 
