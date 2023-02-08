@@ -43,7 +43,7 @@ export default function CityAccommodation({
           )}
           {item.phone_number && (
             <p>
-              Detaylı bilgi için{' '}
+              {t('data.phone_number.link_explanation_p1')}{' '}
               <b>
                 <a
                   href={`tel:+90${item.phone_number
@@ -53,7 +53,7 @@ export default function CityAccommodation({
                   {item.phone_number}
                 </a>
               </b>
-              'i arayabilirsiniz.
+              {t('data.phone_number.link_explanation_p2')}{' '}
             </p>
           )}
           {!item.is_validated && (
