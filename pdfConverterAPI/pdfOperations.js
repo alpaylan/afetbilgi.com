@@ -11,13 +11,6 @@ const { setFont, registerFont, getTime } = require("./docFunctions");
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
 const myFont = require("./fonts/Roboto-Black-normal");
 
-const registerFont = (doc) => {
-    doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
-    doc.addFileToVFS("./fonts/Roboto-Regular.ttf", regularFont.font);
-    doc.addFont("./fonts/Roboto-Black.ttf", "Roboto-Black", "normal");
-    doc.addFont("./fonts/Roboto-Regular.ttf", "Roboto-Regular", "normal");
-    doc.setFont('Roboto-Regular', 'normal');
-}
 
 const createPDF = async () => {
 
