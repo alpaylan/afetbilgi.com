@@ -1,5 +1,6 @@
-const { setFont, getTime } = require("./docFunctions");
-const tempData = require("./data.json")
+const { setFont, getDateAndTime } = require("./docFunctions");
+const tempData = require("./data.json");
+const { smallTextSize, textFontSize, titleFontSize } = require("./constants");
 
 const MEAL_DATA_TITLE = "Yemek"
 
@@ -44,14 +45,7 @@ const createMealPdf = (doc, allData, city) => {
     console.log("test")
     console.log(cityData);
 
-    setFont(doc, "bold")
-    doc.setFontSize(18)
-    doc.text(`${city} - Güvenli Toplanma Alanları`, 16, 24)
-
-    setFont(doc, "regular")
-    doc.setFontSize(8)
-    doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
-
+    doc.addPage();
     let isNewPage = true
     let y = 60
     doc.setFontSize(8)
@@ -71,13 +65,13 @@ const createMealPdf = (doc, allData, city) => {
 
             setFont(doc, "regular")
             doc.setFontSize(8)
-            doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
+            doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, 16, 36)
             y = 60
             isNewPage = false
         }
 
         setFont(doc, "bold")
-
+        doc.setFontSize(titleFontSize)
         doc.text(value.name, 16, y)
         y += 18
 console.log(value)
@@ -93,14 +87,18 @@ console.log(value)
     
                 setFont(doc, "regular")
                 doc.setFontSize(8)
-                doc.text(`Dosyanın oluşturulma tarihi: ${getTime()}`, 16, 36)
+                doc.text(`Dosyanın oluşturulma tarihi: ${getDateAndTime()}`, 16, 36)
                 y = 60
                 isNewPage = false
             }
 
 
             setFont(doc, "regular")
+            doc.setFontSize(textFontSize)
             doc.text(`\u2022 ${el.name}`, 16, y)  
+            doc.setFontSize(smallTextSize)
+            y += 4;
+            //doc.text(`Geçerli olduğu tarih: ${convertToDate(el)}`, x + 7, y);
             y += 12
         });
 
@@ -108,6 +106,11 @@ console.log(value)
 
 
 }
+
+const convertToDate = (el) => {
+//TO-DO
+}
+
 //getSafeGatheringPlace("Malatya")
 
 module.exports = {

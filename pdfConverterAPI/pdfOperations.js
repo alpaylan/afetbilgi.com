@@ -4,6 +4,7 @@ const { createSafeGatheringPlacePDF } = require("./safeGatheringPlaces")
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { createAccomodationPDF } = require("./extractBarinma");
 const { setFont, registerFont } = require("./docFunctions");
+const { createMealPdf } = require("./yemek");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 
