@@ -10,6 +10,7 @@ data_points = [
   { 'name': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'path': 'faydali_linkler.json' },
   { 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'path': 'yazilar.json' },
   { 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'path': 'kokhucre.json' },
+  { 'name': 'Veterinerler', 'name_en': 'Veterinarians', 'path': 'veteriner.json' },
 ]
 
 result = {
