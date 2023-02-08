@@ -41,8 +41,6 @@ const createMealPdf = (doc, allData, city) => {
     const pageHeight = doc.internal.pageSize.height
 
     const cityData = getCityData(data, city)
-    console.log("test")
-    console.log(cityData);
 
     if(!cityData) {
         return;
@@ -76,7 +74,7 @@ const createMealPdf = (doc, allData, city) => {
         doc.setFontSize(smallTitleFontSize)
         doc.text(value.name, x, y)
         y += yRange
-        console.log(value)
+
         value.value.data.items.forEach((el, index) => {
             if (y >= pageHeight) {
                 doc.addPage();
@@ -116,12 +114,8 @@ const createMealPdf = (doc, allData, city) => {
 const convertToDate = (el) => {
     let time = (el.updated_at_time + '').split('.');
 
-    console.log(time[1])
-
     time[0] = parseInt(time[0])
     time[1] = time[1] ? parseInt(time[1]) : 0
-
-    console.log(time[1])
 
     if (time[0] < 10) time[0] = '0' + time[0] 
     if (time[1] < 10) time[1] = '0' + time[1] 
