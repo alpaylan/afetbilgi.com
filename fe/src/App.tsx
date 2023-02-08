@@ -1,101 +1,110 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import preval from 'preval.macro';
 
 import './App.css';
 
-import { Box, Button, Container, MenuItem, Select } from '@mui/material';
-
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import Waiting from './components/Waiting';
+import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+
+import LocalStorage from './utils/LocalStorage';
+import { Language } from './utils/types';
+import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
+import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
 }
 
-const buildTimestamp = preval`module.exports = new Date().getTime();`
+const buildTimestamp = preval`module.exports = new Date().getTime();`;
 const buildDate = new Date(buildTimestamp);
-const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(buildDate.getMonth() + 1)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(buildDate.getMinutes())}`;
+const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
+  buildDate.getMonth() + 1,
+)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(
+  buildDate.getMinutes(),
+)}`;
 
-function RootQuestion({ lang }: {lang: string}) {
+function RootQuestion() {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question lang={lang} paths={paths} />;
+  return <Question paths={paths} />;
 }
 
 const App = () => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { isLoading } = useQuestionData('', []);
+  const { isLoading } = useQuestionData([]);
 
-  const [lang, setLang] = useState('');
-
-  useEffect(() => {
-    const savedLang = window.localStorage.getItem('lang');
-
-    if (savedLang) {
-      setLang(savedLang);
-    } else {
-      setLang('tr');
-    }
-  }, []);
-
-  useEffect(() => {
-    if (lang) {
-      window.localStorage.setItem('lang', lang);
-    }
-  }, [lang]);
-
-  if (!lang) {
-    return (
-      <Box>
-        <Waiting open={isLoading} />
-      </Box>
+  const changeLanguageHandler = (selectedLanguage: Language) => {
+    i18n.changeLanguage(selectedLanguage);
+    LocalStorage.storeObject(
+      LocalStorage.LOCAL_STORAGE_LANGUAGE,
+      selectedLanguage,
     );
-  }
+  };
 
   return (
     <Box>
       <Waiting open={isLoading} />
 
-        <Box sx={{ mt: 3, textAlign: 'center', display: 'flex', flexFlow: 'row nowrap', justifyContent: 'center' }}>
-          {location.pathname !== '/' && location.pathname !== '/en' && (
-            <>
-              <Button sx={{ m: 1 }} size="large" onClick={() => navigate(location.pathname.startsWith('/en') ? '/en': '/')}>
-                {lang === 'en' ? 'MAIN PAGE' : 'ANA SAYFA'}
-              </Button>
+      <Box
+        sx={{
+          mt: 3,
+          textAlign: 'center',
+          display: 'flex',
+          flexFlow: 'row nowrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        {location.pathname !== '/' && location.pathname !== '/en' && (
+          <>
+            <Button
+              sx={{ m: 1 }}
+              size='large'
+              onClick={() =>
+                navigate(location.pathname.startsWith('/en') ? '/en' : '/')
+              }
+            >
+              {t('page.main.title')}
+            </Button>
 
-              <Button sx={{ m: 1 }} size="large" onClick={() => navigate(-1)}>
-                {lang === 'en' ? 'BACK' : 'GERİ'}
-              </Button>
-            </>
-          )}
+            <Button sx={{ m: 1 }} size='large' onClick={() => navigate(-1)}>
+              {t('button.back')}
+            </Button>
+          </>
+        )}
 
-          <Select
-            value={lang}
-            sx={{ m: 1 }}
-            size="small"
-            label="Language"
-            onChange={(event) => {
-              setLang(event.target.value);
-            }}
-          >
-            <MenuItem value={'tr'}>Türkçe</MenuItem>
-            <MenuItem value={'en'}>English</MenuItem>
-            {/* <MenuItem value={'ku'}>Kurmancî</MenuItem> */}
-          </Select>
-        </Box>
+        <Select
+          id='language-options-multiselect'
+          size='small'
+          sx={{ m: 1 }}
+          value={i18n.language}
+          label='Language'
+          onChange={(e) => changeLanguageHandler(e.target.value as Language)}
+        >
+          {LANGUAGES.map(({ key, name }) => (
+            <MenuItem key={key} value={key}>
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+      </Box>
 
       <Container sx={{ pt: '15vh' }}>
         <Routes>
-          <Route path="/*" element={<RootQuestion lang={lang} />} />
+          <Route path='/*' element={<RootQuestion />} />
         </Routes>
       </Container>
 
-      <Box sx={{ textAlign: 'center', p: 2 }}>Son güncelleme: {buildDateString}</Box>
+      <Box sx={{ textAlign: 'center', p: 2 }}>
+        {t('last_update')}: {buildDateString}
+      </Box>
     </Box>
   );
 };
