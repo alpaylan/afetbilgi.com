@@ -40,10 +40,12 @@ def main():
                 if city_name is None:
                     city_name = row[0]
                 else:
+                    city_name_2 = 'Kahramanmaraş' if city_name == 'K. Maraş' else city_name
+
                     options.append({
-                        "name_tr": city_name,
-                        "name_en": cities['en'][cities['tr'].index(city_name)],
-                        "name_ku": cities['ku'][cities['tr'].index(city_name)],
+                        "name_tr": city_name_2,
+                        "name_en": cities['en'][cities['tr'].index(city_name_2)],
+                        "name_ku": cities['ku'][cities['tr'].index(city_name_2)],
                         "value": {
                             "type": "data",
                             "data": {
