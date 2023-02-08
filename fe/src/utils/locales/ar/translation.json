@@ -31,5 +31,6 @@
   "city": "City",
   "district": "District",
   "region": "Region",
-  "location": "Location"
+  "location": "Location",
+  "details": "Details"
 }
