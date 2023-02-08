@@ -8,7 +8,7 @@ const regularFont = require("./fonts/Roboto-Regular-normal")
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
 const { setFont } = require("./docFunctions");
 
-const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
+const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 const myFont = require("./fonts/Roboto-Black-normal");
 
 
