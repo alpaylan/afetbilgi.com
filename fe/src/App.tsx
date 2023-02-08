@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import preval from 'preval.macro';
 
 import './App.css';
 
@@ -8,6 +9,14 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Waiting from './components/Waiting';
 import Question from './components/Question';
 import { useQuestionData } from './hooks';
+
+function padNumber(num: number) {
+  return num < 10 ? `0${num}` : num;
+}
+
+const buildTimestamp = preval`module.exports = new Date().getTime();`
+const buildDate = new Date(buildTimestamp);
+const buildDateString = `${padNumber(buildDate.getDay())}.${padNumber(buildDate.getMonth() + 1)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(buildDate.getMinutes())}`;
 
 function RootQuestion({ lang }: {lang: string}) {
   const location = useLocation();
@@ -85,6 +94,8 @@ const App = () => {
           <Route path="/*" element={<RootQuestion lang={lang} />} />
         </Routes>
       </Container>
+
+      <Box sx={{ textAlign: 'center', p: 2 }}>Son güncelleme: {buildDateString}</Box>
     </Box>
   );
 };
