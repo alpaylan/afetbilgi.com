@@ -159,3 +159,10 @@ export interface FoodDistributionDataNode extends DataNode {
   county: string;
   items: FoodDistribution[];
 }
+
+export interface VpnDataNode extends DataNode {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}

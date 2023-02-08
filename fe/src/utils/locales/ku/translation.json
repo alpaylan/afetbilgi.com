@@ -19,18 +19,22 @@
   "data.phone_number.link_explanation_p1": "You can call",
   "data.phone_number.link_explanation_p2": "for detailed information",
   "data_blood_donation": "Blood Donation Blood",
+  "data.vpn.title": "For internet connection issues you can use below VPNs",
+  "data.vpn.subtitle": "VPN allows you to access blocked sites.",
 
   "button.back": "Back",
   "button.language": "Change Language",
   "last_update": "Last Update",
+  "name": "Name",
   "map": "Map",
   "in_charge": "In Charge",
   "unit": "Unit",
-  "telephone":  "Telephone",
+  "telephone": "Telephone",
   "address": "Address",
   "city": "City",
   "district": "District",
   "region": "Region",
   "location": "Location",
-  "details": "Details"
+  "details": "Details",
+  "website": "Website"
 }

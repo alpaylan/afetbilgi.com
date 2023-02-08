@@ -1246,6 +1246,27 @@
             "name_en": "Edirne",
             "name_ku": "Edirne",
             "name_ar": "Edirne"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Kırıkkale",
+                    "items": [
+                        {
+                            "city": "Kırıkkale",
+                            "name": "Cumhuriyet meydanı",
+                            "url": "https://goo.gl/maps/fPPZThn8tBjAyduJ9",
+                            "phone_number": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Kırıkkale",
+            "name_en": "Kırıkkale",
+            "name_ku": "Kırıkkale",
+            "name_ar": "Kırıkkale"
         }
     ]
 }

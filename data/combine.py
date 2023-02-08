@@ -12,6 +12,7 @@ data_points = [
   { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'XZY', 'path': 'datasets/kokhucre.json' },
   { 'name_ar': 'بَيَاطير', 'name': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner', 'path': 'datasets/veteriner.json' },
   { 'name_ar': 'مواقع توصيل الطعام', 'name': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê', 'path': 'datasets/yemek.json' },
+  { 'name': 'VPN', 'path': 'datasets/vpn.json' },
 ]
 
 result = {
