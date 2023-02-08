@@ -22,5 +22,5 @@ export const LANGUAGES: { key: Language; name: string }[] = [
   { key: Language.TR, name: 'Türkçe' },
   { key: Language.EN, name: 'English' },
   { key: Language.KU, name: 'Kurdish' },
-  { key: Language.AR, name: 'Arabic' },
+  { key: Language.AR, name: 'العربية' },
 ];
