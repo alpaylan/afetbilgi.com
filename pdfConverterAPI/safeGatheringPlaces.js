@@ -19,9 +19,6 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
     if(!cityObj) {
         return;
     }
-    if(city != 'Adana') {
-        doc.addPage();
-    }
 
     const cityName = cityObj?.name_tr
 
