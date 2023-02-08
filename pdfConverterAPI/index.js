@@ -1,13 +1,22 @@
 require("dotenv").config()
-const express = require("express")
+const express = require("express");
+const { createAllInOnePDF, createForEachCityPDF } = require("./allDataToPDF");
 const app = express()
-const pdfOp = require("./pdfOperations")
+
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-    pdfOp.createPDF();
-    res.json({status: 200})
+app.get("/pdf-uret", (req, res) => {
+    try {
+        createAllInOnePDF()
+        createForEachCityPDF()
+        res.status(200).json({message:"Başarılı"})
+
+    } catch(e) {
+        res.status(500).json({message:"Hata"})
+    }
+
 }) 
+
 
 app.listen(PORT)
