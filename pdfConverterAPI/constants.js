@@ -7,6 +7,19 @@ const yRange = 12;
 const xStart = 16;
 const yStart = yRange * 5;
 
+const affectedCities = [
+    'Kahramanmaraş',
+    'Gaziantep',
+    'Malatya',
+    'Diyarbakır',
+    'Kilis',
+    'Şanlıurfa',
+    'Adıyaman',
+    'Hatay',
+    'Osmaniye',
+    'Adana'
+];
+
 module.exports = {
     titleFontSize,
     textFontSize,
@@ -14,5 +27,6 @@ module.exports = {
     smallTitleFontSize,
     yRange,
     xStart,
-    yStart
+    yStart,
+    affectedCities
 }
