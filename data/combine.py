@@ -3,7 +3,7 @@ import json
 data_points = [
   { 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'path': 'combined/barinma.json' },
   { 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'path': 'combined/toplanma.json' },
-  { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'combined/bagis.json' },
+#   { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'combined/bagis.json' },
   { 'name_tr': 'Eşya Bağışı İmkanları','name_en': 'Other Donation',  'path': 'combined/yardim_toplama_merkezleri.json' },
   { 'name_tr': 'Kızılay Kan Bağış Noktaları', 'name_en': 'Kızılay Blood Donation Places', 'path': 'combined/blood.json' },
   { 'name': 'Önemli Telefon Numaraları', 'path': 'combined/telefon.json' },
