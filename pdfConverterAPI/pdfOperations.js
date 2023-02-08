@@ -1,12 +1,15 @@
 const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf")
+const SGP = require("./safeGatheringPlaces")
+const accomodation = require('./extractBarinma')
 const { getSafeGatheringPlace } = require("./safeGatheringPlaces")
 const boldFont = require("./fonts/Roboto-Black-normal");
 const regularFont = require("./fonts/Roboto-Regular-normal")
 const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
-const { setFont, getTime } = require("./docFunctions");
+const { setFont, registerFont, getTime } = require("./docFunctions");
 
 const DATA_URL = "https://raw.githubusercontent.com/alpaylan/afetbilgi.com/main/data/all.combined.3.json";
+const myFont = require("./fonts/Roboto-Black-normal");
 
 const registerFont = (doc) => {
     doc.addFileToVFS("./fonts/Roboto-Black.ttf", boldFont.font);
@@ -17,6 +20,7 @@ const registerFont = (doc) => {
 }
 
 const createPDF = async () => {
+
     const doc = new jsPDF({
         orientation: "p",
         unit: "px",
@@ -27,10 +31,13 @@ const createPDF = async () => {
 
     setFont(doc, "regular")
 
+    accomodation.createAccomodationPDF(data, doc, 'Malatya');
+
     const phoneData = getPhoneNumberData(data);
     writePhoneNumbersToPdf(doc, phoneData)
 
     doc.save("out.pdf");
+
 }
 
 const createSafeGatheringPlacePDF = (doc, data, city) => {
@@ -71,8 +78,6 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
         doc.text(`\u2022 ${el}`, 16, y)  
         y += 12
     });
-
-    
 }
 
 //fetches data
@@ -86,5 +91,4 @@ createPDF()
 
 module.exports = {
     createPDF,
-    fetchData,
 }
