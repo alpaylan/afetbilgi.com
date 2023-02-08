@@ -11,6 +11,7 @@ data_points = [
   { 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'path': 'datasets/yazilar.json' },
   { 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'path': 'datasets/kokhucre.json' },
   { 'name': 'Veterinerler', 'name_en': 'Veterinarians', 'path': 'datasets/veteriner.json' },
+  { 'name': 'Yemek', 'name_en': 'Food', 'path': 'datasets/yemek.json' },
 ]
 
 result = {
