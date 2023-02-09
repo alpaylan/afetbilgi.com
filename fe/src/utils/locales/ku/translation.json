@@ -1,6 +1,9 @@
 {
   "page.main.title": "Malper",
   "page.main.subtitle": "Ji kerema xwe mijara ku hûn dixwazin agahdarî li ser bigirin hilbijêrin",
+  "page.about.title": "Der barê me de / Têkelî",
+  "page.about.body.1": "afetbilgi.com is a website prepared by a group of METU students and graduates to verify important information in the fight against the 6 February 2023 Pazarcık Earthquake and to deliver it to both disaster victims and those who want to help.",
+  "page.about.body.2": "The basic principles of the website, which is based on a completely human-made database, are accuracy, speed, and simplicity. When contacting us, we ask you to provide only confirmed information and to work with us to prevent the spread of false information.",
 
   "data.city_accommodation.title": "{{city}} cihên mayînê",
   "data.city_accommodation.subtitle": "Hemî cîhên li ser vê rûpelê bi têlefonê hatine verast kirin, ji bilî yên ku tê de hatine destnîşan kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî demjimêran de biguhere, ji kerema xwe lêkolîna xwe bikin",
@@ -31,7 +34,7 @@
   "data.vpn.title": "Hûn bo înternetê karin VPNên belaş yên li jêr bikar bînin",
   "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
 
-  "button.back": "paş  ",
+  "button.back": "paş",
   "button.language": "Ziman biguherîne",
   "button.google_maps": "Girêdana Google Mapsê ",
   "last_update": "nûvekirina dawîn",
@@ -46,5 +49,6 @@
   "region": "Herêm",
   "location": "Cîh",
   "details": " Hûrgilî",
-  "website": " Malper"
+  "website": " Malper",
+  "contact": "Têkelî"
 }
