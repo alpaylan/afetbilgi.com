@@ -1,8 +1,9 @@
-import { Box, Paper } from "@mui/material";
-import { FoodDistributionDataNode } from "../../interfaces/TreeNode";
+import { Box, Paper } from '@mui/material';
+import { TFunction } from 'i18next';
+import { useTranslation } from 'react-i18next';
+import { FoodDistributionDataNode } from '../../interfaces/TreeNode';
 
-
-const detailedInfo = (phone_number?: string, url?: string) => {
+const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
   if (!phone_number && !url) {
     return null;
   }
@@ -10,44 +11,87 @@ const detailedInfo = (phone_number?: string, url?: string) => {
   if (!url) {
     return (
       <div>
-        <p>Detaylı bilgi için <b><a href={`tel:+90${phone_number?.replace(/^0/, "").replace(/ /g, "")}`}>{phone_number}</a></b>'i arayabilirsiniz.</p>
+        <p>
+          {t('data.food_distribution.detail_main')}
+          <b>
+            <a
+              href={`tel:+90${phone_number
+                ?.replace(/^0/, '')
+                .replace(/ /g, '')}`}
+            >
+              {phone_number}
+            </a>
+          </b>
+          {t('data.food_distribution.detail_call')}
+        </p>
       </div>
-    )
+    );
   }
 
   if (!phone_number) {
     return (
       <div>
-        <p>Detaylı bilgi için <a href={url} target="_blank" rel="noreferrer">bu web sitesini</a> inceleyebilirsiniz</p>
+        <p>
+          {t('data.food_distribution.detail_main')}
+          <a href={url} target='_blank' rel='noreferrer'>
+            {t('data.food_distribution.detail_website')}
+          </a>{' '}
+          {t('data.food_distribution.detail_inspect')}
+        </p>
       </div>
-    )
+    );
   }
 
-  return (<p>
-    Detaylı bilgi için <b><a href={`tel:+90${phone_number.replace(/^0/, "").replace(/ /g, "")}`}>{phone_number}</a></b>'i arayabilirsiniz ya da <a href={url} target="_blank" rel="noreferrer">bu web sitesini</a> inceleyebilirsiniz.
-  </p>)
-}
+  return (
+    <p>
+      {t('data.food_distribution.detail_main')}
+      <b>
+        <a href={`tel:+90${phone_number.replace(/^0/, '').replace(/ /g, '')}`}>
+          {phone_number}
+        </a>
+      </b>
+      {t('data.food_distribution.detail_mix')}
+      <a href={url} target='_blank' rel='noreferrer'>
+        {t('data.food_distribution.detail_website')}
+      </a>{' '}
+      {t('data.food_distribution.detail_inspect')}
+    </p>
+  );
+};
 
-export default function FoodDistributionData({ value }: { value: FoodDistributionDataNode }) {
+export default function FoodDistributionData({
+  value,
+}: {
+  value: FoodDistributionDataNode;
+}) {
+  const { t } = useTranslation();
   return (
     <Box>
-      <h3>{value.city}, {value.county} Ücretsiz Yemek Dağıtım Yerleri</h3>
+      <h3>
+        {t('data.food_distribution.title', {
+          city: value.city,
+          county: value.county,
+        })}
+      </h3>
 
-      <p><b>Bu sayfadaki tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.</b></p>
+      <p>
+        <b>{t('data.food_distribution.subtitle')}</b>
+      </p>
 
       {value.items.map((item, i) => (
         <Paper sx={{ p: 2, m: 2 }} key={`item-${i}`}>
-          <b>{item.name}</b> 
+          <b>{item.name}</b>
           <br />
-            <p>
-              <a href={item.maps_url} target="_blank" rel="noreferrer">Google Maps Linki</a>
-              <br />
-            </p>
+          <p>
+            <a href={item.maps_url} target='_blank' rel='noreferrer'>
+              {t('button.google_maps')}
+            </a>
+            <br />
+          </p>
 
-          {detailedInfo(item.phone_number, item.url)}
-
+          {detailedInfo(t, item.phone_number, item.url)}
         </Paper>
       ))}
     </Box>
-  )
+  );
 }

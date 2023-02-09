@@ -1,6 +1,9 @@
 {
     "type": "question",
-    "text": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz",
+    "text_tr": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz.",
+    "text_en": "Choose the city you would like to see the food distribution centers.",
+    "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
+    "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
     "options": [
         {
             "name": "Diyarbakir",

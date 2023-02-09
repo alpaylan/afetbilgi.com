@@ -1,5 +1,9 @@
 {
     "type": "question",
+    "text_tr": "Hangi şehirde eşya toplanacak yer arıyorsunuz?",
+    "text_en": "In which city are you looking for item-donation?",
+    "text_ku": "Hûn li Kîjan Bajarî Ji Bo Tiştan Bibexşînin Cîh Digerin?",
+    "text_ar": "في أي مدينة تودّ أن تتبرع بغرض ما؟",
     "options": [
         {
             "value": {
@@ -9,33 +13,47 @@
                     "city": "İstanbul",
                     "items": [
                         {
+                            "city": "İstanbul",
                             "name": "İstanbul Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ekrem_imamoglu/status/1622530883000406016",
-                            "phone_number": "444  2 5 66"
+                            "phone_number": "444 25 66",
+                            "notes": ""
                         },
                         {
+                            "city": "İstanbul",
                             "name": "Doğa Koleji",
-                            "location": "İstanbul Ataşehir 1 Kampüsü ve İstanbul Güneşli Kampüsü",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
-                            "phone_number": ""
+                            "phone_number": "444 36 42",
+                            "notes": ""
                         },
                         {
+                            "city": "İstanbul",
                             "name": "İTÜ",
                             "url": "https://twitter.com/ProfDrKoyuncu/status/1622521627467546625?s=20&t=W9Bp9sdtzSoa9HO5Wd93Eg",
-                            "phone_number": "0536 659 87 06"
+                            "phone_number": "0536 659 87 06",
+                            "notes": ""
                         },
                         {
+                            "city": "İstanbul",
                             "name": "Boğaziçi Üniversitesi",
                             "url": "https://twitter.com/UniBogazici/status/1622635223233036291",
-                            "phone_number": "0212 359 44 49"
+                            "phone_number": "0212 359 44 49",
+                            "notes": ""
+                        },
+                        {
+                            "city": "İstanbul",
+                            "name": "Marmara Üniversitesi",
+                            "url": "https://twitter.com/marmara1883/status/1622959466407686144",
+                            "phone_number": "",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "İstanbul",
-            "name_en": "İstanbul",
-            "name_ar": "İstanbul",
-            "name_ku": "İstanbul"
+            "name_en": "Istanbul",
+            "name_ku": "Istanbul - Stenbol",
+            "name_ar": "إسطنبول"
         },
         {
             "value": {
@@ -45,32 +63,131 @@
                     "city": "Ankara",
                     "items": [
                         {
+                            "city": "Ankara",
                             "name": "Ankara Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mansuryavas06/status/1622553611770241027",
-                            "phone_number": "0312 440 94 20"
+                            "phone_number": "0312 440 94 20",
+                            "notes": ""
                         },
                         {
+                            "city": "Ankara",
                             "name": "Ankara Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ankarabbld/status/1622575424642351112",
-                            "phone_number": "0312 596 90 00"
+                            "phone_number": "0312 596 90 00",
+                            "notes": ""
                         },
                         {
+                            "city": "Ankara",
                             "name": "ODTÜ Mezunlar Derneği",
                             "url": "https://twitter.com/odtu_md/status/1622486496103092224",
-                            "phone_number": "0312 286 79 79"
+                            "phone_number": "0312 286 79 79",
+                            "notes": ""
                         },
                         {
+                            "city": "Ankara",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
-                            "phone_number": ""
+                            "phone_number": "444 36 42",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "TMMOB (Makina Mühendisleri Odası Eğitim ve Kültür Merkezi)",
+                            "url": "https://www.mmo.org.tr/ankara/duyuru/deprem-bolgesiyle-dayanisiyoruz",
+                            "phone_number": "0541 504 88 49",
+                            "notes": "Teyitli"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "BELKO",
+                            "url": "https://goo.gl/maps/eJTPQ9nnQagGpQaE6",
+                            "phone_number": "",
+                            "notes": "Koli taşıyacak insan gücüne ihtiyaç duyuluyor."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Ahmet Taner Kışlalı Spor Salonu",
+                            "url": "https://goo.gl/maps/EgPoFaHQVJpLW1GD6",
+                            "phone_number": "",
+                            "notes": "Acil olarak kuru bakliyat, su, mont, kazak, battaniye, atkı, bere, bebek maması, devam sütü, ısıtıcı ve powerbank yardımı gerekmektedir. Çankaya Belediyesi'ne bildirilen insan gücü ihtiyacı YOKTUR, yalnızca belirtilen malzemeler acilen gerekmektedir."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Zübeyde Hanım Sosyal Tesisleri",
+                            "url": "https://goo.gl/maps/GuiZhgXgdVDaBrMq7",
+                            "phone_number": "",
+                            "notes": "Sadece kolilenmiş gıda yardımı alınacak. İhtiyaç: Konserve, UHT uzun ömürlü süt, bardak çorba ve makarna, tonbalığı, bisküvi, bebek maması, hazir kapalı kahvaltılık ürünler (uzun ömürlü), zeytin. 12:15 sonrasında kişilere ihtiyaç duyulabilir."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Bilkent Üniversitesi Merkez Spor Salonu",
+                            "url": "https://goo.gl/maps/DLmA8ycHgPZro56u7",
+                            "phone_number": "",
+                            "notes": "Kuru gıda, Konserve, Mum/kibrit, Isıtıcı, Termal kıyafet"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "ODTÜ Vişnelik Mezunlar Derneği",
+                            "url": "https://goo.gl/maps/Zm3hcsqqQTi4vkw69",
+                            "phone_number": "",
+                            "notes": "İnsan gücüne ihtiyaç YOK. Koli [battal boy (en az 50x70)], Bebek Kıyafeti, Bebek Bezi, Atkı, Bere, Eldiven, Bebek Maması, Kadın Pedi acil olarak gerekmektedir."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Başkent Üniversitesi Kapalı Spor Salonu",
+                            "url": "https://goo.gl/maps/VAKVJKocpPKKypwW8",
+                            "phone_number": "",
+                            "notes": "Bakliyat, yağ ve kefen. KOLİ İHTİYACI VAR!"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "TOBB ETÜ",
+                            "url": "https://goo.gl/maps/yZuStD39N3oMinhd9",
+                            "phone_number": "",
+                            "notes": "Elektrikli ısıtıcı çocuk mont iç giyim ve içlik bot tarzı ayakkabı uyku tulumu yastık nevresim takımı tek kullanımlık tabak çatal tava ketıl hazır gıda"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Çankaya Belediyesi Çayyolu Ek Hizmet Binası",
+                            "url": "https://goo.gl/maps/PwKpNmSzK46jSPmdA",
+                            "phone_number": "",
+                            "notes": "Acil olarak kuru bakliyat, su, mont, kazak, battaniye, atkı, bere, bebek maması, devam sütü, ısıtıcı ve powerbank yardımı gerekmektedir. Çankaya Belediyesi'ne bildirilen insan gücü ihtiyacı YOKTUR, yalnızca belirtilen malzemeler acilen gerekmektedir."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Ankara Kent Konseyi Kabul Binası",
+                            "url": "https://goo.gl/maps/D3L9PHopNmmt2PsH6",
+                            "phone_number": "",
+                            "notes": "Kuru Gıda ve Powerbank ihtiyacı vardır"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Ufuk Üniversitesi İncek Kampüs Spor Salonu",
+                            "url": "",
+                            "phone_number": "",
+                            "notes": "ilaç, eldiven, hasta bezi gibi temel hijyen ihtiyaçlarında ciddi eksikler var, hafif insan gücü desteği gerekiyor."
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Gazi Üniversitesi Merkez Kampüs Kapalı Otoparkı",
+                            "url": "https://goo.gl/maps/FJJY7UUAxfAAHB4H6",
+                            "phone_number": "",
+                            "notes": "Bebek bezi ve maması ihtiyacı"
+                        },
+                        {
+                            "city": "Ankara",
+                            "name": "Ufuk Üniversitesi Balgat Kampüsü",
+                            "url": "",
+                            "phone_number": "",
+                            "notes": "Ayakkabı, hazır gıda eksiği var"
                         }
                     ]
                 }
             },
             "name_tr": "Ankara",
             "name_en": "Ankara",
-            "name_ar": "Ankara",
-            "name_ku": "Ankara"
+            "name_ku": "Ankara - Enqere",
+            "name_ar": "أنقرة"
         },
         {
             "value": {
@@ -80,615 +197,1169 @@
                     "city": "İzmir",
                     "items": [
                         {
+                            "city": "İzmir",
                             "name": "İzmir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tuncsoyer/status/1622552098872127489",
-                            "phone_number": "0232 293 47 81"
+                            "phone_number": "0232 293 47 81",
+                            "notes": ""
                         },
                         {
+                            "city": "İzmir",
                             "name": "İzmir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tuncsoyer/status/1622552098872127489",
-                            "phone_number": "0232 293 12 00"
+                            "phone_number": "0232 293 12 00",
+                            "notes": ""
                         },
                         {
+                            "city": "İzmir",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
-                            "phone_number": ""
+                            "phone_number": "444 36 42",
+                            "notes": "yardım@dogakoleji.k12.tr"
                         }
                     ]
                 }
             },
             "name_tr": "İzmir",
-            "name_en": "İzmir",
-            "name_ar": "İzmir",
-            "name_ku": "İzmir"
+            "name_en": "Izmir",
+            "name_ku": "Izmir - Îzmîr",
+            "name_ar": "إزمير"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Bursa",
                     "items": [
                         {
                             "city": "Bursa",
                             "name": "Bursa Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Alinuraktas70/status/1622558627725824006",
-                            "phone_number": "444 16 00"
+                            "phone_number": "444 16 00",
+                            "notes": ""
                         },
                         {
                             "city": "Bursa",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
-                            "phone_number": ""
+                            "phone_number": "444 36 42",
+                            "notes": ""
                         },
                         {
                             "city": "Bursa",
                             "name": "Nilüfer Belediyesi",
                             "url": "https://twitter.com/NiluferBel/status/1622620329959907330",
-                            "phone_number": ""
+                            "phone_number": "",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Bursa",
             "name_en": "Bursa",
-            "name_ar": "Bursa",
-            "name_ku": "Bursa"
+            "name_ku": "Bursa - Bursa",
+            "name_ar": "بورصة"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Antalya",
                     "items": [
                         {
                             "city": "Antalya",
                             "name": "Antalya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/BocekMuhittin/status/1622541607697321987",
-                            "phone_number": "444 94 20"
+                            "phone_number": "444 94 20",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Antalya",
             "name_en": "Antalya",
-            "name_ar": "Antalya",
-            "name_ku": "Antalya"
+            "name_ku": "Antalya - Antalya",
+            "name_ar": "أنطاليا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Konya",
                     "items": [
                         {
                             "city": "Konya",
                             "name": "Konya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Konyabuyuksehir/status/1622540858439393281",
-                            "phone_number": "0332 322 99 24"
+                            "phone_number": "0332 322 99 24",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Konya",
             "name_en": "Konya",
-            "name_ar": "Konya",
-            "name_ku": "Konya"
+            "name_ku": "Konya - Qonye",
+            "name_ar": "كونيا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Adana",
                     "items": [
                         {
                             "city": "Adana",
                             "name": "Adana Büyükşehir Belediyesi",
                             "url": "https://twitter.com/Adana_Bld/status/1622541147674497025",
-                            "phone_number": "0322 227 28 54"
+                            "phone_number": "0322 227 28 54",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Cafe Green Peace",
+                            "url": "https://maps.app.goo.gl/X1ivM9QQ5zkCxjTSA?g_st=iwb",
+                            "phone_number": "\n0538 981 71 08\n",
+                            "notes": "Bilgi alındı, numara alınarak teyit edildi. "
                         }
                     ]
                 }
             },
             "name_tr": "Adana",
             "name_en": "Adana",
-            "name_ar": "Adana",
-            "name_ku": "Adana"
+            "name_ku": "Adana - Edene",
+            "name_ar": "أضنة"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Kocaeli",
                     "items": [
                         {
                             "city": "Kocaeli",
                             "name": "Kocaeli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/kocaelibld/status/1622584987781324801",
-                            "phone_number": "0312 258 23 23"
+                            "phone_number": "0312 258 23 23",
+                            "notes": ""
                         },
                         {
                             "city": "Kocaeli",
                             "name": "Kocaeli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/kocaelibld/status/1622584987781324801",
-                            "phone_number": "0262 318 10 00"
+                            "phone_number": "0262 318 10 00",
+                            "notes": ""
                         },
                         {
                             "city": "Kocaeli",
                             "name": "Doğa Koleji",
                             "url": "https://www.dogakoleji.k12.tr/doga-dan-haberler/depremin-yaralarini-birlikte-sariyoruz-1-43505",
-                            "phone_number": ""
+                            "phone_number": "444 36 42",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Kocaeli",
             "name_en": "Kocaeli",
-            "name_ar": "Kocaeli",
-            "name_ku": "Kocaeli"
+            "name_ku": "Kocaeli - Kocaeli",
+            "name_ar": "كوكايلي"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Mersin",
                     "items": [
                         {
                             "city": "Mersin",
                             "name": "Mersin Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mersin_bld/status/1622574562876485634",
-                            "phone_number": "0324 323 21 23"
+                            "phone_number": "0324 323 21 23",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Mersin",
             "name_en": "Mersin",
-            "name_ar": "Mersin",
-            "name_ku": "Mersin"
+            "name_ku": "Mersin - Mêrsîn",
+            "name_ar": "مرسين"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Manisa",
                     "items": [
                         {
                             "city": "Manisa",
                             "name": "Manisa Valiliği",
                             "url": "https://twitter.com/ManisaValiligi/status/1622534241257914368",
-                            "phone_number": "0236 237 77 23"
+                            "phone_number": "0236 237 77 23",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Manisa",
             "name_en": "Manisa",
-            "name_ar": "Manisa",
-            "name_ku": "Manisa"
+            "name_ku": "Manisa - Manisa",
+            "name_ar": "مانيسا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Aydın",
                     "items": [
                         {
                             "city": "Aydın",
                             "name": "Aydın Büyükşehir Belediyesi",
                             "url": "https://twitter.com/aydinbuyuksehir?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 40 09"
+                            "phone_number": "444 40 09",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Aydın",
-            "name_en": "Aydın",
-            "name_ar": "Aydın",
-            "name_ku": "Aydın"
+            "name_en": "Aydin",
+            "name_ku": "Aydin - Aydîn",
+            "name_ar": "آيدن"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Balıkesir",
                     "items": [
                         {
                             "city": "Balıkesir",
                             "name": "Balıkesir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/balikesirbld/status/1622527583106568192",
-                            "phone_number": "444 40 10"
+                            "phone_number": "444 40 10",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Balıkesir",
-            "name_en": "Balıkesir",
-            "name_ar": "Balıkesir",
-            "name_ku": "Balıkesir"
+            "name_en": "Balikesir",
+            "name_ku": "Balikesir - Balîkesir",
+            "name_ar": "بالق أسير"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Denizli",
                     "items": [
                         {
                             "city": "Denizli",
                             "name": "Denizli Büyükşehir Belediyesi",
                             "url": "https://twitter.com/denizlibld/status/1622554661852004352/photo/1",
-                            "phone_number": "0258 265 21 37"
+                            "phone_number": "0258 265 21 37",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Denizli",
             "name_en": "Denizli",
-            "name_ar": "Denizli",
-            "name_ku": "Denizli"
+            "name_ku": "Denizli - Denizli",
+            "name_ar": "دينيزلي"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Diyarbakır",
                     "items": [
                         {
                             "city": "Diyarbakır",
                             "name": "Diyarbakır Büyükşehir Belediyesi",
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "phone_number": "0412 229 48 80"
+                            "phone_number": "0412 229 48 80",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Diyarbakır",
-            "name_en": "Diyarbakır",
-            "name_ar": "Diyarbakır",
-            "name_ku": "Diyarbakır"
+            "name_en": "Diyarbakir",
+            "name_ku": "Diyarbakir - Amed",
+            "name_ar": "دياربكر"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Erzurum",
                     "items": [
                         {
                             "city": "Erzurum",
                             "name": "Erzurum Büyükşehir Belediyesi",
                             "url": "https://twitter.com/erzurumbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 16 25"
+                            "phone_number": "444 16 25",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Erzurum",
             "name_en": "Erzurum",
-            "name_ar": "Erzurum",
-            "name_ku": "Erzurum"
+            "name_ku": "Erzurum - Erzirom",
+            "name_ar": "إرزوروم"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Eskişehir",
                     "items": [
                         {
                             "city": "Eskişehir",
                             "name": "Eskişehir Büyükşehir Belediyesi",
                             "url": "https://twitter.com/eskisehirbb/status/1622532888003592194",
-                            "phone_number": "0222 211 55 00"
+                            "phone_number": "0222 211 55 00",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Eskişehir",
-            "name_en": "Eskişehir",
-            "name_ar": "Eskişehir",
-            "name_ku": "Eskişehir"
+            "name_en": "Eskisehir",
+            "name_ku": "Eskisehir - Eskişehir",
+            "name_ar": "إسكيشير"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Gaziantep",
                     "items": [
                         {
                             "city": "Gaziantep",
                             "name": "Gaziantep Büyükşehir Belediyesi",
                             "url": "https://twitter.com/FatmaSahin/status/1622499495853322242",
-                            "phone_number": "0342 211 12 00"
+                            "phone_number": "0342 211 12 00",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Gaziantep",
             "name_en": "Gaziantep",
-            "name_ar": "Gaziantep",
-            "name_ku": "Gaziantep"
+            "name_ku": "Gaziantep - Dîlok",
+            "name_ar": "غزيانتب"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Hatay",
                     "items": [
                         {
                             "city": "Hatay",
                             "name": "Hatay Büyükşehir Belediyesi",
                             "url": "https://twitter.com/hataybsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0326 214 91 90"
+                            "phone_number": "0326 214 91 90",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Hatay",
             "name_en": "Hatay",
-            "name_ar": "Hatay",
-            "name_ku": "Hatay"
+            "name_ku": "Hatay - Xetay",
+            "name_ar": "حاتاي"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Kahramanmaraş",
                     "items": [
                         {
                             "city": "Kahramanmaraş",
                             "name": "Kahramanmaraş Büyükşehir Belediyesi",
                             "url": "https://twitter.com/buyuksehirkm?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0344 228 46 00"
+                            "phone_number": "0344 228 46 00",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Kahramanmaraş",
-            "name_en": "Kahramanmaraş",
-            "name_ar": "Kahramanmaraş",
-            "name_ku": "Kahramanmaraş"
+            "name_en": "Kahramanmaras",
+            "name_ku": "Kahramanmaras - Mereş",
+            "name_ar": "كهرمانماراس"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Kayseri",
                     "items": [
                         {
                             "city": "Kayseri",
                             "name": "Kayseri Büyükşehir Belediyesi",
                             "url": "https://twitter.com/baskanmemduhbyk/status/1622570654426972160",
-                            "phone_number": "0352 222 89 60"
+                            "phone_number": "0352 222 89 60",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Kayseri",
             "name_en": "Kayseri",
-            "name_ar": "Kayseri",
-            "name_ku": "Kayseri"
+            "name_ku": "Kayseri - Kayseri",
+            "name_ar": "كايسيري"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Malatya",
                     "items": [
                         {
                             "city": "Malatya",
                             "name": "Malatya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/malatyabeltr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 51 44"
+                            "phone_number": "444 51 44",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Malatya",
             "name_en": "Malatya",
-            "name_ar": "Malatya",
-            "name_ku": "Malatya"
+            "name_ku": "Malatya - Meletî",
+            "name_ar": "مالاتيا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Mardin",
                     "items": [
                         {
                             "city": "Mardin",
                             "name": "Mardin Büyükşehir Belediyesi",
                             "url": "https://twitter.com/mardinbuyukshr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0482 215 19 30"
+                            "phone_number": "0482 215 19 30",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Mardin",
             "name_en": "Mardin",
-            "name_ar": "Mardin",
-            "name_ku": "Mardin"
+            "name_ku": "Mardin - Mêrdîn",
+            "name_ar": "ماردين"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Muğla",
                     "items": [
                         {
                             "city": "Muğla",
                             "name": "Muğla Büyükşehir Belediyesi",
                             "url": "https://twitter.com/muglabsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 48 01"
+                            "phone_number": "444 48 01",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Muğla",
-            "name_en": "Muğla",
-            "name_ar": "Muğla",
-            "name_ku": "Muğla"
+            "name_en": "Mugla",
+            "name_ku": "Mugla - Muğla",
+            "name_ar": "موغلا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Ordu",
                     "items": [
                         {
                             "city": "Ordu",
                             "name": "Ordu Büyükşehir Belediyesi",
                             "url": "https://twitter.com/ordubbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 10 52"
+                            "phone_number": "444 10 52",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Ordu",
             "name_en": "Ordu",
-            "name_ar": "Ordu",
-            "name_ku": "Ordu"
+            "name_ku": "Ordu - Ordu",
+            "name_ar": "اردو"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Sakarya",
                     "items": [
                         {
                             "city": "Sakarya",
                             "name": "Sakarya Büyükşehir Belediyesi",
                             "url": "https://twitter.com/sakaryabld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0264 289 30 00"
+                            "phone_number": "0264 289 30 00",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Sakarya",
             "name_en": "Sakarya",
-            "name_ar": "Sakarya",
-            "name_ku": "Sakarya"
+            "name_ku": "Sakarya - Sakarya",
+            "name_ar": "ساكاريا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Samsun",
                     "items": [
                         {
                             "city": "Samsun",
                             "name": "Samsun Büyükşehir Belediyesi",
                             "url": "https://twitter.com/samsunbsb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0362 431 10 12"
+                            "phone_number": "0362 431 10 12",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Samsun",
             "name_en": "Samsun",
-            "name_ar": "Samsun",
-            "name_ku": "Samsun"
+            "name_ku": "Samsun - Samsun",
+            "name_ar": "سامسون"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Şanlıurfa",
                     "items": [
                         {
                             "city": "Şanlıurfa",
                             "name": "Şanlıurfa Büyükşehir Belediyesi",
                             "url": "https://twitter.com/sanliurfabld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0414 153 00 00"
+                            "phone_number": "0414 153 00 00",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Şanlıurfa",
-            "name_en": "Şanlıurfa",
-            "name_ar": "Şanlıurfa",
-            "name_ku": "Şanlıurfa"
+            "name_en": "Sanliurfa",
+            "name_ku": "Sanliurfa - Rîha",
+            "name_ar": "سانليورفا"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Tekirdağ",
                     "items": [
                         {
                             "city": "Tekirdağ",
                             "name": "Tekirdağ Büyükşehir Belediyesi",
                             "url": "https://twitter.com/tdagbld?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0850 459 59 59"
+                            "phone_number": "0850 459 59 59",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Tekirdağ",
-            "name_en": "Tekirdağ",
-            "name_ar": "Tekirdağ",
-            "name_ku": "Tekirdağ"
+            "name_en": "Tekirdag",
+            "name_ku": "Tekirdag - Tekirdağ",
+            "name_ar": "تكيرداج"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Trabzon",
                     "items": [
                         {
                             "city": "Trabzon",
                             "name": "Trabzon Büyükşehir Belediyesi",
                             "url": "https://twitter.com/trabzonbeltr?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "0462 224 61 61"
+                            "phone_number": "0462 224 61 61",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Trabzon",
             "name_en": "Trabzon",
-            "name_ar": "Trabzon",
-            "name_ku": "Trabzon"
+            "name_ku": "Trabzon - Trabzon",
+            "name_ar": "ترابزون"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Van",
                     "items": [
                         {
                             "city": "Van",
                             "name": "Van Büyükşehir Belediyesi",
                             "url": "https://twitter.com/vanbuyuksehirbb?s=21&t=zomQBfUHSL73iBBBZg9DtQ",
-                            "phone_number": "444 44 65"
+                            "phone_number": "444 44 65",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Van",
             "name_en": "Van",
-            "name_ar": "Van",
-            "name_ku": "Van"
+            "name_ku": "Van - Wan",
+            "name_ar": "فان"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "help-item-list",
+                    "city": "Kütahya",
                     "items": [
                         {
                             "city": "Kütahya",
                             "name": "Kütahya Belediyesi",
                             "url": "https://twitter.com/kutahyabel?s=21&t=TRGXu5zjRo1q39XxBdIDXg",
-                            "phone_number": "0274 999 19 43"
+                            "phone_number": "0274 999 19 43",
+                            "notes": ""
                         }
                     ]
                 }
             },
             "name_tr": "Kütahya",
-            "name_en": "Kütahya",
-            "name_ar": "Kütahya",
-            "name_ku": "Kütahya"
+            "name_en": "Kutahya",
+            "name_ku": "Kutahya - Kütahya",
+            "name_ar": "كوتاهيا"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Afyonkarahisar",
+                    "items": [
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Fuar Alanı ",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 252 53 60",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Sahipata Spor Salonu",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 252 53 60",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Belediye Hizmet Binası",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 214 42 55",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Et Balık Sosyal Tesisleri",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 252 53 60",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "İstiklal Zabıta Karakolu",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 214 42 55",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Turizm Zabıta Karakolu",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 252 53 60",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Afyonkarahisar",
+                            "name": "Merkez Zabıta Karakolu",
+                            "url": "https://twitter.com/zeybekbaskan/status/1622594348545187842?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0272 252 53 60",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Afyonkarahisar",
+            "name_en": "Afyonkarahisar",
+            "name_ku": "Afyonkarahisar - Efûnkarahîşar",
+            "name_ar": "أفيونكاراهيسار"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Erzincan",
+                    "items": [
+                        {
+                            "city": "Erzincan",
+                            "name": "Kızılay Meydanı(Dörtyol)",
+                            "url": "https://twitter.com/aksunbekir/status/1622710150619430942?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 90 24",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Erzincan",
+            "name_en": "Erzincan",
+            "name_ku": "Erzincan - Erzingan",
+            "name_ar": "إرزينجان"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Ağrı",
+                    "items": [
+                        {
+                            "city": "Ağrı",
+                            "name": "Ağrı Belediyesi Sosyal Yardım İşler Müdürlüğü",
+                            "url": "https://twitter.com/agribelediyesi_/status/1622555730971697153?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0472 215 11 90",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Ağrı",
+            "name_en": "Agri",
+            "name_ku": "Agri - Eğrî",
+            "name_ar": "آغري"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Niğde",
+                    "items": [
+                        {
+                            "city": "Niğde",
+                            "name": "Niğde Belediyesi Sosyal Yardım İşler Müdürlüğü",
+                            "url": "https://twitter.com/belediye51/status/1622486552600317953?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "441 51 01",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Niğde",
+            "name_en": "Nigde",
+            "name_ku": "Nigde - Niğde",
+            "name_ar": "نيجدي"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Yalova",
+                    "items": [
+                        {
+                            "city": "Yalova",
+                            "name": "Yasmek Merkezleri",
+                            "url": "https://twitter.com/yalovabld/status/1622581523655294976?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0226 811 50 00",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Yalova",
+                            "name": "Mahalle Muhtarlıkları",
+                            "url": "https://twitter.com/yalovabld/status/1622581523655294976?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Yalova",
+                            "name": "Kadın ve Aile Hizmetleri Müdürlüğü(Diş Hastanesi Karşısı)",
+                            "url": "https://twitter.com/yalovabld/status/1622581523655294976?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0226 811 50 00",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Yalova",
+                            "name": "Yalova Belediyesi Masa Tenisi Salonu",
+                            "url": "https://twitter.com/yalovabld/status/1622581523655294976?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Yalova",
+            "name_en": "Yalova",
+            "name_ku": "Yalova - Yalova",
+            "name_ar": "يالوفا"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Sivas",
+                    "items": [
+                        {
+                            "city": "Sivas",
+                            "name": "Yenişehir Mahallesi İtfaiye Müdürlüğü",
+                            "url": "https://twitter.com/sivasbeltr/status/1622479010444808192?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0346 221 01 10",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Sivas",
+                            "name": "112 Acil çağrı ile evlerden erzak teslimi mümkün",
+                            "url": "https://twitter.com/sivasbeltr/status/1622479010444808192?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "112",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Sivas",
+            "name_en": "Sivas",
+            "name_ku": "Sivas - Sêwas",
+            "name_ar": "سيفاس"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Tokat",
+                    "items": [
+                        {
+                            "city": "Tokat",
+                            "name": "Hüseyin Akbaş Spor Salonu",
+                            "url": "https://twitter.com/tokatbelediye/status/1622565049045774336?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0356 212 20 70",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Tokat",
+                            "name": "112 Acil çağrı ile evlerden erzak teslimi mümkün",
+                            "url": "https://twitter.com/tokatbelediye/status/1622565049045774336?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "112",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Tokat",
+            "name_en": "Tokat",
+            "name_ku": "Tokat - Tokat",
+            "name_ar": "توكات"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Zonguldak",
+                    "items": [
+                        {
+                            "city": "Zonguldak",
+                            "name": "Zonguldak Kızılay Deposu(69 Ambarları Mevkii)",
+                            "url": "https://twitter.com/zonguldakbel67/status/1622534057161641985?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0372 251 41 39",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Zonguldak",
+            "name_en": "Zonguldak",
+            "name_ku": "Zonguldak - Zonguldak",
+            "name_ar": "زونقولداك"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Çanakkale",
+                    "items": [
+                        {
+                            "city": "Çanakkale",
+                            "name": "Mahalle Muhtarlıkları",
+                            "url": "https://twitter.com/ckalebelediye/status/1622566184267796481?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Çanakkale",
+                            "name": "Çanakkale Kent Konseyi ",
+                            "url": "https://twitter.com/ckalebelediye/status/1622566184267796481?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0286 213 71 63",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Çanakkale",
+                            "name": "112 Acil çağrı(Gamer) ile evlerden erzak teslimi mümkün",
+                            "url": "https://twitter.com/ckalebelediye/status/1622566184267796481?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "112",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Çanakkale",
+            "name_en": "Canakkale",
+            "name_ku": "Canakkale - Çanakkale",
+            "name_ar": "كاناكالي"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Çorum",
+                    "items": [
+                        {
+                            "city": "Çorum",
+                            "name": "Eski Belediye Binası(Taş Bina)",
+                            "url": "https://twitter.com/hibrahimasgin/status/1622514119940210688?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0346 225 08 10",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Çorum",
+                            "name": "153 çağrı merkezi ile evlerden erzak teslimi mümkün",
+                            "url": "https://twitter.com/hibrahimasgin/status/1622514119940210688?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "153",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Çorum",
+            "name_en": "Corum",
+            "name_ku": "Corum - Çorum",
+            "name_ar": "كوروم"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Giresun",
+                    "items": [
+                        {
+                            "city": "Giresun",
+                            "name": "Giresun Belediyesi Kültür ve Fuar Merkezi Fuaye Alanı",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Giresun",
+                            "name": "Çotanak Spor Kompleksi",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Giresun",
+                            "name": "19 Eylül Spor Salonu",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Giresun",
+                            "name": "İl Jandarma Komutanlığı",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Giresun",
+                            "name": "Mahalle Muhtarlıkları",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        },
+                        {
+                            "city": "Giresun",
+                            "name": "En yakın belediye hizmet yerleri ve zabıta noktaları",
+                            "url": "https://twitter.com/belediyegiresun/status/1622569357283926019?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 40 28",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Giresun",
+            "name_en": "Giresun",
+            "name_ku": "Giresun - Giresun",
+            "name_ar": "جيريسون"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Rize",
+                    "items": [
+                        {
+                            "city": "Rize",
+                            "name": "Sahil Otoparkı",
+                            "url": "https://twitter.com/rizebelediye/status/1622616681884385280?s=48&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "444 50 53",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Rize",
+            "name_en": "Rize",
+            "name_ku": "Rize - Rize",
+            "name_ar": "ريز"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Amasya",
+                    "items": [
+                        {
+                            "city": "Amasya",
+                            "name": "Çelebi Mehmet Kent Meydanı(Kapalı Otopark Üstü)",
+                            "url": "https://twitter.com/amasyabld05/status/1622506685431533569?s=48&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0358 212 01 24",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Amasya",
+            "name_en": "Amasya",
+            "name_ku": "Amasya - Amasya",
+            "name_ar": "أماصيا"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Nevşehir",
+                    "items": [
+                        {
+                            "city": "Nevşehir",
+                            "name": "Nevşehir Damat İbrahim Paşa Kapalı Spor Salonu",
+                            "url": "https://twitter.com/nevsehir_bel/status/1622527170244476928?s=48&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "phone_number": "0384 213 24 15",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Nevşehir",
+            "name_en": "Nevsehir",
+            "name_ku": "Nevsehir - Nevşehir",
+            "name_ar": "نيفشير"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Edirne",
+                    "items": [
+                        {
+                            "city": "Edirne",
+                            "name": "Atatürk Kültür Merkezi ve Belediye Konservatuvarı",
+                            "url": "https://twitter.com/EdirneBel/status/1622875887183056896",
+                            "phone_number": "0284 212 09 95",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Edirne",
+            "name_en": "Edirne",
+            "name_ku": "Edirne - Edirne",
+            "name_ar": "إديرنة"
+        },
+        {
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "help-item-list",
+                    "city": "Kırıkkale",
+                    "items": [
+                        {
+                            "city": "Kırıkkale",
+                            "name": "Cumhuriyet Meydanı",
+                            "url": "https://goo.gl/maps/fPPZThn8tBjAyduJ9",
+                            "phone_number": "",
+                            "notes": ""
+                        }
+                    ]
+                }
+            },
+            "name_tr": "Kırıkkale",
+            "name_en": "Kirikkale",
+            "name_ku": "Kirikkale - Kırıkkale",
+            "name_ar": "كيريككالي"
         }
-    ],
-    "text_tr": "Hangi şehirde eşya toplanacak yer arıyorsunuz?",
-    "text_en": "In which city are you looking for item-donation?",
-    "text_ku": "Hûn li Kîjan Bajarî Ji Bo Tiştan Bibexşînin Cîh Digerin?",
-    "text_ar": "في أي مدينة تودّ أن تتبرع بغرض ما؟"
+    ]
 }

@@ -69,14 +69,16 @@ export interface CityAccommodationNode extends DataNode {
   }[];
 }
 
+export interface Vet {
+  name: string;
+  phone_number: string;
+  address: string;
+  maps_url: string;
+}
+
 export interface VetNode extends DataNode {
   city: string;
-  vets: {
-    name: string;
-    phone_number: string;
-    address: string;
-    maps_url: string;
-  }[];
+  vets: Vet[];
 }
 
 export interface CreditCardNode extends DataNode {
@@ -86,7 +88,11 @@ export interface CreditCardNode extends DataNode {
 
 export interface GatheringDataNode extends DataNode {
   city: string;
-  items: string[];
+  items: {
+    name: string;
+    url: string;
+    source: string;
+  }[];
 }
 
 export interface HelpItem {
@@ -144,15 +150,23 @@ export interface StemCellDataItem {
   phone: string;
 }
 
+export interface FoodDistribution {
+  name: string;
+  maps_url?: string;
+  url?: string;
+  phone_number?: string;
+  updated_at_date: string;
+  updated_at_time: string;
+}
 export interface FoodDistributionDataNode extends DataNode {
   city: string;
   county: string;
+  items: FoodDistribution[];
+}
+
+export interface VpnDataNode extends DataNode {
   items: {
-          name: string;
-          maps_url?: string;
-          url?: string;
-          phone_number?: string;
-          updated_at_date: string;
-          updated_at_time: string;
-      }[];
+    name: string;
+    url: string;
+  }[];
 }

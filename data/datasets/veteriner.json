@@ -1,6 +1,9 @@
 {
     "type": "question",
-    "text": "Hangi şehirde veteriner arıyorsunuz?",
+    "text_tr": "Hangi şehirde veteriner arıyorsunuz?",
+    "text_en": "In which city are you looking for a veterinary clinic?",
+    "text_ku": "Hûn li kîjan bajarî li veterîner digerin?",
+    "text_ar": "في أي مدينة تبحث عن طبيب بيطري؟",
     "options": [
         {
             "value": {

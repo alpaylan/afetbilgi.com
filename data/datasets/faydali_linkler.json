@@ -41,7 +41,11 @@
             },
             {
                 "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
-                "url": "deprem.io"
+                "url": "https://deprem.io/"
+            },
+            {
+                "name": "MGM Deprem Bölgesi Hava Tahmini",
+                "url": "https://afet.mgm.gov.tr"
             }
         ]
     }
