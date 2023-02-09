@@ -32,9 +32,8 @@ export default function ContainerPharmacyData({
                 <TableCell>{item.location}</TableCell>
                 <TableCell>
                   <a
-                    href={`https://maps.google.com/?q=${item.locationLink
-                      .replace('(', '')
-                      .replace(')', '')} ${item.city}`}
+                    href={item.locationLink}
+                    target="_blank"
                   >
                     Konum
                   </a>
