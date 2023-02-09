@@ -2,6 +2,7 @@ import {
   Autocomplete,
   Box,
   Button,
+  Divider,
   TextField,
   Typography,
 } from '@mui/material';
@@ -100,21 +101,26 @@ export default function Question({ paths }: { paths: string[] }) {
 
       return Object.keys(buttonsByCategories)
         .filter((category) => buttonsByCategories[category].length > 0)
-        .map((category) => (
-          <Box
-            sx={{
-              textAlign: 'center',
-              display: 'flex',
-              flexFlow: 'column nowrap',
-              justifyContent: 'center',
-              paddingTop: '50px',
-            }}
-          >
-            <Typography variant='h5'>
-              {t(`category.${category}.name`)}
-            </Typography>
-            {buttonsByCategories[category]}
-          </Box>
+        .map((category, i) => (
+          <>
+            <Box
+              sx={{
+                textAlign: 'center',
+                display: 'flex',
+                flexFlow: 'column nowrap',
+                justifyContent: 'center',
+                paddingTop: '50px',
+              }}
+            >
+              <Typography variant='h5'>
+                {t(`category.${category}.name`)}
+              </Typography>
+              {buttonsByCategories[category]}
+            </Box>
+            {i < buttonsByCategories[category].length - 1 && (
+              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
+            )}
+          </>
         ));
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
