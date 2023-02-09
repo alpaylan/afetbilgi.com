@@ -2,6 +2,7 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
+  push:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -43,7 +44,6 @@ jobs:
           python ./blood_parser.py
 
           python ./barinma_parser.py
-          python ./yemek_parser.py
           python ./telefonnumaralari_parser.py
 
           cp ../datasets/barinma.json ../latest_datasets/barinma.json

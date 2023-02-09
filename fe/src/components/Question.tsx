@@ -18,7 +18,7 @@ const getOptionName = (option: any, lang: string) =>
 
 const getAutocompleteName = (option: any, lang: string) =>
     option[`autocompleteHint_${lang}`] || option.autocompleteHint_tr || option.autocompleteHint;
-  
+
 
 export default function Question({ paths }: { paths: string[] }) {
   const location = useLocation();
@@ -26,6 +26,7 @@ export default function Question({ paths }: { paths: string[] }) {
   const { i18n } = useTranslation();
 
   const { data: selectedNode, isLoading } = useQuestionData(paths);
+  console.log(selectedNode)
 
   if (isLoading || !selectedNode) {
     return <></>;
