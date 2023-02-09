@@ -25,7 +25,8 @@ def main():
     sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    if dfj := pd.read_csv(url, encoding=("utf-8")):
+    dfj = pd.read_csv(url, encoding=("utf-8"))
+    if dfj.empty:
         dfj = dfj.drop(
             columns=[
                 "Ad",
