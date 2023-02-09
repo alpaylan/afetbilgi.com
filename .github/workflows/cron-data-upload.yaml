@@ -41,6 +41,7 @@ jobs:
           python ./faydalilinkler_parser.py
           python ./veteriner_parser.py
           python ./yazilar_parser.py
+          python ./blood_parser.py
 
           python ./barinma_parser.py
           python ./yemek_parser.py
