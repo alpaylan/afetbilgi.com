@@ -1,3 +1,3 @@
 export const downloadPDF = (pathname: string) => {
-  console.log(pathname);
+  window.open(`https://cdn.afetbilgi.com${pathname}`, '_blank');
 };
