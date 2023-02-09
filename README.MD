@@ -1,6 +1,8 @@
 <!-- Improved compatibility of back to top link: See:  -->
 <a name="readme-top"></a>
 
+![GitHub stars](https://img.shields.io/github/stars/alpaylan/afetbilgi.com?style=social) ![GitHub forks](https://img.shields.io/github/forks/alpaylan/afetbilgi.com?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/alpaylan/afetbilgi.com?style=social) ![GitHub repo size](https://img.shields.io/github/repo-size/alpaylan/afetbilgi.com?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/alpaylan/afetbilgi.com?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/alpaylan/afetbilgi.com?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/alpaylan/afetbilgi.com?color=red&style=plastic) ![GitHub issues](https://img.shields.io/github/issues/alpaylan/afetbilgi.com)
+
 # afetbilgi.com
 
 İletişim Kanalları/Contact Channels:
@@ -59,3 +61,9 @@ The basic principles of the website, which is based on a completely human-made d
 * Font Size: 16px
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Katkıda Bulunanlar/Contributors
+
+<a href="https://github.com/alpaylan/afetbilgi.com/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=alpaylan/afetbilgi.com" />
+</a>

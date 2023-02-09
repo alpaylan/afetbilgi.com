@@ -23,6 +23,8 @@
   "data.important_web_sites.subtitle": "İhtiyacınız olabilecek linklere buradan ulaşabilirsiniz.",
   "data.important_articles.title": "Faydalı Yazılar",
   "data.important_articles.subtitle": "Deprem sonrası ile alakalı faydalı yazıları aşağıda bulabilirsiniz.",
+  "data.important_articles.article_title": "Başlık",
+  "data.important_articles.article_author": "Yazar",
   "data.veterinary.title": "{{city}} Şehrinde Ücretsiz Yardım Alabileceğiniz Veterinerler",
   "data.veterinary.subtitle": "Bu sayfadaki tüm veterinerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
   "data.food_distribution.title": "{{city}}, {{county}} Ücretsiz Yemek Dağıtım Yerleri",
