@@ -16,31 +16,31 @@ if __name__ == '__main__':
     df = pd.read_csv(url)
     df = df.fillna("")
 
-    sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
-    sheet_name = "Yard%C4%B1m%20Toplama%20Merkezleri"
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "Yard%C4%B1m%20Toplama%20Merkezleri"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    df2 = pd.read_csv(url)
-    df2 = df2.fillna("")
+    # df2 = pd.read_csv(url)
+    # df2 = df2.fillna("")
 
-    drop_columns = ["Submission Date", "Ad", "Soyad", "Telefon Numarası"]
+    # drop_columns = ["Submission Date", "Ad", "Soyad", "Telefon Numarası"]
 
-    df2 = df2.drop(columns=drop_columns)
+    # df2 = df2.drop(columns=drop_columns)
 
-    rename = {
-        "Lütfen Şehir Seçin": "Şehir",
-        "Lütfen İlçenizi Giriniz": "İlçe",
-        "Lütfen Yardım Toplama Merkezinin Bağlı Olduğu Kurumun İsmini Yazınız": "Kurumtmp",
-        "Toplanma Merkezine Ait Bilginin Kaynağını Yazınız": "Link",
-        "Toplanma Merkezine Ait Telefon Numarasını Ekleyiniz": "Telefon Numarası",
-    }
+    # rename = {
+    #     "Lütfen Şehir Seçin": "Şehir",
+    #     "Lütfen İlçenizi Giriniz": "İlçe",
+    #     "Lütfen Yardım Toplama Merkezinin Bağlı Olduğu Kurumun İsmini Yazınız": "Kurumtmp",
+    #     "Toplanma Merkezine Ait Bilginin Kaynağını Yazınız": "Link",
+    #     "Toplanma Merkezine Ait Telefon Numarasını Ekleyiniz": "Telefon Numarası",
+    # }
 
-    df2 = df2.rename(columns=rename)
+    # df2 = df2.rename(columns=rename)
 
-    df2['Kurum'] = df2['Kurumtmp'].astype(str) + " - " + df2['İlçe'].astype(str)
-    df2 = df2.drop(columns=["Kurumtmp", "İlçe"])
+    # df2['Kurum'] = df2['Kurumtmp'].astype(str) + " - " + df2['İlçe'].astype(str)
+    # df2 = df2.drop(columns=["Kurumtmp", "İlçe"])
 
-    df = pd.concat([df, df2])
+    # df = pd.concat([df, df2])
 
     df["Şehir"] = df["Şehir"].apply(str)
     df["Şehir"] = df["Şehir"].apply(str.strip)
