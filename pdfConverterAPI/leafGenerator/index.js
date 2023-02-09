@@ -2,7 +2,7 @@ require("dotenv").config();
 const {
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
-  // createLeafMealPDF,
+  createLeafMealPDF,
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,
@@ -15,7 +15,7 @@ const {
 
 createLeafTemporaryAccomodationPDF();
 createLeafSafeGatheringPlacesPDF();
-// createLeafMealPDF();
+createLeafMealPDF();
 createPhoneNumbersPDF();
 createWebSitesPDF();
 createArticlePDF();

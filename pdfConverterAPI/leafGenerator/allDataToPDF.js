@@ -11,7 +11,7 @@ const {
 } = require("./leafs/safeGatheringPlaces");
 const { writePhoneNumbersToPdf } = require("./leafs/telefonNumaralari");
 const { setFont, registerFont } = require("./docFunctions");
-const { createMealPdf, getMealData } = require("./leafs/yemek");
+const { writeMealPDF, getMealData } = require("./leafs/yemek");
 const constantData = require("./constants");
 // const { createCoverPage } = require("./coverPage");
 const { getWebSitesData, writeWebsitesPDF } = require("./leafs/webSites");
@@ -165,29 +165,18 @@ const createLeafSafeGatheringPlacesPDF = async () => {
   });
 };
 
-//TODO UPDATE MEAL PARSER
-// const createLeafMealPDF = async () => {
-//   const data = await fetchData();
+const createLeafMealPDF = async () => {
+  const data = await fetchData();
 
-//   const mealData = getMealData(data);
-//   console.log(mealData);
-//   const path = `../outputs/${encodeURIComponent(mealData.name_tr)}/`;
-//   fs.mkdirSync(path, { recursive: true });
+  const mealData = getMealData(data);
+  console.log(mealData);
+  const path = `../outputs/${encodeURIComponent(mealData.name_tr)}/`;
+  fs.mkdirSync(path, { recursive: true });
 
-//   depremBolgeleri.forEach(async (city) => {
-//     const doc = new jsPDF({
-//       orientation: "p",
-//       unit: "px",
-//       format: "a4",
-//     });
-
-//     registerFont(doc);
-
-//     setFont(doc, "regular");
-//     createMealPdf(doc, data, city);
-//     doc.save(path + city + ".pdf");
-//   });
-// };
+  mealData.value.options.forEach((option) => {
+    writeMealPDF(option);
+  });
+};
 
 const createVeterinerPlacesPDF = async () => {
   const data = await fetchData();
@@ -333,7 +322,7 @@ const fetchData = async () => {
 module.exports = {
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
-  // createLeafMealPDF,
+  createLeafMealPDF,
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,

@@ -1,5 +1,12 @@
-const { setFont, getDateAndTime, slug } = require("../docFunctions");
+const {
+  setFont,
+  getDateAndTime,
+  slug,
+  registerFont,
+} = require("../docFunctions");
 const tempData = require("../data.json");
+const fs = require("fs");
+const { jsPDF } = require("jspdf");
 const {
   smallTextSize,
   textFontSize,
@@ -45,33 +52,36 @@ const getCityData = (data, city) => {
   return output;
 };
 
-const createMealPdf = (doc, allData, city) => {
-  const data = getMealData(allData);
+const writeMealPDF = (option) => {
+  option.value.options.forEach((value, index) => {
+    let x = xStart;
+    let y = yStart;
+    let isNewPage = true;
 
-  const pageHeight = doc.internal.pageSize.height;
+    const path = `../outputs/${encodeURIComponent("Yemek Dağıtım Yerleri")}/${
+      value.value.data.city
+    }`;
+    fs.mkdirSync(path, { recursive: true });
 
-  const cityData = getCityData(data, city);
+    // create a pdf file
+    const doc = new jsPDF({
+      orientation: "p",
+      unit: "px",
+      format: "a4",
+    });
+    const pageHeight = doc.internal.pageSize.height;
 
-  if (!cityData) {
-    return;
-  }
+    registerFont(doc);
 
-  let isNewPage = true;
-
-  let x = xStart;
-  let y = yStart;
-
-  doc.setFontSize(textFontSize);
-  cityData.forEach((value, index) => {
     if (y >= pageHeight) {
       doc.addPage();
       isNewPage = true;
     }
+
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);
-      doc.text(`${city} - Yemek Sağlanan Yerler`, x, yRange * 2);
-
+      doc.text(`${value.name} - Yemek Dağıtım Yerleri`, x, yRange * 2);
       setFont(doc, "regular");
       doc.setFontSize(textFontSize);
       doc.text(
@@ -83,46 +93,25 @@ const createMealPdf = (doc, allData, city) => {
       isNewPage = false;
     }
 
-    setFont(doc, "bold");
-    doc.setFontSize(smallTitleFontSize);
-    doc.text(value.name, x, y);
-    y += yRange;
-
     value.value.data.items.forEach((el, index) => {
-      if (y >= pageHeight) {
-        doc.addPage();
-        isNewPage = true;
-      }
-      if (isNewPage) {
-        setFont(doc, "bold");
-        doc.setFontSize(titleFontSize);
-        doc.text(`${city} - Yemek Sağlanan Yerler`, x, yRange * 2);
-
-        setFont(doc, "regular");
-        doc.setFontSize(textFontSize);
-        doc.text(
-          `Dosyanın oluşturulma tarihi: ${getDateAndTime()}`,
-          x,
-          yRange * 3
-        );
-        y = yStart;
-        isNewPage = false;
-      }
-
-      setFont(doc, "regular");
-      doc.setFontSize(textFontSize);
-      doc.text(`\u2022 ${el.name}`, 16, y);
+      doc.text("\u2022 " + `${el.name}` + " -- " + el.phone_number, x, y);
       y += yRange;
-      doc.setFontSize(smallTextSize);
-      if (el.url) {
-        doc.textWithLink("Google Maps: " + el.url, x, y, { url: el.url });
+
+      if (el.maps_url) {
+        doc.textWithLink("Adres: " + el.maps_url, x, y, {
+          url: el.maps_url,
+        });
         y += yRange;
       }
-      if (el.source) {
-        doc.textWithLink("Kaynak: " + el.source, x, y, { url: el.source });
+      if (el.url) {
+        doc.textWithLink("Url: " + el.url, x, y, {
+          url: el.url,
+        });
         y += yRange;
       }
     });
+
+    doc.save(`${path}/${value.name}.pdf`);
   });
 };
 
@@ -142,5 +131,5 @@ const convertToDate = (el) => {
 
 module.exports = {
   getMealData,
-  createMealPdf,
+  writeMealPDF,
 };
