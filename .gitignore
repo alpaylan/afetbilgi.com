@@ -134,4 +134,4 @@ yarn-error.log*
 .local
 .render
 
-*.pdf
+**/*.pdf

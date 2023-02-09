@@ -55,14 +55,18 @@ const writeTemporaryAccomodationPDF = (doc, data) => {
     doc.text("\u2022 " + `${el.name}`, x, y);
     y += yRange;
     doc.setFontSize(smallTextSize);
-    doc.textWithLink("Url: " + el.url, x, y, {
-      url: el.url,
-    });
-    y += yRange;
-    doc.textWithLink("Adres: " + el.address, x, y, {
-      url: el.url,
-    });
-    y += yRange;
+    if (el.url) {
+      doc.textWithLink("Url: " + el.url, x, y, {
+        url: el.url,
+      });
+      y += yRange;
+    }
+    if (el.address) {
+      doc.textWithLink("Adres: " + el.address, x, y, {
+        url: el.url,
+      });
+      y += yRange;
+    }
     if (el.validation_date && el.is_validated) {
       doc.text(
         "Dogrulanma Durumu: " +

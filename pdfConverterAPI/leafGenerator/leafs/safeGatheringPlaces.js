@@ -31,7 +31,7 @@ const writeSafeGatheringPlacesPDF = (doc, data, city) => {
   let isNewPage = true;
 
   data.value.data.items.forEach((el, index) => {
-    if (y >= pageHeight) {
+    if (y + yRange * 3 >= pageHeight) {
       doc.addPage();
       isNewPage = true;
     }
