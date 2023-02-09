@@ -38,6 +38,7 @@ jobs:
           python ./faydalilinkler_parser.py > ../latest_datasets/faydali_linkler.json
           python ./veteriner_parser.py > ../latest_datasets/veteriner.json
           python ./yazilar_parser.py > ../latest_datasets/yazilar.json
+          python ./karayollari_kapali_yollar.py > ../latest_datasets/kapaliyollar.json
 
           # python ./barinma_parser.py > ../latest_datasets/barinma.json
           # python ./yemek_parser.py > ../latest_datasets/yemek.json

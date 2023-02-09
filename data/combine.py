@@ -18,6 +18,10 @@ data_points = [
   { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê', 'path': f'{basedir}/kokhucre.json' },
   { 'name_ar': 'نصوص مفيدة', 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'name_ku': 'Agahiyên Kêrhatî', 'path': f'{basedir}/yazilar.json' },
   { 'name': 'VPN', 'path': f'{basedir}/vpn.json' },
+#   STAGING
+#   { 'name': 'Kapalı Yollar', 'path': f'{basedir}/kapaliyollar.json' },
+
+#   DEPRECATED
 #   { 'name_tr': 'Para Bağışı İmkanları', 'name_en': 'Money Donation', 'path': 'datasets/bagis.json' },
 ]
 
@@ -32,14 +36,18 @@ result = {
 
 for data_point in data_points:
     with open(f"{data_point['path']}", "r", encoding="utf-8") as f:
-        text = f.read().encode("utf-8")
+        try:
+            text = f.read().encode("utf-8")
 
-        data = json.loads(text)
+            data = json.loads(text)
 
-        result['options'].append({
-            **data_point,
-            'value': data,
-        })
+            result['options'].append({
+                **data_point,
+                'value': data,
+            })
+        except Exception as e:
+            print(f"Error reading {data_point['path']}: {e}")
+            sys.exit(1)
 
 print(json.dumps(result, ensure_ascii=False))
 
