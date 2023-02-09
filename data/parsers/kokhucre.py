@@ -1,8 +1,15 @@
-import pandas as pd
-import json
 import os 
+import sys
+import json
+import pandas as pd
 
 if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
+
     sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
     sheet_name = "K%C3%B6k%20H%C3%BCcre%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
@@ -20,5 +27,5 @@ if __name__ == '__main__':
             'phone': row['phone']
         } for _, row in df.iterrows()
     ]
-    with open(f"{os.path.dirname(os.path.realpath(__file__))}/../datasets/kokhucre.json", "w") as f:
+    with open(out_path, "w") as f:
         f.write(json.dumps(json_obj, indent=4, ensure_ascii=False))
