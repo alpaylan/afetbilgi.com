@@ -2,7 +2,7 @@ require("dotenv").config();
 const {
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
-  createLeafMealPDF,
+  // createLeafMealPDF,
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,
@@ -11,12 +11,11 @@ const {
   createHelpCentersPDF,
   createBloodDonationPDF,
   createStemCellsPDF,
-  createMainPagePDF,
 } = require("./allDataToPDF");
 
 createLeafTemporaryAccomodationPDF();
 createLeafSafeGatheringPlacesPDF();
-createLeafMealPDF();
+// createLeafMealPDF();
 createPhoneNumbersPDF();
 createWebSitesPDF();
 createArticlePDF();
@@ -25,4 +24,3 @@ createVeterinerPlacesPDF();
 createHelpCentersPDF();
 createBloodDonationPDF();
 createStemCellsPDF();
-createMainPagePDF();

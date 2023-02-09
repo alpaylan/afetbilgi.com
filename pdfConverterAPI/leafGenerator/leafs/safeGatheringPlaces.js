@@ -11,47 +11,39 @@ const {
   yStart,
   yRange,
   pageStartText,
+  smallTextSize,
 } = require("../constants");
 
 // gets safe gathering place data of given city
-const getSafeGatheringPlace = (data, city) => {
+const getSafeGatheringPlace = (data) => {
   const safeGatheringPlaceData = data.options.filter(
     (op) => op.name_tr == "Güvenli Toplanma Alanları"
   );
-  const cityData = safeGatheringPlaceData[0].value.options.filter(
-    (op) => slug(op.name_tr) == slug(city)
-  );
 
-  if (cityData[0]?.value.data) {
-    return cityData[0];
-  }
+  return safeGatheringPlaceData[0];
 };
 
-const createSafeGatheringPlacePDF = (doc, data, city) => {
+const writeSafeGatheringPlacesPDF = (doc, data, city) => {
   const pageHeight = doc.internal.pageSize.height;
 
   let x = xStart;
   let y = yStart;
-
-  const cityObj = getSafeGatheringPlace(data, city);
-
-  if (!cityObj) {
-    return;
-  }
-
-  const cityName = cityObj?.name_tr;
-
   let isNewPage = true;
-  doc.setFontSize(textFontSize);
-  cityObj.value.data?.items.forEach((el, index) => {
+
+  data.value.data.items.forEach((el, index) => {
     if (y >= pageHeight) {
       doc.addPage();
       isNewPage = true;
     }
+
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);
-      doc.text(`${cityName} - Güvenli Toplanma Alanları`, x, yRange * 2);
+      doc.text(
+        `${data.value.data.city} - Güvenli Toplanma Alanları`,
+        x,
+        yRange * 2
+      );
 
       setFont(doc, "regular");
       doc.setFontSize(textFontSize);
@@ -64,20 +56,14 @@ const createSafeGatheringPlacePDF = (doc, data, city) => {
       isNewPage = false;
     }
 
-    doc.text(`\u2022 ${el.name}`, x, y);
+    doc.setFontSize(textFontSize);
+    doc.text("\u2022 " + `${el}`, x, y);
     y += yRange;
-    if (el.url) {
-      doc.textWithLink("Google Maps: " + el.url, x, y, { url: el.url });
-      y += yRange;
-    }
-    if (el.source) {
-      doc.textWithLink("Kaynak: " + el.source, x, y, { url: el.source });
-      y += yRange;
-    }
   });
 };
 //getSafeGatheringPlace("Malatya")
 
 module.exports = {
-  createSafeGatheringPlacePDF,
+  writeSafeGatheringPlacesPDF,
+  getSafeGatheringPlace,
 };

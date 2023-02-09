@@ -1,8 +1,14 @@
 const fs = require("fs");
 const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf");
-const accomodation = require("./leafs/extractBarinma");
-const { createSafeGatheringPlacePDF } = require("./leafs/safeGatheringPlaces");
+const {
+  writeTemporaryAccomodationPDF,
+  getTemporaryAccomodationData,
+} = require("./leafs/extractBarinma");
+const {
+  writeSafeGatheringPlacesPDF,
+  getSafeGatheringPlace,
+} = require("./leafs/safeGatheringPlaces");
 const { writePhoneNumbersToPdf } = require("./leafs/telefonNumaralari");
 const { setFont, registerFont } = require("./docFunctions");
 const { createMealPdf, getMealData } = require("./leafs/yemek");
@@ -116,7 +122,14 @@ const depremBolgeleri = constantData.affectedCities;
 
 const createLeafTemporaryAccomodationPDF = async () => {
   const data = await fetchData();
-  depremBolgeleri.forEach(async (city) => {
+
+  const temporaryAccomodationData = getTemporaryAccomodationData(data);
+  const path = `../outputs/${encodeURIComponent(
+    temporaryAccomodationData[0].name_tr
+  )}/`;
+  fs.mkdirSync(path, { recursive: true });
+
+  temporaryAccomodationData[0].value.options.forEach((option) => {
     const doc = new jsPDF({
       orientation: "p",
       unit: "px",
@@ -124,22 +137,22 @@ const createLeafTemporaryAccomodationPDF = async () => {
     });
 
     registerFont(doc);
-
-    // createSafeGatheringPlacePDF(doc, data, city);
-    setFont(doc, "regular");
-    accomodation.createAccomodationPDF(data, doc, city);
-    doc.save(
-      "output/temporary_accomodations/" +
-        city +
-        "_temporary_accomodation" +
-        ".pdf"
-    );
+    writeTemporaryAccomodationPDF(doc, option);
+    doc.save(path + option.name_tr + ".pdf");
   });
 };
 
 const createLeafSafeGatheringPlacesPDF = async () => {
   const data = await fetchData();
-  depremBolgeleri.forEach(async (city) => {
+
+  const safe_gathering_places = getSafeGatheringPlace(data);
+
+  const path = `../outputs/${encodeURIComponent(
+    safe_gathering_places.name_tr
+  )}/`;
+  fs.mkdirSync(path, { recursive: true });
+
+  safe_gathering_places.value.options.forEach((option) => {
     const doc = new jsPDF({
       orientation: "p",
       unit: "px",
@@ -147,94 +160,41 @@ const createLeafSafeGatheringPlacesPDF = async () => {
     });
 
     registerFont(doc);
-
-    setFont(doc, "regular");
-    createSafeGatheringPlacePDF(doc, data, city);
-    doc.save("output/safe_gathering_places/" + city + ".pdf");
+    writeSafeGatheringPlacesPDF(doc, option);
+    doc.save(path + option.name_tr + ".pdf");
   });
 };
 
-const createLeafMealPDF = async () => {
-  const data = await fetchData();
+//TODO UPDATE MEAL PARSER
+// const createLeafMealPDF = async () => {
+//   const data = await fetchData();
 
-  const mealData = getMealData(data);
-  console.log(mealData);
+//   const mealData = getMealData(data);
+//   console.log(mealData);
+//   const path = `../outputs/${encodeURIComponent(mealData.name_tr)}/`;
+//   fs.mkdirSync(path, { recursive: true });
 
-  depremBolgeleri.forEach(async (city) => {
-    const doc = new jsPDF({
-      orientation: "p",
-      unit: "px",
-      format: "a4",
-    });
+//   depremBolgeleri.forEach(async (city) => {
+//     const doc = new jsPDF({
+//       orientation: "p",
+//       unit: "px",
+//       format: "a4",
+//     });
 
-    registerFont(doc);
+//     registerFont(doc);
 
-    setFont(doc, "regular");
-    createMealPdf(doc, data, city);
-    doc.save("output/meals/" + city + ".pdf");
-  });
-};
-
-const createPhoneNumbersPDF = async () => {
-  const data = await fetchData();
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-
-  registerFont(doc);
-  writePhoneNumbersToPdf(doc, data);
-  doc.save("output/" + "phone_numbers" + ".pdf");
-};
-
-const createWebSitesPDF = async () => {
-  const data = await fetchData();
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-
-  registerFont(doc);
-  writeWebsitesPDF(doc, data);
-  doc.save("output/" + "web_sites" + ".pdf");
-};
-
-const createArticlePDF = async () => {
-  const data = await fetchData();
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-
-  registerFont(doc);
-  writeArticlesPDF(doc, data);
-  doc.save("output/" + "articles" + ".pdf");
-};
-
-const createVpnPDF = async () => {
-  const data = await fetchData();
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-
-  registerFont(doc);
-  writeVpnPDF(doc, data);
-  doc.save("output/" + "vpn" + ".pdf");
-};
+//     setFont(doc, "regular");
+//     createMealPdf(doc, data, city);
+//     doc.save(path + city + ".pdf");
+//   });
+// };
 
 const createVeterinerPlacesPDF = async () => {
   const data = await fetchData();
 
   const veterinerPlaces = getVeterinerPlaces(data);
 
-  console.log(veterinerPlaces);
-
-  const path = `output/${encodeURIComponent(veterinerPlaces[0].name_tr)}/`;
+  const path = `../outputs/${encodeURIComponent(veterinerPlaces[0].name_tr)}/`;
   fs.mkdirSync(path, { recursive: true });
 
   veterinerPlaces[0].value.options.forEach((option) => {
@@ -254,7 +214,7 @@ const createHelpCentersPDF = async () => {
 
   const helpCenters = getHelpCenters(data);
 
-  const path = `output/${encodeURIComponent(helpCenters[0].name_tr)}/`;
+  const path = `../outputs/${encodeURIComponent(helpCenters[0].name_tr)}/`;
   fs.mkdirSync(path, { recursive: true });
 
   helpCenters[0].value.options.forEach((option) => {
@@ -273,7 +233,7 @@ const createBloodDonationPDF = async () => {
   const data = await fetchData();
   const bloodDonation = getBloodDonations(data);
 
-  const path = `output/${encodeURIComponent(bloodDonation[0].name_tr)}/`;
+  const path = `../outputs/${encodeURIComponent(bloodDonation[0].name_tr)}/`;
   fs.mkdirSync(path, { recursive: true });
 
   bloodDonation[0].value.options.forEach((option) => {
@@ -290,8 +250,68 @@ const createBloodDonationPDF = async () => {
   });
 };
 
+const createPhoneNumbersPDF = async () => {
+  const data = await fetchData();
+
+  const path = `../outputs/${encodeURIComponent("Önemli Telefon Numaraları")}`;
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writePhoneNumbersToPdf(doc, data);
+  doc.save(path + ".pdf");
+};
+
+const createWebSitesPDF = async () => {
+  const data = await fetchData();
+  const path = `../outputs/${encodeURIComponent("Önemli Web Siteleri")}`;
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writeWebsitesPDF(doc, data);
+  doc.save(path + ".pdf");
+};
+
+const createArticlePDF = async () => {
+  const data = await fetchData();
+  const path = `../outputs/${encodeURIComponent("Faydalı Yazılar")}`;
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writeArticlesPDF(doc, data);
+  doc.save(path + ".pdf");
+};
+
+const createVpnPDF = async () => {
+  const data = await fetchData();
+
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writeVpnPDF(doc, data);
+  doc.save("../outputs/" + "VPN" + ".pdf");
+};
+
 const createStemCellsPDF = async () => {
   const data = await fetchData();
+
+  const path = `../outputs/${encodeURIComponent("Kök Hücre Bağış Noktaları")}`;
+
   const doc = new jsPDF({
     orientation: "p",
     unit: "px",
@@ -300,32 +320,20 @@ const createStemCellsPDF = async () => {
 
   registerFont(doc);
   writeStemCellsPDF(doc, data);
-  doc.save("output/" + "stem_cells" + ".pdf");
-};
-
-const createMainPagePDF = async () => {
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-
-  registerFont(doc);
-  createCoverPage(doc, "Afet Bilgi Bilgilendirme Servisi");
-  doc.save("output/" + "first_page" + ".pdf");
+  doc.save(path + ".pdf");
 };
 
 const fetchData = async () => {
   // const dataAll = await axios.get(DATA_URL);
   const dataAll = JSON.parse(fs.readFileSync("data.json", "utf8"));
-  const data = dataAll.data;
+  const data = dataAll;
   return data;
 };
 
 module.exports = {
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
-  createLeafMealPDF,
+  // createLeafMealPDF,
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,
@@ -334,5 +342,4 @@ module.exports = {
   createHelpCentersPDF,
   createBloodDonationPDF,
   createStemCellsPDF,
-  createMainPagePDF,
 };
