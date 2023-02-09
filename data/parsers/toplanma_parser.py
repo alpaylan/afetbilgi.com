@@ -87,6 +87,7 @@ def main():
                     "type": "data",
                     "data": {
                         "dataType": "new-gathering-list",
+                        "city": city_name,
                         "items": items
                     }
                 }
