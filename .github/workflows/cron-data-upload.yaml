@@ -5,7 +5,7 @@ on:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "*/30 * * * *" # Run every 10 minutes
+    - cron: "*/30 * * * *" # Run every 30 minutes
 
 jobs:
   deploy:
@@ -42,13 +42,12 @@ jobs:
           python ./yazilar_parser.py
           python ./blood_parser.py
 
-          python ./barinma_parser.py
+          python ./barinma.py ../latest_datasets/barinma.json
           python ./yemek_parser.py
           python ./telefonnumaralari_parser.py
 
           python ./eczane.py ../latest_datasets/eczane.json
 
-          cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json
