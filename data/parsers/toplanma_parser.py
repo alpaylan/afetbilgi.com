@@ -1,11 +1,9 @@
 import pandas as pd
 import json
-import numpy as np
 
 from utils.functions import turkish_title
 
 def main():
-
 
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
@@ -15,6 +13,7 @@ def main():
 
     json_name = "../datasets/toplanma.json"
     df = pd.read_csv(url, encoding="utf-8")
+    df = df.sort_values(by=['Şehirler'])
 
     options = []
     items = []
@@ -44,14 +43,13 @@ def main():
                 items = []
                 city_name = tmp_sehir
 
-        else:
-            items.append(
-                {
-                    "name": row['Konum'] if not pd.isna(row['Konum'])  else None,
-                    "url": row['Maps Linki'] if not pd.isna(row['Maps Linki']) else None,
-                    "source": row['Kaynak'] if not pd.isna(row['Kaynak']) else None,
-                }
-            )
+        items.append(
+            {
+                "name": row['Konum'] if not pd.isna(row['Konum'])  else None,
+                "url": row['Maps Linki'] if not pd.isna(row['Maps Linki']) else None,
+                "source": row['Kaynak'] if not pd.isna(row['Kaynak']) else None,
+            }
+        )
     else:
         options.append(
             {

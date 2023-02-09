@@ -26,7 +26,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
       return <ArticleData value={dataNode.data as any} />;
     }
 
-    if (dataNode.data.dataType === 'blood-donation') {
+    if (dataNode.data.dataType === 'blood-donationlist') {
       return <BloodDonationData value={dataNode.data as any} />;
     }
 

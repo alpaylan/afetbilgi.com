@@ -1,9 +1,11 @@
 name: Data upload (cronjob)
 
 on:
+  workflow_dispatch:
+
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/10 * * * *' # Run every 10 minutes
+    - cron:  '*/30 * * * *' # Run every 10 minutes
 
 jobs:
   deploy:
@@ -34,24 +36,29 @@ jobs:
 
           cd parsers
 
-          python ./toplanma_parser.py > ../latest_datasets/toplanma.json
-          python ./faydalilinkler_parser.py > ../latest_datasets/faydali_linkler.json
-          python ./veteriner_parser.py > ../latest_datasets/veteriner.json
-          python ./yazilar_parser.py > ../latest_datasets/yazilar.json
-          python ./karayollari_kapali_yollar.py > ../latest_datasets/kapaliyollar.json
+          python ./toplanma_parser.py
+          python ./faydalilinkler_parser.py
+          python ./veteriner_parser.py
+          python ./yazilar_parser.py
+          python ./blood_parser.py
 
-          # python ./barinma_parser.py > ../latest_datasets/barinma.json
-          # python ./yemek_parser.py > ../latest_datasets/yemek.json
-          # python ./telefonnumaralari_parser.py > ../latest_datasets/telefon.json
+          python ./barinma_parser.py
+          python ./yemek_parser.py
+          python ./telefonnumaralari_parser.py
+
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
-
           cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json          
           cp ../datasets/kokhucre.json ../latest_datasets/kokhucre.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
+          cp ../datasets/toplanma.json ../latest_datasets/toplanma.json
+          cp ../datasets/telefon.json ../latest_datasets/telefon.json
+          cp ../datasets/faydali_linkler.json ../latest_datasets/faydali_linkler.json
+          cp ../datasets/veteriner.json ../latest_datasets/veteriner.json
+          cp ../datasets/yazilar.json ../latest_datasets/yazilar.json
 
       - name: Merge datasets
         run: |
@@ -59,5 +66,4 @@ jobs:
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        # TODO: Change s3://cdn.afetbilgi.com/sazak-test-data to s3://cdn.afetbilgi.com
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/sazak-test-data
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/

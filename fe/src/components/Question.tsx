@@ -16,6 +16,10 @@ import UsefulLinksData from './data/UsefulLinksdata';
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
 
+const getAutocompleteName = (option: any, lang: string) =>
+    option[`autocompleteHint_${lang}`] || option.autocompleteHint_tr || option.autocompleteHint;
+  
+
 export default function Question({ paths }: { paths: string[] }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -53,13 +57,13 @@ export default function Question({ paths }: { paths: string[] }) {
             paddingBottom: '50px',
           }}
         >
-          {selectedNode.autocompleteHint ? (
+          {getAutocompleteName(selectedNode, i18n.language) ? (
             <Autocomplete
               id='options-autocomplete'
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label={selectedNode.autocompleteHint}
+                  label={getAutocompleteName(selectedNode, i18n.language)}
                   variant='outlined'
                   sx={{ minWidth: '200px', m: 2 }}
                 />

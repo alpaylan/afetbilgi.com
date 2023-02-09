@@ -12,6 +12,13 @@ if __name__ == '__main__':
     json_obj['type'] = 'data'
     json_obj['data'] = {}
     json_obj['data']['dataType'] = 'stem-cell-donation'
-    json_obj['data']['items'] = df.to_dict(orient='records',)
+    json_obj['data']['items'] = [
+        {
+            'area': row['area'],
+            'city': row['city'],
+            'address': row['address'],
+            'phone': row['phone']
+        } for _, row in df.iterrows()
+    ]
     with open(f"{os.path.dirname(os.path.realpath(__file__))}/../datasets/kokhucre.json", "w") as f:
         f.write(json.dumps(json_obj, indent=4, ensure_ascii=False))
