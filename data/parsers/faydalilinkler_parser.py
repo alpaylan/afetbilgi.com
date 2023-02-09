@@ -12,7 +12,13 @@ def main():
 
     usefulLinks = []
 
+    isFirst = True
+
     for _, row in df.iterrows():
+
+        if isFirst:
+            isFirst = False
+            continue
 
         usefulLinks.append(
             {
