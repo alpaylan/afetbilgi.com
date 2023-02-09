@@ -1,17 +1,22 @@
+import sys
 import json
-
 import pandas as pd
 from utils.functions import turkish_title
 
 
 def main():
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
+
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Yemek"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/yemek.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
@@ -129,7 +134,7 @@ def main():
 
     }
 
-    with open(json_name, "w") as f:
+    with open(out_path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 

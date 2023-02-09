@@ -1,9 +1,15 @@
-import pandas as pd
+import sys
 import json
+import pandas as pd
 
 from utils.functions import turkish_title
 
 def main():
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
 
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
@@ -11,7 +17,6 @@ def main():
     sheet_name = "G%C3%BCvenli%20Toplanma%20Alanlar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/toplanma.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
@@ -104,7 +109,7 @@ def main():
         "text_ar": "في أي مدينة تبحث عن مناطق تجمع الأمنة"
     }
 
-    with open(json_name, "w+", encoding="utf-8") as f:
+    with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
