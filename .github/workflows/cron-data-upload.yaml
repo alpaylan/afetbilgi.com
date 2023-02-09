@@ -37,7 +37,7 @@ jobs:
           cd parsers
 
           python ./toplanma_parser.py
-          python ./faydalilinkler_parser.py
+          python ./faydalilinkler.py ../latest_datasets/faydali_linkler.json
           python ./veteriner_parser.py
           python ./yazilar_parser.py
           python ./blood.py ../latest_datasets/blood.json
@@ -56,7 +56,6 @@ jobs:
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
           cp ../datasets/toplanma.json ../latest_datasets/toplanma.json
           cp ../datasets/telefon.json ../latest_datasets/telefon.json
-          cp ../datasets/faydali_linkler.json ../latest_datasets/faydali_linkler.json
           cp ../datasets/veteriner.json ../latest_datasets/veteriner.json
           cp ../datasets/yazilar.json ../latest_datasets/yazilar.json
 
