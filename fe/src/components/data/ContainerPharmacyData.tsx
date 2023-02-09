@@ -9,6 +9,7 @@ export default function ContainerPharmacyData({
 }) {
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
+  value.items.sort((a, b) => a.city.localeCompare(b.city));
   return (
     <Box>
       <h3>{t('data.container_pharmacy')}</h3>
