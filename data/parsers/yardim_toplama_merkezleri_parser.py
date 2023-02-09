@@ -16,6 +16,40 @@ if __name__ == '__main__':
     df = pd.read_csv(url)
     df = df.fillna("")
 
+    sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    sheet_name = "Yard%C4%B1m%20Toplama%20Merkezleri"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    df2 = pd.read_csv(url)
+    df2 = df2.fillna("")
+
+    drop_columns = ["Submission Date", "Ad", "Soyad", "Telefon Numarası"]
+
+    df2 = df2.drop(columns=drop_columns)
+
+    rename = {
+        "Lütfen Şehir Seçin": "Şehir",
+        "Lütfen İlçenizi Giriniz": "İlçe",
+        "Lütfen Yardım Toplama Merkezinin Bağlı Olduğu Kurumun İsmini Yazınız": "Kurumtmp",
+        "Toplanma Merkezine Ait Bilginin Kaynağını Yazınız": "Link",
+        "Toplanma Merkezine Ait Telefon Numarasını Ekleyiniz": "Telefon Numarası",
+    }
+
+    df2 = df2.rename(columns=rename)
+
+    df2['Kurum'] = df2['Kurumtmp'].astype(str) + " - " + df2['İlçe'].astype(str)
+    df2 = df2.drop(columns=["Kurumtmp", "İlçe"])
+
+    df = pd.concat([df, df2])
+
+    df["Şehir"] = df["Şehir"].apply(str)
+    df["Şehir"] = df["Şehir"].apply(str.strip)
+    df["Şehir"] = df["Şehir"].apply(turkish_title)
+
+    df["Açıklamalar"] = ""
+
+    df = df.sort_values(by='Şehir')
+
     json_obj = {
         "autocompleteHint_tr": "Şehir",
         "autocompleteHint_en": "City",
@@ -32,16 +66,16 @@ if __name__ == '__main__':
     cityData = {}
 
     for _, row in df.iterrows():
-        city_name = turkish_title(row[0].strip())
+        city_name = turkish_title(row["Şehir"].strip())
         if city_name not in cityData:
             cityData[city_name] = []
         
         cityData[city_name].append({
             "city": city_name,
-            "name": row[1],
-            "url": row[2],
-            "phone_number": row[3],
-            "notes": row[4]
+            "name": row["Kurum"],
+            "url": row["Link"],
+            "phone_number": row["Telefon Numarası"],
+            "notes": row["Açıklamalar"]
         })
 
     for city in cityData:

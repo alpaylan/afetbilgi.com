@@ -8,22 +8,17 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     json_name = "../datasets/faydali_linkler.json"
-    df = pd.read_csv(url, encoding="utf-8", header=None)
+    df = pd.read_csv(url, encoding="utf-8")
 
     usefulLinks = []
 
-    isFirst = True
 
     for _, row in df.iterrows():
 
-        if isFirst:
-            isFirst = False
-            continue
-
         usefulLinks.append(
             {
-                "name": row[0],
-                "url": row[1],
+                "name": row["İsim"],
+                "url": row["Link"],
             }
         )
 
