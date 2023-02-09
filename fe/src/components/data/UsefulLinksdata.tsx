@@ -10,7 +10,6 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { UsefulLinksDataNode } from '../../interfaces/TreeNode';
-import { Language } from '../../utils/types';
 
 // const UsefulLinksLanguageHelper = ({
 //   item,
@@ -68,7 +67,7 @@ export default function UsefulLinksData({
   value: UsefulLinksDataNode;
   noTitle?: boolean;
 }) {
-  const { t, i18n} = useTranslation();
+  const { t } = useTranslation();
 
   
   return (
@@ -101,23 +100,11 @@ export default function UsefulLinksData({
               </TableCell>
               <TableCell>
                 <>
-                  {i18n.language !== Language.TR &&  item.url && (
+                  {item.url && (
                     <>
-                      You can reach the page from{' '}
                       <a href={item.url} target='_blank' rel='noreferrer'>
-                        this link
+                        Link
                       </a>
-                      <br />
-                    </>
-                  )}
-                  {i18n.language === Language.TR && item.url && (
-                    <>
-                      Sayfaya{' '}
-                      <a href={item.url} target='_blank' rel='noreferrer'>
-                        bu linkten
-                      </a>{' '}
-                      ulaşabilirsiniz.
-                      <br />
                     </>
                   )}
                 </>
