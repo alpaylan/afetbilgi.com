@@ -2,10 +2,11 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
+  push:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/30 * * * *' # Run every 10 minutes
+    - cron: "*/30 * * * *" # Run every 10 minutes
 
 jobs:
   deploy:
@@ -30,7 +31,7 @@ jobs:
       - name: Run parsers
         run: |
           cd data
-          
+
           mkdir to_upload
           mkdir latest_datasets
 
@@ -49,7 +50,7 @@ jobs:
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
-          cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json          
+          cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json
           cp ../datasets/kokhucre.json ../latest_datasets/kokhucre.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
