@@ -1,92 +1,88 @@
 import pandas as pd
 import json
-
-city_map = {
-    'tr': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
-    'en': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
-    'ku': ['Adana- Edene', 'Gaziantep- Dîlok', 'Malatya- Meletî', 'Diyarbakır- Amed', 'Şanlıurfa- Riha', 'Kahramanmaraş- Gurgum', 'Osmaniye', 'Adıyaman- Semsûr', 'Kilis- Kilîs', 'Mardin- Mêrdîn', 'Hatay- Xetay', 'Amasya', 'Ankara- Enqere', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis- Bedlîs', 'Bursa', 'Denizli', 'Erzurum- Erzêrom', 'Eskişehir', 'Kayseri- Qeyserî', 'Kırklareli', 'Konya- Qonye', 'Kütahya', 'Mersin- Mêrsîn', 'Muğla', 'Muş- Mûş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas- Sêwas', 'Şırnak-Şirnex', 'Trabzon', 'Uşak', 'Van- Wan']
-}
-
-def todict(obj, classkey=None):
-    if isinstance(obj, dict):
-        data = {}
-        for (k, v) in obj.items():
-            data[k] = todict(v, classkey)
-        return data
-    elif hasattr(obj, "_ast"):
-        return todict(obj._ast())
-    elif hasattr(obj, "__iter__") and not isinstance(obj, str):
-        return [todict(v, classkey) for v in obj]
-    elif hasattr(obj, "__dict__"):
-        data = dict([(key, todict(value, classkey))
-            for key, value in obj.__dict__.items()
-            if not callable(value) and not key.startswith('_')])
-        if classkey is not None and hasattr(obj, "__class__"):
-            data[classkey] = obj.__class__.__name__
-        return data
-    else:
-        return obj
-
+from utils.functions import turkish_title
 
 
 
 if __name__ == "__main__":
-    sheet_id = "1La7CSZYBkpO_jvIe6Xs252VQPp_tVx1ioOWYvzyRK_k"
+    city_translation = json.loads(open("./utils/il_translate.json").read())
+
+    sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Veterinerler"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     json_name = "../datasets/veteriner.json"
     df = pd.read_csv(url, encoding="utf-8")
 
-    print(df)
-    df = df.rename(columns={
-        "Şehir": "city",
-        "İsim": "name",
-        "Telefon": "phone_number",
-        "Konum": "address",
-        "Konum Linki": "maps_link",
-    })
+    df.sort_values(by='Şehir')
 
-    cities = df['city'].unique()
+    options = []
+    vets = []
 
-    json_obj = {
-        "type": "question",
-        "text": "Hangi şehirde veteriner arıyorsunuz?",
-        "options": [
+    city_name = None
+
+    for _, row in df.iterrows():
+        
+        tmp_sehir = turkish_title(row[0].strip())
+
+        if tmp_sehir != city_name:
+            if city_name is None:
+                city_name = tmp_sehir
+            else:
+                options.append(
+                    {
+                        "value" : {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": city_name,
+                                "vets": vets
+                            }
+                        },
+                        "name_tr": city_name,
+                        "name_en": city_translation[city_name]['en'],
+                        "name_ar": city_translation[city_name]['ar'],
+                        "name_ku": city_translation[city_name]['ku'],
+                    }
+                )
+                vets = []
+                city_name = tmp_sehir
+
+        vets.append(
             {
-                "name": city,
-                "value": None,
-            } for city in cities
-        ]
-    }
-
-
-    for city in cities:
-        city_df = df[df['city'] == city]
-        city_df = city_df.drop(columns=['city'])
-        city_dict = city_df.to_dict(orient='records')
-        city_dict = todict(city_dict)
-
-        for option in json_obj['options']:
-            if option['name'] == city:
-                city_name = city.strip()
-
-                option['name_tr'] = city_map['tr'][city_map['tr'].index(city_name)]
-                option['name_en'] = city_map['en'][city_map['tr'].index(city_name)]
-                option['name_ku'] = city_map['ku'][city_map['tr'].index(city_name)]
-
-                option['value'] = {
+                "name": row[1] if not pd.isna(row[1])  else None,
+                "phone_number": row[2] if not pd.isna(row[2]) else None,
+                "address": row[3] if not pd.isna(row[3]) else None,
+                "maps_link": row[4] if not pd.isna(row[4]) else None,
+            }
+        )
+        
+    else:
+        options.append(
+            {
+                "value" : {
                     "type": "data",
                     "data": {
                         "dataType": "data-vet",
-                        "city": city,
-                        "vets": city_dict
+                        "city": city_name,
+                        "vets": vets
                     }
-                }
-                continue
+                },
+                "name_tr": city_name,
+                "name_en": city_translation[city_name]['en'],
+                "name_ar": city_translation[city_name]['ar'],
+                "name_ku": city_translation[city_name]['ku'],
+            }
+        )
 
-    for option in json_obj['options']:
-        del option['name']
+    data = {
+        "type": "question",
+        "options": options,
+        "text_tr": "Hangi şehirde veteriner arıyorsunuz?",
+        "text_en": "In which city are you looking for a veterinary clinic?",
+        "text_ku": "Hûn li kîjan bajarî li veterîner digerin?",
+        "text_ar": "في أي مدينة تبحث عن طبيب بيطري؟",
+    }
 
-    with open(json_name, "w", encoding="utf-8") as f:
-        json.dump(json_obj, f, ensure_ascii=False, indent=4)
+    with open(json_name, "w+", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)

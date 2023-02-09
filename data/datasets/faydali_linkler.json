@@ -4,14 +4,6 @@
         "dataType": "useful-links",
         "usefulLinks": [
             {
-                "name": "Karayolları Genel Müdürlüğü Twitter (Yol durumu)",
-                "url": "https://twitter.com/KarayollariGM"
-            },
-            {
-                "name": "AHBAP",
-                "url": "https://ahbap.org/"
-            },
-            {
                 "name": "AFAD",
                 "url": "https://www.afad.gov.tr/"
             },
@@ -20,7 +12,11 @@
                 "url": "https://www.akut.org.tr/"
             },
             {
-                "name": "Kızılay",
+                "name": "AHBAP",
+                "url": "Ahbap Platformu Resmi Sitesi"
+            },
+            {
+                "name": "KIZILAY",
                 "url": "https://www.kizilay.org.tr/"
             },
             {
@@ -36,16 +32,24 @@
                 "url": "https://afetharitasi.org/"
             },
             {
-                "name": "Otelz.com (Deprem Zedelere Destekte Bulunan Konaklama Yerleri",
+                "name": "Otelz.com (Depremzedelere Destekte Bulunan Konaklama Yerleri)",
                 "url": "https://www.otelz.com/tr/gecmisolsunturkiyem"
             },
             {
                 "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
-                "url": "https://deprem.io/"
+                "url": "deprem.io"
             },
             {
-                "name": "MGM Deprem Bölgesi Hava Tahmini",
-                "url": "https://afet.mgm.gov.tr"
+                "name": "Kök Hücre Bağış Noktaları",
+                "url": "Kök Hücre Bağış Noktaları (saglik.gov.tr)"
+            },
+            {
+                "name": "Ankara Deprem Yardım Merkezleri",
+                "url": "https://www.ankaradepremyardim.com/"
+            },
+            {
+                "name": "E-Nabız Afet Bilgilendirme",
+                "url": "https://enabiz.gov.tr/?st=1#ModalDogalAfetBilgilendirme"
             }
         ]
     }

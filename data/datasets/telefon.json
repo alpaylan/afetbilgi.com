@@ -49,58 +49,71 @@
             },
             {
                 "name": "KIZILAY ÇAĞRI MERKEZİ",
-                "phone_number": "168",
-                "is_plain": true
+                "phone_number": "168"
             },
             {
                 "name": "POLİS",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "ITFAİYE",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "AMBULANS",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "JANDARMA",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "SAHİL GÜVENLİK",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "ORMAN YANGINI İHBAR",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "AFET ARAMA KURTARMA",
-                "phone_number": "112",
-                "is_plain": true
+                "phone_number": "112"
             },
             {
                 "name": "SU ARIZA İHBAR",
-                "phone_number": "185",
-                "is_plain": true
+                "phone_number": "185"
             },
             {
                 "name": "ELEKTRİK ARIZA İHBAR",
-                "phone_number": "186",
-                "is_plain": true
+                "phone_number": "186"
             },
             {
                 "name": "DOĞALGAZ ARIZA İHBAR",
-                "phone_number": "187",
-                "is_plain": true
+                "phone_number": "187"
+            },
+            {
+                "name": "SABİM (YAKINLARIM HANGİ HASTANEDE)",
+                "phone_number": "184"
+            },
+            {
+                "name": "SOSYAL DESTEK HATTI (KAYIPLAR İÇİN)",
+                "phone_number": "183"
+            },
+            {
+                "name": "Türkiye Kadın Dernekleri Federasyonu",
+                "phone_number": "0212 656 96 96"
+            },
+            {
+                "name": "Türkiye Kadın Dernekleri Federasyonu",
+                "phone_number": "0549 656 96 96"
+            },
+            {
+                "name": "BabalaTV 1",
+                "phone_number": "0 532 470 79 03"
+            },
+            {
+                "name": "BabalaTV 2",
+                "phone_number": "0 533 094 96 73"
             }
         ]
     }

@@ -3,8 +3,8 @@ import json
 import os
 
 def main():
-    sheet_id = "1La7CSZYBkpO_jvIe6Xs252VQPp_tVx1ioOWYvzyRK_k"
-    sheet_name = "Konu%20Hakk%C4%B1nda%20Yaz%C4%B1lar"
+    sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
+    sheet_name = "Faydal%C4%B1%20Yaz%C4%B1lar"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     json_name = "../datasets/yazilar.json"

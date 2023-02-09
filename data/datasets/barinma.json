@@ -115,6 +115,30 @@
                         },
                         {
                             "city": "Adana",
+                            "name": "Adana Garı",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoX3dz0A_Pw/?igshid=NTdlMDg3MTY%3D",
+                            "address": "https://goo.gl/maps/23AP2QCCqZM6ADQTA",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Garden Business Hotel",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/RyDtGn2MrriiZGnA9",
+                            "validation_date": "09.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Çağ Üniversitesi Yaşar Bayboğan Kampüsü",
+                            "is_validated": true,
+                            "url": "https://twitter.com/Adana_Bld/status/1622962147322916864?s=20&t=UsNDJEhPEMucsKPTHjHcTg",
+                            "address": "https://goo.gl/maps/Rnqi9wjLUi2HsoeA6",
+                            "validation_date": "09.02.2023"
+                        },
+                        {
+                            "city": "Adana",
                             "name": "Başkent Üniversitesi Özel Başkent Okulları",
                             "is_validated": true,
                             "url": "https://twitter.com/iskaraman/status/1623093598722859008",
@@ -1747,7 +1771,10 @@
             }
         },
         {
-            "name": "Kocaeli",
+            "name_tr": "Kocaeli",
+            "name_en": "Kocaeli",
+            "name_ku": "Kocaeli - Kocaeli",
+            "name_ar": "كوكايلي",
             "value": {
                 "type": "data",
                 "data": {
@@ -1761,6 +1788,49 @@
                             "url": "https://www.instagram.com/stories/lotusmeat/3033074465344709007/",
                             "address": "https://goo.gl/maps/L5MVpiGMDaXnLAS19",
                             "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Antalya",
+            "name_en": "Antalya",
+            "name_ku": "Antalya - Antalya",
+            "name_ar": "أنطاليا",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Antalya",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Antalya",
+                            "name": "Dream World Palace Hotel",
+                            "is_validated": true,
+                            "url": "https://dreamworldpalace.com.tr/",
+                            "address": "https://goo.gl/maps/L2Bec5qzngdh2deX8",
+                            "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Batman",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Batman",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Batman",
+                            "name": "Batman Misafirhane",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sudesakii/status/1623062174712336390",
+                            "address": null,
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }

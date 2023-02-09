@@ -2,14 +2,13 @@ import pandas as pd
 import json
 
 def main():
-    sheet_id = "1La7CSZYBkpO_jvIe6Xs252VQPp_tVx1ioOWYvzyRK_k"
-    sheet_name = "Faydal%C4%B1%20Linkler"
+    sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
+    sheet_name = "%C3%96nemli%20Web%20Siteleri"
 
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     json_name = "../datasets/faydali_linkler.json"
     df = pd.read_csv(url, encoding="utf-8", header=None)
-    print(df)
 
     usefulLinks = []
 

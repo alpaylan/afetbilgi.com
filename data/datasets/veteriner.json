@@ -1,9 +1,5 @@
 {
     "type": "question",
-    "text_tr": "Hangi şehirde veteriner arıyorsunuz?",
-    "text_en": "In which city are you looking for a veterinary clinic?",
-    "text_ku": "Hûn li kîjan bajarî li veterîner digerin?",
-    "text_ar": "في أي مدينة تبحث عن طبيب بيطري؟",
     "options": [
         {
             "value": {
@@ -40,15 +36,16 @@
                 }
             },
             "name_tr": "Diyarbakır",
-            "name_en": "Diyarbakır",
-            "name_ku": "Diyarbakır- Amed"
+            "name_en": "Diyarbakir",
+            "name_ar": "دياربكر",
+            "name_ku": "Diyarbakir - Amed"
         },
         {
             "value": {
                 "type": "data",
                 "data": {
                     "dataType": "data-vet",
-                    "city": "Gaziantep ",
+                    "city": "Gaziantep",
                     "vets": [
                         {
                             "name": "Asil Veteriner Kliniği Gaziantep",
@@ -67,7 +64,8 @@
             },
             "name_tr": "Gaziantep",
             "name_en": "Gaziantep",
-            "name_ku": "Gaziantep- Dîlok"
+            "name_ar": "غزيانتب",
+            "name_ku": "Gaziantep - Dîlok"
         },
         {
             "value": {
@@ -86,8 +84,9 @@
                 }
             },
             "name_tr": "Şanlıurfa",
-            "name_en": "Şanlıurfa",
-            "name_ku": "Şanlıurfa- Riha"
+            "name_en": "Sanliurfa",
+            "name_ar": "سانليورفا",
+            "name_ku": "Sanliurfa - Rîha"
         },
         {
             "value": {
@@ -119,7 +118,8 @@
             },
             "name_tr": "Adana",
             "name_en": "Adana",
-            "name_ku": "Adana- Edene"
+            "name_ar": "أضنة",
+            "name_ku": "Adana - Edene"
         },
         {
             "value": {
@@ -145,7 +145,8 @@
             },
             "name_tr": "Mersin",
             "name_en": "Mersin",
-            "name_ku": "Mersin- Mêrsîn"
+            "name_ar": "مرسين",
+            "name_ku": "Mersin - Mêrsîn"
         },
         {
             "value": {
@@ -165,7 +166,12 @@
             },
             "name_tr": "Malatya",
             "name_en": "Malatya",
-            "name_ku": "Malatya- Meletî"
+            "name_ar": "مالاتيا",
+            "name_ku": "Malatya - Meletî"
         }
-    ]
+    ],
+    "text_tr": "Hangi şehirde veteriner arıyorsunuz?",
+    "text_en": "In which city are you looking for a veterinary clinic?",
+    "text_ku": "Hûn li kîjan bajarî li veterîner digerin?",
+    "text_ar": "في أي مدينة تبحث عن طبيب بيطري؟"
 }
