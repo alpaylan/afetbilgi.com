@@ -81,10 +81,10 @@ def main():
 
     data = {
         "type": "question",
-        "autocomplementHint_tr": "Şehir",
-        "autocomplementHint_en": "City",
-        "autocomplementHint_ar": "مدينة",
-        "autocomplementHint_ku": "Bajar",
+        "autocompleteHint_tr": "Şehir",
+        "autocompleteHint_en": "City",
+        "autocompleteHint_ar": "مدينة",
+        "autocompleteHint_ku": "Bajar",
         "options": options,
         "text_tr": "Hangi şehirde kan verebilirsiniz?",
         "text_en": "Places you can donate blood",
