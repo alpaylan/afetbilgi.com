@@ -1,6 +1,6 @@
-import pandas as pd
+import sys
 import json
-import os
+import pandas as pd
 
 def main():
     if len(sys.argv) != 2:
