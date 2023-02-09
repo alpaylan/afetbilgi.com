@@ -19,13 +19,6 @@ export default function CityAccommodation({
   const { t } = useTranslation();
   return (
     <Box>
-      <h2>
-        <b>
-          <a href='https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi' target='_blank' rel='noreferrer'>
-          </a>
-        </b>
-        {t('data.city_accommodation.general')}{' '}
-      </h2>
       <h3>
         {t('data.city_accommodation.title', {
           city: value.city,
