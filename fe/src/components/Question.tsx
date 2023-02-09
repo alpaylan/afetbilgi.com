@@ -32,8 +32,25 @@ export default function Question({ paths }: { paths: string[] }) {
 
   const { data: selectedNode, isLoading } = useQuestionData(paths);
 
-  if (isLoading || !selectedNode) {
+  if (isLoading) {
     return <></>;
+  }
+
+  if (!selectedNode) {
+    return <Box>
+      <Box
+        sx={{
+          textAlign: 'center',
+          display: 'flex',
+          flexFlow: 'column nowrap',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant='h4'>
+          {t('notFound')}
+        </Typography>
+      </Box>
+    </Box>;
   }
 
   if (selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
@@ -162,12 +179,11 @@ export default function Question({ paths }: { paths: string[] }) {
           }}
         >
           {renderOptions()}
-          {selectedNode.externalData &&
-            selectedNode.externalData.usefulLinks?.length > 0 && (
+          {selectedNode.externalData?.usefulLinks?.length > 0 && (
               <Box width='100%' mt={8}>
                 <Typography variant='h4'>
-                  {selectedNode.externalData?.[`text_${i18n.language}`] ||
-                    selectedNode.externalData?.text}
+                  {selectedNode.externalData[`text_${i18n.language}`] ||
+                    selectedNode.externalData.text}
                 </Typography>
                 <UsefulLinksData value={selectedNode.externalData} noTitle />
               </Box>
