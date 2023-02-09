@@ -1,15 +1,12 @@
 <!-- Improved compatibility of back to top link: See:  -->
 <a name="readme-top"></a>
 
-  <h1 align="left">afetbilgi.com</h1>
+# afetbilgi.com
 
- İletişim Kanalları/Contact Channels:
+İletişim Kanalları/Contact Channels:
 
-    - [info@afetbilgi.com](mailto:info@afetbilgi.com)
-    - [IT Yardım Discord Sunucusu](https://discord.com/invite/itdepremyardim)
-
-  </p>
-</div>
+- [info@afetbilgi.com](mailto:info@afetbilgi.com)
+- [IT Yardım Discord Sunucusu](https://discord.com/invite/itdepremyardim)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
