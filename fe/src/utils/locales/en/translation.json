@@ -50,5 +50,6 @@
   "location": "Location",
   "details": "Details",
   "website": "Website",
+  "source": "Source",
   "contact": "Contact"
 }

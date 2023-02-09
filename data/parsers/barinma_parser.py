@@ -1,12 +1,8 @@
-import sys
-import csv
 import json
+import pandas as pd
 
-cities = {
-    'tr': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
-    'en': ['Adana', 'Gaziantep', 'Malatya', 'Diyarbakır', 'Şanlıurfa', 'Kahramanmaraş', 'Osmaniye', 'Adıyaman', 'Kilis', 'Mardin', 'Hatay', 'Amasya', 'Ankara', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis', 'Bursa', 'Denizli', 'Erzurum', 'Eskişehir', 'Kayseri', 'Kırklareli', 'Konya', 'Kütahya', 'Mersin', 'Muğla', 'Muş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas', 'Şırnak', 'Trabzon', 'Uşak', 'Van'],
-    'ku': ['Adana- Edene', 'Gaziantep- Dîlok', 'Malatya- Meletî', 'Diyarbakır- Amed', 'Şanlıurfa- Riha', 'Kahramanmaraş- Gurgum', 'Osmaniye', 'Adıyaman- Semsûr', 'Kilis- Kilîs', 'Mardin- Mêrdîn', 'Hatay- Xetay', 'Amasya', 'Ankara- Enqere', 'Antalya', 'Balıkesir', 'Bayburt', 'Bitlis- Bedlîs', 'Bursa', 'Denizli', 'Erzurum- Erzêrom', 'Eskişehir', 'Kayseri- Qeyserî', 'Kırklareli', 'Konya- Qonye', 'Kütahya', 'Mersin- Mêrsîn', 'Muğla', 'Muş- Mûş', 'Nevşehir', 'Rize', 'Sakarya', 'Sivas- Sêwas', 'Şırnak-Şirnex', 'Trabzon', 'Uşak', 'Van- Wan']
-}
+from utils.functions import turkish_title
+
 
 def index_or_none(l, i):
     if len(l) > i:
@@ -15,72 +11,68 @@ def index_or_none(l, i):
         return None
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python barinma_csv_extract.py <csv_file>")
-        return
+    city_translation = json.loads(open("./utils/il_translate.json").read())
 
-    csv_file = sys.argv[1]
+    sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
+    sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    json_name = "../datasets/barinma.json"
+    df = pd.read_csv(url, encoding="utf-8")
 
     parsed = []
-
     options = []
 
-    with open(csv_file, "r", encoding="utf-8") as f:
-        csv_reader = csv.reader(f, delimiter=',')
+    city_name = None
 
-        is_first_row = True
-        city_name = None
-        for row in csv_reader:
-
-            if is_first_row:
-                is_first_row = False
-                continue
-
-            if row[0] != city_name:
-                if city_name is None:
-                    city_name = row[0]
-                else:
-                    city_name_2 = 'Kahramanmaraş' if city_name == 'K. Maraş' else city_name
-
-                    options.append({
-                        "name_tr": city_name_2,
-                        "name_en": cities['en'][cities['tr'].index(city_name_2)],
-                        "name_ku": cities['ku'][cities['tr'].index(city_name_2)],
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "city": city_name,
-                                "dataType": "city-accommodation",
-                                "items": parsed
-                            }
+    for _, row in df.iterrows():
+        tmp_sehir = turkish_title(row['Şehir'].strip())
+        
+        if tmp_sehir != city_name:
+            if city_name is None:
+                city_name = tmp_sehir
+            else:
+                options.append({
+                    "name_tr": city_name,
+                    "name_en": city_translation[city_name]['en'],
+                    "name_ku": city_translation[city_name]['ku'],
+                    "name_ar": city_translation[city_name]['ar'],
+                    "value": {
+                        "type": "data",
+                        "data": {
+                            "city": city_name,
+                            "dataType": "city-accommodation",
+                            "items": parsed
                         }
-                    })
-                    city_name = row[0]
-
-                    parsed = []
-
-
-            parsed.append({
-                "city": index_or_none(row, 0),
-                "name": index_or_none(row, 1),
-                "is_validated": index_or_none(row, 2) == "Doğrulandı",
-                "url": index_or_none(row, 3),
-                "address": index_or_none(row, 4),
-                "validation_date": index_or_none(row, 5),
-            })
-            
-        else:
-            options.append({
-                "name": city_name,
-                "value": {
-                    "type": "data",
-                    "data": {
-                        "city": city_name,
-                        "dataType": "city-accommodation",
-                        "items": parsed
                     }
+                })
+                city_name = row[0]
+
+                parsed = []
+
+        get_data = lambda x: x if not pd.isna(x) else None
+
+        parsed.append({
+            "city": city_name,
+            "name": get_data(row['Lokasyon']),
+            "is_validated": get_data(row['Doğrulanma Durumu']) == "Doğrulandı",
+            "url": get_data(row['Link']),
+            "address": get_data(row['Konum linki']),
+            "validation_date": get_data(row['Doğrulanma Tarihi']),
+        })
+        
+    else:
+        options.append({
+            "name": city_name,
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": city_name,
+                    "dataType": "city-accommodation",
+                    "items": parsed
                 }
-            })
+            }
+        })
 
     data = {
         "type": "question",
@@ -89,10 +81,39 @@ def main():
         "text_ku": "Hûn li Kîjan Bajarî Cihên Lêhihewinê yên Demkî Digerin?",
         "text_ar": "في أي مدينة تبحث عن مساكن مؤقة",
         "autocompleteHint": "Şehir",
-        "options": options
+        "options": options,
+        'externalData' : {
+            "text_tr": 'Kalacak yer imkanı sağlayan diğer kaynaklar',
+            "text_en": 'Other sources that provide temporary accommodation',
+            "text_ku": 'Çavkaniyên din dijital li ser cihên lêhihewinê',
+            "text_ar": 'مصادر أخرى توفر مساكن مؤقة',
+            "usefulLinks": [
+                {
+                    "name":'Otels.com',
+                    "url": 'https://gsb.gov.tr/haber-detay.html/968',
+                },
+                {
+                    "name": "Turkish Airlines Holidays",
+                    "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller"
+                },
+                {
+                    "name": "Ahbap Güvenli Bölgeler Haritası",
+                    "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8"
+                },
+                {
+                    "name": "HepsiEmlak Dostluk Çatısı",
+                    "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s"
+                },
+                {
+                    "name": "	T.C. MİLLÎ EĞİTİM BAKANLIĞI DESTEK HİZMETLERİ GENEL MÜDÜRLÜĞÜ E-DESTEK",
+                    "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx"
+                }
+            ],
+        }
     }
 
-    print(json.dumps(data, ensure_ascii=False, indent=4))
+    with open(json_name, "w+", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     main()

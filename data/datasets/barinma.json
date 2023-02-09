@@ -9,7 +9,8 @@
         {
             "name_tr": "Adana",
             "name_en": "Adana",
-            "name_ku": "Adana- Edene",
+            "name_ku": "Adana - Edene",
+            "name_ar": "أضنة",
             "value": {
                 "type": "data",
                 "data": {
@@ -22,7 +23,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/amofesor/status/1622607644832804865",
                             "address": "https://goo.gl/maps/cKUEe6vz8jVaViz7A",
-                            "validation_date": "07.02.2023 17:37"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -30,7 +31,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://www.google.com/maps/place/Adana+Bah%C3%A7e%C5%9Fehir+Koleji/@37.0185809,35.2488164,17z/data=!3m1!4b1!4m5!3m4!1s0x152888787df976fd:0xf773cfb466b9266!8m2!3d37.0185766!4d35.2510051",
-                            "validation_date": ""
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -38,7 +39,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/cDxySwiAkQhdgDCG9",
-                            "validation_date": "07.02.2023 18:25"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -46,7 +47,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ZoXRmSFZhUyp4KLN7",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Adana",
@@ -54,7 +55,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ECYJQAkggKqE2n9x9",
-                            "validation_date": "07.02.2023 18:30"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -62,7 +63,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/j4y7VURWexzvdHAg6",
-                            "validation_date": "07.02.2023 18:33"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -70,7 +71,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/9BKy6eEGGeu6Q1UU6",
-                            "validation_date": "07.02.2023 18:36"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -78,7 +79,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/s2D21TCA48JmjQFF9",
-                            "validation_date": "07.02.2023 18:37"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -86,7 +87,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/D7ZrE6ovF1PyP6dV8",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Adana",
@@ -94,7 +95,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/SF55K3eCi9yhpSkd6",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Adana",
@@ -102,7 +103,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/TmogwCLNiiQQ2pQr9",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Adana",
@@ -110,7 +111,7 @@
                             "is_validated": true,
                             "url": "https://www.otelz.com/gecmisolsunturkiyem",
                             "address": "https://goo.gl/maps/ZR3kvAzRb2HBY4wQ9",
-                            "validation_date": "07.02.2023 18:42"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -118,7 +119,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/iskaraman/status/1623093598722859008",
                             "address": "https://goo.gl/maps/PmHP6rSrBZiGjuPd7",
-                            "validation_date": "08.02.2023 02:02"
+                            "validation_date": "08.02.2023"
                         }
                     ]
                 }
@@ -127,7 +128,8 @@
         {
             "name_tr": "Gaziantep",
             "name_en": "Gaziantep",
-            "name_ku": "Gaziantep- Dîlok",
+            "name_ku": "Gaziantep - Dîlok",
+            "name_ar": "غزيانتب",
             "value": {
                 "type": "data",
                 "data": {
@@ -140,7 +142,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/gAY4JPT9Rizi2xUr7",
-                            "validation_date": "07.02.2023 18:43"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -148,7 +150,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/RG8DJvh3BV7mBT938",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Gaziantep",
@@ -156,7 +158,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
                             "address": "https://goo.gl/maps/bQ5mBhmPAwq6ktCb6",
-                            "validation_date": "07.02.2023 18:50"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -164,7 +166,7 @@
                             "is_validated": true,
                             "url": "https://instagram.com/stories/cicekplazagaziantep/3032241723521749525?utm_source=ig_story_item_share&igshid=NTdlMDg3MTY=",
                             "address": "https://goo.gl/maps/t7396QCJrYsRoWdy7",
-                            "validation_date": "07.02.2023 18:52"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -172,7 +174,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoTp-OFqsSy/?igshid=NTdlMDg3MTY=",
                             "address": "https://goo.gl/maps/Ws91SZ14gLJiR3pu8",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Gaziantep",
@@ -180,7 +182,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/pmAvhGJ5UznrfFK87",
-                            "validation_date": "07.02.2023 19:02"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -188,7 +190,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sehitkamilbel/status/1622637257189470210?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/HTorv2F6otkfdJub8",
-                            "validation_date": "07.02.2023 19:02"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -196,7 +198,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/mGvk9NJJ8dTtNboZ7",
-                            "validation_date": "07.02.2023 19:03"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -204,7 +206,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/xpejamsginRAWRSS6",
-                            "validation_date": "07.02.2023 19:04"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -212,7 +214,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ZDcvcCfRUETJfdV48",
-                            "validation_date": "07.02.2023 19:05"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -220,7 +222,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/reel/CoU7UwfKCtE/?igshid=NTdlMDg3MTY=",
                             "address": "https://goo.gl/maps/xsSE8auC3sm8sXUu9",
-                            "validation_date": "07.02.2023 19:06"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -228,7 +230,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/aTnqgFXXpmsHjmQm7",
-                            "validation_date": "07.02.2023 19:07"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -236,7 +238,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/RV8AisEBkbzf21FL9",
-                            "validation_date": "07.02.2023 19:08"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -244,7 +246,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/MsXiqteNnrZoJKNT9",
-                            "validation_date": "07.02.2023 19:09"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -252,7 +254,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/P83GSgpMEEQM2j946",
-                            "validation_date": "07.02.2023 19:10"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -260,7 +262,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/Yqi98dCUkte8qnxh9",
-                            "validation_date": "07.02.2023 19:11"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -268,7 +270,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/EVe7AKH6xyQGkbT89",
-                            "validation_date": "07.02.2023 19:12"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -276,7 +278,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/xNP97UZUSuwC9gMU7",
-                            "validation_date": "07.02.2023 19:13"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -284,7 +286,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/dAJm8scy2P3nwB2T8",
-                            "validation_date": "07.02.2023 19:14"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -292,7 +294,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://g.co/kgs/5B32Fs",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -300,7 +302,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://g.co/kgs/DagURt",
-                            "validation_date": "07.02.2023 19:16"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -308,15 +310,15 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/HTorv2F6otkfdJub8",
-                            "validation_date": "07.02.2023 19:17"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
                             "name": "Dumlupınar Spor Salonu",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "",
-                            "validation_date": "07.02.2023 19:18"
+                            "address": null,
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -324,7 +326,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/bdtAfpnjMr4AcWHD6",
-                            "validation_date": "07.02.2023 19:19"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -332,7 +334,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/bvDLsGcAv1XFj2Q29",
-                            "validation_date": "07.02.2023 19:20"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -340,7 +342,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/RQVpds3MBUXnNWxg7",
-                            "validation_date": "07.02.2023 19:21"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -348,7 +350,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/znpyW3eMoxZhv4AZ6",
-                            "validation_date": "07.02.2023 19:22"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
@@ -356,7 +358,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ppKufpZ155k7Dfeu8",
-                            "validation_date": "07.02.2023 19:23"
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -365,7 +367,8 @@
         {
             "name_tr": "Malatya",
             "name_en": "Malatya",
-            "name_ku": "Malatya- Meletî",
+            "name_ku": "Malatya - Meletî",
+            "name_ar": "مالاتيا",
             "value": {
                 "type": "data",
                 "data": {
@@ -378,7 +381,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/NBGoKwqRhcdPF6kW9",
-                            "validation_date": "07.02.2023 19.39"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Malatya",
@@ -386,7 +389,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
                             "address": "https://goo.gl/maps/fqS5WG2aG3zw4ouG9",
-                            "validation_date": "07.02.2023 19.45"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Malatya",
@@ -394,7 +397,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/teeCLffbQVA4u4Ty8",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -402,7 +405,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/nBcaffM69e2xXGa8A",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -410,7 +413,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/5jwDQbabYQTp5L4j6",
-                            "validation_date": "07.02.2023 19:55"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Malatya",
@@ -418,7 +421,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/h8HFUyy8X4VqNo7k7",
-                            "validation_date": "07.02.2023 20:02"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Malatya",
@@ -426,7 +429,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/LDrwkPx8hprbezZJ6",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -434,7 +437,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/HdHFZ9GhiK2e7ica6",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -442,7 +445,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/gzfSQ1vWuNWnNCRJ7",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -450,7 +453,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/7wUKFgnJLm86AJw66",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -458,7 +461,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/1NU72ZaUWQosA7hw7",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -466,7 +469,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/FaT1EGSmjdATLEmE6",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -474,7 +477,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/owepv9q2dgG1cwmL9",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -482,7 +485,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/QgHfeqcSmFZ7A4Sy8",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -490,7 +493,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622422476280954882?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/y6trrVqyp3Ean9127",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -498,7 +501,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622422476280954882?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/f6GnkTvh6ENorhuL6",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Malatya",
@@ -506,7 +509,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://g.co/kgs/HfLCQP",
-                            "validation_date": ""
+                            "validation_date": null
                         }
                     ]
                 }
@@ -514,8 +517,9 @@
         },
         {
             "name_tr": "Diyarbakır",
-            "name_en": "Diyarbakır",
-            "name_ku": "Diyarbakır- Amed",
+            "name_en": "Diyarbakir",
+            "name_ku": "Diyarbakir - Amed",
+            "name_ar": "دياربكر",
             "value": {
                 "type": "data",
                 "data": {
@@ -528,7 +532,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/YyZqewS2yB9V31AF7",
-                            "validation_date": "07.02.2023 20:23"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -536,7 +540,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
                             "address": "https://g.co/kgs/MHkbxC",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Diyarbakır",
@@ -544,7 +548,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
                             "address": "https://goo.gl/maps/Ka1xfvFPfgefzNDSA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -552,7 +556,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
                             "address": "https://goo.gl/maps/Gg5mc62EfitGL4hH6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -560,7 +564,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
                             "address": "https://goo.gl/maps/PwYReUKFF7f4u84JA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -568,7 +572,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
                             "address": "https://goo.gl/maps/DLFXt8192npdHmpo6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -576,7 +580,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/beKq9oqAy7KqFrU98",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -584,7 +588,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/DX5ZA1rTZB5wMUjTA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -592,7 +596,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/rHJc7YfGQNGkRFmz9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -600,7 +604,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/hb75TSxJJRKCK7st9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -608,7 +612,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/NKdS4pFmw1p58ZT99",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -616,7 +620,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/kFMw8oxMuW1Zuem27",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -624,7 +628,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/KeMRZLPtssRwRexE7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -632,7 +636,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/ZFf1brW3DBeFzQXP8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -640,7 +644,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/974Y8x7xMdNCa5zs8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -648,7 +652,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/BD1b8CKSwwgshFZd6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -656,7 +660,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/qRENMTpytU5P3RuNA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -664,7 +668,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/HNymsFQf6WVBGesVA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -672,7 +676,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/wPKhBTo4qgHVrGUH9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -680,7 +684,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
                             "address": "https://goo.gl/maps/vp8MGSgMCoNScFy5A",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -688,7 +692,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/d8xvavm5nk1sMbQs9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -696,7 +700,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/1SyTaRne14uyx96F6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -704,7 +708,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/ahMAXZ864Ar62tzH8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -712,7 +716,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/CgeqG9kGkthoeYY16",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -720,7 +724,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/z2z2PrC1Ps2GTz1w6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -728,7 +732,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/JWdgeVD7ZHbyN62CA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -736,7 +740,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/yWT6APttekiwTkMz5",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -744,7 +748,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/VZ9cwbDTvdLY8zT49",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -752,7 +756,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/tAdqiDFDd2iC25Ca7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -760,7 +764,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/bFZuXf1QoxHgRcrp9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -768,7 +772,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/dbzog9G8Cc1tmv786",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -776,7 +780,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/VetomwXCqvSGa76i9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -784,7 +788,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
                             "address": "https://goo.gl/maps/ivihUnSLtT19c1bVA",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -792,7 +796,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/ntri8xJw52BvzGKK8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -800,7 +804,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/qLPmh8Yx8zyZSK3j9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -808,7 +812,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/MJFgVedLBZJBxuaS7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -816,7 +820,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/JwyFoT2hfa1UvPCm7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -824,7 +828,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/NoEJARahkpYC3sQ7A",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -832,7 +836,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/DPqjGnAkVtqHzU2C6",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -840,7 +844,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/EYMgkfYheChiRe6Y7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -848,7 +852,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/ABtnTrqh8xn2eCM59",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -856,7 +860,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/4b8CWvA7xy9vDFGg8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -864,7 +868,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/FGHmbfKM6ZyEjfEF7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -872,7 +876,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/PxP79EVTG8vwNsYi9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -880,7 +884,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/WGLR27mZRvXQjsp4A",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -888,7 +892,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/7We8FGPiLmFDcEFL8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -896,7 +900,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
                             "address": "https://goo.gl/maps/yRBpsJpMkfCwgsqC8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -904,7 +908,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
                             "address": "https://goo.gl/maps/bV5iyheQX5yWywC8A",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -912,7 +916,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
                             "address": "https://goo.gl/maps/vePp9LUnCEu113qQ8",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -920,7 +924,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
                             "address": "https://goo.gl/maps/k9878mNxHbeAGBvt9",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -928,7 +932,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
                             "address": "https://goo.gl/maps/skoU9AXAMktzY6Qj7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Diyarbakır",
@@ -936,7 +940,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
                             "address": "https://goo.gl/maps/fYT1THNEDRET8YsT7",
-                            "validation_date": "07.02.2023 20:18"
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -944,8 +948,9 @@
         },
         {
             "name_tr": "Şanlıurfa",
-            "name_en": "Şanlıurfa",
-            "name_ku": "Şanlıurfa- Riha",
+            "name_en": "Sanliurfa",
+            "name_ku": "Sanliurfa - Rîha",
+            "name_ar": "سانليورفا",
             "value": {
                 "type": "data",
                 "data": {
@@ -958,7 +963,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/uxKQdSEi6kLcgEuM9",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Şanlıurfa",
@@ -966,7 +971,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/5XQsqdYBUrrso9nj9",
-                            "validation_date": "07.02.2023 19:48"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -974,7 +979,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ueKfi68SNWxM1RZdA",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -982,7 +987,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/AJBzHDMXZXsQXEhn6",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -990,7 +995,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/fKxpMhW9815GGAym9",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -998,7 +1003,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ntZcb5Q8EPEXQHbf9",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1006,7 +1011,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/W6TYBaBb7N48TPKN8",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1014,7 +1019,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/sXY5SS4znfxykoDw6",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1022,7 +1027,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622444884618616834?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/9We1t4zUFbB9DQ1g6",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1030,7 +1035,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/1qUHFARvwYZ96qEu8",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1038,7 +1043,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/pxx8BqPiyKWShnT77",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1046,7 +1051,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/5Wu4gCz5t48dsak28",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1054,7 +1059,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/GTxMtkDoYV7YqEpn8",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1062,7 +1067,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/qGdgWi7kcDg8dKabA",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1070,7 +1075,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/F2r4kraXpz9HGWsi9",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1078,7 +1083,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/SPraGxAiMwz3P6CG8",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1086,7 +1091,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/FF873dLKR8wvew2k8",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1094,7 +1099,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/pmNfrbfmCQSVF6CQ7",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Şanlıurfa",
@@ -1102,7 +1107,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/6yuuN9r53brkwNHd9",
-                            "validation_date": "07.02.2023 19:38"
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -1110,61 +1115,62 @@
         },
         {
             "name_tr": "Kahramanmaraş",
-            "name_en": "Kahramanmaraş",
-            "name_ku": "Kahramanmaraş- Gurgum",
+            "name_en": "Kahramanmaras",
+            "name_ku": "Kahramanmaras - Mereş",
+            "name_ar": "كهرمانماراس",
             "value": {
                 "type": "data",
                 "data": {
-                    "city": "K. Maraş",
+                    "city": "Kahramanmaraş",
                     "dataType": "city-accommodation",
                     "items": [
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Merkez Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
                             "address": "https://goo.gl/maps/zd4zFgUe9x5FKhiR8",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Saim Çotur Spor Salonu",
                             "is_validated": true,
                             "url": "https://gsb.gov.tr/haber-detay.html/968",
                             "address": "https://goo.gl/maps/Bw9DrMMhtWPeeGQ5A",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Batıpark",
                             "is_validated": true,
                             "url": "https://gsb.gov.tr/haber-detay.html/968",
                             "address": "https://goo.gl/maps/ShiS7g9S46BVXiXx5",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Hanefi Mahçiçek Stadyumu",
                             "is_validated": true,
                             "url": "https://gsb.gov.tr/haber-detay.html/968",
                             "address": "https://goo.gl/maps/DnTNo8FnK8vC3eXU7",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Kafum",
                             "is_validated": true,
                             "url": "https://gsb.gov.tr/haber-detay.html/968",
                             "address": "https://goo.gl/maps/CCtnVmYE1aPvLKBM9",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "K. Maraş",
+                            "city": "Kahramanmaraş",
                             "name": "Atatürk Parkı",
                             "is_validated": true,
                             "url": "https://gsb.gov.tr/haber-detay.html/968",
                             "address": "https://goo.gl/maps/k5qkLWTb811teea26",
-                            "validation_date": "07.02.2023 19:15"
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -1173,7 +1179,8 @@
         {
             "name_tr": "Osmaniye",
             "name_en": "Osmaniye",
-            "name_ku": "Osmaniye",
+            "name_ku": "Osmaniye - Kınıkan",
+            "name_ar": "اسمانيا",
             "value": {
                 "type": "data",
                 "data": {
@@ -1186,7 +1193,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/epYwzH2jW7BM6cCPA",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Osmaniye",
@@ -1194,7 +1201,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/hfFikvJan7LvF1Go8",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1202,7 +1209,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/3R1Dh2ySKVSBWFxKA",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1210,7 +1217,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/eEeTLtqSFD1ZscCA9",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1218,7 +1225,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/4xNLQiVV5d5oudid7",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1226,7 +1233,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/y84WTGuVmoVXJDfh9",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1234,7 +1241,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/VCoAFpo6nsrDva9PA",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1242,7 +1249,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/PgFUCLhPrZenES1Y8",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1250,7 +1257,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/7jhotoFEM6fbfNSZ6",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1258,15 +1265,15 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/GQdfgs2YzNw7uv3K6",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
                             "name": "Kadirli Spor Salon",
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "",
-                            "validation_date": "07.02.2023 18:44"
+                            "address": null,
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1274,7 +1281,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/Cun74EJg4bDds8SW7",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1282,15 +1289,15 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/ap8QbyRQJnScwNoGA",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
                             "name": "Bahçe Spor Salonu",
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "",
-                            "validation_date": "07.02.2023 18:44"
+                            "address": null,
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1298,7 +1305,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/4DL8G26MAQfY4V8C7",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Osmaniye",
@@ -1306,7 +1313,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
                             "address": "https://goo.gl/maps/Di9xNjNnBnhzsVyi9",
-                            "validation_date": "07.02.2023 18:44"
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -1314,8 +1321,9 @@
         },
         {
             "name_tr": "Adıyaman",
-            "name_en": "Adıyaman",
-            "name_ku": "Adıyaman- Semsûr",
+            "name_en": "Adiyaman",
+            "name_ku": "Adiyaman - Semsûr",
+            "name_ar": "أديامان",
             "value": {
                 "type": "data",
                 "data": {
@@ -1327,16 +1335,16 @@
                             "name": "ASKON Adıyaman Şubesi",
                             "is_validated": true,
                             "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Adıyaman",
                             "name": "Merkez Çadırkenti",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Adıyaman",
@@ -1344,7 +1352,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/ofUJ6pcxSkxP18W97",
-                            "validation_date": ""
+                            "validation_date": null
                         }
                     ]
                 }
@@ -1353,7 +1361,8 @@
         {
             "name_tr": "Kilis",
             "name_en": "Kilis",
-            "name_ku": "Kilis- Kilîs",
+            "name_ku": "Kilis - Kilis",
+            "name_ar": "كيليس",
             "value": {
                 "type": "data",
                 "data": {
@@ -1365,16 +1374,16 @@
                             "name": "Öncüpınar Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Kilis",
                             "name": "Elbeyli Beşiriye Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         }
                     ]
                 }
@@ -1383,7 +1392,8 @@
         {
             "name_tr": "Mardin",
             "name_en": "Mardin",
-            "name_ku": "Mardin- Mêrdîn",
+            "name_ku": "Mardin - Mêrdîn",
+            "name_ar": "ماردين",
             "value": {
                 "type": "data",
                 "data": {
@@ -1395,8 +1405,8 @@
                             "name": "Midyat Çadırkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         }
                     ]
                 }
@@ -1405,7 +1415,8 @@
         {
             "name_tr": "Hatay",
             "name_en": "Hatay",
-            "name_ku": "Hatay- Xetay",
+            "name_ku": "Hatay - Xetay",
+            "name_ar": "حاتاي",
             "value": {
                 "type": "data",
                 "data": {
@@ -1417,32 +1428,32 @@
                             "name": "Altınözü Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Hatay",
                             "name": "Yayladağı Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Hatay",
                             "name": "Apaydın Konteynerkent",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Hatay",
                             "name": "Güveççi Çadırkenti",
                             "is_validated": true,
                             "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "",
-                            "validation_date": ""
+                            "address": null,
+                            "validation_date": null
                         },
                         {
                             "city": "Hatay",
@@ -1450,7 +1461,7 @@
                             "is_validated": true,
                             "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/UaANoswaFJi6Wuv5A birden fazla cemevi konumu var",
-                            "validation_date": ""
+                            "validation_date": null
                         },
                         {
                             "city": "Hatay",
@@ -1458,7 +1469,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/MtFc8Sraad3rw7DQ9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1466,7 +1477,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/txV7n2CgEqcxRAzc6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1474,7 +1485,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/1nU9Z7KdVobvdmLj8",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1482,7 +1493,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/xQgY2UFX4N526W7j6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1490,7 +1501,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/MrKp86DQzfRokPET8",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1498,7 +1509,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/mMLobqfGcRjnMNEH7",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1506,7 +1517,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/nKzvByPZNQaYorwU8",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1514,7 +1525,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/1RTjLuC17rVrhsZeA",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1522,7 +1533,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/naitX6XHa1VdQD34A",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1530,7 +1541,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/PsfUpApYoaVY5q5L7",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1538,7 +1549,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/LEpBPA7eCzpjkytj6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1546,7 +1557,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/gXzb3LuVi25FZ9k87",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1554,7 +1565,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/Wi7y5ctMQrGqNeJk9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1562,7 +1573,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/dzcx7mwHg5A4RZ1A9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1570,7 +1581,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/gN7E4WEvR8SdijW89",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1578,7 +1589,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/F3GPhDdDxLL1XRHo7",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1586,7 +1597,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/Tbkdkej8rpXkjVGU7",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1594,7 +1605,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/2i2eMxWWXkZ3eYyX9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1602,7 +1613,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/VURh3jQShCYLBLuv5",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1610,7 +1621,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/bnBMKz6awrhec2Mt6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1618,7 +1629,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/xSqyht2K5voXeMti9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1626,7 +1637,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/ohmQaRUf2pFyC1Y38",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1634,7 +1645,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/oG8ryshLvosh36tN8",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1642,7 +1653,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/jTHzQfmnRveCTbMG6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1650,7 +1661,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/bqri3K71iLM6CvQp9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1658,7 +1669,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/kfTk4WQmSBhCzLpZA",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1666,7 +1677,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/vMVCabWp9HERgkar9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1674,7 +1685,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/euZxaChWGphqoyGX6",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1682,7 +1693,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/ovfGx3B3z8iXh94L9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1690,7 +1701,7 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/aRWYH7kyUQFs1HAF7",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Hatay",
@@ -1698,11 +1709,90 @@
                             "is_validated": true,
                             "url": "https://www.instagram.com/p/CoXjqwZID4_/",
                             "address": "https://goo.gl/maps/8kaDG8o3kBudt91g9",
-                            "validation_date": "08.02.2023 14:00"
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "İskenderun Deniz Er Eğitim Alayı",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/YpCwQ2HvijWRkVZY8",
+                            "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Karaman",
+            "name_en": "Karaman",
+            "name_ku": "Karaman - Karaman",
+            "name_ar": "كارامان",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Karaman",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Karaman",
+                            "name": "KYK Hatuniye Kız Öğrenci Yurdu",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/YkLyiHNrW6QuRrcZ6",
+                            "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Kocaeli",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Kocaeli",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Kocaeli",
+                            "name": "La Flora House Hotel",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/stories/lotusmeat/3033074465344709007/",
+                            "address": "https://goo.gl/maps/L5MVpiGMDaXnLAS19",
+                            "validation_date": "08.02.2023"
                         }
                     ]
                 }
             }
         }
-    ]
+    ],
+    "externalData": {
+        "text_tr": "Kalacak yer imkanı sağlayan diğer kaynaklar",
+        "text_en": "Other sources that provide temporary accommodation",
+        "text_ku": "Çavkaniyên din dijital li ser cihên lêhihewinê",
+        "text_ar": "مصادر أخرى توفر مساكن مؤقة",
+        "usefulLinks": [
+            {
+                "name": "Otels.com",
+                "url": "https://gsb.gov.tr/haber-detay.html/968"
+            },
+            {
+                "name": "Turkish Airlines Holidays",
+                "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller"
+            },
+            {
+                "name": "Ahbap Güvenli Bölgeler Haritası",
+                "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8"
+            },
+            {
+                "name": "HepsiEmlak Dostluk Çatısı",
+                "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s"
+            },
+            {
+                "name": "\tT.C. MİLLÎ EĞİTİM BAKANLIĞI DESTEK HİZMETLERİ GENEL MÜDÜRLÜĞÜ E-DESTEK",
+                "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx"
+            }
+        ]
+    }
 }
