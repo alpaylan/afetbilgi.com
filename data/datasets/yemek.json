@@ -1,53 +1,347 @@
 {
     "type": "question",
+    "autocompleteHint_tr": "Şehir",
+    "autocompleteHint_en": "City",
+    "autocompleteHint_ar": "مدينة",
+    "autocompleteHint_ku": "Bajar",
     "text_tr": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz.",
     "text_en": "Choose the city you would like to see the food distribution centers.",
     "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
     "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
     "options": [
         {
-            "name": "Diyarbakir",
+            "name": "Adana",
             "value": {
                 "type": "question",
-                "text": "Diyarbakir şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_tr": "Adana şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Adana",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في أضنة",
+                "text_ku": "Bilindînên yemekên Adana - Edene li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
-                        "name": "Yenisehir ",
+                        "name": "Ceyhan",
                         "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Diyarbakir",
-                                "county": "Yenisehir ",
+                                "city": "Adana",
+                                "county": "Ceyhan",
                                 "items": [
                                     {
-                                        "name": "Plaza Hotel, Elazığ Cad büyükşehir Belediye yanı",
-                                        "maps_url": "https://goo.gl/maps/ojSDCdQiJoQ4h6zH7",
-                                        "url": "https://www.instagram.com/p/CoW_OA1s0W5/",
-                                        "phone_number": "5344844440",
-                                        "updated_at_date": "08/02/2023",
-                                        "updated_at_time": 1.2
+                                        "name": " Ceyhan Cemevi \n",
+                                        "maps_url": "https://goo.gl/maps/iBcNX5eoSNx4dXmB7",
+                                        "url": "https://twitter.com/HaciBektasVakfi/status/1623055915984502790",
+                                        "phone_number": "0544 530 81 00",
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "23:27"
                                     }
                                 ]
                             }
                         }
                     },
                     {
+                        "name": "Çukurova",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Adana",
+                                "county": "Çukurova",
+                                "items": [
+                                    {
+                                        "name": "Ciğerci Ulaş",
+                                        "maps_url": "https://www.instagram.com/cigerciulaskistak/",
+                                        "url": "https://goo.gl/maps/Dro6otqRpXLGzezp7",
+                                        "phone_number": "0322 232 84 86",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "02:32"
+                                    },
+                                    {
+                                        "name": "Cihangir Kebap Kaburga",
+                                        "maps_url": "https://goo.gl/maps/YnYa6L6v6oPHqWyP6",
+                                        "url": "https://www.instagram.com/cihangir/\n",
+                                        "phone_number": "0322 233 60 60",
+                                        "updated_at_date": "11/02/2023",
+                                        "updated_at_time": "04:48"
+                                    },
+                                    {
+                                        "name": "Fit Atölyem",
+                                        "maps_url": "https://goo.gl/maps/14n6zY148SEZpCqV7",
+                                        "url": "https://www.instagram.com/fitatolyem/",
+                                        "phone_number": "0555 151 39 46",
+                                        "updated_at_date": "10/02/2023",
+                                        "updated_at_time": "03:15"
+                                    },
+                                    {
+                                        "name": "Şef Balık",
+                                        "maps_url": "https://goo.gl/maps/HzhJcJu5TFMazaiRA",
+                                        "url": "https://www.instagram.com/sefbalik/",
+                                        "phone_number": "0322 233 23 01",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "04:26"
+                                    },
+                                    {
+                                        "name": "The Most Coffee",
+                                        "maps_url": "https://goo.gl/maps/CztUhciQGC8sKeXg9",
+                                        "url": "https://www.instagram.com/themostcoffe/",
+                                        "phone_number": "0322 502 80 90",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "04:36"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Seyhan",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Adana",
+                                "county": "Seyhan",
+                                "items": [
+                                    {
+                                        "name": "Cihangir Dürümmatik",
+                                        "maps_url": "https://goo.gl/maps/eaZgXpcYyAAxALKs7",
+                                        "url": "https://www.instagram.com/cihangir/",
+                                        "phone_number": null,
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "02:48"
+                                    },
+                                    {
+                                        "name": "Cihangir Kebap Büryan",
+                                        "maps_url": "https://goo.gl/maps/y7wHEWYiEeUvEcmPA",
+                                        "url": "https://www.instagram.com/cihangir/\n",
+                                        "phone_number": "0542 202 01 63",
+                                        "updated_at_date": "10/02/2023",
+                                        "updated_at_time": "03:48"
+                                    },
+                                    {
+                                        "name": "Sir Winston Pub",
+                                        "maps_url": "https://goo.gl/maps/KmqMWkZ2iNHXHcai6",
+                                        "url": "https://www.instagram.com/sirwinstonpubadana/",
+                                        "phone_number": "0541 803 4133",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "04:30"
+                                    },
+                                    {
+                                        "name": "Zeynep Usta Künefe",
+                                        "maps_url": "https://goo.gl/maps/6aA8YpbEfGX3326S9",
+                                        "url": "https://www.instagram.com/zeynepustaadana/",
+                                        "phone_number": "0322 228 00 28",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "04:43"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Tarsus",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Adana",
+                                "county": "Tarsus",
+                                "items": [
+                                    {
+                                        "name": "Çağ Üniversitesi Yaşar Bayboğan Kampüsü",
+                                        "maps_url": "https://goo.gl/maps/Rnqi9wjLUi2HsoeA6",
+                                        "url": "https://twitter.com/Adana_Bld/status/1622962147322916864?s=20&t=UsNDJEhPEMucsKPTHjHcTg",
+                                        "phone_number": "0324 651 48 00",
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "02:25"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Adıyaman",
+            "value": {
+                "type": "question",
+                "text_tr": "Adıyaman şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Adiyaman",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في أديامان",
+                "text_ku": "Bilindînên yemekên Adiyaman - Semsûr li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
+                        "name": "Börgenek Köyü",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Adıyaman",
+                                "county": "Börgenek Köyü",
+                                "items": [
+                                    {
+                                        "name": "Şeyh Abuzer Yıldırım Türbesi",
+                                        "maps_url": "https://goo.gl/maps/DGrG4zSuEKV6BxtE7",
+                                        "url": null,
+                                        "phone_number": "0532 659 38 32",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Diyarbakır",
+            "value": {
+                "type": "question",
+                "text_tr": "Diyarbakır şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Diyarbakir",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في دياربكر",
+                "text_ku": "Bilindînên yemekên Diyarbakir - Amed li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
                         "name": "Kayapınar",
                         "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Diyarbakir",
+                                "city": "Diyarbakır",
                                 "county": "Kayapınar",
                                 "items": [
                                     {
+                                        "name": "Diclekent Sin Cafe",
+                                        "maps_url": "https://goo.gl/maps/qqBnqWRsaeQqHYNT9",
+                                        "url": "https://www.instagram.com/p/CoZZbjQoGLG/?igshid=MDM4ZDc5MmU%3D",
+                                        "phone_number": "0506 429 13 15",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
                                         "name": "Pepûle Mitbex",
-                                        "maps_url": "https://www.google.com/maps/place/Pep%C3%BBle+Mitbex/@37.9455857,40.1781942,15z/data=!4m2!3m1!1s0x0:0x9158cc169fbb481a?sa=X&ved=2ahUKEwiXmp_L2oT9AhUsQvEDHda2CuYQ_BJ6BAhJEAg",
-                                        "url": "Her sabah çorba dağıtımı",
+                                        "maps_url": "https://goo.gl/maps/zaH1ppvLhrwbk4bw6",
+                                        "url": null,
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 20.0
+                                        "updated_at_time": "20:00"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Yenişehir",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Diyarbakır",
+                                "county": "Yenişehir",
+                                "items": [
+                                    {
+                                        "name": "Plaza Hotel, Elazığ Cad. Büyükşehir Belediye yanı",
+                                        "maps_url": "https://goo.gl/maps/ojSDCdQiJoQ4h6zH7",
+                                        "url": "https://www.instagram.com/p/CoW_OA1s0W5/",
+                                        "phone_number": "0534 484 44 40",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "01:20"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Gaziantep",
+            "value": {
+                "type": "question",
+                "text_tr": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Gaziantep",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في غزيانتب",
+                "text_ku": "Bilindînên yemekên Gaziantep - Dîlok li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
+                        "name": "Şahinbey",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Gaziantep",
+                                "county": "Şahinbey",
+                                "items": [
+                                    {
+                                        "name": "Kelebek Paça Beyran Restaurant",
+                                        "maps_url": "https://goo.gl/maps/QUjQ6b7ARiYc4Hi76",
+                                        "url": null,
+                                        "phone_number": "0342 230 96 33",
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "17:00"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Şehitkamil",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Gaziantep",
+                                "county": "Şehitkamil",
+                                "items": [
+                                    {
+                                        "name": "KünefeHan ",
+                                        "maps_url": "https://goo.gl/maps/Guj7S2WGudYL261AA",
+                                        "url": "https://www.instagram.com/kunefe.han/",
+                                        "phone_number": "0342 322 10 10",
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "18:41"
+                                    },
+                                    {
+                                        "name": "Gaziantep Gaziray İstasyonu- AFAD Çadırı",
+                                        "maps_url": "https://goo.gl/maps/wLy6YhPvUa5Z5wLb9",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "20:13 "
+                                    },
+                                    {
+                                        "name": "Altunkaya Group - Gaziantep 4, Organize Sanayi",
+                                        "maps_url": " https://goo.gl/maps/FgXbwVJvYBSEQtBn8",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2022",
+                                        "updated_at_time": "02:20"
+                                    },
+                                    {
+                                        "name": "Karşıyaka Sosyal Tesisleri",
+                                        "maps_url": "https://goo.gl/maps/we8dZQerG4vKMDtDA",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
+                                        "name": "Kayaönü Sosyal Tesisleri",
+                                        "maps_url": "https://goo.gl/maps/7BWYVW4BVDpTryDd6",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
+                                        "name": "Huqqabaz Iconova",
+                                        "maps_url": "https://goo.gl/maps/K7BUjdBDfgNzZmkJ8",
+                                        "url": "https://www.instagram.com/huqqabaz/",
+                                        "phone_number": null,
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "19:00"
                                     }
                                 ]
                             }
@@ -60,7 +354,10 @@
             "name": "Hatay",
             "value": {
                 "type": "question",
-                "text": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_tr": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Hatay",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في حاتاي",
+                "text_ku": "Bilindînên yemekên Hatay - Xetay li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
                         "name": "İskenderun",
@@ -74,10 +371,34 @@
                                     {
                                         "name": "İskenderun Gençlik Merkezi",
                                         "maps_url": "https://goo.gl/maps/pUbUT4da6E2DiEiN7",
-                                        "url": "https://twitter.com/kasapoglu/status/1622684769757630487 https://twitter.com/hilmiturkmen34/status/1622972543056457729",
+                                        "url": "https://twitter.com/hilmiturkmen34/status/1622972543056457729",
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 17.56
+                                        "updated_at_time": "17:56"
+                                    },
+                                    {
+                                        "name": "İskenderun Teknik Üniversitesi Bahçesi ",
+                                        "maps_url": "https://goo.gl/maps/wcXMPAv4U5uUQegw6",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "22:10"
+                                    },
+                                    {
+                                        "name": "Adliyesi yanı İş Bankası Karşısı",
+                                        "maps_url": "https://goo.gl/maps/V1mFgD3QyhRFQ4S7A",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2022",
+                                        "updated_at_time": "20:13"
+                                    },
+                                    {
+                                        "name": "St. George Kilisesi Avlusu",
+                                        "maps_url": "https://goo.gl/maps/PBeTJtoiWHTSamx89",
+                                        "url": "https://twitter.com/wannartcom/status/1623256325038739456",
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "12:44"
                                     }
                                 ]
                             }
@@ -98,7 +419,15 @@
                                         "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 19.25
+                                        "updated_at_time": "19:25"
+                                    },
+                                    {
+                                        "name": "Kapalı Spor Salonu",
+                                        "maps_url": "https://goo.gl/maps/imVJdU8ne85Qf1xE9",
+                                        "url": null,
+                                        "phone_number": "0537 594 70 30",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
                                     }
                                 ]
                             }
@@ -119,28 +448,7 @@
                                         "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 19.25
-                                    }
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "name": "Iskenderun",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "food-items",
-                                "city": "Hatay",
-                                "county": "Iskenderun",
-                                "items": [
-                                    {
-                                        "name": "Iskenderun Teknik Universitesi Bahcesi ",
-                                        "maps_url": "https://goo.gl/maps/wcXMPAv4U5uUQegw6",
-                                        "url": null,
-                                        "phone_number": null,
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 22.1
+                                        "updated_at_time": "19:25"
                                     }
                                 ]
                             }
@@ -161,74 +469,138 @@
                                         "url": "https://twitter.com/ekrem_imamoglu/status/1623020341021839370",
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2013",
-                                        "updated_at_time": 21.06
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Gaziantep",
-            "value": {
-                "type": "question",
-                "text": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                "options": [
-                    {
-                        "name": "Şahinbey",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "food-items",
-                                "city": "Gaziantep",
-                                "county": "Şahinbey",
-                                "items": [
+                                        "updated_at_time": "21:06"
+                                    },
                                     {
-                                        "name": "Kelebek Paça Beyran Restaurant",
-                                        "maps_url": "https://goo.gl/maps/QUjQ6b7ARiYc4Hi76",
+                                        "name": "Karayolları 53. şube",
+                                        "maps_url": "https://maps.app.goo.gl/cftPp7finGgdoAHV7?g_st=ic",
+                                        "url": "https://twitter.com/mansuryavas06/status/1623213726517145601?s=46&t=FAonhxr4Yhm_2AD3TQYrZg",
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "10:57"
+                                    },
+                                    {
+                                        "name": "Hatay Eğitim ve Araştırma Hastanesi Bahçesi",
+                                        "maps_url": "https://goo.gl/maps/3NW8u1wQaEwSuXg17",
                                         "url": null,
-                                        "phone_number": "3422309633",
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 17.0
+                                        "phone_number": "0545 467 34 54",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "14:06"
+                                    },
+                                    {
+                                        "name": "Antakya Ataturk Parki-Kizilay Cadiri-Kışla Saray, Park Sk. No:23  ",
+                                        "maps_url": "https://goo.gl/maps/Wn7Td2qap57MrFPy9",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "23:00"
+                                    },
+                                    {
+                                        "name": "Burdur Mehmet Akif Ersoy Üniversitesi tarafından Hatay'da kurulan yemek çadırı- E-5 Karayolu Cd. 31060 Hatay Merkez",
+                                        "maps_url": "https://goo.gl/maps/PZDqAztmNF7KNi1u6",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:35"
+                                    },
+                                    {
+                                        "name": "Nuri Kuzeytepe Restaurant- Kuzeytepe Mah, Atatürk Cd NO:19/A ",
+                                        "maps_url": "https://goo.gl/maps/HbkpKFNw49t37sC27",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:35"
+                                    },
+                                    {
+                                        "name": "Hatay Expo ",
+                                        "maps_url": "https://goo.gl/maps/Wgrw3QxzDzZdDtNW7",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:35"
+                                    },
+                                    {
+                                        "name": "Antakya Belediyesi Ek Hizmet Bina Yanı ",
+                                        "maps_url": "https://goo.gl/maps/uqyZJ1hUqcTdytTSA",
+                                        "url": null,
+                                        "phone_number": "0505 565 95 52",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:34"
                                     }
                                 ]
                             }
                         }
                     },
                     {
-                        "name": "Şehitkamil",
+                        "name": "Belen",
                         "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Gaziantep",
-                                "county": "Şehitkamil",
+                                "city": "Hatay",
+                                "county": "Belen",
                                 "items": [
                                     {
-                                        "name": "KünefeHan ",
-                                        "maps_url": "https://www.google.com/maps/place/K%C3%BCnefe+Han/@37.0718648,37.3443679,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e1feed2bcd3b:0xad338053986d522c!8m2!3d37.0718606!4d37.3485951",
-                                        "url": "(7/24 açık) https://www.instagram.com/kunefe.han/",
-                                        "phone_number": "3423221010",
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 18.41
-                                    },
-                                    {
-                                        "name": "Gaziantep Gaziray istasyonu- AFAD Cadiri",
-                                        "maps_url": "https://goo.gl/maps/wLy6YhPvUa5Z5wLb9",
+                                        "name": "Tuna Sokak",
+                                        "maps_url": "https://goo.gl/maps/kYTFZg6EGg7Pxfgs7",
                                         "url": null,
-                                        "phone_number": null,
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 20.13
-                                    },
+                                        "phone_number": "0539 418 80 28",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Odunpazarı",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Hatay",
+                                "county": "Odunpazarı",
+                                "items": [
                                     {
-                                        "name": "Altunkaya Group- Gaziantep 4, Organize Sanayi",
-                                        "maps_url": " https://goo.gl/maps/FgXbwVJvYBSEQtBn8",
+                                        "name": "Büyükşehir İtfaiye Karşısı",
+                                        "maps_url": null,
+                                        "url": "https://twitter.com/haluklevent/status/1623341739032420352",
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "18:23"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Hatay",
+            "value": {
+                "type": "question",
+                "text_tr": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Hatay",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في حاتاي",
+                "text_ku": "Bilindînên yemekên Hatay - Xetay li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
+                        "name": "Defne",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Hatay",
+                                "county": "Defne",
+                                "items": [
+                                    {
+                                        "name": "Defne Sevsen Nevzat Şahin Ortaokulu Bahçe Giriş Kapısı",
+                                        "maps_url": "https://goo.gl/maps/GjnaFZJDuUDVmYnw5",
                                         "url": null,
                                         "phone_number": null,
                                         "updated_at_date": "08/02/2022",
-                                        "updated_at_time": 2.2
+                                        "updated_at_time": "12:00"
                                     }
                                 ]
                             }
@@ -238,40 +610,13 @@
             }
         },
         {
-            "name": "Gaziantep ",
+            "name": "Kahramanmaraş",
             "value": {
                 "type": "question",
-                "text": "Gaziantep  şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                "options": [
-                    {
-                        "name": "Şehitkamil",
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "food-items",
-                                "city": "Gaziantep ",
-                                "county": "Şehitkamil",
-                                "items": [
-                                    {
-                                        "name": "Huqqabaz Iconova",
-                                        "maps_url": "https://goo.gl/maps/fArvEnMAFqZwcs259?fbclid=PAAabw83ufaxjQyjFGITjadAZL75V93_Z65mhoCaV1IReRek8aJrgmDTPnsY0",
-                                        "url": "https://www.instagram.com/huqqabaz/",
-                                        "phone_number": null,
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 19.0
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Kahramanmaras",
-            "value": {
-                "type": "question",
-                "text": "Kahramanmaras şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_tr": "Kahramanmaraş şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Kahramanmaras",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في كهرمانماراس",
+                "text_ku": "Bilindînên yemekên Kahramanmaras - Mereş li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
                         "name": "Onikişubat",
@@ -279,7 +624,7 @@
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Kahramanmaras",
+                                "city": "Kahramanmaraş",
                                 "county": "Onikişubat",
                                 "items": [
                                     {
@@ -288,7 +633,7 @@
                                         "url": "https://twitter.com/BaranKk20/status/1623097442127208451",
                                         "phone_number": null,
                                         "updated_at_date": "08/02/2023",
-                                        "updated_at_time": 2.12
+                                        "updated_at_time": "02:12"
                                     },
                                     {
                                         "name": "Nisa Fırın",
@@ -296,28 +641,128 @@
                                         "url": "Ücretsiz Ekmek https://twitter.com/KendineMuzisyen/status/1622908693552439296",
                                         "phone_number": null,
                                         "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 20.05
+                                        "updated_at_time": "20:05"
+                                    },
+                                    {
+                                        "name": "Kahramanmaraş Sütçü İmam Üniversitesi Avşar Kampusu- KYK Kız Öğrenci Yurdu",
+                                        "maps_url": null,
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:24 "
+                                    },
+                                    {
+                                        "name": "Doğa Koleji Kahramanmaraş",
+                                        "maps_url": "https://goo.gl/maps/3QZzxjfjXk2Xrty29",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "09/02/2023",
+                                        "updated_at_time": "00:55"
                                     }
                                 ]
                             }
                         }
                     },
                     {
-                        "name": "Kahramanmaraş Merkez",
+                        "name": "Merkez",
                         "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Kahramanmaras",
-                                "county": "Kahramanmaraş Merkez",
+                                "city": "Kahramanmaraş",
+                                "county": "Merkez",
                                 "items": [
                                     {
-                                        "name": "Kocaeli Büyükşehir Belediyesi Gezici Aşevi- Kahramanmaraş Valilik Onu",
+                                        "name": "Kocaeli Büyükşehir Belediyesi Gezici Aşevi- Kahramanmaraş Valilik Önü",
                                         "maps_url": "https://goo.gl/maps/JQpjPhRar2QeZ1Bz8",
                                         "url": "https://twitter.com/kocaelibld/status/1622980989386457088",
                                         "phone_number": null,
-                                        "updated_at_date": "07/02/2022",
-                                        "updated_at_time": 18.29
+                                        "updated_at_date": "07/02/2023",
+                                        "updated_at_time": "18:29"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Dulkadiroğlu",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Kahramanmaraş",
+                                "county": "Dulkadiroğlu",
+                                "items": [
+                                    {
+                                        "name": "Dulkadiroğlu belediyesi önü Ecir Kapısı Derneği Mobil Aşevi",
+                                        "maps_url": "https://goo.gl/maps/sYp5M6DSea3kBsby9",
+                                        "url": "https://twitter.com/GokhanPunar/status/1623345331067813888",
+                                        "phone_number": "0532 174 93 93",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "19:34"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Elbistan",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Kahramanmaraş",
+                                "county": "Elbistan",
+                                "items": [
+                                    {
+                                        "name": "Mutlucan Şeker Fabrikası ",
+                                        "maps_url": null,
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:24"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Afşin",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Kahramanmaraş",
+                                "county": "Afşin",
+                                "items": [
+                                    {
+                                        "name": "Afşin Semt Pazari",
+                                        "maps_url": null,
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "23:31"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Dulkadiroğlu",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Kahramanmaraş",
+                                "county": "Dulkadiroğlu",
+                                "items": [
+                                    {
+                                        "name": "Aşevi - Koton Mensucat",
+                                        "maps_url": "https://goo.gl/maps/VktCdXGipG6XTpq26",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:34"
                                     }
                                 ]
                             }
@@ -327,27 +772,157 @@
             }
         },
         {
-            "name": "Adana",
+            "name": "Kocaeli",
             "value": {
                 "type": "question",
-                "text": "Adana şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_tr": "Kocaeli şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Kocaeli",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في كوكايلي",
+                "text_ku": "Bilindînên yemekên Kocaeli - Kocaeli li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
-                        "name": "Ceyhan",
+                        "name": "İzmit",
                         "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "food-items",
-                                "city": "Adana",
-                                "county": "Ceyhan",
+                                "city": "Kocaeli",
+                                "county": "İzmit",
                                 "items": [
                                     {
-                                        "name": " Ceyhan Cemevi \n",
-                                        "maps_url": "https://www.google.com/maps/place/Hac%C4%B1+Bekta%C5%9F-%C4%B1+Veli+K%C3%BClt%C3%BCr+Merkezi/@37.01413,35.821124,17z/data=!3m1!4b1!4m5!3m4!1s0x1528c991a94e0bc7:0xac90309889fb78a3!8m2!3d37.014115!4d35.8212136?coh=164777&entry=tt&shorturl=1",
-                                        "url": "https://twitter.com/HaciBektasVakfi/status/1623055915984502790",
-                                        "phone_number": "0544 530 81 00",
-                                        "updated_at_date": "07/02/2023",
-                                        "updated_at_time": 23.27
+                                        "name": "Lotus Meat",
+                                        "maps_url": "https://goo.gl/maps/k3mG89mM2FFEAC8q6",
+                                        "url": "https://www.instagram.com/stories/lotusmeat/3033073929144981252/",
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "18:21"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Malatya",
+            "value": {
+                "type": "question",
+                "text_tr": "Malatya şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Malatya",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في مالاتيا",
+                "text_ku": "Bilindînên yemekên Malatya - Meletî li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
+                        "name": "Yeşilyurt",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Malatya",
+                                "county": "Yeşilyurt",
+                                "items": [
+                                    {
+                                        "name": "Erman Ilıcak Fen Lisesi",
+                                        "maps_url": "https://goo.gl/maps/ay8xE3Qa4J72XHsu8",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "18:26"
+                                    },
+                                    {
+                                        "name": "Malatya Fetih Tekstil, 1. şube",
+                                        "maps_url": "https://goo.gl/maps/t1krszRAm3xz4AcR6",
+                                        "url": null,
+                                        "phone_number": "0422 504 1907",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "Battalgazi",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Malatya",
+                                "county": "Battalgazi",
+                                "items": [
+                                    {
+                                        "name": "Trafik Park",
+                                        "maps_url": "https://goo.gl/maps/ewd1jZJsVsAYMdFHA",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
+                                        "name": "Tandoğan Yeşilçam Sosyal Tesisleri",
+                                        "maps_url": "https://goo.gl/maps/Vmzvm2vtD9MsxPge9",
+                                        "url": null,
+                                        "phone_number": "0532 659 38 32",
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
+                                        "name": "İnönü Üniversitesi",
+                                        "maps_url": "https://goo.gl/maps/L13ht7FRzLUdbjYi8",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:30"
+                                    },
+                                    {
+                                        "name": "Mişmiş Park Fuar Alanı",
+                                        "maps_url": "https://goo.gl/maps/RDWJWUYztcmsMjNv5",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:34 "
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Osmaniye",
+            "value": {
+                "type": "question",
+                "text_tr": "Osmaniye şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                "text_en": "Select the county you want to get information about food opportunities in Osmaniye",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في اسمانيا",
+                "text_ku": "Bilindînên yemekên Osmaniye - Kınıkan li ser şehirê xwe hilbijêrin",
+                "options": [
+                    {
+                        "name": "Merkez",
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "food-items",
+                                "city": "Osmaniye",
+                                "county": "Merkez",
+                                "items": [
+                                    {
+                                        "name": "Osmaniye Yeni Hayat Hastanesi",
+                                        "maps_url": "https://goo.gl/maps/S77xDw5WuCMbcmt87",
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "21:18"
+                                    },
+                                    {
+                                        "name": "Kız Oğrenci Yurdu ",
+                                        "maps_url": null,
+                                        "url": null,
+                                        "phone_number": null,
+                                        "updated_at_date": "08/02/2023",
+                                        "updated_at_time": "22:24"
                                     }
                                 ]
                             }

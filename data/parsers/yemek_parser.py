@@ -65,9 +65,13 @@ def main():
                 }
             }
         )
-    
+
     data = {
         "type": "question",
+         "autocompleteHint_tr": "Şehir",
+        "autocompleteHint_en": "City",
+        "autocompleteHint_ar": "مدينة",
+        "autocompleteHint_ku": "Bajar",
         "text_tr": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz.",
         "text_en": "Choose the city you would like to see the food distribution centers.",
         "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
@@ -75,7 +79,7 @@ def main():
         "options": options_1
     }
 
-        
+
     with open(json_name, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
