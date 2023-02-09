@@ -10,7 +10,7 @@ def main():
     sheet_name = "K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../latest_datasets/blood.json"
+    json_name = "../datasets/blood.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     skip = 1

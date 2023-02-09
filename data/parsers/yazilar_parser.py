@@ -7,7 +7,7 @@ def main():
     sheet_name = "Faydal%C4%B1%20Yaz%C4%B1lar"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../latest_datasets/yazilar.json"
+    json_name = "../datasets/yazilar.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     articles = []

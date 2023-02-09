@@ -11,7 +11,7 @@ def main():
     sheet_name = "Yemek"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../latest_datasets/yemek.json"
+    json_name = "../datasets/yemek.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     unique_cities = df['İl'].unique()
