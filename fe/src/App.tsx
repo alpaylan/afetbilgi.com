@@ -13,6 +13,7 @@ import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
+import AboutUs from './components/AboutUs';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -99,9 +100,13 @@ const App = () => {
       <Container>
         <Routes>
           <Route path='/*' element={<RootQuestion />} />
+          <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>
 
+      {location.pathname === '/' && <Box sx={{ textAlign: 'center', p: 2 }}>
+        <Button onClick={() => navigate('/about')}>{t('page.about.title')}</Button>
+      </Box>}
       <Box sx={{ textAlign: 'center', p: 2 }}>
         {t('last_update')}: {buildDateString}
       </Box>
