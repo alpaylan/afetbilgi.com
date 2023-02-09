@@ -4,6 +4,10 @@
     "text_en": "In which city are you looking for item-donation?",
     "text_ku": "Hûn li Kîjan Bajarî Ji Bo Tiştan Bibexşînin Cîh Digerin?",
     "text_ar": "في أي مدينة تودّ أن تتبرع بغرض ما؟",
+    "autocompleteHint_tr": "Şehir",
+    "autocompleteHint_en": "City",
+    "autocompleteHint_ar": "مدينة",
+    "autocompleteHint_ku": "Bajar",
     "options": [
         {
             "value": {
