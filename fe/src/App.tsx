@@ -96,7 +96,7 @@ const App = () => {
             </Button>
           </>
         )}
-        <Button
+        {/* <Button
           sx={{ m: 1 }}
           size='large'
           onClick={() => {
@@ -104,7 +104,7 @@ const App = () => {
           }}
         >
           {t('button.download')}
-        </Button>
+        </Button> */}
         <Select
           id='language-options-multiselect'
           size='small'
