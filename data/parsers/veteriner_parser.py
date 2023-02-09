@@ -11,7 +11,7 @@ if __name__ == "__main__":
     sheet_name = "Veterinerler"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/veteriner.json"
+    json_name = "../latest_datasets/veteriner.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     df.sort_values(by='Şehir')

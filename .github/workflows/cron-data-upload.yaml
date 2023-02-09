@@ -1,6 +1,8 @@
 name: Data upload (cronjob)
 
 on:
+  workflow_dispatch:
+  
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '*/10 * * * *' # Run every 10 minutes
@@ -34,14 +36,14 @@ jobs:
 
           cd parsers
 
-          python ./toplanma_parser.py > ../latest_datasets/toplanma.json
-          python ./faydalilinkler_parser.py > ../latest_datasets/faydali_linkler.json
-          python ./veteriner_parser.py > ../latest_datasets/veteriner.json
-          python ./yazilar_parser.py > ../latest_datasets/yazilar.json
+          python ./toplanma_parser.py
+          python ./faydalilinkler_parser.py
+          python ./veteriner_parser.py
+          python ./yazilar_parser.py
 
-          # python ./barinma_parser.py > ../latest_datasets/barinma.json
-          # python ./yemek_parser.py > ../latest_datasets/yemek.json
-          # python ./telefonnumaralari_parser.py > ../latest_datasets/telefon.json
+          python ./barinma_parser.py
+          python ./yemek_parser.py
+          python ./telefonnumaralari_parser.py
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json

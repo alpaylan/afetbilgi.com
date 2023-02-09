@@ -31,7 +31,7 @@ if __name__ == "__main__":
     sheet_name = "%C3%96nemli%20Telefon%20Numaralar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/telefon.json"
+    json_name = "../latest_datasets/telefon.json"
 
     df = pd.read_csv(url, encoding="utf-8")
     # df = pd.read_csv("phone-numbers.csv", encoding="utf-8")

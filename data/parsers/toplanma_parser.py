@@ -11,7 +11,7 @@ def main():
     sheet_name = "G%C3%BCvenli%20Toplanma%20Alanlar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/toplanma.json"
+    json_name = "../latest_datasets/toplanma.json"
     df = pd.read_csv(url, encoding="utf-8")
     df = df.sort_values(by=['Şehirler'])
 

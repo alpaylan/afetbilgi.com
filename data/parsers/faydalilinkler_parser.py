@@ -7,7 +7,7 @@ def main():
 
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/faydali_linkler.json"
+    json_name = "../latest_datasets/faydali_linkler.json"
     df = pd.read_csv(url, encoding="utf-8", header=None)
 
     usefulLinks = []
