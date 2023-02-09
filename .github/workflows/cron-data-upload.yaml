@@ -36,11 +36,11 @@ jobs:
 
           cd parsers
 
-          python ./toplanma_parser.py
           python ./veteriner_parser.py
           python ./yazilar_parser.py
           python ./yemek_parser.py
 
+          python ./toplanma.py ../latest_datasets/toplanma.json
           python ./barinma.py ../latest_datasets/barinma.json
           python ./blood.py ../latest_datasets/blood.json
           python ./kokhucre.py ../latest_datasets/kokhucre.json
@@ -53,7 +53,6 @@ jobs:
           cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
-          cp ../datasets/toplanma.json ../latest_datasets/toplanma.json
           cp ../datasets/veteriner.json ../latest_datasets/veteriner.json
           cp ../datasets/yazilar.json ../latest_datasets/yazilar.json
 
