@@ -56,6 +56,7 @@ jobs:
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
           cp ../datasets/toplanma.json ../latest_datasets/toplanma.json
+          cp ../datasets/telefon.json ../latest_datasets/telefon.json
 
       - name: Merge datasets
         run: |
