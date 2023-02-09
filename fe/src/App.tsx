@@ -101,7 +101,6 @@ const App = () => {
           size='small'
           sx={{ m: 1 }}
           value={i18n.language}
-          label='Language'
           onChange={(e) => changeLanguageHandler(e.target.value as Language)}
         >
           {LANGUAGES.map(({ key, name }) => (
