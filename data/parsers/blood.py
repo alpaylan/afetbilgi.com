@@ -1,16 +1,22 @@
-import pandas as pd
+import sys
 import json
+import pandas as pd
 
 from utils.functions import turkish_title
 
 def main():
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
+
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
     sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
     sheet_name = "K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/blood.json"
     df = pd.read_csv(url, encoding="utf-8")
 
     skip = 1
@@ -93,7 +99,7 @@ def main():
     }     
 
 
-    with open(json_name, "w+", encoding="utf-8") as f:
+    with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
