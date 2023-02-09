@@ -59,6 +59,7 @@ jobs:
           cp ../datasets/telefon.json ../latest_datasets/telefon.json
           cp ../datasets/faydali_linkler.json ../latest_datasets/faydali_linkler.json
           cp ../datasets/veteriner.json ../latest_datasets/veteriner.json
+          cp ../datasets/yazilar.json ../latest_datasets/yazilar.json
 
       - name: Merge datasets
         run: |
