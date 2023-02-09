@@ -63,14 +63,15 @@ const writeTemporaryAccomodationPDF = (doc, data) => {
       url: el.url,
     });
     y += yRange;
-    if (el.validation_date) {
+    if (el.validation_date && el.is_validated) {
       doc.text(
-        "Dogrulanma Durumu: " + el.is_validated ? "Dogrulandi" : "Dogrulanmadi",
+        "Dogrulanma Durumu: " +
+          (el.is_validated ? "Dogrulandi" : "Dogrulanmadi") +
+          " --- " +
+          el.validation_date,
         x,
         y
       );
-      y += yRange;
-      doc.text("Dogrulama Tarihi:" + `${el.validation_date}`, x, y);
       y += yRange;
     }
   });

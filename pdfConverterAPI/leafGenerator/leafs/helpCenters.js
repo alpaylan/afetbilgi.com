@@ -34,7 +34,7 @@ const writeHelpCentersPDF = (doc, data) => {
       doc.addPage();
       isNewPage = true;
     }
-    
+
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);
@@ -52,13 +52,19 @@ const writeHelpCentersPDF = (doc, data) => {
     }
 
     doc.setFontSize(textFontSize);
-    doc.text("\u2022 " + `${el.name}` + " - " + el.phone_number, x, y);
+    doc.text("\u2022 " + `${el.name}`, x, y);
     y += yRange;
+    if (el.phone_numer) {
+      doc.text("Telefon: " + el.phone_numer, x, y);
+      y += yRange;
+    }
     doc.setFontSize(smallTextSize);
-    doc.textWithLink("Url: " + el.url, x, y, {
-      url: el.url,
-    });
-    y += yRange;
+    if (el.url) {
+      doc.textWithLink("Url: " + el.url, x, y, {
+        url: el.url,
+      });
+      y += yRange;
+    }
     if (el.notes) {
       doc.text("Notlar: " + el.notes, x, y);
       y += yRange;

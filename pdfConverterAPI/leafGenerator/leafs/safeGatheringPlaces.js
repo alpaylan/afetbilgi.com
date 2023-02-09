@@ -35,7 +35,6 @@ const writeSafeGatheringPlacesPDF = (doc, data, city) => {
       doc.addPage();
       isNewPage = true;
     }
-
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);
@@ -57,11 +56,19 @@ const writeSafeGatheringPlacesPDF = (doc, data, city) => {
     }
 
     doc.setFontSize(textFontSize);
-    doc.text("\u2022 " + `${el}`, x, y);
+    doc.text("\u2022 " + `${el.name}`, x, y);
     y += yRange;
+    doc.setFontSize(smallTextSize);
+    if (el.url) {
+      doc.textWithLink("Adres: " + el.url, x, y, { url: el.url });
+      y += yRange;
+    }
+    if (el.source) {
+      doc.text(`Kaynak: ${el.source}`, x, y);
+      y += yRange;
+    }
   });
 };
-//getSafeGatheringPlace("Malatya")
 
 module.exports = {
   writeSafeGatheringPlacesPDF,

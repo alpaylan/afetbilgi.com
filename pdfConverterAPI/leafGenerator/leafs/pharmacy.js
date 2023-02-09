@@ -38,7 +38,6 @@ const writePharmacyData = (doc, allData) => {
   let isNewPage = true;
   //tempData.options[4].value.data.phones.forEach
   data.forEach((value, index) => {
-    console.log(value);
     y += yRange;
 
     const pageHeight = doc.internal.pageSize.height;
@@ -52,7 +51,7 @@ const writePharmacyData = (doc, allData) => {
     if (isNewPage) {
       doc.setFont("Roboto-Black", "normal");
       doc.setFontSize(titleFontSize);
-      doc.text(value.city + " " + PHARMACY_DATA_TITLE, x, yRange * 2);
+      doc.text(PHARMACY_DATA_TITLE, x, yRange * 2);
 
       doc.setFont("Roboto-Regular", "normal");
       doc.setFontSize(textFontSize);
@@ -67,8 +66,10 @@ const writePharmacyData = (doc, allData) => {
 
     doc.text("\u2022 " + value.city + " - " + value.district, x, y);
     y += yRange;
-    doc.text("Lokasyon: " + value.location, x, y);
-    y += yRange;
+    if (value.location) {
+      doc.text("Lokasyon: " + value.location, x, y);
+      y += yRange;
+    }
     if (value.locationLink) {
       doc.setFontSize(smallTextSize);
       doc.textWithLink("Maps: " + value.locationLink, x, y, {

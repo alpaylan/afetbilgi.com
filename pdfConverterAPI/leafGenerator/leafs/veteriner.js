@@ -50,15 +50,23 @@ const writeVeterinerPlacesPDF = (doc, data) => {
       isNewPage = false;
     }
     doc.setFontSize(textFontSize);
-    doc.text("\u2022 " + `${el.name}` + " - " + el.phone_number, x, y);
+    doc.text("\u2022 " + `${el.name}`, x, y);
     y += yRange;
     doc.setFontSize(smallTextSize);
-    doc.text("Adres: " + el.address, x, y);
-    y += yRange;
-    doc.textWithLink("Maps: " + el.maps_link, x, y, {
-      url: el.maps_link,
-    });
-    y += yRange;
+    if (el.phone_number) {
+      doc.text("Telefon: " + el.phone_number, x, y);
+      y += yRange;
+    }
+    if (el.address) {
+      doc.text("Adres: " + el.address, x, y);
+      y += yRange;
+    }
+    if (el.maps_link) {
+      doc.textWithLink("Maps: " + el.maps_link, x, y, {
+        url: el.maps_link,
+      });
+      y += yRange;
+    }
   });
 };
 //getSafeGatheringPlace("Malatya")

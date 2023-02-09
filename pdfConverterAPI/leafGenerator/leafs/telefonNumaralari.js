@@ -65,7 +65,7 @@ const writePhoneNumbersToPdf = (doc, allData) => {
     }
 
     doc.text("\u2022 " + value.name + " - " + value.phone_number, x, y);
-
+    y += yRange;
     //let phone = doc.getTextDimensions(value.phone_number);
     //let finalXP = x - phone.w/2
     //doc.text(value.phone_number, finalXP, y + phoneRangeY);

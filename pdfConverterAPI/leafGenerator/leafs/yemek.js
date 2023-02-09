@@ -94,8 +94,35 @@ const writeMealPDF = (option) => {
     }
 
     value.value.data.items.forEach((el, index) => {
-      doc.text("\u2022 " + `${el.name}` + " -- " + el.phone_number, x, y);
+      if (y + 4 * yRange >= pageHeight) {
+        doc.addPage();
+        isNewPage = true;
+      }
+
+      if (isNewPage) {
+        setFont(doc, "bold");
+        doc.setFontSize(titleFontSize);
+        doc.text(`${value.name} - Yemek Dağıtım Yerleri`, x, yRange * 2);
+        setFont(doc, "regular");
+        doc.setFontSize(textFontSize);
+        doc.text(
+          `Dosyanın oluşturulma tarihi: ${getDateAndTime()}` + pageStartText,
+          x,
+          yRange * 3
+        );
+        y = yStart;
+        isNewPage = false;
+      }
+
+      doc.setFontSize(textFontSize);
+      doc.text("\u2022 " + `${el.name}`, x, y);
       y += yRange;
+
+      doc.setFontSize(smallTextSize);
+      if (el.phone_number) {
+        doc.text("Telefon: " + el.phone_number, x, y);
+        y += yRange;
+      }
 
       if (el.maps_url) {
         doc.textWithLink("Adres: " + el.maps_url, x, y, {
