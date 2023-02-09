@@ -1,6 +1,6 @@
-
-import pandas as pd
+import sys
 import json
+import pandas as pd
 
 
 def todict(obj, classkey=None):
@@ -27,11 +27,15 @@ def todict(obj, classkey=None):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
+
     sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
     sheet_name = "%C3%96nemli%20Telefon%20Numaralar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
-    json_name = "../datasets/telefon.json"
 
     df = pd.read_csv(url, encoding="utf-8")
     # df = pd.read_csv("phone-numbers.csv", encoding="utf-8")
@@ -59,6 +63,6 @@ if __name__ == "__main__":
         }
     }
 
-    with open(json_name, "w+", encoding="utf-8") as f:
+    with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
