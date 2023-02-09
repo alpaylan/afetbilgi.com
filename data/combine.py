@@ -50,5 +50,5 @@ for data_point in data_points:
             print(f"Error reading {data_point['path']}: {e}")
             sys.exit(1)
 
-print(json.dumps(result, ensure_ascii=False))
+print(json.dumps(result, ensure_ascii=False, allow_nan=False))
 
