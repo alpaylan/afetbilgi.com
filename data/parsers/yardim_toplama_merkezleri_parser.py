@@ -16,7 +16,12 @@ if __name__ == '__main__':
     df = pd.read_csv(url)
     df = df.fillna("")
 
-    json_obj = {}
+    json_obj = {
+        "autocompleteHint_tr": "Şehir",
+        "autocompleteHint_en": "City",
+        "autocompleteHint_ar": "مدينة",
+        "autocompleteHint_ku": "Bajar",
+    }
     json_obj['type'] = 'question'
     json_obj['text_tr'] = "Hangi şehirde eşya toplanacak yer arıyorsunuz?"
     json_obj['text_en'] = "In which city are you looking for item-donation?"
