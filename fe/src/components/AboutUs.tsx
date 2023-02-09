@@ -18,7 +18,8 @@ export default function AboutUs() {
             </Typography>
             <Typography sx={{mt: 4}} variant="subtitle1" align="center">
                 <b>{t('contact')}:</b> <a href="mailto:info@afetbilgi.com">info@afetbilgi.com</a>
-                <a href="https://github.com/alpaylan/afetbilgi.com">Afet Bilgi - Github</a>
+                <br />
+                <a href="https://github.com/alpaylan/afetbilgi.com">Afet Bilgi - GitHub</a>
             </Typography>
         </Paper>
       </Container>
