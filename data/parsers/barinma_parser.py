@@ -21,43 +21,43 @@ def main():
     json_name = "../datasets/barinma.json"
     df = pd.read_csv(url, encoding="utf-8")
 
-    sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
-    sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    dfj = pd.read_csv(url, encoding=("utf-8"))
-    if not dfj.empty:
-        dfj = dfj.drop(
-            columns=[
-                "Ad",
-                "Soyad",
-                "Telefon Numarası",
-            ]
-        )
+    # dfj = pd.read_csv(url, encoding=("utf-8"))
+    # if not dfj.empty:
+    #     dfj = dfj.drop(
+    #         columns=[
+    #             "Ad",
+    #             "Soyad",
+    #             "Telefon Numarası",
+    #         ]
+    #     )
 
-        rename = {
-            "Submission Date": "date",
-            "Lütfen Şehir Seçiniz": "Şehir",
-            "Lütfen İlçenizi Giriniz": "İlçe",
-            "Konum Bilgisini Yazınız": "Lokasyon",
-            "Varsa Konuma Ait Bilgilendirme Linki Ekleyiniz": "Link",
-            "Konuma Ait Google Maps Linki Ekleyiniz": "Konum linki",
-            "Daha Fazla Bilgi İçin İletişime Geçilebilecek Telefon Numarasını Giriniz": "Telefon",
-            "Konuma Yönelik Ekstra Bilginiz Varsa Yazınız": "Açıklamalar",
-        }
+    #     rename = {
+    #         "Submission Date": "date",
+    #         "Lütfen Şehir Seçiniz": "Şehir",
+    #         "Lütfen İlçenizi Giriniz": "İlçe",
+    #         "Konum Bilgisini Yazınız": "Lokasyon",
+    #         "Varsa Konuma Ait Bilgilendirme Linki Ekleyiniz": "Link",
+    #         "Konuma Ait Google Maps Linki Ekleyiniz": "Konum linki",
+    #         "Daha Fazla Bilgi İçin İletişime Geçilebilecek Telefon Numarasını Giriniz": "Telefon",
+    #         "Konuma Yönelik Ekstra Bilginiz Varsa Yazınız": "Açıklamalar",
+    #     }
 
-        dfj = dfj.rename(columns=rename)
+    #     dfj = dfj.rename(columns=rename)
 
-        dfj["Lokasyon"] = dfj["İlçe"] + " - " + dfj["Lokasyon"]
+    #     dfj["Lokasyon"] = dfj["İlçe"] + " - " + dfj["Lokasyon"]
 
-        dfj[["Doğrulanma Tarihi", "Doğrulama Saati"]] = dfj["date"].str.split(
-            " ", expand=True
-        )
+    #     dfj[["Doğrulanma Tarihi", "Doğrulama Saati"]] = dfj["date"].str.split(
+    #         " ", expand=True
+    #     )
 
-        dfj = dfj.drop(columns=["date", "İlçe", "Submission ID", "Telefon"])
-        dfj["Doğrulanma Durumu"] = True
+    #     dfj = dfj.drop(columns=["date", "İlçe", "Submission ID", "Telefon"])
+    #     dfj["Doğrulanma Durumu"] = True
 
-        df = pd.concat([df, dfj])
+    #     df = pd.concat([df, dfj])
 
     df["Şehir"] = df["Şehir"].apply(str.strip)
     df["Şehir"] = df["Şehir"].apply(turkish_title)

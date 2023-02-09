@@ -14,31 +14,31 @@ def main():
     json_name = "../datasets/yemek.json"
     df = pd.read_csv(url, encoding="utf-8")
 
-    sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
-    sheet_name = "Yemek%20Da%C4%9F%C4%B1t%C4%B1m%20Alanlar%C4%B1"
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "Yemek%20Da%C4%9F%C4%B1t%C4%B1m%20Alanlar%C4%B1"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    dfj = pd.read_csv(url, encoding=("utf-8"))
+    # dfj = pd.read_csv(url, encoding=("utf-8"))
 
-    dfj = dfj.drop(columns=["Ad", "Soyad", "Telefon Numarası", "Submission ID"])
+    # dfj = dfj.drop(columns=["Ad", "Soyad", "Telefon Numarası", "Submission ID"])
 
-    rename = {
-        "Submission Date": "date",
-        "Lütfen Şehir Seçiniz": "İl",
-        "Lütfen İlçenizi Yazınız": "İlçe",
-        "Konum Bilgisini Yazınız": "Lokasyon",
-        "Konuma Ait Google Maps Linki Ekleyiniz": "Google Maps Linki",
-        "Yemek Dağıtımına Yönelik Bilgi Linki veya Anons Bilgisi Ekleyiniz": "Anons Linki",
-        "Yemek Dağıtım Merkezine Ait Telefon Numarasını Ekleyiniz ": "Telefon",
-    }
+    # rename = {
+    #     "Submission Date": "date",
+    #     "Lütfen Şehir Seçiniz": "İl",
+    #     "Lütfen İlçenizi Yazınız": "İlçe",
+    #     "Konum Bilgisini Yazınız": "Lokasyon",
+    #     "Konuma Ait Google Maps Linki Ekleyiniz": "Google Maps Linki",
+    #     "Yemek Dağıtımına Yönelik Bilgi Linki veya Anons Bilgisi Ekleyiniz": "Anons Linki",
+    #     "Yemek Dağıtım Merkezine Ait Telefon Numarasını Ekleyiniz ": "Telefon",
+    # }
 
-    dfj = dfj.rename(columns=rename)
+    # dfj = dfj.rename(columns=rename)
 
-    dfj[["Teyit Tarih", "Teyit Saati"]] = dfj["date"].str.split(" ", expand=True)
+    # dfj[["Teyit Tarih", "Teyit Saati"]] = dfj["date"].str.split(" ", expand=True)
 
-    dfj = dfj.drop(columns=["date"])
+    # dfj = dfj.drop(columns=["date"])
 
-    df = pd.concat([df, dfj])
+    # df = pd.concat([df, dfj])
 
     df["İl"] = df["İl"].apply(str.strip)
     df["İl"] = df["İl"].apply(turkish_title)
