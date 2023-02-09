@@ -1,10 +1,6 @@
 name: Data upload (cronjob)
 
 on:
-  push:
-    branches:
-      - "ozansz/workflow-updates"
-      
   workflow_dispatch:
 
   schedule:
@@ -61,4 +57,4 @@ jobs:
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/sazak
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
