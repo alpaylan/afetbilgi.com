@@ -10,6 +10,7 @@ data_points = [
   { 'name_ar': 'ملاجئ مؤقتة', 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'name_ku': 'Bicîhbûna Demkî', 'path': f'{basedir}/barinma.json' },
   { 'name_ar': 'مناطق تجميع آمنة', 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'name_ku': 'Qadên Ewle Bo Kombûnê', 'path': f'{basedir}/toplanma.json' },
   { 'name_ar': 'مواقع توصيل الطعام', 'name': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê', 'path': f'{basedir}/yemek.json' },
+  { 'name_ar': "", "name_ku": "", "name_en": "Container Pharmacies", "name": 'Konteyner Eczaneler', 'path': f'{basedir}/eczane.json' },
   { 'name_ar': 'أرقام هواتف مهمة', 'name': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'name_ku': 'Numareyên Girîng', 'path': f'{basedir}/telefon.json' },
   { 'name_ar': 'مُرْتَادِي الشَّبَكَة مهمة', 'name': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'name_ku': ' Malperên Kêrhatî', 'path': f'{basedir}/faydali_linkler.json' },
   { 'name_ar': 'بَيَاطير', 'name': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner', 'path': f'{basedir}/veteriner.json' },
@@ -18,7 +19,6 @@ data_points = [
   { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê', 'path': f'{basedir}/kokhucre.json' },
   { 'name_ar': 'نصوص مفيدة', 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'name_ku': 'Agahiyên Kêrhatî', 'path': f'{basedir}/yazilar.json' },
   { 'name': 'VPN', 'path': f'{basedir}/vpn.json' },
-  { 'name_ar': "", "name_ku": "", "name_en": "Container Pharmacies", "name": 'Konteyner Eczaneler', 'path': f'{basedir}/eczane.json' },
 #   STAGING
 #   { 'name': 'Kapalı Yollar', 'path': f'{basedir}/kapaliyollar.json' },
 
