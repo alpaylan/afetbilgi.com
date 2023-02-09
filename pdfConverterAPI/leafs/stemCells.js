@@ -33,13 +33,12 @@ const getStemCells = (data) => {
 const writeStemCellsPDF = (doc, allData) => {
   //const doc = new jsPDF();
   const data = getStemCells(allData);
-  console.log(data);
+
   let x = xStart;
   let y = yStart;
   let isNewPage = true;
   //tempData.options[4].value.data.phones.forEach
   data.forEach((value, index) => {
-    console.log(value);
     y += yRange;
 
     const pageHeight = doc.internal.pageSize.height;

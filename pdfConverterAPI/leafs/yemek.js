@@ -33,7 +33,7 @@ const getMealData = (data) => {
 
 const getCityData = (data, city) => {
   let output;
-  console.log(data);
+
   if (data) {
     data.value.options.forEach((value) => {
       if (slug(value.name) == slug(city)) {
@@ -141,5 +141,6 @@ const convertToDate = (el) => {
 //getSafeGatheringPlace("Malatya")
 
 module.exports = {
+  getMealData,
   createMealPdf,
 };

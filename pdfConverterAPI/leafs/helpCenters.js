@@ -34,7 +34,7 @@ const writeHelpCentersPDF = (doc, data) => {
       doc.addPage();
       isNewPage = true;
     }
-    console.log(el);
+    
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);

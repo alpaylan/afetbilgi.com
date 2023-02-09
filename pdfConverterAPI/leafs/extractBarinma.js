@@ -16,8 +16,7 @@ const trProvincesForAccommodations = (data) => {
 
   extractedData.map((option) => {
     const name = option.name_tr ? option.name_tr : option.name;
-    console.log(option);
-    console.log(name);
+
     if (!(name in provinces)) {
       provinces[name] = index;
       index += 1;
@@ -93,8 +92,7 @@ const createAccomodationPDF = (data, doc, city) => {
   if (places.length == 0) {
     return;
   }
-  console.log(city);
-  console.log(places.length);
+
   // doc.addPage();
   places.forEach((place) => {
     y += yRange;

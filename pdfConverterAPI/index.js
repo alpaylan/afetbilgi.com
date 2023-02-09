@@ -1,6 +1,5 @@
 require("dotenv").config();
 const {
-  createAllInOnePDF,
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
   createLeafMealPDF,
@@ -15,7 +14,6 @@ const {
   createMainPagePDF,
 } = require("./allDataToPDF");
 
-createAllInOnePDF();
 createLeafTemporaryAccomodationPDF();
 createLeafSafeGatheringPlacesPDF();
 createLeafMealPDF();

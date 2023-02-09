@@ -1,10 +1,11 @@
+const fs = require("fs");
 const { default: axios } = require("axios");
 const { jsPDF } = require("jspdf");
 const accomodation = require("./leafs/extractBarinma");
 const { createSafeGatheringPlacePDF } = require("./leafs/safeGatheringPlaces");
 const { writePhoneNumbersToPdf } = require("./leafs/telefonNumaralari");
 const { setFont, registerFont } = require("./docFunctions");
-const { createMealPdf } = require("./leafs/yemek");
+const { createMealPdf, getMealData } = require("./leafs/yemek");
 const constantData = require("./constants");
 // const { createCoverPage } = require("./coverPage");
 const { getWebSitesData, writeWebsitesPDF } = require("./leafs/webSites");
@@ -25,6 +26,8 @@ const { writeStemCellsPDF } = require("./leafs/stemCells");
 const { createCoverPage } = require("./coverPage");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest_translated.json?v=1.5`";
+// TODO: BUNNU SIL
+// const DATA_URL = "/data.json";
 
 const CITYS = [
   "Adana",
@@ -111,28 +114,6 @@ const CITYS = [
 ];
 const depremBolgeleri = constantData.affectedCities;
 
-const createAllInOnePDF = async () => {
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
-  registerFont(doc);
-
-  const data = await fetchData();
-
-  CITYS.forEach((city) => {
-    createSafeGatheringPlacePDF(doc, data, city);
-    setFont(doc, "regular");
-    accomodation.createAccomodationPDF(data, doc, city);
-    // createMealPdf(doc, data, city);
-  });
-
-  writePhoneNumbersToPdf(doc, data);
-
-  doc.save("output/" + "allCities.pdf");
-};
-
 const createLeafTemporaryAccomodationPDF = async () => {
   const data = await fetchData();
   depremBolgeleri.forEach(async (city) => {
@@ -169,14 +150,16 @@ const createLeafSafeGatheringPlacesPDF = async () => {
 
     setFont(doc, "regular");
     createSafeGatheringPlacePDF(doc, data, city);
-    doc.save(
-      "output/safe_gathering_places/" + city + "_safe_gathering_places" + ".pdf"
-    );
+    doc.save("output/safe_gathering_places/" + city + ".pdf");
   });
 };
 
 const createLeafMealPDF = async () => {
   const data = await fetchData();
+
+  const mealData = getMealData(data);
+  console.log(mealData);
+
   depremBolgeleri.forEach(async (city) => {
     const doc = new jsPDF({
       orientation: "p",
@@ -188,7 +171,7 @@ const createLeafMealPDF = async () => {
 
     setFont(doc, "regular");
     createMealPdf(doc, data, city);
-    doc.save("output/meals/" + city + "_meal" + ".pdf");
+    doc.save("output/meals/" + city + ".pdf");
   });
 };
 
@@ -249,6 +232,11 @@ const createVeterinerPlacesPDF = async () => {
 
   const veterinerPlaces = getVeterinerPlaces(data);
 
+  console.log(veterinerPlaces);
+
+  const path = `output/${encodeURIComponent(veterinerPlaces[0].name_tr)}/`;
+  fs.mkdirSync(path, { recursive: true });
+
   veterinerPlaces[0].value.options.forEach((option) => {
     const doc = new jsPDF({
       orientation: "p",
@@ -257,7 +245,7 @@ const createVeterinerPlacesPDF = async () => {
     });
     registerFont(doc);
     writeVeterinerPlacesPDF(doc, option.value.data);
-    doc.save("output/veteriner/" + option.name_tr + "_veteriner" + ".pdf");
+    doc.save(path + option.name_tr + ".pdf");
   });
 };
 
@@ -265,6 +253,9 @@ const createHelpCentersPDF = async () => {
   const data = await fetchData();
 
   const helpCenters = getHelpCenters(data);
+
+  const path = `output/${encodeURIComponent(helpCenters[0].name_tr)}/`;
+  fs.mkdirSync(path, { recursive: true });
 
   helpCenters[0].value.options.forEach((option) => {
     const doc = new jsPDF({
@@ -274,16 +265,16 @@ const createHelpCentersPDF = async () => {
     });
     registerFont(doc);
     writeHelpCentersPDF(doc, option.value.data);
-    doc.save(
-      "output/help_centers/" + option.name_tr + "_help_centers" + ".pdf"
-    );
+    doc.save(path + option.name_tr + ".pdf");
   });
 };
 
 const createBloodDonationPDF = async () => {
   const data = await fetchData();
-
   const bloodDonation = getBloodDonations(data);
+
+  const path = `output/${encodeURIComponent(bloodDonation[0].name_tr)}/`;
+  fs.mkdirSync(path, { recursive: true });
 
   bloodDonation[0].value.options.forEach((option) => {
     const doc = new jsPDF({
@@ -292,10 +283,10 @@ const createBloodDonationPDF = async () => {
       format: "a4",
     });
     registerFont(doc);
+
     writeBloodDonationsPDF(doc, option.value_tr.data);
-    doc.save(
-      "output/blood_donation/" + option.name_tr + "_blood_donation" + ".pdf"
-    );
+
+    doc.save(path + option.name_tr + ".pdf");
   });
 };
 
@@ -325,13 +316,13 @@ const createMainPagePDF = async () => {
 };
 
 const fetchData = async () => {
-  const dataAll = await axios.get(DATA_URL);
+  // const dataAll = await axios.get(DATA_URL);
+  const dataAll = JSON.parse(fs.readFileSync("data.json", "utf8"));
   const data = dataAll.data;
   return data;
 };
 
 module.exports = {
-  createAllInOnePDF,
   createLeafTemporaryAccomodationPDF,
   createLeafSafeGatheringPlacesPDF,
   createLeafMealPDF,

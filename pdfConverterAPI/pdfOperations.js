@@ -1,7 +1,10 @@
 const { default: axios } = require("axios");
-const { jsPDF } = require("jspdf")
-const { createSafeGatheringPlacePDF } = require("./safeGatheringPlaces")
-const { getPhoneNumberData, writePhoneNumbersToPdf } = require("./telefonNumaralari");
+const { jsPDF } = require("jspdf");
+const { createSafeGatheringPlacePDF } = require("./safeGatheringPlaces");
+const {
+  getPhoneNumberData,
+  writePhoneNumbersToPdf,
+} = require("./telefonNumaralari");
 const { createAccomodationPDF } = require("./extractBarinma");
 const { setFont, registerFont } = require("./docFunctions");
 const { createMealPdf } = require("./yemek");
@@ -10,35 +13,35 @@ const { createCoverPage } = require("./coverPage");
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 
 const createPDF = async () => {
-    const doc = new jsPDF({
-        orientation: "p",
-        unit: "px",
-        format: "a4"
-    })
-    registerFont(doc)
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+  registerFont(doc);
 
-    const data = await fetchData()
-    let cityName = "Adana"
-    
-    createCoverPage(doc, cityName)
-    createSafeGatheringPlacePDF(doc, data, cityName)
-    createAccomodationPDF(data, doc, cityName);
-    createMealPdf(doc, data, cityName)
+  const data = await fetchData();
+  let cityName = "Adana";
 
-    writePhoneNumbersToPdf(doc, data)
+  createCoverPage(doc, cityName);
+  createSafeGatheringPlacePDF(doc, data, cityName);
+  createAccomodationPDF(data, doc, cityName);
+  createMealPdf(doc, data, cityName);
 
-    doc.save("out.pdf");
-}
+  writePhoneNumbersToPdf(doc, data);
+
+  doc.save("out.pdf");
+};
 
 //fetches data
 const fetchData = async () => {
-    const dataAll = await axios.get(DATA_URL);
-    const data = dataAll.data
-    return data;
-}
+  const dataAll = await axios.get(DATA_URL);
+  const data = dataAll.data;
+  return data;
+};
 
-createPDF()
+createPDF();
 
 module.exports = {
-    createPDF,
-}
+  createPDF,
+};
