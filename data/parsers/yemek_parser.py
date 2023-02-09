@@ -59,7 +59,7 @@ def main():
                     "type": "question",
                     "text_tr": f"{city_translation[turkish_title(city.strip())]['tr']} şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                     "text_en": f"Select the county you want to get information about food opportunities in {city_translation[turkish_title(city.strip())]['en']}",
-                    "text_ar": f"اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في {city_translation[turkish_title(city.strip())]['ar']}",
+                    "text_ar": f"حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في {city_translation[turkish_title(city.strip())]['ar']}",
                     "text_ku": f"Bilindînên yemekên {city_translation[turkish_title(city.strip())]['ku']} li ser şehirê xwe hilbijêrin",
                     "options": option_2
                 }

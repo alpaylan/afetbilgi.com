@@ -11,7 +11,7 @@
                 "type": "question",
                 "text_tr": "Adana şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Adana",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في أضنة",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في أضنة",
                 "text_ku": "Bilindînên yemekên Adana - Edene li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -163,7 +163,7 @@
                 "type": "question",
                 "text_tr": "Adıyaman şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Adiyaman",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في أديامان",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في أديامان",
                 "text_ku": "Bilindînên yemekên Adiyaman - Semsûr li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -196,7 +196,7 @@
                 "type": "question",
                 "text_tr": "Diyarbakır şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Diyarbakir",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في دياربكر",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في دياربكر",
                 "text_ku": "Bilindînên yemekên Diyarbakir - Amed li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -258,7 +258,7 @@
                 "type": "question",
                 "text_tr": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Gaziantep",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في غزيانتب",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في غزيانتب",
                 "text_ku": "Bilindînên yemekên Gaziantep - Dîlok li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -344,7 +344,7 @@
                 "type": "question",
                 "text_tr": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Gaziantep",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في غزيانتب",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في غزيانتب",
                 "text_ku": "Bilindînên yemekên Gaziantep - Dîlok li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -377,7 +377,7 @@
                 "type": "question",
                 "text_tr": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Hatay",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في حاتاي",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في حاتاي",
                 "text_ku": "Bilindînên yemekên Hatay - Xetay li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -603,7 +603,7 @@
                 "type": "question",
                 "text_tr": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Hatay",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في حاتاي",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في حاتاي",
                 "text_ku": "Bilindînên yemekên Hatay - Xetay li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -636,7 +636,7 @@
                 "type": "question",
                 "text_tr": "Kahramanmaraş şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Kahramanmaras",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في كهرمانماراس",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في كهرمانماراس",
                 "text_ku": "Bilindînên yemekên Kahramanmaras - Mereş li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -798,7 +798,7 @@
                 "type": "question",
                 "text_tr": "Kocaeli şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Kocaeli",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في كوكايلي",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في كوكايلي",
                 "text_ku": "Bilindînên yemekên Kocaeli - Kocaeli li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -831,7 +831,7 @@
                 "type": "question",
                 "text_tr": "Malatya şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Malatya",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في مالاتيا",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في مالاتيا",
                 "text_ku": "Bilindînên yemekên Malatya - Meletî li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -909,7 +909,7 @@
                 "type": "question",
                 "text_tr": "Malatya şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Malatya",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في مالاتيا",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في مالاتيا",
                 "text_ku": "Bilindînên yemekên Malatya - Meletî li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
@@ -942,7 +942,7 @@
                 "type": "question",
                 "text_tr": "Osmaniye şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
                 "text_en": "Select the county you want to get information about food opportunities in Osmaniye",
-                "text_ar": "اختر البلدية التي تريد الحصول على معلومات حول فرص الطعام في اسمانيا",
+                "text_ar": "حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في اسمانيا",
                 "text_ku": "Bilindînên yemekên Osmaniye - Kınıkan li ser şehirê xwe hilbijêrin",
                 "options": [
                     {
