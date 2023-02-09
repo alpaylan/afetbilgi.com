@@ -73,8 +73,10 @@ const writeStemCellsPDF = (doc, allData) => {
       y += yRange;
     }
 
-    doc.text("Telefon Numarasi: " + value.phone, x, y);
-    y += yRange;
+    if (value.phone) {
+      doc.text("Telefon Numarasi: " + value.phone, x, y);
+      y += yRange;
+    }
   });
 };
 

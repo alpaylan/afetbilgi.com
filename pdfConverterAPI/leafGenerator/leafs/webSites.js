@@ -66,7 +66,7 @@ const writeWebsitesPDF = (doc, allData) => {
     }
 
     doc.text("\u2022 " + value.name, x, y);
-    y += yRange;
+    y += yRange * 1.5;
     if (value.url) {
       doc.setFontSize(smallTextSize);
       doc.textWithLink("URL: " + value.url, x, y, { url: value.url });

@@ -26,7 +26,7 @@ const writeBloodDonationsPDF = (doc, data) => {
 
   setFont(doc, "bold");
   doc.setFontSize(titleFontSize);
-  doc.text(`${data.city} - Kızılay Kan Bağış Noktaları`, x, yRange * 2);
+  doc.text(`${data[0].city} - Kızılay Kan Bağış Noktaları`, x, yRange * 2);
 
   setFont(doc, "regular");
   doc.setFontSize(textFontSize);
@@ -36,24 +36,59 @@ const writeBloodDonationsPDF = (doc, data) => {
     yRange * 3
   );
   y = yStart;
+  let isNewPage = false;
+  data.forEach((element) => {
+    if (y >= pageHeight) {
+      doc.addPage();
+      y = yStart;
+    }
 
-  doc.setFontSize(textFontSize);
-  doc.text("\u2022 " + `${data.name}` + " - " + data.phone_number, x, y);
-  y += yRange;
+    if (isNewPage) {
+      setFont(doc, "bold");
+      doc.setFontSize(titleFontSize);
+      doc.text(`${data.city} - Kızılay Kan Bağış Noktaları`, x, yRange * 2);
 
-  doc.setFontSize(smallTextSize);
+      setFont(doc, "regular");
+      doc.setFontSize(textFontSize);
+      doc.text(
+        `Dosyanın oluşturulma tarihi: ${getDateAndTime()}` + pageStartText,
+        x,
+        yRange * 3
+      );
+      y = yStart;
+      isNewPage = false;
+    }
 
-  doc.text("Sorumlu: " + data.head, x, y);
-  y += yRange;
+    doc.setFontSize(textFontSize);
+    doc.text(
+      "\u2022 " + `${element.name}` + " - " + element.phone_number,
+      x,
+      y
+    );
+    y += yRange;
 
-  doc.text("Adres: " + data.address, x, y);
-  y += yRange;
+    doc.setFontSize(smallTextSize);
 
-  doc.text("Cep Telefonu: " + data.cell_phone_number, x, y);
-  y += yRange;
+    if (element.head) {
+      doc.text("Sorumlu: " + element.head, x, y);
+      y += yRange;
+    }
 
-  doc.text("Fax: " + data.fax, x, y);
-  y += yRange;
+    if (element.address) {
+      doc.text("Adres: " + element.address, x, y);
+      y += yRange;
+    }
+
+    if (element.cell_phone_number) {
+      doc.text("Cep Telefonu: " + element.cell_phone_number, x, y);
+      y += yRange;
+    }
+
+    if (element.fax) {
+      doc.text("Fax: " + element.fax, x, y);
+      y += yRange;
+    }
+  });
 };
 
 module.exports = {
