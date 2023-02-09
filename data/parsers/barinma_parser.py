@@ -26,7 +26,7 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     dfj = pd.read_csv(url, encoding=("utf-8"))
-    if dfj.empty:
+    if not dfj.empty:
         dfj = dfj.drop(
             columns=[
                 "Ad",
