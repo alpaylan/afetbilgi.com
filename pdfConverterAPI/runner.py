@@ -20,3 +20,4 @@ def generateParentPDF(folder):
 for root, dirs, files in os.walk(OUTPUT_ROOT, topdown=False):
     for name in dirs:
         generateParentPDF(os.path.join(root, name))
+generateParentPDF(OUTPUT_ROOT)  # Root doc, exports as outputs.pdf

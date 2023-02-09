@@ -13,7 +13,6 @@ const { writePhoneNumbersToPdf } = require("./leafs/telefonNumaralari");
 const { setFont, registerFont } = require("./docFunctions");
 const { writeMealPDF, getMealData } = require("./leafs/yemek");
 const constantData = require("./constants");
-// const { createCoverPage } = require("./coverPage");
 const { getWebSitesData, writeWebsitesPDF } = require("./leafs/webSites");
 const { writeArticlesPDF } = require("./leafs/articles");
 const { writeVpnPDF } = require("./leafs/vpn");
@@ -29,7 +28,6 @@ const {
 } = require("./leafs/bloodDonation");
 
 const { writeStemCellsPDF } = require("./leafs/stemCells");
-const { createCoverPage } = require("./coverPage");
 const { writePharmacyData } = require("./leafs/pharmacy");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
@@ -166,9 +164,8 @@ const createLeafMealPDF = async () => {
   const data = await fetchData();
 
   const mealData = getMealData(data);
-  const path = `../outputs/${
-    mealData.name_tr ? mealData.name_tr : mealData.name
-  }/`;
+  const path = `../outputs/${mealData.name_tr ? mealData.name_tr : mealData.name
+    }/`;
   fs.mkdirSync(path, { recursive: true });
 
   mealData.value.options.forEach((option) => {
