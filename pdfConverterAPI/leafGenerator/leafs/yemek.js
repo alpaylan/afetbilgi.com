@@ -58,9 +58,7 @@ const writeMealPDF = (option) => {
     let y = yStart;
     let isNewPage = true;
 
-    const path = `../outputs/${encodeURIComponent("Yemek Dağıtım Yerleri")}/${
-      value.value.data.city
-    }`;
+    const path = `../outputs/${MEAL_DATA_TITLE}/${value.value.data.city}`;
     fs.mkdirSync(path, { recursive: true });
 
     // create a pdf file

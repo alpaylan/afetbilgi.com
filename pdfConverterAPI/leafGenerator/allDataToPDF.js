@@ -125,9 +125,7 @@ const createLeafTemporaryAccomodationPDF = async () => {
   const data = await fetchData();
 
   const temporaryAccomodationData = getTemporaryAccomodationData(data);
-  const path = `../outputs/${encodeURIComponent(
-    temporaryAccomodationData[0].name_tr
-  )}/`;
+  const path = `../outputs/${temporaryAccomodationData[0].name_tr}/`;
   fs.mkdirSync(path, { recursive: true });
 
   temporaryAccomodationData[0].value.options.forEach((option) => {
@@ -148,9 +146,7 @@ const createLeafSafeGatheringPlacesPDF = async () => {
 
   const safe_gathering_places = getSafeGatheringPlace(data);
 
-  const path = `../outputs/${encodeURIComponent(
-    safe_gathering_places.name_tr
-  )}/`;
+  const path = `../outputs/${safe_gathering_places.name_tr}/`;
   fs.mkdirSync(path, { recursive: true });
 
   safe_gathering_places.value.options.forEach((option) => {
@@ -170,7 +166,9 @@ const createLeafMealPDF = async () => {
   const data = await fetchData();
 
   const mealData = getMealData(data);
-  const path = `../outputs/${encodeURIComponent(mealData.name_tr)}/`;
+  const path = `../outputs/${
+    mealData.name_tr ? mealData.name_tr : mealData.name
+  }/`;
   fs.mkdirSync(path, { recursive: true });
 
   mealData.value.options.forEach((option) => {
@@ -183,7 +181,7 @@ const createVeterinerPlacesPDF = async () => {
 
   const veterinerPlaces = getVeterinerPlaces(data);
 
-  const path = `../outputs/${encodeURIComponent(veterinerPlaces[0].name)}/`;
+  const path = `../outputs/${veterinerPlaces[0].name}/`;
   fs.mkdirSync(path, { recursive: true });
 
   veterinerPlaces[0].value.options.forEach((option) => {
@@ -203,7 +201,7 @@ const createHelpCentersPDF = async () => {
 
   const helpCenters = getHelpCenters(data);
 
-  const path = `../outputs/${encodeURIComponent(helpCenters[0].name_tr)}/`;
+  const path = `../outputs/${helpCenters[0].name_tr}/`;
   fs.mkdirSync(path, { recursive: true });
 
   helpCenters[0].value.options.forEach((option) => {
@@ -222,7 +220,7 @@ const createBloodDonationPDF = async () => {
   const data = await fetchData();
   const bloodDonation = getBloodDonations(data);
 
-  const path = `../outputs/${encodeURIComponent(bloodDonation[0].name_tr)}/`;
+  const path = `../outputs/${bloodDonation[0].name_tr}/`;
   fs.mkdirSync(path, { recursive: true });
 
   bloodDonation[0].value.options.forEach((option) => {
@@ -242,7 +240,7 @@ const createBloodDonationPDF = async () => {
 const createPhoneNumbersPDF = async () => {
   const data = await fetchData();
 
-  const path = `../outputs/${encodeURIComponent("Önemli Telefon Numaraları")}`;
+  const path = `../outputs/${"Önemli Telefon Numaraları"}`;
   const doc = new jsPDF({
     orientation: "p",
     unit: "px",
@@ -256,7 +254,7 @@ const createPhoneNumbersPDF = async () => {
 
 const createWebSitesPDF = async () => {
   const data = await fetchData();
-  const path = `../outputs/${encodeURIComponent("Önemli Web Siteleri")}`;
+  const path = `../outputs/${"Önemli Web Siteleri"}`;
   const doc = new jsPDF({
     orientation: "p",
     unit: "px",
@@ -270,7 +268,7 @@ const createWebSitesPDF = async () => {
 
 const createArticlePDF = async () => {
   const data = await fetchData();
-  const path = `../outputs/${encodeURIComponent("Faydalı Yazılar")}`;
+  const path = `../outputs/${"Faydalı Yazılar"}`;
   const doc = new jsPDF({
     orientation: "p",
     unit: "px",
@@ -299,7 +297,7 @@ const createArticlePDF = async () => {
 const createStemCellsPDF = async () => {
   const data = await fetchData();
 
-  const path = `../outputs/${encodeURIComponent("Kök Hücre Bağış Noktaları")}`;
+  const path = `../outputs/${"Kök Hücre Bağış Noktaları"}`;
 
   const doc = new jsPDF({
     orientation: "p",
@@ -315,7 +313,7 @@ const createStemCellsPDF = async () => {
 const createPharmacyPDF = async () => {
   const data = await fetchData();
 
-  const path = `../outputs/${encodeURIComponent("Konteyner Eczaneler")}`;
+  const path = `../outputs/${"Konteyner Eczaneler"}`;
 
   const doc = new jsPDF({
     orientation: "p",
