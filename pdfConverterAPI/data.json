@@ -2,12 +2,14 @@
     "type": "question",
     "text_tr": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
     "text_en": "Please select a topic.",
-    "text_ku": "",
-    "text_at": "",
+    "text_ku": "i kerema xwe mijara hûn dixwazin agahdariyê jê bigirin hilbijêrin",
+    "text_ar": "الرجاء تحديد الموضوع الذي تريد تلقي معلومات عنه",
     "options": [
         {
+            "name_ar": "ملاجئ مؤقتة",
             "name_tr": "Geçici Barınma Alanları",
             "name_en": "Temporary Accommodation Places",
+            "name_ku": "Bicîhbûna Demkî",
             "path": "datasets/barinma.json",
             "value": {
                 "type": "question",
@@ -1719,8 +1721,10 @@
             }
         },
         {
+            "name_ar": "مناطق تجميع آمنة",
             "name_tr": "Güvenli Toplanma Alanları",
             "name_en": "Safe Gathering Places",
+            "name_ku": "Qadên Ewle Bo Kombûnê",
             "path": "datasets/toplanma.json",
             "value": {
                 "type": "question",
@@ -1970,7 +1974,7 @@
                         "name_tr": "Gaziantep",
                         "name_en": "Gaziantep",
                         "name_ar": "Gaziantep",
-                        "name_ku": "Gaziantep"
+                        "name_ku": "Gaziantep- Dîlok"
                     },
                     {
                         "value": {
@@ -2154,8 +2158,728 @@
             }
         },
         {
+            "name_ar": "مواقع توصيل الطعام",
+            "name": "Yemek Dağıtım Yerleri",
+            "name_en": "Food Distribution Center",
+            "name_ku": "Cihên Belavkirina Xwarinê",
+            "path": "datasets/yemek.json",
+            "value": {
+                "type": "question",
+                "text_tr": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz.",
+                "text_en": "Choose the city you would like to see the food distribution centers.",
+                "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
+                "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
+                "options": [
+                    {
+                        "name": "Diyarbakir",
+                        "value": {
+                            "type": "question",
+                            "text": "Diyarbakir şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "Yenisehir ",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Diyarbakir",
+                                            "county": "Yenisehir ",
+                                            "items": [
+                                                {
+                                                    "name": "Plaza Hotel, Elazığ Cad büyükşehir Belediye yanı",
+                                                    "maps_url": "https://goo.gl/maps/ojSDCdQiJoQ4h6zH7",
+                                                    "url": "https://www.instagram.com/p/CoW_OA1s0W5/",
+                                                    "phone_number": "5344844440",
+                                                    "updated_at_date": "08/02/2023",
+                                                    "updated_at_time": 1.2
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Kayapınar",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Diyarbakir",
+                                            "county": "Kayapınar",
+                                            "items": [
+                                                {
+                                                    "name": "Pepûle Mitbex",
+                                                    "maps_url": "https://www.google.com/maps/place/Pep%C3%BBle+Mitbex/@37.9455857,40.1781942,15z/data=!4m2!3m1!1s0x0:0x9158cc169fbb481a?sa=X&ved=2ahUKEwiXmp_L2oT9AhUsQvEDHda2CuYQ_BJ6BAhJEAg",
+                                                    "url": "Her sabah çorba dağıtımı",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 20.0
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Hatay",
+                        "value": {
+                            "type": "question",
+                            "text": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "İskenderun",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Hatay",
+                                            "county": "İskenderun",
+                                            "items": [
+                                                {
+                                                    "name": "İskenderun Gençlik Merkezi",
+                                                    "maps_url": "https://goo.gl/maps/pUbUT4da6E2DiEiN7",
+                                                    "url": "https://twitter.com/kasapoglu/status/1622684769757630487 https://twitter.com/hilmiturkmen34/status/1622972543056457729",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 17.56
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Samandağ",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Hatay",
+                                            "county": "Samandağ",
+                                            "items": [
+                                                {
+                                                    "name": "Kadıköy Belediyesi Gezici Aşevi",
+                                                    "maps_url": "https://t.co/KeYzf7MTX4",
+                                                    "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 19.25
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Defne",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Hatay",
+                                            "county": "Defne",
+                                            "items": [
+                                                {
+                                                    "name": "Kadıköy Belediyesi Gezici Aşevi",
+                                                    "maps_url": "https://t.co/vVhbIIxS0e",
+                                                    "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 19.25
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Iskenderun",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Hatay",
+                                            "county": "Iskenderun",
+                                            "items": [
+                                                {
+                                                    "name": "Iskenderun Teknik Universitesi Bahcesi ",
+                                                    "maps_url": "https://goo.gl/maps/wcXMPAv4U5uUQegw6",
+                                                    "url": null,
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 22.1
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Antakya",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Hatay",
+                                            "county": "Antakya",
+                                            "items": [
+                                                {
+                                                    "name": "IBB Mobil Mutfak, Odabaşı Mahallesi Atatürk Caddesi",
+                                                    "maps_url": "https://goo.gl/maps/kMQ5ZA6bZs45BfC47",
+                                                    "url": "https://twitter.com/ekrem_imamoglu/status/1623020341021839370",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2013",
+                                                    "updated_at_time": 21.06
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Gaziantep",
+                        "value": {
+                            "type": "question",
+                            "text": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "Şahinbey",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Gaziantep",
+                                            "county": "Şahinbey",
+                                            "items": [
+                                                {
+                                                    "name": "Kelebek Paça Beyran Restaurant",
+                                                    "maps_url": "https://goo.gl/maps/QUjQ6b7ARiYc4Hi76",
+                                                    "url": null,
+                                                    "phone_number": "3422309633",
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 17.0
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Şehitkamil",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Gaziantep",
+                                            "county": "Şehitkamil",
+                                            "items": [
+                                                {
+                                                    "name": "KünefeHan ",
+                                                    "maps_url": "https://www.google.com/maps/place/K%C3%BCnefe+Han/@37.0718648,37.3443679,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e1feed2bcd3b:0xad338053986d522c!8m2!3d37.0718606!4d37.3485951",
+                                                    "url": "(7/24 açık) https://www.instagram.com/kunefe.han/",
+                                                    "phone_number": "3423221010",
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 18.41
+                                                },
+                                                {
+                                                    "name": "Gaziantep Gaziray istasyonu- AFAD Cadiri",
+                                                    "maps_url": "https://goo.gl/maps/wLy6YhPvUa5Z5wLb9",
+                                                    "url": null,
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 20.13
+                                                },
+                                                {
+                                                    "name": "Altunkaya Group- Gaziantep 4, Organize Sanayi",
+                                                    "maps_url": " https://goo.gl/maps/FgXbwVJvYBSEQtBn8",
+                                                    "url": null,
+                                                    "phone_number": null,
+                                                    "updated_at_date": "08/02/2022",
+                                                    "updated_at_time": 2.2
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Gaziantep ",
+                        "value": {
+                            "type": "question",
+                            "text": "Gaziantep  şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "Şehitkamil",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Gaziantep ",
+                                            "county": "Şehitkamil",
+                                            "items": [
+                                                {
+                                                    "name": "Huqqabaz Iconova",
+                                                    "maps_url": "https://goo.gl/maps/fArvEnMAFqZwcs259?fbclid=PAAabw83ufaxjQyjFGITjadAZL75V93_Z65mhoCaV1IReRek8aJrgmDTPnsY0",
+                                                    "url": "https://www.instagram.com/huqqabaz/",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 19.0
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Kahramanmaras",
+                        "value": {
+                            "type": "question",
+                            "text": "Kahramanmaras şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "Onikişubat",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Kahramanmaras",
+                                            "county": "Onikişubat",
+                                            "items": [
+                                                {
+                                                    "name": "Piazza AVM Yanındaki Boş Arazi",
+                                                    "maps_url": "https://goo.gl/maps/u4HX9uZH2S6qYAgK9",
+                                                    "url": "https://twitter.com/BaranKk20/status/1623097442127208451",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "08/02/2023",
+                                                    "updated_at_time": 2.12
+                                                },
+                                                {
+                                                    "name": "Nisa Fırın",
+                                                    "maps_url": "https://goo.gl/maps/CVNhiGSnszr77CG87",
+                                                    "url": "Ücretsiz Ekmek https://twitter.com/KendineMuzisyen/status/1622908693552439296",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 20.05
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Kahramanmaraş Merkez",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Kahramanmaras",
+                                            "county": "Kahramanmaraş Merkez",
+                                            "items": [
+                                                {
+                                                    "name": "Kocaeli Büyükşehir Belediyesi Gezici Aşevi- Kahramanmaraş Valilik Onu",
+                                                    "maps_url": "https://goo.gl/maps/JQpjPhRar2QeZ1Bz8",
+                                                    "url": "https://twitter.com/kocaelibld/status/1622980989386457088",
+                                                    "phone_number": null,
+                                                    "updated_at_date": "07/02/2022",
+                                                    "updated_at_time": 18.29
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Adana",
+                        "value": {
+                            "type": "question",
+                            "text": "Adana şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
+                            "options": [
+                                {
+                                    "name": "Ceyhan",
+                                    "value": {
+                                        "type": "data",
+                                        "data": {
+                                            "dataType": "food-items",
+                                            "city": "Adana",
+                                            "county": "Ceyhan",
+                                            "items": [
+                                                {
+                                                    "name": " Ceyhan Cemevi \n",
+                                                    "maps_url": "https://www.google.com/maps/place/Hac%C4%B1+Bekta%C5%9F-%C4%B1+Veli+K%C3%BClt%C3%BCr+Merkezi/@37.01413,35.821124,17z/data=!3m1!4b1!4m5!3m4!1s0x1528c991a94e0bc7:0xac90309889fb78a3!8m2!3d37.014115!4d35.8212136?coh=164777&entry=tt&shorturl=1",
+                                                    "url": "https://twitter.com/HaciBektasVakfi/status/1623055915984502790",
+                                                    "phone_number": "0544 530 81 00",
+                                                    "updated_at_date": "07/02/2023",
+                                                    "updated_at_time": 23.27
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name_ar": "أرقام هواتف مهمة",
+            "name": "Önemli Telefon Numaraları",
+            "name_en": "Crucial Phone Number",
+            "name_ku": "Numareyên Girîng",
+            "path": "datasets/telefon.json",
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "phone-number-list",
+                    "phones": [
+                        {
+                            "name": "AFAD Kahramanmaraş",
+                            "phone_number": "0344 221 49 91"
+                        },
+                        {
+                            "name": "AFAD Adana",
+                            "phone_number": "0322 227 28 54"
+                        },
+                        {
+                            "name": "AFAD Hatay",
+                            "phone_number": "0326 233 54 15"
+                        },
+                        {
+                            "name": "AFAD Gaziantep",
+                            "phone_number": "0342 428 11 18"
+                        },
+                        {
+                            "name": "AFAD Diyarbakır",
+                            "phone_number": "0412 326 11 58"
+                        },
+                        {
+                            "name": "AFAD Adıyaman",
+                            "phone_number": "0416 216 12 31"
+                        },
+                        {
+                            "name": "AFAD Şanlıurfa",
+                            "phone_number": "0414 313 72 90"
+                        },
+                        {
+                            "name": "AFAD Malatya",
+                            "phone_number": "0422 212 84 32"
+                        },
+                        {
+                            "name": "AFAD Osmaniye",
+                            "phone_number": "0328 826 20 02"
+                        },
+                        {
+                            "name": "AFAD Kilis",
+                            "phone_number": "0348 813 44 78"
+                        },
+                        {
+                            "name": "AKUT Genel Merkez ",
+                            "phone_number": "0212 217 04 10"
+                        },
+                        {
+                            "name": "KIZILAY ÇAĞRI MERKEZİ",
+                            "phone_number": "168",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "POLİS",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "ITFAİYE",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "AMBULANS",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "JANDARMA",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "SAHİL GÜVENLİK",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "ORMAN YANGINI İHBAR",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "AFET ARAMA KURTARMA",
+                            "phone_number": "112",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "SU ARIZA İHBAR",
+                            "phone_number": "185",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "ELEKTRİK ARIZA İHBAR",
+                            "phone_number": "186",
+                            "is_plain": true
+                        },
+                        {
+                            "name": "DOĞALGAZ ARIZA İHBAR",
+                            "phone_number": "187",
+                            "is_plain": true
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_ar": "مُرْتَادِي الشَّبَكَة مهمة",
+            "name": "Önemli Web Siteleri",
+            "name_en": "Useful Links",
+            "name_ku": " Malperên Kêrhatî",
+            "path": "datasets/faydali_linkler.json",
+            "value": {
+                "type": "data",
+                "data": {
+                    "dataType": "useful-links",
+                    "usefulLinks": [
+                        {
+                            "name": "Karayolları Genel Müdürlüğü Twitter (Yol durumu)",
+                            "url": "https://twitter.com/KarayollariGM"
+                        },
+                        {
+                            "name": "AHBAP",
+                            "url": "https://ahbap.org/"
+                        },
+                        {
+                            "name": "AFAD",
+                            "url": "https://www.afad.gov.tr/"
+                        },
+                        {
+                            "name": "AKUT",
+                            "url": "https://www.akut.org.tr/"
+                        },
+                        {
+                            "name": "Kızılay",
+                            "url": "https://www.kizilay.org.tr/"
+                        },
+                        {
+                            "name": "Afet Harita",
+                            "url": "https://afetharita.com/"
+                        },
+                        {
+                            "name": "Ahbap Deprem Güvenli Bölgeler Haritası",
+                            "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=9"
+                        },
+                        {
+                            "name": "Afet Haritası (İhtiyaç Haritası)",
+                            "url": "https://afetharitasi.org/"
+                        },
+                        {
+                            "name": "Otelz.com (Deprem Zedelere Destekte Bulunan Konaklama Yerleri",
+                            "url": "https://www.otelz.com/tr/gecmisolsunturkiyem"
+                        },
+                        {
+                            "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
+                            "url": "https://deprem.io/"
+                        },
+                        {
+                            "name": "MGM Deprem Bölgesi Hava Tahmini",
+                            "url": "https://afet.mgm.gov.tr"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_ar": "بَيَاطير",
+            "name": "Veterinerler",
+            "name_en": "Veterinarians",
+            "name_ku": "Veterîner",
+            "path": "datasets/veteriner.json",
+            "value": {
+                "type": "question",
+                "text_tr": "Hangi şehirde veteriner arıyorsunuz?",
+                "text_en": "In which city are you looking for a veterinary clinic?",
+                "text_ku": "Hûn li kîjan bajarî li veterîner digerin?",
+                "text_ar": "في أي مدينة تبحث عن طبيب بيطري؟",
+                "options": [
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Diyarbakır",
+                                "vets": [
+                                    {
+                                        "name": "Gen Veteriner Kliniği",
+                                        "phone_number": "0533 495 23 29",
+                                        "address": "Fırat, Asur Yapı Sitesi, Nazım Hikmet Cd. 46 CA, 21070 Kayapınar/Diyarbakır",
+                                        "maps_link": "https://goo.gl/maps/Hxx23Ey3ZuA6FW1G7"
+                                    },
+                                    {
+                                        "name": "PETKİNG VETERİNER KLİNİĞİ DİYARBAKIR 7/24 ACİL",
+                                        "phone_number": "0542 423 88 98",
+                                        "address": "Mezopotamya mahallesi Yılmaz Güney caddesi no 31/AB (çeysa 4 yapı altı, 21070 Kayapınar/Diyarbakır",
+                                        "maps_link": "https://goo.gl/maps/ZsqcHLcmfXpstRz68"
+                                    },
+                                    {
+                                        "name": "Kare Veteriner Kliniği",
+                                        "phone_number": "0541 219 92 82",
+                                        "address": "Diclekent, 247. Sk. Welat - Erdem Sitesi D:No: 1/A, 21300 Kayapınar/Diyarbakır",
+                                        "maps_link": "https://goo.gl/maps/GFTs81YbYfpTNSU49"
+                                    },
+                                    {
+                                        "name": "Vatsilla Pet Veteriner Kliniği",
+                                        "phone_number": "0534 443 97 21",
+                                        "address": "İnaloğlu caddesi karaamid apartmanı altı no:22/A, 21100 Yenişehir/Diyarbakır",
+                                        "maps_link": "https://goo.gl/maps/QbY1jP5bo5XXCpLcA"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Diyarbakır",
+                        "name_en": "Diyarbakır",
+                        "name_ku": "Diyarbakır- Amed"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Gaziantep ",
+                                "vets": [
+                                    {
+                                        "name": "Asil Veteriner Kliniği Gaziantep",
+                                        "phone_number": "0542 369 37 40",
+                                        "address": "Batıkent Mahallesi Adnan İnancı Caddesi Batmazoğlu A blok No 6:C, Batıkent, 27560 Şehitkamil/Gaziantep",
+                                        "maps_link": "https://goo.gl/maps/YcGzHnitiYWPjnxh9"
+                                    },
+                                    {
+                                        "name": "Miya Hav Pet Hotel",
+                                        "phone_number": "0532 326 07 33",
+                                        "address": "Küçükkızılhisar, küme evler no25, Gedikardı, 27000 Şahinbey/Gaziantep",
+                                        "maps_link": "https://goo.gl/maps/nuAe2hegZpiqZJEc6"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Gaziantep",
+                        "name_en": "Gaziantep",
+                        "name_ku": "Gaziantep- Dîlok"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Şanlıurfa",
+                                "vets": [
+                                    {
+                                        "name": "DR. PATİ VETERİNER KLİNİĞİ",
+                                        "phone_number": "0543 719 05 32",
+                                        "address": "Atakent Mah. 6208. Sokak No:1 İç Kapı No:1, Şenevler, 63300 Karaköprü/Şanlıurfa",
+                                        "maps_link": "https://goo.gl/maps/DswLYSh3bMCRhfGW9"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Şanlıurfa",
+                        "name_en": "Şanlıurfa",
+                        "name_ku": "Şanlıurfa- Riha"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Adana",
+                                "vets": [
+                                    {
+                                        "name": "Heypati Veteriner Kliniği",
+                                        "phone_number": "0533 193 72 84",
+                                        "address": "Kurtuluş Mahallesi Ziyapaşa Bulvarı Nakipoğlu Apt Altı No: 9 Seyhan / Adana",
+                                        "maps_link": "https://goo.gl/maps/9nuHF1JR7vWTAoST8"
+                                    },
+                                    {
+                                        "name": "PetLife Veteriner Kliniği",
+                                        "phone_number": "0536 027 57 97",
+                                        "address": "Mahfesığmaz, Damar Arıkoğlu Blv. 3 A, 01170 Çukurova/Adana",
+                                        "maps_link": "https://goo.gl/maps/Vn8kh2FZ9aYJ6bU99"
+                                    },
+                                    {
+                                        "name": "DEMAR VETERİNER KLİNİĞİ",
+                                        "phone_number": "0533 656 82 20",
+                                        "address": "Kurtuluş, Befi Apartmanı, Şinasi Efendi Cd. No:7 D:Zemin Kat, 01130 Seyhan/Adana",
+                                        "maps_link": "https://goo.gl/maps/KatoDquP7ZrNwAV77"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Adana",
+                        "name_en": "Adana",
+                        "name_ku": "Adana- Edene"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Mersin",
+                                "vets": [
+                                    {
+                                        "name": "ALİ BAYAZIT VETERİNER KLİNİĞİ",
+                                        "phone_number": "0535 775 57 33",
+                                        "address": "Fatih, aksaray apartmanı, 30004. Sk. No:1 A, 33200 Mezitli/Mersin",
+                                        "maps_link": "https://goo.gl/maps/DJr8e15DTwwC4GZt8"
+                                    },
+                                    {
+                                        "name": "Peethoven Veteriner Kliniği",
+                                        "phone_number": "0507 426 71 21",
+                                        "address": "Viranşehir, 34311. Sk. No:10, 33340 Mezitli/Mersin",
+                                        "maps_link": "https://goo.gl/maps/kbPsKMaS2bm9EwuZ6"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Mersin",
+                        "name_en": "Mersin",
+                        "name_ku": "Mersin- Mêrsîn"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "data-vet",
+                                "city": "Malatya",
+                                "vets": [
+                                    {
+                                        "name": "Avisa Veteriner Kliniği",
+                                        "phone_number": "0422 325 02 86",
+                                        "address": "Fahri Kayahan Bulvarı 41/5A Turgut Özal Mahallesi, Oran 1 Sitesi B Blok Altı, 44090 Yeşilyurt/Malatya",
+                                        "maps_link": "https://goo.gl/maps/Fs3w1NejFePV4yfB7"
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Malatya",
+                        "name_en": "Malatya",
+                        "name_ku": "Malatya- Meletî"
+                    }
+                ]
+            }
+        },
+        {
+            "name_ar": "فرص التبرع بالعناصر",
             "name_tr": "Yardım Toplama Merkezleri",
             "name_en": "Other Donation",
+            "name_ku": "Bexşkirina Tiştan",
             "path": "datasets/yardim_toplama_merkezleri.json",
             "value": {
                 "type": "question",
@@ -3405,13 +4129,36 @@
                         "name_en": "Edirne",
                         "name_ku": "Edirne",
                         "name_ar": "Edirne"
+                    },
+                    {
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "dataType": "help-item-list",
+                                "city": "Kırıkkale",
+                                "items": [
+                                    {
+                                        "city": "Kırıkkale",
+                                        "name": "Cumhuriyet meydanı",
+                                        "url": "https://goo.gl/maps/fPPZThn8tBjAyduJ9",
+                                        "phone_number": ""
+                                    }
+                                ]
+                            }
+                        },
+                        "name_tr": "Kırıkkale",
+                        "name_en": "Kırıkkale",
+                        "name_ku": "Kırıkkale",
+                        "name_ar": "Kırıkkale"
                     }
                 ]
             }
         },
         {
+            "name_ar": "نقاط الهلال الأحمر للتبرع بالدم",
             "name_tr": "Kızılay Kan Bağış Noktaları",
             "name_en": "Kızılay Blood Donation Places",
+            "name_ku": "Cihên Xwîn Dayînê yên Kizilay/ Heyva Sor",
             "path": "datasets/blood.json",
             "value": {
                 "type": "question",
@@ -7105,231 +7852,10 @@
             }
         },
         {
-            "name": "Önemli Telefon Numaraları",
-            "name_en": "Crucial Phone Number",
-            "path": "datasets/telefon.json",
-            "value": {
-                "type": "data",
-                "data": {
-                    "dataType": "phone-number-list",
-                    "phones": [
-                        {
-                            "name": "AFAD Kahramanmaraş",
-                            "phone_number": "0344 221 49 91"
-                        },
-                        {
-                            "name": "AFAD Adana",
-                            "phone_number": "0322 227 28 54"
-                        },
-                        {
-                            "name": "AFAD Hatay",
-                            "phone_number": "0326 233 54 15"
-                        },
-                        {
-                            "name": "AFAD Gaziantep",
-                            "phone_number": "0342 428 11 18"
-                        },
-                        {
-                            "name": "AFAD Diyarbakır",
-                            "phone_number": "0412 326 11 58"
-                        },
-                        {
-                            "name": "AFAD Adıyaman",
-                            "phone_number": "0416 216 12 31"
-                        },
-                        {
-                            "name": "AFAD Şanlıurfa",
-                            "phone_number": "0414 313 72 90"
-                        },
-                        {
-                            "name": "AFAD Malatya",
-                            "phone_number": "0422 212 84 32"
-                        },
-                        {
-                            "name": "AFAD Osmaniye",
-                            "phone_number": "0328 826 20 02"
-                        },
-                        {
-                            "name": "AFAD Kilis",
-                            "phone_number": "0348 813 44 78"
-                        },
-                        {
-                            "name": "AKUT Genel Merkez ",
-                            "phone_number": "0212 217 04 10"
-                        },
-                        {
-                            "name": "KIZILAY ÇAĞRI MERKEZİ",
-                            "phone_number": "168",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "POLİS",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "ITFAİYE",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "AMBULANS",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "JANDARMA",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "SAHİL GÜVENLİK",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "ORMAN YANGINI İHBAR",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "AFET ARAMA KURTARMA",
-                            "phone_number": "112",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "SU ARIZA İHBAR",
-                            "phone_number": "185",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "ELEKTRİK ARIZA İHBAR",
-                            "phone_number": "186",
-                            "is_plain": true
-                        },
-                        {
-                            "name": "DOĞALGAZ ARIZA İHBAR",
-                            "phone_number": "187",
-                            "is_plain": true
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Önemli Web Siteleri",
-            "name_en": "Useful Links",
-            "path": "datasets/faydali_linkler.json",
-            "value": {
-                "type": "data",
-                "data": {
-                    "dataType": "useful-links",
-                    "usefulLinks": [
-                        {
-                            "name": "Karayolları Genel Müdürlüğü Twitter (Yol durumu)",
-                            "url": "https://twitter.com/KarayollariGM"
-                        },
-                        {
-                            "name": "AHBAP",
-                            "url": "https://ahbap.org/"
-                        },
-                        {
-                            "name": "AFAD",
-                            "url": "https://www.afad.gov.tr/"
-                        },
-                        {
-                            "name": "AKUT",
-                            "url": "https://www.akut.org.tr/"
-                        },
-                        {
-                            "name": "Kızılay",
-                            "url": "https://www.kizilay.org.tr/"
-                        },
-                        {
-                            "name": "Afet Harita",
-                            "url": "https://afetharita.com/"
-                        },
-                        {
-                            "name": "Ahbap Deprem Güvenli Bölgeler Haritası",
-                            "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=9"
-                        },
-                        {
-                            "name": "Afet Haritası (İhtiyaç Haritası)",
-                            "url": "https://afetharitasi.org/"
-                        },
-                        {
-                            "name": "Otelz.com (Deprem Zedelere Destekte Bulunan Konaklama Yerleri",
-                            "url": "https://www.otelz.com/tr/gecmisolsunturkiyem"
-                        },
-                        {
-                            "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
-                            "url": "deprem.io"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Faydalı Yazılar",
-            "name_en": "Useful Articles",
-            "path": "datasets/yazilar.json",
-            "value": {
-                "type": "data",
-                "data": {
-                    "dataType": "beneficial-articles",
-                    "articles": [
-                        {
-                            "title": "Deprem Sonrası Yardımlaşma Dosyası",
-                            "author": "Armen Dayıgiloğlu",
-                            "url": "https://docs.google.com/document/d/15f4zS5tc9-XalVChLlKTIHOgYpWNpTJ-qR9CygmSJxQ/edit?usp=sharing"
-                        },
-                        {
-                            "title": "Takip Listesi",
-                            "author": "imeceplatformu",
-                            "url": "https://www.instagram.com/imeceplatformu/guide/takip-listesi-depremler/18005172658575421/"
-                        },
-                        {
-                            "title": "Depremzede İlk Yardım",
-                            "author": "AHBAP",
-                            "url": "https://twitter.com/ahbapacil/status/1622641519323754497"
-                        },
-                        {
-                            "title": "Deprem Sonrası Çocuklara Nasıl Yaklaşılmalı",
-                            "author": "TRT Çocuk",
-                            "url": "https://www.trtcocuk.net.tr/ebeveyn-akademisi/ebeveyn-olmak/deprem-sonrasi-cocuklara-nasil-yaklasilmali"
-                        },
-                        {
-                            "title": "Depremden Etkilenenlere Nasıl Yardım Edebiliriz",
-                            "author": "Faynstudio",
-                            "url": "https://www.instagram.com/p/CoUZguwoIv3/?hl=en"
-                        },
-                        {
-                            "title": "Depremden Etkilenenlere Yardım Paketi Hazırlarken Dikkat Etmemiz Gerekenler",
-                            "author": "Faynstudio",
-                            "url": "https://www.instagram.com/p/CoUjUISI1Lf/?hl=en"
-                        },
-                        {
-                            "title": "Psikososyal Hizmet",
-                            "author": "AFAD",
-                            "url": "https://drive.google.com/file/d/1PPMQe9olalSD7JzhpwRE6qQP3AWw7bP4/view?usp=share_link"
-                        },
-                        {
-                            "title": "Afet Sahası Rehberi",
-                            "author": "Prof. Dr. Mehmet Şükrü Sever",
-                            "url": "https://drive.google.com/file/d/1rQ3i7wL8mwkYpSKaGMeDwTH55sCoeUm6/view?usp=share_link"
-                        },
-                        {
-                            "title": "Kök Hücre Bağışı Hakkında Sıkça Sorulan Sorular ",
-                            "author": "Sağlık Hizmetleri Genel Müdürlüğü Türkiye Kök Hücre Koordinasyon Merkezi",
-                            "url": "https://turkok.saglik.gov.tr/TR-90496/sikca-sorulan-sorular.html"
-                        }
-                    ]
-                }
-            }
-        },
-        {
+            "name_ar": "نقاط التبرع بالخلايا الجذعية",
             "name": "Kök Hücre Bağış Noktaları",
             "name_en": "Stem Cell Donation Points",
+            "name_ku": "Cihên bo bexşîna xaneyî bineretiyê",
             "path": "datasets/kokhucre.json",
             "value": {
                 "type": "data",
@@ -7425,538 +7951,91 @@
             }
         },
         {
-            "name": "Veterinerler",
-            "name_en": "Veterinarians",
-            "path": "datasets/veteriner.json",
+            "name_ar": "نصوص مفيدة",
+            "name": "Faydalı Yazılar",
+            "name_en": "Useful Articles",
+            "name_ku": "Agahiyên Kêrhatî",
+            "path": "datasets/yazilar.json",
             "value": {
-                "type": "question",
-                "text": "Hangi şehirde veteriner arıyorsunuz?",
-                "options": [
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Diyarbakır",
-                                "vets": [
-                                    {
-                                        "name": "Gen Veteriner Kliniği",
-                                        "phone_number": "0533 495 23 29",
-                                        "address": "Fırat, Asur Yapı Sitesi, Nazım Hikmet Cd. 46 CA, 21070 Kayapınar/Diyarbakır",
-                                        "maps_link": "https://goo.gl/maps/Hxx23Ey3ZuA6FW1G7"
-                                    },
-                                    {
-                                        "name": "PETKİNG VETERİNER KLİNİĞİ DİYARBAKIR 7/24 ACİL",
-                                        "phone_number": "0542 423 88 98",
-                                        "address": "Mezopotamya mahallesi Yılmaz Güney caddesi no 31/AB (çeysa 4 yapı altı, 21070 Kayapınar/Diyarbakır",
-                                        "maps_link": "https://goo.gl/maps/ZsqcHLcmfXpstRz68"
-                                    },
-                                    {
-                                        "name": "Kare Veteriner Kliniği",
-                                        "phone_number": "0541 219 92 82",
-                                        "address": "Diclekent, 247. Sk. Welat - Erdem Sitesi D:No: 1/A, 21300 Kayapınar/Diyarbakır",
-                                        "maps_link": "https://goo.gl/maps/GFTs81YbYfpTNSU49"
-                                    },
-                                    {
-                                        "name": "Vatsilla Pet Veteriner Kliniği",
-                                        "phone_number": "0534 443 97 21",
-                                        "address": "İnaloğlu caddesi karaamid apartmanı altı no:22/A, 21100 Yenişehir/Diyarbakır",
-                                        "maps_link": "https://goo.gl/maps/QbY1jP5bo5XXCpLcA"
-                                    }
-                                ]
-                            }
+                "type": "data",
+                "data": {
+                    "dataType": "beneficial-articles",
+                    "articles": [
+                        {
+                            "title": "Deprem Sonrası Yardımlaşma Dosyası",
+                            "author": "Armen Dayıgiloğlu",
+                            "url": "https://docs.google.com/document/d/15f4zS5tc9-XalVChLlKTIHOgYpWNpTJ-qR9CygmSJxQ/edit?usp=sharing"
                         },
-                        "name_tr": "Diyarbakır",
-                        "name_en": "Diyarbakır",
-                        "name_ku": "Diyarbakır- Amed"
-                    },
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Gaziantep ",
-                                "vets": [
-                                    {
-                                        "name": "Asil Veteriner Kliniği Gaziantep",
-                                        "phone_number": "0542 369 37 40",
-                                        "address": "Batıkent Mahallesi Adnan İnancı Caddesi Batmazoğlu A blok No 6:C, Batıkent, 27560 Şehitkamil/Gaziantep",
-                                        "maps_link": "https://goo.gl/maps/YcGzHnitiYWPjnxh9"
-                                    },
-                                    {
-                                        "name": "Miya Hav Pet Hotel",
-                                        "phone_number": "0532 326 07 33",
-                                        "address": "Küçükkızılhisar, küme evler no25, Gedikardı, 27000 Şahinbey/Gaziantep",
-                                        "maps_link": "https://goo.gl/maps/nuAe2hegZpiqZJEc6"
-                                    }
-                                ]
-                            }
+                        {
+                            "title": "Takip Listesi",
+                            "author": "imeceplatformu",
+                            "url": "https://www.instagram.com/imeceplatformu/guide/takip-listesi-depremler/18005172658575421/"
                         },
-                        "name_tr": "Gaziantep",
-                        "name_en": "Gaziantep",
-                        "name_ku": "Gaziantep- Dîlok"
-                    },
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Şanlıurfa",
-                                "vets": [
-                                    {
-                                        "name": "DR. PATİ VETERİNER KLİNİĞİ",
-                                        "phone_number": "0543 719 05 32",
-                                        "address": "Atakent Mah. 6208. Sokak No:1 İç Kapı No:1, Şenevler, 63300 Karaköprü/Şanlıurfa",
-                                        "maps_link": "https://goo.gl/maps/DswLYSh3bMCRhfGW9"
-                                    }
-                                ]
-                            }
+                        {
+                            "title": "Depremzede İlk Yardım",
+                            "author": "AHBAP",
+                            "url": "https://twitter.com/ahbapacil/status/1622641519323754497"
                         },
-                        "name_tr": "Şanlıurfa",
-                        "name_en": "Şanlıurfa",
-                        "name_ku": "Şanlıurfa- Riha"
-                    },
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Adana",
-                                "vets": [
-                                    {
-                                        "name": "Heypati Veteriner Kliniği",
-                                        "phone_number": "0533 193 72 84",
-                                        "address": "Kurtuluş Mahallesi Ziyapaşa Bulvarı Nakipoğlu Apt Altı No: 9 Seyhan / Adana",
-                                        "maps_link": "https://goo.gl/maps/9nuHF1JR7vWTAoST8"
-                                    },
-                                    {
-                                        "name": "PetLife Veteriner Kliniği",
-                                        "phone_number": "0536 027 57 97",
-                                        "address": "Mahfesığmaz, Damar Arıkoğlu Blv. 3 A, 01170 Çukurova/Adana",
-                                        "maps_link": "https://goo.gl/maps/Vn8kh2FZ9aYJ6bU99"
-                                    },
-                                    {
-                                        "name": "DEMAR VETERİNER KLİNİĞİ",
-                                        "phone_number": "0533 656 82 20",
-                                        "address": "Kurtuluş, Befi Apartmanı, Şinasi Efendi Cd. No:7 D:Zemin Kat, 01130 Seyhan/Adana",
-                                        "maps_link": "https://goo.gl/maps/KatoDquP7ZrNwAV77"
-                                    }
-                                ]
-                            }
+                        {
+                            "title": "Deprem Sonrası Çocuklara Nasıl Yaklaşılmalı",
+                            "author": "TRT Çocuk",
+                            "url": "https://www.trtcocuk.net.tr/ebeveyn-akademisi/ebeveyn-olmak/deprem-sonrasi-cocuklara-nasil-yaklasilmali"
                         },
-                        "name_tr": "Adana",
-                        "name_en": "Adana",
-                        "name_ku": "Adana- Edene"
-                    },
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Mersin",
-                                "vets": [
-                                    {
-                                        "name": "ALİ BAYAZIT VETERİNER KLİNİĞİ",
-                                        "phone_number": "0535 775 57 33",
-                                        "address": "Fatih, aksaray apartmanı, 30004. Sk. No:1 A, 33200 Mezitli/Mersin",
-                                        "maps_link": "https://goo.gl/maps/DJr8e15DTwwC4GZt8"
-                                    },
-                                    {
-                                        "name": "Peethoven Veteriner Kliniği",
-                                        "phone_number": "0507 426 71 21",
-                                        "address": "Viranşehir, 34311. Sk. No:10, 33340 Mezitli/Mersin",
-                                        "maps_link": "https://goo.gl/maps/kbPsKMaS2bm9EwuZ6"
-                                    }
-                                ]
-                            }
+                        {
+                            "title": "Depremden Etkilenenlere Nasıl Yardım Edebiliriz",
+                            "author": "Faynstudio",
+                            "url": "https://www.instagram.com/p/CoUZguwoIv3/?hl=en"
                         },
-                        "name_tr": "Mersin",
-                        "name_en": "Mersin",
-                        "name_ku": "Mersin- Mêrsîn"
-                    },
-                    {
-                        "value": {
-                            "type": "data",
-                            "data": {
-                                "dataType": "data-vet",
-                                "city": "Malatya",
-                                "vets": [
-                                    {
-                                        "name": "Avisa Veteriner Kliniği",
-                                        "phone_number": "0422 325 02 86",
-                                        "address": "Fahri Kayahan Bulvarı 41/5A Turgut Özal Mahallesi, Oran 1 Sitesi B Blok Altı, 44090 Yeşilyurt/Malatya",
-                                        "maps_link": "https://goo.gl/maps/Fs3w1NejFePV4yfB7"
-                                    }
-                                ]
-                            }
+                        {
+                            "title": "Depremden Etkilenenlere Yardım Paketi Hazırlarken Dikkat Etmemiz Gerekenler",
+                            "author": "Faynstudio",
+                            "url": "https://www.instagram.com/p/CoUjUISI1Lf/?hl=en"
                         },
-                        "name_tr": "Malatya",
-                        "name_en": "Malatya",
-                        "name_ku": "Malatya- Meletî"
-                    }
-                ]
+                        {
+                            "title": "Psikososyal Hizmet",
+                            "author": "AFAD",
+                            "url": "https://drive.google.com/file/d/1PPMQe9olalSD7JzhpwRE6qQP3AWw7bP4/view?usp=share_link"
+                        },
+                        {
+                            "title": "Afet Sahası Rehberi",
+                            "author": "Prof. Dr. Mehmet Şükrü Sever",
+                            "url": "https://drive.google.com/file/d/1rQ3i7wL8mwkYpSKaGMeDwTH55sCoeUm6/view?usp=share_link"
+                        },
+                        {
+                            "title": "Kök Hücre Bağışı Hakkında Sıkça Sorulan Sorular ",
+                            "author": "Sağlık Hizmetleri Genel Müdürlüğü Türkiye Kök Hücre Koordinasyon Merkezi",
+                            "url": "https://turkok.saglik.gov.tr/TR-90496/sikca-sorulan-sorular.html"
+                        }
+                    ]
+                }
             }
         },
         {
-            "name": "Yemek",
-            "name_en": "Food",
-            "path": "datasets/yemek.json",
+            "name": "VPN",
+            "path": "datasets/vpn.json",
             "value": {
-                "type": "question",
-                "text": "Yemek olanakları ile ilgili bilgi almak istediğiniz şehri seçiniz",
-                "options": [
-                    {
-                        "name": "Diyarbakir",
-                        "value": {
-                            "type": "question",
-                            "text": "Diyarbakir şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "Yenisehir ",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Diyarbakir",
-                                            "county": "Yenisehir ",
-                                            "items": [
-                                                {
-                                                    "name": "Plaza Hotel, Elazığ Cad büyükşehir Belediye yanı",
-                                                    "maps_url": "https://goo.gl/maps/ojSDCdQiJoQ4h6zH7",
-                                                    "url": "https://www.instagram.com/p/CoW_OA1s0W5/",
-                                                    "phone_number": "5344844440",
-                                                    "updated_at_date": "08/02/2023",
-                                                    "updated_at_time": 1.2
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Kayapınar",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Diyarbakir",
-                                            "county": "Kayapınar",
-                                            "items": [
-                                                {
-                                                    "name": "Pepûle Mitbex",
-                                                    "maps_url": "https://www.google.com/maps/place/Pep%C3%BBle+Mitbex/@37.9455857,40.1781942,15z/data=!4m2!3m1!1s0x0:0x9158cc169fbb481a?sa=X&ved=2ahUKEwiXmp_L2oT9AhUsQvEDHda2CuYQ_BJ6BAhJEAg",
-                                                    "url": "Her sabah çorba dağıtımı",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 20.0
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
+                "type": "data",
+                "data": {
+                    "dataType": "vpn",
+                    "items": [
+                        {
+                            "name": "ProtonVPN",
+                            "url": "https://protonvpn.com/tr/"
+                        },
+                        {
+                            "name": "Cloudflare Warp",
+                            "url": "https://1.1.1.1/"
+                        },
+                        {
+                            "name": "Secure VPN",
+                            "url": "https://play.google.com/store/apps/details?id=com.fast.free.unblock.secure.vpn"
+                        },
+                        {
+                            "name": "Super VPN",
+                            "url": "https://play.google.com/store/apps/details?id=com.jrzheng.supervpnfree&hl=tr&gl=US&pli=1"
                         }
-                    },
-                    {
-                        "name": "Hatay",
-                        "value": {
-                            "type": "question",
-                            "text": "Hatay şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "İskenderun",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Hatay",
-                                            "county": "İskenderun",
-                                            "items": [
-                                                {
-                                                    "name": "İskenderun Gençlik Merkezi",
-                                                    "maps_url": "https://goo.gl/maps/pUbUT4da6E2DiEiN7",
-                                                    "url": "https://twitter.com/kasapoglu/status/1622684769757630487 https://twitter.com/hilmiturkmen34/status/1622972543056457729",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 17.56
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Samandağ",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Hatay",
-                                            "county": "Samandağ",
-                                            "items": [
-                                                {
-                                                    "name": "Kadıköy Belediyesi Gezici Aşevi",
-                                                    "maps_url": "https://t.co/KeYzf7MTX4",
-                                                    "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 19.25
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Defne",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Hatay",
-                                            "county": "Defne",
-                                            "items": [
-                                                {
-                                                    "name": "Kadıköy Belediyesi Gezici Aşevi",
-                                                    "maps_url": "https://t.co/vVhbIIxS0e",
-                                                    "url": "https://twitter.com/kadikoybelediye/status/1622995002694545408",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 19.25
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Iskenderun",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Hatay",
-                                            "county": "Iskenderun",
-                                            "items": [
-                                                {
-                                                    "name": "Iskenderun Teknik Universitesi Bahcesi ",
-                                                    "maps_url": "https://goo.gl/maps/wcXMPAv4U5uUQegw6",
-                                                    "url": null,
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 22.1
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Antakya",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Hatay",
-                                            "county": "Antakya",
-                                            "items": [
-                                                {
-                                                    "name": "IBB Mobil Mutfak, Odabaşı Mahallesi Atatürk Caddesi",
-                                                    "maps_url": "https://goo.gl/maps/kMQ5ZA6bZs45BfC47",
-                                                    "url": "https://twitter.com/ekrem_imamoglu/status/1623020341021839370",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2013",
-                                                    "updated_at_time": 21.06
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Gaziantep",
-                        "value": {
-                            "type": "question",
-                            "text": "Gaziantep şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "Şahinbey",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Gaziantep",
-                                            "county": "Şahinbey",
-                                            "items": [
-                                                {
-                                                    "name": "Kelebek Paça Beyran Restaurant",
-                                                    "maps_url": "https://goo.gl/maps/QUjQ6b7ARiYc4Hi76",
-                                                    "url": null,
-                                                    "phone_number": "3422309633",
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 17.0
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Şehitkamil",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Gaziantep",
-                                            "county": "Şehitkamil",
-                                            "items": [
-                                                {
-                                                    "name": "KünefeHan ",
-                                                    "maps_url": "https://www.google.com/maps/place/K%C3%BCnefe+Han/@37.0718648,37.3443679,17z/data=!3m1!4b1!4m5!3m4!1s0x1531e1feed2bcd3b:0xad338053986d522c!8m2!3d37.0718606!4d37.3485951",
-                                                    "url": "(7/24 açık) https://www.instagram.com/kunefe.han/",
-                                                    "phone_number": "3423221010",
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 18.41
-                                                },
-                                                {
-                                                    "name": "Gaziantep Gaziray istasyonu- AFAD Cadiri",
-                                                    "maps_url": "https://goo.gl/maps/wLy6YhPvUa5Z5wLb9",
-                                                    "url": null,
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 20.13
-                                                },
-                                                {
-                                                    "name": "Altunkaya Group- Gaziantep 4, Organize Sanayi",
-                                                    "maps_url": " https://goo.gl/maps/FgXbwVJvYBSEQtBn8",
-                                                    "url": null,
-                                                    "phone_number": null,
-                                                    "updated_at_date": "08/02/2022",
-                                                    "updated_at_time": 2.2
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Gaziantep ",
-                        "value": {
-                            "type": "question",
-                            "text": "Gaziantep  şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "Şehitkamil",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Gaziantep ",
-                                            "county": "Şehitkamil",
-                                            "items": [
-                                                {
-                                                    "name": "Huqqabaz Iconova",
-                                                    "maps_url": "https://goo.gl/maps/fArvEnMAFqZwcs259?fbclid=PAAabw83ufaxjQyjFGITjadAZL75V93_Z65mhoCaV1IReRek8aJrgmDTPnsY0",
-                                                    "url": "https://www.instagram.com/huqqabaz/",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 19.0
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Kahramanmaras",
-                        "value": {
-                            "type": "question",
-                            "text": "Kahramanmaras şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "Onikişubat",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Kahramanmaras",
-                                            "county": "Onikişubat",
-                                            "items": [
-                                                {
-                                                    "name": "Piazza AVM Yanındaki Boş Arazi",
-                                                    "maps_url": "https://goo.gl/maps/u4HX9uZH2S6qYAgK9",
-                                                    "url": "https://twitter.com/BaranKk20/status/1623097442127208451",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "08/02/2023",
-                                                    "updated_at_time": 2.12
-                                                },
-                                                {
-                                                    "name": "Nisa Fırın",
-                                                    "maps_url": "https://goo.gl/maps/CVNhiGSnszr77CG87",
-                                                    "url": "Ücretsiz Ekmek https://twitter.com/KendineMuzisyen/status/1622908693552439296",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 20.05
-                                                }
-                                            ]
-                                        }
-                                    }
-                                },
-                                {
-                                    "name": "Kahramanmaraş Merkez",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Kahramanmaras",
-                                            "county": "Kahramanmaraş Merkez",
-                                            "items": [
-                                                {
-                                                    "name": "Kocaeli Büyükşehir Belediyesi Gezici Aşevi- Kahramanmaraş Valilik Onu",
-                                                    "maps_url": "https://goo.gl/maps/JQpjPhRar2QeZ1Bz8",
-                                                    "url": "https://twitter.com/kocaelibld/status/1622980989386457088",
-                                                    "phone_number": null,
-                                                    "updated_at_date": "07/02/2022",
-                                                    "updated_at_time": 18.29
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Adana",
-                        "value": {
-                            "type": "question",
-                            "text": "Adana şehrinde yemek olanakları ile ilgili bilgi almak istediğiniz ilçeyi seçiniz",
-                            "options": [
-                                {
-                                    "name": "Ceyhan",
-                                    "value": {
-                                        "type": "data",
-                                        "data": {
-                                            "dataType": "food-items",
-                                            "city": "Adana",
-                                            "county": "Ceyhan",
-                                            "items": [
-                                                {
-                                                    "name": " Ceyhan Cemevi \n",
-                                                    "maps_url": "https://www.google.com/maps/place/Hac%C4%B1+Bekta%C5%9F-%C4%B1+Veli+K%C3%BClt%C3%BCr+Merkezi/@37.01413,35.821124,17z/data=!3m1!4b1!4m5!3m4!1s0x1528c991a94e0bc7:0xac90309889fb78a3!8m2!3d37.014115!4d35.8212136?coh=164777&entry=tt&shorturl=1",
-                                                    "url": "https://twitter.com/HaciBektasVakfi/status/1623055915984502790",
-                                                    "phone_number": "0544 530 81 00",
-                                                    "updated_at_date": "07/02/2023",
-                                                    "updated_at_time": 23.27
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                    ]
+                }
             }
         }
     ]
