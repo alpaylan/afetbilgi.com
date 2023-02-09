@@ -40,6 +40,7 @@
   "data.vpn.title": "İnternete bağlanmak için aşağıdaki ücretsiz VPN'leri kullanabilirsiniz.",
   "data.vpn.subtitle": "VPN bloklanan sitelere girmenizi sağlar.",
 
+  "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
   "button.google_maps": "Google Maps Linki",
