@@ -155,8 +155,17 @@ def main():
                 },
                 {
                     "name": "	T.C. MİLLÎ EĞİTİM BAKANLIĞI DESTEK HİZMETLERİ GENEL MÜDÜRLÜĞÜ E-DESTEK",
+
                     "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx",
                 },
+
+                    "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx"
+                },
+                {
+                    "name": "Depremzedelerin Kullanımına Açılan Tesis ve Salonlar",
+                    "url": "https://gsb.gov.tr/haber-detay.html/968"
+                }
+
             ],
         },
     }

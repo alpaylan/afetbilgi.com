@@ -25,7 +25,7 @@ export default function ContainerPharmacyData({
                         href={item.locationLink}
                         target="_blank"
                       >
-                        Konum
+                        {t('map')}
                       </a><br/>
               </CardContent>
             </Card>
