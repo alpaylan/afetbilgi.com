@@ -5,6 +5,11 @@ from utils.functions import turkish_title
 
 
 if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Yard%C4%B1m%20Toplama%20Merkezleri"
@@ -61,5 +66,5 @@ if __name__ == '__main__':
         })
 
 
-    with open(f"{os.path.dirname(os.path.realpath(__file__))}/../datasets/yardim_toplama_merkezleri.json", "w") as f:
+    with open(out_path, "w") as f:
         f.write(json.dumps(json_obj, indent=4, ensure_ascii=False))
