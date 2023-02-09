@@ -172,3 +172,13 @@ export interface VpnDataNode extends DataNode {
     url: string;
   }[];
 }
+
+export interface ContainerPharmacy {
+  city: string;
+  district: string;
+  location: string;
+  locationLink: string;
+}
+export interface ContainerPharmacyDataNode extends DataNode {
+  items: ContainerPharmacy[];
+}

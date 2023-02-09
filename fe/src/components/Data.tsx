@@ -15,6 +15,7 @@ import StemCellData from './data/StemCellData';
 import VetData from './data/VetData';
 import FoodDistributionData from './data/FoodDistributionData';
 import VpnData from './data/VpnData';
+import ContainerPharmacyData from './data/ContainerPharmacyData';
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
@@ -84,6 +85,10 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
 
     if (dataNode.data.dataType === 'vpn') {
       return <VpnData value={dataNode.data as any} />;
+    }
+
+    if (dataNode.data.dataType === 'container-pharmacy') {
+      return <ContainerPharmacyData value={dataNode.data as any} />;
     }
 
     return <></>;
