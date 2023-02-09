@@ -76,7 +76,23 @@ def main():
         "text_en": "Choose the city you would like to see the food distribution centers.",
         "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
         "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
-        "options": options_1
+        "options": options_1,
+        'externalData' : {
+            "text_tr": 'Yemek olanakları hakkında daha fazla bilgi',
+            "text_en": 'More information about food options',
+            "text_ku": 'Agahdariyên li ser derfetên xwarinê',
+            "text_ar": 'مزيد من المعلومات حول فرص تناول الطعام',
+            "usefulLinks": [
+                {
+                    "name":'McDonald’s Türkiye',
+                    "url": 'https://www.instagram.com/p/CocCDmzt_CI/?igshid=NTdlMDg3MTY=',
+                },
+                {
+                    "name":'Adana\'da Destek Alabileceğiniz Yemek İşletmeleri',
+                    "url": 'https://www.google.com/maps/d/u/0/viewer?mid=1jEw7Qe2Z7SXH8a4rMx9bso1hycYi3vc&ll=36.994885473974875%2C35.40509821285593&z=11',
+                }
+            ],
+        }
     }
 
 
