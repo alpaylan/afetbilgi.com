@@ -36,8 +36,7 @@ jobs:
 
           cd parsers
 
-          python ./yemek_parser.py
-
+          python ./yemek.py ../latest_datasets/yemek.json
           python ./yazilar.py ../latest_datasets/yazilar.json
           python ./toplanma.py ../latest_datasets/toplanma.json
           python ./barinma.py ../latest_datasets/barinma.json
@@ -49,8 +48,6 @@ jobs:
           python ./veteriner.py ../latest_datasets/veteriner.json
           python ./yardim_toplama_merkezleri.py ../latest_datasets/yardim_toplama_merkezleri.json
 
-          cp ../datasets/yemek.json ../latest_datasets/yemek.json
-          cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
 
