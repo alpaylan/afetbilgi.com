@@ -46,10 +46,10 @@ jobs:
           python ./barinma_parser.py
           python ./yemek_parser.py
           python ./telefonnumaralari_parser.py
+          
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
-
           cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json          
           cp ../datasets/kokhucre.json ../latest_datasets/kokhucre.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
@@ -57,6 +57,7 @@ jobs:
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
           cp ../datasets/toplanma.json ../latest_datasets/toplanma.json
           cp ../datasets/telefon.json ../latest_datasets/telefon.json
+          cp ../datasets/faydali_linkler.json ../latest_datasets/faydali_linkler.json
 
       - name: Merge datasets
         run: |
