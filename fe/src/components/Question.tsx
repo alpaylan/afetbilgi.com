@@ -26,7 +26,6 @@ export default function Question({ paths }: { paths: string[] }) {
   const { i18n } = useTranslation();
 
   const { data: selectedNode, isLoading } = useQuestionData(paths);
-  console.log(selectedNode)
 
   if (isLoading || !selectedNode) {
     return <></>;

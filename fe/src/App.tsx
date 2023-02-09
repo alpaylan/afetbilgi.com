@@ -6,7 +6,7 @@ import './App.css';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Box, Button, Container, MenuItem, Select } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-
+import useMediaQuery from "@mui/material/useMediaQuery";
 import LocalStorage from './utils/LocalStorage';
 import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
@@ -14,6 +14,8 @@ import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
 import AboutUs from './components/AboutUs';
+import SitesFab from './components/SitesFab';
+
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -38,6 +40,7 @@ const App = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
+  const isMinWidth = useMediaQuery("(min-width:1024px)");
 
   const { isLoading } = useQuestionData([]);
 
@@ -51,8 +54,20 @@ const App = () => {
 
   return (
     <Box>
+      <Box sx={{
+          display: isMinWidth ? "flex" : "none",
+          background: "rgba(220, 20, 60, 0.5)",
+          padding: "10px",
+          borderRadius: "10px",
+          zIndex: 500,
+          width: "fit-content",
+          position: "absolute",
+          ml: 2,
+        }}
+        >
+        <SitesFab />
+      </Box>
       <Waiting open={isLoading} />
-
       <Box
         sx={{
           mt: 3,
