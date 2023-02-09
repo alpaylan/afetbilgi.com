@@ -27,59 +27,51 @@
                         },
                         {
                             "city": "Adana",
-                            "name": "Bahçeşehir Koleji",
+                            "name": "Başkent Üniversitesi Özel Başkent Okulları",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://www.google.com/maps/place/Adana+Bah%C3%A7e%C5%9Fehir+Koleji/@37.0185809,35.2488164,17z/data=!3m1!4b1!4m5!3m4!1s0x152888787df976fd:0xf773cfb466b9266!8m2!3d37.0185766!4d35.2510051",
+                            "url": "https://twitter.com/iskaraman/status/1623093598722859008",
+                            "address": "https://goo.gl/maps/PmHP6rSrBZiGjuPd7",
                             "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Adana",
-                            "name": "Uğur Okulları",
+                            "name": "Çağ Üniversitesi Yaşar Bayboğan Kampüsü",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/cDxySwiAkQhdgDCG9",
+                            "url": "https://twitter.com/Adana_Bld/status/1622962147322916864?s=20&t=UsNDJEhPEMucsKPTHjHcTg",
+                            "address": "https://goo.gl/maps/Rnqi9wjLUi2HsoeA6",
+                            "validation_date": "09.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Garden Business Hotel",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/RyDtGn2MrriiZGnA9",
+                            "validation_date": "09.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Adana Garı",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoX3dz0A_Pw/?igshid=NTdlMDg3MTY%3D",
+                            "address": "https://goo.gl/maps/23AP2QCCqZM6ADQTA",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Sedef Hotel",
+                            "is_validated": true,
+                            "url": "https://www.otelz.com/gecmisolsunturkiyem",
+                            "address": "https://goo.gl/maps/ZR3kvAzRb2HBY4wQ9",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
-                            "name": "Altıneller 100.Yıl ve Mavi Bulvar Kampüsü",
+                            "name": "ASKON Adana Şubesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/ZoXRmSFZhUyp4KLN7",
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/TmogwCLNiiQQ2pQr9",
                             "validation_date": null
-                        },
-                        {
-                            "city": "Adana",
-                            "name": "Eral İlokul ve Ortaokul",
-                            "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/ECYJQAkggKqE2n9x9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Adana",
-                            "name": "Minecan Anaokulu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/j4y7VURWexzvdHAg6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Adana",
-                            "name": "Adana Koleji",
-                            "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/9BKy6eEGGeu6Q1UU6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Adana",
-                            "name": "Adana Final Okulları",
-                            "is_validated": true,
-                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/s2D21TCA48JmjQFF9",
-                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
@@ -99,51 +91,575 @@
                         },
                         {
                             "city": "Adana",
-                            "name": "ASKON Adana Şubesi",
+                            "name": "Adana Koleji",
                             "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/TmogwCLNiiQQ2pQr9",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Adana",
-                            "name": "Sedef Hotel",
-                            "is_validated": true,
-                            "url": "https://www.otelz.com/gecmisolsunturkiyem",
-                            "address": "https://goo.gl/maps/ZR3kvAzRb2HBY4wQ9",
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/9BKy6eEGGeu6Q1UU6",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Adana",
-                            "name": "Adana Garı",
+                            "name": "Minecan Anaokulu",
                             "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoX3dz0A_Pw/?igshid=NTdlMDg3MTY%3D",
-                            "address": "https://goo.gl/maps/23AP2QCCqZM6ADQTA",
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/j4y7VURWexzvdHAg6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Eral İlokul ve Ortaokul",
+                            "is_validated": true,
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ECYJQAkggKqE2n9x9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Altıneller 100.Yıl ve Mavi Bulvar Kampüsü",
+                            "is_validated": true,
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ZoXRmSFZhUyp4KLN7",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Uğur Okulları",
+                            "is_validated": true,
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/cDxySwiAkQhdgDCG9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Adana",
+                            "name": "Bahçeşehir Koleji",
+                            "is_validated": true,
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://www.google.com/maps/place/Adana+Bah%C3%A7e%C5%9Fehir+Koleji/@37.0185809,35.2488164,17z/data=!3m1!4b1!4m5!3m4!1s0x152888787df976fd:0xf773cfb466b9266!8m2!3d37.0185766!4d35.2510051",
                             "validation_date": "08.02.2023"
                         },
                         {
                             "city": "Adana",
-                            "name": "Garden Business Hotel",
+                            "name": "Adana Final Okulları",
                             "is_validated": true,
-                            "url": null,
-                            "address": "https://goo.gl/maps/RyDtGn2MrriiZGnA9",
-                            "validation_date": "09.02.2023"
+                            "url": "https://twitter.com/zeydankaralar01/status/1622644817506205709?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/s2D21TCA48JmjQFF9",
+                            "validation_date": "07.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Adıyaman",
+            "name_en": "Adiyaman",
+            "name_ku": "Adiyaman - Semsûr",
+            "name_ar": "أديامان",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Adıyaman",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Adıyaman",
+                            "name": "ASKON Adıyaman Şubesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": null,
+                            "validation_date": null
                         },
                         {
-                            "city": "Adana",
-                            "name": "Çağ Üniversitesi Yaşar Bayboğan Kampüsü",
+                            "city": "Adıyaman",
+                            "name": "Adıyaman Cemevi",
                             "is_validated": true,
-                            "url": "https://twitter.com/Adana_Bld/status/1622962147322916864?s=20&t=UsNDJEhPEMucsKPTHjHcTg",
-                            "address": "https://goo.gl/maps/Rnqi9wjLUi2HsoeA6",
-                            "validation_date": "09.02.2023"
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ofUJ6pcxSkxP18W97",
+                            "validation_date": null
                         },
                         {
-                            "city": "Adana",
-                            "name": "Başkent Üniversitesi Özel Başkent Okulları",
+                            "city": "Adıyaman",
+                            "name": "Merkez Çadırkenti",
                             "is_validated": true,
-                            "url": "https://twitter.com/iskaraman/status/1623093598722859008",
-                            "address": "https://goo.gl/maps/PmHP6rSrBZiGjuPd7",
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Antalya",
+            "name_en": "Antalya",
+            "name_ku": "Antalya - Antalya",
+            "name_ar": "أنطاليا",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Antalya",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Antalya",
+                            "name": "Dream World Palace Hotel",
+                            "is_validated": true,
+                            "url": "https://dreamworldpalace.com.tr/",
+                            "address": "https://goo.gl/maps/L2Bec5qzngdh2deX8",
                             "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Batman",
+            "name_en": "Batman",
+            "name_ku": "Batman - Êlih",
+            "name_ar": "بطمان",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Batman",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Batman",
+                            "name": "Batman Misafirhane",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sudesakii/status/1623062174712336390",
+                            "address": null,
+                            "validation_date": "07.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Diyarbakır",
+            "name_en": "Diyarbakir",
+            "name_ku": "Diyarbakir - Amed",
+            "name_ar": "دياربكر",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Diyarbakır",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehitlik Köşkler Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
+                            "address": "https://goo.gl/maps/k9878mNxHbeAGBvt9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "85. Yıl Milli Egemenlik AL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/yWT6APttekiwTkMz5",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Diyarbakır Güzel Sanatlar Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/JWdgeVD7ZHbyN62CA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Yenişehir Kız Anadolu İmam Hatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/z2z2PrC1Ps2GTz1w6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Rekabet Kurumu Cumhuriyet Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/CgeqG9kGkthoeYY16",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "85. Yıl Milli Egemenlik Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/ahMAXZ864Ar62tzH8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Rekabet Kurumu Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/1SyTaRne14uyx96F6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Diyarbakır Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/d8xvavm5nk1sMbQs9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehit Hatip Çağlar AL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/vp8MGSgMCoNScFy5A",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Halk Eğitim Merkezi Müdürlüğü",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/wPKhBTo4qgHVrGUH9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehit Namık Tümer İlköğretim Okulu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/HNymsFQf6WVBGesVA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Karacadağ AİHL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/qRENMTpytU5P3RuNA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "TOBB Ferdi Yiğit AİHL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/BD1b8CKSwwgshFZd6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "İMKB Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/974Y8x7xMdNCa5zs8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Fatih Anadolu İHL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/ZFf1brW3DBeFzQXP8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Burhanettin Yıldız MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/KeMRZLPtssRwRexE7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Bağlar İBB Kiptaş Mesleki ve Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/kFMw8oxMuW1Zuem27",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Bağcılar Mesleki ve Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/NKdS4pFmw1p58ZT99",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Borsa İstanbul Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/hb75TSxJJRKCK7st9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Özel Eflatun MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/rHJc7YfGQNGkRFmz9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Yeni Diyarbakır AL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/VZ9cwbDTvdLY8zT49",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Sur Anadolu İmam Hatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/DX5ZA1rTZB5wMUjTA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Farabi Mesleki Teknik AL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/tAdqiDFDd2iC25Ca7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Merkez Anadolu İmam Hatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/dbzog9G8Cc1tmv786",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehitlik Köşkler Gençlik Merkezi Çok Amaçlı Salon",
+                            "is_validated": true,
+                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
+                            "address": "https://goo.gl/maps/fYT1THNEDRET8YsT7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehitlik Köşkler Çok Amaçlı Salon",
+                            "is_validated": true,
+                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
+                            "address": "https://goo.gl/maps/skoU9AXAMktzY6Qj7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Seyrantepe Antrenman Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
+                            "address": "https://goo.gl/maps/vePp9LUnCEu113qQ8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Seyrantepe Büyük Salon",
+                            "is_validated": true,
+                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
+                            "address": "https://goo.gl/maps/bV5iyheQX5yWywC8A",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehit Ömer Halis Demir AİHL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/yRBpsJpMkfCwgsqC8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Ali Emiri Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/7We8FGPiLmFDcEFL8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Eren Şahin Eronat MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/WGLR27mZRvXQjsp4A",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Evliya Çelebi Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/PxP79EVTG8vwNsYi9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Türk Telekom MTAL Güney Gençlik Merkezi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/FGHmbfKM6ZyEjfEF7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "500 Evler MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/4b8CWvA7xy9vDFGg8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "TOBB İlkokulu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/ABtnTrqh8xn2eCM59",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Vali Gökhan Aydıner Mesleki ve Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/DPqjGnAkVtqHzU2C6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Şehit Halit Gülser Kız Anadolu İmam Hatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/NoEJARahkpYC3sQ7A",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Mehmet Akif Ersoy AİHL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/JwyFoT2hfa1UvPCm7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Yenişehir Şehitlik MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/MJFgVedLBZJBxuaS7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Necip Aşkın Diyarbakır Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/qLPmh8Yx8zyZSK3j9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "İMKB 75. Yıl YİBO",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/ntri8xJw52BvzGKK8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Ziya Gökalp AL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/ivihUnSLtT19c1bVA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "İbn-i Sina MTAL",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/VetomwXCqvSGa76i9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Diyarbakır Spor Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
+                            "address": "https://goo.gl/maps/bFZuXf1QoxHgRcrp9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Vali Aydın Aslan Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
+                            "address": "https://goo.gl/maps/beKq9oqAy7KqFrU98",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Muhammet Yurtoğlu Mesleki ve Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
+                            "address": "https://goo.gl/maps/EYMgkfYheChiRe6Y7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Nevruz Park",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
+                            "address": "https://goo.gl/maps/PwYReUKFF7f4u84JA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Koşuyolu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
+                            "address": "https://goo.gl/maps/Gg5mc62EfitGL4hH6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Kent Meydanı",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
+                            "address": "https://goo.gl/maps/Ka1xfvFPfgefzNDSA",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Nesibe Aydın Kampüsü",
+                            "is_validated": true,
+                            "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
+                            "address": "https://g.co/kgs/MHkbxC",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Diyarbakır Cemevi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/YyZqewS2yB9V31AF7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Diyarbakır",
+                            "name": "Sümerpark",
+                            "is_validated": true,
+                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
+                            "address": "https://goo.gl/maps/DLFXt8192npdHmpo6",
+                            "validation_date": "07.02.2023"
                         }
                     ]
                 }
@@ -162,26 +678,26 @@
                     "items": [
                         {
                             "city": "Gaziantep",
-                            "name": "ASKON Gaziantep Şubesi",
+                            "name": "Ertuğrul Gazi Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/gAY4JPT9Rizi2xUr7",
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://g.co/kgs/5B32Fs",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Koşuyolu",
+                            "name": "Perilikaya Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/RG8DJvh3BV7mBT938",
-                            "validation_date": null
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/dAJm8scy2P3nwB2T8",
+                            "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Nesibe Aydın Kampüsü",
+                            "name": "8 Şubat Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
-                            "address": "https://goo.gl/maps/bQ5mBhmPAwq6ktCb6",
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/xNP97UZUSuwC9gMU7",
                             "validation_date": "07.02.2023"
                         },
                         {
@@ -194,42 +710,42 @@
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Uğur Okulları Gaziantep Kampüsü",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoTp-OFqsSy/?igshid=NTdlMDg3MTY=",
-                            "address": "https://goo.gl/maps/Ws91SZ14gLJiR3pu8",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "İncilikaya Spor Salonu",
+                            "name": "Gazikent Yüzme Havuzu",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/pmAvhGJ5UznrfFK87",
+                            "address": "https://goo.gl/maps/EVe7AKH6xyQGkbT89",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Şehitkamil Belediyesi Beykent Spor Salonu",
+                            "name": "Kamil Ocak Yüzme Havuzu",
                             "is_validated": true,
-                            "url": "https://twitter.com/sehitkamilbel/status/1622637257189470210?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/HTorv2F6otkfdJub8",
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/Yqi98dCUkte8qnxh9",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Kuzeyşehir Spor Salonu",
+                            "name": "Onat Kutlar",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/mGvk9NJJ8dTtNboZ7",
+                            "address": "https://goo.gl/maps/P83GSgpMEEQM2j946",
                             "validation_date": "07.02.2023"
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Talat Özkarslı Spor Salonu",
+                            "name": "Panaroma Müzesi",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/xpejamsginRAWRSS6",
+                            "address": "https://goo.gl/maps/MsXiqteNnrZoJKNT9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Goap",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/RV8AisEBkbzf21FL9",
                             "validation_date": "07.02.2023"
                         },
                         {
@@ -250,82 +766,74 @@
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Müzeyyen Erkul Bilim ve Sanat Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/aTnqgFXXpmsHjmQm7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Goap",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/RV8AisEBkbzf21FL9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Panaroma Müzesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/MsXiqteNnrZoJKNT9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Onat Kutlar",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/P83GSgpMEEQM2j946",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Kamil Ocak Yüzme Havuzu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/Yqi98dCUkte8qnxh9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Gazikent Yüzme Havuzu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/EVe7AKH6xyQGkbT89",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "8 Şubat Yüzme Havuzu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/xNP97UZUSuwC9gMU7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Perilikaya Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/dAJm8scy2P3nwB2T8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
-                            "name": "Ertuğrul Gazi Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://g.co/kgs/5B32Fs",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Gaziantep",
                             "name": "Yeşilevler Spor Salonu",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://g.co/kgs/DagURt",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Talat Özkarslı Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/xpejamsginRAWRSS6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Uğur Okulları Gaziantep Kampüsü",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoTp-OFqsSy/?igshid=NTdlMDg3MTY=",
+                            "address": "https://goo.gl/maps/Ws91SZ14gLJiR3pu8",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Kuzeyşehir Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/mGvk9NJJ8dTtNboZ7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Şehitkamil Belediyesi Beykent Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sehitkamilbel/status/1622637257189470210?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/HTorv2F6otkfdJub8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Nesibe Aydın Kampüsü",
+                            "is_validated": true,
+                            "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
+                            "address": "https://goo.gl/maps/bQ5mBhmPAwq6ktCb6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Koşuyolu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/RG8DJvh3BV7mBT938",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "ASKON Gaziantep Şubesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/gAY4JPT9Rizi2xUr7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Müzeyyen Erkul Bilim ve Sanat Merkezi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/aTnqgFXXpmsHjmQm7",
                             "validation_date": "07.02.2023"
                         },
                         {
@@ -338,10 +846,10 @@
                         },
                         {
                             "city": "Gaziantep",
-                            "name": "Dumlupınar Spor Salonu",
+                            "name": "İncilikaya Spor Salonu",
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": null,
+                            "address": "https://goo.gl/maps/pmAvhGJ5UznrfFK87",
                             "validation_date": "07.02.2023"
                         },
                         {
@@ -350,6 +858,30 @@
                             "is_validated": true,
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/bdtAfpnjMr4AcWHD6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Gaziler Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/ppKufpZ155k7Dfeu8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Yeditepe Yüzme Havuzu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/znpyW3eMoxZhv4AZ6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Gaziantep",
+                            "name": "Dumlupınar Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": null,
                             "validation_date": "07.02.2023"
                         },
                         {
@@ -367,22 +899,457 @@
                             "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/RQVpds3MBUXnNWxg7",
                             "validation_date": "07.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Hatay",
+            "name_en": "Hatay",
+            "name_ku": "Hatay - Xetay",
+            "name_ar": "حاتاي",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Hatay",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Hatay",
+                            "name": "Apaydın Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
                         },
                         {
-                            "city": "Gaziantep",
-                            "name": "Yeditepe Yüzme Havuzu",
+                            "city": "Hatay",
+                            "name": "Dörtyol Süleyman Demirel Anadolu Lisesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/znpyW3eMoxZhv4AZ6",
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/gXzb3LuVi25FZ9k87",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlk Kurşun İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/LEpBPA7eCzpjkytj6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yeniyurt Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/PsfUpApYoaVY5q5L7",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yeşilköy 19 Aralık Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/naitX6XHa1VdQD34A",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Fen Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/1RTjLuC17rVrhsZeA",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Kuzuculu Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/nKzvByPZNQaYorwU8",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Yayladağı Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Makbule Hanım Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/mMLobqfGcRjnMNEH7",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Harun Taş İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/xQgY2UFX4N526W7j6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Anadolu İmamhatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/1nU9Z7KdVobvdmLj8",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Cennet Ana Kız Anadolu İmamhatip Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/txV7n2CgEqcxRAzc6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Atatürk Parkı Düğün Salonu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/MtFc8Sraad3rw7DQ9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Antakya ve Samandağ Cemevi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/UaANoswaFJi6Wuv5A birden fazla cemevi konumu var",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Güveççi Çadırkenti",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Ayhan Kıymacı İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/Wi7y5ctMQrGqNeJk9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlk Adım Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/MrKp86DQzfRokPET8",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Atatürk Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/dzcx7mwHg5A4RZ1A9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Altınözü Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "İskenderun Deniz Er Eğitim Alayı",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/YpCwQ2HvijWRkVZY8",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlçe Jandarma Komutanlığı Bahçesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/8kaDG8o3kBudt91g9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol İlçe Emniyet Müdürlüğü Bahçesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/aRWYH7kyUQFs1HAF7",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Belediyesi Karahasanpaşa Sosyal Tesisi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/ovfGx3B3z8iXh94L9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Berat Kapalı Halısaha",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/euZxaChWGphqoyGX6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Erdi 2 Kapalı Halısaha",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/vMVCabWp9HERgkar9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Şehit Ayhan Say ÇPL Ana Binası",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/kfTk4WQmSBhCzLpZA",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Gazi İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/gN7E4WEvR8SdijW89",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Recep Atakaş Mesleki Teknik Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/bqri3K71iLM6CvQp9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Otogar Girişi Pazar Yeri",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/oG8ryshLvosh36tN8",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Karakese İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/ohmQaRUf2pFyC1Y38",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Necip Fazıl Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/xSqyht2K5voXeMti9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Konaklı İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/bnBMKz6awrhec2Mt6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Çaylı Barbaros İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/VURh3jQShCYLBLuv5",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Hacı Ahmet İlhan İlkokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/2i2eMxWWXkZ3eYyX9",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Ocaklı Anaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/Tbkdkej8rpXkjVGU7",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Öğretmenevi ASO",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/jTHzQfmnRveCTbMG6",
+                            "validation_date": "08.02.2023"
+                        },
+                        {
+                            "city": "Hatay",
+                            "name": "Dörtyol Yunus Emre Ortaokulu",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
+                            "address": "https://goo.gl/maps/F3GPhDdDxLL1XRHo7",
+                            "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Kahramanmaraş",
+            "name_en": "Kahramanmaras",
+            "name_ku": "Kahramanmaras - Mereş",
+            "name_ar": "كهرمانماراس",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Kahramanmaraş",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Kahramanmaraş",
+                            "name": "Saim Çotur Spor Salonu",
+                            "is_validated": true,
+                            "url": "https://gsb.gov.tr/haber-detay.html/968",
+                            "address": "https://goo.gl/maps/Bw9DrMMhtWPeeGQ5A",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Gaziantep",
-                            "name": "Gaziler Spor Salonu",
+                            "city": "Kahramanmaraş",
+                            "name": "Batıpark",
                             "is_validated": true,
-                            "url": "https://twitter.com/fatmasahin/status/1622499495853322242?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/ppKufpZ155k7Dfeu8",
+                            "url": "https://gsb.gov.tr/haber-detay.html/968",
+                            "address": "https://goo.gl/maps/ShiS7g9S46BVXiXx5",
                             "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Kahramanmaraş",
+                            "name": "Hanefi Mahçiçek Stadyumu",
+                            "is_validated": true,
+                            "url": "https://gsb.gov.tr/haber-detay.html/968",
+                            "address": "https://goo.gl/maps/DnTNo8FnK8vC3eXU7",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Kahramanmaraş",
+                            "name": "Kafum",
+                            "is_validated": true,
+                            "url": "https://gsb.gov.tr/haber-detay.html/968",
+                            "address": "https://goo.gl/maps/CCtnVmYE1aPvLKBM9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Kahramanmaraş",
+                            "name": "Atatürk Parkı",
+                            "is_validated": true,
+                            "url": "https://gsb.gov.tr/haber-detay.html/968",
+                            "address": "https://goo.gl/maps/k5qkLWTb811teea26",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Kahramanmaraş",
+                            "name": "Merkez Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": "https://goo.gl/maps/zd4zFgUe9x5FKhiR8",
+                            "validation_date": null
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Karaman",
+            "name_en": "Karaman",
+            "name_ku": "Karaman - Karaman",
+            "name_ar": "كارامان",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Karaman",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Karaman",
+                            "name": "KYK Hatuniye Kız Öğrenci Yurdu",
+                            "is_validated": true,
+                            "url": null,
+                            "address": "https://goo.gl/maps/YkLyiHNrW6QuRrcZ6",
+                            "validation_date": "08.02.2023"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Kilis",
+            "name_en": "Kilis",
+            "name_ku": "Kilis - Kilis",
+            "name_ar": "كيليس",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Kilis",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Kilis",
+                            "name": "Elbeyli Beşiriye Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Kilis",
+                            "name": "Öncüpınar Konteynerkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Kocaeli",
+            "name_en": "Kocaeli",
+            "name_ku": "Kocaeli - Kocaeli",
+            "name_ar": "كوكايلي",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Kocaeli",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Kocaeli",
+                            "name": "La Flora House Hotel",
+                            "is_validated": true,
+                            "url": "https://www.instagram.com/stories/lotusmeat/3033074465344709007/",
+                            "address": "https://goo.gl/maps/L5MVpiGMDaXnLAS19",
+                            "validation_date": "08.02.2023"
                         }
                     ]
                 }
@@ -401,106 +1368,10 @@
                     "items": [
                         {
                             "city": "Malatya",
-                            "name": "ASKON Malatya Şubesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/NBGoKwqRhcdPF6kW9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Nesibe Aydın Kampüsü",
-                            "is_validated": true,
-                            "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
-                            "address": "https://goo.gl/maps/fqS5WG2aG3zw4ouG9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Hürriyet Parkı",
-                            "is_validated": true,
-                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/teeCLffbQVA4u4Ty8",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Dedekorkut Sosyal Tesisleri",
-                            "is_validated": true,
-                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/nBcaffM69e2xXGa8A",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Salköprü Semt Konağı",
-                            "is_validated": true,
-                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/5jwDQbabYQTp5L4j6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Özalper Semt Konağı",
-                            "is_validated": true,
-                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/h8HFUyy8X4VqNo7k7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Akçadağ Belediyesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/LDrwkPx8hprbezZJ6",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Akçadağ Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/HdHFZ9GhiK2e7ica6",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Akçadağ Şehit Alper Güde Teknik Lise ve Çok Programlı Lise",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/gzfSQ1vWuNWnNCRJ7",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Arapgir Belediyesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/7wUKFgnJLm86AJw66",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
                             "name": "Darende Hükümet Konağı",
                             "is_validated": true,
                             "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
                             "address": "https://goo.gl/maps/1NU72ZaUWQosA7hw7",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Battalgazi Belediyesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/FaT1EGSmjdATLEmE6",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Malatya",
-                            "name": "Doğanyol Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/owepv9q2dgG1cwmL9",
                             "validation_date": null
                         },
                         {
@@ -513,10 +1384,10 @@
                         },
                         {
                             "city": "Malatya",
-                            "name": "Malatya Nikah Sarayı",
+                            "name": "Malatya Cemevi",
                             "is_validated": true,
-                            "url": "https://twitter.com/selahattingrkn/status/1622422476280954882?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/y6trrVqyp3Ean9127",
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://g.co/kgs/HfLCQP",
                             "validation_date": null
                         },
                         {
@@ -529,441 +1400,272 @@
                         },
                         {
                             "city": "Malatya",
-                            "name": "Malatya Cemevi",
+                            "name": "Malatya Nikah Sarayı",
                             "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://g.co/kgs/HfLCQP",
+                            "url": "https://twitter.com/selahattingrkn/status/1622422476280954882?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/y6trrVqyp3Ean9127",
                             "validation_date": null
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Diyarbakır",
-            "name_en": "Diyarbakir",
-            "name_ku": "Diyarbakir - Amed",
-            "name_ar": "دياربكر",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Diyarbakır",
-                    "dataType": "city-accommodation",
-                    "items": [
+                        },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Diyarbakır Cemevi",
+                            "city": "Malatya",
+                            "name": "Arapgir Belediyesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/YyZqewS2yB9V31AF7",
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/7wUKFgnJLm86AJw66",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Akçadağ Şehit Alper Güde Teknik Lise ve Çok Programlı Lise",
+                            "is_validated": true,
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/gzfSQ1vWuNWnNCRJ7",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Akçadağ Anadolu Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/HdHFZ9GhiK2e7ica6",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Akçadağ Belediyesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/LDrwkPx8hprbezZJ6",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Özalper Semt Konağı",
+                            "is_validated": true,
+                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/h8HFUyy8X4VqNo7k7",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
+                            "city": "Malatya",
+                            "name": "Salköprü Semt Konağı",
+                            "is_validated": true,
+                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/5jwDQbabYQTp5L4j6",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Dedekorkut Sosyal Tesisleri",
+                            "is_validated": true,
+                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/nBcaffM69e2xXGa8A",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Hürriyet Parkı",
+                            "is_validated": true,
+                            "url": "https://twitter.com/selahattingrkn/status/1622427802090835968?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/teeCLffbQVA4u4Ty8",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Malatya",
                             "name": "Nesibe Aydın Kampüsü",
                             "is_validated": true,
                             "url": "https://twitter.com/nesibeaydin/status/1622517062126936064?s=46&t=Ugb531WRI6HRdIIJZZj-TQ",
-                            "address": "https://g.co/kgs/MHkbxC",
+                            "address": "https://goo.gl/maps/fqS5WG2aG3zw4ouG9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "ASKON Malatya Şubesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/NBGoKwqRhcdPF6kW9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Malatya",
+                            "name": "Doğanyol Lisesi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/owepv9q2dgG1cwmL9",
                             "validation_date": null
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Kent Meydanı",
+                            "city": "Malatya",
+                            "name": "Battalgazi Belediyesi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
-                            "address": "https://goo.gl/maps/Ka1xfvFPfgefzNDSA",
+                            "url": "https://twitter.com/tcmalatyav/status/1622462732195835904?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/FaT1EGSmjdATLEmE6",
+                            "validation_date": null
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Mardin",
+            "name_en": "Mardin",
+            "name_ku": "Mardin - Mêrdîn",
+            "name_ar": "ماردين",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Mardin",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Mardin",
+                            "name": "Midyat Çadırkent",
+                            "is_validated": true,
+                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
+                            "address": null,
+                            "validation_date": null
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_tr": "Osmaniye",
+            "name_en": "Osmaniye",
+            "name_ku": "Osmaniye - Kınıkan",
+            "name_ar": "اسمانيا",
+            "value": {
+                "type": "data",
+                "data": {
+                    "city": "Osmaniye",
+                    "dataType": "city-accommodation",
+                    "items": [
+                        {
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Kız Yurdu",
+                            "is_validated": true,
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/hfFikvJan7LvF1Go8",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Koşuyolu",
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Kadirli Cemevi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
-                            "address": "https://goo.gl/maps/Gg5mc62EfitGL4hH6",
+                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/epYwzH2jW7BM6cCPA",
+                            "validation_date": null
+                        },
+                        {
+                            "city": "Osmaniye",
+                            "name": "Osmaniye İl Müdürlüğü Ana Bina",
+                            "is_validated": true,
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/GQdfgs2YzNw7uv3K6",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Nevruz Park",
+                            "city": "Osmaniye",
+                            "name": "Kayıboyu Kız Yurdu",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
-                            "address": "https://goo.gl/maps/PwYReUKFF7f4u84JA",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/3R1Dh2ySKVSBWFxKA",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Sümerpark",
+                            "city": "Osmaniye",
+                            "name": "Karacaoğlan Erkek Yurdu",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622625704750751744",
-                            "address": "https://goo.gl/maps/DLFXt8192npdHmpo6",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/eEeTLtqSFD1ZscCA9",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Vali Aydın Aslan Fen Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Kadirli Karma Yurt Müdürlüğü",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/beKq9oqAy7KqFrU98",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/4xNLQiVV5d5oudid7",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Sur Anadolu İmam Hatip Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Gençlik Merkezi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/DX5ZA1rTZB5wMUjTA",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/y84WTGuVmoVXJDfh9",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Özel Eflatun MTAL",
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Tosyalı Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/rHJc7YfGQNGkRFmz9",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/VCoAFpo6nsrDva9PA",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Borsa İstanbul Fen Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Çok Amaçlı Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/hb75TSxJJRKCK7st9",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/PgFUCLhPrZenES1Y8",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Bağcılar Mesleki ve Teknik Anadolu Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Osmaniye Olimpik Havuz",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/NKdS4pFmw1p58ZT99",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/7jhotoFEM6fbfNSZ6",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Bağlar İBB Kiptaş Mesleki ve Teknik Anadolu Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Kadirli Spor Salon",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/kFMw8oxMuW1Zuem27",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": null,
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Burhanettin Yıldız MTAL",
+                            "city": "Osmaniye",
+                            "name": "Kadirli Gençlik Merkezi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/KeMRZLPtssRwRexE7",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/Cun74EJg4bDds8SW7",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Fatih Anadolu İHL",
+                            "city": "Osmaniye",
+                            "name": "Düziçi Spor Salonu ve Gençlik Merkezi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/ZFf1brW3DBeFzQXP8",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/ap8QbyRQJnScwNoGA",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "İMKB Fen Lisesi",
+                            "city": "Osmaniye",
+                            "name": "Bahçe Spor Salonu",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/974Y8x7xMdNCa5zs8",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": null,
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "TOBB Ferdi Yiğit AİHL",
+                            "city": "Osmaniye",
+                            "name": "OKÜ Genç Ofis ve Otağ Çadırı",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/BD1b8CKSwwgshFZd6",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/4DL8G26MAQfY4V8C7",
                             "validation_date": "07.02.2023"
                         },
                         {
-                            "city": "Diyarbakır",
-                            "name": "Karacadağ AİHL",
+                            "city": "Osmaniye",
+                            "name": "Cevdetiye Spor Eğitim Merkezi",
                             "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/qRENMTpytU5P3RuNA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehit Namık Tümer İlköğretim Okulu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/HNymsFQf6WVBGesVA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Halk Eğitim Merkezi Müdürlüğü",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/wPKhBTo4qgHVrGUH9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehit Hatip Çağlar AL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622621969840590848",
-                            "address": "https://goo.gl/maps/vp8MGSgMCoNScFy5A",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Diyarbakır Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/d8xvavm5nk1sMbQs9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Rekabet Kurumu Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/1SyTaRne14uyx96F6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "85. Yıl Milli Egemenlik Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/ahMAXZ864Ar62tzH8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Rekabet Kurumu Cumhuriyet Fen Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/CgeqG9kGkthoeYY16",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Yenişehir Kız Anadolu İmam Hatip Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/z2z2PrC1Ps2GTz1w6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Diyarbakır Güzel Sanatlar Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/JWdgeVD7ZHbyN62CA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "85. Yıl Milli Egemenlik AL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/yWT6APttekiwTkMz5",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Yeni Diyarbakır AL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/VZ9cwbDTvdLY8zT49",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Farabi Mesleki Teknik AL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/tAdqiDFDd2iC25Ca7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Diyarbakır Spor Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/bFZuXf1QoxHgRcrp9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Merkez Anadolu İmam Hatip Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/dbzog9G8Cc1tmv786",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "İbn-i Sina MTAL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/VetomwXCqvSGa76i9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Ziya Gökalp AL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622331301511169",
-                            "address": "https://goo.gl/maps/ivihUnSLtT19c1bVA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "İMKB 75. Yıl YİBO",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/ntri8xJw52BvzGKK8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Necip Aşkın Diyarbakır Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/qLPmh8Yx8zyZSK3j9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Yenişehir Şehitlik MTAL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/MJFgVedLBZJBxuaS7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Mehmet Akif Ersoy AİHL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/JwyFoT2hfa1UvPCm7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehit Halit Gülser Kız Anadolu İmam Hatip Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/NoEJARahkpYC3sQ7A",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Vali Gökhan Aydıner Mesleki ve Teknik Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/DPqjGnAkVtqHzU2C6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Muhammet Yurtoğlu Mesleki ve Teknik Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/EYMgkfYheChiRe6Y7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "TOBB İlkokulu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/ABtnTrqh8xn2eCM59",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "500 Evler MTAL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/4b8CWvA7xy9vDFGg8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Türk Telekom MTAL Güney Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/FGHmbfKM6ZyEjfEF7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Evliya Çelebi Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/PxP79EVTG8vwNsYi9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Eren Şahin Eronat MTAL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/WGLR27mZRvXQjsp4A",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Ali Emiri Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/7We8FGPiLmFDcEFL8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehit Ömer Halis Demir AİHL",
-                            "is_validated": true,
-                            "url": "https://twitter.com/diyarbakirbld/status/1622622661649080322",
-                            "address": "https://goo.gl/maps/yRBpsJpMkfCwgsqC8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Seyrantepe Büyük Salon",
-                            "is_validated": true,
-                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
-                            "address": "https://goo.gl/maps/bV5iyheQX5yWywC8A",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Seyrantepe Antrenman Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
-                            "address": "https://goo.gl/maps/vePp9LUnCEu113qQ8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehitlik Köşkler Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
-                            "address": "https://goo.gl/maps/k9878mNxHbeAGBvt9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehitlik Köşkler Çok Amaçlı Salon",
-                            "is_validated": true,
-                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
-                            "address": "https://goo.gl/maps/skoU9AXAMktzY6Qj7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Diyarbakır",
-                            "name": "Şehitlik Köşkler Gençlik Merkezi Çok Amaçlı Salon",
-                            "is_validated": true,
-                            "url": "https://twitter.com/dbakirvalilik/status/1622635300794077186",
-                            "address": "https://goo.gl/maps/fYT1THNEDRET8YsT7",
+                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
+                            "address": "https://goo.gl/maps/Di9xNjNnBnhzsVyi9",
                             "validation_date": "07.02.2023"
                         }
                     ]
@@ -971,16 +1673,37 @@
             }
         },
         {
-            "name_tr": "Şanlıurfa",
-            "name_en": "Sanliurfa",
-            "name_ku": "Sanliurfa - Rîha",
-            "name_ar": "سانليورفا",
+            "name": "Şanlıurfa",
             "value": {
                 "type": "data",
                 "data": {
                     "city": "Şanlıurfa",
                     "dataType": "city-accommodation",
                     "items": [
+                        {
+                            "city": "Şanlıurfa",
+                            "name": "Kitap Otağı Gençlik Merkezi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/FF873dLKR8wvew2k8",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Şanlıurfa",
+                            "name": "Süleymaniye Seyit Hışırlı Gençlik Merkezi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/6yuuN9r53brkwNHd9",
+                            "validation_date": "07.02.2023"
+                        },
+                        {
+                            "city": "Şanlıurfa",
+                            "name": "Toki Batıkent Gençlik Merkezi",
+                            "is_validated": true,
+                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
+                            "address": "https://goo.gl/maps/pmNfrbfmCQSVF6CQ7",
+                            "validation_date": "07.02.2023"
+                        },
                         {
                             "city": "Şanlıurfa",
                             "name": "ASKON Şanlıurfa Şubesi",
@@ -1095,14 +1818,6 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Suruç Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/F2r4kraXpz9HGWsi9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Şanlıurfa",
                             "name": "Viranşehir Gençlik Merkezi",
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
@@ -1111,725 +1826,10 @@
                         },
                         {
                             "city": "Şanlıurfa",
-                            "name": "Kitap Otağı Gençlik Merkezi",
+                            "name": "Suruç Gençlik Merkezi",
                             "is_validated": true,
                             "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/FF873dLKR8wvew2k8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Toki Batıkent Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/pmNfrbfmCQSVF6CQ7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Şanlıurfa",
-                            "name": "Süleymaniye Seyit Hışırlı Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/sanliurfabld/status/1622478014129782784?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/6yuuN9r53brkwNHd9",
-                            "validation_date": "07.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Kahramanmaraş",
-            "name_en": "Kahramanmaras",
-            "name_ku": "Kahramanmaras - Mereş",
-            "name_ar": "كهرمانماراس",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Kahramanmaraş",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Merkez Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": "https://goo.gl/maps/zd4zFgUe9x5FKhiR8",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Saim Çotur Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://gsb.gov.tr/haber-detay.html/968",
-                            "address": "https://goo.gl/maps/Bw9DrMMhtWPeeGQ5A",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Batıpark",
-                            "is_validated": true,
-                            "url": "https://gsb.gov.tr/haber-detay.html/968",
-                            "address": "https://goo.gl/maps/ShiS7g9S46BVXiXx5",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Hanefi Mahçiçek Stadyumu",
-                            "is_validated": true,
-                            "url": "https://gsb.gov.tr/haber-detay.html/968",
-                            "address": "https://goo.gl/maps/DnTNo8FnK8vC3eXU7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Kafum",
-                            "is_validated": true,
-                            "url": "https://gsb.gov.tr/haber-detay.html/968",
-                            "address": "https://goo.gl/maps/CCtnVmYE1aPvLKBM9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Kahramanmaraş",
-                            "name": "Atatürk Parkı",
-                            "is_validated": true,
-                            "url": "https://gsb.gov.tr/haber-detay.html/968",
-                            "address": "https://goo.gl/maps/k5qkLWTb811teea26",
-                            "validation_date": "07.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Osmaniye",
-            "name_en": "Osmaniye",
-            "name_ku": "Osmaniye - Kınıkan",
-            "name_ar": "اسمانيا",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Osmaniye",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Kadirli Cemevi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/epYwzH2jW7BM6cCPA",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Kız Yurdu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/hfFikvJan7LvF1Go8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kayıboyu Kız Yurdu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/3R1Dh2ySKVSBWFxKA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Karacaoğlan Erkek Yurdu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/eEeTLtqSFD1ZscCA9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kadirli Karma Yurt Müdürlüğü",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/4xNLQiVV5d5oudid7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/y84WTGuVmoVXJDfh9",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Tosyalı Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/VCoAFpo6nsrDva9PA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Çok Amaçlı Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/PgFUCLhPrZenES1Y8",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye Olimpik Havuz",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/7jhotoFEM6fbfNSZ6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Osmaniye İl Müdürlüğü Ana Bina",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/GQdfgs2YzNw7uv3K6",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kadirli Spor Salon",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": null,
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Kadirli Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/Cun74EJg4bDds8SW7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Düziçi Spor Salonu ve Gençlik Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/ap8QbyRQJnScwNoGA",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Bahçe Spor Salonu",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": null,
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "OKÜ Genç Ofis ve Otağ Çadırı",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/4DL8G26MAQfY4V8C7",
-                            "validation_date": "07.02.2023"
-                        },
-                        {
-                            "city": "Osmaniye",
-                            "name": "Cevdetiye Spor Eğitim Merkezi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/kasapoglu/status/1622646258308349954",
-                            "address": "https://goo.gl/maps/Di9xNjNnBnhzsVyi9",
-                            "validation_date": "07.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Adıyaman",
-            "name_en": "Adiyaman",
-            "name_ku": "Adiyaman - Semsûr",
-            "name_ar": "أديامان",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Adıyaman",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Adıyaman",
-                            "name": "ASKON Adıyaman Şubesi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/orhanaydin/status/1622517195937923075?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Adıyaman",
-                            "name": "Merkez Çadırkenti",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Adıyaman",
-                            "name": "Adıyaman Cemevi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/ofUJ6pcxSkxP18W97",
-                            "validation_date": null
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Kilis",
-            "name_en": "Kilis",
-            "name_ku": "Kilis - Kilis",
-            "name_ar": "كيليس",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Kilis",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Kilis",
-                            "name": "Öncüpınar Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Kilis",
-                            "name": "Elbeyli Beşiriye Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Mardin",
-            "name_en": "Mardin",
-            "name_ku": "Mardin - Mêrdîn",
-            "name_ar": "ماردين",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Mardin",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Mardin",
-                            "name": "Midyat Çadırkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Hatay",
-            "name_en": "Hatay",
-            "name_ku": "Hatay - Xetay",
-            "name_ar": "حاتاي",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Hatay",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Hatay",
-                            "name": "Altınözü Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Yayladağı Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Apaydın Konteynerkent",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Güveççi Çadırkenti",
-                            "is_validated": true,
-                            "url": "https://twitter.com/ihhgenc/status/1622650765641646091/photo/1",
-                            "address": null,
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Antakya ve Samandağ Cemevi",
-                            "is_validated": true,
-                            "url": "https://twitter.com/turkdaimaileri/status/1622567979270516736?s=46&t=BPAhJVUaSEp-FhJyk7mw2A",
-                            "address": "https://goo.gl/maps/UaANoswaFJi6Wuv5A birden fazla cemevi konumu var",
-                            "validation_date": null
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Atatürk Parkı Düğün Salonu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/MtFc8Sraad3rw7DQ9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Cennet Ana Kız Anadolu İmamhatip Lisesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/txV7n2CgEqcxRAzc6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Anadolu İmamhatip Lisesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/1nU9Z7KdVobvdmLj8",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Şehit Harun Taş İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/xQgY2UFX4N526W7j6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol İlk Adım Anaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/MrKp86DQzfRokPET8",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Makbule Hanım Anaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/mMLobqfGcRjnMNEH7",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Kuzuculu Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/nKzvByPZNQaYorwU8",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Fen Lisesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/1RTjLuC17rVrhsZeA",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Yeşilköy 19 Aralık Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/naitX6XHa1VdQD34A",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Yeniyurt Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/PsfUpApYoaVY5q5L7",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol İlk Kurşun İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/LEpBPA7eCzpjkytj6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Süleyman Demirel Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/gXzb3LuVi25FZ9k87",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Şehit Ayhan Kıymacı İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/Wi7y5ctMQrGqNeJk9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Atatürk Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/dzcx7mwHg5A4RZ1A9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Gazi İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/gN7E4WEvR8SdijW89",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Yunus Emre Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/F3GPhDdDxLL1XRHo7",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Ocaklı Anaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/Tbkdkej8rpXkjVGU7",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Hacı Ahmet İlhan İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/2i2eMxWWXkZ3eYyX9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Çaylı Barbaros İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/VURh3jQShCYLBLuv5",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Konaklı İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/bnBMKz6awrhec2Mt6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Necip Fazıl Ortaokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/xSqyht2K5voXeMti9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Karakese İlkokulu",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/ohmQaRUf2pFyC1Y38",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Otogar Girişi Pazar Yeri",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/oG8ryshLvosh36tN8",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Öğretmenevi ASO",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/jTHzQfmnRveCTbMG6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Recep Atakaş Mesleki Teknik Anadolu Lisesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/bqri3K71iLM6CvQp9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Şehit Ayhan Say ÇPL Ana Binası",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/kfTk4WQmSBhCzLpZA",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Erdi 2 Kapalı Halısaha",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/vMVCabWp9HERgkar9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Berat Kapalı Halısaha",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/euZxaChWGphqoyGX6",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol Belediyesi Karahasanpaşa Sosyal Tesisi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/ovfGx3B3z8iXh94L9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol İlçe Emniyet Müdürlüğü Bahçesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/aRWYH7kyUQFs1HAF7",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "Dörtyol İlçe Jandarma Komutanlığı Bahçesi",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/p/CoXjqwZID4_/",
-                            "address": "https://goo.gl/maps/8kaDG8o3kBudt91g9",
-                            "validation_date": "08.02.2023"
-                        },
-                        {
-                            "city": "Hatay",
-                            "name": "İskenderun Deniz Er Eğitim Alayı",
-                            "is_validated": true,
-                            "url": null,
-                            "address": "https://goo.gl/maps/YpCwQ2HvijWRkVZY8",
-                            "validation_date": "08.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Karaman",
-            "name_en": "Karaman",
-            "name_ku": "Karaman - Karaman",
-            "name_ar": "كارامان",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Karaman",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Karaman",
-                            "name": "KYK Hatuniye Kız Öğrenci Yurdu",
-                            "is_validated": true,
-                            "url": null,
-                            "address": "https://goo.gl/maps/YkLyiHNrW6QuRrcZ6",
-                            "validation_date": "08.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Kocaeli",
-            "name_en": "Kocaeli",
-            "name_ku": "Kocaeli - Kocaeli",
-            "name_ar": "كوكايلي",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Kocaeli",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Kocaeli",
-                            "name": "La Flora House Hotel",
-                            "is_validated": true,
-                            "url": "https://www.instagram.com/stories/lotusmeat/3033074465344709007/",
-                            "address": "https://goo.gl/maps/L5MVpiGMDaXnLAS19",
-                            "validation_date": "08.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name_tr": "Antalya",
-            "name_en": "Antalya",
-            "name_ku": "Antalya - Antalya",
-            "name_ar": "أنطاليا",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Antalya",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Antalya",
-                            "name": "Dream World Palace Hotel",
-                            "is_validated": true,
-                            "url": "https://dreamworldpalace.com.tr/",
-                            "address": "https://goo.gl/maps/L2Bec5qzngdh2deX8",
-                            "validation_date": "08.02.2023"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Batman",
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": "Batman",
-                    "dataType": "city-accommodation",
-                    "items": [
-                        {
-                            "city": "Batman",
-                            "name": "Batman Misafirhane",
-                            "is_validated": true,
-                            "url": "https://twitter.com/sudesakii/status/1623062174712336390",
-                            "address": null,
+                            "address": "https://goo.gl/maps/F2r4kraXpz9HGWsi9",
                             "validation_date": "07.02.2023"
                         }
                     ]

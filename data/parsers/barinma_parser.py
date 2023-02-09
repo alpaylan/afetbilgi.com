@@ -25,6 +25,8 @@ def main():
 
     city_name = None
 
+    df = df.sort_values(by=['Şehir'])
+
     for _, row in df.iterrows():
         tmp_sehir = turkish_title(row['Şehir'].strip())
         

@@ -13,6 +13,7 @@ def main():
 
     json_name = "../datasets/toplanma.json"
     df = pd.read_csv(url, encoding="utf-8")
+    df = df.sort_values(by=['Şehirler'])
 
     options = []
     items = []
