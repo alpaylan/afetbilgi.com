@@ -23,6 +23,8 @@
   "data.important_web_sites.subtitle": " Li vir girêdanên ku hûn hewce ne hene ",
   "data.important_articles.title": "Nivîsên kêrhatî",
   "data.important_articles.subtitle": "Hûn dikarin li jêr nivîsên kêrhatî yên derbarê piştî erdhejê de bibînin..",
+  "data.important_articles.article_title": "Sernav",
+  "data.important_articles.article_author": "Nivîskar",
   "data.veterinary.title": "{{city}} Alîkariya veterînerî ya bêpere",
   "data.veterinary.subtitle": "Hemî numareyê veterîneran yên li ser vê rûpelê bi têlefonê hatine verast kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî saetan de biguhere, ji we tê xwestin ku hûn lêkolîna xwe bikin.",
   "data.food_distribution.title": "{{city}}, {{county}} Cihên carina bêpere",

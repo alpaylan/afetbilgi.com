@@ -23,6 +23,8 @@
   "data.important_web_sites.subtitle": "Here are the links you may need.",
   "data.important_articles.title": "Useful Articles",
   "data.important_articles.subtitle": "You can find useful articles about the post-earthquake below.",
+  "data.important_articles.article_title": "Title",
+  "data.important_articles.article_author": "Author",
   "data.veterinary.title": "Veterinarians You Can Get Free Help In {{city}}",
   "data.veterinary.subtitle": "All vets on this page are phone verified. However, since this information can change within days or even hours, you are kindly requested to do your own research.",
   "data.food_distribution.title": "{{city}}, {{county}} Free Food Delivery Locations",

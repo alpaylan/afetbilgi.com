@@ -23,6 +23,8 @@
   "data.important_web_sites.subtitle": " هنا يمكنك العثور على الروابط التي قد تحتاجها ",
   "data.important_articles.title": "نصوص مفيدة",
   "data.important_articles.subtitle": "يمكنك العثور أدناه  على مقالات مفيدة حول ما بعد الزلزال.",
+  "data.important_articles.article_title": "عنوان المقال",
+  "data.important_articles.article_author": "المؤلف",
   "data.veterinary.title": "{{city}} الأطباء البيطريون في مدينة...... حيث يمكنك الحصول على مساعدة مجانية",
   "data.veterinary.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك",
   "data.food_distribution.title": "{{city}}, {{county}} مواقع توصيل الطعام",
