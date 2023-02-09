@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Box } from '@mui/material';
 import { DataNode } from '../interfaces/TreeNode';
 import BankData from './data/BankData';
@@ -18,68 +19,32 @@ import VpnData from './data/VpnData';
 import ContainerPharmacyData from './data/ContainerPharmacyData';
 import { DataType } from '../variables/TreeNode';
 
+const pageMappings: Record<string, FC<{value: any}>> = {
+  [DataType.BANK_ACCOUNT_DONATION]: BankData,
+  [DataType.BENEFICIAL_ARTICLES]: ArticleData,
+  [DataType.BLOOD_DONATION_LIST]: BloodDonationData,
+  [DataType.CITY_ACCOMMODATION]: CityAccommodation,
+  [DataType.CREDIT_CARD_DONATION]: CreditCardData,
+  [DataType.INTERNATIONAL_BANK_ACCOUNT_DONATION]: BankData,
+  [DataType.INTERNATIONAL_URL_DONATION]: URLData,
+  [DataType.NEW_GATHERING_LIST]: GatheringData,
+  [DataType.HELP_ITEM_LIST]: HelpItemData,
+  [DataType.PHONE_NUMBER_LIST]: TelephoneData,
+  [DataType.SMS_DONATION]: SMSData,
+  [DataType.URL_DONATION]: URLData,
+  [DataType.USEFUL_LINKS]: UsefulLinksData,
+  [DataType.STEM_CELL_DONATION]: StemCellData,
+  [DataType.DATA_VET]: VetData,
+  [DataType.FOOD_ITEMS]: FoodDistributionData,
+  [DataType.VPN]: VpnData,
+  [DataType.CONTAINER_PHARMACY]: ContainerPharmacyData,
+}
+
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
-    const dataType = dataNode.data.dataType as DataType;
+    const Page = pageMappings[dataNode.data.dataType];
 
-    switch (dataType) {
-      case DataType.BANK_ACCOUNT_DONATION:
-        return <BankData value={dataNode.data as any} />;
-
-      case DataType.BENEFICIAL_ARTICLES:
-        return <ArticleData value={dataNode.data as any} />;
-
-      case DataType.BLOOD_DONATION_LIST:
-        return <BloodDonationData value={dataNode.data as any} />;
-
-      case DataType.CITY_ACCOMMODATION:
-        return <CityAccommodation value={dataNode.data as any} />;
-
-      case DataType.CREDIT_CARD_DONATION:
-        return <CreditCardData value={dataNode.data as any} />;
-
-      case DataType.INTERNATIONAL_BANK_ACCOUNT_DONATION:
-        return <BankData value={dataNode.data as any} />;
-
-      case DataType.INTERNATIONAL_URL_DONATION:
-        return <URLData value={dataNode.data as any} />;
-
-      case DataType.NEW_GATHERING_LIST:
-        return <GatheringData value={dataNode.data as any} />;
-
-      case DataType.HELP_ITEM_LIST:
-        return <HelpItemData value={dataNode.data as any} />;
-
-      case DataType.PHONE_NUMBER_LIST:
-        return <TelephoneData value={dataNode.data as any} />;
-
-      case DataType.SMS_DONATION:
-        return <SMSData value={dataNode.data as any} />;
-
-      case DataType.URL_DONATION:
-        return <URLData value={dataNode.data as any} />;
-
-      case DataType.USEFUL_LINKS:
-        return <UsefulLinksData value={dataNode.data as any} />;
-
-      case DataType.STEM_CELL_DONATION:
-        return <StemCellData value={dataNode.data as any} />;
-
-      case DataType.DATA_VET:
-        return <VetData value={dataNode.data as any} />;
-
-      case DataType.FOOD_ITEMS:
-        return <FoodDistributionData value={dataNode.data as any} />;
-
-      case DataType.VPN:
-        return <VpnData value={dataNode.data as any} />;
-
-      case DataType.CONTAINER_PHARMACY:
-        return <ContainerPharmacyData value={dataNode.data as any} />;
-
-      default:
-        return <></>;
-    }
+    return Page ? <Page value={dataNode.data} /> : <>Not found</>;
   };
 
   return (
