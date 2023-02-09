@@ -5,7 +5,7 @@ import { Circle, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useMarkers } from './hooks';
 
 export default function Map() {
-  const markers = useMarkers();
+  const { map_data: mapData } = useMarkers();
 
   const [selfPosition, setSelfPosition] = useState<GeolocationPosition | null>(null);
   const selfLocation = useMemo(() => [selfPosition?.coords.latitude ?? 0, selfPosition?.coords.longitude ?? 0] as LatLngTuple, [selfPosition]);
@@ -37,10 +37,17 @@ export default function Map() {
         <Circle center={selfLocation} weight={1} color="blue" fillColor="blue" fillOpacity={1} radius={100}></Circle>
       </>}
 
-      {markers.map((marker, i) => (
-        <Marker key={`marker-${i}`} position={[marker.lat, marker.lng]}>
-          <Popup>Selam</Popup>
-        </Marker>
+      {mapData.map((item, i) => (
+        item.data.map((data, j) => (
+          <Marker key={`marker-${i}-${j}`} position={[data.lat, data.lng]}>
+            <Popup>
+              <div>{data.name}</div>
+              {data.description && <div>{data.description}</div>}
+              {data.phone && <div><a href={`tel:${data.phone}`} target="_blank">{data.phone}</a></div>}
+              {data.website && <div><a href={data.website} target="_blank">{data.website}</a></div>}
+            </Popup>
+          </Marker>
+        )).flat()
       ))}
     </MapContainer>
   );
