@@ -30,8 +30,9 @@ const {
 
 const { writeStemCellsPDF } = require("./leafs/stemCells");
 const { createCoverPage } = require("./coverPage");
+const { writePharmacyData } = require("./leafs/pharmacy");
 
-const DATA_URL = "https://cdn.afetbilgi.com/latest_translated.json?v=1.5`";
+const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
 // TODO: BUNNU SIL
 // const DATA_URL = "/data.json";
 
@@ -169,7 +170,6 @@ const createLeafMealPDF = async () => {
   const data = await fetchData();
 
   const mealData = getMealData(data);
-  console.log(mealData);
   const path = `../outputs/${encodeURIComponent(mealData.name_tr)}/`;
   fs.mkdirSync(path, { recursive: true });
 
@@ -183,7 +183,7 @@ const createVeterinerPlacesPDF = async () => {
 
   const veterinerPlaces = getVeterinerPlaces(data);
 
-  const path = `../outputs/${encodeURIComponent(veterinerPlaces[0].name_tr)}/`;
+  const path = `../outputs/${encodeURIComponent(veterinerPlaces[0].name)}/`;
   fs.mkdirSync(path, { recursive: true });
 
   veterinerPlaces[0].value.options.forEach((option) => {
@@ -233,7 +233,7 @@ const createBloodDonationPDF = async () => {
     });
     registerFont(doc);
 
-    writeBloodDonationsPDF(doc, option.value_tr.data);
+    writeBloodDonationsPDF(doc, option.value.data.items);
 
     doc.save(path + option.name_tr + ".pdf");
   });
@@ -282,19 +282,19 @@ const createArticlePDF = async () => {
   doc.save(path + ".pdf");
 };
 
-const createVpnPDF = async () => {
-  const data = await fetchData();
+// const createVpnPDF = async () => {
+//   const data = await fetchData();
 
-  const doc = new jsPDF({
-    orientation: "p",
-    unit: "px",
-    format: "a4",
-  });
+//   const doc = new jsPDF({
+//     orientation: "p",
+//     unit: "px",
+//     format: "a4",
+//   });
 
-  registerFont(doc);
-  writeVpnPDF(doc, data);
-  doc.save("../outputs/" + "VPN" + ".pdf");
-};
+//   registerFont(doc);
+//   writeVpnPDF(doc, data);
+//   doc.save("../outputs/" + "VPN" + ".pdf");
+// };
 
 const createStemCellsPDF = async () => {
   const data = await fetchData();
@@ -312,10 +312,26 @@ const createStemCellsPDF = async () => {
   doc.save(path + ".pdf");
 };
 
+const createPharmacyPDF = async () => {
+  const data = await fetchData();
+
+  const path = `../outputs/${encodeURIComponent("Konteyner Eczaneler")}`;
+
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writePharmacyData(doc, data);
+  doc.save(path + ".pdf");
+};
+
 const fetchData = async () => {
-  // const dataAll = await axios.get(DATA_URL);
-  const dataAll = JSON.parse(fs.readFileSync("data.json", "utf8"));
-  const data = dataAll;
+  const dataAll = await axios.get(DATA_URL);
+
+  const data = dataAll.data;
   return data;
 };
 
@@ -326,9 +342,10 @@ module.exports = {
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,
-  createVpnPDF,
+  // createVpnPDF,
   createVeterinerPlacesPDF,
   createHelpCentersPDF,
   createBloodDonationPDF,
   createStemCellsPDF,
+  createPharmacyPDF,
 };

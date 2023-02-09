@@ -6,11 +6,12 @@ const {
   createPhoneNumbersPDF,
   createWebSitesPDF,
   createArticlePDF,
-  createVpnPDF,
+  // createVpnPDF,
   createVeterinerPlacesPDF,
   createHelpCentersPDF,
   createBloodDonationPDF,
   createStemCellsPDF,
+  createPharmacyPDF,
 } = require("./allDataToPDF");
 
 createLeafTemporaryAccomodationPDF();
@@ -19,8 +20,9 @@ createLeafMealPDF();
 createPhoneNumbersPDF();
 createWebSitesPDF();
 createArticlePDF();
-createVpnPDF();
+// createVpnPDF();
 createVeterinerPlacesPDF();
 createHelpCentersPDF();
 createBloodDonationPDF();
 createStemCellsPDF();
+createPharmacyPDF();
