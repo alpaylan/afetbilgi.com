@@ -36,7 +36,6 @@ jobs:
 
           cd parsers
 
-          python ./veteriner_parser.py
           python ./yazilar_parser.py
           python ./yemek_parser.py
 
@@ -47,13 +46,13 @@ jobs:
           python ./telefonnumaralari.py ../latest_datasets/telefon.json
           python ./eczane.py ../latest_datasets/eczane.json
           python ./faydalilinkler.py ../latest_datasets/faydali_linkler.json
+          python ./veteriner_parser.py ../latest_datasets/veteriner.json
 
           cp ../datasets/yemek.json ../latest_datasets/yemek.json
           cp ../datasets/barinma.json ../latest_datasets/barinma.json
           cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
-          cp ../datasets/veteriner.json ../latest_datasets/veteriner.json
           cp ../datasets/yazilar.json ../latest_datasets/yazilar.json
 
       - name: Merge datasets
