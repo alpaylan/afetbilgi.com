@@ -1,0 +1,164 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "twitter-account-list",
+        "accounts": [
+            {
+                "name": "Twitter Listesi",
+                "url": "https://twitter.com/i/lists/1622466782320533504"
+            },
+            {
+                "name": "AFAD Deprem",
+                "url": "https://twitter.com/DepremDairesi"
+            },
+            {
+                "name": "AFAD Baskanlik",
+                "url": "https://twitter.com/AFADBaskanlik"
+            },
+            {
+                "name": "Türk Kızılay",
+                "url": "https://twitter.com/Kizilay"
+            },
+            {
+                "name": "Ahbap",
+                "url": "https://twitter.com/ahbap"
+            },
+            {
+                "name": "Malatya Belediyesi",
+                "url": "https://twitter.com/MalatyaBelTr"
+            },
+            {
+                "name": "Malatya Belediye Başkanı",
+                "url": "https://twitter.com/selahattingrkn"
+            },
+            {
+                "name": "Malatya Valiliği",
+                "url": "https://twitter.com/TCMalatyaV"
+            },
+            {
+                "name": "Kahramanmaraş Valiliği",
+                "url": "https://twitter.com/TCkahramanmaras"
+            },
+            {
+                "name": "Kahramanmaraş Belediyesi",
+                "url": "https://twitter.com/buyuksehirkm"
+            },
+            {
+                "name": "Kahramanmaraş Belediye Başkanı",
+                "url": "https://twitter.com/hayrettingng"
+            },
+            {
+                "name": "Gaziantep Belediyesi",
+                "url": "https://twitter.com/GaziantepBeld"
+            },
+            {
+                "name": "Gaziantep Belediye Başkanı",
+                "url": "https://twitter.com/FatmaSahin"
+            },
+            {
+                "name": "Gaziantep Valiliği",
+                "url": "https://twitter.com/gantepvaliligi"
+            },
+            {
+                "name": "Şanlıurfa Büyükşehir Belediyesi",
+                "url": "https://twitter.com/sanliurfabld"
+            },
+            {
+                "name": "Şanlıurfa Belediye Başkanı",
+                "url": "https://twitter.com/zabeyazgul"
+            },
+            {
+                "name": "Şanlıurfa Valiliği",
+                "url": "https://twitter.com/UrfaValiligi"
+            },
+            {
+                "name": "Hatay Belediyesi",
+                "url": "https://twitter.com/HatayBSB"
+            },
+            {
+                "name": "Hatay Belediye Başkanı",
+                "url": "https://twitter.com/DocDrLutfuSavas"
+            },
+            {
+                "name": "Hatay Valiliği",
+                "url": "https://twitter.com/HatayValiligi"
+            },
+            {
+                "name": "Adana Belediyesi",
+                "url": "https://twitter.com/Adana_Bld"
+            },
+            {
+                "name": "Adana Belediye Başkanı",
+                "url": "https://twitter.com/ZeydanKaralar01"
+            },
+            {
+                "name": "Adana Valiliği",
+                "url": "https://twitter.com/TCAdanaValiligi"
+            },
+            {
+                "name": "Diyarbakır Belediyesi",
+                "url": "https://twitter.com/diyarbakirbld"
+            },
+            {
+                "name": "Diyarbakır Valiliği",
+                "url": "https://twitter.com/dbakirvalilik"
+            },
+            {
+                "name": "Osmaniye Belediyesi",
+                "url": "https://twitter.com/osmaniyebld"
+            },
+            {
+                "name": "Osmaniye Belediye Başkanı",
+                "url": "https://twitter.com/baskankadirkara"
+            },
+            {
+                "name": "Osmaniye Valiliği",
+                "url": "https://twitter.com/OsmaniyeValilik"
+            },
+            {
+                "name": "Kilis Belediyesi",
+                "url": "https://twitter.com/BelediyesiKilis"
+            },
+            {
+                "name": "Kilis Blediye Başkanı",
+                "url": "https://twitter.com/servetramazann"
+            },
+            {
+                "name": "Kilis Valiliği",
+                "url": "https://twitter.com/kilisvaliligi"
+            },
+            {
+                "name": "Adıyaman Belediyesi",
+                "url": "https://twitter.com/AdiyamanBelTR"
+            },
+            {
+                "name": "Adıyaman Belediye Başkanı",
+                "url": "https://twitter.com/Drsuleymanklnc"
+            },
+            {
+                "name": "Adıyaman Valiliği",
+                "url": "https://twitter.com/adiyamangovtr"
+            },
+            {
+                "name": "İçişleri Bakanlığı",
+                "url": "https://twitter.com/TC_icisleri"
+            },
+            {
+                "name": "Kandilli Rasathanesi",
+                "url": "https://twitter.com/Kandilli_info/"
+            },
+            {
+                "name": "Karayolları Genel Müdürlüğü",
+                "url": "https://twitter.com/KarayollariGM"
+            },
+            {
+                "name": "Teyit. org",
+                "url": "https://twitter.com/teyitorg"
+            },
+            {
+                "name": "Doğruluk Payı",
+                "url": "https://twitter.com/dogrulukpayicom"
+            }
+        ]
+    }
+}
