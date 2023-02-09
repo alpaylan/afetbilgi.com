@@ -5,7 +5,7 @@ export default function AboutUs() {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{paddingTop: 6}}>
+    <Box sx={{ paddingTop: 4 }}>
       <Container maxWidth="sm" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <Typography variant="h3" align="center" sx={{mt: 4}}>
             {t('page.about.title')}

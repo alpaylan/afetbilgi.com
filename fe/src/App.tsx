@@ -112,7 +112,7 @@ const App = () => {
         </Select>
       </Box>
 
-      <Container>
+      <Container sx={{ mt: 1 }}>
         <Routes>
           <Route path='/*' element={<RootQuestion />} />
           <Route path='/about' element={<AboutUs />} />
