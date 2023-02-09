@@ -18,6 +18,7 @@ data_points = [
   { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê', 'path': f'{basedir}/kokhucre.json' },
   { 'name_ar': 'نصوص مفيدة', 'name': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'name_ku': 'Agahiyên Kêrhatî', 'path': f'{basedir}/yazilar.json' },
   { 'name': 'VPN', 'path': f'{basedir}/vpn.json' },
+  { 'name_ar': "", "name_ku": "", "name_en": "Container Pharmacies", "name": 'Konteyner Eczaneler', 'path': f'{basedir}/eczane.json' },
 #   STAGING
 #   { 'name': 'Kapalı Yollar', 'path': f'{basedir}/kapaliyollar.json' },
 
