@@ -10,6 +10,11 @@ const constantData = require("./constants");
 const { getWebSitesData, writeWebsitesPDF } = require("./leafs/webSites");
 const { writeArticlesPDF } = require("./leafs/articles");
 const { writeVpnPDF } = require("./leafs/vpn");
+const {
+  writeVeterinerPlacesPDF,
+  getVeterinerPlaces,
+} = require("./leafs/veteriner");
+
 const DATA_URL = "https://cdn.afetbilgi.com/latest_translated.json?v=1.5`";
 
 const CITYS = [
@@ -223,6 +228,24 @@ const createVpnPDF = async () => {
   doc.save("output/" + "vpn" + ".pdf");
 };
 
+const createVeterinerPlacesPDF = async () => {
+  const data = await fetchData();
+
+  const veterinerPlaces = getVeterinerPlaces(data);
+
+  veterinerPlaces[0].value.options.forEach((option) => {
+    console.log(option);
+    const doc = new jsPDF({
+      orientation: "p",
+      unit: "px",
+      format: "a4",
+    });
+    registerFont(doc);
+    writeVeterinerPlacesPDF(doc, option.value.data);
+    doc.save("output/" + option.name_tr + "_veteriner" + ".pdf");
+  });
+};
+
 //fetches data
 const fetchData = async () => {
   const dataAll = await axios.get(DATA_URL);
@@ -237,7 +260,8 @@ const fetchData = async () => {
 // createPhoneNumbersPDF();
 // createWebSitesPDF();
 // createArticlePDF();
-createVpnPDF();
+// createVpnPDF();
+createVeterinerPlacesPDF();
 
 module.exports = {
   createAllInOnePDF,
