@@ -1,5 +1,5 @@
 <!-- Improved compatibility of back to top link: See:  -->
-<a name="readme-top"></a>
+<a name="readme-top" href="www.afetbilgi.com"></a>
 
 # afetbilgi.com
 
