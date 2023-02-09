@@ -1,6 +1,14 @@
 {
   "page.main.title": "Ana Sayfa",
   "page.main.subtitle": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
+  "page.about.title": "Hakkımızda / İletişim",
+  "page.about.body.1": "afetbilgi.com bir grup ODTÜ öğrencisi ve mezunu tarafından hazırlanan, 6 Şubat 2023 Pazarcık Depremi ile mücadelede önemli bilgilerin doğrulanarak hem afetzedelere, hem de yardımcı olmak isteyenlere ulaştırılması için kurulmuş bir internet sitesidir.",
+  "page.about.body.2": "Tamamen insan eliyle oluşturulan bir veri tabanına dayanan sitenin işleyişindeki temel prensipler doğruluk, hız, ve basitliktir. Bizimle iletişime geçerken, sizden yalnızca teyitli bilgileri iletmenizi, yanlış haberlerin yayılmasını engellemek için bizle birlikte çabalamanızı rica ederiz.",
+
+  "category.victim.name": "Depremzedeler İçin",
+  "category.helper.name": "Yardım Etmek İsteyenler İçin",
+  "category.resources.name": "Önemli Kaynaklar",
+  "category.other.name": "Diğer",
 
   "data.city_accommodation.title": "{{city}} Şehrinde Kalacak Yerler",
   "data.city_accommodation.subtitle": "Bu sayfada, içerisinde belirtilenler hariç tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
@@ -28,9 +36,11 @@
   "data.phone_number.link_explanation_p1": "Detaylar için",
   "data.phone_number.link_explanation_p2": "numarasını arayabilirsiniz",
   "data_blood_donation": "Kan Bağış Noktası",
-  "data.vpn.title": "Internete bağlanmak için aşapıdaki ücretsiz VPN'leri kullanabilirsiniz.",
+  "data.container_pharmacy": "Konteyner Eczane",
+  "data.vpn.title": "İnternete bağlanmak için aşağıdaki ücretsiz VPN'leri kullanabilirsiniz.",
   "data.vpn.subtitle": "VPN bloklanan sitelere girmenizi sağlar.",
 
+  "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
   "button.google_maps": "Google Maps Linki",
@@ -46,5 +56,7 @@
   "region": "Bölge",
   "location": "Konum",
   "details": "Detaylar",
-  "website": "Websitesi"
+  "website": "Websitesi",
+  "source": "Kaynak",
+  "contact": "İletişim"
 }

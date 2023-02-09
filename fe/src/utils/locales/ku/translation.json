@@ -1,6 +1,14 @@
 {
   "page.main.title": "Malper",
   "page.main.subtitle": "Ji kerema xwe mijara ku hûn dixwazin agahdarî li ser bigirin hilbijêrin",
+  "page.about.title": "Der barê me de / Têkelî",
+  "page.about.body.1": "afetbilgi.com malperek e ku ji aliyê komek xwendekar û mezûnên ODTU ve hatiye amadekirin da ku di têkoşîna li dijî Erdheja 6ê Sibata 2023-an a Bazarcixê de agahiyên girîng verast bike û ewan bi mexdûrên karesatê  û yên ku dixwazin alîkariyê bidin re parve bike.",
+  "page.about.body.2": "Prensîbên bingehîn ên malperê, ku li ser bingehek bi tevahî ji hêla mirovan ve hatî çêkirin, rastbûn, bilez û sadebûn in. Dema ku bi me re têkilî daynin, em ji we daxwaz dikin ku hûn tenê agahdariyên pejirandî bidin û bi me re bixebitin da ku em pêşî li belavbûna agahdariyê derewîn bigirin.",
+
+  "category.victim.name": "Ji bo mexdûrên erdhêjê",
+  "category.helper.name": "Ji bo alîkarî",
+  "category.resources.name": "Çavkanîyên Giring",
+  "category.other.name": "Yên din",
 
   "data.city_accommodation.title": "{{city}} cihên mayînê",
   "data.city_accommodation.subtitle": "Hemî cîhên li ser vê rûpelê bi têlefonê hatine verast kirin, ji bilî yên ku tê de hatine destnîşan kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî demjimêran de biguhere, ji kerema xwe lêkolîna xwe bikin",
@@ -30,8 +38,10 @@
   "data_blood_donation": "Cihên bo bexşîna xwînê",
   "data.vpn.title": "Hûn bo înternetê karin VPNên belaş yên li jêr bikar bînin",
   "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
+  "data.container_pharmacy": "Dermanxaneyên Seyare",
 
-  "button.back": "paş  ",
+  "notFound": "Rûpel nehat dîtin",
+  "button.back": "paş",
   "button.language": "Ziman biguherîne",
   "button.google_maps": "Girêdana Google Mapsê ",
   "last_update": "nûvekirina dawîn",
@@ -46,5 +56,7 @@
   "region": "Herêm",
   "location": "Cîh",
   "details": " Hûrgilî",
-  "website": " Malper"
+  "website": " Malper",
+  "source": "Çavkaniyê",
+  "contact": "Têkilî"
 }

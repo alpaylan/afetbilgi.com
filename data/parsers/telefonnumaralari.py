@@ -1,6 +1,6 @@
-
-import pandas as pd
+import sys
 import json
+import pandas as pd
 
 
 def todict(obj, classkey=None):
@@ -27,14 +27,18 @@ def todict(obj, classkey=None):
 
 
 if __name__ == "__main__":
-    # sheet_id = "1La7CSZYBkpO_jvIe6Xs252VQPp_tVx1ioOWYvzyRK_k"
-    # sheet_name = "Telefon-Numaralari"
-    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
 
-    json_name = "phone-numbers.json"
+    out_path = sys.argv[1]
 
-    # df = pd.read_csv(url, encoding="utf-8")
-    df = pd.read_csv("phone-numbers.csv", encoding="utf-8")
+    sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
+    sheet_name = "%C3%96nemli%20Telefon%20Numaralar%C4%B1"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    df = pd.read_csv(url, encoding="utf-8")
+    # df = pd.read_csv("phone-numbers.csv", encoding="utf-8")
 
     df = df.rename(columns={
         "Kurum": "name",
@@ -42,19 +46,23 @@ if __name__ == "__main__":
     })
     # print(df)
     
+    phones = []
+    for _, row in df.iterrows():
+        phones.append(
+            {
+                "name": row["name"],
+                "phone_number": row["phone_number"],
+            }
+        )
 
-    json_obj = {
+    data = {
         "type": "data",
         "data": {
             "dataType": "phone-number-list",
-            "phones": df.to_dict(orient='records')
+            "phones": phones
         }
     }
 
-    for phone_number in json_obj["data"]["phones"]:
-        if len(phone_number["phone_number"]) <= 3:
-            phone_number["is_plain"] = True
+    with open(out_path, "w+", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
-    
-    with open(json_name, "w", encoding="utf-8") as f:
-        json.dump(json_obj, f, ensure_ascii=False, indent=4)

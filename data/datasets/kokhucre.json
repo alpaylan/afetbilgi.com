@@ -42,7 +42,7 @@
             {
                 "area": "GÜNEY EGE KHBM",
                 "city": "DENİZLİ",
-                "address": "https://goo.gl/maps/WE7SPt9F9ZRnifNf8",
+                "address": "https://goo.gl/maps/xzbZibLQfHTtGw8r5",
                 "phone": "0258 265 49 76"
             },
             {
@@ -86,6 +86,12 @@
                 "city": "İSTANBUL ANADOLU YAKASI",
                 "address": "https://goo.gl/maps/VspskcxPa2EC4j1VA",
                 "phone": "0216 458 05 00"
+            },
+            {
+                "area": "TÜRKÖK (BİLKENT ŞEHİR HASTANESİ)",
+                "city": "ANKARA",
+                "address": "https://goo.gl/maps/L85UtTNwW5wePsKY6",
+                "phone": "0312 458 50 02"
             }
         ]
     }

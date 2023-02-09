@@ -1,24 +1,30 @@
-import pandas as pd
+import sys
 import json
+import pandas as pd
 
 def main():
-    sheet_id = "1La7CSZYBkpO_jvIe6Xs252VQPp_tVx1ioOWYvzyRK_k"
-    sheet_name = "Faydal%C4%B1%20Linkler"
+    if len(sys.argv) != 2:
+        print(f"Usage: python {sys.argv[0]} <output-file>")
+        sys.exit(1)
+
+    out_path = sys.argv[1]
+
+    sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
+    sheet_name = "%C3%96nemli%20Web%20Siteleri"
 
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    json_name = "../datasets/faydali_linkler.json"
-    df = pd.read_csv(url, encoding="utf-8", header=None)
-    print(df)
+    df = pd.read_csv(url, encoding="utf-8")
 
     usefulLinks = []
+
 
     for _, row in df.iterrows():
 
         usefulLinks.append(
             {
-                "name": row[0],
-                "url": row[1],
+                "name": row["İsim"],
+                "url": row["Link"],
             }
         )
 
@@ -30,7 +36,7 @@ def main():
         }
     }
 
-    with open(json_name, "w+", encoding="utf-8") as f:
+    with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 

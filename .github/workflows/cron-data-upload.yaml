@@ -1,0 +1,60 @@
+name: Data upload (cronjob)
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "*/30 * * * *" # Run every 30 minutes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip" # caching pip dependencies
+
+      - run: pip install -r requirements.txt
+
+      - name: Run parsers
+        run: |
+          cd data
+
+          mkdir to_upload
+          mkdir latest_datasets
+
+          cd parsers
+
+          python ./yemek.py ../latest_datasets/yemek.json
+          python ./yazilar.py ../latest_datasets/yazilar.json
+          python ./toplanma.py ../latest_datasets/toplanma.json
+          python ./barinma.py ../latest_datasets/barinma.json
+          python ./blood.py ../latest_datasets/blood.json
+          python ./kokhucre.py ../latest_datasets/kokhucre.json
+          python ./telefonnumaralari.py ../latest_datasets/telefon.json
+          python ./eczane.py ../latest_datasets/eczane.json
+          python ./faydalilinkler.py ../latest_datasets/faydali_linkler.json
+          python ./veteriner.py ../latest_datasets/veteriner.json
+          python ./yardim_toplama_merkezleri.py ../latest_datasets/yardim_toplama_merkezleri.json
+
+          cp ../datasets/vpn.json ../latest_datasets/vpn.json
+          cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
+
+      - name: Merge datasets
+        run: |
+          python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
+          gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
+
+      - name: Sync JSON files
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com

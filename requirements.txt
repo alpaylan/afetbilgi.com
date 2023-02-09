@@ -8,3 +8,5 @@ pytz==2022.7.1
 six==1.16.0
 tomli==2.0.1
 typing_extensions==4.4.0
+requests
+lxml

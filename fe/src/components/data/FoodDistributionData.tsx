@@ -83,9 +83,9 @@ export default function FoodDistributionData({
           <b>{item.name}</b>
           <br />
           <p>
-            <a href={item.maps_url} target='_blank' rel='noreferrer'>
+            {item.maps_url && <a href={item.maps_url} target='_blank' rel='noreferrer'>
               {t('button.google_maps')}
-            </a>
+            </a>}
             <br />
           </p>
 
