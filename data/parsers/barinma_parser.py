@@ -10,6 +10,7 @@ def index_or_none(l, i):
     else:
         return None
 
+
 def main():
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
@@ -20,61 +21,107 @@ def main():
     json_name = "../datasets/barinma.json"
     df = pd.read_csv(url, encoding="utf-8")
 
+    sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    dfj = pd.read_csv(url, encoding=("utf-8"))
+
+    dfj = dfj.drop(
+        columns=[
+            "Ad",
+            "Soyad",
+            "Telefon Numarası",
+        ]
+    )
+
+    rename = {
+        "Submission Date": "date",
+        "Lütfen Şehir Seçiniz": "Şehir",
+        "Lütfen İlçenizi Giriniz": "İlçe",
+        "Konum Bilgisini Yazınız": "Lokasyon",
+        "Varsa Konuma Ait Bilgilendirme Linki Ekleyiniz": "Link",
+        "Konuma Ait Google Maps Linki Ekleyiniz": "Konum linki",
+        "Daha Fazla Bilgi İçin İletişime Geçilebilecek Telefon Numarasını Giriniz": "Telefon",
+        "Konuma Yönelik Ekstra Bilginiz Varsa Yazınız": "Açıklamalar",
+    }
+
+    dfj = dfj.rename(columns=rename)
+
+    dfj["Lokasyon"] = dfj["İlçe"] + " - " + dfj["Lokasyon"]
+
+    dfj[["Doğrulanma Tarihi", "Doğrulama Saati"]] = dfj["date"].str.split(
+        " ", expand=True
+    )
+
+    dfj = dfj.drop(columns=["date", "İlçe", "Submission ID", "Telefon"])
+    dfj["Doğrulanma Durumu"] = True
+
+    df = pd.concat([df, dfj])
+
+    df["Şehir"] = df["Şehir"].apply(str.strip)
+    df["Şehir"] = df["Şehir"].apply(turkish_title)
+
+    df.sort_values(["Şehir", "Lokasyon"])
+
     parsed = []
     options = []
 
     city_name = None
-
-    df = df.sort_values(by=['Şehir'])
-
     for _, row in df.iterrows():
-        tmp_sehir = turkish_title(row['Şehir'].strip())
-        
+        tmp_sehir = turkish_title(row["Şehir"].strip())
+
         if tmp_sehir != city_name:
             if city_name is None:
                 city_name = tmp_sehir
             else:
-                options.append({
-                    "name_tr": city_name,
-                    "name_en": city_translation[city_name]['en'],
-                    "name_ku": city_translation[city_name]['ku'],
-                    "name_ar": city_translation[city_name]['ar'],
-                    "value": {
-                        "type": "data",
-                        "data": {
-                            "city": city_name,
-                            "dataType": "city-accommodation",
-                            "items": parsed
-                        }
+                options.append(
+                    {
+                        "name_tr": city_name,
+                        "name_en": city_translation[city_name]["en"],
+                        "name_ku": city_translation[city_name]["ku"],
+                        "name_ar": city_translation[city_name]["ar"],
+                        "value": {
+                            "type": "data",
+                            "data": {
+                                "city": city_name,
+                                "dataType": "city-accommodation",
+                                "items": parsed,
+                            },
+                        },
                     }
-                })
+                )
                 city_name = row[0]
 
                 parsed = []
 
         get_data = lambda x: x if not pd.isna(x) else None
 
-        parsed.append({
-            "city": city_name,
-            "name": get_data(row['Lokasyon']),
-            "is_validated": get_data(row['Doğrulanma Durumu']) == "Doğrulandı",
-            "url": get_data(row['Link']),
-            "address": get_data(row['Konum linki']),
-            "validation_date": get_data(row['Doğrulanma Tarihi']),
-        })
-        
-    else:
-        options.append({
-            "name": city_name,
-            "value": {
-                "type": "data",
-                "data": {
-                    "city": city_name,
-                    "dataType": "city-accommodation",
-                    "items": parsed
-                }
+        parsed.append(
+            {
+                "city": city_name,
+                "name": get_data(row["Lokasyon"]),
+                "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
+                "url": get_data(row["Link"]),
+                "address": get_data(row["Konum linki"]),
+                "validation_date": get_data(row["Doğrulanma Tarihi"]),
             }
-        })
+        )
+
+    else:
+        options.append(
+            {
+                "name": city_name,
+                "value": {
+                    "type": "data",
+                    "data": {
+                        "city": city_name,
+                        "dataType": "city-accommodation",
+                        "items": parsed,
+                    },
+                },
+            }
+        )
 
     data = {
         "type": "question",
@@ -84,42 +131,48 @@ def main():
         "text_ar": "في أي مدينة تبحث عن مساكن مؤقة",
         "autocompleteHint": "Şehir",
         "options": options,
-        'externalData' : {
-            "text_tr": 'Kalacak yer imkanı sağlayan diğer kaynaklar',
-            "text_en": 'Other sources that provide temporary accommodation',
-            "text_ku": 'Çavkaniyên din dijital li ser cihên lêhihewinê',
-            "text_ar": 'مصادر أخرى توفر مساكن مؤقة',
+        "externalData": {
+            "text_tr": "Kalacak yer imkanı sağlayan diğer kaynaklar",
+            "text_en": "Other sources that provide temporary accommodation",
+            "text_ku": "Çavkaniyên din dijital li ser cihên lêhihewinê",
+            "text_ar": "مصادر أخرى توفر مساكن مؤقة",
             "usefulLinks": [
                 {
-                    "name":'Otels.com',
-                    "url": 'https://gsb.gov.tr/haber-detay.html/968',
+                    "name": "Otels.com",
+                    "url": "https://gsb.gov.tr/haber-detay.html/968",
                 },
                 {
                     "name": "Turkish Airlines Holidays",
-                    "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller"
+                    "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller",
                 },
                 {
                     "name": "Ahbap Güvenli Bölgeler Haritası",
-                    "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8"
+                    "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8",
                 },
                 {
                     "name": "HepsiEmlak Dostluk Çatısı",
-                    "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s"
+                    "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s",
                 },
                 {
                     "name": "	T.C. MİLLÎ EĞİTİM BAKANLIĞI DESTEK HİZMETLERİ GENEL MÜDÜRLÜĞÜ E-DESTEK",
+
+                    "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx",
+                },
+
                     "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx"
                 },
                 {
                     "name": "Depremzedelerin Kullanımına Açılan Tesis ve Salonlar",
                     "url": "https://gsb.gov.tr/haber-detay.html/968"
                 }
+
             ],
-        }
+        },
     }
 
     with open(json_name, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()
