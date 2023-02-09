@@ -46,8 +46,8 @@ if __name__ == "__main__":
     for _, row in df.iterrows():
         phones.append(
             {
-                "name": row[0],
-                "phone_number": row[1],
+                "name": row["name"],
+                "phone_number": row["phone_number"],
             }
         )
 

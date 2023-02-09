@@ -59,12 +59,12 @@ def main():
         for _, row in city_df.iterrows():
             ilce_dict[row[1]].append(
                 {
-                    "name": row[2] if not pd.isna(row[2]) else None,
-                    "maps_url": row[3] if not pd.isna(row[3]) else None,
-                    "url": row[4] if not pd.isna(row[4]) else None,
-                    "phone_number": row[5] if not pd.isna(row[5]) else None,
-                    "updated_at_date": row[6] if not pd.isna(row[6]) else None,
-                    "updated_at_time": row[7] if not pd.isna(row[7]) else None,
+                    "name": row["Lokasyon"] if not pd.isna(row["Lokasyon"]) else None,
+                    "maps_url": row["Google Maps Linki"] if not pd.isna(row["Google Maps Linki"]) else None,
+                    "url": row["Anons Linki"] if not pd.isna(row["Anons Linki"]) else None,
+                    "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
+                    "updated_at_date": row["Teyit Tarih"] if not pd.isna(row["Teyit Tarih"]) else None,
+                    "updated_at_time": row["Teyit Saati"] if not pd.isna(row["Teyit Saati"]) else None,
                 }
             )
         option_2 = []
