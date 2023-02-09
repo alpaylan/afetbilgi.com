@@ -26,7 +26,6 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
     "react-leaflet": "^4.2.0",
-    "react-leaflet-google-layer": "^2.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1",
     "react-scripts": "^5.0.0"
