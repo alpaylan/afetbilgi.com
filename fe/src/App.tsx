@@ -78,13 +78,13 @@ const App = () => {
           justifyContent: 'center',
         }}
       >
-        {location.pathname !== '/' && location.pathname !== '/en' && (
+        {location.pathname !== '/' && (
           <>
             <Button
               sx={{ m: 1 }}
               size='large'
               onClick={() =>
-                navigate(location.pathname.startsWith('/en') ? '/en' : '/')
+                navigate('/')
               }
             >
               {t('page.main.title')}
