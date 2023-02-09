@@ -115,6 +115,7 @@ dist
 # production
 /build
 
+
 # misc
 .DS_Store
 .env.local
@@ -132,3 +133,5 @@ yarn-error.log*
 !deploy/charts/*tgz
 .local
 .render
+
+**/*.pdf

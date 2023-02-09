@@ -13,9 +13,10 @@ import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
+
+import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
-
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -95,7 +96,15 @@ const App = () => {
             </Button>
           </>
         )}
-
+        <Button
+          sx={{ m: 1 }}
+          size='large'
+          onClick={() => {
+            downloadPDF(location.pathname);
+          }}
+        >
+          {t('button.download')}
+        </Button>
         <Select
           id='language-options-multiselect'
           size='small'
