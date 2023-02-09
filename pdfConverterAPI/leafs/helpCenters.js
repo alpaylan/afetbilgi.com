@@ -15,29 +15,30 @@ const {
 } = require("../constants");
 
 // gets safe gathering place data of given city
-const getVeterinerPlaces = (data, cityx) => {
-  const veterinerPlaces = data.options.filter(
-    (op) => op.name == "Veterinerler" || op.name_tr == "Veterinerler"
+const getHelpCenters = (data, cityx) => {
+  const helpCenters = data.options.filter(
+    (op) => op.name_tr == "Yardım Toplama Merkezleri"
   );
 
-  return veterinerPlaces;
+  return helpCenters;
 };
 
-const writeVeterinerPlacesPDF = (doc, data) => {
+const writeHelpCentersPDF = (doc, data) => {
   const pageHeight = doc.internal.pageSize.height;
 
   let x = xStart;
   let y = yStart;
   let isNewPage = true;
-  data.vets.forEach((el, index) => {
+  data.items.forEach((el, index) => {
     if (y >= pageHeight) {
       doc.addPage();
       isNewPage = true;
     }
+    console.log(el);
     if (isNewPage) {
       setFont(doc, "bold");
       doc.setFontSize(titleFontSize);
-      doc.text(`${data.city} - Veterinerler`, x, yRange * 2);
+      doc.text(`${data.city} - Yardım Toplama Merkezleri`, x, yRange * 2);
 
       setFont(doc, "regular");
       doc.setFontSize(textFontSize);
@@ -49,21 +50,23 @@ const writeVeterinerPlacesPDF = (doc, data) => {
       y = yStart;
       isNewPage = false;
     }
+
     doc.setFontSize(textFontSize);
     doc.text("\u2022 " + `${el.name}` + " - " + el.phone_number, x, y);
     y += yRange;
     doc.setFontSize(smallTextSize);
-    doc.text("Adres: " + el.address, x, y);
-    y += yRange;
-    doc.textWithLink("Maps: " + el.maps_link, x, y, {
-      url: el.maps_link,
+    doc.textWithLink("Url: " + el.url, x, y, {
+      url: el.url,
     });
     y += yRange;
+    if (el.notes) {
+      doc.text("Notlar: " + el.notes, x, y);
+      y += yRange;
+    }
   });
 };
-//getSafeGatheringPlace("Malatya")
 
 module.exports = {
-  getVeterinerPlaces,
-  writeVeterinerPlacesPDF,
+  getHelpCenters,
+  writeHelpCentersPDF,
 };

@@ -15,6 +15,15 @@ const {
   getVeterinerPlaces,
 } = require("./leafs/veteriner");
 
+const { writeHelpCentersPDF, getHelpCenters } = require("./leafs/helpCenters");
+const {
+  writeBloodDonationsPDF,
+  getBloodDonations,
+} = require("./leafs/bloodDonation");
+
+const { writeStemCellsPDF } = require("./leafs/stemCells");
+const { createCoverPage } = require("./coverPage");
+
 const DATA_URL = "https://cdn.afetbilgi.com/latest_translated.json?v=1.5`";
 
 const CITYS = [
@@ -138,7 +147,12 @@ const createLeafTemporaryAccomodationPDF = async () => {
     // createSafeGatheringPlacePDF(doc, data, city);
     setFont(doc, "regular");
     accomodation.createAccomodationPDF(data, doc, city);
-    doc.save("output/" + city + "_temporary_accomodation" + ".pdf");
+    doc.save(
+      "output/temporary_accomodations/" +
+        city +
+        "_temporary_accomodation" +
+        ".pdf"
+    );
   });
 };
 
@@ -155,7 +169,9 @@ const createLeafSafeGatheringPlacesPDF = async () => {
 
     setFont(doc, "regular");
     createSafeGatheringPlacePDF(doc, data, city);
-    doc.save("output/" + city + "_safe_gathering_places" + ".pdf");
+    doc.save(
+      "output/safe_gathering_places/" + city + "_safe_gathering_places" + ".pdf"
+    );
   });
 };
 
@@ -172,7 +188,7 @@ const createLeafMealPDF = async () => {
 
     setFont(doc, "regular");
     createMealPdf(doc, data, city);
-    doc.save("output/" + city + "_meal" + ".pdf");
+    doc.save("output/meals/" + city + "_meal" + ".pdf");
   });
 };
 
@@ -234,7 +250,6 @@ const createVeterinerPlacesPDF = async () => {
   const veterinerPlaces = getVeterinerPlaces(data);
 
   veterinerPlaces[0].value.options.forEach((option) => {
-    console.log(option);
     const doc = new jsPDF({
       orientation: "p",
       unit: "px",
@@ -242,26 +257,78 @@ const createVeterinerPlacesPDF = async () => {
     });
     registerFont(doc);
     writeVeterinerPlacesPDF(doc, option.value.data);
-    doc.save("output/" + option.name_tr + "_veteriner" + ".pdf");
+    doc.save("output/veteriner/" + option.name_tr + "_veteriner" + ".pdf");
   });
 };
 
-//fetches data
+const createHelpCentersPDF = async () => {
+  const data = await fetchData();
+
+  const helpCenters = getHelpCenters(data);
+
+  helpCenters[0].value.options.forEach((option) => {
+    const doc = new jsPDF({
+      orientation: "p",
+      unit: "px",
+      format: "a4",
+    });
+    registerFont(doc);
+    writeHelpCentersPDF(doc, option.value.data);
+    doc.save(
+      "output/help_centers/" + option.name_tr + "_help_centers" + ".pdf"
+    );
+  });
+};
+
+const createBloodDonationPDF = async () => {
+  const data = await fetchData();
+
+  const bloodDonation = getBloodDonations(data);
+
+  bloodDonation[0].value.options.forEach((option) => {
+    const doc = new jsPDF({
+      orientation: "p",
+      unit: "px",
+      format: "a4",
+    });
+    registerFont(doc);
+    writeBloodDonationsPDF(doc, option.value_tr.data);
+    doc.save(
+      "output/blood_donation/" + option.name_tr + "_blood_donation" + ".pdf"
+    );
+  });
+};
+
+const createStemCellsPDF = async () => {
+  const data = await fetchData();
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  writeStemCellsPDF(doc, data);
+  doc.save("output/" + "stem_cells" + ".pdf");
+};
+
+const createMainPagePDF = async () => {
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "px",
+    format: "a4",
+  });
+
+  registerFont(doc);
+  createCoverPage(doc, "Afet Bilgi Bilgilendirme Servisi");
+  doc.save("output/" + "first_page" + ".pdf");
+};
+
 const fetchData = async () => {
   const dataAll = await axios.get(DATA_URL);
   const data = dataAll.data;
   return data;
 };
-
-// createAllInOnePDF();
-// createLeafTemporaryAccomodationPDF();
-// createLeafSafeGatheringPlacesPDF();
-// createLeafMealPDF();
-// createPhoneNumbersPDF();
-// createWebSitesPDF();
-// createArticlePDF();
-// createVpnPDF();
-createVeterinerPlacesPDF();
 
 module.exports = {
   createAllInOnePDF,
@@ -269,4 +336,12 @@ module.exports = {
   createLeafSafeGatheringPlacesPDF,
   createLeafMealPDF,
   createPhoneNumbersPDF,
+  createWebSitesPDF,
+  createArticlePDF,
+  createVpnPDF,
+  createVeterinerPlacesPDF,
+  createHelpCentersPDF,
+  createBloodDonationPDF,
+  createStemCellsPDF,
+  createMainPagePDF,
 };
