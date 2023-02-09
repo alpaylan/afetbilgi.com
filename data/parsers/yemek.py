@@ -1,6 +1,6 @@
+import json
 
 import pandas as pd
-import json
 from utils.functions import turkish_title
 
 
@@ -19,11 +19,44 @@ def main():
 
     df = pd.read_csv(url, encoding="utf-8")
 
-    unique_cities = df['İl'].unique()
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "Yemek%20Da%C4%9F%C4%B1t%C4%B1m%20Alanlar%C4%B1"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    # dfj = pd.read_csv(url, encoding=("utf-8"))
+
+    # dfj = dfj.drop(columns=["Ad", "Soyad", "Telefon Numarası", "Submission ID"])
+
+    # rename = {
+    #     "Submission Date": "date",
+    #     "Lütfen Şehir Seçiniz": "İl",
+    #     "Lütfen İlçenizi Yazınız": "İlçe",
+    #     "Konum Bilgisini Yazınız": "Lokasyon",
+    #     "Konuma Ait Google Maps Linki Ekleyiniz": "Google Maps Linki",
+    #     "Yemek Dağıtımına Yönelik Bilgi Linki veya Anons Bilgisi Ekleyiniz": "Anons Linki",
+    #     "Yemek Dağıtım Merkezine Ait Telefon Numarasını Ekleyiniz ": "Telefon",
+    # }
+
+    # dfj = dfj.rename(columns=rename)
+
+    # dfj[["Teyit Tarih", "Teyit Saati"]] = dfj["date"].str.split(" ", expand=True)
+
+    # dfj = dfj.drop(columns=["date"])
+
+    # df = pd.concat([df, dfj])
+
+    df["İl"] = df["İl"].apply(str.strip)
+    df["İl"] = df["İl"].apply(turkish_title)
+    df["İlçe"] = df["İlçe"].apply(str.strip)
+    df["İlçe"] = df["İlçe"].apply(turkish_title)
+
+    df.sort_values(["İl", "İlçe"])
+
+    unique_cities = df["İl"].unique()
     options_1 = []
     for city in unique_cities:
-        city_df = df[df['İl'] == city]
-        unique_ilce = city_df['İlçe'].unique()
+        city_df = df[df["İl"] == city]
+        unique_ilce = city_df["İlçe"].unique()
         ilce_dict = {}
         for ilce in unique_ilce:
             ilce_dict[ilce] = []
@@ -31,16 +64,16 @@ def main():
         for _, row in city_df.iterrows():
             ilce_dict[row[1]].append(
                 {
-                    "name": row[2] if not pd.isna(row[2]) else None,
-                    "maps_url": row[3] if not pd.isna(row[3]) else None,
-                    "url": row[4] if not pd.isna(row[4]) else None,
-                    "phone_number": row[5] if not pd.isna(row[5]) else None,
-                    "updated_at_date": row[6] if not pd.isna(row[6]) else None,
-                    "updated_at_time": row[7] if not pd.isna(row[7]) else None,
+                    "name": row["Lokasyon"] if not pd.isna(row["Lokasyon"]) else None,
+                    "maps_url": row["Google Maps Linki"] if not pd.isna(row["Google Maps Linki"]) else None,
+                    "url": row["Anons Linki"] if not pd.isna(row["Anons Linki"]) else None,
+                    "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
+                    "updated_at_date": row["Teyit Tarih"] if not pd.isna(row["Teyit Tarih"]) else None,
+                    "updated_at_time": row["Teyit Saati"] if not pd.isna(row["Teyit Saati"]) else None,
                 }
             )
         option_2 = []
-        for k,v in ilce_dict.items():
+        for k, v in ilce_dict.items():
             option_2.append(
                 {
                     "name": turkish_title(k.strip()),
@@ -50,10 +83,9 @@ def main():
                             "dataType": "food-items",
                             "city": turkish_title(city.strip()),
                             "county": turkish_title(k.strip()),
-                            "items": v
-                        }
-                    }
-
+                            "items": v,
+                        },
+                    },
                 }
             )
 
@@ -66,14 +98,14 @@ def main():
                     "text_en": f"Select the county you want to get information about food opportunities in {city_translation[turkish_title(city.strip())]['en']}",
                     "text_ar": f"حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في {city_translation[turkish_title(city.strip())]['ar']}",
                     "text_ku": f"Bilindînên yemekên {city_translation[turkish_title(city.strip())]['ku']} li ser şehirê xwe hilbijêrin",
-                    "options": option_2
-                }
+                    "options": option_2,
+                },
             }
         )
 
     data = {
         "type": "question",
-         "autocompleteHint_tr": "Şehir",
+        "autocompleteHint_tr": "Şehir",
         "autocompleteHint_en": "City",
         "autocompleteHint_ar": "مدينة",
         "autocompleteHint_ku": "Bajar",
@@ -82,6 +114,7 @@ def main():
         "text_ku": "Ji kerema xwe bajarê ku hûn dixwazin agahdariyên li ser derfetên xwarinê bigirin hilbijêrin.",
         "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
         "options": options_1,
+
         'externalData' : {
             "text_tr": 'Yemek olanakları hakkında daha fazla bilgi',
             "text_en": 'More information about food options',
@@ -98,10 +131,12 @@ def main():
                 }
             ],
         }
+
     }
 
     with open(out_path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()

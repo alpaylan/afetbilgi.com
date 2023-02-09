@@ -19,7 +19,36 @@ if __name__ == "__main__":
 
     df = pd.read_csv(url, encoding="utf-8")
 
-    df.sort_values(by='Şehir')
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "Veterinerler"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    # df2 = pd.read_csv(url, encoding="utf-8")
+
+    # drop_columns = ["Submission Date", "Ad", "Soyad", "Telefon Numarası"]
+    # df2 = df2.drop(columns=drop_columns)
+
+    # rename = {
+    #     "Lütfen Şehir Seçiniz": "Şehir",
+    #     "Veteriner İsmini Yazınız": "İsimtmp",
+    #     "Veterinere Ait Telefon Numarasını Giriniz": "Telefon",
+    #     "Veterinerin Adresini Yazınız": "Konum",
+    #     "Veterinere Ait Google Maps Linkini Ekleyiniz": "Konum Linki",
+    #     "Lütfen İlçenizi Giriniz": "İlçe"
+    # }
+
+    # df2 = df2.rename(columns=rename)
+
+    # df2["İsim"] = df2["İsimtmp"].astype(str) + " - " + df2["İlçe"].astype(str)
+
+    # df2 = df2.drop(columns=["İsimtmp", "İlçe"])
+
+    # df = pd.concat([df, df2])
+
+    df["Şehir"] = df["Şehir"].apply(str.strip)
+    df["Şehir"] = df["Şehir"].apply(turkish_title)
+
+    df = df.sort_values(by='Şehir')
 
     options = []
     vets = []
@@ -28,7 +57,7 @@ if __name__ == "__main__":
 
     for _, row in df.iterrows():
         
-        tmp_sehir = turkish_title(row[0].strip())
+        tmp_sehir = turkish_title(row["Şehir"].strip())
 
         if tmp_sehir != city_name:
             if city_name is None:
@@ -55,10 +84,10 @@ if __name__ == "__main__":
 
         vets.append(
             {
-                "name": row[1] if not pd.isna(row[1])  else None,
-                "phone_number": row[2] if not pd.isna(row[2]) else None,
-                "address": row[3] if not pd.isna(row[3]) else None,
-                "maps_link": row[4] if not pd.isna(row[4]) else None,
+                "name": row["İsim"] if not pd.isna(row["İsim"])  else None,
+                "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
+                "address": row["Konum"] if not pd.isna(row["Konum"]) else None,
+                "maps_link": row["Konum Linki"] if not pd.isna(row["Konum Linki"]) else None,
             }
         )
         

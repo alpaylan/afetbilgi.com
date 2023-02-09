@@ -5,6 +5,11 @@
   "page.about.body.1": "afetbilgi.com is a website prepared by a group of METU students and graduates to verify important information in the fight against the 6 February 2023 Pazarcık Earthquake and to deliver it to both disaster victims and those who want to help.",
   "page.about.body.2": "The basic principles of the website, which is based on a completely human-made database, are accuracy, speed, and simplicity. When contacting us, we ask you to provide only confirmed information and to work with us to prevent the spread of false information.",
 
+  "category.victim.name": "لضحايا الزلزال",
+  "category.helper.name": "لمن يريد المساعدة",
+  "category.resources.name": "الموارد المهمة",
+  "category.other.name": "آخر",
+
   "data.city_accommodation.title": "{{city}} أماكن للإقامة في مدينة / أماكن للإقامة",
   "data.city_accommodation.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك.",
   "data.city_accommodation.explanation": "وأخبر  بأنه سيوفر أماكن إقامة لضحايا الزلزال.",
@@ -35,6 +40,7 @@
   "data.vpn.subtitle": "تتيح لك الشّبكة الافْتراضيّة الخَاصَّة الوصول إلى  المواقع الإلكترونية المحجوبة",
   "data.container_pharmacy": "صيدليات الحاويات",
 
+  "notFound": "لم يتم العثور على الصفحة",
   "button.back": "السابق",
   "button.language": "تغيير",
   "button.google_maps": "رابط خرائط جوجل",

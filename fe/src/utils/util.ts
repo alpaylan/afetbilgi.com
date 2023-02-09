@@ -12,6 +12,7 @@ export const parseStringToJson = (objAsString: string) => {
       return obj;
     }
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
   }
 

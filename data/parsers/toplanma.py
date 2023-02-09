@@ -18,7 +18,33 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
-    df = df.sort_values(by=['Şehirler'])
+
+    # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
+    # sheet_name = "G%C3%BCvenli%20Toplanma%20Alanlar%C4%B1"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    # df2 = pd.read_csv(url, encoding="utf-8")
+
+    # drop_columns = ["Submission Date", "Ad", "Soyad", "Telefon Numarası"]
+
+    # df2 = df2.drop(columns=drop_columns)
+
+    # rename = {
+    #     "Lütfen Şehir Seçiniz": "Şehirler",
+    #     "Lütfen İlçenizi Giriniz": "İlçe",
+    #     "Konum Bilgisini Yazınız": "Konumtmp",
+    #     "Konuma Ait Bilginin Kaynağını Yazınız": "Kaynak",
+    #     "Konuma Ait Google Maps Linkini Ekleyiniz": "Maps Linki",
+    # }
+
+    # df2 = df2.rename(columns=rename)
+
+    # df2["Konum"] = df2["Konumtmp"].astype(str) + " - " + df2["İlçe"].astype(str)
+    # df2 = df2.drop(columns=["Konumtmp", "İlçe"])
+
+    # df = pd.concat([df, df2])
+    # df = df.sort_values(by=['Şehirler'])
+
 
     options = []
     items = []
@@ -40,6 +66,7 @@ def main():
                             "type": "data",
                             "data": {
                                 "dataType": "new-gathering-list",
+                                "city": city_name,
                                 "items": items
                             }
                         }
@@ -66,6 +93,7 @@ def main():
                     "type": "data",
                     "data": {
                         "dataType": "new-gathering-list",
+                        "city": city_name,
                         "items": items
                     }
                 }

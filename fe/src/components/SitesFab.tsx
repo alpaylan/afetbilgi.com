@@ -77,7 +77,7 @@ export default function SitesIcon (){
           onClose={handlePopoverClose}
         >
           <Typography sx={{ padding: "10px", width: "450px" }}>
-              Depremzedeleri aramak ve yardım etmek için kullandığımız site.
+              Depremzedeleri aramak ve yardım etmek için kullanabileceğiniz site.
           </Typography>
         </Popover>
     </Box>
@@ -118,7 +118,7 @@ export default function SitesIcon (){
         onClose={handlePopoverClose}
         >
         <Typography sx={{ padding: "10px", width: "450px" }}>
-            Yardım bildirimlerinin haritada gösterilmesi için kullandığımız site.
+            Yardım bildirimlerinin haritada gösterilmesi için kullanabileceğiniz site.
         </Typography>
       </Popover>
     </Box>
@@ -158,7 +158,7 @@ export default function SitesIcon (){
         onClose={handlePopoverClose}
         >
         <Typography sx={{ padding: "10px", width: "450px" }}>
-            Depremzedelere erzak yardımı için kullandığımız site.
+            Depremzedelere erzak yardımı için kullanabileceğiniz site.
         </Typography>
       </Popover>
     </Box>
