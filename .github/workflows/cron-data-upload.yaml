@@ -54,7 +54,7 @@ jobs:
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
-          cp ../dataset/donation_links.json ../latest_datasets/donation_links.json
+          cp ../datasets/donation_links.json ../latest_datasets/donation_links.json
 
       - name: Merge datasets
         run: |
