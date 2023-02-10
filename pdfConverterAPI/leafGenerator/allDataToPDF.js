@@ -34,8 +34,6 @@ const { writeStemCellsPDF } = require("./leafs/stemCells");
 const { writePharmacyData } = require("./leafs/pharmacy");
 
 const DATA_URL = "https://cdn.afetbilgi.com/latest.json";
-// TODO: BUNNU SIL
-// const DATA_URL = "/data.json";
 
 const CITYS = [
   "Adana",
