@@ -2,12 +2,15 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, D
 import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
-import { CircleMarker, MapContainer, Popup, TileLayer, useMapEvents } from 'react-leaflet';
+import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { MarkerData, useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
 import CustomMarker from './CustomMarker';
 
 import "./Map.css"
+
+const INITIAL_ZOOM = 15;
+const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 5, 8);
 
 export enum DataType {
   CITY_ACCOMMODATION = 'map-city-accommodation',
@@ -47,10 +50,10 @@ export const dataTypeToLabel: { [k: string]: any } =
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
-  const [radius, setRadius] = React.useState(15 ** 3 / 100);
+  const [radius, setRadius] = React.useState(getZoom(useMap().getZoom()));
   const mapEvents = useMapEvents({
     zoomend: () => {
-        setRadius(mapEvents.getZoom() ** 3 / 100);
+        setRadius(getZoom(mapEvents.getZoom()));
     },
   });
 
@@ -125,7 +128,7 @@ export default function Map() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={centerLocation} zoom={15} maxZoom={18} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={centerLocation} zoom={INITIAL_ZOOM} maxZoom={18} minZoom={6} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
           url={`https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Ag%7C`}
         />
