@@ -16,17 +16,18 @@ export const filterMultipleTypes = (data: MarkerData["map_data"], types: string[
     return data.filter (item => isOneOfTypes(item, types))
 }
 
-const isOneOfTypes = (data : MarkerData["map_data"][0], types: string[]) => {
-    for(let i = 0; i < types.length; i+=1) {
-        if( data.type === types[i] ) {
-            return true;
-        }
+const isOneOfTypes = (item : MarkerData["map_data"][any], types: string[]) => {
+    for (let i = 0; i < types.length; i += 1) {
+        if(item?.type === types[i]) {
+            return true
+        };
     }
     return false; 
-
 }
 
-
+const isType = (item : MarkerData["map_data"][any], type: string) => {
+    return item?.type === type;
+}
 
 export const searchText = ( typeData: MarkerData["map_data"][any], searchString: string, searchAttributes: string[] ) => {
 
