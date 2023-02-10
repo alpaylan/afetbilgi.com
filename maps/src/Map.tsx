@@ -1,9 +1,12 @@
-import { Box, Checkbox, CircularProgress, Divider, FormControlLabel, FormGroup, IconButton, InputBase } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
+import { CheckCircleOutline, CircleOutlined, ExpandCircleDown } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import SearchIcon from '@mui/icons-material/Search';
 import { useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
+
+import "./Map.css"
 
 export enum DataType {
   CITY_ACCOMMODATION = 'map-city-accommodation',
@@ -150,30 +153,40 @@ export default function Map() {
         </Box>
 
         <Box sx={{
-          backgroundColor: 'white',
           mt: 2,
           p: 1,
         }}>
-          <FormGroup>
-            {Object.values(DataType)
-              .map((type) => (
-                <FormControlLabel
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandCircleDown />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Filtrele</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {Object.values(DataType)
+                .map((type) => (
+                  <div
+                  className='category-checkbox'
+                  style={{
+                    backgroundColor: dataTypes.includes(type) ? dataTypeToColor[type] : `${dataTypeToColor[type]}a`,
+                  }}
                   key={`checkbox-${type}`}
-                  label={dataTypeToLabel[type].name_tr}
-                  control={
-                    <Checkbox onChange={(_, checked) => {
-                      if (checked) {
-                        setDataTypes([...dataTypes, type]);
-                      } else {
-                        setDataTypes(dataTypes.filter((t) => t !== type));
-                      }
-                    }}
-                  sx={{ my: 0, py: 0 }} size="small" defaultChecked />
-                  }
-                />
-              ))
-            }
-          </FormGroup>
+                  onClick={() => {
+                    setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
+                  }}
+                  >
+                    {dataTypes.includes(type) 
+                      ? <CheckCircleOutline style={{ color: 'white' }} />
+                      : <CircleOutlined style={{ color: 'white' }} />}
+                    <Typography variant="body1" component="span" sx={{ ml: 1 }}>
+                      {dataTypeToLabel[type].name_tr}
+                    </Typography>
+                </div>
+              ))}
+            </AccordionDetails>
+          </Accordion>
         </Box>
       </Box>
     </Box>
