@@ -34,7 +34,7 @@ async def main():
 
     res =  {
         "update_time": datetime.now().isoformat(),
-        "map-data": data
+        "map_data": data
     }
 
     with open(out_path, "w+", encoding="utf-8") as f:
