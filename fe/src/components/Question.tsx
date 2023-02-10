@@ -130,7 +130,7 @@ export default function Question({ paths }: { paths: string[] }) {
               {buttonsByCategories[category]}
             </Box>
             {dividerPos.includes(i) && (
-              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
+              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, borderRightWidth: 2 }} />
             )}
           </>
         ));
