@@ -95,14 +95,16 @@ export default function Map() {
           item.data.map((subitem, j) => (
             <CircleMarker
               key={`marker-${i}-${j}`}
-              center={[subitem.latitude, subitem.longitude]} weight={1}
-              color="black"
+              center={[subitem.latitude, subitem.longitude]}
+              weight={2}
+              color="white"
               fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
             >
               <Popup>
-                {subitem.name && <Box>{subitem.name} - </Box>}
-                <Box sx={{ my: 1 }}>{dataTypeToLabel[item.type].name_tr}</Box>
-                <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>
+                {subitem.name && <Box><b>{subitem.name} - </b></Box>}
+                <Box sx={{ my: 1 }}><b>{dataTypeToLabel[item.type].name_tr}</b></Box>
+                {subitem.city && <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>}
+                {subitem.phone_number && <Box sx={{ my: 1 }}>Telefon: {subitem.phone_number}</Box>}
                 <Box sx={{ my: 1 }}>
                   <Button
                     variant='outlined'
