@@ -2,6 +2,12 @@ from urllib.parse import urlparse
 
 from core import MDTable
 
+def phone_or_str(x):
+    if x == "None" or x is None or x == "" or x == "-":
+        return "-"
+    
+    return f"[{x}](tel:{x})"
+
 def link_or_str(x, label):
     p = urlparse(x)
 
@@ -75,6 +81,8 @@ def parse_food(data):
         if rr[2] != "-":
             rr[2] = link_or_str(rr[2], "Kaynak")
 
+        rr[3] = phone_or_str(rr[3])
+
         rows.append(rr)
 
     return MDTable(["Yer", "Adres", "Kaynak", "Telefon", "Güncelleme Tarihi", "Güncelleme Saati"], rows)
@@ -105,6 +113,8 @@ def parse_phones(data):
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
                 raise ValueError("None value in phone number list")
+
+        rr[1] = phone_or_str(rr[1])
 
         rows.append(rr)
 
@@ -139,6 +149,7 @@ def parse_vets(data):
             if rr[i] == "None" or rr[i] is None:
                 rr[i] = "-"
 
+        rr[1] = phone_or_str(rr[1])
         rr[3] = link_or_str(rr[3], "Google Maps")
 
         rows.append(rr)
@@ -156,6 +167,7 @@ def parse_help_item_list(data):
                 rr[i] = "-"
 
         rr[2] = link_or_str(rr[2], "Kaynak/Harita")
+        rr[3] = phone_or_str(rr[3])
 
         rows.append(rr)
 
@@ -172,6 +184,7 @@ def parse_stemcell(data):
                 rr[i] = "-"
 
         rr[2] = link_or_str(rr[2], "Harita")
+        rr[3] = phone_or_str(rr[3])
 
         rows.append(rr)
 
