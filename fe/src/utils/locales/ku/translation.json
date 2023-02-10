@@ -60,6 +60,10 @@
   "data.health_services.detail_mix": "'Hûn dikarin li vê numareyê bigerin an jî ",
   "data.health_services.detail_website": "Vê malperê",
 
+  "validation_status": "Rewşa verastkirinê",
+  "pdf_notice": "",
+  "validation_time": "",
+
   "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",
   "button.language": "Ziman biguherîne",

@@ -59,73 +59,74 @@ def process_rows_list(r):
 
     return rows
 
-def parse_city_accom(data):
+def parse_city_accom(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
-        if rr[2] != "-":
-            rr[2] = "Doğrulanmış" if rr[2] == "True" else "Doğrulanmamış"
-        
+        print(rr)
+
         if rr[3] != "-":
-            rr[3] = link_or_str(rr[3], "Kaynak")
+            rr[3] = link_or_str(rr[3], t["source"])
         
         if rr[4] != "-":
-            rr[4] = link_or_str(rr[4], "Google Maps")
+            rr[4] = link_or_str(rr[4], t["button.google_maps"])
 
+        rr = rr[:2] + rr[3:]
+    
         rows.append(rr)
 
-    return MDTable(["Şehir", "Yer", "Doğrulanma Durumu", "Kaynak", "Adres", "Doğrulanma Tarihi"], rows)
+    return MDTable([t["city"], t["location"], t["source"], t["address"], t["data.transportation.validationDate"]], rows)
 
-def parse_gathering(data):
+def parse_gathering(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
         if rr[1] != "-":
-            rr[1] = link_or_str(rr[1], "Google Maps")
+            rr[1] = link_or_str(rr[1], t["button.google_maps"])
 
         if rr[2] != "-":
-            rr[2] = link_or_str(rr[2], "Kaynak")
+            rr[2] = link_or_str(rr[2], t["source"])
 
         rows.append(rr)
 
-    return MDTable(["Yer", "Harita", "Kaynak"], rows)
+    return MDTable([t["location"], t["map"], t["source"]], rows)
 
-def parse_food(data):
+def parse_food(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
         if rr[1] != "-":
-            rr[1] = link_or_str(rr[1], "Google Maps")
+            rr[1] = link_or_str(rr[1], t["button.google_maps"])
         
         if rr[2] != "-":
-            rr[2] = link_or_str(rr[2], "Kaynak")
+            rr[2] = link_or_str(rr[2], t["source"])
 
         rr[3] = phone_or_str(rr[3])
 
         rows.append(rr)
 
-    return MDTable(["Yer", "Adres", "Kaynak", "Telefon", "Güncelleme Tarihi", "Güncelleme Saati"], rows)
+    return MDTable([t["location"], t["address"], t["source"], t["telephone"], t["last_update"], "Güncelleme Saati"], rows)
 
-def parse_pharmacy(data):
+def parse_pharmacy(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
         if rr[3] != "-":
-            rr[3] = link_or_str(rr[3], "Google Maps")
+            rr[3] = link_or_str(rr[3], t["button.google_maps"])
 
         rows.append(rr)
 
-    return MDTable(["İl", "İlçe", "Adres", "Harita"], rows)
+    return MDTable([t["city"], t["district"], t["address"], t["map"]], rows)
 
-def parse_phones(data):
+def parse_phones(data, t):
     rows = []
 
     for r in data["phones"]:
@@ -135,9 +136,9 @@ def parse_phones(data):
 
         rows.append(rr)
 
-    return MDTable(["İsim", "Numara"], rows)
+    return MDTable([t["name"], t["telephone"]], rows)
 
-def parse_links(data):
+def parse_links(data, t):
     rows = []
 
     for r in data["usefulLinks"]:
@@ -149,48 +150,48 @@ def parse_links(data):
 
         rows.append(rr)
 
-    return MDTable(["İsim", "URL"], rows)
+    return MDTable([t["name"], t["website"]], rows)
 
-def parse_vets(data):
+def parse_vets(data, t):
     rows = []
 
     for r in data["vets"]:
         rr = process_rows(r)
 
         rr[1] = phone_or_str(rr[1])
-        rr[3] = link_or_str(rr[3], "Google Maps")
+        rr[3] = link_or_str(rr[3], t["button.google_maps"])
 
         rows.append(rr)
 
-    return MDTable(["Veteriner", "Telefon", "Adres", "Harita"], rows)
+    return MDTable([t["name"], t["telephone"], t["address"], t["map"]], rows)
 
-def parse_help_item_list(data):
+def parse_help_item_list(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
-        rr[2] = link_or_str(rr[2], "Kaynak/Harita")
+        rr[2] = link_or_str(rr[2], f"{t['source']}/{t['map']}")
         rr[3] = phone_or_str(rr[3])
 
         rows.append(rr)
 
-    return MDTable(["İl", "Lokasyon", "Link", "Telefon", "Notlar"], rows)
+    return MDTable([t["city"], t["location"], t["website"], t["telephone"], t["details"]], rows)
 
-def parse_stemcell(data):
+def parse_stemcell(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows(r)
 
-        rr[2] = link_or_str(rr[2], "Harita")
+        rr[2] = link_or_str(rr[2], t["map"])
         rr[3] = phone_or_str(rr[3])
 
         rows.append(rr)
 
-    return MDTable(["Bölge", "İl", "Adres/Harita", "Telefon"], rows)
+    return MDTable([t["region"], t["city"], f"{t['address']}/{t['map']}", t["telephone"]], rows)
 
-def parse_beneficial_articles(data):
+def parse_beneficial_articles(data, t):
     rows = []
 
     for r in data["articles"]:
@@ -201,20 +202,20 @@ def parse_beneficial_articles(data):
 
         rows.append(rr)
 
-    return MDTable(["Başlık", "Yazar", "Link", "Konu"], rows)
+    return MDTable([t["data.important_articles.article_title"], t["data.important_articles.article_author"], t["website"], t["details"]], rows)
 
-def parse_evacuation_points(data):
+def parse_evacuation_points(data, t):
     rows = []
 
     for r in data["items"]:
         rr = process_rows_list(r)
 
         if rr[3] != "-":
-            rr[3] = link_or_str(rr[3], "Google Maps")
+            rr[3] = link_or_str(rr[3], t["button.google_maps"])
 
         rows.append(rr)
 
-    return MDTable(["İl", "İlçe", "Yer", "Harita", "Adres", "İletişim", "Kaynak"], rows)
+    return MDTable([t["city"], t["district"], "Yer", t["map"], t["address"], t["telephone"], t["source"]], rows)
 
 data_type_parsers = {
     "city-accommodation": parse_city_accom,
