@@ -6,8 +6,9 @@ import { useQuery } from 'react-query';
 
 import { TreeNodeType } from './variables/TreeNode';
 
-const baseQuestionData = axios.get(`https://cdn.afetbilgi.com/latest.json?v=2.3`)
-  .then(res => res.data);
+const baseQuestionData = axios
+  .get(`https://cdn.afetbilgi.com/latest.json?v=2.3`)
+  .then((res) => res.data);
 
 export const useQuestionData = (paths: string[]) => {
   const { i18n } = useTranslation();
