@@ -54,6 +54,12 @@
   "data.transportation.validationDate": "تاريخ التحقق",
   "data.transportation.validityDate": "صلاحية",
   "data.transportation.validityDate.explanation": "صالح حتى {{date}}.",
+  "data.health_services.title": "في مدينة {{city}}  المستشفيات الميدانية",
+  "data.health_services.detail_main": " يمكنك الاتصال بنا للحصول على معلومات مفصلة. ",
+  "data.health_services.detail_call": "' يمكنك الاتصال بنا للحصول على معلومات مفصلة.",
+  "data.health_services.detail_inspect": "يمكنك المراجعة",
+  "data.health_services.detail_mix": "'يمكنك الاتصال برقم ",
+  "data.health_services.detail_website": "هذا المَوْقِع الإِلَكْتُرُونِيّ",
 
   "notFound": "لم يتم العثور على الصفحة",
   "button.back": "السابق",

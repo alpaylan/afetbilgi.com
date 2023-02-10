@@ -22,6 +22,7 @@ data_points = [
   { 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê', 'path': f'{basedir}/tahliye.json' },
   { 'name_ar': 'مساعدات النقل', 'name_tr': 'Ulaşım Yardımları', 'name_en': 'Transportation Aid', 'name_ku': 'Alîkariya Veguhestinê', 'path': f'{basedir}/ulasim.json' },
 
+  { 'name_tr': 'Sahra Hastaneleri', 'name_ar': 'مستشفيات الصحراء', 'name_en': 'Desert Hospitals', 'name_ku': 'Xanên Sahra', 'path': f'{basedir}/hastane.json' },
   # { 'name_tr': 'VPN', 'path': f'{basedir}/vpn.json' },
 #   STAGING
 #   { 'name': 'Kapalı Yollar', 'path': f'{basedir}/kapaliyollar.json' },

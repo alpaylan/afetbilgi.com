@@ -54,6 +54,12 @@
   "data.transportation.validationDate": "Doğrulanma Tarihi",
   "data.transportation.validityDate": "Geçerlilik",
   "data.transportation.validityDate.explanation": "{{date}} tarihine kadar geçerlidir.",
+  "data.health_services.title": "{{city}} Şehrinde Sahra Hastaneleri",
+  "data.health_services.detail_main": "Detaylı bilgi için ",
+  "data.health_services.detail_call": "'i arayabilirsiniz.",
+  "data.health_services.detail_inspect": "inceleyebilirsiniz",
+  "data.health_services.detail_mix": "'i arayabilirsiniz ya da ",
+  "data.health_services.detail_website": "bu web sitesini",
 
   "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",

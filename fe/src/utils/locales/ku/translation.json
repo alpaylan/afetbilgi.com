@@ -53,6 +53,12 @@
   "data.transportation.validationDate": "Dîroka Verastkirinê",
   "data.transportation.validityDate": "Maqûlî",
   "data.transportation.validityDate.explanation": "Heta {{date}} derbasdar e",
+  "data.health_services.title": "{{city}} Şehrinde Sahra Hastaneleri",
+  "data.health.detail_main": " Ji bo agahdariya berfireh  ",
+  "data.health.detail_call": "'karin li vê numareyê bigerin.",
+  "data.health.detail_inspect": "Hûn dikarin lêkolîn bikin  ",
+  "data.health.detail_mix": "'Hûn dikarin li vê numareyê bigerin an jî ",
+  "data.health.detail_website": "Vê malperê",
 
   "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",

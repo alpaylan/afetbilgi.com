@@ -16,6 +16,7 @@ import StemCellData from './data/StemCellData';
 import VetData from './data/VetData';
 import FoodDistributionData from './data/FoodDistributionData';
 import VpnData from './data/VpnData';
+import SahraData from './data/SahraData';
 import ContainerPharmacyData from './data/ContainerPharmacyData';
 import { DataType } from '../variables/TreeNode';
 import EvacuationData from './data/EvacuationData';
@@ -43,7 +44,8 @@ const pageMappings: Record<string, FC<{value: any}>> = {
   [DataType.CONTAINER_PHARMACY]: ContainerPharmacyData,
   [DataType.EVACUATION_POINTS]: EvacuationData,
   [DataType.DONATION_LINKS]: DonationLinksData,
-  [DataType.TRANSPORTATIONS]: TransportationsData
+  [DataType.TRANSPORTATIONS]: TransportationsData,
+  [DataType.HEALTHCARE_SERVICES]: SahraData,
 }
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
