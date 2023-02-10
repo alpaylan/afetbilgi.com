@@ -101,7 +101,8 @@ const App = () => {
           sx={{ m: 1 }}
           size='large'
           onClick={() => {
-            downloadPDF(location.pathname);
+            // downloadPDF(location.pathname);
+            downloadPDF()
           }}
         >
           {t('button.download')}

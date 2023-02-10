@@ -1,15 +1,10 @@
 name: PDF upload with Markdown (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/pdf-md
-
   workflow_dispatch:
 
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: "0 * * * *" # Run every hour
+    - cron: "*/30 * * * *"
 
 jobs:
   deploy:
