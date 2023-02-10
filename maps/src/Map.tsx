@@ -1,7 +1,7 @@
 import { Box, CircularProgress } from '@mui/material';
 import { LatLngTuple } from 'leaflet';
 import React, { useEffect, useMemo, useState } from 'react';
-import { Circle, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { CircleMarker, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useMarkers } from './hooks';
 
 export default function Map() {
@@ -34,7 +34,9 @@ export default function Map() {
       />
 
       {selfLocation && <>
-        <Circle center={selfLocation} weight={1} color="blue" fillColor="blue" fillOpacity={1} radius={100}></Circle>
+        <CircleMarker center={selfLocation} weight={1} color="blue" fillColor="blue" fillOpacity={1} radius={8}>
+          <Popup>Sizin Konumunuz</Popup>
+        </CircleMarker>
       </>}
 
       {mapData.map((item, i) => (
