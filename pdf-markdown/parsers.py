@@ -14,6 +14,9 @@ def phone_or_str(x):
 def link_or_str(x, label):
     p = urlparse(x)
 
+    if "Ücretsiz Ekmek" in x:
+        print("\n\nDEBUG: ", x, p, "\n")
+
     if p.scheme == "" or p.netloc == "":
         return x
     
