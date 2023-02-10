@@ -13,9 +13,11 @@ import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
+
+// import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
-
+import { downloadPDF } from './utils/downloadPDF';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -55,16 +57,16 @@ const App = () => {
   return (
     <Box>
       <Box sx={{
-          display: isMinWidth ? "flex" : "none",
-          background: "rgba(220, 20, 60, 0.5)",
-          padding: "10px",
-          borderRadius: "10px",
-          zIndex: 500,
-          width: "fit-content",
-          position: "absolute",
-          ml: 2,
-        }}
-        >
+        display: isMinWidth ? "flex" : "none",
+        background: "rgba(220, 20, 60, 0.5)",
+        padding: "10px",
+        borderRadius: "10px",
+        zIndex: 500,
+        width: "fit-content",
+        position: "absolute",
+        ml: 2,
+      }}
+      >
         <SitesFab />
       </Box>
       <Waiting open={isLoading} />
@@ -95,7 +97,15 @@ const App = () => {
             </Button>
           </>
         )}
-
+        <Button
+          sx={{ m: 1 }}
+          size='large'
+          onClick={() => {
+            downloadPDF(location.pathname);
+          }}
+        >
+          {t('button.download')}
+        </Button>
         <Select
           id='language-options-multiselect'
           size='small'
