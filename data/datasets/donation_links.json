@@ -1,0 +1,12 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "donation-links",
+        "items": [
+            {
+                "name": "AHBAP Resmi Bağış Sayfası",
+                "url": "https://ahbap.org/bagisci-ol"
+            }
+        ]
+    }
+}

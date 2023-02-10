@@ -194,3 +194,10 @@ export interface EvacuationDataNode extends DataNode {
     validator: string;
   }[];
 }
+
+export interface DonationLinksDataNode extends DataNode {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}

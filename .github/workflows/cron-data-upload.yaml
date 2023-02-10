@@ -2,6 +2,9 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - yigit/add-donations-page
 
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -51,6 +54,7 @@ jobs:
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
+          cp ../dataset/donation_links.json ../latest_datasets/donation_links.json
 
       - name: Merge datasets
         run: |
@@ -58,4 +62,4 @@ jobs:
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/yigit
