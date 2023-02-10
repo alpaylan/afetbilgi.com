@@ -18,6 +18,7 @@ import FoodDistributionData from './data/FoodDistributionData';
 import VpnData from './data/VpnData';
 import ContainerPharmacyData from './data/ContainerPharmacyData';
 import { DataType } from '../variables/TreeNode';
+import EvacuationData from './data/EvacuationData';
 
 const pageMappings: Record<string, FC<{value: any}>> = {
   [DataType.BANK_ACCOUNT_DONATION]: BankData,
@@ -38,6 +39,7 @@ const pageMappings: Record<string, FC<{value: any}>> = {
   [DataType.FOOD_ITEMS]: FoodDistributionData,
   [DataType.VPN]: VpnData,
   [DataType.CONTAINER_PHARMACY]: ContainerPharmacyData,
+  [DataType.EVACUATION_POINTS]: EvacuationData,
 }
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {

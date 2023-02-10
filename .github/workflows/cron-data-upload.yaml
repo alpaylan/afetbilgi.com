@@ -2,9 +2,6 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
-  push:
-    branch:
-      - ayberk/feature
 
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -61,4 +58,4 @@ jobs:
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/ayberk
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
