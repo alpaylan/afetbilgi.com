@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -100,8 +100,28 @@ export default function Map() {
               fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
             >
               <Popup>
-                <div>{subitem.name}</div>
-                {subitem.url && <div><a href={subitem.url} target="_blank">{subitem.url}</a></div>}
+                {subitem.name && <Box>{subitem.name} - </Box>}
+                <Box sx={{ my: 1 }}>{dataTypeToLabel[item.type].name_tr}</Box>
+                <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>
+                <Box sx={{ my: 1 }}>
+                  <Button
+                    variant='outlined'
+                    href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
+                  >
+                    Haritada Göster
+                  </Button>
+                </Box>
+
+                {subitem.url && (
+                  <Box sx={{ my: 1 }}>
+                    <Button
+                      variant='outlined'
+                      href={subitem.url}
+                      >
+                      Kaynak
+                    </Button>
+                  </Box>
+                )}
               </Popup>
             </CircleMarker>
           )).flat()
@@ -167,22 +187,22 @@ export default function Map() {
                 {Object.values(DataType)
                   .map((type) => (
                     <div
-                    className='category-checkbox'
-                    style={{
-                      backgroundColor: dataTypes.includes(type) ? dataTypeToColor[type] : `${dataTypeToColor[type]}a`,
-                    }}
-                    key={`checkbox-${type}`}
-                    onClick={() => {
-                      setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
-                    }}
-                    >
-                      {dataTypes.includes(type) 
-                        ? <CheckCircleOutline style={{ color: 'white' }} />
-                        : <CircleOutlined style={{ color: 'white' }} />}
-                      <Typography variant="body1" component="span" sx={{ ml: 1 }}>
-                        {dataTypeToLabel[type].name_tr}
-                      </Typography>
-                  </div>
+                      className='category-checkbox'
+                      style={{
+                        backgroundColor: dataTypes.includes(type) ? dataTypeToColor[type] : `${dataTypeToColor[type]}a`,
+                      }}
+                      key={`checkbox-${type}`}
+                      onClick={() => {
+                        setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
+                      }}
+                      >
+                        {dataTypes.includes(type)
+                          ? <CheckCircleOutline style={{ color: 'white' }} />
+                          : <CircleOutlined style={{ color: 'white' }} />}
+                        <Typography variant="body1" component="span" sx={{ ml: 1 }}>
+                          {dataTypeToLabel[type].name_tr}
+                        </Typography>
+                    </div>
                 ))}
               </Stack>
             </AccordionDetails>

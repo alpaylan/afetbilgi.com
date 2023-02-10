@@ -10,6 +10,10 @@ export interface MarkerData {
       url?: string;
       latitude: number;
       longitude: number;
+      maps_url?: string;
+      phone_number?: string;
+      city?: string;
+      county?: string;
     }[];
   }[];
 }
