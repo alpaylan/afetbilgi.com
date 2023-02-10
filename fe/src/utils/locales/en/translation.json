@@ -14,6 +14,7 @@
   "category.victim.name": "For Earthquake Victims",
   "category.helper.name": "To Help",
   "category.resources.name": "Important Resources",
+  "category.health.name": "Health Services",
   "category.other.name": "Other",
 
   "data.city_accommodation.title": "Places to stay in {{city}}",

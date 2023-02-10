@@ -5,6 +5,7 @@ import {
   Divider,
   TextField,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -18,6 +19,8 @@ import JSX = jsx.JSX;
 import { OptionNode, QuestionNode } from '../interfaces/TreeNode';
 import { getCategoryOfTreeNode } from '../utils/category';
 
+
+
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
 
@@ -27,6 +30,7 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint;
 
 export default function Question({ paths }: { paths: string[] }) {
+  const isMinWidth = useMediaQuery('(max-width:1112px)');
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
@@ -93,6 +97,7 @@ export default function Question({ paths }: { paths: string[] }) {
         [key in Category as string]: JSX.Element[];
       } = {
         [Category.VICTIM]: [],
+        [Category.HEALTH]: [],
         [Category.HELPER]: [],
         [Category.RESOURCES]: [],
         [Category.OTHER]: [],
@@ -103,6 +108,8 @@ export default function Question({ paths }: { paths: string[] }) {
           renderOptionButton(option),
         );
       });
+
+      const dividerPos = isMinWidth ? [0,2] : [0,1];
 
       return Object.keys(buttonsByCategories)
         .filter((category) => buttonsByCategories[category].length > 0)
@@ -122,7 +129,7 @@ export default function Question({ paths }: { paths: string[] }) {
               </Typography>
               {buttonsByCategories[category]}
             </Box>
-            {i < 2 && (
+            {dividerPos.includes(i) && (
               <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
             )}
           </>
