@@ -30,7 +30,7 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint;
 
 export default function Question({ paths }: { paths: string[] }) {
-  const isMinWidth = useMediaQuery('(max-width:1112px)');
+  const isMinWidth = useMediaQuery('(max-width:1078px)');
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
