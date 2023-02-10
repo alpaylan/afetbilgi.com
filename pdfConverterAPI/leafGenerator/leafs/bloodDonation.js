@@ -60,14 +60,15 @@ const writeBloodDonationsPDF = (doc, data) => {
     }
 
     doc.setFontSize(textFontSize);
-    doc.text(
-      "\u2022 " + `${element.name}` + " - " + element.phone_number,
-      x,
-      y
-    );
+    doc.text("\u2022 " + `${element.name}`, x, y);
     y += yRange;
 
     doc.setFontSize(smallTextSize);
+
+    if (element.phone_number) {
+      doc.text("Telefon: " + element.phone_number, x, y);
+      y += yRange;
+    }
 
     if (element.head) {
       doc.text("Sorumlu: " + element.head, x, y);

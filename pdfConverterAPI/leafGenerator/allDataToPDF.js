@@ -164,8 +164,9 @@ const createLeafMealPDF = async () => {
   const data = await fetchData();
 
   const mealData = getMealData(data);
-  const path = `../outputs/${mealData.name_tr ? mealData.name_tr : mealData.name
-    }/`;
+  const path = `../outputs/${
+    mealData.name_tr ? mealData.name_tr : mealData.name
+  }/`;
   fs.mkdirSync(path, { recursive: true });
 
   mealData.value.options.forEach((option) => {
@@ -178,7 +179,7 @@ const createVeterinerPlacesPDF = async () => {
 
   const veterinerPlaces = getVeterinerPlaces(data);
 
-  const path = `../outputs/${veterinerPlaces[0].name}/`;
+  const path = `../outputs/${veterinerPlaces[0].name_tr}/`;
   fs.mkdirSync(path, { recursive: true });
 
   veterinerPlaces[0].value.options.forEach((option) => {
