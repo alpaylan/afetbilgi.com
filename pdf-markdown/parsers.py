@@ -65,8 +65,9 @@ def parse_city_accom(data, t):
     for r in data["items"]:
         rr = process_rows(r)
 
-        if rr[2] != "-":
-            rr[2] = "✅" if rr[2] == "True" else "❌"
+        print(rr)
+
+        rr = rr[:2] + rr[3:]
         
         if rr[3] != "-":
             rr[3] = link_or_str(rr[3], t["source"])
@@ -76,7 +77,7 @@ def parse_city_accom(data, t):
 
         rows.append(rr)
 
-    return MDTable([t["city"], t["location"], t["validation_status"], t["source"], t["address"], t["data.transportation.validationDate"]], rows)
+    return MDTable([t["city"], t["location"], t["source"], t["address"], t["data.transportation.validationDate"]], rows)
 
 def parse_gathering(data, t):
     rows = []
