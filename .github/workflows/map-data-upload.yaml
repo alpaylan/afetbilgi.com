@@ -1,15 +1,11 @@
 name: Map data upload (cronjob)
 
 on:
-  push:
-    branches:
-      - map-data
-
   workflow_dispatch:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "*/15 * * * *" # Run every 15 minutes
+    - cron: "*/30 * * * *" # Run every 30 minutes
 
 jobs:
   deploy:
