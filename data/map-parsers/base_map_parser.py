@@ -11,7 +11,10 @@ class BaseMapParser:
                     uu = str(resp.url)
 
                     try:
-                        return uu.split("data=")[1].split("!3d")[1].split("!16")[0].split("!4d")
+                        lat, lon =  uu.split("data=")[1].split("!3d")[1].split("!16")[0].split("!4d")
+                        lat = re.search(r"(\d+.\d+)", lat).group(1)
+                        lon = re.search(r"(\d+.\d+)", lon).group(1)
+                        return lat, lon
                     except:
                         return None
             except Exception as e:
