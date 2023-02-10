@@ -16991,7 +16991,11 @@
                         },
                         {
                             "name": "Yardım Taleplerini İletmek Amacıyla Kurulmuş Website",
-                            "url": "deprem.io"
+                            "url": "https://deprem.io"
+                        },
+                        {
+                            "name": "Türkiye ve Yakın Çevresindeki Son Depremler (KRDAE-BDTİM)",
+                            "url": "http://www.koeri.boun.edu.tr/scripts/lst9.asp"
                         }
                     ]
                 }
