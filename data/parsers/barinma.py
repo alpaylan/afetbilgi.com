@@ -172,6 +172,14 @@ def main():
                 {
                     "name": "Depremzedelerin Kullanımına Açılan Tesis ve Salonlar",
                     "url": "https://gsb.gov.tr/haber-detay.html/968"
+                },
+                {
+                    "name": "Evim Evindir",
+                    "url": "https://www.evimevindir.com/"
+                },
+                {
+                    "name": "Nilüfer Belediyesi Evim Evin Olsun",
+                    "url": "https://www.nilufer.bel.tr/haber/evim-evin-olsun"
                 }
 
             ],
