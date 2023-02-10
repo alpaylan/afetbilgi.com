@@ -135,3 +135,5 @@ yarn-error.log*
 .render
 
 **/*.pdf
+
+__pycache__/
