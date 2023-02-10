@@ -122,7 +122,7 @@ export default function Question({ paths }: { paths: string[] }) {
               </Typography>
               {buttonsByCategories[category]}
             </Box>
-            {i < buttonsByCategories[category].length - 1 && (
+            {i < 2 && (
               <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
             )}
           </>
