@@ -28,7 +28,7 @@ def main():
         tahliye_noktalari.append(
             {
                 "city": turkish_title(row['Şehir'].strip()),
-                "country": turkish_title(row['İlçe'].strip()),
+                "county": turkish_title(row['İlçe'].strip()),
                 "name": row['İsim'],
                 "map_link": row['Maps Linki'],
                 "address": row['Adres'],
@@ -41,7 +41,7 @@ def main():
         "type": "data",
         "data": {
             "dataType": "tahliye-noktalari",
-            "tahliye_noktalari": tahliye_noktalari
+            "items": tahliye_noktalari
         }
     }
 
