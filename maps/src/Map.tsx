@@ -1,8 +1,11 @@
-import { Box, CircularProgress } from '@mui/material';
+import { Box, Checkbox, CircularProgress, Divider, FormControlLabel, FormGroup, IconButton, InputBase } from '@mui/material';
+// eslint-disable-next-line
 import { LatLngTuple } from 'leaflet';
 import React, { useEffect, useMemo, useState } from 'react';
-import { CircleMarker, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
+import SearchIcon from '@mui/icons-material/Search';
 import { useMarkers } from './hooks';
+import { filterMultipleTypes, searchText } from './helpers/filters';
 
 export enum DataType {
   CITY_ACCOMMODATION = 'map-city-accommodation',
@@ -33,9 +36,18 @@ export const dataTypeToColor: { [k: string]: string } =
 export default function Map() {
   const { data, isLoading } = useMarkers();
 
+  const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
   const [selfPosition, setSelfPosition] = useState<GeolocationPosition | null>(null);
   const selfLocation = useMemo(() => [selfPosition?.coords.latitude ?? 0, selfPosition?.coords.longitude ?? 0] as LatLngTuple, [selfPosition]);
   // const selfLocation: [number, number] = [37.57713668904397, 36.92937651365644];
+
+  const [searchString, setSearchString] = useState<string>('');
+  const filteredData = useMemo(() => {
+    const group1 = searchText(data?.map_data ?? [], searchString);
+    const group2 = filterMultipleTypes(group1, dataTypes);
+
+    return group2;
+  }, [data, searchString, dataTypes]);
 
   useEffect(() => {
     navigator.geolocation?.getCurrentPosition((position: GeolocationPosition) => {
@@ -52,33 +64,101 @@ export default function Map() {
   }
 
   return (
-    <MapContainer center={selfLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
-      <TileLayer
-       attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
-       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+    <Box sx={{ width: '100vw', height: '100vh' }}>
+      <MapContainer center={selfLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
+        <TileLayer
+        attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
 
-      {data.map_data.map((item, i) => (
-        item.data.map((subitem, j) => (
-          <CircleMarker key={`marker-${i}-${j}`}
-            center={[subitem.latitude, subitem.longitude]} weight={4} color="black"
-            fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
-          >
-            <Popup>
-              <div>{subitem.name}</div>
-              {subitem.description && <div>{subitem.description}</div>}
-              {subitem.phone && <div><a href={`tel:${subitem.phone}`} target="_blank">{subitem.phone}</a></div>}
-              {subitem.website && <div><a href={subitem.website} target="_blank">{subitem.website}</a></div>}
-            </Popup>
+        {filteredData.map((item, i) => (
+          item.data.map((subitem, j) => (
+            <CircleMarker key={`marker-${i}-${j}`}
+              center={[subitem.latitude, subitem.longitude]} weight={4} color="black"
+              fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
+            >
+              <Popup>
+                <div>{subitem.name}</div>
+                {subitem.description && <div>{subitem.description}</div>}
+                {subitem.phone && <div><a href={`tel:${subitem.phone}`} target="_blank">{subitem.phone}</a></div>}
+                {subitem.website && <div><a href={subitem.website} target="_blank">{subitem.website}</a></div>}
+              </Popup>
+            </CircleMarker>
+          )).flat()
+        ))}
+
+        {selfLocation && <>
+          <CircleMarker className="blink" center={selfLocation} weight={4} color="white" fillColor="blue" fillOpacity={1} radius={10}>
+            <Popup>Sizin Konumunuz</Popup>
           </CircleMarker>
-        )).flat()
-      ))}
+        </>}
+      </MapContainer>
 
-      {selfLocation && <>
-        <CircleMarker className="blink" center={selfLocation} weight={4} color="white" fillColor="blue" fillOpacity={1} radius={10}>
-          <Popup>Sizin Konumunuz</Popup>
-        </CircleMarker>
-      </>}
-    </MapContainer>
+      <Box sx={{
+        position: 'absolute',
+        top: 10,
+        right: 10,
+        zIndex: '10000',
+      }}>
+        <Box
+          sx={{
+            backgroundColor: 'white',
+            border: 1,
+            borderColor: 'border',
+            borderStyle: 'groove',
+            borderRadius: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minWidth: 200,
+            height: 45,
+            padding: '0px 10px',
+          }}
+        >
+          <InputBase
+            sx={{ m: 1 }}
+            placeholder="Search"
+            onChange={e => setSearchString(e.target.value)}
+          />
+          <Divider orientation="vertical" variant="middle" flexItem />
+          <IconButton
+            type="submit"
+            sx={{ marginLeft: 1 }}
+            aria-label="search"
+            onClick={() => {
+            }}
+          >
+            <SearchIcon />
+          </IconButton>
+        </Box>
+
+        <Box sx={{
+          backgroundColor: 'white',
+          mt: 2,
+          p: 1,
+        }}>
+          <FormGroup>
+            {Object.values(DataType)
+              .map((type) => (
+                <FormControlLabel
+                  key={`checkbox-${type}`}
+                  label={type}
+                  control={
+                    <Checkbox onChange={(_, checked) => {
+                      if (checked) {
+                        setDataTypes([...dataTypes, type]);
+                      } else {
+                        setDataTypes(dataTypes.filter((t) => t !== type));
+                      }
+                    }}
+                  sx={{ my: 0, py: 0 }} size="small" defaultChecked />
+                  }
+                />
+              ))
+            }
+          </FormGroup>
+        </Box>
+      </Box>
+    </Box>
   );
 }
