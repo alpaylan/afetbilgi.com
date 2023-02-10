@@ -101,7 +101,7 @@ def main():
 
                 parsed = []
 
-        get_data = lambda x: x if not pd.isna(x) else None
+        get_data = lambda x: x.strip() if not pd.isna(x) else None
 
         parsed.append(
             {

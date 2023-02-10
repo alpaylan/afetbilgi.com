@@ -23,8 +23,8 @@ def main():
 
         usefulLinks.append(
             {
-                "name": row["İsim"],
-                "url": row["Link"],
+                "name": row["İsim"].strip(),
+                "url": row["Link"].strip(),
             }
         )
 
