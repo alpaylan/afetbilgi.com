@@ -21,7 +21,7 @@ export default function TransportationsData({ value } : {value: TransportationDa
                   {t('website')}
                 </a></b><br/><br/>
                 <b>{t('data.transportation.validationDate')}</b>: {item.validation_date}<br/><br/>
-                <b>{t('data.transportation.validityDate')}</b>: {t('data.transportation.validityDate.explanation', { date: item.validity_date })}
+                <b>{t('data.transportation.validityDate.explanation', { date: item.validity_date })}</b>
               </CardContent>
             </Card>
           </ListItem>
