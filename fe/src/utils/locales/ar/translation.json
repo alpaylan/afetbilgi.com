@@ -48,6 +48,10 @@
   "data.vpn.subtitle": "تتيح لك الشّبكة الافْتراضيّة الخَاصَّة الوصول إلى  المواقع الإلكترونية المحجوبة",
   "data.container_pharmacy": "صيدليات الحاويات",
   "data.evacuation_points.title": "{{city}} نقاط الإخلاء",
+  "data.transportation.title": "إعلان المؤسسات لتقديم المساعدة في النقل",
+  "data.transportation.validationDate": "تاريخ التحقق",
+  "data.transportation.validityDate": "صلاحية",
+  "data.transportation.validityDate.explanation": "صالح حتى {{date}}.",
 
   "notFound": "لم يتم العثور على الصفحة",
   "button.back": "السابق",

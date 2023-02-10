@@ -1,7 +1,7 @@
 import { Paper, Box, TableContainer, Table, TableRow, TableCell, CardContent, Card, TableHead, TableBody, useMediaQuery, List, ListItem } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-import { EvacuationDataNode, TransportationDataNode } from "../../interfaces/TreeNode";
+import { TransportationDataNode } from "../../interfaces/TreeNode";
 
 export default function TransportationsData({ value } : {value: TransportationDataNode}) {
   const { t } = useTranslation();
@@ -16,13 +16,12 @@ export default function TransportationsData({ value } : {value: TransportationDa
             <Card sx={{width: "100%"}}>
               <CardContent>
                 <b>{t('name')}</b>: {item.name}<br/><br/>
-                <b>{t('description')}</b>: {item.description}<br/><br/>
-                <b>{t('url')}</b> 
-                <a href={item.url} target='_blank' rel='noreferrer'>
-                  {t('Link')}
-                </a>
-                <b>{t('validationDate')}</b>: {item.validation_date}<br/><br/>
-                <b>{t('validityDate')}</b>: {item.validity_date}<br/><br/>
+                {item.description}<br/><br/>
+                <b><a href={item.url} target='_blank' rel='noreferrer'>
+                  {t('website')}
+                </a></b><br/><br/>
+                <b>{t('data.transportation.validationDate')}</b>: {item.validation_date}<br/><br/>
+                <b>{t('data.transportation.validityDate')}</b>: {t('data.transportation.validityDate.explanation', { date: item.validity_date })}
               </CardContent>
             </Card>
           </ListItem>
@@ -32,10 +31,10 @@ export default function TransportationsData({ value } : {value: TransportationDa
           <TableHead>
             <TableRow>
               <TableCell>{t('name')}</TableCell>
-              <TableCell>{t('description')}</TableCell>
-              <TableCell>{t('url')}</TableCell>
-              <TableCell>{t('validationDate')}</TableCell>
-              <TableCell>{t('validityDate')}</TableCell>
+              <TableCell>{t('details')}</TableCell>
+              <TableCell>{t('website')}</TableCell>
+              <TableCell>{t('data.transportation.validationDate')}</TableCell>
+              <TableCell>{t('data.transportation.validityDate')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -58,7 +57,7 @@ export default function TransportationsData({ value } : {value: TransportationDa
                   {item.validation_date}
                 </TableCell>
                 <TableCell>
-                  {item.validity_date}
+                  {t('data.transportation.validityDate.explanation', { date: item.validity_date })}
                 </TableCell>
               </TableRow>
             ))}
