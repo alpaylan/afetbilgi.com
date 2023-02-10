@@ -21,14 +21,14 @@ export enum DataType {
 
 export const dataTypeToColor: { [k: string]: string } =
   {
-    [DataType.CITY_ACCOMMODATION]: '#a22',
-    [DataType.NEW_GATHERING_LIST]: '#22b',
-    [DataType.HELP_ITEM_LIST]: '#2b2',
-    [DataType.STEM_CELL_DONATION]: '#bb2',
-    [DataType.DATA_VET]: '#2bb',
-    [DataType.FOOD_ITEMS]: '#b2b',
-    [DataType.CONTAINER_PHARMACY]: '#c44',
-    [DataType.EVACUATION_POINTS]: '#55d',
+    [DataType.CITY_ACCOMMODATION]: '#01e',
+    [DataType.NEW_GATHERING_LIST]: '#e10',
+    [DataType.HELP_ITEM_LIST]: '#0b4',
+    [DataType.STEM_CELL_DONATION]: '#fb0',
+    [DataType.DATA_VET]: '#2be',
+    [DataType.FOOD_ITEMS]: '#666',
+    [DataType.CONTAINER_PHARMACY]: '#e4b',
+    [DataType.EVACUATION_POINTS]: '#80e',
   };
 
 export const dataTypeToLabel: { [k: string]: any } =
