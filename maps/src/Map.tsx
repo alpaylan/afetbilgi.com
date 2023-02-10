@@ -50,6 +50,7 @@ export default function Map() {
 
   const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
   const [selfLocation, setSelfLocation] = useState<[number, number] | null>(null);
+  const [centerLocation, setCenterLocation] = useState<[number, number] | null>(null);
 
   const [searchString, setSearchString] = useState<string>('');
   const filteredData = useMemo(() => {
@@ -64,16 +65,17 @@ export default function Map() {
       navigator.geolocation.getCurrentPosition(
         (position: GeolocationPosition) => {
           setSelfLocation([position.coords.latitude, position.coords.longitude]);
+          setCenterLocation([position.coords.latitude, position.coords.longitude]);
         },
         () => {
-          setSelfLocation(BASE_LOCATION);
+          setCenterLocation(BASE_LOCATION);
         });
     } else {
-      setSelfLocation(BASE_LOCATION);
+      setCenterLocation(BASE_LOCATION);
     }
   }, []);
 
-  if (!data || isLoading || !selfLocation) {
+  if (!data || isLoading || !centerLocation) {
     return (
       <Box sx={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <CircularProgress />
@@ -83,7 +85,7 @@ export default function Map() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={[37.57713668904397, 36.92937651365644]} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={centerLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
         attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
