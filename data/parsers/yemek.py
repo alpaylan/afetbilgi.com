@@ -128,6 +128,10 @@ def main():
                 {
                     "name":'Adana\'da Destek Alabileceğiniz Yemek İşletmeleri',
                     "url": 'https://www.google.com/maps/d/u/0/viewer?mid=1jEw7Qe2Z7SXH8a4rMx9bso1hycYi3vc&ll=36.994885473974875%2C35.40509821285593&z=11',
+                },
+                {
+                    "name":'Deprem Bölgesi Sahra Mutfak Haritası',
+                    "url": 'https://www.google.com/maps/d/embed?mid=1LspPt4CpxG6krYf2ABBZISBbqd4SZs0&ehbc=2E312F',
                 }
             ],
         }
