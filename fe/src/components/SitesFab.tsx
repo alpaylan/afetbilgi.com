@@ -4,10 +4,12 @@ import Popover from "@mui/material/Popover";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from '@mui/material/Link';
+import { useTranslation } from 'react-i18next';
 
 import React from "react";
 
 export default function SitesIcon (){
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [isOpen, setIsOpen] = React.useState<any>(null);
   const anchor = React.useRef(null);
@@ -77,7 +79,7 @@ export default function SitesIcon (){
           onClose={handlePopoverClose}
         >
           <Typography sx={{ padding: "10px", width: "450px" }}>
-              Depremzedeleri aramak ve yardım etmek için kullanabileceğiniz site.
+              {t("page.tooltip.depremyardim")}
           </Typography>
         </Popover>
     </Box>
@@ -118,7 +120,7 @@ export default function SitesIcon (){
         onClose={handlePopoverClose}
         >
         <Typography sx={{ padding: "10px", width: "450px" }}>
-            Yardım bildirimlerinin haritada gösterilmesi için kullanabileceğiniz site.
+            {t("page.tooltip.afetharita")}
         </Typography>
       </Popover>
     </Box>
@@ -158,7 +160,7 @@ export default function SitesIcon (){
         onClose={handlePopoverClose}
         >
         <Typography sx={{ padding: "10px", width: "450px" }}>
-            Depremzedelere erzak yardımı için kullanabileceğiniz site.
+            {t("page.tooltip.depremio")}
         </Typography>
       </Popover>
     </Box>
@@ -198,8 +200,7 @@ export default function SitesIcon (){
         onClose={handlePopoverClose}
         >
         <Typography sx={{ padding: "10px", width: "450px" }}>
-            Projelerimizi geliştirmek ve birbirimizle iletişim kurmak için
-            kullandığımız Discord sunucusu.
+            {t("page.tooltip.discord")}
         </Typography>
         </Popover>
       </Box>

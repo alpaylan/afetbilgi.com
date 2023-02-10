@@ -1,3 +1,6 @@
+import axios from "axios";
+import { useQuery } from "react-query";
+
 export interface MarkerData {
   update_time: number;
   map_data: {
@@ -9,31 +12,15 @@ export interface MarkerData {
       email?: string;
       website?: string;
       description?: string;
-      lat: number;
-      lng: number;
+      latitude: number;
+      longitude: number;
     }[];
   }[];
 }
 
-export const useMarkers = (): MarkerData => {
-  return {
-    "update_time": 0,
-    "map_data": [
-        {
-            "type": "city-accommodation | gathering-list | help-item-list | phone-number-list | useful-links | beneficial-articles | stem-cell-donation | data-vet | food-items",
-            "data": [
-                {
-                    "name": "name",
-                    "address": "address",
-                    "phone": "phone",
-                    "email": "email",
-                    "website": "website",
-                    "description": "description",
-                    "lat": 37.569442,
-                    "lng": 37.190833
-                },
-            ]
-        },
-    ]
-  }
-}
+export const useMarkers = () => useQuery('map-data', async () => {
+  const response = await axios.get('https://cdn.afetbilgi.com/maps/latest.json');
+
+  return response.data as MarkerData;
+});
+
