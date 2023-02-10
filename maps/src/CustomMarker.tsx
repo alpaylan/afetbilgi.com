@@ -60,14 +60,14 @@ export default function CustomMarker({ subitem, item } : { item: any, subitem: a
               {subitem.phone_number}
             </Typography>
           </Box>}
-          {subitem.maps_url && <Box>
+          <Box>
             <Button
               variant='outlined'
-              href={subitem.maps_url}
-              >
+              href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
+            >
               Haritada Göster
             </Button>
-          </Box>}
+          </Box>
           {subitem.url && <Box>
             <Button
               variant='outlined'
