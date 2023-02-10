@@ -10,8 +10,7 @@ export const filterMultipleTypes = (data: MarkerData["map_data"], types: string[
 }
 
 const doesContainInAttributes = (item: MarkerData["map_data"][any]["data"][any], searchString: string) => {
-  return (item.name && slug(item.name).includes(searchString))
-    || (item.description && slug(item.description).includes(searchString))
+  return (item.name && slug(item.name).includes(searchString));
 }
 
 export const searchText = (data: MarkerData["map_data"], searchString: string) => {
