@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Divider,
+  Stack,
   TextField,
   Typography,
 } from '@mui/material';
@@ -17,6 +18,8 @@ import UsefulLinksData from './data/UsefulLinksdata';
 import JSX = jsx.JSX;
 import { OptionNode, QuestionNode } from '../interfaces/TreeNode';
 import { getCategoryOfTreeNode } from '../utils/category';
+
+
 
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
@@ -93,6 +96,7 @@ export default function Question({ paths }: { paths: string[] }) {
         [key in Category as string]: JSX.Element[];
       } = {
         [Category.VICTIM]: [],
+        [Category.HEALTH]: [],
         [Category.HELPER]: [],
         [Category.RESOURCES]: [],
         [Category.OTHER]: [],
@@ -104,29 +108,40 @@ export default function Question({ paths }: { paths: string[] }) {
         );
       });
 
-      return Object.keys(buttonsByCategories)
-        .filter((category) => buttonsByCategories[category].length > 0)
-        .map((category, i) => (
-          <>
-            <Box
-              sx={{
-                textAlign: 'center',
-                display: 'flex',
-                flexFlow: 'column nowrap',
-                justifyContent: 'center',
-                paddingTop: '50px',
-              }}
-            >
-              <Typography variant='h5'>
-                {t(`category.${category}.name`)}
-              </Typography>
-              {buttonsByCategories[category]}
-            </Box>
-            {i < 2 && (
-              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
-            )}
-          </>
-        ));
+      return (
+        <Stack 
+          direction={{ xs: 'column', sm: 'row' }}
+          justifyContent="center"
+          alignItems="center"
+          divider={<Divider orientation="vertical" flexItem sx={{ mt: 5 }} />}
+          sx={{ 
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignItems: 'start',
+            justifyContent: 'center',
+            paddingTop: '50px',
+          }}
+        >
+          {Object.keys(buttonsByCategories)
+            .filter((category) => buttonsByCategories[category].length > 0)
+            .map((category) => (
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexFlow: 'column nowrap',
+                  justifyContent: 'center',
+                  paddingTop: '50px',
+                }}
+              >
+                <Typography variant='h5'>
+                  {t(`category.${category}.name`)}
+                </Typography>
+                {buttonsByCategories[category]}
+              </Box>
+          ))}
+        </Stack>
+      );
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
       <Autocomplete
