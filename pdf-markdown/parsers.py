@@ -2,6 +2,12 @@ from urllib.parse import urlparse
 
 from core import MDTable
 
+def str_or_list(x):
+    if isinstance(x, list):
+        return ", ".join(x)
+    else:
+        return str(x).strip()
+
 def parse_city_accom(data):
     rows = []
 
@@ -181,6 +187,23 @@ def parse_beneficial_articles(data):
 
     return MDTable(["Başlık", "Yazar", "Link", "Konu"], rows)
 
+def parse_evacuation_points(data):
+    rows = []
+
+    for r in data["items"]:
+        rr = list(map(str_or_list, r.values()))
+
+        for i in range(len(rr)):
+            if rr[i] == "None" or rr[i] is None:
+                rr[i] = "-"
+
+        if rr[3] != "-":
+            rr[3] = f"[Google Maps]({rr[3]})"
+
+        rows.append(rr)
+
+    return MDTable(["İl", "İlçe", "Yer", "Harita", "Adres", "İletişim", "Kaynak"], rows)
+
 data_type_parsers = {
     "city-accommodation": parse_city_accom,
     "new-gathering-list": parse_gathering,
@@ -193,5 +216,6 @@ data_type_parsers = {
     # "blood-donationlist": lambda _: 
     "stem-cell-donation": parse_stemcell,
     "beneficial-articles": parse_beneficial_articles,
+    "evacuation-points": parse_evacuation_points,
 }
 
