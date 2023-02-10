@@ -2,7 +2,7 @@
   "page.main.title": "Malper",
   "page.main.subtitle": "Ji kerema xwe mijara ku hûn dixwazin agahdarî li ser bigirin hilbijêrin",
   "page.about.title": "Der barê me de / Têkelî",
-  "page.about.body.1": "afetbilgi.com malperek e ku ji aliyê komek xwendekar û mezûnên ODTU ve hatiye amadekirin da ku di têkoşîna li dijî Erdheja 6ê Sibata 2023-an a Bazarcixê de agahiyên girîng verast bike û ewan bi mexdûrên karesatê  û yên ku dixwazin alîkariyê bidin re parve bike.",
+  "page.about.body.1": "afetbilgi.com malperek e ku ji aliyê komek xwendekar û mezûnên ODTU ve hatiye amadekirin da ku di têkoşîna li dijî Erdheja 6ê Sibata 2023-an a Bazarcixê de agahiyên girîng verast bike û ewan bi mexdûrên karesatê û yên ku dixwazin alîkariyê bidin re parve bike.",
   "page.about.body.2": "Prensîbên bingehîn ên malperê, ku li ser bingehek bi tevahî ji hêla mirovan ve hatî çêkirin, rastbûn, bilez û sadebûn in. Dema ku bi me re têkilî daynin, em ji we daxwaz dikin ku hûn tenê agahdariyên pejirandî bidin û bi me re bixebitin da ku em pêşî li belavbûna agahdariyê derewîn bigirin.",
 
   "page.tooltip.depremyardim": "Site ku hewceyê depremê xwe û bişopînin.",
@@ -53,6 +53,12 @@
   "data.transportation.validationDate": "Dîroka Verastkirinê",
   "data.transportation.validityDate": "Maqûlî",
   "data.transportation.validityDate.explanation": "Heta {{date}} derbasdar e",
+  "data.health_services.title": "{{city}} Şehrinde Sahra Hastaneleri",
+  "data.health.detail_main": " Ji bo agahdariya berfireh  ",
+  "data.health.detail_call": "'karin li vê numareyê bigerin.",
+  "data.health.detail_inspect": "Hûn dikarin lêkolîn bikin  ",
+  "data.health.detail_mix": "'Hûn dikarin li vê numareyê bigerin an jî ",
+  "data.health.detail_website": "Vê malperê",
 
   "validation_status": "Rewşa verastkirinê",
   "pdf_notice": "",

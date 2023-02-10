@@ -15,6 +15,8 @@ class BarinmaParser(BaseMapParser):
 
         df = pd.read_csv(url, encoding="utf-8")
 
+        df.fillna("", inplace=True)
+
         get_data = lambda x: x if not pd.isna(x) else None
         barinma_noktalari = []
 

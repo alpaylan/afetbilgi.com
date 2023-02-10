@@ -2,8 +2,8 @@
   "page.main.title": "Ana Sayfa",
   "page.main.subtitle": "Lütfen bilgi almak istediğiniz konuyu seçiniz.",
   "page.about.title": "Hakkımızda / İletişim",
-  "page.about.body.1": "afetbilgi.com bir grup ODTÜ öğrencisi ve mezunu tarafından hazırlanan, 6 Şubat 2023 Pazarcık Depremi ile mücadelede önemli bilgilerin doğrulanarak hem afetzedelere, hem de yardımcı olmak isteyenlere ulaştırılması için kurulmuş bir internet sitesidir.",
-  "page.about.body.2": "Tamamen insan eliyle oluşturulan bir veri tabanına dayanan sitenin işleyişindeki temel prensipler doğruluk, hız, ve basitliktir. Bizimle iletişime geçerken, sizden yalnızca teyitli bilgileri iletmenizi, yanlış haberlerin yayılmasını engellemek için bizle birlikte çabalamanızı rica ederiz.",
+  "page.about.body.1": "afetbilgi.com 6 Şubat 2023 Pazarcık Depremi ile mücadelede önemli bilgilerin doğrulanarak hem afetzedelere hem de yardımcı olmak isteyenlere ulaştırılması için bir grup ODTÜ öğrencisi ve mezunu tarafından kurulmuş bir internet sitesidir.",
+  "page.about.body.2": "Gönüllüler tarafından tamamen insan eliyle oluşturulan bir veri tabanı ile insanlara hızlı, teyitli ve faydalı bilgileri sağlama prensibiyle çalışıyoruz. Sadece doğru bilgileri iletmek ve yanlış haberlerin yayılmasını önlemek için bizimle ile iletişime geçerken sadece teyitli bilgilerin iletilmesini önemle rica ederiz.",
 
   "page.tooltip.depremyardim": "Depremzedeleri aramak ve yardım etmek için kullanabileceğiniz site.",
   "page.tooltip.afetharita": "Yardım bildirimlerinin haritada gösterilmesi için kullanabileceğiniz site.",
@@ -54,6 +54,12 @@
   "data.transportation.validationDate": "Doğrulanma Tarihi",
   "data.transportation.validityDate": "Geçerlilik",
   "data.transportation.validityDate.explanation": "{{date}} tarihine kadar geçerlidir.",
+  "data.health_services.title": "{{city}} Şehrinde Sahra Hastaneleri",
+  "data.health_services.detail_main": "Detaylı bilgi için ",
+  "data.health_services.detail_call": "'i arayabilirsiniz.",
+  "data.health_services.detail_inspect": "inceleyebilirsiniz",
+  "data.health_services.detail_mix": "'i arayabilirsiniz ya da ",
+  "data.health_services.detail_website": "bu web sitesini",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",

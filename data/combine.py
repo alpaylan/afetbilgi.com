@@ -14,7 +14,7 @@ data_points = [
   { 'name_ar': 'أرقام هواتف مهمة', 'name_tr': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'name_ku': 'Numareyên Girîng', 'path': f'{basedir}/telefon.json' },
   { 'name_ar': 'مُرْتَادِي الشَّبَكَة مهمة', 'name_tr': 'Önemli Web Siteleri', 'name_en': 'Useful Links', 'name_ku': ' Malperên Kêrhatî', 'path': f'{basedir}/faydali_linkler.json' },
   { 'name_ar': 'بَيَاطير', 'name_tr': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner', 'path': f'{basedir}/veteriner.json' },
-  { 'name_tr': 'Para Bağışı Linkleri', 'name_en': 'Monetary Donation Links', 'path': f'{basedir}/donation_links.json'},
+  { 'name_ar': 'روابط التبرع بالمال' , 'name_tr': 'Para Bağışı Linkleri', 'name_en': 'Monetary Donation Links', 'name_ku': 'Lînkên bexşîna darayî', 'path': f'{basedir}/donation_links.json'},
   { 'name_ar': 'فرص التبرع بالعناصر', 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation', 'name_ku': 'Bexşkirina Tiştan', 'path': f'{basedir}/yardim_toplama_merkezleri.json' },
   { 'name_ar': 'نقاط الهلال الأحمر للتبرع بالدم', 'name_tr': 'Kızılay Kan Bağış Noktaları', 'name_en': 'Kızılay Blood Donation Places', 'name_ku': 'Cihên Xwîn Dayînê yên Kizilay/ Heyva Sor', 'path': f'{basedir}/blood.json' },
   { 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name_tr': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê', 'path': f'{basedir}/kokhucre.json' },
@@ -22,6 +22,7 @@ data_points = [
   { 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê', 'path': f'{basedir}/tahliye.json' },
   { 'name_ar': 'مساعدات النقل', 'name_tr': 'Ulaşım Yardımları', 'name_en': 'Transportation Aid', 'name_ku': 'Alîkariya Veguhestinê', 'path': f'{basedir}/ulasim.json' },
 
+  { 'name_tr': 'Sahra Hastaneleri', 'name_ar': 'مستشفيات الصحراء', 'name_en': 'Field Hospitals', 'name_ku': 'Xanên Sahra', 'path': f'{basedir}/hastane.json' },
   # { 'name_tr': 'VPN', 'path': f'{basedir}/vpn.json' },
 #   STAGING
 #   { 'name': 'Kapalı Yollar', 'path': f'{basedir}/kapaliyollar.json' },
