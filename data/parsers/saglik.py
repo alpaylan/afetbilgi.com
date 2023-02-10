@@ -92,7 +92,7 @@ def main():
         "options": options,
         "text_tr": "Hangi şehirde sağlık hizmeti arıyorsunuz?",
         "text_en": "Which city are you looking for healthcare services?",
-        "text_ku": "Di welatê ku hizmetên sağlîkê ya ku hûn jî arîyê ye?",
+        "text_ku": "Hûn li kîjan bajarî li xizmetên tendirûstiyê digerin? ",
         "text_ar": "في أي مدينة تبحث عن رعاية صحية؟",
     }
 
