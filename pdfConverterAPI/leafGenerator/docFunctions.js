@@ -15,7 +15,6 @@ const getDateAndTime = () => {
   const date = new Date().toLocaleString("tr-TR", {
     timeZone: "Europe/Moscow",
   });
-  console.log(date);
   return date.toString();
 };
 
