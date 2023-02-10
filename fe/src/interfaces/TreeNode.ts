@@ -195,6 +195,12 @@ export interface EvacuationDataNode extends DataNode {
   }[];
 }
 
+export interface DonationLinksDataNode extends DataNode {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}
 export interface TransportationDataNode extends DataNode {
   transportations: {
     name: string;

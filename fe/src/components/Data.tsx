@@ -19,6 +19,7 @@ import VpnData from './data/VpnData';
 import ContainerPharmacyData from './data/ContainerPharmacyData';
 import { DataType } from '../variables/TreeNode';
 import EvacuationData from './data/EvacuationData';
+import DonationLinksData from './data/DonationLinksData';
 import TransportationsData from './data/TransportationsData';
 
 const pageMappings: Record<string, FC<{value: any}>> = {
@@ -41,6 +42,7 @@ const pageMappings: Record<string, FC<{value: any}>> = {
   [DataType.VPN]: VpnData,
   [DataType.CONTAINER_PHARMACY]: ContainerPharmacyData,
   [DataType.EVACUATION_POINTS]: EvacuationData,
+  [DataType.DONATION_LINKS]: DonationLinksData,
   [DataType.TRANSPORTATIONS]: TransportationsData
 }
 

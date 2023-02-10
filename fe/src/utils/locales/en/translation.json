@@ -47,6 +47,8 @@
   "data.vpn.subtitle": "VPN allows you to access blocked sites.",
   "data.container_pharmacy": "Container Pharmacy",
   "data.evacuation_points.title": "Evacuation Points in {{city}}",
+  "data.donation.title": "Institution/Organization Donation Websites for Monetary Contributions",
+  "data.donation.subtitle": "Access Institution/Organization Donation Sites through links below.",
   "data.transportation.title": "Institutions Announced to Provide Transportation Aid",
   "data.transportation.validationDate": "Validation Date",
   "data.transportation.validityDate": "Validity",
