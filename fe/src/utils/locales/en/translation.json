@@ -49,6 +49,10 @@
   "data.evacuation_points.title": "Evacuation Points in {{city}}",
   "data.donation.title": "Institution/Organization Donation Websites for Monetary Contributions",
   "data.donation.subtitle": "Access Institution/Organization Donation Sites through links below.",
+  "data.transportation.title": "Institutions Announced to Provide Transportation Aid",
+  "data.transportation.validationDate": "Validation Date",
+  "data.transportation.validityDate": "Validity",
+  "data.transportation.validityDate.explanation": "Valid until {{date}}",
 
   "notFound": "Page not found",
   "button.back": "Back",

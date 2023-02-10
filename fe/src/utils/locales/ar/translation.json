@@ -50,6 +50,10 @@
   "data.evacuation_points.title": "{{city}} نقاط الإخلاء",
   "data.donation.title": "Institution/Organization Donation Websites for Monetary Contributions",
   "data.donation.subtitle": "Access Institution/Organization Donation Sites through links below.",
+  "data.transportation.title": "إعلان المؤسسات لتقديم المساعدة في النقل",
+  "data.transportation.validationDate": "تاريخ التحقق",
+  "data.transportation.validityDate": "صلاحية",
+  "data.transportation.validityDate.explanation": "صالح حتى {{date}}.",
 
   "notFound": "لم يتم العثور على الصفحة",
   "button.back": "السابق",
