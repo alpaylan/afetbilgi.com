@@ -60,7 +60,7 @@ const writeBloodDonationsPDF = (doc, data) => {
     }
 
     doc.setFontSize(textFontSize);
-    doc.text("\u2022 " + `${element.name}`, x, y);
+    doc.text("\u2022 " + `${element.name ?? '(Kurum adı belli değil)'}`, x, y);
     y += yRange;
 
     doc.setFontSize(smallTextSize);
