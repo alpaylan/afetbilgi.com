@@ -22,10 +22,13 @@ const {
 } = require("./leafs/veteriner");
 
 const { writeHelpCentersPDF, getHelpCenters } = require("./leafs/helpCenters");
-const {
-  writeBloodDonationsPDF,
-  getBloodDonations,
-} = require("./leafs/bloodDonation");
+
+// DEPRECATED
+//
+// const {
+//   writeBloodDonationsPDF,
+//   getBloodDonations,
+// } = require("./leafs/bloodDonation");
 
 const { writeStemCellsPDF } = require("./leafs/stemCells");
 const { writePharmacyData } = require("./leafs/pharmacy");
@@ -214,26 +217,28 @@ const createHelpCentersPDF = async () => {
   });
 };
 
-const createBloodDonationPDF = async () => {
-  const data = await fetchData();
-  const bloodDonation = getBloodDonations(data);
+// DEPREACATED
+//
+// const createBloodDonationPDF = async () => {
+//   const data = await fetchData();
+//   const bloodDonation = getBloodDonations(data);
 
-  const path = `../outputs/${bloodDonation[0].name_tr}/`;
-  fs.mkdirSync(path, { recursive: true });
+//   const path = `../outputs/${bloodDonation[0].name_tr}/`;
+//   fs.mkdirSync(path, { recursive: true });
 
-  bloodDonation[0].value.options.forEach((option) => {
-    const doc = new jsPDF({
-      orientation: "p",
-      unit: "px",
-      format: "a4",
-    });
-    registerFont(doc);
+//   bloodDonation[0].value.options.forEach((option) => {
+//     const doc = new jsPDF({
+//       orientation: "p",
+//       unit: "px",
+//       format: "a4",
+//     });
+//     registerFont(doc);
 
-    writeBloodDonationsPDF(doc, option.value.data.items);
+//     writeBloodDonationsPDF(doc, option.value.data.items);
 
-    doc.save(path + option.name_tr + ".pdf");
-  });
-};
+//     doc.save(path + option.name_tr + ".pdf");
+//   });
+// };
 
 const createPhoneNumbersPDF = async () => {
   const data = await fetchData();
@@ -341,7 +346,7 @@ module.exports = {
   // createVpnPDF,
   createVeterinerPlacesPDF,
   createHelpCentersPDF,
-  createBloodDonationPDF,
+  // createBloodDonationPDF,
   createStemCellsPDF,
   createPharmacyPDF,
 };
