@@ -1,5 +1,6 @@
 import sys
 import json
+import pytz
 import datetime
 
 from core import MDNode
@@ -87,7 +88,7 @@ def main():
         if n is not None:
             md_nodes.append(n)
 
-    now = datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S")
+    now = datetime.datetime.now(pytz.timezone("Europe/Istanbul")).strftime("%d.%m.%Y %H:%M:%S")
     root = MDNode("afetbilgi.com", f"Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {now}.", None)
     root.add_children(md_nodes)
     
