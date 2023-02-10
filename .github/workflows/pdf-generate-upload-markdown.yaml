@@ -31,10 +31,12 @@ jobs:
 
       - name: Generate Markdown
         run: |
+          pip install -r requirements.txt
+
           aws s3 cp s3://cdn.afetbilgi.com/latest.json ./latest.json
 
           mkdir md-generated
-
+          
           python pdf-markdown/main.py latest.json md-generated/afetbilgi.md
 
       - name: Generate PDF
