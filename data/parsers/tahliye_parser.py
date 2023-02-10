@@ -56,11 +56,11 @@ def main():
             {
                 "city": turkish_title(row['Şehir'].strip()),
                 "county": turkish_title(row['İlçe'].strip()),
-                "name": row['İsim'],
-                "map_link": row['Maps Linki'],
-                "address": row['Adres'],
+                "name": row['İsim'].strip(),
+                "map_link": row['Maps Linki'].strip(),
+                "address": row['Adres'].strip(),
                 "contacts": [x.strip() for x in row['Telefon'].split("\n")],
-                "validator": row['Teyit Merci'],
+                "validator": row['Teyit Merci'].strip(),
             }
         )
     

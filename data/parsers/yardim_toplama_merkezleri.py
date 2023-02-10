@@ -78,10 +78,10 @@ if __name__ == '__main__':
         
         cityData[city_name].append({
             "city": city_name,
-            "name": row["Kurum"],
-            "url": row["Link"],
-            "phone_number": row["Telefon Numarası"],
-            "notes": row["Açıklamalar"]
+            "name": row["Kurum"].strip(),
+            "url": row["Link"].strip(),
+            "phone_number": row["Telefon Numarası"].strip(),
+            "notes": row["Açıklamalar"].strip()
         })
 
     for city in cityData:

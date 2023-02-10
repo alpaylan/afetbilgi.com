@@ -64,12 +64,12 @@ def main():
         for _, row in city_df.iterrows():
             ilce_dict[row[1]].append(
                 {
-                    "name": row["Lokasyon"] if not pd.isna(row["Lokasyon"]) else None,
-                    "maps_url": row["Google Maps Linki"] if not pd.isna(row["Google Maps Linki"]) else None,
-                    "url": row["Anons Linki"] if not pd.isna(row["Anons Linki"]) else None,
-                    "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
-                    "updated_at_date": row["Teyit Tarih"] if not pd.isna(row["Teyit Tarih"]) else None,
-                    "updated_at_time": row["Teyit Saati"] if not pd.isna(row["Teyit Saati"]) else None,
+                    "name": row["Lokasyon"].strip() if not pd.isna(row["Lokasyon"]) else None,
+                    "maps_url": row["Google Maps Linki"].strip() if not pd.isna(row["Google Maps Linki"]) else None,
+                    "url": row["Anons Linki"].strip() if not pd.isna(row["Anons Linki"]) else None,
+                    "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                    "updated_at_date": row["Teyit Tarih"].strip() if not pd.isna(row["Teyit Tarih"]) else None,
+                    "updated_at_time": row["Teyit Saati"].strip() if not pd.isna(row["Teyit Saati"]) else None,
                 }
             )
         option_2 = []

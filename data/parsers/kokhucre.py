@@ -21,10 +21,10 @@ if __name__ == '__main__':
     json_obj['data']['dataType'] = 'stem-cell-donation'
     json_obj['data']['items'] = [
         {
-            'area': row['area'],
-            'city': row['city'],
-            'address': row['address'],
-            'phone': row['phone']
+            'area': row['area'].strip(),
+            'city': row['city'].strip(),
+            'address': row['address'].strip(),
+            'phone': row['phone'].strip()
         } for _, row in df.iterrows()
     ]
     with open(out_path, "w") as f:

@@ -19,7 +19,6 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
-    print(df)
 
     df["İl"] = df["İl"].apply(lambda x: turkish_title(x.strip()))
     df["İlçe"] = df["İlçe"].apply(lambda x: turkish_title(x.strip()))
@@ -60,13 +59,13 @@ def main():
 
         items.append(
             {
-                "district": row["İlçe"],
-                "name": row["Lokasyon"],
-                "maps_url": row["Google Maps Linki"],
-                "url": row["Anons Linki"],
-                "phone_number": row["Telefon"],
-                "updated_at_date": row["Teyit Tarih"],
-                "updated_at_time": row["Teyit Saati"],
+                "district": row["İlçe"].strip(),
+                "name": row["Lokasyon"].strip(),
+                "maps_url": row["Google Maps Linki"].strip(),
+                "url": row["Anons Linki"].strip(),
+                "phone_number": row["Telefon"].strip(),
+                "updated_at_date": row["Teyit Tarih"].strip(),
+                "updated_at_time": row["Teyit Saati"].strip(),
             }
         )
     else:
