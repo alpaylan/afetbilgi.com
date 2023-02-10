@@ -14,7 +14,7 @@ import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
 
-import { downloadPDF } from './utils/downloadPDF';
+// import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
 
