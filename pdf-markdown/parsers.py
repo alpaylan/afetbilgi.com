@@ -6,6 +6,9 @@ def phone_or_str(x):
     if x == "None" or x is None or x == "" or x == "-":
         return "-"
     
+    if "-" in x:
+        return x
+
     return f"[{x}](tel:{x.replace(' ', '')})"
 
 def link_or_str(x, label):
@@ -22,15 +25,37 @@ def str_or_list(x):
     else:
         return str(x).strip()
 
+def process_rows(r):
+    rr =  list(map(str.strip, map(str, r.values())))
+
+    rows = []
+
+    for i in range(len(rr)):
+        if rr[i] == "None" or rr[i] is None:
+            rows.append("-")
+        else:
+            rows.append(rr[i].replace("\n", " - "))
+    
+    return rows
+
+def process_rows_list(r):
+    rr =  list(map(str.strip, map(str, r.values())))
+
+    rows = []
+
+    rr = list(map(str_or_list, r.values()))
+
+    for i in range(len(rr)):
+        if rr[i] == "None" or rr[i] is None:
+            rows.append("-")
+        else:
+            rows.append(rr[i].replace("\n", " - "))
+
 def parse_city_accom(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-        
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         if rr[2] != "-":
             rr[2] = "Doğrulanmış" if rr[2] == "True" else "Doğrulanmamış"
@@ -49,11 +74,7 @@ def parse_gathering(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         if rr[1] != "-":
             rr[1] = link_or_str(rr[1], "Google Maps")
@@ -69,11 +90,7 @@ def parse_food(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         if rr[1] != "-":
             rr[1] = link_or_str(rr[1], "Google Maps")
@@ -91,11 +108,7 @@ def parse_pharmacy(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         if rr[3] != "-":
             rr[3] = link_or_str(rr[3], "Google Maps")
@@ -108,11 +121,7 @@ def parse_phones(data):
     rows = []
 
     for r in data["phones"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                raise ValueError("None value in phone number list")
+        rr = process_rows(r)
 
         rr[1] = phone_or_str(rr[1])
 
@@ -124,12 +133,7 @@ def parse_links(data):
     rows = []
 
     for r in data["usefulLinks"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                raise ValueError("None value in useful links list")
-
+        rr = process_rows(r)
 
         # Extract the domain from the URL at rr[1]:
         domain = urlparse(rr[1]).netloc
@@ -143,11 +147,7 @@ def parse_vets(data):
     rows = []
 
     for r in data["vets"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         rr[1] = phone_or_str(rr[1])
         rr[3] = link_or_str(rr[3], "Google Maps")
@@ -160,11 +160,7 @@ def parse_help_item_list(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         rr[2] = link_or_str(rr[2], "Kaynak/Harita")
         rr[3] = phone_or_str(rr[3])
@@ -177,11 +173,7 @@ def parse_stemcell(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         rr[2] = link_or_str(rr[2], "Harita")
         rr[3] = phone_or_str(rr[3])
@@ -194,11 +186,7 @@ def parse_beneficial_articles(data):
     rows = []
 
     for r in data["articles"]:
-        rr = list(map(str.strip, map(str, r.values())))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows(r)
 
         domain = urlparse(rr[2]).netloc
         rr[2] = link_or_str(rr[2], domain)
@@ -211,11 +199,7 @@ def parse_evacuation_points(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str_or_list, r.values()))
-
-        for i in range(len(rr)):
-            if rr[i] == "None" or rr[i] is None:
-                rr[i] = "-"
+        rr = process_rows_list(r)
 
         if rr[3] != "-":
             rr[3] = link_or_str(rr[3], "Google Maps")
