@@ -15,9 +15,9 @@ import {
     const { t } = useTranslation();
     return (
       <Box>
-        <h3>{t('data.vpn.title')}</h3>
+        <h3>{t('data.donation.title')}</h3>
         <p>
-          <b>{t('data.vpn.subtitle')}</b>
+          <b>{t('data.donation.subtitle')}</b>
         </p>
         <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
           <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
