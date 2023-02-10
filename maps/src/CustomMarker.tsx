@@ -1,52 +1,61 @@
 import { Box, Button } from '@mui/material';
 import React from 'react';
-import { CircleMarker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import { CircleMarker, Popup } from 'react-leaflet';
 import { dataTypeToColor, dataTypeToLabel } from './Map';
 
 import "./Map.css"
 
-export default function CustomMarker({ subitem, item } : { item: any, subitem: any }) {
-  const [zoomLevel, setZoomLevel] = React.useState(useMap().getZoom());
-  const mapEvents = useMapEvents({
-    zoomend: () => {
-        setZoomLevel(mapEvents.getZoom());
-    },
-  });
+function DataItem({ text, value }: { text: string, value: string }) {
+  if (!value || value === "undefined") return null;
+  
+  return (
+    <Box sx={{ mt: 1 }}>
+      <b>{text}:</b> {value}
+    </Box>
+  )
+}
 
+export default function CustomMarker({ subitem, item, radius } : { item: any, subitem: any, radius: number }) {
   return (
     <CircleMarker
       center={[subitem.latitude, subitem.longitude]} 
-      weight={1}
-      color="black"
+      weight={2}
+      color="white"
       fillColor={dataTypeToColor[item.type]}
       fillOpacity={1}
-      radius={(zoomLevel ** 3) / 100}
+      radius={radius}
     >
       <Popup>
-        {subitem.name && <Box><b>{subitem.name} - </b></Box>}
-        <Box sx={{ my: 1 }}><b>{dataTypeToLabel[item.type].name_tr}</b></Box>
-        {subitem.city && <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>}
-        {subitem.phone_number && <Box sx={{ my: 1 }}>Telefon: {subitem.phone_number}</Box>}
-        <Box sx={{ my: 1 }}>
-          <Button
-            variant='outlined'
-            href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
-          >
-            Haritada Göster
-          </Button>
-        </Box>
-
-        {subitem.url && (
-          <Box sx={{ my: 1 }}>
+        <Box sx={{ fontSize: "16px" }}>
+          {subitem.name && <Box sx={{ m: "auto" }}><b>{subitem.name}</b></Box>}
+          <Box sx={{ mb: 2  }}>{dataTypeToLabel[item.type].name_tr}</Box>
+          <DataItem text="Adres" value={`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`} />
+          <DataItem text="Telefon" value={subitem.phone_numbern} />
+          <Box sx={{ mt: 2 }}>
             <Button
-              target="_blank"
+              sx={{ fontSize: "inherit" }}
               variant='outlined'
-              href={subitem.url}
-              >
-              Kaynak
+              href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
+              fullWidth
+            >
+              Haritada Göster
             </Button>
           </Box>
-        )}
+
+          {subitem.url && (
+            <Box sx={{ mt: 1 }}>
+              <Button
+                sx={{ fontSize: "inherit" }}
+                target="_blank"
+                variant='outlined'
+                href={subitem.url}
+                fullWidth
+                >
+                Kaynak
+              </Button>
+            </Box>
+          )}
+        </Box>
       </Popup>
     </CircleMarker>
   )

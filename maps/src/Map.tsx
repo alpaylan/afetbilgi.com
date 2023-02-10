@@ -2,8 +2,8 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, D
 import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
-import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
-import { useMarkers } from './hooks';
+import { CircleMarker, MapContainer, Popup, TileLayer, useMapEvents } from 'react-leaflet';
+import { MarkerData, useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
 import CustomMarker from './CustomMarker';
 
@@ -45,6 +45,45 @@ export const dataTypeToLabel: { [k: string]: any } =
   };
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
+
+function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
+  const [radius, setRadius] = React.useState(15 ** 3 / 100);
+  const mapEvents = useMapEvents({
+    zoomend: () => {
+        setRadius(mapEvents.getZoom() ** 3 / 100);
+    },
+  });
+
+  return (
+    <>
+      {filteredData.map((item, i) => (
+          item.data.map((subitem, j) => (
+            <CustomMarker
+              key={`${i}-${j}`}
+              item={item}
+              subitem={subitem}
+              radius={radius}
+              />
+          )).flat()
+        ))}
+
+        {selfLocation && 
+          <CircleMarker
+            className="blink"
+            center={selfLocation}
+            weight={3}
+            color="white"
+            fillColor={"#00fb"}
+            fillOpacity={1}
+            radius={radius}
+            opacity={0.75}
+          >
+            <Popup>Sizin Konumunuz</Popup>
+          </CircleMarker>
+        }
+    </> 
+  )
+}
 
 export default function Map() {
   const { data, isLoading } = useMarkers();
@@ -91,21 +130,7 @@ export default function Map() {
           url={`https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Ag%7C`}
         />
 
-        {filteredData.map((item, i) => (
-          item.data.map((subitem, j) => (
-            <CustomMarker
-              key={`${i}-${j}`}
-              item={item}
-              subitem={subitem}
-              />
-          )).flat()
-        ))}
-
-        {selfLocation && <>
-          <CircleMarker className="blink" center={selfLocation} weight={4} color="white" fillColor="blue" fillOpacity={1} radius={10}>
-            <Popup>Sizin Konumunuz</Popup>
-          </CircleMarker>
-        </>}
+        <Markers filteredData={filteredData} selfLocation={selfLocation} />
       </MapContainer>
 
       <Box sx={{
