@@ -13,6 +13,7 @@ export interface DataNode extends TreeNode {
 
 export interface DataValue {
   dataType: string;
+  externalURL: string;
 }
 
 export interface OptionNode {
