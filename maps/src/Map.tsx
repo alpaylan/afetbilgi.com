@@ -85,10 +85,9 @@ export default function Map() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={centerLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={centerLocation} zoom={15} maxZoom={18} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
-        attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url={`https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Ag%7C`}
         />
 
         {filteredData.map((item, i) => (
