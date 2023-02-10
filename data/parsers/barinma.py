@@ -25,7 +25,7 @@ def main():
     sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
-    df = pd.read_csv(url, encoding="utf-8")
+    df = pd.read_csv(url, encoding=("utf-8"))
 
     # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
     # sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
@@ -65,10 +65,13 @@ def main():
 
     #     df = pd.concat([df, dfj])
 
+
     df["Şehir"] = df["Şehir"].apply(str.strip)
     df["Şehir"] = df["Şehir"].apply(turkish_title)
 
-    df.sort_values(["Şehir", "Lokasyon"])
+    df = df.sort_values(["Şehir", "Lokasyon"])
+
+    
 
     parsed = []
     options = []
@@ -117,7 +120,10 @@ def main():
     else:
         options.append(
             {
-                "name": city_name,
+                "name_tr": city_name,
+                "name_en": city_translation[city_name]["en"],
+                "name_ku": city_translation[city_name]["ku"],
+                "name_ar": city_translation[city_name]["ar"],
                 "value": {
                     "type": "data",
                     "data": {
