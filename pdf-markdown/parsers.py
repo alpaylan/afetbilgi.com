@@ -49,6 +49,8 @@ def process_rows_list(r):
         else:
             rows.append(rr[i].replace("\n", " - "))
 
+    return rows
+
 def parse_city_accom(data):
     rows = []
 
