@@ -2,6 +2,14 @@ from urllib.parse import urlparse
 
 from core import MDTable
 
+def link_or_str(x, label):
+    p = urlparse(x)
+
+    if p.scheme != "" and p.netloc != "":
+        return x
+    
+    return f"[{label}]({x})"
+
 def str_or_list(x):
     if isinstance(x, list):
         return ", ".join(x)
@@ -22,10 +30,10 @@ def parse_city_accom(data):
             rr[2] = "Doğrulanmış" if rr[2] == "True" else "Doğrulanmamış"
         
         if rr[3] != "-":
-            rr[3] = f"[Kaynak]({rr[3]})"
+            rr[3] = link_or_str(rr[3], "Kaynak")
         
         if rr[4] != "-":
-            rr[4] = f"[Google Maps]({rr[4]})"
+            rr[4] = link_or_str(rr[4], "Google Maps")
 
         rows.append(rr)
 
@@ -42,10 +50,10 @@ def parse_gathering(data):
                 rr[i] = "-"
 
         if rr[1] != "-":
-            rr[1] = f"[Google Maps]({rr[1]})"
+            rr[1] = link_or_str(rr[1], "Google Maps")
 
         if rr[2] != "-":
-            rr[2] = f"[Kaynak]({rr[2]})"
+            rr[2] = link_or_str(rr[2], "Kaynak")
 
         rows.append(rr)
 
@@ -62,10 +70,10 @@ def parse_food(data):
                 rr[i] = "-"
 
         if rr[1] != "-":
-            rr[1] = f"[Google Maps]({rr[1]})"
+            rr[1] = link_or_str(rr[1], "Google Maps")
         
         if rr[2] != "-":
-            rr[2] = f"[Kaynak]({rr[2]})"
+            rr[2] = link_or_str(rr[2], "Kaynak")
 
         rows.append(rr)
 
@@ -82,7 +90,7 @@ def parse_pharmacy(data):
                 rr[i] = "-"
 
         if rr[3] != "-":
-            rr[3] = f"[Google Maps]({rr[3]})"
+            rr[3] = link_or_str(rr[3], "Google Maps")
 
         rows.append(rr)
 
@@ -115,8 +123,7 @@ def parse_links(data):
 
         # Extract the domain from the URL at rr[1]:
         domain = urlparse(rr[1]).netloc
-
-        rr[1] = f"[{domain}]({rr[1]})"
+        rr[1] = link_or_str(rr[1], domain)
 
         rows.append(rr)
 
@@ -132,7 +139,7 @@ def parse_vets(data):
             if rr[i] == "None" or rr[i] is None:
                 rr[i] = "-"
 
-        rr[3] = f"[Google Maps]({rr[3]})"
+        rr[3] = link_or_str(rr[3], "Google Maps")
 
         rows.append(rr)
 
@@ -148,7 +155,7 @@ def parse_help_item_list(data):
             if rr[i] == "None" or rr[i] is None:
                 rr[i] = "-"
 
-        rr[2] = f"[Kaynak/Harita]({rr[2]})"
+        rr[2] = link_or_str(rr[2], "Kaynak/Harita")
 
         rows.append(rr)
 
@@ -164,7 +171,7 @@ def parse_stemcell(data):
             if rr[i] == "None" or rr[i] is None:
                 rr[i] = "-"
 
-        rr[2] = f"[Harita]({rr[2]})"
+        rr[2] = link_or_str(rr[2], "Harita")
 
         rows.append(rr)
 
@@ -181,7 +188,7 @@ def parse_beneficial_articles(data):
                 rr[i] = "-"
 
         domain = urlparse(rr[2]).netloc
-        rr[2] = f"[{domain}]({rr[2]})"
+        rr[2] = link_or_str(rr[2], domain)
 
         rows.append(rr)
 
@@ -198,7 +205,7 @@ def parse_evacuation_points(data):
                 rr[i] = "-"
 
         if rr[3] != "-":
-            rr[3] = f"[Google Maps]({rr[3]})"
+            rr[3] = link_or_str(rr[3], "Google Maps")
 
         rows.append(rr)
 
