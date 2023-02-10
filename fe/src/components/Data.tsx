@@ -42,11 +42,6 @@ const pageMappings: Record<string, FC<{value: any}>> = {
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
-    if (dataNode.data._external !== undefined) {
-      window.open(dataNode.data.externalURL, '_blank');
-      return <></>;
-    }
-
     const Page = pageMappings[dataNode.data.dataType];
 
     return Page ? <Page value={dataNode.data} /> : <>Not found</>;

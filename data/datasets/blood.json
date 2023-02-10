@@ -1,6 +1,6 @@
 {
     "type": "data",
     "data": {
-        "externalURL": "https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari"
+        "dataType": "blood-donationlist"
     }
 }
