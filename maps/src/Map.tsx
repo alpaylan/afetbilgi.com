@@ -78,7 +78,7 @@ export default function Map() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={selfLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={[37.57713668904397, 36.92937651365644]} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
         attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
