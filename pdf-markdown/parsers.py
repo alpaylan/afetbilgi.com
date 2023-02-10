@@ -1,10 +1,12 @@
+from urllib.parse import urlparse
+
 from core import MDTable
 
 def parse_city_accom(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
         
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -27,7 +29,7 @@ def parse_gathering(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -37,7 +39,7 @@ def parse_gathering(data):
             rr[1] = f"[Google Maps]({rr[1]})"
 
         if rr[2] != "-":
-            rr[2] = f"[Kaynak]({rr[1]})"
+            rr[2] = f"[Kaynak]({rr[2]})"
 
         rows.append(rr)
 
@@ -47,7 +49,7 @@ def parse_food(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -67,7 +69,7 @@ def parse_pharmacy(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -84,7 +86,7 @@ def parse_phones(data):
     rows = []
 
     for r in data["phones"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -98,13 +100,17 @@ def parse_links(data):
     rows = []
 
     for r in data["usefulLinks"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
                 raise ValueError("None value in useful links list")
 
-        rr[1] = f"[{rr[1]}]({rr[1]})"
+
+        # Extract the domain from the URL at rr[1]:
+        domain = urlparse(rr[1]).netloc
+
+        rr[1] = f"[{domain}]({rr[1]})"
 
         rows.append(rr)
 
@@ -114,7 +120,7 @@ def parse_vets(data):
     rows = []
 
     for r in data["vets"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -130,7 +136,7 @@ def parse_help_item_list(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -146,7 +152,7 @@ def parse_stemcell(data):
     rows = []
 
     for r in data["items"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
@@ -162,13 +168,14 @@ def parse_beneficial_articles(data):
     rows = []
 
     for r in data["articles"]:
-        rr = list(map(str, r.values()))
+        rr = list(map(str.strip, map(str, r.values())))
 
         for i in range(len(rr)):
             if rr[i] == "None" or rr[i] is None:
                 rr[i] = "-"
 
-        rr[2] = f"[Link]({rr[2]})"
+        domain = urlparse(rr[2]).netloc
+        rr[2] = f"[{domain}]({rr[2]})"
 
         rows.append(rr)
 
