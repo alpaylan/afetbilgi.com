@@ -39,11 +39,9 @@ def process_rows(r):
     return rows
 
 def process_rows_list(r):
-    rr =  list(map(str.strip, map(str, r.values())))
+    rr = list(map(str_or_list, r.values()))
 
     rows = []
-
-    rr = list(map(str_or_list, r.values()))
 
     for i in range(len(rr)):
         if rr[i] == "None" or rr[i] is None:

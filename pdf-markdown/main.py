@@ -21,8 +21,6 @@ pdf_options:
 """.lstrip()
 
 def parse_node(node):
-    print("Parse node: " + nametr_or_name(node))
-
     if node["value"]["type"] == "question":
         return parse_question(nametr_or_name(node), node["value"]["options"])
     elif node["value"]["type"] == "data":
@@ -31,12 +29,9 @@ def parse_node(node):
         raise Exception(f"Unknown node type: {node['type']}")
 
 def parse_question(title, options):
-    print("Parse question: " + title)
-
     children = []
 
     for opt in options:
-        print(f"Calling parse_option_node: {opt}")
         n = parse_option_node(opt)
 
         if n is not None:
