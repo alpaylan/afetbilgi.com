@@ -39,6 +39,7 @@ export default function CustomMarker({ subitem, item } : { item: any, subitem: a
         {subitem.url && (
           <Box sx={{ my: 1 }}>
             <Button
+              target="_blank"
               variant='outlined'
               href={subitem.url}
               >
