@@ -70,57 +70,67 @@ const App = () => {
         <SitesFab />
       </Box>
       <Waiting open={isLoading} />
-      <Box
-        sx={{
-          mt: 3,
-          textAlign: 'center',
-          display: 'flex',
-          flexFlow: 'row nowrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {location.pathname !== '/' && (
-          <>
-            <Button
-              sx={{ m: 1 }}
-              size='large'
-              onClick={() =>
-                navigate('/')
-              }
-            >
-              {t('page.main.title')}
-            </Button>
 
-            <Button sx={{ m: 1 }} size='large' onClick={() => navigate(-1)}>
-              {t('button.back')}
-            </Button>
-          </>
-        )}
-        {location.pathname !== '/about' && (
-          <Button
-            sx={{ m: 1 }}
-            size='large'
-            onClick={() => {
-              downloadPDF();
-            }}
-          >
-            {t('button.download')}
-          </Button>
-        )}
-        <Select
-          id='language-options-multiselect'
-          size='small'
-          sx={{ m: 1 }}
-          value={i18n.language}
-          onChange={(e) => changeLanguageHandler(e.target.value as Language)}
+      <Box sx={{
+        mt: 3,
+        mb: 2,
+        display: 'flex',
+        flexFlow: 'column nowrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexFlow: 'row nowrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
         >
-          {LANGUAGES.map(({ key, name }) => (
-            <MenuItem key={key} value={key}>
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
+          {location.pathname !== '/' && (
+            <>
+              <Button
+                size='large'
+                onClick={() =>
+                  navigate('/')
+                }
+              >
+                {t('page.main.title')}
+              </Button>
+
+              <Button size='large' onClick={() => navigate(-1)}>
+                {t('button.back')}
+              </Button>
+            </>
+          )}
+
+          {location.pathname !== '/about' && (
+            <Button
+              size='large'
+              onClick={() => {
+                downloadPDF();
+              }}
+            >
+              {t('button.download')}
+            </Button>
+          )}
+        </Box>
+
+        <Box sx={{ mt: 1 }}>
+          <Select
+            id='language-options-multiselect'
+            size='small'
+            value={i18n.language}
+            onChange={(e) => changeLanguageHandler(e.target.value as Language)}
+          >
+            {LANGUAGES.map(({ key, name }) => (
+              <MenuItem key={key} value={key}>
+                {name}
+              </MenuItem>
+            ))}
+          </Select>
+        </Box>
       </Box>
 
       <Container sx={{ mt: 1 }}>
