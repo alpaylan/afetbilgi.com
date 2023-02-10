@@ -20,9 +20,8 @@ const isOneOfTypes = (data : MarkerData["map_data"][0], types: string[]) => {
 
 }
 
-const isType = (data : MarkerData["map_data"][0], type: string) => {
-    return type === data.type
-
+const isType = (item : MarkerData["map_data"][any], type: string) => {
+    return item?.type === type;
 }
 
 /*
