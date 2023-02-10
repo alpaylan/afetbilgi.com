@@ -1,6 +1,9 @@
+import re
 from urllib.parse import urlparse
 
 from core import MDTable
+
+empty_space_replace_regex = re.compile(r"[\n\r\t]+")
 
 def phone_or_str(x):
     if x == "None" or x is None or x == "" or x == "-":
@@ -37,7 +40,8 @@ def process_rows(r):
         if rr[i] == "None" or rr[i] is None:
             rows.append("-")
         else:
-            rows.append(rr[i].replace("\n", " - "))
+            #rows.append(rr[i].replace("\n", " - "))
+            rows.append(empty_space_replace_regex.sub(" - ", rr[i]))
     
     return rows
 
@@ -50,7 +54,8 @@ def process_rows_list(r):
         if rr[i] == "None" or rr[i] is None:
             rows.append("-")
         else:
-            rows.append(rr[i].replace("\n", " - "))
+            # rows.append(rr[i].replace("\n", " - "))
+            rows.append(empty_space_replace_regex.sub(" - ", rr[i]))
 
     return rows
 
