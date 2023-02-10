@@ -85,10 +85,10 @@ if __name__ == "__main__":
 
         vets.append(
             {
-                "name": row["İsim"] if not pd.isna(row["İsim"])  else None,
-                "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
-                "address": row["Konum"] if not pd.isna(row["Konum"]) else None,
-                "maps_link": row["Konum Linki"] if not pd.isna(row["Konum Linki"]) else None,
+                "name": row["İsim"].strip() if not pd.isna(row["İsim"])  else None,
+                "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                "address": row["Konum"].strip() if not pd.isna(row["Konum"]) else None,
+                "maps_link": row["Konum Linki"].strip() if not pd.isna(row["Konum Linki"]) else None,
             }
         )
         

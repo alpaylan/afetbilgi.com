@@ -24,12 +24,12 @@ def main():
 
         transportations.append(
             {
-                "name": turkish_title(row["Şirket/Kampanya İsmi"]),
-                "url": row["Link"],
-                "validation_type": row["Doğrulanma Yöntemi"],
-                "validation_date": row["Doğrulama Tarihi"],
-                "description": row["Açıklama"],
-                "validity-date": row["Geçerlilik Tarihi"],
+                "name": turkish_title(row["Şirket/Kampanya İsmi"].strip()),
+                "url": row["Link"].strip(),
+                "validation_type": row["Doğrulanma Yöntemi"].strip(),
+                "validation_date": row["Doğrulama Tarihi"].strip(),
+                "description": row["Açıklama"].strip(),
+                "validity-date": row["Geçerlilik Tarihi"].strip(),
             }
         )
 

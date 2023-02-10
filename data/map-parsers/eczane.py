@@ -28,7 +28,7 @@ class EczaneParser(BaseMapParser):
                     "city": row[0],
                     "district": row[1],
                     "location": row[2],
-                    "latitute": coor[0],
+                    "latitude": coor[0],
                     "longitude": coor[1],
                 }
             )
@@ -37,5 +37,5 @@ class EczaneParser(BaseMapParser):
 
         return {
             "type": "map-container-pharmacy",
-            "data": eczaneler, 
+            "data": eczaneler,
         }

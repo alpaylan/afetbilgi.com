@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -28,7 +28,8 @@
     "react-leaflet": "^4.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.0",
