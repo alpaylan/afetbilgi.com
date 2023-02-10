@@ -3,9 +3,9 @@ import {
   Box,
   Button,
   Divider,
+  Stack,
   TextField,
   Typography,
-  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -30,7 +30,6 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint;
 
 export default function Question({ paths }: { paths: string[] }) {
-  const isMinWidth = useMediaQuery('(max-width:1078px)');
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
@@ -109,31 +108,40 @@ export default function Question({ paths }: { paths: string[] }) {
         );
       });
 
-      const dividerPos = isMinWidth ? [0,2] : [0,1];
-
-      return Object.keys(buttonsByCategories)
-        .filter((category) => buttonsByCategories[category].length > 0)
-        .map((category, i) => (
-          <>
-            <Box
-              sx={{
-                textAlign: 'center',
-                display: 'flex',
-                flexFlow: 'column nowrap',
-                justifyContent: 'center',
-                paddingTop: '50px',
-              }}
-            >
-              <Typography variant='h5'>
-                {t(`category.${category}.name`)}
-              </Typography>
-              {buttonsByCategories[category]}
-            </Box>
-            {dividerPos.includes(i) && (
-              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, borderRightWidth: 2 }} />
-            )}
-          </>
-        ));
+      return (
+        <Stack 
+          direction={{ xs: 'column', sm: 'row' }}
+          justifyContent="center"
+          alignItems="center"
+          divider={<Divider orientation="vertical" flexItem sx={{ mt: 5 }} />}
+          sx={{ 
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignItems: 'start',
+            justifyContent: 'center',
+            paddingTop: '50px',
+          }}
+        >
+          {Object.keys(buttonsByCategories)
+            .filter((category) => buttonsByCategories[category].length > 0)
+            .map((category) => (
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexFlow: 'column nowrap',
+                  justifyContent: 'center',
+                  paddingTop: '50px',
+                }}
+              >
+                <Typography variant='h5'>
+                  {t(`category.${category}.name`)}
+                </Typography>
+                {buttonsByCategories[category]}
+              </Box>
+          ))}
+        </Stack>
+      );
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
       <Autocomplete
