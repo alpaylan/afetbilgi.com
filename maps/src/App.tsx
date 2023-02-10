@@ -1,7 +1,14 @@
 import Map from "./Map";
+import Test from "./Test";
 
 export default function App() {
+
+
+
   return (
-    <Map />
+    <div>
+      <Test />
+      <Map />
+    </div>
   )
 }
