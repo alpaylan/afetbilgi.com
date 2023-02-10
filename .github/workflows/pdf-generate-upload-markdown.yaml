@@ -1,10 +1,6 @@
 name: PDF upload with Markdown (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/pdf-md-translation
-      
   workflow_dispatch:
 
   schedule:
