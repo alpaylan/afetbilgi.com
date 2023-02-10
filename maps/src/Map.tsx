@@ -1,8 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
-import { CheckCircleOutline, CircleOutlined, ExpandCircleDown } from '@mui/icons-material';
+import { Stack } from '@mui/system';
+import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
-import SearchIcon from '@mui/icons-material/Search';
 import { useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
 
@@ -21,14 +21,14 @@ export enum DataType {
 
 export const dataTypeToColor: { [k: string]: string } =
   {
-    [DataType.CITY_ACCOMMODATION]: '#a22',
-    [DataType.NEW_GATHERING_LIST]: '#22b',
-    [DataType.HELP_ITEM_LIST]: '#2b2',
-    [DataType.STEM_CELL_DONATION]: '#bb2',
-    [DataType.DATA_VET]: '#2bb',
-    [DataType.FOOD_ITEMS]: '#b2b',
-    [DataType.CONTAINER_PHARMACY]: '#c44',
-    [DataType.EVACUATION_POINTS]: '#55d',
+    [DataType.CITY_ACCOMMODATION]: '#01e',
+    [DataType.NEW_GATHERING_LIST]: '#e10',
+    [DataType.HELP_ITEM_LIST]: '#0b4',
+    [DataType.STEM_CELL_DONATION]: '#fb0',
+    [DataType.DATA_VET]: '#2be',
+    [DataType.FOOD_ITEMS]: '#666',
+    [DataType.CONTAINER_PHARMACY]: '#e4b',
+    [DataType.EVACUATION_POINTS]: '#80e',
   };
 
 export const dataTypeToLabel: { [k: string]: any } =
@@ -93,8 +93,10 @@ export default function Map() {
 
         {filteredData.map((item, i) => (
           item.data.map((subitem, j) => (
-            <CircleMarker key={`marker-${i}-${j}`}
-              center={[subitem.latitude, subitem.longitude]} weight={4} color="black"
+            <CircleMarker
+              key={`marker-${i}-${j}`}
+              center={[subitem.latitude, subitem.longitude]} weight={1}
+              color="black"
               fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
             >
               <Popup>
@@ -122,39 +124,37 @@ export default function Map() {
           sx={{
             backgroundColor: 'white',
             border: 1,
-            borderColor: 'border',
-            borderStyle: 'groove',
-            borderRadius: 1,
+            borderColor: 'rgba(0, 0, 0, 0.12)',
+            borderRadius: '4px',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             minWidth: 200,
             height: 45,
             padding: '0px 10px',
           }}
         >
           <InputBase
-            sx={{ m: 1 }}
+            sx={{ p: 1 }}
             placeholder="Search"
             onChange={e => setSearchString(e.target.value)}
           />
-          <Divider orientation="vertical" variant="middle" flexItem />
-          <IconButton
-            type="submit"
-            sx={{ marginLeft: 1 }}
-            aria-label="search"
-            onClick={() => {
-            }}
-          >
-            <SearchIcon />
-          </IconButton>
+          <Box sx={{ display: 'flex' }}>
+            <Divider orientation="vertical" variant="middle" flexItem />
+            <IconButton
+              type="submit"
+              sx={{ marginLeft: 1 }}
+              aria-label="search"
+              >
+              <SearchIcon />
+            </IconButton>
+          </Box>
         </Box>
 
         <Box sx={{
           mt: 2,
-          p: 1,
         }}>
-          <Accordion>
+          <Accordion variant='outlined'>
             <AccordionSummary
               expandIcon={<ExpandCircleDown />}
               aria-controls="panel1a-content"
@@ -163,26 +163,28 @@ export default function Map() {
               <Typography>Filtrele</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {Object.values(DataType)
-                .map((type) => (
-                  <div
-                  className='category-checkbox'
-                  style={{
-                    backgroundColor: dataTypes.includes(type) ? dataTypeToColor[type] : `${dataTypeToColor[type]}a`,
-                  }}
-                  key={`checkbox-${type}`}
-                  onClick={() => {
-                    setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
-                  }}
-                  >
-                    {dataTypes.includes(type)
-                      ? <CheckCircleOutline style={{ color: 'white' }} />
-                      : <CircleOutlined style={{ color: 'white' }} />}
-                    <Typography variant="body1" component="span" sx={{ ml: 1 }}>
-                      {dataTypeToLabel[type].name_tr}
-                    </Typography>
-                </div>
-              ))}
+              <Stack gap={1}>
+                {Object.values(DataType)
+                  .map((type) => (
+                    <div
+                    className='category-checkbox'
+                    style={{
+                      backgroundColor: dataTypes.includes(type) ? dataTypeToColor[type] : `${dataTypeToColor[type]}a`,
+                    }}
+                    key={`checkbox-${type}`}
+                    onClick={() => {
+                      setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
+                    }}
+                    >
+                      {dataTypes.includes(type) 
+                        ? <CheckCircleOutline style={{ color: 'white' }} />
+                        : <CircleOutlined style={{ color: 'white' }} />}
+                      <Typography variant="body1" component="span" sx={{ ml: 1 }}>
+                        {dataTypeToLabel[type].name_tr}
+                      </Typography>
+                  </div>
+                ))}
+              </Stack>
             </AccordionDetails>
           </Accordion>
         </Box>
