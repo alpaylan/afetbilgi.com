@@ -48,6 +48,12 @@
   "data.vpn.title": "İnternete bağlanmak için aşağıdaki ücretsiz VPN'leri kullanabilirsiniz.",
   "data.vpn.subtitle": "VPN bloklanan sitelere girmenizi sağlar.",
   "data.evacuation_points.title": "{{city}} Şehrinde Tahliye Noktaları",
+  "data.donation.title": "Para Bağışı Yapabileceğiniz Kurum ve Kuruluşların Resmi Bağış Siteleri",
+  "data.donation.subtitle": "Bu sayfadaki kurum ve kuruluşların resmi bağış sitelerine aşağıdaki linklerden ulaşabilirsiniz.",
+  "data.transportation.title": "Ulaşım Yardımı Yapacağını Açıklayan Kurumlar",
+  "data.transportation.validationDate": "Doğrulanma Tarihi",
+  "data.transportation.validityDate": "Geçerlilik",
+  "data.transportation.validityDate.explanation": "{{date}} tarihine kadar geçerlidir.",
 
   "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",

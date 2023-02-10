@@ -1,0 +1,24 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "donation-links",
+        "items": [
+            {
+                "name": "AHBAP Resmi Bağış Sayfası",
+                "url": "https://ahbap.org/bagisci-ol"
+            },
+            {
+                "name": "AFAD Resmi Bağış Sayfası",
+                "url": "https://www.afad.gov.tr/depremkampanyasi2"
+            },
+            {
+                "name": "AKUT Bağış Sayfası",
+                "url": "https://www.akut.org.tr/bagis-yap"
+            },
+            {
+                "name": "Kızılay Bağış Sayfası",
+                "url": "https://www.kizilay.org.tr/bagis"
+            }
+        ]
+    }
+}

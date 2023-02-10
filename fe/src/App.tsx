@@ -109,7 +109,7 @@ const App = () => {
             <Button
               size='large'
               onClick={() => {
-                downloadPDF(location.pathname);
+                downloadPDF();
               }}
             >
               {t('button.download')}

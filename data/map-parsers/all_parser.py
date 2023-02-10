@@ -38,7 +38,7 @@ async def main():
     }
 
     with open(out_path, "w+", encoding="utf-8") as f:
-        json.dump(res, f, ensure_ascii=False)
+        json.dump(res, f, ensure_ascii=False, allow_nan=False)
 
 if __name__ == "__main__":
     asyncio.run(main())

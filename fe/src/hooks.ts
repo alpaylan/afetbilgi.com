@@ -3,11 +3,12 @@
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
-
 import { TreeNodeType } from './variables/TreeNode';
 
+const d = new Date();
+const version = d.getDate().toString().concat(".", d.getHours().toString(), d.getMinutes().toString());
 const baseQuestionData = axios
-  .get(`https://cdn.afetbilgi.com/latest.json?v=2.3`)
+  .get(`https://cdn.afetbilgi.com/latest.json?v=${version}`)
   .then((res) => res.data);
 
 export const useQuestionData = (paths: string[]) => {
