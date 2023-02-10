@@ -1,4 +1,4 @@
-import { filterMultipleTypes, filterType } from "./helpers/filters";
+import { filterMultipleTypes, filterType, searchText } from "./helpers/filters";
 import { useMarkers } from "./hooks";
 
 export default function Test() {
@@ -9,6 +9,9 @@ export default function Test() {
 
     const filteredMapDataTypes = filterMultipleTypes(data.map_data, ["test", "city-accommodation | gathering-list | help-item-list | phone-number-list | useful-links | beneficial-articles | stem-cell-donation | data-vet | food-items"],);
     console.log(filteredMapDataTypes)
+
+    const texts = searchText(filteredMapData[0], "nam", ["name"])
+    console.log("texts", texts);
 
     return(<></>)
 }
