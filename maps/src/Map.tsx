@@ -1,10 +1,11 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
+import CustomMarker from './CustomMarker';
 
 import "./Map.css"
 
@@ -92,39 +93,11 @@ export default function Map() {
 
         {filteredData.map((item, i) => (
           item.data.map((subitem, j) => (
-            <CircleMarker
-              key={`marker-${i}-${j}`}
-              center={[subitem.latitude, subitem.longitude]}
-              weight={2}
-              color="white"
-              fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
-            >
-              <Popup>
-                {subitem.name && <Box><b>{subitem.name} - </b></Box>}
-                <Box sx={{ my: 1 }}><b>{dataTypeToLabel[item.type].name_tr}</b></Box>
-                {subitem.city && <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>}
-                {subitem.phone_number && <Box sx={{ my: 1 }}>Telefon: {subitem.phone_number}</Box>}
-                <Box sx={{ my: 1 }}>
-                  <Button
-                    variant='outlined'
-                    href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
-                  >
-                    Haritada Göster
-                  </Button>
-                </Box>
-
-                {subitem.url && (
-                  <Box sx={{ my: 1 }}>
-                    <Button
-                      variant='outlined'
-                      href={subitem.url}
-                      >
-                      Kaynak
-                    </Button>
-                  </Box>
-                )}
-              </Popup>
-            </CircleMarker>
+            <CustomMarker
+              key={`${i}-${j}`}
+              item={item}
+              subitem={subitem}
+              />
           )).flat()
         ))}
 
