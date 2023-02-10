@@ -24,7 +24,7 @@ class ToplanmaParser(BaseMapParser):
                     "city": turkish_title(row['Şehirler'].strip()),
                     "name": row['Konum'],
                     "source": row["Kaynak"],
-                    "latitute": coor[0],
+                    "latitude": coor[0],
                     "longitude": coor[1],
                 }
             )
@@ -33,5 +33,5 @@ class ToplanmaParser(BaseMapParser):
 
         return {
             "type": "map-gathering-list",
-            "data": toplanma_noktaliari, 
+            "data": toplanma_noktaliari,
         }
