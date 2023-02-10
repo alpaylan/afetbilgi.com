@@ -40,16 +40,17 @@ jobs:
           python ./yazilar.py ../latest_datasets/yazilar.json
           python ./toplanma.py ../latest_datasets/toplanma.json
           python ./barinma.py ../latest_datasets/barinma.json
-          python ./blood.py ../latest_datasets/blood.json
           python ./kokhucre.py ../latest_datasets/kokhucre.json
           python ./telefonnumaralari.py ../latest_datasets/telefon.json
           python ./eczane.py ../latest_datasets/eczane.json
           python ./faydalilinkler.py ../latest_datasets/faydali_linkler.json
           python ./veteriner.py ../latest_datasets/veteriner.json
           python ./yardim_toplama_merkezleri.py ../latest_datasets/yardim_toplama_merkezleri.json
+          python ./tahliye_parser.py ../latest_datasets/tahliye.json
 
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
+          cp ../datasets/blood.json ../latest_datasets/blood.json
 
       - name: Merge datasets
         run: |

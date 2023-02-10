@@ -9,7 +9,7 @@ const {
   // createVpnPDF,
   createVeterinerPlacesPDF,
   createHelpCentersPDF,
-  createBloodDonationPDF,
+  // createBloodDonationPDF,
   createStemCellsPDF,
   createPharmacyPDF,
 } = require("./allDataToPDF");
@@ -23,6 +23,6 @@ createArticlePDF();
 // createVpnPDF();
 createVeterinerPlacesPDF();
 createHelpCentersPDF();
-createBloodDonationPDF();
+// createBloodDonationPDF();
 createStemCellsPDF();
 createPharmacyPDF();

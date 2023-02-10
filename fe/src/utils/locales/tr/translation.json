@@ -41,6 +41,7 @@
   "data.container_pharmacy": "Konteyner Eczane",
   "data.vpn.title": "İnternete bağlanmak için aşağıdaki ücretsiz VPN'leri kullanabilirsiniz.",
   "data.vpn.subtitle": "VPN bloklanan sitelere girmenizi sağlar.",
+  "data.evacuation_points.title": "{{city}} Şehrinde Tahliye Noktaları",
 
   "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",

@@ -68,7 +68,12 @@ export default function Question({ paths }: { paths: string[] }) {
       sx={{ m: 2, minWidth: '300px' }}
       onClick={() => {
         if (isRootQuestion) {
-          navigate(`/${encodeURIComponent(getOptionName(option, 'tr'))}`);
+          const optionName = encodeURIComponent(getOptionName(option, 'tr'));
+          if (optionName === 'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1') {
+            window.location.href = 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
+          } else {
+            navigate(`/${optionName}`);
+          }
         } else {
           navigate(
             `${location.pathname}/${encodeURIComponent(

@@ -31,7 +31,7 @@ class YemekParser(BaseMapParser):
                     "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
                     "updated_at_date": row["Teyit Tarih"] if not pd.isna(row["Teyit Tarih"]) else None,
                     "updated_at_time": row["Teyit Saati"] if not pd.isna(row["Teyit Saati"]) else None,
-                    "latitute": coor[0],
+                    "latitude": coor[0],
                     "longitude": coor[1],
                 }
             )

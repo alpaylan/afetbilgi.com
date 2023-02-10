@@ -34,7 +34,7 @@ def main():
         "type": "data",
         "data": {
             "dataType": "container-pharmacy",
-            "items": dps
+            "items": dps,
         }
     }
 
