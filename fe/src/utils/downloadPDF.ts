@@ -5,5 +5,5 @@ export const downloadPDF = (lang: string) => {
 
 
   // TODO: Replace this with pdf.afetbilgi.com
-  window.open(`https://cdn.afetbilgi.com/md-pdf/${lang}/afetbilgi.pdf?v=2.2`, '_blank');
+  window.open(`https://cdn.afetbilgi.com/md-pdf/${lang}/afetbilgi.pdf?v=2.4`, '_blank');
 };
