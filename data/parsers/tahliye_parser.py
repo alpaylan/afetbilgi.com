@@ -21,7 +21,7 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
-
+    df.sort_values(["Şehir"])
 
     tahliye_noktalari = []
     city_name = None
