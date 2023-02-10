@@ -1,0 +1,55 @@
+name: PDF upload (cronjob)
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "*/60 * * * *" # Run every hour
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16  
+          cache: 'yarn'
+          cache-dependency-path: pdfConverterAPI/leafGenerator/yarn.lock
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip" # caching pip dependencies
+
+      - name: Setup env
+        run: |
+          cd pdfConverterAPI
+          pip install -r requirements.txt
+          
+          mkdir outputs
+
+          cd leafGenerator
+          yarn install
+
+      - name: Generate PDFs
+        run: |
+          cd pdfConverterAPI/leafGenerator
+          node index.js
+
+          cd ..
+          python runner.py
+
+          mv outputs.pdf outputs/AfetBilgi.pdf
+          
+      - name: Sync PDFs
+        run: aws s3 sync ./pdfConverterAPI/outputs/. s3://cdn.afetbilgi.com/pdfs
