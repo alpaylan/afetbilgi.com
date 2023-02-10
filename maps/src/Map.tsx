@@ -1,6 +1,4 @@
 import { Box, Checkbox, CircularProgress, Divider, FormControlLabel, FormGroup, IconButton, InputBase } from '@mui/material';
-// eslint-disable-next-line
-import { LatLngTuple } from 'leaflet';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import SearchIcon from '@mui/icons-material/Search';
@@ -45,14 +43,13 @@ export const dataTypeToLabel: { [k: string]: any } =
     [DataType.EVACUATION_POINTS]:{ 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê' },
   };
 
+const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 export default function Map() {
   const { data, isLoading } = useMarkers();
 
   const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
-  const [selfPosition, setSelfPosition] = useState<GeolocationPosition | null>(null);
-  const selfLocation = useMemo(() => [selfPosition?.coords.latitude ?? 0, selfPosition?.coords.longitude ?? 0] as LatLngTuple, [selfPosition]);
-  // const selfLocation: [number, number] = [37.57713668904397, 36.92937651365644];
+  const [selfLocation, setSelfLocation] = useState<[number, number] | null>(null);
 
   const [searchString, setSearchString] = useState<string>('');
   const filteredData = useMemo(() => {
@@ -63,12 +60,20 @@ export default function Map() {
   }, [data, searchString, dataTypes]);
 
   useEffect(() => {
-    navigator.geolocation?.getCurrentPosition((position: GeolocationPosition) => {
-      setSelfPosition(position);
-    });
+    if (navigator.geolocation?.getCurrentPosition) {
+      navigator.geolocation.getCurrentPosition(
+        (position: GeolocationPosition) => {
+          setSelfLocation([position.coords.latitude, position.coords.longitude]);
+        },
+        () => {
+          setSelfLocation(BASE_LOCATION);
+        });
+    } else {
+      setSelfLocation(BASE_LOCATION);
+    }
   }, []);
 
-  if (!data || isLoading) {
+  if (!data || isLoading || !selfLocation) {
     return (
       <Box sx={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <CircularProgress />
