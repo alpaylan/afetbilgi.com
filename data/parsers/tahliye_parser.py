@@ -38,7 +38,12 @@ def main():
         )
 
     data = {
-        "type": "data",
+        "type": "question",
+        "text_tr": "Tahliye noktalarını görmek istediğiniz şehri seçiniz.",
+        "text_en": "Select the city where you want to see the evacuation points.",
+        "text_ku": "Bajarê ku hûn dixwazin nuqteyên valakirinê bibînin hilbijêrin.",
+        "text_ar": "حدد المدينة التي تريد أن ترى فيها نقاط الإخلاء.",
+        "autocompleteHint": "Şehir",
         "data": {
             "dataType": "evacuation-points",
             "items": tahliye_noktalari
