@@ -17,8 +17,8 @@ jobs:
         uses: lakuapik/gh-actions-http-status@v1
         with:
           sites: '["https://afetbilgi.com", "https://www.afetbilgi.com"]'
-          expected: '[301, 200]'
-          
+          expected: '[308, 200]'
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
