@@ -14,11 +14,12 @@ def main():
     city_translation = json.loads(open("./utils/il_translate.json").read())
 
     # canlıya alındaktan sonra sheet_id ve sheet_name değişmeli 
-    sheet_id = "10jxSHFfimCxmaGPiIYkVDSetXYXohXxZ0Pb6y_WVF5o"
-    sheet_name = "Sa%C4%9Fl%C4%B1k%20hizmetleri"
+    sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
+    sheet_name = "Sahra%20Hastaneleri"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
+    print(df)
 
     df["İl"] = df["İl"].apply(lambda x: turkish_title(x.strip()))
     df["İlçe"] = df["İlçe"].apply(lambda x: turkish_title(x.strip()))
