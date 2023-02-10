@@ -102,7 +102,7 @@ const App = () => {
             sx={{ m: 1 }}
             size='large'
             onClick={() => {
-              downloadPDF();
+              downloadPDF(i18n.language);
             }}
           >
             {t('button.download')}

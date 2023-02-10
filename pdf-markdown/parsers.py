@@ -67,14 +67,14 @@ def parse_city_accom(data, t):
 
         print(rr)
 
-        rr = rr[:2] + rr[3:]
-        
         if rr[3] != "-":
             rr[3] = link_or_str(rr[3], t["source"])
         
         if rr[4] != "-":
             rr[4] = link_or_str(rr[4], t["button.google_maps"])
 
+        rr = rr[:2] + rr[3:]
+    
         rows.append(rr)
 
     return MDTable([t["city"], t["location"], t["source"], t["address"], t["data.transportation.validationDate"]], rows)
