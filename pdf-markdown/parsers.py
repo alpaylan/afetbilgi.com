@@ -5,7 +5,7 @@ from core import MDTable
 def link_or_str(x, label):
     p = urlparse(x)
 
-    if p.scheme != "" and p.netloc != "":
+    if p.scheme == "" and p.netloc == "":
         return x
     
     return f"[{label}]({x})"
