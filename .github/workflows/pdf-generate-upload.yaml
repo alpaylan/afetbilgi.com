@@ -53,7 +53,7 @@ jobs:
           cd ..
           python runner.py
 
-          mv AfetBilgi.pdf outputs/
+          mv outputs.pdf outputs/AfetBilgi.pdf
           
       - name: Sync PDFs
         run: aws s3 sync ./pdfConverterAPI/outputs/. s3://cdn.afetbilgi.com/pdfs
