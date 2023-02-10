@@ -1,15 +1,11 @@
 name: PDF upload (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/pdf-workflow
-
   workflow_dispatch:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "*/30 * * * *" # Run every 30 minutes
+    - cron: "*/60 * * * *" # Run every hour
 
 jobs:
   deploy:
