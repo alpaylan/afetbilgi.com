@@ -88,7 +88,7 @@ def main():
                 "name_tr": city_name,
                 "name_en": city_translation[city_name]['en'],
                 "name_ar": city_translation[city_name]['ar'],
-                "name_fr": city_translation[city_name]['ku'],
+                "name_ku": city_translation[city_name]['ku'],
                 "value": {
                     "type": "data",
                     "data": {
