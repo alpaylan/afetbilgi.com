@@ -40,7 +40,7 @@ def main():
     data = {
         "type": "data",
         "data": {
-            "dataType": "tahliye-noktalari",
+            "dataType": "evacuation-points",
             "items": tahliye_noktalari
         }
     }
