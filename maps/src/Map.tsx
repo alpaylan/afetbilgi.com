@@ -9,7 +9,6 @@ export enum DataType {
   CITY_ACCOMMODATION = 'map-city-accommodation',
   NEW_GATHERING_LIST = 'map-gathering-list',
   HELP_ITEM_LIST = 'map-help-item-list',
-  PHONE_NUMBER_LIST = 'map-phone-number-list',
   STEM_CELL_DONATION = 'map-stem-cell-donation',
   DATA_VET = 'map-data-vet',
   FOOD_ITEMS = 'map-food-items',
@@ -25,7 +24,6 @@ export const dataTypeToColor: { [k: string]: string } =
     [DataType.STEM_CELL_DONATION]: '#777777',
     [DataType.DATA_VET]: '#333333',
     [DataType.FOOD_ITEMS]: '#444444',
-    [DataType.PHONE_NUMBER_LIST]: '#888888',
     [DataType.CONTAINER_PHARMACY]: '#aaaaaa',
     [DataType.EVACUATION_POINTS]: '#555555',
   };
@@ -36,7 +34,6 @@ export const dataTypeToLabel: { [k: string]: any } =
     [DataType.NEW_GATHERING_LIST]:{ 'name_ar': 'مناطق تجميع آمنة', 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'name_ku': 'Qadên Ewle Bo Kombûnê' },
     [DataType.FOOD_ITEMS]:{ 'name_ar': 'مواقع توصيل الطعام', 'name_tr': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê' },
     [DataType.CONTAINER_PHARMACY]:{ 'name_ar': "صيدليات الحاويات", "name_ku": "Dermanxaneyên Seyare", "name_en": "Container Pharmacies", "name_tr": 'Konteyner Eczaneler' },
-    [DataType.PHONE_NUMBER_LIST]:{ 'name_ar': 'أرقام هواتف مهمة', 'name_tr': 'Önemli Telefon Numaraları', 'name_en': 'Crucial Phone Number', 'name_ku': 'Numareyên Girîng' },
     [DataType.DATA_VET]: { 'name_ar': 'بَيَاطير', 'name_tr': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner' },
     [DataType.HELP_ITEM_LIST]:{ 'name_ar': 'فرص التبرع بالعناصر', 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation', 'name_ku': 'Bexşkirina Tiştan' },
     [DataType.STEM_CELL_DONATION]:{ 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name_tr': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê' },
