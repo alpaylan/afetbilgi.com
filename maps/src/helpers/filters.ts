@@ -1,4 +1,7 @@
+import slugify from "slugify";
 import { MarkerData} from "../hooks";
+
+
 
 export const filterType = (data: MarkerData["map_data"], type: string) =>  {
     return data.filter (item => isType(item, type))
@@ -23,16 +26,16 @@ const isOneOfTypes = (item : MarkerData["map_data"][any], types: string[]) => {
 }
 
 export const searchText = (typeData: MarkerData["map_data"][any], searchString: string, searchAttributes: string[]) => {
-    const searchStringLower = searchString.toLowerCase();
+    const searchStringLower = slugify(searchString)
     return typeData.data.filter( item => doesContainInAttributes(item, searchStringLower, searchAttributes) )
 
 } 
 
 const doesContainInAttributes = (item: MarkerData["map_data"][any]["data"][any], searchString: string, searchAttributes: string[]) => {
-    if(searchAttributes.includes("name") && item.name.toLowerCase().includes(searchString)) {
+    if(searchAttributes.includes("name") && slugify(item.name).includes(searchString)) {
         return true;
     }
-    if(searchAttributes.includes("description") && item.description?.toLowerCase().includes(searchString)) {
+    if(searchAttributes.includes("description") && item.description && slugify(item.description).includes(searchString)) {
         return true;
     }
     return false;

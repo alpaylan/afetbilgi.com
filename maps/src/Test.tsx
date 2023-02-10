@@ -10,7 +10,7 @@ export default function Test() {
     const filteredMapDataTypes = filterMultipleTypes(data.map_data, ["test", "city-accommodation | gathering-list | help-item-list | phone-number-list | useful-links | beneficial-articles | stem-cell-donation | data-vet | food-items"],);
     console.log(filteredMapDataTypes)
 
-    const texts = searchText(filteredMapData[0], "nam", ["name"])
+    const texts = searchText(filteredMapData[0], "desc", ["name", "description"])
     console.log("texts", texts);
 
     return(<></>)
