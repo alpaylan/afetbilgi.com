@@ -34,7 +34,19 @@ def main():
         "type": "data",
         "data": {
             "dataType": "container-pharmacy",
-            "items": dps
+            "items": dps,
+            'externalData' : {
+                "text_tr": 'Konteyner eczaneler hakkında daha fazla bilgi',
+                "text_en": 'More information about container pharmacies',
+                "text_ku": 'Agahdariya konteynerê eczaneyê',
+                "text_ar": 'مزيد من المعلومات حول صيدليات الحاويات',
+                "usefulLinks": [
+                    {
+                        "name":'Türkiye Eczaneler Birliği',
+                        "url": 'https://www.google.com/maps/d/u/0/viewer?mid=1Ahwvt79jUCCRpn4cJlukvVUCT_8zeew&ll=37.28229425849282%2C37.97468416917397&z=8',
+                    },
+                ],
+            }
         }
     }
 
