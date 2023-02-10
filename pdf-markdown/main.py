@@ -5,6 +5,21 @@ import datetime
 from core import MDNode
 from parsers import data_type_parsers
 
+CUSTOM_MD_SPEC = """
+---
+stylesheet: https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css
+body_class: markdown-body
+css: |-
+  .page-break { page-break-after: always; }
+  .markdown-body { font-size: 11px; }
+  .markdown-body pre > code { white-space: pre-wrap; }
+pdf_options:
+  format: a4
+  margin: 10mm 10mm
+---
+
+""".lstrip()
+
 def parse_node(node):
     print("Parse node: " + nametr_or_name(node))
 
@@ -82,7 +97,8 @@ def main():
     root.add_children(md_nodes)
     
     with open(target, "w") as f:
-        f.write(root.to_string())
+        s = CUSTOM_MD_SPEC + root.to_string()
+        f.write(s)
 
 if __name__ == "__main__":
     main()
