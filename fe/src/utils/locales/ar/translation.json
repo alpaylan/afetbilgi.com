@@ -55,6 +55,10 @@
   "data.transportation.validityDate": "صلاحية",
   "data.transportation.validityDate.explanation": "صالح حتى {{date}}.",
 
+  "validation_status": "حالة التحقق",
+  "pdf_notice": "هذه الوثيقة مأخوذة من موقع [afetbilgi.com](https://afetbilgi.com). آخر تاريخ للتحقق من صحة البيانات: {date}",
+  "validation_time": "الساعة التحديث",
+
   "notFound": "لم يتم العثور على الصفحة",
   "button.back": "السابق",
   "button.language": "تغيير",

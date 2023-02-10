@@ -54,6 +54,10 @@
   "data.transportation.validityDate": "Maqûlî",
   "data.transportation.validityDate.explanation": "Heta {{date}} derbasdar e",
 
+  "validation_status": "Rewşa verastkirinê",
+  "pdf_notice": "",
+  "validation_time": "",
+
   "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",
   "button.language": "Ziman biguherîne",

@@ -54,6 +54,10 @@
   "data.transportation.validityDate": "Validity",
   "data.transportation.validityDate.explanation": "Valid until {{date}}",
 
+  "validation_status": "Is Valid",
+  "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
+  "validation_time": "Last Update Time",
+
   "notFound": "Page not found",
   "button.back": "Back",
   "button.language": "Change Language",

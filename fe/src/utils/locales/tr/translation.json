@@ -55,6 +55,10 @@
   "data.transportation.validityDate": "Geçerlilik",
   "data.transportation.validityDate.explanation": "{{date}} tarihine kadar geçerlidir.",
 
+  "validation_status": "Doğrulanma Durumu",
+  "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",
+  "validation_time": "Güncelleme Saati",
+
   "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
