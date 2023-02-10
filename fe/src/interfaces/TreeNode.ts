@@ -166,6 +166,22 @@ export interface FoodDistributionDataNode extends DataNode {
   items: FoodDistribution[];
 }
 
+export interface SahraItem {
+  district: string;
+  name: string;
+  maps_url?: string;
+  url?: string;
+  phone_number?: string;
+  updated_at_date: string;
+  updated_at_time: string;
+}
+
+export interface SahraDataNode extends DataNode {
+  city: string;
+  items: SahraItem[];
+}
+
+
 export interface VpnDataNode extends DataNode {
   items: {
     name: string;

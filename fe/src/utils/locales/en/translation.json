@@ -53,6 +53,13 @@
   "data.transportation.validationDate": "Validation Date",
   "data.transportation.validityDate": "Validity",
   "data.transportation.validityDate.explanation": "Valid until {{date}}",
+  "data.health_services.title": "Health Services in {{city}}",
+  "data.health_services.subtitle": "All locations on this page have been verified by phone. However, since this information can change within days or even hours, you are kindly requested to do your own research.",
+  "data.health_services.detail_main": "For detailed information you can check ",
+  "data.health_services.detail_call": "",
+  "data.health_services.detail_inspect": "",
+  "data.health_services.detail_mix": " or you can check ",
+  "data.health_services.detail_website": "this website",
 
   "notFound": "Page not found",
   "button.back": "Back",
