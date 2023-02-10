@@ -182,3 +182,15 @@ export interface ContainerPharmacy {
 export interface ContainerPharmacyDataNode extends DataNode {
   items: ContainerPharmacy[];
 }
+
+export interface EvacuationDataNode extends DataNode {
+  items: {
+    city: string;
+    county: string;
+    name: string;
+    map_link: string;
+    address: string;
+    contacts: string[];
+    validator: string;
+  }[];
+}

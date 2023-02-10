@@ -22,10 +22,10 @@ def main():
 
         articles.append(
             {
-                "title": row['Yazı Adı'],
-                "author": row['Yazar'],
-                "url": row['Link'],
-                "topic": row['Yazı Konusu'],
+                "title": row['Yazı Adı'].strip(),
+                "author": row['Yazar'].strip(),
+                "url": row['Link'].strip(),
+                "topic": row['Yazı Konusu'].strip(),
             }
         )
 

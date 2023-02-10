@@ -64,12 +64,12 @@ def main():
         for _, row in city_df.iterrows():
             ilce_dict[row[1]].append(
                 {
-                    "name": row["Lokasyon"] if not pd.isna(row["Lokasyon"]) else None,
-                    "maps_url": row["Google Maps Linki"] if not pd.isna(row["Google Maps Linki"]) else None,
-                    "url": row["Anons Linki"] if not pd.isna(row["Anons Linki"]) else None,
-                    "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
-                    "updated_at_date": row["Teyit Tarih"] if not pd.isna(row["Teyit Tarih"]) else None,
-                    "updated_at_time": row["Teyit Saati"] if not pd.isna(row["Teyit Saati"]) else None,
+                    "name": row["Lokasyon"].strip() if not pd.isna(row["Lokasyon"]) else None,
+                    "maps_url": row["Google Maps Linki"].strip() if not pd.isna(row["Google Maps Linki"]) else None,
+                    "url": row["Anons Linki"].strip() if not pd.isna(row["Anons Linki"]) else None,
+                    "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                    "updated_at_date": row["Teyit Tarih"].strip() if not pd.isna(row["Teyit Tarih"]) else None,
+                    "updated_at_time": row["Teyit Saati"].strip() if not pd.isna(row["Teyit Saati"]) else None,
                 }
             )
         option_2 = []
@@ -128,6 +128,10 @@ def main():
                 {
                     "name":'Adana\'da Destek Alabileceğiniz Yemek İşletmeleri',
                     "url": 'https://www.google.com/maps/d/u/0/viewer?mid=1jEw7Qe2Z7SXH8a4rMx9bso1hycYi3vc&ll=36.994885473974875%2C35.40509821285593&z=11',
+                },
+                {
+                    "name":'Deprem Bölgesi Sahra Mutfak Haritası',
+                    "url": 'https://www.google.com/maps/d/embed?mid=1LspPt4CpxG6krYf2ABBZISBbqd4SZs0&ehbc=2E312F',
                 }
             ],
         }

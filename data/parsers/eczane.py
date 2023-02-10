@@ -24,17 +24,17 @@ def main():
             continue
 
         dps.append({
-            "city": row[0],
-            "district": row[1],
-            "location": row[2],
-            "locationLink": row[3],
+            "city": row[0].strip(),
+            "district": row[1].strip(),
+            "location": row[2].strip(),
+            "locationLink": row[3].strip(),
         })
 
     data = {
         "type": "data",
         "data": {
             "dataType": "container-pharmacy",
-            "items": dps
+            "items": dps,
         }
     }
 

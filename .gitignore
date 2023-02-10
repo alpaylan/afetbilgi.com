@@ -139,3 +139,4 @@ yarn-error.log*
 __pycache__/
 latest.json
 *.md
+maps/src/tempData.json

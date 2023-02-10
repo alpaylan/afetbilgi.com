@@ -29,7 +29,7 @@ class BarinmaParser(BaseMapParser):
                     "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
                     "url": get_data(row['Link']),
                     "validation_date": get_data(row['Doğrulanma Tarihi']),
-                    "latitute": coor[0],
+                    "latitude": coor[0],
                     "longitude": coor[1],
                 }
             )
@@ -38,5 +38,5 @@ class BarinmaParser(BaseMapParser):
 
         return {
             "type": "map-city-accommodation",
-            "data": barinma_noktalari, 
+            "data": barinma_noktalari,
         }

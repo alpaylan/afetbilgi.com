@@ -5,6 +5,11 @@
   "page.about.body.1": "afetbilgi.com malperek e ku ji aliyê komek xwendekar û mezûnên ODTU ve hatiye amadekirin da ku di têkoşîna li dijî Erdheja 6ê Sibata 2023-an a Bazarcixê de agahiyên girîng verast bike û ewan bi mexdûrên karesatê  û yên ku dixwazin alîkariyê bidin re parve bike.",
   "page.about.body.2": "Prensîbên bingehîn ên malperê, ku li ser bingehek bi tevahî ji hêla mirovan ve hatî çêkirin, rastbûn, bilez û sadebûn in. Dema ku bi me re têkilî daynin, em ji we daxwaz dikin ku hûn tenê agahdariyên pejirandî bidin û bi me re bixebitin da ku em pêşî li belavbûna agahdariyê derewîn bigirin.",
 
+  "page.tooltip.depremyardim": "Site ku hewceyê depremê xwe û bişopînin.",
+  "page.tooltip.afetharita": "Site ku hewceyê pêşniyarên bişopînê li ser pêşniyarê bikî.",
+  "page.tooltip.depremio": "Site ku hewceyê depremê xwe bi erzakê bişopînin.",
+  "page.tooltip.discord": "Discord server ku hewceyê projeyên xwe ve bi xweyê din bike.",
+
   "category.victim.name": "Ji bo mexdûrên erdhêjê",
   "category.helper.name": "Ji bo alîkarî",
   "category.resources.name": "Çavkanîyên Giring",
@@ -41,6 +46,7 @@
   "data.vpn.title": "Hûn bo înternetê karin VPNên belaş yên li jêr bikar bînin",
   "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
   "data.container_pharmacy": "Dermanxaneyên Seyare",
+  "data.evacuation_points.title": "Li Bajarê {{city}} Xalên Tehliyeyê",
 
   "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",
