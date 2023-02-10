@@ -2,7 +2,7 @@ import os
 from PyPDF2 import PdfMerger
 
 OUTPUT_ROOT = os.path.join(os.path.dirname(
-    os.path.realpath(__file__)), "outputs")
+    os.path.realpath(__file__)), "AfetBilgi")
 
 
 def generateParentPDF(folder):
