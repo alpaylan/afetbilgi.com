@@ -6,7 +6,7 @@ def phone_or_str(x):
     if x == "None" or x is None or x == "" or x == "-":
         return "-"
     
-    return f"[{x}](tel:{x})"
+    return f"[{x}](tel:{x.replace(' ', '')})"
 
 def link_or_str(x, label):
     p = urlparse(x)
