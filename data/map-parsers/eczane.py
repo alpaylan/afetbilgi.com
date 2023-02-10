@@ -16,7 +16,7 @@ class EczaneParser(BaseMapParser):
         query = urlencode({"sheet": "Konteynır Eczane", "tqx": "out:csv"})
 
         df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?{query}", encoding="utf-8", header=None)
-        df.fillna("")
+        df.fillna("", inplace=True)
         eczaneler = []
 
         async def process_row(row):

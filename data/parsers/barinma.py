@@ -180,6 +180,10 @@ def main():
                 {
                     "name": "Nilüfer Belediyesi Evim Evin Olsun",
                     "url": "https://www.nilufer.bel.tr/haber/evim-evin-olsun"
+                },
+                {
+                    "name": "Missafir",
+                    "url": "https://www.missafir.com/ev-sahipleriyle-depremzedeleri-bulusturma-platformu/"
                 }
 
             ],

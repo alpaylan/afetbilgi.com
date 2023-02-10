@@ -13,8 +13,9 @@ class ToplanmaParser(BaseMapParser):
         url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
         df = pd.read_csv(url, encoding="utf-8")
-        df.fillna("")
+        df.fillna("", inplace=True)
         toplanma_noktaliari = []
+
         async def process_row(row):
             coor = await cls.get_coordinates(row['Maps Linki'])
             if not coor:
@@ -22,8 +23,8 @@ class ToplanmaParser(BaseMapParser):
             toplanma_noktaliari.append(
                 {
                     "city": turkish_title(row['Şehirler'].strip()),
-                    "name": row['Konum'],
-                    "source": row["Kaynak"],
+                    "name": row['Konum'].strip() if not pd.isna(row['Konum'])  else None,
+                    "source": row['Kaynak'].strip() if not pd.isna(row['Kaynak']) else None,
                     "latitude": coor[0],
                     "longitude": coor[1],
                 }
