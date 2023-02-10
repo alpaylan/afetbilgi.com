@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 16  
           cache: 'yarn'
+          cache-dependency-path: pdfConverterAPI/leafGenerator/yarn.lock
 
       - uses: actions/setup-python@v4
         with:
