@@ -25,7 +25,7 @@ class VeterinerParser(BaseMapParser):
                     "name": row["İsim"] if not pd.isna(row["İsim"])  else None,
                     "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
                     "address": row["Konum"] if not pd.isna(row["Konum"]) else None,
-                    "latitute": coor[0],
+                    "latitude": coor[0],
                     "longitude": coor[1],
                 }
             )

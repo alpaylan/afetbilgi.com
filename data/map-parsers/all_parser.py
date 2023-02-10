@@ -34,11 +34,11 @@ async def main():
 
     res =  {
         "update_time": datetime.now().isoformat(),
-        "map-data": data
+        "map_data": data
     }
 
     with open(out_path, "w+", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+        json.dump(res, f, ensure_ascii=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
