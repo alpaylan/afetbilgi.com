@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
+import CustomMarker from './CustomMarker';
 
 import "./Map.css"
 
@@ -83,9 +84,17 @@ export default function Map() {
     );
   }
 
+
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={centerLocation} zoom={15} maxZoom={20} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer
+        center={centerLocation}
+        zoom={15}
+        maxZoom={20}
+        scrollWheelZoom={true}
+        style={{ height: '100vh' }}
+        zoomSnap={0.25}
+      >
         <TileLayer
         attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -93,17 +102,11 @@ export default function Map() {
 
         {filteredData.map((item, i) => (
           item.data.map((subitem, j) => (
-            <CircleMarker
-              key={`marker-${i}-${j}`}
-              center={[subitem.latitude, subitem.longitude]} weight={1}
-              color="black"
-              fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
-            >
-              <Popup>
-                <div>{subitem.name}</div>
-                {subitem.url && <div><a href={subitem.url} target="_blank">{subitem.url}</a></div>}
-              </Popup>
-            </CircleMarker>
+            <CustomMarker
+              key={`${i}-${j}`}
+              item={item}
+              subitem={subitem}
+            />
           )).flat()
         ))}
 
