@@ -29,6 +29,7 @@ export enum DataType {
   FOOD_ITEMS = 'food-items',
   VPN = 'vpn',
   CONTAINER_PHARMACY = 'container-pharmacy',
+  EVACUATION_POINTS = 'evacuation-points',
 }
 
 export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
@@ -38,6 +39,7 @@ export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
     [DataType.NEW_GATHERING_LIST]: Category.VICTIM,
     [DataType.DATA_VET]: Category.VICTIM,
     [DataType.FOOD_ITEMS]: Category.VICTIM,
+    [DataType.EVACUATION_POINTS]: Category.VICTIM,
     [DataType.BANK_ACCOUNT_DONATION]: Category.HELPER,
     [DataType.BLOOD_DONATION_LIST]: Category.HELPER,
     [DataType.CREDIT_CARD_DONATION]: Category.HELPER,

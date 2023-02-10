@@ -41,6 +41,7 @@
   "data.vpn.title": "For internet connection issues you can use below VPNs",
   "data.vpn.subtitle": "VPN allows you to access blocked sites.",
   "data.container_pharmacy": "Container Pharmacy",
+  "data.evacuation_points.title": "Evacuation Points in {{city}}",
 
   "notFound": "Page not found",
   "button.back": "Back",
