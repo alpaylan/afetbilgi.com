@@ -14,7 +14,7 @@ def phone_or_str(x):
 def link_or_str(x, label):
     p = urlparse(x)
 
-    if p.scheme == "" and p.netloc == "":
+    if p.scheme == "" or p.netloc == "":
         return x
     
     return f"[{label}]({x})"
