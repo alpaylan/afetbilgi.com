@@ -5,7 +5,7 @@ export default function AboutUs() {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{paddingTop: 6}}>
+    <Box sx={{ paddingTop: 4 }}>
       <Container maxWidth="sm" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <Typography variant="h3" align="center" sx={{mt: 4}}>
             {t('page.about.title')}
@@ -18,6 +18,8 @@ export default function AboutUs() {
             </Typography>
             <Typography sx={{mt: 4}} variant="subtitle1" align="center">
                 <b>{t('contact')}:</b> <a href="mailto:info@afetbilgi.com">info@afetbilgi.com</a>
+                <br />
+                <a href="https://github.com/alpaylan/afetbilgi.com">Afet Bilgi - GitHub</a>
             </Typography>
         </Paper>
       </Container>

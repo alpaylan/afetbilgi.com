@@ -2,8 +2,13 @@
   "page.main.title": "Malper",
   "page.main.subtitle": "Ji kerema xwe mijara ku hûn dixwazin agahdarî li ser bigirin hilbijêrin",
   "page.about.title": "Der barê me de / Têkelî",
-  "page.about.body.1": "afetbilgi.com is a website prepared by a group of METU students and graduates to verify important information in the fight against the 6 February 2023 Pazarcık Earthquake and to deliver it to both disaster victims and those who want to help.",
-  "page.about.body.2": "The basic principles of the website, which is based on a completely human-made database, are accuracy, speed, and simplicity. When contacting us, we ask you to provide only confirmed information and to work with us to prevent the spread of false information.",
+  "page.about.body.1": "afetbilgi.com malperek e ku ji aliyê komek xwendekar û mezûnên ODTU ve hatiye amadekirin da ku di têkoşîna li dijî Erdheja 6ê Sibata 2023-an a Bazarcixê de agahiyên girîng verast bike û ewan bi mexdûrên karesatê  û yên ku dixwazin alîkariyê bidin re parve bike.",
+  "page.about.body.2": "Prensîbên bingehîn ên malperê, ku li ser bingehek bi tevahî ji hêla mirovan ve hatî çêkirin, rastbûn, bilez û sadebûn in. Dema ku bi me re têkilî daynin, em ji we daxwaz dikin ku hûn tenê agahdariyên pejirandî bidin û bi me re bixebitin da ku em pêşî li belavbûna agahdariyê derewîn bigirin.",
+
+  "category.victim.name": "Ji bo mexdûrên erdhêjê",
+  "category.helper.name": "Ji bo alîkarî",
+  "category.resources.name": "Çavkanîyên Giring",
+  "category.other.name": "Yên din",
 
   "data.city_accommodation.title": "{{city}} cihên mayînê",
   "data.city_accommodation.subtitle": "Hemî cîhên li ser vê rûpelê bi têlefonê hatine verast kirin, ji bilî yên ku tê de hatine destnîşan kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî demjimêran de biguhere, ji kerema xwe lêkolîna xwe bikin",
@@ -18,6 +23,8 @@
   "data.important_web_sites.subtitle": " Li vir girêdanên ku hûn hewce ne hene ",
   "data.important_articles.title": "Nivîsên kêrhatî",
   "data.important_articles.subtitle": "Hûn dikarin li jêr nivîsên kêrhatî yên derbarê piştî erdhejê de bibînin..",
+  "data.important_articles.article_title": "Sernav",
+  "data.important_articles.article_author": "Nivîskar",
   "data.veterinary.title": "{{city}} Alîkariya veterînerî ya bêpere",
   "data.veterinary.subtitle": "Hemî numareyê veterîneran yên li ser vê rûpelê bi têlefonê hatine verast kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî saetan de biguhere, ji we tê xwestin ku hûn lêkolîna xwe bikin.",
   "data.food_distribution.title": "{{city}}, {{county}} Cihên carina bêpere",
@@ -33,10 +40,13 @@
   "data_blood_donation": "Cihên bo bexşîna xwînê",
   "data.vpn.title": "Hûn bo înternetê karin VPNên belaş yên li jêr bikar bînin",
   "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
+  "data.container_pharmacy": "Dermanxaneyên Seyare",
 
+  "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",
   "button.language": "Ziman biguherîne",
   "button.google_maps": "Girêdana Google Mapsê ",
+  "button.download": "Wekî PDF dakêşin",
   "last_update": "nûvekirina dawîn",
   "name": "Nav",
   "map": "Qert",
@@ -51,5 +61,5 @@
   "details": " Hûrgilî",
   "website": " Malper",
   "source": "Çavkaniyê",
-  "contact": "Têkelî"
+  "contact": "Têkilî"
 }

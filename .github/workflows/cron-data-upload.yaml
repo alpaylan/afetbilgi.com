@@ -1,9 +1,11 @@
 name: Data upload (cronjob)
 
 on:
+  workflow_dispatch:
+
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/10 * * * *' # Run every 10 minutes
+    - cron: "*/30 * * * *" # Run every 30 minutes
 
 jobs:
   deploy:
@@ -28,27 +30,24 @@ jobs:
       - name: Run parsers
         run: |
           cd data
-          
+
           mkdir to_upload
           mkdir latest_datasets
 
           cd parsers
 
-          python ./toplanma_parser.py > ../latest_datasets/toplanma.json
-          python ./faydalilinkler_parser.py > ../latest_datasets/faydali_linkler.json
-          python ./veteriner_parser.py > ../latest_datasets/veteriner.json
-          python ./yazilar_parser.py > ../latest_datasets/yazilar.json
+          python ./yemek.py ../latest_datasets/yemek.json
+          python ./yazilar.py ../latest_datasets/yazilar.json
+          python ./toplanma.py ../latest_datasets/toplanma.json
+          python ./barinma.py ../latest_datasets/barinma.json
+          python ./blood.py ../latest_datasets/blood.json
+          python ./kokhucre.py ../latest_datasets/kokhucre.json
+          python ./telefonnumaralari.py ../latest_datasets/telefon.json
+          python ./eczane.py ../latest_datasets/eczane.json
+          python ./faydalilinkler.py ../latest_datasets/faydali_linkler.json
+          python ./veteriner.py ../latest_datasets/veteriner.json
+          python ./yardim_toplama_merkezleri.py ../latest_datasets/yardim_toplama_merkezleri.json
 
-          # python ./barinma_parser.py > ../latest_datasets/barinma.json
-          # python ./yemek_parser.py > ../latest_datasets/yemek.json
-          # python ./telefonnumaralari_parser.py > ../latest_datasets/telefon.json
-          cp ../datasets/barinma.json ../latest_datasets/barinma.json
-          cp ../datasets/yemek.json ../latest_datasets/yemek.json
-          cp ../datasets/barinma.json ../latest_datasets/barinma.json
-
-          cp ../datasets/yardim_toplama_merkezleri.json ../latest_datasets/yardim_toplama_merkezleri.json          
-          cp ../datasets/kokhucre.json ../latest_datasets/kokhucre.json
-          cp ../datasets/blood.json ../latest_datasets/blood.json
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
 
@@ -58,5 +57,4 @@ jobs:
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        # TODO: Change s3://cdn.afetbilgi.com/sazak-test-data to s3://cdn.afetbilgi.com
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/sazak-test-data
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com

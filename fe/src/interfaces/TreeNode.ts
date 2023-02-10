@@ -48,14 +48,16 @@ export interface BankDataNode extends DataNode {
 }
 
 export interface BloodDonationNode extends DataNode {
-  city: string;
-  name?: string;
-  head?: string;
-  address?: string;
-  phone_number?: string;
-  cell_phone_number?: string;
-  fax?: string;
-  url?: string;
+  items: {
+    city: string;
+    name?: string;
+    head?: string;
+    address?: string;
+    phone_number?: string;
+    cell_phone_number?: string;
+    fax?: string;
+    url?: string;
+  }[];
 }
 
 export interface CityAccommodationNode extends DataNode {
@@ -169,4 +171,14 @@ export interface VpnDataNode extends DataNode {
     name: string;
     url: string;
   }[];
+}
+
+export interface ContainerPharmacy {
+  city: string;
+  district: string;
+  location: string;
+  locationLink: string;
+}
+export interface ContainerPharmacyDataNode extends DataNode {
+  items: ContainerPharmacy[];
 }

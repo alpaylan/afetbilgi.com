@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Box } from '@mui/material';
 import { DataNode } from '../interfaces/TreeNode';
 import BankData from './data/BankData';
@@ -15,78 +16,35 @@ import StemCellData from './data/StemCellData';
 import VetData from './data/VetData';
 import FoodDistributionData from './data/FoodDistributionData';
 import VpnData from './data/VpnData';
+import ContainerPharmacyData from './data/ContainerPharmacyData';
+import { DataType } from '../variables/TreeNode';
+
+const pageMappings: Record<string, FC<{value: any}>> = {
+  [DataType.BANK_ACCOUNT_DONATION]: BankData,
+  [DataType.BENEFICIAL_ARTICLES]: ArticleData,
+  [DataType.BLOOD_DONATION_LIST]: BloodDonationData,
+  [DataType.CITY_ACCOMMODATION]: CityAccommodation,
+  [DataType.CREDIT_CARD_DONATION]: CreditCardData,
+  [DataType.INTERNATIONAL_BANK_ACCOUNT_DONATION]: BankData,
+  [DataType.INTERNATIONAL_URL_DONATION]: URLData,
+  [DataType.NEW_GATHERING_LIST]: GatheringData,
+  [DataType.HELP_ITEM_LIST]: HelpItemData,
+  [DataType.PHONE_NUMBER_LIST]: TelephoneData,
+  [DataType.SMS_DONATION]: SMSData,
+  [DataType.URL_DONATION]: URLData,
+  [DataType.USEFUL_LINKS]: UsefulLinksData,
+  [DataType.STEM_CELL_DONATION]: StemCellData,
+  [DataType.DATA_VET]: VetData,
+  [DataType.FOOD_ITEMS]: FoodDistributionData,
+  [DataType.VPN]: VpnData,
+  [DataType.CONTAINER_PHARMACY]: ContainerPharmacyData,
+}
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {
-    if (dataNode.data.dataType === 'bank-account-donation') {
-      return <BankData value={dataNode.data as any} />;
-    }
+    const Page = pageMappings[dataNode.data.dataType];
 
-    if (dataNode.data.dataType === 'beneficial-articles') {
-      return <ArticleData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'blood-donation') {
-      return <BloodDonationData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'city-accommodation') {
-      return <CityAccommodation value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'credit-card-donation') {
-      return <CreditCardData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'international-bank-account-donation') {
-      return <BankData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'international-url-donation') {
-      return <URLData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'new-gathering-list') {
-      return <GatheringData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'help-item-list') {
-      return <HelpItemData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'phone-number-list') {
-      return <TelephoneData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'sms-donation') {
-      return <SMSData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'url-donation') {
-      return <URLData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'useful-links') {
-      return <UsefulLinksData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'stem-cell-donation') {
-      return <StemCellData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'data-vet') {
-      return <VetData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'food-items') {
-      return <FoodDistributionData value={dataNode.data as any} />;
-    }
-
-    if (dataNode.data.dataType === 'vpn') {
-      return <VpnData value={dataNode.data as any} />;
-    }
-
-    return <></>;
+    return Page ? <Page value={dataNode.data} /> : <>Not found</>;
   };
 
   return (
