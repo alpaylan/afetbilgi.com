@@ -11,9 +11,11 @@ export const filterMultipleTypes = (data: MarkerData["map_data"], types: string[
 }
 
 const isOneOfTypes = (item : MarkerData["map_data"][any], types: string[]) => {
-    types.forEach(type => {
-        if(item?.type === type) return true;
-    })
+    for (let i = 0; i < types.length; i += 1) {
+        if(item?.type === types[i]) {
+            return true
+        };
+    }
     return false; 
 }
 
