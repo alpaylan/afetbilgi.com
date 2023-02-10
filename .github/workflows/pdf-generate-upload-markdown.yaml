@@ -1,6 +1,10 @@
 name: PDF upload with Markdown (cronjob)
 
 on:
+  push:
+    branches:
+      - ozansz/pdf-md-translation
+      
   workflow_dispatch:
 
   schedule:
@@ -29,25 +33,46 @@ jobs:
           node-version: 16  
           # cache: 'npm'
 
-      - name: Generate Markdown
+      - name: Generate Markdowns
         run: |
           pip install -r requirements.txt
 
           aws s3 cp s3://cdn.afetbilgi.com/latest.json ./latest.json
 
           mkdir md-generated
+          mkdir md-generated/tr
+          mkdir md-generated/en
+          mkdir md-generated/ku
+          mkdir md-generated/ar
           
-          python pdf-markdown/main.py latest.json md-generated/afetbilgi.md
+          python pdf-markdown/main.py tr latest.json md-generated/tr/afetbilgi.md
+          python pdf-markdown/main.py en latest.json md-generated/en/afetbilgi.md
+          python pdf-markdown/main.py ku latest.json md-generated/ku/afetbilgi.md
+          python pdf-markdown/main.py ar latest.json md-generated/ar/afetbilgi.md
 
       - name: Generate PDF
         run: |
           npm i -g md-to-pdf@latest
-        
-          cd md-generated
-          md-to-pdf afetbilgi.md
 
+          cd md-generated/tr
+          md-to-pdf afetbilgi.md
           cp afetbilgi.md "`date +%Y-%m-%d_%H-%M-%S`.md"
           cp afetbilgi.pdf "`date +%Y-%m-%d_%H-%M-%S`.pdf"
-          
+
+          cd ../en
+          md-to-pdf afetbilgi.md
+          cp afetbilgi.md "`date +%Y-%m-%d_%H-%M-%S`.md"
+          cp afetbilgi.pdf "`date +%Y-%m-%d_%H-%M-%S`.pdf"
+
+          cd ../ku
+          md-to-pdf afetbilgi.md
+          cp afetbilgi.md "`date +%Y-%m-%d_%H-%M-%S`.md"
+          cp afetbilgi.pdf "`date +%Y-%m-%d_%H-%M-%S`.pdf"
+
+          cd ../ar
+          md-to-pdf afetbilgi.md
+          cp afetbilgi.md "`date +%Y-%m-%d_%H-%M-%S`.md"
+          cp afetbilgi.pdf "`date +%Y-%m-%d_%H-%M-%S`.pdf"
+
       - name: Sync PDFs
         run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf
