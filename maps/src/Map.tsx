@@ -99,9 +99,7 @@ export default function Map() {
             >
               <Popup>
                 <div>{subitem.name}</div>
-                {subitem.description && <div>{subitem.description}</div>}
-                {subitem.phone && <div><a href={`tel:${subitem.phone}`} target="_blank">{subitem.phone}</a></div>}
-                {subitem.website && <div><a href={subitem.website} target="_blank">{subitem.website}</a></div>}
+                {subitem.url && <div><a href={subitem.url} target="_blank">{subitem.url}</a></div>}
               </Popup>
             </CircleMarker>
           )).flat()
@@ -177,7 +175,7 @@ export default function Map() {
                     setDataTypes(dataTypes.includes(type) ? dataTypes.filter((t) => t !== type) : [...dataTypes, type]);
                   }}
                   >
-                    {dataTypes.includes(type) 
+                    {dataTypes.includes(type)
                       ? <CheckCircleOutline style={{ color: 'white' }} />
                       : <CircleOutlined style={{ color: 'white' }} />}
                     <Typography variant="body1" component="span" sx={{ ml: 1 }}>

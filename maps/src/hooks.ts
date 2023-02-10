@@ -7,11 +7,7 @@ export interface MarkerData {
     type: string;
     data: {
       name: string;
-      address?: string;
-      phone?: string;
-      email?: string;
-      website?: string;
-      description?: string;
+      url?: string;
       latitude: number;
       longitude: number;
     }[];
