@@ -4,7 +4,6 @@
   padding: 15px 10px;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 5px;
   user-select: none;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   color: #fff;
