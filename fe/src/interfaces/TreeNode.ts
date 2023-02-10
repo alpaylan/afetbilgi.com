@@ -194,3 +194,14 @@ export interface EvacuationDataNode extends DataNode {
     validator: string;
   }[];
 }
+
+export interface TransportationDataNode extends DataNode {
+  transportations: {
+    name: string;
+    url: string;
+    validation_type: string;
+    validation_date: string;
+    description: string;
+    validity_date: string;
+  }[];
+}

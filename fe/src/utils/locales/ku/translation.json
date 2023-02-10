@@ -47,6 +47,10 @@
   "data.vpn.subtitle": " VPN dihêle hûn bigihîjin malperên astengkirî.",
   "data.container_pharmacy": "Dermanxaneyên Seyare",
   "data.evacuation_points.title": "Li Bajarê {{city}} Xalên Tehliyeyê",
+  "data.transportation.title": "Saziyên ku dê Alîkariya Veguhastinê bidin, hat ragihandin",
+  "data.transportation.validationDate": "Dîroka Verastkirinê",
+  "data.transportation.validityDate": "Maqûlî",
+  "data.transportation.validityDate.explanation": "Heta {{date}} derbasdar e",
 
   "notFound": "Rûpel nehat dîtin",
   "button.back": "paş",

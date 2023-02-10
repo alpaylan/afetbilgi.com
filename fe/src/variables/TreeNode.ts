@@ -30,6 +30,7 @@ export enum DataType {
   VPN = 'vpn',
   CONTAINER_PHARMACY = 'container-pharmacy',
   EVACUATION_POINTS = 'evacuation-points',
+  TRANSPORTATIONS = 'transportations',
 }
 
 export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
@@ -53,4 +54,5 @@ export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
     [DataType.PHONE_NUMBER_LIST]: Category.RESOURCES,
     [DataType.USEFUL_LINKS]: Category.RESOURCES,
     [DataType.VPN]: Category.RESOURCES,
+    [DataType.TRANSPORTATIONS]: Category.RESOURCES,
   };

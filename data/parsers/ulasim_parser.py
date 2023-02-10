@@ -29,7 +29,7 @@ def main():
                 "validation_type": row["Doğrulanma Yöntemi"].strip(),
                 "validation_date": row["Doğrulama Tarihi"].strip(),
                 "description": row["Açıklama"].strip(),
-                "validity-date": row["Geçerlilik Tarihi"].strip(),
+                "validity_date": row["Geçerlilik Tarihi"].strip(),
             }
         )
 
