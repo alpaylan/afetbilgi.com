@@ -68,7 +68,7 @@ export default function Map() {
     });
   }, []);
 
-  if (!data || isLoading || !selfPosition) {
+  if (!data || isLoading) {
     return (
       <Box sx={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <CircularProgress />
