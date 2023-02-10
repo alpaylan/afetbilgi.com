@@ -1,0 +1,64 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "transportations",
+        "transportations": [
+            {
+                "name": "Turkish Airlines",
+                "url": "https://www.turkishairlines.com/",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "13 Şubata kadar tek yön ücretsiz uçak bileti",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Pegasus",
+                "url": "https://www.flypgs.com/?ds_rl=1256634&ds_rl=1263092&ds_rl=1263092&gclid=CjwKCAiAioifBhAXEiwApzCztoyBFxdsrnQmrewESZDvBGYloa64KUK7sqGrF5_nJRyUsIz5oWvnnhoCM-MQAvD_BwE&gclsrc=aw.ds",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "13 Şubata kadar tek yön ücretsiz uçak bileti",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Anadolu Jet",
+                "url": "https://www.anadolujet.com/tr/kurumsal/haberler-ve-duyurular/kahramanmaras-ve-cevre-iller-kalkisli-ucuslar-13-subata-kadar-100-tl",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "13 Şubata kadar tek Maraş ve çevre illerden tek yönlü bilet 100 TL",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Obilet Destek100",
+                "url": "https://yardim.obilet.com/hc/tr/articles/7654734448924-Deprem-B%C3%B6lgeleri-DESTEK100-%C4%B0ndirim-Kuponu",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "DESTEK100” indirim koduyla, yalnızca Hatay, Malatya, Kahramanmaraş, Gaziantep, Adıyaman, Osmaniye, Kilis, Adana, Diyarbakır illerimize yönelik yapılacak otobüs bileti alımlarında 100TL indirim sağlanacaktır. Kalkış veya varış noktasının bu illerimizden biri içerisinden olması gerekmektedir.",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Obilet Destek50",
+                "url": "https://yardim.obilet.com/hc/tr/articles/7638480603548-Deprem-B%C3%B6lgeleri-DESTEK50-%C4%B0ndirim-Kuponu",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "“DESTEK50” indirim koduyla, yalnızca Hatay, Malatya, Kahramanmaraş, Gaziantep, Adıyaman, Osmaniye, Kilis, Adana, Diyarbakır illerimize yönelik yapılacak otobüs bileti alımlarında %50 indirim sağlanacak. Kalkış veya varış noktasının bu illerimizden biri olması yeterlidir.",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Metro Turizm",
+                "url": "https://www.metroturizm.com.tr/",
+                "validation_type": "İnternet Sitesi",
+                "validation_date": "07/02/2023",
+                "description": "Deprem bölgelerinden ücretsiz veya 10TL'ye özel seferler bulunmakta",
+                "validity_date": "13/02/2023"
+            },
+            {
+                "name": "Tcdd Afetzede Aktarım Treni",
+                "url": "https://www.instagram.com/p/CoZMzrCgUhT/",
+                "validation_type": "Instagram Resmi Hesabı",
+                "validation_date": "08/02/2023",
+                "description": "Hatay İskenderun ve Osmaniye'den Ceyhan Adana Tarsus ve Mersin'e",
+                "validity_date": "13/02/2023"
+            }
+        ]
+    }
+}
