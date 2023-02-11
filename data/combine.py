@@ -22,7 +22,7 @@ data_points = [
   { 'name_ar': 'نصوص مفيدة', 'name_tr': 'Faydalı Yazılar', 'name_en': 'Useful Articles' , 'name_ku': 'Agahiyên Kêrhatî', 'path': f'{basedir}/yazilar.json' },
   { 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê', 'path': f'{basedir}/tahliye.json' },
   { 'name_ar': 'مساعدات النقل', 'name_tr': 'Ulaşım Yardımları', 'name_en': 'Transportation Aid', 'name_ku': 'Alîkariya Veguhestinê', 'path': f'{basedir}/ulasim.json' },
-  { 'name_ar': 'المحطة البنزين', 'name_tr': 'Benzin İstasyonları', 'name_en': 'Gas Stations', 'name_ku': 'Stasyonên benzin', 'path': f'{basedir}/akaryakit.json' },
+  { 'name_ar': 'المحطة البنزين', 'name_tr': 'Benzin İstasyonları', 'name_en': 'Gas Stations', 'name_ku': 'Stasyona sotemeniyê', 'path': f'{basedir}/akaryakit.json' },
 
   # { 'name_tr': 'VPN', 'path': f'{basedir}/vpn.json' },
 #   STAGING

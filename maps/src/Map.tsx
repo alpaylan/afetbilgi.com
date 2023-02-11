@@ -101,7 +101,7 @@ export default function Map() {
 
     const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data.map_data;
     const group2 = filterMultipleTypes(group1, dataTypes);
-    console.log(group2);
+    
     return group2;
   }, [data, dataIndex, searchString, dataTypes]);
 
