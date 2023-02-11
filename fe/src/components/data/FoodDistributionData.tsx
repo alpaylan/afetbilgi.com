@@ -56,9 +56,13 @@ export default function FoodDistributionData({
                   </a>
                 </TableCell>
                 <TableCell>
-                  <a href={item.url} target='_blank'>
-                    {t('details')}
-                  </a>
+                  {
+                    item.url ?
+                    <a href={item.url} target='_blank'>
+                      {t('details')}
+                    </a>
+                    : ''
+                  }
                 </TableCell>
               </TableRow>
             ))}

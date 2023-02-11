@@ -69,9 +69,8 @@ def validate(schema_file, data_json):
     for opt in data["options"]:
         key = opt["name_tr"]
         if key not in schema:
-            print(f"Error: Root option {key} is not in the schema")
-            print_error_message()
-            sys.exit(1)
+            print(f"WARNING: Root option {key} is not in the schema, skipping")
+            continue
 
         if not validate_item(opt["value"], schema[key]):
             print(f"Error: Root option {key} has an invalid value")

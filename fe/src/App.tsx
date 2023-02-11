@@ -56,30 +56,35 @@ const App = () => {
 
   return (
     <Box>
-      {isMinWidth && <Box sx={{
-        display: 'flex',
-        background: 'rgba(220, 20, 60, 0.5)',
-        padding: '10px',
-        borderRadius: '10px',
-        zIndex: 500,
-        width: 'fit-content',
-        position: 'absolute',
-        ml: 2,
-      }}
-      >
-        <SitesFab />
-      </Box>}
+      {isMinWidth && (
+        <Box
+          sx={{
+            display: 'flex',
+            background: 'rgba(220, 20, 60, 0.5)',
+            padding: '10px',
+            borderRadius: '10px',
+            zIndex: 500,
+            width: 'fit-content',
+            position: 'absolute',
+            ml: 2,
+          }}
+        >
+          <SitesFab />
+        </Box>
+      )}
 
       <Waiting open={isLoading} />
 
-      <Box sx={{
-        mt: 3,
-        mb: 2,
-        display: 'flex',
-        flexFlow: 'column nowrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <Box
+        sx={{
+          mt: 3,
+          mb: 2,
+          display: 'flex',
+          flexFlow: 'column nowrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         <Box
           sx={{
             textAlign: 'center',
@@ -91,12 +96,7 @@ const App = () => {
         >
           {location.pathname !== '/' && (
             <>
-              <Button
-                size='large'
-                onClick={() =>
-                  navigate('/')
-                }
-              >
+              <Button size='large' onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
 
@@ -109,7 +109,7 @@ const App = () => {
           <Button
             size='large'
             onClick={() => {
-              window.location.href = 'https://maps.afetbilgi.com';
+              window.open('https://maps.afetbilgi.com', '_blank');
             }}
           >
             {t('button.map')}
@@ -150,9 +150,13 @@ const App = () => {
         </Routes>
       </Container>
 
-      {location.pathname === '/' && <Box sx={{ textAlign: 'center', p: 2 }}>
-        <Button onClick={() => navigate('/about')}>{t('page.about.title')}</Button>
-      </Box>}
+      {location.pathname === '/' && (
+        <Box sx={{ textAlign: 'center', p: 2 }}>
+          <Button onClick={() => navigate('/about')}>
+            {t('page.about.title')}
+          </Button>
+        </Box>
+      )}
       <Box sx={{ textAlign: 'center', p: 2 }}>
         {t('last_update')}: {buildDateString}
       </Box>
