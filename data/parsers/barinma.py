@@ -1,7 +1,7 @@
 import sys
 import json
 import pandas as pd
-
+import os
 from utils.functions import turkish_title
 
 
@@ -19,7 +19,8 @@ def main():
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
@@ -65,13 +66,10 @@ def main():
 
     #     df = pd.concat([df, dfj])
 
-
     df["Şehir"] = df["Şehir"].apply(str.strip)
     df["Şehir"] = df["Şehir"].apply(turkish_title)
 
     df = df.sort_values(["Şehir", "Lokasyon"])
-
-    
 
     parsed = []
     options = []
@@ -104,7 +102,7 @@ def main():
 
                 parsed = []
 
-        get_data = lambda x: x.strip() if not pd.isna(x) else None
+        def get_data(x): return x.strip() if not pd.isna(x) else None
 
         parsed.append(
             {
