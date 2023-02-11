@@ -1,10 +1,6 @@
 name: PDF upload with Markdown (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/purge-cache
-
   workflow_dispatch:
 
   schedule:
