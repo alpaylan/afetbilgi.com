@@ -76,8 +76,8 @@ export interface CityAccommodationNode extends DataNode {
 export interface Vet {
   name: string;
   phone_number: string;
-  address: string;
-  maps_url: string;
+  address?: string;
+  maps_link: string;
 }
 
 export interface VetNode extends DataNode {
