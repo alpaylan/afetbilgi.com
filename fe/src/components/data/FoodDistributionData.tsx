@@ -52,7 +52,7 @@ export default function FoodDistributionData({
                 </TableCell>
                 <TableCell>
                   <a href={item.maps_url} target='_blank'>
-                    Konum
+                    {t('location')}
                   </a>
                 </TableCell>
                 <TableCell>
