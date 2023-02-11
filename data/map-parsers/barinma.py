@@ -28,7 +28,10 @@ class BarinmaParser(BaseMapParser):
                 {
                     "city": turkish_title(row['Şehir'].strip()),
                     "name": get_data(row['Lokasyon']),
-                    "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
+
+                    # TODO: Add back after data migration, this is a temporary fix
+                    # "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
+
                     "url": get_data(row['Link']),
                     "validation_date": get_data(row['Doğrulanma Tarihi']),
                     "latitude": coor[0],

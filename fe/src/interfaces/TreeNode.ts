@@ -67,7 +67,9 @@ export interface CityAccommodationNode extends DataNode {
     phone_number?: string;
     url: string;
     address?: string;
-    is_validated: boolean;
+
+    // TODO: Add back after data migration, this is a temporary fix
+    // is_validated: boolean;
   }[];
 }
 
