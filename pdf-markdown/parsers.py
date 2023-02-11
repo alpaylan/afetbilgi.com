@@ -17,9 +17,6 @@ def phone_or_str(x):
 def link_or_str(x, label):
     p = urlparse(x)
 
-    if "Ücretsiz Ekmek" in x:
-        print("\n\nDEBUG: ", x, p, "\n")
-
     if p.scheme == "" or p.netloc == "":
         return x
     
@@ -64,8 +61,6 @@ def parse_city_accom(data, t):
 
     for r in data["items"]:
         rr = process_rows(r)
-
-        print(rr)
 
         if rr[3] != "-":
             rr[3] = link_or_str(rr[3], t["source"])

@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import json
 import pytz
@@ -55,8 +56,6 @@ def parse_option_node(opt, translation, lang):
         raise Exception(f"Unknown node type: {opt['type']}")
 
 def parse_data(title, data, translation):
-    print("Parse data: " + title)
-
     f = data_type_parsers.get(data["dataType"], None)
 
     if f is None:
@@ -77,13 +76,17 @@ def get_name(x, lang):
             raise Exception(f"Name not found for {x} ({lang}): {e}")
 
 def main():
-    if len(sys.argv) != 4:
-        print(f"Usage: python3 {sys.argv[0]} <lang> <input file> <output file>")
+    if len(sys.argv) != 5:
+        print(f"Usage: python3 {sys.argv[0]} <lang> <input file> <output file> <city>")
         exit(1)
 
     lang = sys.argv[1]
     source = sys.argv[2]
     target = sys.argv[3]
+    city_filter = sys.argv[4]
+
+    if city_filter == "all":
+        city_filter = None
 
     if lang not in LANGS:
         print(f"Unknown language: {lang}")
@@ -106,11 +109,24 @@ def main():
             md_nodes.append(n)
 
     now = datetime.datetime.now(pytz.timezone("Europe/Istanbul")).strftime("%d.%m.%Y %H:%M:%S")
-    root = MDNode("afetbilgi.com", translation["pdf_notice"].format(date=now), None)
-    root.add_children(md_nodes)
     
+    title = "afetbilgi.com"
+    if city_filter is not None:
+        title += f" - {city_filter}"
+
+    root = MDNode(title, translation["pdf_notice"].format(date=now), None)
+
+    root.add_children(md_nodes)
+    root.filter(city_filter)
+
     with open(target, "w") as f:
         s = CUSTOM_MD_SPEC + root.to_string()
+
+        # If the city filter is specified, remove 3-depth headers and make 4-depth headers 3-depth
+        if city_filter is not None:
+            s = re.sub(r"^### .*$", "", s, flags=re.MULTILINE)
+            s = re.sub(r"^#### ", "### ", s, flags=re.MULTILINE)
+
         f.write(s)
 
 if __name__ == "__main__":
