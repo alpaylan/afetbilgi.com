@@ -11,7 +11,6 @@
   "page.tooltip.discord": "Projelerimizi geliştirmek ve birbirimizle iletişim kurmak için kullandığımız Discord sunucusu.",
   "page.tooltip.twitter": "Bize Twitter'dan ulaşabilmeniz için hesabımız",
 
-
   "category.victim.name": "Genel İhtiyaçlar",
   "category.helper.name": "Yardım Etmek İsteyenler İçin",
   "category.resources.name": "Önemli Kaynaklar",
@@ -37,11 +36,7 @@
   "data.veterinary.subtitle": "Bu sayfadaki tüm veterinerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
   "data.food_distribution.title": "{{city}}, {{county}} Ücretsiz Yemek Dağıtım Yerleri",
   "data.food_distribution.subtitle": "Bu sayfadaki tüm yerler telefonla doğrulanmıştır. Ancak günler, hatta saatler içerisinde bu bilgiler değişebildiğinden dolayı, kendi araştırmanızı yapmanız önemle rica edilir.",
-  "data.food_distribution.detail_main": "Detaylı bilgi için ",
-  "data.food_distribution.detail_call": "'i arayabilirsiniz.",
-  "data.food_distribution.detail_inspect": "inceleyebilirsiniz",
-  "data.food_distribution.detail_mix": "'i arayabilirsiniz ya da ",
-  "data.food_distribution.detail_website": "bu web sitesini",
+  "data.gas_stations.title": "{{city}}, {{county}} Açık Benzin İstasyonları",
   "data.stem_cell.title": "Kök Hücre Bağış Noktaları",
   "data.phone_number.link_explanation_p1": "Detaylar için",
   "data.phone_number.link_explanation_p2": "numarasını arayabilirsiniz",

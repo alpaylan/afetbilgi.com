@@ -22,8 +22,9 @@ import { DataType } from '../variables/TreeNode';
 import EvacuationData from './data/EvacuationData';
 import DonationLinksData from './data/DonationLinksData';
 import TransportationsData from './data/TransportationsData';
+import GasStationsData from './data/GasStationsData';
 
-const pageMappings: Record<string, FC<{value: any}>> = {
+const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.BANK_ACCOUNT_DONATION]: BankData,
   [DataType.BENEFICIAL_ARTICLES]: ArticleData,
   [DataType.BLOOD_DONATION_LIST]: BloodDonationData,
@@ -46,7 +47,8 @@ const pageMappings: Record<string, FC<{value: any}>> = {
   [DataType.DONATION_LINKS]: DonationLinksData,
   [DataType.TRANSPORTATIONS]: TransportationsData,
   [DataType.HEALTHCARE_SERVICES]: SahraData,
-}
+  [DataType.GAS_STATION]: GasStationsData,
+};
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
   const renderData = () => {

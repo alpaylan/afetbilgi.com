@@ -14,39 +14,53 @@ import {
   ListItem,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { ContainerPharmacyDataNode } from '../../interfaces/TreeNode';
+import { GasStationsDataNode } from '../../interfaces/TreeNode';
 
-export default function ContainerPharmacyData({
+export default function GasStationsData({
   value,
 }: {
-  value: ContainerPharmacyDataNode;
+  value: GasStationsDataNode;
 }) {
+  console.log(value);
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
-  value.items.sort((a, b) => a.city.localeCompare(b.city));
   return (
     <Box>
-      <h3>{t('data.container_pharmacy')}</h3>
+      <h3>
+        {t('data.gas_stations.title', {
+          city: value.city,
+          county: value.county,
+        })}
+      </h3>
       {isMinWidth ? (
         <List>
           {value.items.map((item) => (
             <ListItem>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
-                  <b>{t('city')}</b>: {item.city}
+                  <b>{t('city')}</b>: {value.city} / {value.county}
                   <br />
                   <br />
-                  <b>{t('district')}</b>: {item.district}
+                  <b>{t('location')}</b>: {item.address}
                   <br />
                   <br />
-                  <b>{t('location')}</b>: {item.location}
-                  <br />
-                  <br />
-                  <b>{t('map')}</b>:{' '}
-                  <a href={item.locationLink} target='_blank'>
+                  <a href={item.maps_link} target='_blank'>
                     {t('map')}
                   </a>
                   <br />
+                  {item.telephone && (
+                    <Box sx={{ mt: 1 }}>
+                      <div>
+                        <a
+                          href={`tel:${item.telephone
+                            ?.replace(/^0/, '')
+                            .replace(/ /g, '')}`}
+                        >
+                          {item.telephone}
+                        </a>
+                      </div>
+                    </Box>
+                  )}
                 </CardContent>
               </Card>
             </ListItem>
@@ -58,26 +72,37 @@ export default function ContainerPharmacyData({
             <TableHead>
               <TableRow>
                 <TableCell>{t('city')}</TableCell>
-                <TableCell>{t('district')}</TableCell>
                 <TableCell>{t('location')}</TableCell>
                 <TableCell>{t('map')}</TableCell>
+                <TableCell>{t('contact')}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {value.items.map((item) => (
+              {value.items.map((item, index) => (
                 <TableRow
-                  key={item.location + item.city}
+                  key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component='th' scope='row'>
-                    {item.city}
+                    {value.city} {value.county}
                   </TableCell>
-                  <TableCell>{item.district}</TableCell>
-                  <TableCell>{item.location}</TableCell>
+                  <TableCell>{item.address}</TableCell>
                   <TableCell>
-                    <a href={item.locationLink} target='_blank'>
+                    <a href={item.maps_link} target='_blank'>
                       {t('location')}
                     </a>
+                  </TableCell>
+                  <TableCell>
+                    <div>
+                      <a
+                        style={{ whiteSpace: 'nowrap' }}
+                        href={`tel:${item.telephone
+                          ?.replace(/^0/, '')
+                          .replace(/ /g, '')}`}
+                      >
+                        {item.telephone}
+                      </a>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}

@@ -229,3 +229,16 @@ export interface TransportationDataNode extends DataNode {
     validity_date: string;
   }[];
 }
+
+export interface GasStation {
+  name: string;
+  address: string;
+  telephone?: string;
+  maps_link: string;
+  info?: string;
+}
+export interface GasStationsDataNode extends DataNode {
+  city: string;
+  county: string;
+  items: GasStation[];
+}
