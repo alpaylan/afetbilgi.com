@@ -25,19 +25,19 @@ done
 
 python ../pdf-markdown/get_cities.py tr/afetbilgi.md index.json
 
-# for city in $(cat index.json | jq -r '.[]'); do
-#     for lang in ${langs[@]}; do
-#         cd $lang
+for city in $(cat index.json | jq -r '.[]'); do
+    for lang in ${langs[@]}; do
+        cd $lang
         
-#         python ../../pdf-markdown/main.py $lang ../../latest.json "$city.md" $city
-#         md-to-pdf "$city.md"
+        python ../../pdf-markdown/main.py $lang ../../latest.json "$city.md" $city
+        md-to-pdf "$city.md"
         
-#         # Too much space usage
-#         # Find a way to delete old backups later
-#         #
-#         # cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
-#         # cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
+        # Too much space usage
+        # Find a way to delete old backups later
+        #
+        # cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
+        # cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
 
-#         cd ..
-#     done
-# done
+        cd ..
+    done
+done
