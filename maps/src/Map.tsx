@@ -41,15 +41,35 @@ const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
   const [radius, setRadius] = React.useState(getZoom(useMap().getZoom()));
+  const [bounds, setBounds] = React.useState(useMap().getBounds());
+
   const mapEvents = useMapEvents({
     zoomend: () => {
-        setRadius(getZoom(mapEvents.getZoom()));
+      setRadius(getZoom(mapEvents.getZoom()));
+      setBounds(mapEvents.getBounds());  
     },
+    moveend: () => {
+      setBounds(mapEvents.getBounds());
+    }
   });
+
+  const optimizedData = useMemo(() => {
+    return filteredData.map((item) => {
+
+      return {...item, data: item.data.filter((subitem) => {
+        const { latitude, longitude } = subitem;
+
+        return latitude < bounds.getNorthEast().lat 
+          && latitude > bounds.getSouthWest().lat
+          && longitude < bounds.getNorthEast().lng
+          && longitude > bounds.getSouthWest().lng;
+      })};
+    });
+  }, [filteredData, bounds]);
 
   return (
     <>
-      {filteredData.map((item, i) => (
+      {optimizedData.map((item, i) => (
           item.data.map((subitem, j) => (
             <CustomMarker
               key={`${i}-${j}`}
