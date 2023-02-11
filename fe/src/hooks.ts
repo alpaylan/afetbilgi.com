@@ -9,7 +9,7 @@ const d = new Date();
 const version = d.getDate().toString().concat(".", d.getHours().toString(), d.getMinutes().toString());
 const baseQuestionData = axios
   .get(process.env.REACT_APP_TEST_DATA ?
-    `./latest.json?${version.concat(d.getSeconds().toString())}` :
+    `/latest.json?${version.concat(d.getSeconds().toString())}` :
     `https://cdn.afetbilgi.com/latest.json?v=${version}`)
   .then((res) => res.data);
 
