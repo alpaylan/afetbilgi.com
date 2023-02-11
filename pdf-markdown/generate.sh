@@ -25,7 +25,7 @@ done
 
 index=$(echo '["afetbilgi.pdf"]')
 
-cities=$(python pdf-markdown/get_cities.py md-generated/tr/afetbilgi.md)
+cities=$(python ../pdf-markdown/get_cities.py tr/afetbilgi.md)
 
 for city in $(echo $cities); do
     for lang in ${langs[@]}; do
