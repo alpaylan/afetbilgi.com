@@ -16,11 +16,13 @@ class MDTable:
         return s
 
 class MDNode:
-    def __init__(self, header: str, body: str, table: MDTable):
+    def __init__(self, header: str, body: str, table: MDTable, city_translate_table: dict = None, lang = None):
         self.header = header
         self.body = body
         self.table = table
         self.children = []
+        self.city_translate_table = city_translate_table
+        self.lang = lang
 
     def add_child(self, child: "MDNode"):
         self.children.append(child)
@@ -56,7 +58,7 @@ class MDNode:
             to_remove = []
 
             for cc in c.children:
-                if cc.header != city_filter:
+                if cc.header != self.city_translate_table[city_filter][self.lang]:
                     to_remove.append(cc.header)
 
             c.remove_children(to_remove)

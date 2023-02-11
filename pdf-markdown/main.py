@@ -97,6 +97,9 @@ def main():
     with open(f"{file_path}/../fe/src/utils/locales/{lang}/translation.json", "r") as f:
         translation = json.load(f)
 
+    with open(f"{file_path}/../data/parsers/utils/il_translate.json", "r") as f:
+        city_translate_table = json.load(f)
+
     with open(source, "r") as f:
         data = json.load(f)
 
@@ -114,7 +117,7 @@ def main():
     if city_filter is not None:
         title += f" - {city_filter}"
 
-    root = MDNode(title, translation["pdf_notice"].format(date=now), None)
+    root = MDNode(title, translation["pdf_notice"].format(date=now), None, city_translate_table, lang)
 
     root.add_children(md_nodes)
     root.filter(city_filter)
