@@ -12,6 +12,7 @@ export function buildSearchIndex(data: MarkerData["map_data"]) {
 
   return new Fuse(data, {
     keys: ['labels.name_tr', 'labels.name_en', 'labels.name_ar', 'labels.name_ku', 'name', 'city', 'county'],
+    threshold: 0.3,
   });
 }
 
