@@ -1,7 +1,7 @@
 import sys
 import json
 import pandas as pd
-
+import os
 from utils.functions import turkish_title
 
 
@@ -19,7 +19,8 @@ def main():
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Ge%C3%A7ici%20Bar%C4%B1nma%20Alanlar%C4%B1"
@@ -65,13 +66,10 @@ def main():
 
     #     df = pd.concat([df, dfj])
 
-
     df["Şehir"] = df["Şehir"].apply(str.strip)
     df["Şehir"] = df["Şehir"].apply(turkish_title)
 
     df = df.sort_values(["Şehir", "Lokasyon"])
-
-    
 
     parsed = []
     options = []
@@ -104,13 +102,16 @@ def main():
 
                 parsed = []
 
-        get_data = lambda x: x.strip() if not pd.isna(x) else None
+        def get_data(x): return x.strip() if not pd.isna(x) else None
 
         parsed.append(
             {
                 "city": city_name,
                 "name": get_data(row["Lokasyon"]),
-                "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
+               
+                # TODO: Add back after data migration, this is a temporary fix
+                # "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
+                
                 "url": get_data(row["Link"]),
                 "address": get_data(row["Konum linki"]),
                 "validation_date": get_data(row["Doğrulanma Tarihi"]),
@@ -150,8 +151,8 @@ def main():
             "text_ar": "مصادر أخرى توفر مساكن مؤقة",
             "usefulLinks": [
                 {
-                    "name": "Otels.com",
-                    "url": "https://gsb.gov.tr/haber-detay.html/968",
+                    "name": "Otelz.com",
+                    "url": "https://www.otelz.com/gecmisolsunturkiyem",
                 },
                 {
                     "name": "Turkish Airlines Holidays",
@@ -172,6 +173,18 @@ def main():
                 {
                     "name": "Depremzedelerin Kullanımına Açılan Tesis ve Salonlar",
                     "url": "https://gsb.gov.tr/haber-detay.html/968"
+                },
+                {
+                    "name": "Evim Evindir",
+                    "url": "https://www.evimevindir.com/"
+                },
+                {
+                    "name": "Nilüfer Belediyesi Evim Evin Olsun",
+                    "url": "https://www.nilufer.bel.tr/haber/evim-evin-olsun"
+                },
+                {
+                    "name": "Missafir",
+                    "url": "https://www.missafir.com/ev-sahipleriyle-depremzedeleri-bulusturma-platformu/"
                 }
 
             ],

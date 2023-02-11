@@ -9,10 +9,14 @@ class BaseMapParser:
             try:
                 async with session.head(url, allow_redirects=True) as resp:
                     uu = str(resp.url)
-                    match = re.search(r"@(\d+.\d+),(\d+.\d+)", uu)
-                    if match:
-                        return match.group(1), match.group(2)
-                    return None
+
+                    try:
+                        lat, lon =  uu.split("data=")[1].split("!3d")[1].split("!16")[0].split("!4d")
+                        lat = re.search(r"(\d+.\d+)", lat).group(1)
+                        lon = re.search(r"(\d+.\d+)", lon).group(1)
+                        return lat, lon
+                    except:
+                        return None
             except Exception as e:
                 return None
 
