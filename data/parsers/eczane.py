@@ -14,7 +14,7 @@ def main():
     query = urlencode({"sheet": "Konteynır Eczane", "tqx": "out:csv"})
 
     df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?{query}", encoding="utf-8", header=None)
-
+    df = df.fillna("")
     dps = []
     first = True
 
