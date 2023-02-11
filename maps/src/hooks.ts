@@ -18,7 +18,7 @@ export interface MarkerData {
 }
 
 export const useMarkers = () => useQuery('map-data', async () => {
-  const response = await axios.get('https://cdn.afetbilgi.com/maps-yigit/latest.json');
+  const response = await axios.get('https://cdn.afetbilgi.com/maps/latest.json');
 
   const pointsSet = new Set();
   response.data.map_data.forEach((x: any) => {
