@@ -3,6 +3,7 @@ import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import {SimpleMapScreenshoter} from 'leaflet-simple-map-screenshoter'
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
 import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
@@ -68,6 +69,23 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
   )
 }
 
+let isDownloadButtonAdded = false;
+function MapDownloadButton() {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!isDownloadButtonAdded) {
+      isDownloadButtonAdded = true;
+
+      const ss = new SimpleMapScreenshoter();
+      ss.addTo(map);
+    }
+
+  }, []);
+
+  return (<></>);
+}
+
 export default function Map() {
   const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
   const [selfLocation, setSelfLocation] = useState<[number, number] | null>(null);
@@ -111,13 +129,15 @@ export default function Map() {
   }
 
   return (
-    <Box sx={{ width: '100vw', height: '100vh' }}>
+    <Box id="map" sx={{ width: '100vw', height: '100vh' }}>
       <MapContainer center={centerLocation} zoom={INITIAL_ZOOM} maxZoom={18} minZoom={6} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
           url={`https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Ag%7C`}
         />
 
         <Markers filteredData={filteredData} selfLocation={selfLocation} />
+
+        <MapDownloadButton />
       </MapContainer>
 
       <Box sx={{

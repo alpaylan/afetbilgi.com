@@ -21,6 +21,7 @@
     "fuse.js": "^6.6.2",
     "i18next": "^22.4.9",
     "leaflet": "^1.9.3",
+    "leaflet-simple-map-screenshoter": "^0.5.0",
     "material-react-toastify": "1.0.1",
     "preval.macro": "^5.0.0",
     "react": "^18.2.0",
