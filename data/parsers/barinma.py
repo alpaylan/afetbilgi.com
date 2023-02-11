@@ -150,8 +150,8 @@ def main():
             "text_ar": "مصادر أخرى توفر مساكن مؤقة",
             "usefulLinks": [
                 {
-                    "name": "Otels.com",
-                    "url": "https://gsb.gov.tr/haber-detay.html/968",
+                    "name": "Otelz.com",
+                    "url": "https://www.otelz.com/gecmisolsunturkiyem",
                 },
                 {
                     "name": "Turkish Airlines Holidays",
