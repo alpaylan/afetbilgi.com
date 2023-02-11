@@ -1,9 +1,8 @@
 import { Box, Button } from '@mui/material';
 import React from 'react';
-import { CircleMarker, Popup } from 'react-leaflet';
-import { dataTypeToColor, dataTypeToLabel } from './Map';
-
-import "./Map.css"
+import { Marker, Popup } from 'react-leaflet';
+import { dataTypeToLabel } from './Map';
+import getIcon from './utils/icon';
 
 function DataItem({ text, value }: { text: string, value: string }) {
   if (!value || value === "undefined") return null;
@@ -15,15 +14,11 @@ function DataItem({ text, value }: { text: string, value: string }) {
   )
 }
 
-export default function CustomMarker({ subitem, item, radius } : { item: any, subitem: any, radius: number }) {
+export default function CustomMarker({ subitem, item, radius: size } : { item: any, subitem: any, radius: number }) {
   return (
-    <CircleMarker
-      center={[subitem.latitude, subitem.longitude]} 
-      weight={2}
-      color="white"
-      fillColor={dataTypeToColor[item.type]}
-      fillOpacity={1}
-      radius={radius}
+    <Marker
+      icon={getIcon(item.type, size)}
+      position={[subitem.latitude, subitem.longitude]}
     >
       <Popup>
         <Box sx={{ fontSize: "16px" }}>
@@ -57,6 +52,6 @@ export default function CustomMarker({ subitem, item, radius } : { item: any, su
           )}
         </Box>
       </Popup>
-    </CircleMarker>
+    </Marker>
   )
 }

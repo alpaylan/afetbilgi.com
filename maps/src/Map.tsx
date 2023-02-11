@@ -6,22 +6,12 @@ import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } fr
 import { MarkerData, useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
 import CustomMarker from './CustomMarker';
+import { DataType } from './utils/DataType';
 
 import "./Map.css"
 
 const INITIAL_ZOOM = 15;
-const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 5, 8);
-
-export enum DataType {
-  CITY_ACCOMMODATION = 'map-city-accommodation',
-  NEW_GATHERING_LIST = 'map-gathering-list',
-  HELP_ITEM_LIST = 'map-help-item-list',
-  STEM_CELL_DONATION = 'map-stem-cell-donation',
-  DATA_VET = 'map-data-vet',
-  FOOD_ITEMS = 'map-food-items',
-  CONTAINER_PHARMACY = 'map-container-pharmacy',
-  EVACUATION_POINTS = 'map-evacuation-points',
-}
+const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
 
 export const dataTypeToColor: { [k: string]: string } =
   {
@@ -78,7 +68,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
             color="white"
             fillColor={"#00fb"}
             fillOpacity={1}
-            radius={radius}
+            radius={radius / 3}
             opacity={0.75}
           >
             <Popup>Sizin Konumunuz</Popup>
