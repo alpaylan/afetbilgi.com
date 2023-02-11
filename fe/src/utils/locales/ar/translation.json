@@ -36,7 +36,7 @@
   "data.veterinary.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك",
   "data.food_distribution.title": "{{city}}, {{county}} مواقع توصيل الطعام",
   "data.food_distribution.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك.",
-  "data.gas_stations.title": "li {{city}} {{county}}ê stasyonên sotemeniyê yên vekirî",
+  "data.gas_stations.title": "المحطات البنزين الفعلة في {city} {country}",
   "data.stem_cell.title": "نقاط التبرع بالخلايا الجذعية",
   "data.phone_number.link_explanation_p1": "للحصول على التفاصيل",
   "data.phone_number.link_explanation_p2": "للحصول على التفاصيل",
