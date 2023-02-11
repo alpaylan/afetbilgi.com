@@ -102,9 +102,15 @@ export default function SahraDistributionData({
                   {item.name}
                 </TableCell>
                 <TableCell>
-                  <a href={item.maps_url} target='_blank'>
-                    {t('location')}
-                  </a>
+                  {
+                    item.maps_url ?
+                    <>
+                    <a href={item.maps_url} target='_blank'>
+                      {t('location')}
+                    </a>
+                    </>
+                    : <></>
+                  }
                 </TableCell>
               </TableRow>
             ))}

@@ -103,12 +103,19 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
               >
                 <TableCell component='th' scope='row'>{item.name}</TableCell>
                 <TableCell>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                  >
-                    {t('map')}
-                  </a>
+                  {
+                    item.url ?
+                    <>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                    >
+                      {t('map')}
+                    </a>
+                    </>
+                    : <></>
+                  }
+                  
                 </TableCell>
                 <TableCell>
                 <a

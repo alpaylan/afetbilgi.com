@@ -42,10 +42,17 @@ export default function EvacuationData({
                   <b>{t('location')}</b>: {item.address}
                   <br />
                   <br />
-                  <a href={item.map_link} target='_blank'>
-                    {t('map')}
-                  </a>
-                  <br />
+                  {
+                    item.map_link ?
+                    <>
+                      <a href={item.map_link} target='_blank'>
+                        {t('map')}
+                      </a>
+                      <br />
+                    </>
+                    : <></>
+                  }
+                  
                   <Box sx={{ mt: 1 }}>
                     {item.contacts.map((contact) => (
                       <div>
@@ -86,9 +93,15 @@ export default function EvacuationData({
                   </TableCell>
                   <TableCell>{item.address}</TableCell>
                   <TableCell>
-                    <a href={item.map_link} target='_blank'>
-                      {t('location')}
-                    </a>
+                  {
+                    item.map_link ?
+                    <>
+                      <a href={item.map_link} target='_blank'>
+                        {t('map')}
+                      </a>
+                    </>
+                    : <></>
+                  }
                   </TableCell>
                   <TableCell>
                     {item.contacts.map((contact) => (
