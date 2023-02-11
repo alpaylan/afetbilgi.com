@@ -56,8 +56,6 @@ def parse_option_node(opt, translation, lang):
         raise Exception(f"Unknown node type: {opt['type']}")
 
 def parse_data(title, data, translation):
-    print("Parse data: " + title)
-
     f = data_type_parsers.get(data["dataType"], None)
 
     if f is None:
