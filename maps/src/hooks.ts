@@ -4,17 +4,16 @@ import { useQuery } from "react-query";
 export interface MarkerData {
   update_time: number;
   map_data: {
+    id: string;
     type: string;
-    data: {
-      name: string;
-      url?: string;
-      latitude: number;
-      longitude: number;
-      maps_url?: string;
-      phone_number?: string;
-      city?: string;
-      county?: string;
-    }[];
+    name: string;
+    url?: string;
+    latitude: number;
+    longitude: number;
+    maps_url?: string;
+    phone_number?: string;
+    city?: string;
+    county?: string;
   }[];
 }
 
@@ -29,8 +28,16 @@ export const useMarkers = () => useQuery('map-data', async () => {
       }
 
       pointsSet.add(`${y.latitude},${y.longitude}`);
+
+      y.type = x.type;
     });
   });
+
+  response.data.map_data = response.data.map_data
+    .map((x: any) => x.data).flat();
+
+  response.data.map_data = response.data.map_data
+    .map((x: any, index: number) => ({ ...x, id: String(index) })).flat();
 
   return response.data as MarkerData;
 });

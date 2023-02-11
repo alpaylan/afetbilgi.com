@@ -4,11 +4,11 @@ import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchI
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { MarkerData, useMarkers } from './hooks';
-import { filterMultipleTypes, searchText } from './helpers/filters';
 import CustomMarker from './CustomMarker';
 import { DataType } from './utils/DataType';
 
 import "./Map.css"
+import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
 
 const INITIAL_ZOOM = 15;
 const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
@@ -41,8 +41,8 @@ export const dataTypeToLabel: { [k: string]: any } =
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
-  const [radius, setRadius] = React.useState(getZoom(useMap().getZoom()));
-  const [bounds, setBounds] = React.useState(useMap().getBounds());
+  const [radius, setRadius] = useState(getZoom(useMap().getZoom()));
+  const [bounds, setBounds] = useState(useMap().getBounds());
 
   const mapEvents = useMapEvents({
     zoomend: () => {
@@ -55,64 +55,63 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
   });
 
   const optimizedData = useMemo(() => {
-    return filteredData.map((item) => {
+    return filteredData.filter((item) => {
+      const { latitude, longitude } = item;
 
-      return {...item, data: item.data.filter((subitem) => {
-        const { latitude, longitude } = subitem;
-
-        return latitude < bounds.getNorthEast().lat
-          && latitude > bounds.getSouthWest().lat
-          && longitude < bounds.getNorthEast().lng
-          && longitude > bounds.getSouthWest().lng;
-      })};
+      return latitude < bounds.getNorthEast().lat
+        && latitude > bounds.getSouthWest().lat
+        && longitude < bounds.getNorthEast().lng
+        && longitude > bounds.getSouthWest().lng;
     });
   }, [filteredData, bounds]);
 
   return (
     <>
       {optimizedData.map((item, i) => (
-          item.data.map((subitem, j) => (
-            <CustomMarker
-              key={`${i}-${j}`}
-              item={item}
-              subitem={subitem}
-              radius={radius}
-              />
-          )).flat()
-        ))}
+        <CustomMarker
+          key={`item-${i}`}
+          item={item}
+          radius={radius}
+        />
+      ))}
 
-        {selfLocation &&
-          <CircleMarker
-            className="blink"
-            center={selfLocation}
-            weight={3}
-            color="white"
-            fillColor={"#00fb"}
-            fillOpacity={1}
-            radius={radius / 3}
-            opacity={0.75}
-          >
-            <Popup>Sizin Konumunuz</Popup>
-          </CircleMarker>
-        }
+      {selfLocation &&
+        <CircleMarker
+          className="blink"
+          center={selfLocation}
+          weight={3}
+          color="white"
+          fillColor={"#00fb"}
+          fillOpacity={1}
+          radius={radius / 3}
+          opacity={0.75}
+        >
+          <Popup>Sizin Konumunuz</Popup>
+        </CircleMarker>
+      }
     </>
   )
 }
 
 export default function Map() {
-  const { data, isLoading } = useMarkers();
-
   const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
   const [selfLocation, setSelfLocation] = useState<[number, number] | null>(null);
   const [centerLocation, setCenterLocation] = useState<[number, number] | null>(null);
 
   const [searchString, setSearchString] = useState<string>('');
+
+  const { data, isLoading } = useMarkers();
+
+  const dataIndex = useMemo(() => buildSearchIndex(data?.map_data || []), [data]);
   const filteredData = useMemo(() => {
-    const group1 = searchText(data?.map_data ?? [], searchString);
-    const group2 = filterMultipleTypes(group1, dataTypes);
+    if (!data) return [];
+    if (!searchString) return data.map_data;
+
+    const group1 = searchText(dataIndex, searchString);
+    const group2 = filterMultipleTypes(group1.map(i => i.item), dataTypes);
 
     return group2;
-  }, [data, searchString, dataTypes]);
+  }, [data, dataIndex, searchString, dataTypes]);
 
   useEffect(() => {
     if (navigator.geolocation?.getCurrentPosition) {
