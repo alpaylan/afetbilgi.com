@@ -26,6 +26,7 @@ async def main():
         VeterinerParser,
         YemekParser,
         HastaneParser,
+        ToplanmaParser,
     ]
 
 
