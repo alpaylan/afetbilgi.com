@@ -18,8 +18,10 @@
     "@mui/material": "^5.2.7",
     "@mui/system": "^5.11.8",
     "axios": "^1.3.2",
+    "fuse.js": "^6.6.2",
     "i18next": "^22.4.9",
     "leaflet": "^1.9.3",
+    "leaflet-simple-map-screenshoter": "^0.5.0",
     "material-react-toastify": "1.0.1",
     "preval.macro": "^5.0.0",
     "react": "^18.2.0",
@@ -29,8 +31,7 @@
     "react-leaflet": "^4.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "^5.0.0",
-    "slugify": "^1.6.5"
+    "react-scripts": "^5.0.0"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.0",
