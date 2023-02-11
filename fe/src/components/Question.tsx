@@ -80,9 +80,23 @@ export default function Question({ paths }: { paths: string[] }) {
             optionName ===
             'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1'
           ) {
-            window.location.href =
-              'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
-          } else {
+            window.open(
+              'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
+              '_blank',
+            );
+
+          } else if (
+            optionName === "Mobil%20Tuvaletler"
+          ) {
+            window.open(
+              'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA',
+              '_blank',
+              );
+
+          }
+          
+          
+          else {
             navigate(`/${optionName}`);
           }
         } else {
