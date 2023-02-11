@@ -21,11 +21,8 @@ jobs:
           python-version: "3.9"
           cache: "pip" # caching pip dependencies
 
-      - name: Generate schema
+      - name: Generate and preserve schema
         run: |
           curl -O https://cdn.afetbilgi.com/latest.json
-          python data/integrity_validator.py generate latest.json schema.json
-      
-      - name: Preserve schema
-        run: aws s3 sync schema.json s3://cdn.afetbilgi.com
-
+          python data/integrity_validator.py generate ./latest.json ./schema.json
+          aws s3 cp ./schema.json s3://cdn.afetbilgi.com
