@@ -21,6 +21,7 @@ export default function GasStationsData({
 }: {
   value: GasStationsDataNode;
 }) {
+  console.log(value);
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
   return (
