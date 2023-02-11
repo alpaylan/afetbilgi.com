@@ -36,3 +36,12 @@ jobs:
 
       - name: Sync PDFs
         run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf
+
+      - name: Purge cache
+        uses: nathanvaughn/actions-cloudflare-purge@master
+        with:
+            cf_zone: ${{ secrets.CLOUDFLARE_ZONE }}
+            cf_auth: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+            prefixes: |
+              pdf.afetbilgi.com
+              cdn.afetbilgi.com/md-pdf
