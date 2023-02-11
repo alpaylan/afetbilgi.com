@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import {
   Autocomplete,
   Box,
@@ -9,17 +10,16 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
-
 import { jsx } from '@emotion/react';
+
 import { useQuestionData } from '../hooks';
 import { Category, TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
 import UsefulLinksData from './data/UsefulLinksdata';
-import JSX = jsx.JSX;
 import { OptionNode, QuestionNode } from '../interfaces/TreeNode';
 import { getCategoryOfTreeNode } from '../utils/category';
 
-
+import JSX = jsx.JSX;
 
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
@@ -34,6 +34,10 @@ export default function Question({ paths }: { paths: string[] }) {
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const { data: selectedNode, isLoading } = useQuestionData(paths);
 
   if (isLoading) {
@@ -41,20 +45,20 @@ export default function Question({ paths }: { paths: string[] }) {
   }
 
   if (!selectedNode) {
-    return <Box>
-      <Box
-        sx={{
-          textAlign: 'center',
-          display: 'flex',
-          flexFlow: 'column nowrap',
-          justifyContent: 'center',
-        }}
-      >
-        <Typography variant='h4'>
-          {t('notFound')}
-        </Typography>
+    return (
+      <Box>
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexFlow: 'column nowrap',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant='h4'>{t('notFound')}</Typography>
+        </Box>
       </Box>
-    </Box>;
+    );
   }
 
   if (selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
@@ -72,8 +76,12 @@ export default function Question({ paths }: { paths: string[] }) {
       onClick={() => {
         if (isRootQuestion) {
           const optionName = encodeURIComponent(getOptionName(option, 'tr'));
-          if (optionName === 'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1') {
-            window.location.href = 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
+          if (
+            optionName ===
+            'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1'
+          ) {
+            window.location.href =
+              'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
           } else {
             navigate(`/${optionName}`);
           }
@@ -109,12 +117,12 @@ export default function Question({ paths }: { paths: string[] }) {
       });
 
       return (
-        <Stack 
+        <Stack
           direction={{ xs: 'column', sm: 'row' }}
-          justifyContent="center"
-          alignItems="center"
-          divider={<Divider orientation="vertical" flexItem sx={{ mt: 5 }} />}
-          sx={{ 
+          justifyContent='center'
+          alignItems='center'
+          divider={<Divider orientation='vertical' flexItem sx={{ mt: 5 }} />}
+          sx={{
             display: 'flex',
             flexFlow: 'row wrap',
             alignItems: 'start',
@@ -139,7 +147,7 @@ export default function Question({ paths }: { paths: string[] }) {
                 </Typography>
                 {buttonsByCategories[category]}
               </Box>
-          ))}
+            ))}
         </Stack>
       );
     }
@@ -206,14 +214,14 @@ export default function Question({ paths }: { paths: string[] }) {
         >
           {renderOptions()}
           {selectedNode.externalData?.usefulLinks?.length > 0 && (
-              <Box width='100%' mt={8}>
-                <Typography variant='h4'>
-                  {selectedNode.externalData[`text_${i18n.language}`] ||
-                    selectedNode.externalData.text}
-                </Typography>
-                <UsefulLinksData value={selectedNode.externalData} noTitle />
-              </Box>
-            )}
+            <Box width='100%' mt={8}>
+              <Typography variant='h4'>
+                {selectedNode.externalData[`text_${i18n.language}`] ||
+                  selectedNode.externalData.text}
+              </Typography>
+              <UsefulLinksData value={selectedNode.externalData} noTitle />
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>
