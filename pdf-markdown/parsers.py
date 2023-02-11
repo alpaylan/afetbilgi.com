@@ -62,13 +62,11 @@ def parse_city_accom(data, t):
     for r in data["items"]:
         rr = process_rows(r)
 
-        if rr[3] != "-":
-            rr[3] = link_or_str(rr[3], t["source"])
+        if rr[2] != "-":
+            rr[2] = link_or_str(rr[2], t["source"])
         
-        if rr[4] != "-":
-            rr[4] = link_or_str(rr[4], t["button.google_maps"])
-
-        rr = rr[:2] + rr[3:]
+        if rr[3] != "-":
+            rr[3] = link_or_str(rr[3], t["button.google_maps"])
     
         rows.append(rr)
 
