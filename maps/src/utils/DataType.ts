@@ -1,6 +1,7 @@
 export enum DataType {
   CITY_ACCOMMODATION = 'map-city-accommodation',
   FOOD_ITEMS = 'map-food-items',
+  HOSPITALS = 'map-hospital-list',
   CONTAINER_PHARMACY = 'map-container-pharmacy',
   NEW_GATHERING_LIST = 'map-gathering-list',
   DATA_VET = 'map-data-vet',
@@ -12,10 +13,11 @@ export enum DataType {
 export const dataTypeToColor: { [k: string]: string } =
   {
     [DataType.CITY_ACCOMMODATION]: '#01e',
+    [DataType.FOOD_ITEMS]: '#666',
+    [DataType.HOSPITALS]: '#f00',
+    [DataType.CONTAINER_PHARMACY]: '#e4b',
     [DataType.NEW_GATHERING_LIST]: '#e10',
     [DataType.DATA_VET]: '#2be',
-    [DataType.FOOD_ITEMS]: '#666',
-    [DataType.CONTAINER_PHARMACY]: '#e4b',
     // [DataType.STEM_CELL_DONATION]: '#fb0',
     // [DataType.HELP_ITEM_LIST]: '#0b4',
     // [DataType.EVACUATION_POINTS]: '#80e',
