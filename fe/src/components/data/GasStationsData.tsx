@@ -43,10 +43,17 @@ export default function GasStationsData({
                   <b>{t('location')}</b>: {item.address}
                   <br />
                   <br />
-                  <a href={item.maps_link} target='_blank'>
-                    {t('map')}
-                  </a>
-                  <br />
+                  {
+                    item.maps_link ?
+                    <>
+                    <a href={item.maps_link} target='_blank'>
+                      {t('map')}
+                    </a>
+                    <br />
+                    </>
+                    : <></>
+                  }
+                  
                   {item.telephone && (
                     <Box sx={{ mt: 1 }}>
                       <div>
@@ -87,9 +94,15 @@ export default function GasStationsData({
                   </TableCell>
                   <TableCell>{item.address}</TableCell>
                   <TableCell>
-                    <a href={item.maps_link} target='_blank'>
-                      {t('location')}
-                    </a>
+                    {
+                      item.maps_link ?
+                      <>
+                      <a href={item.maps_link} target='_blank'>
+                        {t('location')}
+                      </a>
+                      </>
+                      : <></>
+                    } 
                   </TableCell>
                   <TableCell>
                     <div>

@@ -41,11 +41,19 @@ export default function ContainerPharmacyData({
                   <br />
                   <b>{t('location')}</b>: {item.location}
                   <br />
-                  <br />
-                  <b>{t('map')}</b>:{' '}
-                  <a href={item.locationLink} target='_blank'>
-                    {t('map')}
-                  </a>
+                  {
+                    item.locationLink ?
+                    <>
+                    <br />
+                    <b>{t('map')}: </b>{' '}
+                    <a href={item.locationLink} target='_blank'>
+                      {t('map')}
+                    </a>
+                    <br />
+                    </>
+                    : ''
+                    
+                  }
                   <br />
                 </CardContent>
               </Card>
@@ -74,10 +82,12 @@ export default function ContainerPharmacyData({
                   </TableCell>
                   <TableCell>{item.district}</TableCell>
                   <TableCell>{item.location}</TableCell>
-                  <TableCell>
-                    <a href={item.locationLink} target='_blank'>
-                      {t('location')}
-                    </a>
+                  <TableCell>{
+                      item.locationLink ?
+                      <a href={item.locationLink} target='_blank'>
+                        {t('location')}
+                      </a> : ''
+                    }
                   </TableCell>
                 </TableRow>
               ))}

@@ -47,7 +47,14 @@ export default function CityAccommodation({
                 {item.name}
               </TableCell>
               <TableCell>
-                <a href={item.address}>{t('location')}</a>
+                {
+                  item.address ?
+                  <>
+                  <a href={item.address}>{t('location')}</a>
+                  </>
+                  : <></>
+                }
+                
               </TableCell>
               <TableCell>
                 {item.url ? <>

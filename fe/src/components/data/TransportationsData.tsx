@@ -46,12 +46,18 @@ export default function TransportationsData({ value } : {value: TransportationDa
                 <TableCell component='th' scope='row'>{item.name}</TableCell>
                 <TableCell>{item.description}</TableCell>
                 <TableCell>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                  >
-                    Link
-                  </a>
+                  {
+                    item.url ?
+                    <>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                    >
+                      {t('source')}
+                    </a>
+                    </>
+                    : <></>
+                  }
                 </TableCell>
                 <TableCell>
                   {item.validation_date}
