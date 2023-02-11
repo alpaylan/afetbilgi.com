@@ -9,6 +9,7 @@ from toplanma import ToplanmaParser
 from veteriner import VeterinerParser
 from yemek import YemekParser
 from hastane import HastaneParser
+from tahliye import TahliyeParser
 
 
 async def main():
@@ -26,7 +27,7 @@ async def main():
         VeterinerParser,
         YemekParser,
         HastaneParser,
-        ToplanmaParser,
+        TahliyeParser,
     ]
 
 
