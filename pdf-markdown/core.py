@@ -42,3 +42,35 @@ class MDNode:
             s += "\n\n" + c.to_string(depth + 1)
 
         return s
+
+    def filter(self, city_filter):
+        if city_filter is None:
+            return
+
+        new_children = []
+
+        for c in self.children:
+            if len(c.children) == 0:
+                continue
+
+            to_remove = []
+
+            for cc in c.children:
+                if cc.header != city_filter:
+                    to_remove.append(cc.header)
+
+            c.remove_children(to_remove)
+
+            if len(c.children) > 0:
+                new_children.append(c)
+
+        self.children = new_children
+
+    def remove_children(self, headers):
+        new_children = []
+
+        for c in self.children:
+            if c.header not in headers:
+                new_children.append(c)
+
+        self.children = new_children
