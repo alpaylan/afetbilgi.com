@@ -23,6 +23,6 @@ jobs:
 
       - name: Generate and preserve schema
         run: |
-          curl -O https://cdn.afetbilgi.com/latest.json
+          curl -O https://s3.eu-central-1.amazonaws.com/cdn.afetbilgi.com/latest.json
           python data/integrity_validator.py generate ./latest.json ./schema.json
           aws s3 cp ./schema.json s3://cdn.afetbilgi.com

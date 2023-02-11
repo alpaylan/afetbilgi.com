@@ -59,7 +59,7 @@ jobs:
         run: |
           python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
 
-          curl -O https://cdn.afetbilgi.com/schema.json
+          curl -O https://s3.eu-central-1.amazonaws.com/cdn.afetbilgi.com/schema.json
           python data/integrity_validator.py validate schema.json ./data/to_upload/latest.json
 
           mkdir ./data/to_upload/datasets
