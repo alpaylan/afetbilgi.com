@@ -17,12 +17,12 @@ export const dataTypeToColor: { [k: string]: string } =
   {
     [DataType.CITY_ACCOMMODATION]: '#01e',
     [DataType.NEW_GATHERING_LIST]: '#e10',
-    [DataType.HELP_ITEM_LIST]: '#0b4',
-    [DataType.STEM_CELL_DONATION]: '#fb0',
     [DataType.DATA_VET]: '#2be',
     [DataType.FOOD_ITEMS]: '#666',
     [DataType.CONTAINER_PHARMACY]: '#e4b',
-    [DataType.EVACUATION_POINTS]: '#80e',
+    // [DataType.STEM_CELL_DONATION]: '#fb0',
+    // [DataType.HELP_ITEM_LIST]: '#0b4',
+    // [DataType.EVACUATION_POINTS]: '#80e',
   };
 
 export const dataTypeToLabel: { [k: string]: any } =
@@ -32,9 +32,10 @@ export const dataTypeToLabel: { [k: string]: any } =
     [DataType.FOOD_ITEMS]:{ 'name_ar': 'مواقع توصيل الطعام', 'name_tr': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê' },
     [DataType.CONTAINER_PHARMACY]:{ 'name_ar': "صيدليات الحاويات", "name_ku": "Dermanxaneyên Seyare", "name_en": "Container Pharmacies", "name_tr": 'Konteyner Eczaneler' },
     [DataType.DATA_VET]: { 'name_ar': 'بَيَاطير', 'name_tr': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner' },
-    [DataType.HELP_ITEM_LIST]:{ 'name_ar': 'فرص التبرع بالعناصر', 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation', 'name_ku': 'Bexşkirina Tiştan' },
-    [DataType.STEM_CELL_DONATION]:{ 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name_tr': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê' },
-    [DataType.EVACUATION_POINTS]:{ 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê' },
+    // [DataType.HELP_ITEM_LIST]:{ 'name_ar': 'فرص التبرع بالعناصر', 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation', 'name_ku': 'Bexşkirina Tiştan' },
+    // [DataType.STEM_CELL_DONATION]:{ 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name_tr': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê' },
+    // [DataType.EVACUATION_POINTS]:{ 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê' },
+    // EVACUATION_POINTS TO BE ADDED SINCE DATA IS AVAILABLE IN SHEET
   };
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
