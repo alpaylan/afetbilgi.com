@@ -1,6 +1,6 @@
 import L from 'leaflet';
-import { dataTypeToColor } from '../Map';
 import { dataTypeToSVG, MARKER_SVG } from '../svgs';
+import { dataTypeToColor } from './DataType';
 
 
 function SVG(svg: any, size: number, markerColour: string) {
