@@ -11,6 +11,7 @@
     ],
     "plugins": ["react-hooks", "@typescript-eslint"],
     "rules": {
+        "no-param-reassign": "off",
         "no-bitwise": "off",
         "@typescript-eslint/no-use-before-define": ["off"],
         "import/extensions": "off",

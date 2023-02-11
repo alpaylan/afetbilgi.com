@@ -12,7 +12,7 @@
   "page.tooltip.twitter": "حسابنا لتتمكن من التواصل معنا على تويتر", 
 
 
-  "category.victim.name": "لضحايا الزلزال",
+  "category.victim.name": "الحاجات العامة",
   "category.helper.name": "لمن يريد المساعدة",
   "category.resources.name": "الموارد المهمة",
   "category.health.name": "الخدمات الصحية",
@@ -72,6 +72,7 @@
   "button.language": "تغيير",
   "button.google_maps": "رابط خرائط جوجل",
   "button.download": "تنزيل كملف PDF",
+  "button.map": "عرض على الخريطة",
   "last_update": "اخر تحديث",
   "name": "اسم",
   "map": "خَرِيطَة",

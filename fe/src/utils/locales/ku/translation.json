@@ -12,7 +12,7 @@
   "page.tooltip.twitter": "Hesabê me yê Twitterê bo têkiliyê",
 
 
-  "category.victim.name": "Ji bo mexdûrên erdhêjê",
+  "category.victim.name": "Pêdiviyên gelemperî",
   "category.helper.name": "Ji bo alîkarî",
   "category.resources.name": "Çavkanîyên Giring",
   "category.health.name": "Xizmetên tendirûstiyê",
@@ -72,6 +72,7 @@
   "button.language": "Ziman biguherîne",
   "button.google_maps": "Girêdana Google Mapsê ",
   "button.download": "Wekî PDF dakêşin",
+  "button.map": "Li ser nexşeyê nîşan bide",
   "last_update": "nûvekirina dawîn",
   "name": "Nav",
   "map": "Qert",

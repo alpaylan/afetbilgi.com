@@ -12,7 +12,7 @@
   "page.tooltip.twitter": "Bize Twitter'dan ulaşabilmeniz için hesabımız",
 
 
-  "category.victim.name": "Depremzedeler İçin",
+  "category.victim.name": "Genel İhtiyaçlar",
   "category.helper.name": "Yardım Etmek İsteyenler İçin",
   "category.resources.name": "Önemli Kaynaklar",
   "category.health.name": "Sağlık Servisleri",
@@ -72,6 +72,7 @@
   "button.language": "Dili Değiştir",
   "button.google_maps": "Google Maps Linki",
   "button.download": "PDF Olarak İndİr",
+  "button.map": "HARİTA ÜSTÜNDE GÖRÜNTÜLE",
   "last_update": "Son güncelleme",
   "name": "İsim",
   "map": "Harita",

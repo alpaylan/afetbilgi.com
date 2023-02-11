@@ -105,6 +105,15 @@ const App = () => {
             </>
           )}
 
+          <Button
+            size='large'
+            onClick={() => {
+              window.location.href = 'https://maps.afetbilgi.com';
+            }}
+          >
+            {t('button.map')}
+          </Button>
+          
           {location.pathname !== '/about' && (
             <Button
               size='large'

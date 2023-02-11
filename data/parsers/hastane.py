@@ -1,19 +1,21 @@
 import sys
 import json
 import pandas as pd
-
+import os
 from utils.functions import turkish_title
+
 
 def main():
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
         sys.exit(1)
-    
+
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
-    # canlıya alındaktan sonra sheet_id ve sheet_name değişmeli 
+    # canlıya alındaktan sonra sheet_id ve sheet_name değişmeli
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Sahra%20Hastaneleri"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
@@ -23,9 +25,7 @@ def main():
     df["İl"] = df["İl"].apply(lambda x: turkish_title(x.strip()))
     df["İlçe"] = df["İlçe"].apply(lambda x: turkish_title(x.strip()))
 
-    df = df.sort_values(by=["İl"])
-
-    df = df.fillna("")
+    df = df.sort_values(by=["İl"]).fillna("")
 
     city_name = None
     options = []
@@ -51,7 +51,7 @@ def main():
                                 "items": items,
                             }
                         }
-                        
+
                     }
                 )
                 city_name = tmp_sehir
@@ -83,7 +83,7 @@ def main():
                         "items": items,
                     }
                 }
-                
+
             }
         )
 
@@ -98,6 +98,7 @@ def main():
 
     with open(out_path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()
