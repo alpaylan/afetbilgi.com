@@ -204,46 +204,6 @@ export default function SitesIcon (){
         </Typography>
         </Popover>
       </Box>
-
-      <Box sx={toBiggerIcon}>
-        <Link
-        href="https://twitter.com/afetbilgicom"
-        target="_blank"
-        onMouseEnter={() => handlePopoverOpen("afetBilgiTwitter")}
-        rel="noopener noreferrer"
-        onMouseLeave={handlePopoverClose}
-        >
-        <Avatar
-            sx={littleIcon}
-            alt="twitter icon"
-            src="/icons/twitterIcon.svg"
-        />
-        </Link>
-
-        <Popover
-        anchorReference="anchorEl"
-        anchorEl={anchorEl}
-        open={isOpen === "afetBilgiTwitter"}
-        anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-        }}
-        transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
-        }}
-        sx={{
-          background: "rgba(0, 0, 0, 0.1)",
-          pointerEvents: "none",
-          zIndex: 600,
-        }}
-        onClose={handlePopoverClose}
-        >
-        <Typography sx={{ padding: "10px", width: "450px" }}>
-            {t("page.tooltip.twitter")}
-        </Typography>
-        </Popover>
-      </Box>
     </Stack>
   );
 };
