@@ -18,6 +18,8 @@ def main():
 
     df = pd.read_csv(url, encoding="utf-8")
 
+    df = df.fillna("")
+
     transportations = []
 
     for _, row in df.iterrows():
