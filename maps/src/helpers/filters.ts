@@ -10,7 +10,13 @@ export const filterMultipleTypes = (data: MarkerData["map_data"], types: string[
 }
 
 const doesContainInAttributes = (item: MarkerData["map_data"][any]["data"][any], searchString: string) => {
-  return (item.name && slug(item.name).includes(searchString));
+  const itemCity = (item.city && slug(item.city)) || "";
+  const itemCounty = (item.county && slug(item.county)) || "";
+  const itemName = (item.name && slug(item.name)) || "";
+
+  const fullAddress = slug(`${itemName}${itemCity}${itemCounty}`);
+  const stringsToSearch = searchString.split("-");
+  return stringsToSearch.some(string => fullAddress.includes(string));
 }
 
 export const searchText = (data: MarkerData["map_data"], searchString: string) => {
