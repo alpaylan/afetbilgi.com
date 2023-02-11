@@ -16,7 +16,7 @@ for lang in ${langs[@]}; do
     mkdir $lang
     mkdir $lang/backups
     cd $lang
-    python ../../pdf-markdown/main.py tr ../../latest.json afetbilgi.md all
+    python ../../pdf-markdown/main.py $lang ../../latest.json afetbilgi.md all
     md-to-pdf afetbilgi.md
     cp afetbilgi.md "backups/`date +%Y-%m-%d_%H-%M-%S`.md"
     cp afetbilgi.pdf "backups/`date +%Y-%m-%d_%H-%M-%S`.pdf"
@@ -34,8 +34,11 @@ for city in $(echo $cities); do
         python ../../pdf-markdown/main.py $lang ../../latest.json "$city.md" $city
         md-to-pdf "$city.md"
         
-        cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
-        cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
+        # Too much space usage
+        # Find a way to delete old backups later
+        #
+        # cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
+        # cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
 
         cd ..
     done
