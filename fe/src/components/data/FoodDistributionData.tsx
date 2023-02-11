@@ -1,9 +1,8 @@
-import { Box, Paper } from '@mui/material';
-import { TFunction } from 'i18next';
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { FoodDistributionDataNode } from '../../interfaces/TreeNode';
 
-const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
+/* const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
   if (!phone_number && !url) {
     return null;
   }
@@ -57,16 +56,18 @@ const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
       {t('data.food_distribution.detail_inspect')}
     </p>
   );
-};
+}; */
 
 export default function FoodDistributionData({
   value,
 }: {
   value: FoodDistributionDataNode;
 }) {
+
   const { t } = useTranslation();
+
   return (
-    <Box>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h3>
         {t('data.food_distribution.title', {
           city: value.city,
@@ -77,21 +78,43 @@ export default function FoodDistributionData({
       <p>
         <b>{t('data.food_distribution.subtitle')}</b>
       </p>
-
-      {value.items.map((item, i) => (
-        <Paper sx={{ p: 2, m: 2 }} key={`item-${i}`}>
-          <b>{item.name}</b>
-          <br />
-          <p>
-            {item.maps_url && <a href={item.maps_url} target='_blank' rel='noreferrer'>
-              {t('button.google_maps')}
-            </a>}
-            <br />
-          </p>
-
-          {detailedInfo(t, item.phone_number, item.url)}
-        </Paper>
-      ))}
+      <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
+        <Table sx={{ maxWidth: 650, minWidth: 100 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell>{t('name')}</TableCell>
+              <TableCell>{t('map')}</TableCell>
+              <TableCell>{t('details')}</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {value.items.map((item, index) => (
+              <TableRow
+                key={index}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component='th' scope='row'>{item.name}</TableCell>
+                <TableCell>
+                  <a
+                    href={item.maps_url}
+                    target="_blank"
+                  >
+                    Konum
+                  </a>
+                </TableCell>
+                <TableCell>
+                <a
+                    href={item.url}
+                    target="_blank"
+                  >
+                    {t('details')}
+                  </a>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 }
