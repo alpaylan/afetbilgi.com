@@ -5,12 +5,11 @@
   "page.about.body.1": "http://afetbilgi.com/ is a website created by a group of METU students and graduates to verify and deliver important information to fight against February 6, 2023, Pazarcık Earthquake.",
   "page.about.body.2": "This website is based on a completely human-made database and works with accuracy, speed, and simplicity principles. When contacting us, we strongly ask you to deliver only verified information and cooperate with us to prevent disinformation.",
 
-  "page.tooltip.depremyardim":"موقع يمكنك استخدامه للبحث عن ضحايا الزلزال ومساعدتهم.",
+  "page.tooltip.depremyardim": "موقع يمكنك استخدامه للبحث عن ضحايا الزلزال ومساعدتهم.",
   "page.tooltip.afetharita": "موقع يمكنك استخدامه لعرض إشعارات المساعدة على الخريطة.",
   "page.tooltip.depremio": "موقع يمكنك استخدامه لمساعدة ضحايا الزلزال بالطعام.",
   "page.tooltip.discord": "خادم Discord الذي نستخدمه لتطوير مشاريعنا والتواصل مع بعضنا البعض.",
-  "page.tooltip.twitter": "حسابنا لتتمكن من التواصل معنا على تويتر", 
-
+  "page.tooltip.twitter": "حسابنا لتتمكن من التواصل معنا على تويتر",
 
   "category.victim.name": "الحاجات العامة",
   "category.helper.name": "لمن يريد المساعدة",
@@ -37,11 +36,7 @@
   "data.veterinary.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك",
   "data.food_distribution.title": "{{city}}, {{county}} مواقع توصيل الطعام",
   "data.food_distribution.subtitle": "تم التحقق من جميع المواقع في هذه الصفحة عبر الهاتف ، باستثناء المواقع المذكورة في هذه الصفحة ، ولكن نظرًا لأن هذه المعلومات يمكن أن تتغير في غضون أيام أو حتى ساعات ، فيُطلب منك التفضل بإجراء البحث الخاص بك.",
-  "data.food_distribution.detail_main": " يمكنك الاتصال بنا للحصول على معلومات مفصلة. ",
-  "data.food_distribution.detail_call": "' يمكنك الاتصال بنا للحصول على معلومات مفصلة.",
-  "data.food_distribution.detail_inspect": "يمكنك المراجعة",
-  "data.food_distribution.detail_mix": "'يمكنك الاتصال برقم ",
-  "data.food_distribution.detail_website": "هذا المَوْقِع الإِلَكْتُرُونِيّ",
+  "data.gas_stations.title": "li {{city}} {{county}}ê stasyonên sotemeniyê yên vekirî",
   "data.stem_cell.title": "نقاط التبرع بالخلايا الجذعية",
   "data.phone_number.link_explanation_p1": "للحصول على التفاصيل",
   "data.phone_number.link_explanation_p2": "للحصول على التفاصيل",

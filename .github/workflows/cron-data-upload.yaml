@@ -2,6 +2,9 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feat/gas-stations
 
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -49,6 +52,7 @@ jobs:
           python ./tahliye_parser.py ../latest_datasets/tahliye.json
           python ./ulasim_parser.py ../latest_datasets/ulasim.json
           python ./hastane.py ../latest_datasets/hastane.json
+          python ./akaryakit.py ../latest_datasets/akaryakit.json
 
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/twitter_account.json ../latest_datasets/twitter_account.json
@@ -58,12 +62,7 @@ jobs:
       - name: Merge datasets
         run: |
           python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
-
-          curl -O https://s3.eu-central-1.amazonaws.com/cdn.afetbilgi.com/schema.json
-          python data/integrity_validator.py validate schema.json ./data/to_upload/latest.json
-
-          mkdir ./data/to_upload/datasets
-          gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/datasets/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
+          gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
       - name: Sync JSON files
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/furkand

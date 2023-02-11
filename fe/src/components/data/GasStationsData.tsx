@@ -14,21 +14,22 @@ import {
   ListItem,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { GasStationsDataNode } from '../../interfaces/TreeNode';
 
-import { EvacuationDataNode } from '../../interfaces/TreeNode';
-
-export default function EvacuationData({
+export default function GasStationsData({
   value,
 }: {
-  value: EvacuationDataNode;
+  value: GasStationsDataNode;
 }) {
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
-  value.items.sort((a, b) => a.city.localeCompare(b.city));
   return (
     <Box>
       <h3>
-        {t('data.evacuation_points.title', { city: value.items[0].city })}
+        {t('data.gas_stations.title', {
+          city: value.city,
+          county: value.county,
+        })}
       </h3>
       {isMinWidth ? (
         <List>
@@ -36,29 +37,29 @@ export default function EvacuationData({
             <ListItem>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
-                  <b>{t('city')}</b>: {item.city} / {item.county}
+                  <b>{t('city')}</b>: {value.city} / {value.county}
                   <br />
                   <br />
                   <b>{t('location')}</b>: {item.address}
                   <br />
                   <br />
-                  <a href={item.map_link} target='_blank'>
+                  <a href={item.maps_link} target='_blank'>
                     {t('map')}
                   </a>
                   <br />
-                  <Box sx={{ mt: 1 }}>
-                    {item.contacts.map((contact) => (
+                  {item.telephone && (
+                    <Box sx={{ mt: 1 }}>
                       <div>
                         <a
-                          href={`tel:${contact
+                          href={`tel:${item.telephone
                             ?.replace(/^0/, '')
                             .replace(/ /g, '')}`}
                         >
-                          {contact}
+                          {item.telephone}
                         </a>
                       </div>
-                    ))}
-                  </Box>
+                    </Box>
+                  )}
                 </CardContent>
               </Card>
             </ListItem>
@@ -82,27 +83,25 @@ export default function EvacuationData({
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component='th' scope='row'>
-                    {item.city} {item.county}
+                    {value.city} {value.county}
                   </TableCell>
                   <TableCell>{item.address}</TableCell>
                   <TableCell>
-                    <a href={item.map_link} target='_blank'>
+                    <a href={item.maps_link} target='_blank'>
                       {t('location')}
                     </a>
                   </TableCell>
                   <TableCell>
-                    {item.contacts.map((contact) => (
-                      <div>
-                        <a
-                          style={{ whiteSpace: 'nowrap' }}
-                          href={`tel:${contact
-                            ?.replace(/^0/, '')
-                            .replace(/ /g, '')}`}
-                        >
-                          {contact}
-                        </a>
-                      </div>
-                    ))}
+                    <div>
+                      <a
+                        style={{ whiteSpace: 'nowrap' }}
+                        href={`tel:${item.telephone
+                          ?.replace(/^0/, '')
+                          .replace(/ /g, '')}`}
+                      >
+                        {item.telephone}
+                      </a>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}

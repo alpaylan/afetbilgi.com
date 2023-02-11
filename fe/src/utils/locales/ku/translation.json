@@ -11,7 +11,6 @@
   "page.tooltip.discord": "Discord server ku hewceyê projeyên xwe ve bi xweyê din bike.",
   "page.tooltip.twitter": "Hesabê me yê Twitterê bo têkiliyê",
 
-
   "category.victim.name": "Pêdiviyên gelemperî",
   "category.helper.name": "Ji bo alîkarî",
   "category.resources.name": "Çavkanîyên Giring",
@@ -37,11 +36,7 @@
   "data.veterinary.subtitle": "Hemî numareyê veterîneran yên li ser vê rûpelê bi têlefonê hatine verast kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî saetan de biguhere, ji we tê xwestin ku hûn lêkolîna xwe bikin.",
   "data.food_distribution.title": "{{city}}, {{county}} Cihên carina bêpere",
   "data.food_distribution.subtitle": "Hemî cihên li ser vê rûpelê bi têlefonê hatine verast kirin. Lêbelê, ji ber ku ev agahdarî dikare di nav çend rojan an jî saetan de biguhere, ji we tê xwestin ku hûn lêkolîna xwe bikin.",
-  "data.food_distribution.detail_main": " Ji bo agahdariya berfireh  ",
-  "data.food_distribution.detail_call": "'karin li vê numareyê bigerin.",
-  "data.food_distribution.detail_inspect": "Hûn dikarin lêkolîn bikin  ",
-  "data.food_distribution.detail_mix": "'Hûn dikarin li vê numareyê bigerin an jî ",
-  "data.food_distribution.detail_website": "Vê malperê",
+  "data.gas_stations.title": "{{city}}, {{county}} Cihên carina bêpere",
   "data.stem_cell.title": "Cihên bo bexşîna xaneyî bineretiyê   ",
   "data.phone_number.link_explanation_p1": "Bo Hûgulî",
   "data.phone_number.link_explanation_p2": "Hûn dikarin li vê numareyê bigerin",
