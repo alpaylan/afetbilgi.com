@@ -23,11 +23,9 @@ for lang in ${langs[@]}; do
     cd ..
 done
 
-index=$(echo '[]')
+python ../pdf-markdown/get_cities.py tr/afetbilgi.md index.json
 
-cities=$(python ../pdf-markdown/get_cities.py tr/afetbilgi.md)
-
-for city in $(echo $cities); do
+for city in $(cat index.json | jq -r '.[]'); do
     for lang in ${langs[@]}; do
         cd $lang
         
@@ -42,8 +40,4 @@ for city in $(echo $cities); do
 
         cd ..
     done
-
-    index=$(echo $index | jq ". += [\"$city.pdf\"]")
 done
-
-echo $index | jq '.' > index.json
