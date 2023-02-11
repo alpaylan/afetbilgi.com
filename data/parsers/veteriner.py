@@ -2,7 +2,7 @@ import sys
 import json
 import pandas as pd
 from utils.functions import turkish_title
-
+import os
 
 
 if __name__ == "__main__":
@@ -12,7 +12,8 @@ if __name__ == "__main__":
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Veterinerler"
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     city_name = None
 
     for _, row in df.iterrows():
-        
+
         tmp_sehir = turkish_title(row["Şehir"].strip())
 
         if tmp_sehir != city_name:
@@ -66,7 +67,7 @@ if __name__ == "__main__":
             else:
                 options.append(
                     {
-                        "value" : {
+                        "value": {
                             "type": "data",
                             "data": {
                                 "dataType": "data-vet",
@@ -85,17 +86,17 @@ if __name__ == "__main__":
 
         vets.append(
             {
-                "name": row["İsim"] if not pd.isna(row["İsim"])  else None,
-                "phone_number": row["Telefon"] if not pd.isna(row["Telefon"]) else None,
-                "address": row["Konum"] if not pd.isna(row["Konum"]) else None,
-                "maps_link": row["Konum Linki"] if not pd.isna(row["Konum Linki"]) else None,
+                "name": row["İsim"].strip() if not pd.isna(row["İsim"]) else None,
+                "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                "address": row["Konum"].strip() if not pd.isna(row["Konum"]) else None,
+                "maps_link": row["Konum Linki"].strip() if not pd.isna(row["Konum Linki"]) else None,
             }
         )
-        
+
     else:
         options.append(
             {
-                "value" : {
+                "value": {
                     "type": "data",
                     "data": {
                         "dataType": "data-vet",

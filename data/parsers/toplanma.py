@@ -1,8 +1,10 @@
 import sys
 import json
 import pandas as pd
+import os
 
 from utils.functions import turkish_title
+
 
 def main():
     if len(sys.argv) != 2:
@@ -11,7 +13,8 @@ def main():
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "G%C3%BCvenli%20Toplanma%20Alanlar%C4%B1"
@@ -45,7 +48,6 @@ def main():
     # df = pd.concat([df, df2])
     # df = df.sort_values(by=['Şehirler'])
 
-
     options = []
     items = []
     city_name = None
@@ -77,9 +79,9 @@ def main():
 
         items.append(
             {
-                "name": row['Konum'] if not pd.isna(row['Konum'])  else None,
-                "url": row['Maps Linki'] if not pd.isna(row['Maps Linki']) else None,
-                "source": row['Kaynak'] if not pd.isna(row['Kaynak']) else None,
+                "name": row['Konum'].strip() if not pd.isna(row['Konum']) else None,
+                "url": row['Maps Linki'].strip() if not pd.isna(row['Maps Linki']) else None,
+                "source": row['Kaynak'].strip() if not pd.isna(row['Kaynak']) else None,
             }
         )
     else:
@@ -88,7 +90,7 @@ def main():
                 "name_tr": city_name,
                 "name_en": city_translation[city_name]['en'],
                 "name_ar": city_translation[city_name]['ar'],
-                "name_fr": city_translation[city_name]['ku'],
+                "name_ku": city_translation[city_name]['ku'],
                 "value": {
                     "type": "data",
                     "data": {

@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Divider,
+  Stack,
   TextField,
   Typography,
 } from '@mui/material';
@@ -17,6 +18,8 @@ import UsefulLinksData from './data/UsefulLinksdata';
 import JSX = jsx.JSX;
 import { OptionNode, QuestionNode } from '../interfaces/TreeNode';
 import { getCategoryOfTreeNode } from '../utils/category';
+
+
 
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
@@ -68,7 +71,12 @@ export default function Question({ paths }: { paths: string[] }) {
       sx={{ m: 2, minWidth: '300px' }}
       onClick={() => {
         if (isRootQuestion) {
-          navigate(`/${encodeURIComponent(getOptionName(option, 'tr'))}`);
+          const optionName = encodeURIComponent(getOptionName(option, 'tr'));
+          if (optionName === 'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1') {
+            window.location.href = 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
+          } else {
+            navigate(`/${optionName}`);
+          }
         } else {
           navigate(
             `${location.pathname}/${encodeURIComponent(
@@ -88,6 +96,7 @@ export default function Question({ paths }: { paths: string[] }) {
         [key in Category as string]: JSX.Element[];
       } = {
         [Category.VICTIM]: [],
+        [Category.HEALTH]: [],
         [Category.HELPER]: [],
         [Category.RESOURCES]: [],
         [Category.OTHER]: [],
@@ -99,29 +108,40 @@ export default function Question({ paths }: { paths: string[] }) {
         );
       });
 
-      return Object.keys(buttonsByCategories)
-        .filter((category) => buttonsByCategories[category].length > 0)
-        .map((category, i) => (
-          <>
-            <Box
-              sx={{
-                textAlign: 'center',
-                display: 'flex',
-                flexFlow: 'column nowrap',
-                justifyContent: 'center',
-                paddingTop: '50px',
-              }}
-            >
-              <Typography variant='h5'>
-                {t(`category.${category}.name`)}
-              </Typography>
-              {buttonsByCategories[category]}
-            </Box>
-            {i < buttonsByCategories[category].length - 1 && (
-              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
-            )}
-          </>
-        ));
+      return (
+        <Stack 
+          direction={{ xs: 'column', sm: 'row' }}
+          justifyContent="center"
+          alignItems="center"
+          divider={<Divider orientation="vertical" flexItem sx={{ mt: 5 }} />}
+          sx={{ 
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignItems: 'start',
+            justifyContent: 'center',
+            paddingTop: '50px',
+          }}
+        >
+          {Object.keys(buttonsByCategories)
+            .filter((category) => buttonsByCategories[category].length > 0)
+            .map((category) => (
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexFlow: 'column nowrap',
+                  justifyContent: 'center',
+                  paddingTop: '50px',
+                }}
+              >
+                <Typography variant='h5'>
+                  {t(`category.${category}.name`)}
+                </Typography>
+                {buttonsByCategories[category]}
+              </Box>
+          ))}
+        </Stack>
+      );
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
       <Autocomplete

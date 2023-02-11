@@ -1670,6 +1670,16 @@
     csstype "^3.1.1"
     prop-types "^15.8.1"
 
+"@mui/styled-engine@^5.11.8":
+  version "5.11.8"
+  resolved "https://registry.yarnpkg.com/@mui/styled-engine/-/styled-engine-5.11.8.tgz#4b0c8c7985b1629f83fdb54dc0883fd07a5d28f0"
+  integrity sha512-iSpZp9AoeictsDi5xAQ4PGXu7mKtQyzMl7ZaWpHIGMFpsNnfY3NQNg+wkj/gpsAZ+Zg+IIyD+t+ig71Kr9fa0w==
+  dependencies:
+    "@babel/runtime" "^7.20.7"
+    "@emotion/cache" "^11.10.5"
+    csstype "^3.1.1"
+    prop-types "^15.8.1"
+
 "@mui/system@^5.11.7":
   version "5.11.7"
   resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.11.7.tgz#5e550c621733a18cd437678f11dcd1c3468129d0"
@@ -1678,6 +1688,20 @@
     "@babel/runtime" "^7.20.7"
     "@mui/private-theming" "^5.11.7"
     "@mui/styled-engine" "^5.11.0"
+    "@mui/types" "^7.2.3"
+    "@mui/utils" "^5.11.7"
+    clsx "^1.2.1"
+    csstype "^3.1.1"
+    prop-types "^15.8.1"
+
+"@mui/system@^5.11.8":
+  version "5.11.8"
+  resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.11.8.tgz#3d9375a5af9f4a644165103fd64d42e4b58370cb"
+  integrity sha512-zhroUcxAw2x/dISBJKhGbD70DOYCwMFRo7o/LUYTiUfQkfmLhRfEf1bopWgY9nYstn7QOxOq9fA3aR3pHrUTbw==
+  dependencies:
+    "@babel/runtime" "^7.20.7"
+    "@mui/private-theming" "^5.11.7"
+    "@mui/styled-engine" "^5.11.8"
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.7"
     clsx "^1.2.1"
@@ -3897,6 +3921,11 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
+dom-to-image-more@^2.12.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/dom-to-image-more/-/dom-to-image-more-2.15.0.tgz#6f7ee2bbeb94ff568d961191fdafae5501de20e3"
+  integrity sha512-L/ocidaHYpTSInsixl8b/7bpP7yhCowbzKsULsXuVxxms7Ng5B1oWahPFfPemPZ5J32Y3oImyzdpjjSYFZmDyQ==
+
 domelementtype@1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
@@ -4642,6 +4671,11 @@ file-loader@^6.2.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+file-saver@^2.0.2:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 filelist@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/filelist/-/filelist-1.0.4.tgz#f78978a1e944775ff9e62e744424f215e58352b5"
@@ -4841,6 +4875,11 @@ functions-have-names@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
+
+fuse.js@^6.6.2:
+  version "6.6.2"
+  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-6.6.2.tgz#fe463fed4b98c0226ac3da2856a415576dc9a111"
+  integrity sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -6247,6 +6286,14 @@ language-tags@=1.0.5:
   integrity sha512-qJhlO9cGXi6hBGKoxEG/sKZDAHD5Hnu9Hs4WbOY3pCWXDhw0N8x1NenNzm2EnNLkLkk7J2SdxAkDSbb6ftT+UQ==
   dependencies:
     language-subtag-registry "~0.3.2"
+
+leaflet-simple-map-screenshoter@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/leaflet-simple-map-screenshoter/-/leaflet-simple-map-screenshoter-0.5.0.tgz#101a18669147c03ff7e99633786b31140f757d1c"
+  integrity sha512-yTrPTenq+ua9X0FaZxM0xHeapA4lM641M4d6V7G0WIStUbN1hGF6SVKdJpfa3PqRBM5ZDdFKfZ4W1F8Djsz2cg==
+  dependencies:
+    dom-to-image-more "^2.12.0"
+    file-saver "^2.0.2"
 
 leaflet@^1.9.3:
   version "1.9.3"
