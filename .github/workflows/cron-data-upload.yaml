@@ -58,6 +58,10 @@ jobs:
       - name: Merge datasets
         run: |
           python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
+
+          curl -O https://cdn.afetbilgi.com/schema.json
+          python data/integrity_validator.py validate schema.json ./data/to_upload/latest.json
+
           mkdir ./data/to_upload/datasets
           gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/datasets/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
 
