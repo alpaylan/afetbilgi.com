@@ -44,4 +44,4 @@ jobs:
       - name: Purge cache
         run: |
           pip install -r requirements.txt
-          CF_ZONE=${{ CLOUDFLARE_ZONE }} CF_TOKEN=${{ CLOUDFLARE_AUTH_KEY }} python pdf-markdown/purge_cache.py md-generated/index.json
+          CF_ZONE=${{ secrets.CLOUDFLARE_ZONE }} CF_TOKEN=${{ secrets.CLOUDFLARE_AUTH_KEY }} python pdf-markdown/purge_cache.py md-generated/index.json
