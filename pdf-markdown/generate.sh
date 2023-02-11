@@ -16,7 +16,7 @@ for lang in ${langs[@]}; do
     mkdir $lang
     mkdir $lang/backups
     cd $lang
-    python ../../pdf-markdown/main.py tr ../../latest.json afetbilgi.md
+    python ../../pdf-markdown/main.py tr ../../latest.json afetbilgi.md all
     md-to-pdf afetbilgi.md
     cp afetbilgi.md "backups/`date +%Y-%m-%d_%H-%M-%S`.md"
     cp afetbilgi.pdf "backups/`date +%Y-%m-%d_%H-%M-%S`.pdf"
