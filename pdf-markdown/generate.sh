@@ -23,7 +23,7 @@ for lang in ${langs[@]}; do
     cd ..
 done
 
-index=$(echo '["afetbilgi.pdf"]')
+index=$(echo '[]')
 
 cities=$(python ../pdf-markdown/get_cities.py tr/afetbilgi.md)
 
@@ -37,10 +37,10 @@ for city in $(echo $cities); do
         cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
         cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
 
-        index=$(echo $index | jq ". += [\"$city.pdf\"]")
-
         cd ..
     done
+
+    index=$(echo $index | jq ". += [\"$city.pdf\"]")
 done
 
 echo $index | jq '.' > index.json
