@@ -186,7 +186,10 @@ def main():
                     "name": "Missafir",
                     "url": "https://www.missafir.com/ev-sahipleriyle-depremzedeleri-bulusturma-platformu/"
                 }
-
+                {
+                    "name": "Emlakjet Evin Umut Olsun",
+                    "url": "https://www.emlakjet.com/evin-umut-olsun/"
+                },
             ],
         },
     }
