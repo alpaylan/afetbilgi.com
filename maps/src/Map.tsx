@@ -5,38 +5,13 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
-import { DataType } from './utils/DataType';
+import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
 
 import "./Map.css"
 import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
 
 const INITIAL_ZOOM = 15;
 const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
-
-export const dataTypeToColor: { [k: string]: string } =
-  {
-    [DataType.CITY_ACCOMMODATION]: '#01e',
-    [DataType.NEW_GATHERING_LIST]: '#e10',
-    [DataType.DATA_VET]: '#2be',
-    [DataType.FOOD_ITEMS]: '#666',
-    [DataType.CONTAINER_PHARMACY]: '#e4b',
-    // [DataType.STEM_CELL_DONATION]: '#fb0',
-    // [DataType.HELP_ITEM_LIST]: '#0b4',
-    // [DataType.EVACUATION_POINTS]: '#80e',
-  };
-
-export const dataTypeToLabel: { [k: string]: any } =
-  {
-    [DataType.CITY_ACCOMMODATION]: { 'name_ar': 'ملاجئ مؤقتة', 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'name_ku': 'Bicîhbûna Demkî' },
-    [DataType.NEW_GATHERING_LIST]:{ 'name_ar': 'مناطق تجميع آمنة', 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'name_ku': 'Qadên Ewle Bo Kombûnê' },
-    [DataType.FOOD_ITEMS]:{ 'name_ar': 'مواقع توصيل الطعام', 'name_tr': 'Yemek Dağıtım Yerleri', 'name_en': 'Food Distribution Center', 'name_ku': 'Cihên Belavkirina Xwarinê' },
-    [DataType.CONTAINER_PHARMACY]:{ 'name_ar': "صيدليات الحاويات", "name_ku": "Dermanxaneyên Seyare", "name_en": "Container Pharmacies", "name_tr": 'Konteyner Eczaneler' },
-    [DataType.DATA_VET]: { 'name_ar': 'بَيَاطير', 'name_tr': 'Veterinerler', 'name_en': 'Veterinarians', 'name_ku': 'Veterîner' },
-    // [DataType.HELP_ITEM_LIST]:{ 'name_ar': 'فرص التبرع بالعناصر', 'name_tr': 'Yardım Toplama Merkezleri','name_en': 'Other Donation', 'name_ku': 'Bexşkirina Tiştan' },
-    // [DataType.STEM_CELL_DONATION]:{ 'name_ar': 'نقاط التبرع بالخلايا الجذعية', 'name_tr': 'Kök Hücre Bağış Noktaları', 'name_en': 'Stem Cell Donation Points', 'name_ku': 'Cihên bo bexşîna xaneyî bineretiyê' },
-    // [DataType.EVACUATION_POINTS]:{ 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê' },
-    // EVACUATION_POINTS TO BE ADDED SINCE DATA IS AVAILABLE IN SHEET
-  };
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
@@ -105,11 +80,10 @@ export default function Map() {
   const dataIndex = useMemo(() => buildSearchIndex(data?.map_data || []), [data]);
   const filteredData = useMemo(() => {
     if (!data) return [];
-    if (!searchString) return data.map_data;
 
-    const group1 = searchText(dataIndex, searchString);
-    const group2 = filterMultipleTypes(group1.map(i => i.item), dataTypes);
-
+    const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data.map_data;
+    const group2 = filterMultipleTypes(group1, dataTypes);
+    console.log(group2);
     return group2;
   }, [data, dataIndex, searchString, dataTypes]);
 

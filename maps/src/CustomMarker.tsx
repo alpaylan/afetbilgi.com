@@ -2,7 +2,7 @@ import { Box, Button } from '@mui/material';
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { MarkerData } from './hooks';
-import { dataTypeToLabel } from './Map';
+import { dataTypeToLabel } from './utils/DataType';
 import getIcon from './utils/icon';
 
 function DataItem({ text, value }: { text: string, value: string }) {
@@ -32,6 +32,7 @@ export default function CustomMarker({ item, radius: size } : { item: MarkerData
               sx={{ fontSize: "inherit" }}
               variant='outlined'
               href={item.maps_url ? item.maps_url : `https://www.google.com/maps/search/?api=1&query=${item.latitude},${item.longitude}`}
+              target="_blank"
               fullWidth
             >
               Haritada Göster
