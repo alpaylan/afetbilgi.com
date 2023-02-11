@@ -1,23 +1,17 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
-import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
-import { useMarkers } from './hooks';
+import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { MarkerData, useMarkers } from './hooks';
 import { filterMultipleTypes, searchText } from './helpers/filters';
+import CustomMarker from './CustomMarker';
+import { DataType } from './utils/DataType';
 
 import "./Map.css"
 
-export enum DataType {
-  CITY_ACCOMMODATION = 'map-city-accommodation',
-  NEW_GATHERING_LIST = 'map-gathering-list',
-  HELP_ITEM_LIST = 'map-help-item-list',
-  STEM_CELL_DONATION = 'map-stem-cell-donation',
-  DATA_VET = 'map-data-vet',
-  FOOD_ITEMS = 'map-food-items',
-  CONTAINER_PHARMACY = 'map-container-pharmacy',
-  EVACUATION_POINTS = 'map-evacuation-points',
-}
+const INITIAL_ZOOM = 15;
+const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
 
 export const dataTypeToColor: { [k: string]: string } =
   {
@@ -44,6 +38,65 @@ export const dataTypeToLabel: { [k: string]: any } =
   };
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
+
+function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
+  const [radius, setRadius] = React.useState(getZoom(useMap().getZoom()));
+  const [bounds, setBounds] = React.useState(useMap().getBounds());
+
+  const mapEvents = useMapEvents({
+    zoomend: () => {
+      setRadius(getZoom(mapEvents.getZoom()));
+      setBounds(mapEvents.getBounds());  
+    },
+    moveend: () => {
+      setBounds(mapEvents.getBounds());
+    }
+  });
+
+  const optimizedData = useMemo(() => {
+    return filteredData.map((item) => {
+
+      return {...item, data: item.data.filter((subitem) => {
+        const { latitude, longitude } = subitem;
+
+        return latitude < bounds.getNorthEast().lat 
+          && latitude > bounds.getSouthWest().lat
+          && longitude < bounds.getNorthEast().lng
+          && longitude > bounds.getSouthWest().lng;
+      })};
+    });
+  }, [filteredData, bounds]);
+
+  return (
+    <>
+      {optimizedData.map((item, i) => (
+          item.data.map((subitem, j) => (
+            <CustomMarker
+              key={`${i}-${j}`}
+              item={item}
+              subitem={subitem}
+              radius={radius}
+              />
+          )).flat()
+        ))}
+
+        {selfLocation && 
+          <CircleMarker
+            className="blink"
+            center={selfLocation}
+            weight={3}
+            color="white"
+            fillColor={"#00fb"}
+            fillOpacity={1}
+            radius={radius / 3}
+            opacity={0.75}
+          >
+            <Popup>Sizin Konumunuz</Popup>
+          </CircleMarker>
+        }
+    </> 
+  )
+}
 
 export default function Map() {
   const { data, isLoading } = useMarkers();
@@ -85,54 +138,12 @@ export default function Map() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh' }}>
-      <MapContainer center={centerLocation} zoom={15} maxZoom={18} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={centerLocation} zoom={INITIAL_ZOOM} maxZoom={18} minZoom={6} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
           url={`https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&apistyle=s.e%3Al.i%7Cp.v%3Aoff%2Cs.t%3A3%7Cs.e%3Ag%7C`}
         />
 
-        {filteredData.map((item, i) => (
-          item.data.map((subitem, j) => (
-            <CircleMarker
-              key={`marker-${i}-${j}`}
-              center={[subitem.latitude, subitem.longitude]}
-              weight={2}
-              color="white"
-              fillColor={dataTypeToColor[item.type]} fillOpacity={1} radius={10}
-            >
-              <Popup>
-                {subitem.name && <Box><b>{subitem.name} - </b></Box>}
-                <Box sx={{ my: 1 }}><b>{dataTypeToLabel[item.type].name_tr}</b></Box>
-                {subitem.city && <Box sx={{ my: 1 }}>Adres: {`${subitem.city}${subitem.county ? `, ${subitem.county}` : ""}`}</Box>}
-                {subitem.phone_number && <Box sx={{ my: 1 }}>Telefon: {subitem.phone_number}</Box>}
-                <Box sx={{ my: 1 }}>
-                  <Button
-                    variant='outlined'
-                    href={subitem.maps_url ? subitem.maps_url : `https://www.google.com/maps/search/?api=1&query=${subitem.latitude},${subitem.longitude}`}
-                  >
-                    Haritada Göster
-                  </Button>
-                </Box>
-
-                {subitem.url && (
-                  <Box sx={{ my: 1 }}>
-                    <Button
-                      variant='outlined'
-                      href={subitem.url}
-                      >
-                      Kaynak
-                    </Button>
-                  </Box>
-                )}
-              </Popup>
-            </CircleMarker>
-          )).flat()
-        ))}
-
-        {selfLocation && <>
-          <CircleMarker className="blink" center={selfLocation} weight={4} color="white" fillColor="blue" fillOpacity={1} radius={10}>
-            <Popup>Sizin Konumunuz</Popup>
-          </CircleMarker>
-        </>}
+        <Markers filteredData={filteredData} selfLocation={selfLocation} />
       </MapContainer>
 
       <Box sx={{
