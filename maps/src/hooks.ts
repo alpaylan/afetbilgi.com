@@ -25,7 +25,7 @@ export const useMarkers = () => useQuery('map-data', async () => {
   response.data.map_data.forEach((x: any) => {
     x.data.forEach((y: any) => {
       if (pointsSet.has(`${y.latitude},${y.longitude}`)) {
-        y.latitude = String(Number(y.latitude) + 0.0001);
+        y.longitude = String(Number(y.longitude) + 0.0003);
       }
 
       pointsSet.add(`${y.latitude},${y.longitude}`);
