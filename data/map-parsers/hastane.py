@@ -4,7 +4,7 @@ import pandas as pd
 from base_map_parser import BaseMapParser
 from utils.functions import turkish_title
 
-class ToplanmaParser(BaseMapParser):
+class HastaneParser(BaseMapParser):
 
     @classmethod
     async def parse(cls):
