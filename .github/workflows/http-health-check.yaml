@@ -5,7 +5,7 @@ on:
 
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "*/30 * * * *" # Run every 30 minutes
+    - cron: "*/6 * * * *" # Run every 6 minutes
 
 jobs:
   deploy:
@@ -16,5 +16,5 @@ jobs:
       - name: Checking HTTP status codes are valid
         uses: lakuapik/gh-actions-http-status@v1
         with:
-          sites: '["https://afetbilgi.com", "https://www.afetbilgi.com"]'
-          expected: '[308, 200]'
+          sites: '["https://afetbilgi.com", "https://www.afetbilgi.com", "https://maps.afetbilgi.com", "https://cdn.afetbilgi.com/latest.json", "https://pdf.afetbilgi.com"]'
+          expected: '[308, 200, 304, 302]'
