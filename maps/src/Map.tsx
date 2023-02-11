@@ -47,7 +47,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
   const mapEvents = useMapEvents({
     zoomend: () => {
       setRadius(getZoom(mapEvents.getZoom()));
-      setBounds(mapEvents.getBounds());  
+      setBounds(mapEvents.getBounds());
     },
     moveend: () => {
       setBounds(mapEvents.getBounds());
@@ -60,7 +60,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
       return {...item, data: item.data.filter((subitem) => {
         const { latitude, longitude } = subitem;
 
-        return latitude < bounds.getNorthEast().lat 
+        return latitude < bounds.getNorthEast().lat
           && latitude > bounds.getSouthWest().lat
           && longitude < bounds.getNorthEast().lng
           && longitude > bounds.getSouthWest().lng;
@@ -81,7 +81,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
           )).flat()
         ))}
 
-        {selfLocation && 
+        {selfLocation &&
           <CircleMarker
             className="blink"
             center={selfLocation}
@@ -95,7 +95,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
             <Popup>Sizin Konumunuz</Popup>
           </CircleMarker>
         }
-    </> 
+    </>
   )
 }
 
@@ -193,7 +193,7 @@ export default function Map() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Filtrele</Typography>
+              <Typography>Filtreler</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Stack gap={1}>
