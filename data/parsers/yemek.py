@@ -2,6 +2,7 @@ import sys
 import json
 import pandas as pd
 from utils.functions import turkish_title
+import os
 
 
 def main():
@@ -11,7 +12,8 @@ def main():
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Yemek"
@@ -115,22 +117,22 @@ def main():
         "text_ar": "يرجى تحديد المدينة التي تريد تلقي معلومات حول فرص تناول الطعام فيها.",
         "options": options_1,
 
-        'externalData' : {
+        'externalData': {
             "text_tr": 'Yemek olanakları hakkında daha fazla bilgi',
             "text_en": 'More information about food options',
             "text_ku": 'Agahdariyên li ser derfetên xwarinê',
             "text_ar": 'مزيد من المعلومات حول فرص تناول الطعام',
             "usefulLinks": [
                 {
-                    "name":'McDonald’s Türkiye',
+                    "name": 'McDonald’s Türkiye',
                     "url": 'https://www.instagram.com/p/CocCDmzt_CI/?igshid=NTdlMDg3MTY=',
                 },
                 {
-                    "name":'Adana\'da Destek Alabileceğiniz Yemek İşletmeleri',
+                    "name": 'Adana\'da Destek Alabileceğiniz Yemek İşletmeleri',
                     "url": 'https://www.google.com/maps/d/u/0/viewer?mid=1jEw7Qe2Z7SXH8a4rMx9bso1hycYi3vc&ll=36.994885473974875%2C35.40509821285593&z=11',
                 },
                 {
-                    "name":'Deprem Bölgesi Sahra Mutfak Haritası',
+                    "name": 'Deprem Bölgesi Sahra Mutfak Haritası',
                     "url": 'https://www.google.com/maps/d/embed?mid=1LspPt4CpxG6krYf2ABBZISBbqd4SZs0&ehbc=2E312F',
                 }
             ],
