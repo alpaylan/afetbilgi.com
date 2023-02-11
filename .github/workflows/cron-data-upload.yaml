@@ -2,9 +2,6 @@ name: Data upload (cronjob)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - feat/gas-stations
 
   schedule:
     # * is a special character in YAML so you have to quote this string
