@@ -23,7 +23,8 @@ for city in cities:
                 "latitude": item["location"]["latitude"],
                 "longitude": item["location"]["longitude"],
                 "lastUpdate": item["updates"][0]["update"],
-                "status": item["active"]
+                "status": item["active"],
+                "description": "Bu veri afetyardimalanlari.org'dan alınmıştır"
             })
 
 out =  {
