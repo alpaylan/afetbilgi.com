@@ -33,8 +33,8 @@ export default function GasStationsData({
       </h3>
       {isMinWidth ? (
         <List>
-          {value.items.map((item) => (
-            <ListItem>
+          {value.items.map((item, i) => (
+            <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
                   <b>{t('city')}</b>: {value.city} / {value.county}
@@ -53,7 +53,7 @@ export default function GasStationsData({
                     </>
                     : <></>
                   }
-                  
+
                   {item.telephone && (
                     <Box sx={{ mt: 1 }}>
                       <div>
@@ -102,7 +102,7 @@ export default function GasStationsData({
                       </a>
                       </>
                       : <></>
-                    } 
+                    }
                   </TableCell>
                   <TableCell>
                     <div>
