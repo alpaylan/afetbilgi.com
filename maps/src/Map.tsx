@@ -3,13 +3,17 @@ import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
-import {SimpleMapScreenshoter} from 'leaflet-simple-map-screenshoter'
+import {SimpleMapScreenshoter} from 'leaflet-simple-map-screenshoter';
+import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
 import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
 
 import "./Map.css"
 import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
+
+require('leaflet/dist/leaflet.css');
+require('@changey/react-leaflet-markercluster/dist/styles.min.css');
 
 const INITIAL_ZOOM = 15;
 const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
@@ -43,14 +47,23 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
 
   return (
     <>
+    {/* if comments are toggled, at high zoom levels clustering will be disabled (may be useful for taking ss/saving as pdf) */}
+    {/* For now it is disabled because spiderfy'ing lets us click really close map items. */}
+    <MarkerClusterGroup
+        // spiderfyOnMaxZoom={false}
+        maxClusterRadius={50}
+        animate={false}
+        // disableClusteringAtZoom={18}
+      >
       {optimizedData.map((item, i) => (
         <CustomMarker
-          key={`item-${i}`}
-          item={item}
-          radius={radius}
+        key={`item-${i}`}
+        item={item}
+        radius={radius}
         />
-      ))}
+        ))}
 
+    </MarkerClusterGroup>
       {selfLocation &&
         <CircleMarker
           className="blink"
@@ -61,11 +74,11 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
           fillOpacity={1}
           radius={radius / 4}
           opacity={0.75}
-        >
+          >
           <Popup>Sizin Konumunuz</Popup>
         </CircleMarker>
       }
-    </>
+  </>
   )
 }
 
@@ -101,7 +114,7 @@ export default function Map() {
 
     const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data.map_data;
     const group2 = filterMultipleTypes(group1, dataTypes);
-    
+
     return group2;
   }, [data, dataIndex, searchString, dataTypes]);
 
