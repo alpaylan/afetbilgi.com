@@ -94,6 +94,18 @@ def main():
         "text_en": "Which city are you looking for healthcare services?",
         "text_ku": "Hûn li kîjan bajarî li xizmetên tendirûstiyê digerin? ",
         "text_ar": "في أي مدينة تبحث عن رعاية صحية؟",
+        'externalData': {
+            "text_tr": 'Aktif Hastaneler',
+            "text_en": 'Active Hospitals',
+            "text_ku": 'Nexweşxaneyên vekirî',
+            "text_ar": 'المستشفيات الفعالة',
+            "usefulLinks": [
+                {
+                    "name": 'Deprem Bölgesi Aktif Hastane Listesi',
+                    "url": 'https://docs.google.com/spreadsheets/d/1a785CPjKg0cVND2rl2dGnwb7q_1mPJhwWJ8UODCcttw/edit#gid=0',
+                }
+            ],
+        }
     }
 
     with open(out_path, "w") as f:
