@@ -103,13 +103,18 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                   {t('data.pdf.or')}
                 </Typography>
               </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'center', m: 1 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', mt : 1 }}>
+                <Typography component="span">
+                  {t('data.pdf.select')}
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', justifyContent: 'center', m: 1}}>
                 <Autocomplete
                   id="combo-box-demo"
                   options={Object.keys(citiesDict).map((key) => citiesDict[key][i18n.language])}
                   getOptionLabel={(option) => option}
                   renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
-                  sx={{ width: 300, alignSelf: 'center' }}
+                  sx={{ width: 300, alignSelf: 'center', mt: 1 }}
                   onChange={(event, newValue) => {
                     if (newValue) {
                       setSelectedCity(newValue);
