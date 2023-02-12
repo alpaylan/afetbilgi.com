@@ -18,7 +18,7 @@ for city in cities:
 
         for item in data:
             result.append({
-                "type": "external-help-location",
+                "type": "map-external-help-item",
                 "name": item["name"],
                 "latitude": item["location"]["latitude"],
                 "longitude": item["location"]["longitude"],
