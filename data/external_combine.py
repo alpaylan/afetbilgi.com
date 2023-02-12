@@ -10,25 +10,26 @@ else:
 
 cities = ['istanbul', 'ankara', 'izmir']
 
-items = []
+result = []
 
 for city in cities:
     with open(basedir + '/afetyardimalanlari-org-' + city + '.json', 'r') as f:
         data = json.load(f)
 
-        items.append({
-            "type": "external-help-location",
-            "name": data["name"],
-            "latitude": data["location"]["latitude"],
-            "longitude": data["location"]["longitude"],
-            "lastUpdate": data["updates"][0]["update"],
-            "status": data["active"]
-        })
+        for item in data:
+            result.append({
+                "type": "external-help-location",
+                "name": item["name"],
+                "latitude": item["location"]["latitude"],
+                "longitude": item["location"]["longitude"],
+                "lastUpdate": item["updates"][0]["update"],
+                "status": item["active"]
+            })
 
-res =  {
+out =  {
     "update_time": datetime.now().isoformat(),
     "map_data": items
 }
 
 with open(basedir + '/latest.json', 'w') as f:
-    json.dump(result, f, ensure_ascii=False, allow_nan=False)
+    json.dump(out, f, ensure_ascii=False, allow_nan=False)
