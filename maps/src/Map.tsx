@@ -57,9 +57,9 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
           center={selfLocation}
           weight={3}
           color="white"
-          fillColor={"#00fb"}
+          fillColor={"#4F81E6"}
           fillOpacity={1}
-          radius={radius / 3}
+          radius={radius / 4}
           opacity={0.75}
         >
           <Popup>Sizin Konumunuz</Popup>
