@@ -111,7 +111,7 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
             </Box>
             <Box sx={{ textAlign: 'center', m: 2 }}>
               <Button variant="contained" color="primary" onClick={handleDownload} disabled={!selectedCity}>
-                {t('download')}
+                {t('data.pdf.download')}
               </Button>
             </Box>
           </div>

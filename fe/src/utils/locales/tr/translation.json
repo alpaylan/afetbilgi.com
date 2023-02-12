@@ -61,6 +61,7 @@
   "data.pdf.description": "PDF olarak indirmek için depremden etkilenen şehirlerden birini seçiniz.",
   "data.pdf.or": "Tüm şehirler",
   "data.pdf.citySelect": "Şehir Seçiniz",
+  "data.pdf.download": "İNDİR",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",
