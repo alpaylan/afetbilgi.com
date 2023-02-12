@@ -13,10 +13,10 @@ export enum DataType {
 
 export const dataTypeToColor: { [k: string]: string } =
   {
-    [DataType.CITY_ACCOMMODATION]: '#01e',
-    [DataType.FOOD_ITEMS]: '#666',
-    [DataType.HOSPITALS]: '#e10',
-    [DataType.CONTAINER_PHARMACY]: '#e4b',
+    [DataType.CITY_ACCOMMODATION]: '#5185EC',
+    [DataType.FOOD_ITEMS]: '#E69C23',
+    [DataType.HOSPITALS]: '#DE6F62',
+    [DataType.CONTAINER_PHARMACY]: '#D85040',
     [DataType.EVACUATION_POINTS]: '#80e',
     [DataType.NEW_GATHERING_LIST]: '#0b4',
     [DataType.DATA_VET]: '#2be',
