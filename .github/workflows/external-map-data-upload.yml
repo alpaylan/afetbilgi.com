@@ -26,5 +26,7 @@ jobs:
           curl -o to_upload/afetyardimalanlari-org-istanbul.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0stanbul"
           curl -o to_upload/afetyardimalanlari-org-izmir.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0zmir"
 
+          python3 external_combine.py ./to_upload
+
       - name: Sync JSON files
         run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/maps/external/
