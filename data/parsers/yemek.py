@@ -20,6 +20,7 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
+    df = df.fillna("")
 
     # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
     # sheet_name = "Yemek%20Da%C4%9F%C4%B1t%C4%B1m%20Alanlar%C4%B1"
