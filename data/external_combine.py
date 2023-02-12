@@ -1,5 +1,6 @@
 import sys
 import json
+from datetime import datetime
 
 if len(sys.argv) < 2:
     print("Usage: python external_combine.py <basedir>")
@@ -9,11 +10,25 @@ else:
 
 cities = ['istanbul', 'ankara', 'izmir']
 
-result = {}
+items = []
 
 for city in cities:
     with open(basedir + '/afetyardimalanlari-org-' + city + '.json', 'r') as f:
-        result[city] = json.load(f)
+        data = json.load(f)
 
-with open(basedir + '/afetyardimalanlari-org.json', 'w') as f:
+        items.append({
+            "type": "external-help-location",
+            "name": data["name"],
+            "latitude": data["location"]["latitude"],
+            "longitude": data["location"]["longitude"],
+            "lastUpdate": data["updates"][0]["update"],
+            "status": data["active"]
+        })
+
+res =  {
+    "update_time": datetime.now().isoformat(),
+    "map_data": items
+}
+
+with open(basedir + '/latest.json', 'w') as f:
     json.dump(result, f, ensure_ascii=False, allow_nan=False)
