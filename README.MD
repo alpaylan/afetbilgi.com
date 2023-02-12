@@ -27,19 +27,21 @@ The basic principles of the website, which is based on a completely human-made d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082170148671529/home_tr.png)
+![tr](https://user-images.githubusercontent.com/57816597/218322466-2fd3ca38-14c1-42e3-918e-0ae2e60e8f58.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082239220449361/home_en.png)
+![en](https://user-images.githubusercontent.com/57816597/218322537-7742c33d-c73a-46ef-88fe-b3737bf6226e.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082321785335879/home_kr.png)
+![kr](https://user-images.githubusercontent.com/57816597/218322585-ffa4f32d-a223-4c6d-bea0-aafeab873908.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082386633465947/home_ar.png)
+![ar](https://user-images.githubusercontent.com/57816597/218322603-fca30929-67b2-4050-99ef-c2f617e705a3.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
