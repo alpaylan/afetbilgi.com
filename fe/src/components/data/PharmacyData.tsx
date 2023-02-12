@@ -32,8 +32,7 @@ export default function PharmacyData({
           <TableHead>
             <TableRow>
               <TableCell>{t('name')}</TableCell>
-              <TableCell>{t('address')}</TableCell>
-              <TableCell>{t('map')}</TableCell>
+              <TableCell>{t('address')} / {t('map')}</TableCell>
               <TableCell>{t('contact')}</TableCell>
             </TableRow>
           </TableHead>
@@ -46,16 +45,15 @@ export default function PharmacyData({
                 <TableCell component='th' scope='row'>
                   {item.name}
                 </TableCell>
-                <TableCell>{item.address}</TableCell>
                 <TableCell>
                   {
                     item.locationLink ?
                     <>
                     <a href={item.locationLink} target='_blank'>
-                      {t('location')}
+                      {item.address}
                     </a>
                     </>
-                    : <></>
+                    : item.address
                   }
                 </TableCell>
                 <TableCell>
