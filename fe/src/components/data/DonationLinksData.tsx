@@ -10,15 +10,17 @@ import {
   } from '@mui/material';
   import { useTranslation } from 'react-i18next';
   import { DonationLinksDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
   
   export default function DonationLinksData({ value }: { value: DonationLinksDataNode }) {
     const { t } = useTranslation();
     return (
       <Box>
-        <h3>{t('data.donation.title')}</h3>
-        <p>
-          <b>{t('data.donation.subtitle')}</b>
-        </p>
+        <Title
+          title={t('data.donation.title')}
+          subtitle={t('data.donation.subtitle') || ""}
+          severity="success"
+        />
         <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
           <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
             <TableHead>

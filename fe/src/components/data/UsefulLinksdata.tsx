@@ -7,6 +7,8 @@ import {
   TableRow,
   TableCell,
   TableBody,
+  Typography,
+  Alert,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { UsefulLinksDataNode } from '../../interfaces/TreeNode';
@@ -74,13 +76,15 @@ export default function UsefulLinksData({
     <Box>
       {!noTitle && (
         <>
-          <h3>{t('data.important_web_sites.title')}</h3>
-
-          <p>
-            <b>{t('data.important_web_sites.subtitle')}</b>
-          </p>
+          <Typography variant='h5'>
+            {t('data.important_web_sites.title')}
+          </Typography>
+          <Alert severity='info' sx={{ mt: 2, mb: 2, textAlign: 'start' }}>
+            {t('data.important_web_sites.subtitle')}
+          </Alert>
         </>
       )}
+      
       <TableContainer component={Paper} >
         <Table >
           <TableHead>

@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { GasStationsDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function GasStationsData({
   value,
@@ -25,12 +26,12 @@ export default function GasStationsData({
   const isMinWidth = useMediaQuery('(max-width:600px)');
   return (
     <Box>
-      <h3>
-        {t('data.gas_stations.title', {
+      <Title
+        title={t('data.gas_stations.title', {
           city: value.city,
           county: value.county,
         })}
-      </h3>
+      />
       {isMinWidth ? (
         <List>
           {value.items.map((item, i) => (

@@ -10,12 +10,15 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { StemCellDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function StemCellData({ value }: { value: StemCellDataNode }) {
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>{t('data.stem_cell.title')}</h3>
+      <Title
+        title={t('data.stem_cell.title')}
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
         <Table sx={{ maxWidth: 650 }}>
           <TableHead>

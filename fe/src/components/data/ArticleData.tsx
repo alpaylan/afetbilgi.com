@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ArticleDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 /* const ArticleLanguageHelper = ({
   item,
@@ -66,11 +67,11 @@ export default function ArticleData({ value }: { value: ArticleDataNode }) {
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>{t('data.important_articles.title')}</h3>
-
-      <p>
-        <b>{t('data.important_articles.subtitle')}</b>
-      </p>
+      <Title
+        title={t('data.important_articles.title')}
+        subtitle={t('data.important_articles.subtitle') || ''}
+        severity='info'
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
         <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
           <TableHead>
