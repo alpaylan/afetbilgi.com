@@ -5,6 +5,8 @@ import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import MapIcon from '@mui/icons-material/Map';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import LocalStorage from './utils/LocalStorage';
@@ -17,7 +19,7 @@ import { useQuestionData } from './hooks';
 // import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
-import { downloadPDF } from './utils/downloadPDF';
+import PDFDownloadDialog from './components/PDFDownloadDialog';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -43,6 +45,7 @@ const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isMinWidth = useMediaQuery('(min-width:1024px)');
+  const [pdfDialogOpen, setPdfDialogOpen] = React.useState(false);
 
   const { isLoading } = useQuestionData([]);
 
@@ -95,7 +98,7 @@ const App = () => {
           }}
         >
           {location.pathname !== '/' && (
-            <>
+            <Box sx={{ display: 'flex', flexFlow: "wrap", alignItems: "center", justifyContent: "center", mr: 1 }}>
               <Button size='large' onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
@@ -103,7 +106,7 @@ const App = () => {
               <Button size='large' onClick={() => navigate(-1)}>
                 {t('button.back')}
               </Button>
-            </>
+            </Box>
           )}
 
           <Button
@@ -111,6 +114,9 @@ const App = () => {
             onClick={() => {
               window.open('https://maps.afetbilgi.com', '_blank');
             }}
+            startIcon={<MapIcon />}
+            variant="outlined"
+            sx={{ mr: 1 }}
           >
             {t('button.map')}
           </Button>
@@ -119,15 +125,18 @@ const App = () => {
             <Button
               size='large'
               onClick={() => {
-                downloadPDF(i18n.language);
+                setPdfDialogOpen(true);
               }}
+              startIcon={<PictureAsPdfIcon />}
+              variant="outlined"
+              sx={{ mr: 1 }}
             >
               {t('button.download')}
             </Button>
           )}
         </Box>
 
-        <Box sx={{ mt: 1 }}>
+        <Box sx={{ mt: 2 }}>
           <Select
             id='language-options-multiselect'
             size='small'
@@ -160,6 +169,10 @@ const App = () => {
       <Box sx={{ textAlign: 'center', p: 2 }}>
         {t('last_update')}: {buildDateString}
       </Box>
+      <PDFDownloadDialog
+        open={pdfDialogOpen}
+        onClose={() => setPdfDialogOpen(false)}
+      />
     </Box>
   );
 };
