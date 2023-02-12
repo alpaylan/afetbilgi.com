@@ -15,7 +15,7 @@ function DataItem({ text, value }: { text: string, value: string }) {
   )
 }
 
-export default function CustomMarker({ item, radius: size } : { item: MarkerData['map_data'][any], radius: number }) {
+export default function CustomMarker({ item, size } : { item: MarkerData['map_data'][any], size: number }) {
   return (
     <Marker
       icon={getIcon(item.type, size)}

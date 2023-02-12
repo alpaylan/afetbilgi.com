@@ -3,26 +3,28 @@ import { Stack } from '@mui/system';
 import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
-import {SimpleMapScreenshoter} from 'leaflet-simple-map-screenshoter'
+import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
 import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
+import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
+import { dataTypeToSVG } from './svgs';
 
 import "./Map.css"
-import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
 
 const INITIAL_ZOOM = 15;
-const getZoom = (zoom: number) => Math.max(zoom ** 1.7 / 2, 32);
+const MINIMUM_ICON_SIZE = 24;
+const getIconSize = (zoom: number) => Math.max(zoom ** 1.7 / 2, MINIMUM_ICON_SIZE);
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
-  const [radius, setRadius] = useState(getZoom(useMap().getZoom()));
+  const [size, setSize] = useState(getIconSize(useMap().getZoom()));
   const [bounds, setBounds] = useState(useMap().getBounds());
 
   const mapEvents = useMapEvents({
     zoomend: () => {
-      setRadius(getZoom(mapEvents.getZoom()));
+      setSize(getIconSize(mapEvents.getZoom()));
       setBounds(mapEvents.getBounds());
     },
     moveend: () => {
@@ -47,7 +49,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
         <CustomMarker
           key={`item-${i}`}
           item={item}
-          radius={radius}
+          size={size}
         />
       ))}
 
@@ -59,7 +61,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
           color="white"
           fillColor={"#4F81E6"}
           fillOpacity={1}
-          radius={radius / 4}
+          radius={size / 4}
           opacity={0.75}
         >
           <Popup>Sizin Konumunuz</Popup>
@@ -205,8 +207,20 @@ export default function Map() {
                         {dataTypes.includes(type)
                           ? <CheckCircleOutline style={{ color: 'white' }} />
                           : <CircleOutlined style={{ color: 'white' }} />}
-                        <Typography variant="body1" component="span" sx={{ ml: 1 }}>
+                        <Typography variant="body1" component="span" sx={{ 
+                          ml: 1,
+                          mr: 1,
+                          display: 'flex'
+                        }}>
                           {dataTypeToLabel[type].name_tr}
+                          <div style={{
+                            height: '22.5px',
+                            width: '22.5px',
+                            fill: 'white',
+                            marginLeft: '8px',
+                          }}
+                            dangerouslySetInnerHTML={{ __html: dataTypeToSVG[type] }}
+                          />
                         </Typography>
                     </div>
                 ))}
