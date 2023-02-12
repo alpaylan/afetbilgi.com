@@ -32,8 +32,8 @@ export default function EvacuationData({
       </h3>
       {isMinWidth ? (
         <List>
-          {value.items.map((item) => (
-            <ListItem>
+          {value.items.map((item, i) => (
+            <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
                   <b>{t('city')}</b>: {item.city} / {item.county}
@@ -52,10 +52,10 @@ export default function EvacuationData({
                     </>
                     : <></>
                   }
-                  
+
                   <Box sx={{ mt: 1 }}>
-                    {item.contacts.map((contact) => (
-                      <div>
+                    {item.contacts.map((contact, idx) => (
+                      <div key={idx}>
                         <a
                           href={`tel:${contact
                             ?.replace(/^0/, '')
@@ -104,8 +104,8 @@ export default function EvacuationData({
                   }
                   </TableCell>
                   <TableCell>
-                    {item.contacts.map((contact) => (
-                      <div>
+                    {item.contacts.map((contact, idx) => (
+                      <div key={idx}>
                         <a
                           style={{ whiteSpace: 'nowrap' }}
                           href={`tel:${contact

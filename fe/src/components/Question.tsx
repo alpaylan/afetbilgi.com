@@ -94,8 +94,8 @@ export default function Question({ paths }: { paths: string[] }) {
               );
 
           }
-          
-          
+
+
           else {
             navigate(`/${optionName}`);
           }
@@ -146,8 +146,9 @@ export default function Question({ paths }: { paths: string[] }) {
         >
           {Object.keys(buttonsByCategories)
             .filter((category) => buttonsByCategories[category].length > 0)
-            .map((category) => (
+            .map((category, i) => (
               <Box
+                key={i}
                 sx={{
                   textAlign: 'center',
                   display: 'flex',
