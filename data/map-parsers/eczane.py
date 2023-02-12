@@ -27,7 +27,7 @@ class EczaneParser(BaseMapParser):
                 {
                     "city": row[0],
                     "district": row[1],
-                    "location": row[2],
+                    "name": row[2],
                     "latitude": coor[0],
                     "longitude": coor[1],
                 }
