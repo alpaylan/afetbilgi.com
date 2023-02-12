@@ -7,9 +7,10 @@ import {
   Stack,
   TextField,
   Typography,
+  Link as MUILink,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { jsx } from '@emotion/react';
 
 import { useQuestionData } from '../hooks';
@@ -66,51 +67,38 @@ export default function Question({ paths }: { paths: string[] }) {
   }
 
   const isRootQuestion = location.pathname === '/';
+  const renderOptionButton = (option: OptionNode) => {
+    const optionNameLocalized = getOptionName(option, i18n.language);
+    const optionName = encodeURIComponent(getOptionName(option, 'tr'));
+    const directLinks:Record<string,string> = {
+      'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
+      "Mobil%20Tuvaletler": 'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA'
+    };
 
-  const renderOptionButton = (option: OptionNode) => (
-    <Button
-      key={`button-${getOptionName(option, i18n.language)}`}
+    const isDirectLink = optionName in directLinks && isRootQuestion;
+    let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    if(isDirectLink) redirectionPath = directLinks[optionName];
+
+    const ButtonComponent = <Button
+      key={`button-${optionNameLocalized}`}
       variant='contained'
       size='medium'
       sx={{ m: 2, minWidth: '300px' }}
-      onClick={() => {
-        if (isRootQuestion) {
-          const optionName = encodeURIComponent(getOptionName(option, 'tr'));
-          if (
-            optionName ===
-            'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1'
-          ) {
-            window.open(
-              'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
-              '_blank',
-            );
-
-          } else if (
-            optionName === "Mobil%20Tuvaletler"
-          ) {
-            window.open(
-              'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA',
-              '_blank',
-              );
-
-          }
-
-
-          else {
-            navigate(`/${optionName}`);
-          }
-        } else {
-          navigate(
-            `${location.pathname}/${encodeURIComponent(
-              getOptionName(option, 'tr'),
-            )}`,
-          );
-        }
-      }}
+      to={redirectionPath}
+      component= {Link}
     >
-      {getOptionName(option, i18n.language).toLocaleUpperCase(i18n.language)}
-    </Button>
-  );
+      {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+    </Button>;
+
+    // Direct link buttons have underlines
+    if (isDirectLink) {
+      return <MUILink underline='always'>
+        {ButtonComponent}
+      </MUILink>
+    }
+
+    return ButtonComponent;
+  };
 
   const renderOptions = () => {
     if (isRootQuestion) {

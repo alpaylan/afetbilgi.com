@@ -58,6 +58,12 @@
   "data.health_services.detail_inspect": "",
   "data.health_services.detail_mix": " or you can check ",
   "data.health_services.detail_website": "this website",
+  "data.pdf.title": "Download as PDF",
+  "data.pdf.description": "Please select one of the cities affected by the earthquake to download as PDF.",
+  "data.pdf.or": "All cities",
+  "data.pdf.citySelect": "Select a city",
+  "data.pdf.download": "Download",
+  "data.pdf.all": "All Cities",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",

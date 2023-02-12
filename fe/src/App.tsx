@@ -17,7 +17,7 @@ import { useQuestionData } from './hooks';
 // import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
-import { downloadPDF } from './utils/downloadPDF';
+import PDFDownloadDialog from './components/PDFDownloadDialog';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -43,6 +43,7 @@ const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isMinWidth = useMediaQuery('(min-width:1024px)');
+  const [pdfDialogOpen, setPdfDialogOpen] = React.useState(false);
 
   const { isLoading } = useQuestionData([]);
 
@@ -119,7 +120,7 @@ const App = () => {
             <Button
               size='large'
               onClick={() => {
-                downloadPDF(i18n.language);
+                setPdfDialogOpen(true);
               }}
             >
               {t('button.download')}
@@ -160,6 +161,10 @@ const App = () => {
       <Box sx={{ textAlign: 'center', p: 2 }}>
         {t('last_update')}: {buildDateString}
       </Box>
+      <PDFDownloadDialog
+        open={pdfDialogOpen}
+        onClose={() => setPdfDialogOpen(false)}
+      />
     </Box>
   );
 };
