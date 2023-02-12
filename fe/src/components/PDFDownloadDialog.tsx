@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import {
   Autocomplete,
-  Box, Button, Dialog, DialogContent, DialogTitle, TextField, Typography,
+  Box, Button, Dialog, DialogContent, DialogTitle, Divider, TextField, Typography,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import cities from '../utils/locales/il_translate.json'
@@ -88,6 +88,7 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                   </Button>
                 ))}
               </Box>
+              <Divider sx={{ m: 2 }} />
               <Box sx={{ display: 'flex', justifyContent: 'center', mt : 1 }}>
                 <Typography variant="h6" component="span">
                   {t('data.pdf.or')}
