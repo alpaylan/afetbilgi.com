@@ -28,7 +28,7 @@ for city in cities:
 
 out =  {
     "update_time": datetime.now().isoformat(),
-    "map_data": items
+    "map_data": result
 }
 
 with open(basedir + '/latest.json', 'w') as f:
