@@ -64,6 +64,7 @@
   "data.pdf.download": "Download",
   "data.pdf.all": "All Cities",
   "data.pdf.select": "To download the PDF, select the city and press the download button.",
+  "data.pharmacy.title": "{{city}}, {{county }} الصيدليات المفتوحة",
 
   "validation_status": "حالة التحقق",
   "pdf_notice": "هذه الوثيقة مأخوذة من موقع [afetbilgi.com](https://afetbilgi.com). آخر تاريخ للتحقق من صحة البيانات: {date}",

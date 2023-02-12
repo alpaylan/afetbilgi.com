@@ -64,6 +64,7 @@
   "data.pdf.download": "Download",
   "data.pdf.all": "All Cities",
   "data.pdf.select": "To download the PDF, select the city and press the download button.",
+  "data.pharmacy.title": "{{city}}, {{county }} Dermanxaneyan Vekin",
 
   "validation_status": "Rewşa verastkirinê",
   "pdf_notice": "",
