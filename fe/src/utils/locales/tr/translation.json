@@ -64,6 +64,7 @@
   "data.pdf.download": "İNDİR",
   "data.pdf.all": "Tüm Şehirler",
   "data.pdf.select": "PDF indirmek için şehir seçip indir butonuna basınız.",
+  "data.pharmacy.title": "{{city}}, {{county }} Açık Eczaneler",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",
