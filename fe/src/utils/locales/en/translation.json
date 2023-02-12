@@ -64,6 +64,7 @@
   "data.pdf.citySelect": "Select a city",
   "data.pdf.download": "Download",
   "data.pdf.all": "All Cities",
+  "data.pdf.select": "To download the PDF, select the city and press the download button.",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
