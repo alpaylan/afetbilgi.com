@@ -57,6 +57,12 @@
   "data.health_services.detail_inspect": "inceleyebilirsiniz",
   "data.health_services.detail_mix": "'i arayabilirsiniz ya da ",
   "data.health_services.detail_website": "bu web sitesini",
+  "data.pdf.title": "PDF Olarak İndir",
+  "data.pdf.description": "PDF olarak indirmek için depremden etkilenen şehirlerden birini seçiniz.",
+  "data.pdf.or": "Tüm şehirler",
+  "data.pdf.citySelect": "Şehir Seçiniz",
+  "data.pdf.download": "İNDİR",
+  "data.pdf.all": "Tüm Şehirler",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",

@@ -57,6 +57,12 @@
   "data.health_services.detail_inspect": "Hûn dikarin lêkolîn bikin  ",
   "data.health_services.detail_mix": "'Hûn dikarin li vê numareyê bigerin an jî ",
   "data.health_services.detail_website": "Vê malperê",
+  "data.pdf.title": "Download as PDF",
+  "data.pdf.description": "Please select one of the cities affected by the earthquake to download as PDF.",
+  "data.pdf.or": "All cities",
+  "data.pdf.citySelect": "Select a city",
+  "data.pdf.download": "Download",
+  "data.pdf.all": "All Cities",
 
   "validation_status": "Rewşa verastkirinê",
   "pdf_notice": "",

@@ -57,6 +57,12 @@
   "data.health_services.detail_inspect": "يمكنك المراجعة",
   "data.health_services.detail_mix": "'يمكنك الاتصال برقم ",
   "data.health_services.detail_website": "هذا المَوْقِع الإِلَكْتُرُونِيّ",
+  "data.pdf.title": "Download as PDF",
+  "data.pdf.description": "Please select one of the cities affected by the earthquake to download as PDF.",
+  "data.pdf.or": "All cities",
+  "data.pdf.citySelect": "Select a city",
+  "data.pdf.download": "Download",
+  "data.pdf.all": "All Cities",
 
   "validation_status": "حالة التحقق",
   "pdf_notice": "هذه الوثيقة مأخوذة من موقع [afetbilgi.com](https://afetbilgi.com). آخر تاريخ للتحقق من صحة البيانات: {date}",
