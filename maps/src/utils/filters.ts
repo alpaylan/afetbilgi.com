@@ -11,7 +11,7 @@ export function buildSearchIndex(data: MarkerData) {
   }
 
   return new Fuse(data, {
-    keys: ['labels.name_tr', 'labels.name_en', 'labels.name_ar', 'labels.name_ku', 'name', 'city', 'county'],
+    keys: ['labels.name_tr', 'labels.name_en', 'labels.name_ar', 'labels.name_ku', 'name', 'city', 'county', 'description', 'phone_number', 'lastUpdate'],
     threshold: 0.3,
   });
 }

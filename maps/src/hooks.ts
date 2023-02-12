@@ -14,6 +14,7 @@ export type MarkerData = {
   county?: string;
   lastUpdate?: string;
   status?: boolean;
+  description?: string;
 }[];
 
 const fetchCoreData = async () => {

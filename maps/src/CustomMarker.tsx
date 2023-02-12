@@ -29,6 +29,7 @@ export default function CustomMarker({ item, size } : { item: MarkerData[any], s
           {item.phone_number && <DataItem text="Telefon" value={item.phone_number} /> }
           {item.status && <DataItem text="Durum" value={item.status ? "AÇIK" : "KAPALI"} /> }
           {item.lastUpdate && <DataItem text="Son Güncelleme" value={item.lastUpdate} /> }
+          {item.description && <Box sx={{mt: 1}}>{item.description}</Box>}
 
           <Box sx={{ mt: 2 }}>
             <Button
