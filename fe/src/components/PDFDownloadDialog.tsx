@@ -70,6 +70,15 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
               </Typography>
             </Box>
             <Box>
+              <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
+                <Button variant="contained" color="success" onClick={() => {
+                  window.open(`https://pdf.afetbilgi.com/${i18n.language}`, '_blank');
+                }}>
+                  <Typography variant="button" component="span">
+                    {t('data.pdf.all')}
+                  </Typography>
+                </Button>
+              </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mt: 1 }}>
                 {upperCities.map((city) => (
                   <Button

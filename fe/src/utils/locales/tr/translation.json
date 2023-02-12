@@ -62,6 +62,7 @@
   "data.pdf.or": "Tüm şehirler",
   "data.pdf.citySelect": "Şehir Seçiniz",
   "data.pdf.download": "İNDİR",
+  "data.pdf.all": "Tüm Şehirler",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",

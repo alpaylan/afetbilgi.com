@@ -63,6 +63,7 @@
   "data.pdf.or": "All cities",
   "data.pdf.citySelect": "Select a city",
   "data.pdf.download": "Download",
+  "data.pdf.all": "All Cities",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
