@@ -98,15 +98,15 @@ const App = () => {
           }}
         >
           {location.pathname !== '/' && (
-            <>
-              <Button size='large' onClick={() => navigate('/')} sx={{ mr: 1 }}>
+            <Box sx={{ display: 'flex', flexFlow: "wrap", alignItems: "center", justifyContent: "center", mr: 1 }}>
+              <Button size='large' onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
 
-              <Button size='large' onClick={() => navigate(-1)} sx={{ mr: 1 }}>
+              <Button size='large' onClick={() => navigate(-1)}>
                 {t('button.back')}
               </Button>
-            </>
+            </Box>
           )}
 
           <Button
@@ -129,6 +129,7 @@ const App = () => {
               }}
               startIcon={<PictureAsPdfIcon />}
               variant="outlined"
+              sx={{ mr: 1 }}
             >
               {t('button.download')}
             </Button>
