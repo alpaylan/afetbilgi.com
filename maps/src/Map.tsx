@@ -7,9 +7,10 @@ import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
 import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
+import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
+import { dataTypeToSVG } from './svgs';
 
 import "./Map.css"
-import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
 
 const INITIAL_ZOOM = 15;
 const MINIMUM_ICON_SIZE = 24;
@@ -206,8 +207,20 @@ export default function Map() {
                         {dataTypes.includes(type)
                           ? <CheckCircleOutline style={{ color: 'white' }} />
                           : <CircleOutlined style={{ color: 'white' }} />}
-                        <Typography variant="body1" component="span" sx={{ ml: 1 }}>
+                        <Typography variant="body1" component="span" sx={{ 
+                          ml: 1,
+                          mr: 1,
+                          display: 'flex'
+                        }}>
                           {dataTypeToLabel[type].name_tr}
+                          <div style={{
+                            height: '22.5px',
+                            width: '22.5px',
+                            fill: 'white',
+                            marginLeft: '8px',
+                          }}
+                            dangerouslySetInnerHTML={{ __html: dataTypeToSVG[type] }}
+                          />
                         </Typography>
                     </div>
                 ))}
