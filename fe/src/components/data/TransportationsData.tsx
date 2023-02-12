@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { TransportationDataNode } from "../../interfaces/TreeNode";
 
+const getValidityDateExplanation = (t: any, date: string) => {
+  if (!date) return '';
+  return t('data.transportation.validityDate.explanation', { date });
+};
+
 export default function TransportationsData({ value } : {value: TransportationDataNode}) {
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
@@ -12,7 +17,7 @@ export default function TransportationsData({ value } : {value: TransportationDa
       <h3>{t('data.transportation.title')}</h3>
       {isMinWidth ? <List>
         {value.transportations.map((item) => (
-          <ListItem>
+          <ListItem key={item.name}>
             <Card sx={{width: "100%"}}>
               <CardContent>
                 <b>{t('name')}</b>: {item.name}<br/><br/>
@@ -20,8 +25,9 @@ export default function TransportationsData({ value } : {value: TransportationDa
                 <b><a href={item.url} target='_blank' rel='noreferrer'>
                   {t('website')}
                 </a></b><br/><br/>
-                <b>{t('data.transportation.validationDate')}</b>: {item.validation_date}<br/><br/>
-                <b>{t('data.transportation.validityDate.explanation', { date: item.validity_date })}</b>
+                <b>{t('data.transportation.validationDate')}</b>: {item.validation_date}
+                {item.validity_date && <><br/><br/></>}
+                <b>{getValidityDateExplanation(t, item.validity_date)}</b>
               </CardContent>
             </Card>
           </ListItem>
@@ -63,7 +69,7 @@ export default function TransportationsData({ value } : {value: TransportationDa
                   {item.validation_date}
                 </TableCell>
                 <TableCell>
-                  {t('data.transportation.validityDate.explanation', { date: item.validity_date })}
+                  {getValidityDateExplanation(t, item.validity_date)}
                 </TableCell>
               </TableRow>
             ))}

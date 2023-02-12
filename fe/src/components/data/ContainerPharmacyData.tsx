@@ -29,8 +29,8 @@ export default function ContainerPharmacyData({
       <h3>{t('data.container_pharmacy')}</h3>
       {isMinWidth ? (
         <List>
-          {value.items.map((item) => (
-            <ListItem>
+          {value.items.map((item, i) => (
+            <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
                   <b>{t('city')}</b>: {item.city}
@@ -52,7 +52,7 @@ export default function ContainerPharmacyData({
                     <br />
                     </>
                     : ''
-                    
+
                   }
                   <br />
                 </CardContent>
