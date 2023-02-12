@@ -15,7 +15,7 @@ function DataItem({ text, value }: { text: string, value: string }) {
   )
 }
 
-export default function CustomMarker({ item, size } : { item: MarkerData['map_data'][any], size: number }) {
+export default function CustomMarker({ item, size } : { item: MarkerData[any], size: number }) {
   return (
     <Marker
       icon={getIcon(item.type, size)}
@@ -26,7 +26,10 @@ export default function CustomMarker({ item, size } : { item: MarkerData['map_da
           {item.name && <Box sx={{ m: "auto" }}><b>{item.name}</b></Box>}
           <Box sx={{ mb: 2  }}>{dataTypeToLabel[item.type].name_tr}</Box>
           <DataItem text="Adres" value={`${item.city}${item.county ? `, ${item.county}` : ""}`} />
-          <DataItem text="Telefon" value={item.phone_number || ''} />
+          {item.phone_number && <DataItem text="Telefon" value={item.phone_number} /> }
+          {item.status && <DataItem text="Durum" value={item.status ? "AÇIK" : "KAPALI"} /> }
+          {item.lastUpdate && <DataItem text="Son Güncelleme" value={item.lastUpdate} /> }
+
           <Box sx={{ mt: 2 }}>
             <Button
               sx={{ fontSize: "inherit" }}

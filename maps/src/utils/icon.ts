@@ -1,6 +1,5 @@
 import L from 'leaflet';
-import { dataTypeToSVG, MARKER_SVG } from '../svgs';
-import { dataTypeToColor } from './DataType';
+import { dataTypeToColor, dataTypeToSVG, MARKER_SVG } from './DataType';
 
 const RENDER_ICON_SIZE_LIMIT = 28;
 
@@ -19,10 +18,10 @@ function SVG(svg: any, size: number, markerColour: string) {
       >
         ${MARKER_SVG}
       </div>
-      ${svg && size > RENDER_ICON_SIZE_LIMIT 
+      ${svg && size > RENDER_ICON_SIZE_LIMIT
         ? `<div style="fill: white; position: absolute; height: ${size / 2}px; width: ${size / 2}px; left: ${size / 4}px; top: ${size / 8}px;">
           ${svg}
-        </div>` 
+        </div>`
         : ""}
     </div>`
   )

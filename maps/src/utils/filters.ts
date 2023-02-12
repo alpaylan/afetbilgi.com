@@ -5,7 +5,7 @@ import Fuse from 'fuse.js';
 import { MarkerData } from "../hooks";
 import { dataTypeToLabel } from './DataType';
 
-export function buildSearchIndex(data: MarkerData["map_data"]) {
+export function buildSearchIndex(data: MarkerData) {
   for (const item of data) {
     (item as any).labels = dataTypeToLabel[item.type];
   }
@@ -16,13 +16,13 @@ export function buildSearchIndex(data: MarkerData["map_data"]) {
   });
 }
 
-export const filterMultipleTypes = (data: MarkerData["map_data"], types: string[]) =>  {
+export const filterMultipleTypes = (data: MarkerData, types: string[]) =>  {
   const typesSet = new Set(types);
 
   return data.filter(item => typesSet.has(item.type));
 }
 
 
-export const searchText = (index: Fuse<MarkerData["map_data"][any]>, searchString: string) => {
+export const searchText = (index: Fuse<MarkerData[any]>, searchString: string) => {
   return index.search(searchString);
 }

@@ -6,9 +6,8 @@ import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } fr
 import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
 import { MarkerData, useMarkers } from './hooks';
 import CustomMarker from './CustomMarker';
-import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
+import { DataType, dataTypeToColor, dataTypeToLabel, dataTypeToSVG } from './utils/DataType';
 import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
-import { dataTypeToSVG } from './svgs';
 
 import "./Map.css"
 
@@ -18,7 +17,7 @@ const getIconSize = (zoom: number) => Math.max(zoom ** 1.7 / 2, MINIMUM_ICON_SIZ
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
-function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
+function Markers({ filteredData, selfLocation }: { filteredData: MarkerData, selfLocation: [number, number] | null }){
   const [size, setSize] = useState(getIconSize(useMap().getZoom()));
   const [bounds, setBounds] = useState(useMap().getBounds());
 
@@ -97,13 +96,13 @@ export default function Map() {
 
   const { data, isLoading } = useMarkers();
 
-  const dataIndex = useMemo(() => buildSearchIndex(data?.map_data || []), [data]);
+  const dataIndex = useMemo(() => buildSearchIndex(data || []), [data]);
   const filteredData = useMemo(() => {
     if (!data) return [];
 
-    const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data.map_data;
+    const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data;
     const group2 = filterMultipleTypes(group1, dataTypes);
-    
+
     return group2;
   }, [data, dataIndex, searchString, dataTypes]);
 
@@ -207,7 +206,7 @@ export default function Map() {
                         {dataTypes.includes(type)
                           ? <CheckCircleOutline style={{ color: 'white' }} />
                           : <CircleOutlined style={{ color: 'white' }} />}
-                        <Typography variant="body1" component="span" sx={{ 
+                        <Typography variant="body1" component="span" sx={{
                           ml: 1,
                           mr: 1,
                           display: 'flex'
