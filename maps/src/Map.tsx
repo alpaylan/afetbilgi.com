@@ -7,9 +7,8 @@ import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
 import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
 import { MarkerData, useMarkers } from './hooks';
 import {CustomMarker, MarkerPopup} from './CustomMarker';
-import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
+import { DataType, dataTypeToColor, dataTypeToLabel, dataTypeToSVG } from './utils/DataType';
 import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
-import { dataTypeToSVG } from './svgs';
 
 import "./Map.css"
 
@@ -22,7 +21,7 @@ const getIconSize = (zoom: number) => Math.round(Math.max(zoom ** 1.7 / 2, MINIM
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
-function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
+function Markers({ filteredData, selfLocation }: { filteredData: MarkerData, selfLocation: [number, number] | null }){
   const [size, setSize] = useState(getIconSize(useMap().getZoom()));
 
   const mapEvents = useMapEvents({
@@ -105,11 +104,11 @@ export default function Map() {
 
   const { data, isLoading } = useMarkers();
 
-  const dataIndex = useMemo(() => buildSearchIndex(data?.map_data || []), [data]);
+  const dataIndex = useMemo(() => buildSearchIndex(data || []), [data]);
   const filteredData = useMemo(() => {
     if (!data) return [];
 
-    const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data.map_data;
+    const group1 = searchString ? searchText(dataIndex, searchString).map(i => i.item) : data;
     const group2 = filterMultipleTypes(group1, dataTypes);
 
     return group2;

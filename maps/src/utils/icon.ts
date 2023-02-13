@@ -1,6 +1,5 @@
 import L, { DivIcon } from 'leaflet';
-import { dataTypeToSVG, MARKER_SVG } from '../svgs';
-import { dataTypeToColor } from './DataType';
+import { dataTypeToColor, dataTypeToSVG, MARKER_SVG } from './DataType';
 
 const RENDER_ICON_SIZE_LIMIT = 28;
 
