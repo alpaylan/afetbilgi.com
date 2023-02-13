@@ -66,6 +66,7 @@
   "data.pdf.all": "All Cities",
   "data.pdf.select": "To download the PDF, select the city and press the download button.",
   "data.pharmacy.title": "{{city}}, {{county }} Open Pharmacies",
+  "data.pharmacy.subtitle": "This information is valid as of {{date}}. Information is updated daily. Please contact the pharmacies for accurate information.",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
