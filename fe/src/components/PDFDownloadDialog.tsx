@@ -118,6 +118,8 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                   onChange={(event, newValue) => {
                     if (newValue) {
                       setSelectedCity(newValue);
+                    } else {
+                      setSelectedCity(null);
                     }
                   }}
                 />

@@ -36,6 +36,7 @@ def main():
     for city in unique_cities:
         city_df = df[df["ŞEHİR"] == city]
         unique_counties = city_df["İLÇE"].unique()
+        date = city_df["TARİH"].iloc[0]
 
         county_dict = {}
 
@@ -46,7 +47,7 @@ def main():
             county_dict[row["İLÇE"]].append({
                 "name": row["ECZANE İSMİ"],
                 "address": row["ADRES"],
-                "phone": row["İLETİŞİM"],
+                "phones": [tel for tel in row["İLETİŞİM"].split("\n")],
                 "locationLink": row["KONUM LİNKİ"],
             })
 
@@ -60,6 +61,7 @@ def main():
                         "dataType": "local-pharmacy-list",
                         "city": city,
                         "county": k,
+                        "date": date,
                         "items": v
                     }
                 }

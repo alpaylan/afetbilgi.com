@@ -242,3 +242,16 @@ export interface GasStationsDataNode extends DataNode {
   county: string;
   items: GasStation[];
 }
+
+export interface Pharmacy {
+  name: string;
+  address: string;
+  phones: string[];
+  locationLink: string;
+}
+export interface PharmacyDataNode extends DataNode {
+  city: string;
+  county: string;
+  date: string;
+  items: Pharmacy[];
+}

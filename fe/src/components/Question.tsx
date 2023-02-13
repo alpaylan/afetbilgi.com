@@ -9,6 +9,7 @@ import {
   Typography,
   Link as MUILink,
 } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { jsx } from '@emotion/react';
@@ -86,6 +87,7 @@ export default function Question({ paths }: { paths: string[] }) {
       sx={{ m: 2, minWidth: '300px' }}
       to={redirectionPath}
       component= {Link}
+      endIcon={isDirectLink && <OpenInNewIcon />}
     >
       {optionNameLocalized.toLocaleUpperCase(i18n.language)}
     </Button>;

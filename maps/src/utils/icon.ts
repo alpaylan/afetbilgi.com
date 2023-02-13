@@ -1,4 +1,4 @@
-import L from 'leaflet';
+import L, { DivIcon } from 'leaflet';
 import { dataTypeToColor, dataTypeToSVG, MARKER_SVG } from './DataType';
 
 const RENDER_ICON_SIZE_LIMIT = 28;
@@ -27,13 +27,19 @@ function SVG(svg: any, size: number, markerColour: string) {
   )
 }
 
-export default function getIcon(type: string | undefined, size: number) {
+//! not really sure how much effect has this on performance.
+const lmap:Record<string, DivIcon> = {
+};
+export default function getIcon(type: string | undefined) {
+  if(!type) type="default";
+  if (type in lmap) return lmap[type];
+
   const icon = L.divIcon({
     className: 'custom-icon',
-    html: type ? SVG(dataTypeToSVG[type], size, dataTypeToColor[type]) : SVG(null, size, 'blue'),
+    html: type!=='default' ? SVG(dataTypeToSVG[type], 40, dataTypeToColor[type]) : SVG(null, 40, 'blue'),
     iconSize: [0, 0],
-    popupAnchor: [0, -(3 * size / 4)],
+    popupAnchor: [0, -(30)],
   });
-
+  lmap[type] = icon;
   return icon;
 }

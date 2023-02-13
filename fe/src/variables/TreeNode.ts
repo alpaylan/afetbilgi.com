@@ -36,6 +36,7 @@ export enum DataType {
   TRANSPORTATIONS = 'transportations',
   HEALTHCARE_SERVICES = 'healthcare-services',
   MOBILE_TOILETS = 'mobile-toilets',
+  PHARMACY = 'local-pharmacy-list',
 }
 
 export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
@@ -50,6 +51,7 @@ export const dataTypeToCategoryMap: { [key in DataType as string]: Category } =
     [DataType.HEALTHCARE_SERVICES]: Category.HEALTH,
     [DataType.CONTAINER_PHARMACY]: Category.HEALTH,
     [DataType.DATA_VET]: Category.HEALTH,
+    [DataType.PHARMACY]: Category.HEALTH,
     [DataType.BANK_ACCOUNT_DONATION]: Category.HELPER,
     [DataType.DONATION_LINKS]: Category.HELPER,
     [DataType.BLOOD_DONATION_LIST]: Category.HELPER,
