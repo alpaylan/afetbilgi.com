@@ -29,7 +29,7 @@ for city in cities:
                 "latitude": item["location"]["latitude"],
                 "longitude": item["location"]["longitude"],
                 "lastUpdate": item["updates"][-1]["update"], # -1 since they sort by date in frontend
-                "lastUpdateTime": convertUTCtoTurkeyTime(["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
+                "lastUpdateTime": convertUTCtoTurkeyTime(item["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
                 "status": item["active"],
                 "description": "Bu veri afetyardimalanlari.org'dan alınmıştır"
             })
