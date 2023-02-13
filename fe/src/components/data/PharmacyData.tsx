@@ -117,7 +117,6 @@ export default function PharmacyData({
                       }
                     </TableCell>
                     <TableCell>
-                      <div>
                       {item.phones.map((phone, idx) => (
                         <div key={idx}>
                           <a
@@ -129,7 +128,6 @@ export default function PharmacyData({
                           </a>
                         </div>
                       ))}
-                      </div>
                     </TableCell>
                   </TableRow>
                 ))}
