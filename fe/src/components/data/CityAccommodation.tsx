@@ -47,17 +47,24 @@ export default function CityAccommodation({
                 {item.name}
               </TableCell>
               <TableCell>
-                <a href={item.address}>{t('location')}</a>
+                {
+                  item.address ?
+                  <>
+                  <a href={item.address}>{t('location')}</a>
+                  </>
+                  : <></>
+                }
+                
               </TableCell>
               <TableCell>
-                <>
+                {item.url ? <>
                   {t('data.city_accommodation.link_explanation_p1')}{' '}
                   <a href={item.url} target='_blank' rel='noreferrer'>
                   {t('data.city_accommodation.link_explanation_p2')}.
                   </a>{' '}
-                  
+
                   <br />
-                </>
+                </> : <></>}
               </TableCell>
             </TableRow>
             ))}

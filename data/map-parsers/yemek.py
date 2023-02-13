@@ -14,7 +14,7 @@ class YemekParser(BaseMapParser):
         url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
         df = pd.read_csv(url, encoding="utf-8")
-
+        df.fillna("", inplace=True)
         yemek_noktalari = []
 
         async def process_row(row):

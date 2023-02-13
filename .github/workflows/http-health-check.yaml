@@ -1,0 +1,20 @@
+name: HTTP Health Checker
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "*/6 * * * *" # Run every 6 minutes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Checking HTTP status codes are valid
+        uses: lakuapik/gh-actions-http-status@v1
+        with:
+          sites: '["https://afetbilgi.com", "https://www.afetbilgi.com", "https://maps.afetbilgi.com", "https://cdn.afetbilgi.com/latest.json","https://cdn.afetbilgi.com/schema.json", "https://pdf.afetbilgi.com", "https://pdf.afetbilgi.com/index.json", "https://cdn.afetbilgi.com/md-pdf/index.json"]'
+          expected: '[308, 200, 200, 200, 200, 302, 302, 200]'

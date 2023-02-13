@@ -67,15 +67,17 @@ export interface CityAccommodationNode extends DataNode {
     phone_number?: string;
     url: string;
     address?: string;
-    is_validated: boolean;
+
+    // TODO: Add back after data migration, this is a temporary fix
+    // is_validated: boolean;
   }[];
 }
 
 export interface Vet {
   name: string;
   phone_number: string;
-  address: string;
-  maps_url: string;
+  address?: string;
+  maps_link: string;
 }
 
 export interface VetNode extends DataNode {
@@ -166,6 +168,22 @@ export interface FoodDistributionDataNode extends DataNode {
   items: FoodDistribution[];
 }
 
+export interface SahraItem {
+  district: string;
+  name: string;
+  maps_url?: string;
+  url?: string;
+  phone_number?: string;
+  updated_at_date: string;
+  updated_at_time: string;
+}
+
+export interface SahraDataNode extends DataNode {
+  city: string;
+  items: SahraItem[];
+}
+
+
 export interface VpnDataNode extends DataNode {
   items: {
     name: string;
@@ -193,4 +211,47 @@ export interface EvacuationDataNode extends DataNode {
     contacts: string[];
     validator: string;
   }[];
+}
+
+export interface DonationLinksDataNode extends DataNode {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}
+export interface TransportationDataNode extends DataNode {
+  transportations: {
+    name: string;
+    url: string;
+    validation_type: string;
+    validation_date: string;
+    description: string;
+    validity_date: string;
+  }[];
+}
+
+export interface GasStation {
+  name: string;
+  address: string;
+  telephone?: string;
+  maps_link: string;
+  info?: string;
+}
+export interface GasStationsDataNode extends DataNode {
+  city: string;
+  county: string;
+  items: GasStation[];
+}
+
+export interface Pharmacy {
+  name: string;
+  address: string;
+  phones: string[];
+  locationLink: string;
+}
+export interface PharmacyDataNode extends DataNode {
+  city: string;
+  county: string;
+  date: string;
+  items: Pharmacy[];
 }

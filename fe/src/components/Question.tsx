@@ -1,22 +1,27 @@
+import React, { useEffect } from 'react';
 import {
   Autocomplete,
   Box,
   Button,
   Divider,
+  Stack,
   TextField,
   Typography,
+  Link as MUILink,
 } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
-
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { jsx } from '@emotion/react';
+
 import { useQuestionData } from '../hooks';
 import { Category, TreeNodeType } from '../variables/TreeNode';
 import Data from './Data';
 import UsefulLinksData from './data/UsefulLinksdata';
-import JSX = jsx.JSX;
 import { OptionNode, QuestionNode } from '../interfaces/TreeNode';
 import { getCategoryOfTreeNode } from '../utils/category';
+
+import JSX = jsx.JSX;
 
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
@@ -31,6 +36,10 @@ export default function Question({ paths }: { paths: string[] }) {
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const { data: selectedNode, isLoading } = useQuestionData(paths);
 
   if (isLoading) {
@@ -38,20 +47,20 @@ export default function Question({ paths }: { paths: string[] }) {
   }
 
   if (!selectedNode) {
-    return <Box>
-      <Box
-        sx={{
-          textAlign: 'center',
-          display: 'flex',
-          flexFlow: 'column nowrap',
-          justifyContent: 'center',
-        }}
-      >
-        <Typography variant='h4'>
-          {t('notFound')}
-        </Typography>
+    return (
+      <Box>
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexFlow: 'column nowrap',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant='h4'>{t('notFound')}</Typography>
+        </Box>
       </Box>
-    </Box>;
+    );
   }
 
   if (selectedNode.type !== TreeNodeType.NODE_TYPE_QUESTION) {
@@ -59,33 +68,39 @@ export default function Question({ paths }: { paths: string[] }) {
   }
 
   const isRootQuestion = location.pathname === '/';
+  const renderOptionButton = (option: OptionNode) => {
+    const optionNameLocalized = getOptionName(option, i18n.language);
+    const optionName = encodeURIComponent(getOptionName(option, 'tr'));
+    const directLinks:Record<string,string> = {
+      'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
+      "Mobil%20Tuvaletler": 'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA'
+    };
 
-  const renderOptionButton = (option: OptionNode) => (
-    <Button
-      key={`button-${getOptionName(option, i18n.language)}`}
+    const isDirectLink = optionName in directLinks && isRootQuestion;
+    let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    if(isDirectLink) redirectionPath = directLinks[optionName];
+
+    const ButtonComponent = <Button
+      key={`button-${optionNameLocalized}`}
       variant='contained'
       size='medium'
       sx={{ m: 2, minWidth: '300px' }}
-      onClick={() => {
-        if (isRootQuestion) {
-          const optionName = encodeURIComponent(getOptionName(option, 'tr'));
-          if (optionName === 'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1') {
-            window.location.href = 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari';
-          } else {
-            navigate(`/${optionName}`);
-          }
-        } else {
-          navigate(
-            `${location.pathname}/${encodeURIComponent(
-              getOptionName(option, 'tr'),
-            )}`,
-          );
-        }
-      }}
+      to={redirectionPath}
+      component= {Link}
+      endIcon={isDirectLink && <OpenInNewIcon />}
     >
-      {getOptionName(option, i18n.language).toLocaleUpperCase(i18n.language)}
-    </Button>
-  );
+      {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+    </Button>;
+
+    // Direct link buttons have underlines
+    if (isDirectLink) {
+      return <MUILink underline='always'>
+        {ButtonComponent}
+      </MUILink>
+    }
+
+    return ButtonComponent;
+  };
 
   const renderOptions = () => {
     if (isRootQuestion) {
@@ -93,6 +108,7 @@ export default function Question({ paths }: { paths: string[] }) {
         [key in Category as string]: JSX.Element[];
       } = {
         [Category.VICTIM]: [],
+        [Category.HEALTH]: [],
         [Category.HELPER]: [],
         [Category.RESOURCES]: [],
         [Category.OTHER]: [],
@@ -104,29 +120,41 @@ export default function Question({ paths }: { paths: string[] }) {
         );
       });
 
-      return Object.keys(buttonsByCategories)
-        .filter((category) => buttonsByCategories[category].length > 0)
-        .map((category, i) => (
-          <>
-            <Box
-              sx={{
-                textAlign: 'center',
-                display: 'flex',
-                flexFlow: 'column nowrap',
-                justifyContent: 'center',
-                paddingTop: '50px',
-              }}
-            >
-              <Typography variant='h5'>
-                {t(`category.${category}.name`)}
-              </Typography>
-              {buttonsByCategories[category]}
-            </Box>
-            {i < buttonsByCategories[category].length - 1 && (
-              <Divider orientation='vertical' flexItem sx={{ m: 2, mt: 5, display: { xs: 'none', md: 'block' }, borderRightWidth: 2 }} />
-            )}
-          </>
-        ));
+      return (
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          justifyContent='center'
+          alignItems='center'
+          divider={<Divider orientation='vertical' flexItem sx={{ mt: 5 }} />}
+          sx={{
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignItems: 'start',
+            justifyContent: 'center',
+            paddingTop: '50px',
+          }}
+        >
+          {Object.keys(buttonsByCategories)
+            .filter((category) => buttonsByCategories[category].length > 0)
+            .map((category, i) => (
+              <Box
+                key={i}
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexFlow: 'column nowrap',
+                  justifyContent: 'center',
+                  paddingTop: '50px',
+                }}
+              >
+                <Typography variant='h5'>
+                  {t(`category.${category}.name`)}
+                </Typography>
+                {buttonsByCategories[category]}
+              </Box>
+            ))}
+        </Stack>
+      );
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
       <Autocomplete
@@ -191,14 +219,14 @@ export default function Question({ paths }: { paths: string[] }) {
         >
           {renderOptions()}
           {selectedNode.externalData?.usefulLinks?.length > 0 && (
-              <Box width='100%' mt={8}>
-                <Typography variant='h4'>
-                  {selectedNode.externalData[`text_${i18n.language}`] ||
-                    selectedNode.externalData.text}
-                </Typography>
-                <UsefulLinksData value={selectedNode.externalData} noTitle />
-              </Box>
-            )}
+            <Box width='100%' mt={8}>
+              <Typography variant='h4'>
+                {selectedNode.externalData[`text_${i18n.language}`] ||
+                  selectedNode.externalData.text}
+              </Typography>
+              <UsefulLinksData value={selectedNode.externalData} noTitle />
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>

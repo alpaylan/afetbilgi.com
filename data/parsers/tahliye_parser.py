@@ -1,8 +1,9 @@
 import pandas as pd
 import json
 import sys
-
+import os
 from utils.functions import turkish_title
+
 
 def main():
 
@@ -12,10 +13,10 @@ def main():
 
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
     options = []
-    
-    
+
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Tahliye%20Noktas%C4%B1%20Adresleri"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
@@ -51,19 +52,19 @@ def main():
                 )
                 city_name = row[0]
                 tahliye_noktalari = []
-        
+
         tahliye_noktalari.append(
             {
                 "city": turkish_title(row['Şehir'].strip()),
                 "county": turkish_title(row['İlçe'].strip()),
-                "name": row['İsim'],
-                "map_link": row['Maps Linki'],
-                "address": row['Adres'],
+                "name": row['İsim'].strip(),
+                "map_link": row['Maps Linki'].strip(),
+                "address": row['Adres'].strip(),
                 "contacts": [x.strip() for x in row['Telefon'].split("\n")],
-                "validator": row['Teyit Merci'],
+                "validator": row['Teyit Merci'].strip(),
             }
         )
-    
+
     else:
         options.append(
             {

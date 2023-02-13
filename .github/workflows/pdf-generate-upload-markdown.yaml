@@ -1,0 +1,43 @@
+name: PDF upload with Markdown (cronjob)
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "32 * * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "pip" # caching pip dependencies
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          # cache: 'npm'
+
+      - name: Generate Markdowns and PDFs
+        run: |
+          chmod +x ./pdf-markdown/generate.sh
+          ./pdf-markdown/generate.sh
+
+      - name: Sync PDFs
+        run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
+
+      - name: Purge cache
+        run: |
+          pip install -r requirements.txt
+          CF_ZONE=${{ secrets.CLOUDFLARE_ZONE }} CF_TOKEN=${{ secrets.CLOUDFLARE_AUTH_KEY }} python pdf-markdown/purge_cache.py md-generated/index.json

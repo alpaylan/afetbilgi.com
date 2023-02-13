@@ -1,0 +1,24 @@
+{
+    "type": "data",
+    "data": {
+        "dataType": "donation-links",
+        "items": [
+            {
+                "name": "AHBAP",
+                "url": "https://ahbap.org/bagisci-ol"
+            },
+            {
+                "name": "AFAD",
+                "url": "https://www.afad.gov.tr/depremkampanyasi2"
+            },
+            {
+                "name": "AKUT",
+                "url": "https://www.akut.org.tr/bagis-yap"
+            },
+            {
+                "name": "Kızılay",
+                "url": "https://www.kizilay.org.tr/bagis"
+            }
+        ]
+    }
+}

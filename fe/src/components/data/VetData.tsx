@@ -1,9 +1,7 @@
-import { Box, Paper } from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import { Vet, VetNode } from '../../interfaces/TreeNode';
-import { Language } from '../../utils/types';
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';import { useTranslation } from 'react-i18next';
+import { VetNode } from '../../interfaces/TreeNode';
 
-const VetLanguageHelper = ({ item, index }: { item: Vet; index: number }) => {
+/* const VetLanguageHelper = ({ item, index }: { item: Vet; index: number }) => {
   const { i18n } = useTranslation();
   if (i18n.language === Language.TR) {
     return (
@@ -62,21 +60,63 @@ const VetLanguageHelper = ({ item, index }: { item: Vet; index: number }) => {
       )}
     </Paper>
   );
-};
+}; */
 
 export default function VetData({ value }: { value: VetNode }) {
   const { t } = useTranslation();
+
   return (
-    <Box>
+    <Box display='flex' flexDirection='column' alignItems='center'>
       <h3>{t('data.veterinary.title', { city: value.city })}</h3>
 
       <p>
         <b>{t('data.veterinary.subtitle')}</b>
       </p>
-
-      {value.vets.map((item, i) => (
-        <VetLanguageHelper item={item} index={i} key={i} />
-      ))}
+      <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
+        <Table sx={{ maxWidth: 650, minWidth: 100 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell>{t('name')}</TableCell>
+              <TableCell>{t('map')}</TableCell>
+              <TableCell>{t('contact')}</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {value.vets.map((item, index) => (
+              <TableRow
+                key={index}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component='th' scope='row'>{item.name}</TableCell>
+                <TableCell>
+                  {item.maps_link ? (
+                    <a
+                      href={item.maps_link}
+                      target="_blank"
+                    >
+                      {item.address || '-'}
+                    </a>
+                    ) : (
+                      '-'
+                  )}
+                </TableCell>
+                <TableCell>
+                  {item.phone_number ? (
+                    <a
+                      href={`tel:${item.phone_number.replace(/^0/, '').replace(/ /g, '')}`}
+                      key={`item-${index}`}
+                    >
+                      {item.phone_number}
+                    </a>
+                    ) : (
+                      '-'
+                  )}
+                </TableCell>      
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 }

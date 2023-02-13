@@ -137,3 +137,6 @@ yarn-error.log*
 **/*.pdf
 
 __pycache__/
+latest.json
+*.md
+maps/src/tempData.json

@@ -1,9 +1,8 @@
-import { Paper, Box } from '@mui/material';
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { HelpItem, HelpItemNode } from '../../interfaces/TreeNode';
-import { Language } from '../../utils/types';
+import { HelpItemNode } from '../../interfaces/TreeNode';
 
-const HelpItemLanguageHelper = ({
+/* const HelpItemLanguageHelper = ({
   item,
   index,
 }: {
@@ -76,7 +75,7 @@ const HelpItemLanguageHelper = ({
       )}
     </Paper>
   );
-};
+} */;
 
 export default function HelpItemData({ value }: { value: HelpItemNode }) {
   const { t } = useTranslation();
@@ -87,9 +86,50 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
           city: value.city,
         })}
       </h3>
-      {value.items.map((item, i) => (
-        <HelpItemLanguageHelper key={i} item={item} index={i} />
-      ))}
+      <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
+        <Table sx={{ maxWidth: 650, minWidth: 100 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell>{t('name')}</TableCell>
+              <TableCell>{t('map')}</TableCell>
+              <TableCell>{t('contact')}</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {value.items.map((item, index) => (
+              <TableRow
+                key={index}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component='th' scope='row'>{item.name}</TableCell>
+                <TableCell>
+                  {
+                    item.url ?
+                    <>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                    >
+                      {t('map')}
+                    </a>
+                    </>
+                    : <></>
+                  }
+                  
+                </TableCell>
+                <TableCell>
+                <a
+                    href={`tel:+90${item.phone_number ? item.phone_number.replace(/^0/, '').replace(/ /g, '') : ''}`}
+                    target="_blank"
+                  >
+                    {item.phone_number} 
+                  </a>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 }

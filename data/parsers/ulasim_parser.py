@@ -18,18 +18,20 @@ def main():
 
     df = pd.read_csv(url, encoding="utf-8")
 
+    df = df.fillna("")
+
     transportations = []
 
     for _, row in df.iterrows():
 
         transportations.append(
             {
-                "name": turkish_title(row["Şirket/Kampanya İsmi"]),
-                "url": row["Link"],
-                "validation_type": row["Doğrulanma Yöntemi"],
-                "validation_date": row["Doğrulama Tarihi"],
-                "description": row["Açıklama"],
-                "validity-date": row["Geçerlilik Tarihi"],
+                "name": turkish_title(row["Şirket/Kampanya İsmi"].strip()),
+                "url": row["Link"].strip(),
+                "validation_type": row["Doğrulanma Yöntemi"].strip(),
+                "validation_date": row["Doğrulama Tarihi"].strip(),
+                "description": row["Açıklama"].strip(),
+                "validity_date": row["Geçerlilik Tarihi"].strip(),
             }
         )
 

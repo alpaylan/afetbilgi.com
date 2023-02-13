@@ -5,8 +5,10 @@ import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import MapIcon from '@mui/icons-material/Map';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
-import useMediaQuery from "@mui/material/useMediaQuery";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import LocalStorage from './utils/LocalStorage';
 import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
@@ -17,7 +19,7 @@ import { useQuestionData } from './hooks';
 // import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
-import { downloadPDF } from './utils/downloadPDF';
+import PDFDownloadDialog from './components/PDFDownloadDialog';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -42,7 +44,8 @@ const App = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const isMinWidth = useMediaQuery("(min-width:1024px)");
+  const isMinWidth = useMediaQuery('(min-width:1024px)');
+  const [pdfDialogOpen, setPdfDialogOpen] = React.useState(false);
 
   const { isLoading } = useQuestionData([]);
 
@@ -56,69 +59,97 @@ const App = () => {
 
   return (
     <Box>
-      <Box sx={{
-        display: isMinWidth ? "flex" : "none",
-        background: "rgba(220, 20, 60, 0.5)",
-        padding: "10px",
-        borderRadius: "10px",
-        zIndex: 500,
-        width: "fit-content",
-        position: "absolute",
-        ml: 2,
-      }}
-      >
-        <SitesFab />
-      </Box>
+      {isMinWidth && (
+        <Box
+          sx={{
+            display: 'flex',
+            background: 'rgba(220, 20, 60, 0.5)',
+            padding: '10px',
+            borderRadius: '10px',
+            zIndex: 500,
+            width: 'fit-content',
+            position: 'absolute',
+            ml: 2,
+          }}
+        >
+          <SitesFab />
+        </Box>
+      )}
+
       <Waiting open={isLoading} />
+
       <Box
         sx={{
           mt: 3,
-          textAlign: 'center',
+          mb: 2,
           display: 'flex',
-          flexFlow: 'row nowrap',
+          flexFlow: 'column nowrap',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        {location.pathname !== '/' && (
-          <>
-            <Button
-              sx={{ m: 1 }}
-              size='large'
-              onClick={() =>
-                navigate('/')
-              }
-            >
-              {t('page.main.title')}
-            </Button>
-
-            <Button sx={{ m: 1 }} size='large' onClick={() => navigate(-1)}>
-              {t('button.back')}
-            </Button>
-          </>
-        )}
-        <Button
-          sx={{ m: 1 }}
-          size='large'
-          onClick={() => {
-            downloadPDF(location.pathname);
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexFlow: 'row nowrap',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          {t('button.download')}
-        </Button>
-        <Select
-          id='language-options-multiselect'
-          size='small'
-          sx={{ m: 1 }}
-          value={i18n.language}
-          onChange={(e) => changeLanguageHandler(e.target.value as Language)}
-        >
-          {LANGUAGES.map(({ key, name }) => (
-            <MenuItem key={key} value={key}>
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
+          {location.pathname !== '/' && (
+            <Box sx={{ display: 'flex', flexFlow: "wrap", alignItems: "center", justifyContent: "center", mr: 1 }}>
+              <Button size='large' onClick={() => navigate('/')}>
+                {t('page.main.title')}
+              </Button>
+
+              <Button size='large' onClick={() => navigate(-1)}>
+                {t('button.back')}
+              </Button>
+            </Box>
+          )}
+
+          <Button
+            size='large'
+            onClick={() => {
+              window.open('https://maps.afetbilgi.com', '_blank');
+            }}
+            startIcon={<MapIcon />}
+            variant="outlined"
+            sx={{ mr: 1 }}
+          >
+            {t('button.map')}
+          </Button>
+
+          {location.pathname !== '/about' && (
+            <Button
+              size='large'
+              onClick={() => {
+                setPdfDialogOpen(true);
+              }}
+              startIcon={<PictureAsPdfIcon />}
+              variant="outlined"
+              sx={{ mr: 1 }}
+            >
+              {t('button.download')}
+            </Button>
+          )}
+        </Box>
+
+        <Box sx={{ mt: 2 }}>
+          <Select
+            id='language-options-multiselect'
+            size='small'
+            value={i18n.language}
+            onChange={(e) => changeLanguageHandler(e.target.value as Language)}
+          >
+            {LANGUAGES.map(({ key, name }) => (
+              <MenuItem key={key} value={key}>
+                {name}
+              </MenuItem>
+            ))}
+          </Select>
+        </Box>
       </Box>
 
       <Container sx={{ mt: 1 }}>
@@ -128,12 +159,20 @@ const App = () => {
         </Routes>
       </Container>
 
-      {location.pathname === '/' && <Box sx={{ textAlign: 'center', p: 2 }}>
-        <Button onClick={() => navigate('/about')}>{t('page.about.title')}</Button>
-      </Box>}
+      {location.pathname === '/' && (
+        <Box sx={{ textAlign: 'center', p: 2 }}>
+          <Button onClick={() => navigate('/about')}>
+            {t('page.about.title')}
+          </Button>
+        </Box>
+      )}
       <Box sx={{ textAlign: 'center', p: 2 }}>
         {t('last_update')}: {buildDateString}
       </Box>
+      <PDFDownloadDialog
+        open={pdfDialogOpen}
+        onClose={() => setPdfDialogOpen(false)}
+      />
     </Box>
   );
 };

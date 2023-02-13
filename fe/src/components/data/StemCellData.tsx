@@ -35,7 +35,13 @@ export default function StemCellData({ value }: { value: StemCellDataNode }) {
                   {item.area} / <b> {item.city}</b>
                 </TableCell>
                 <TableCell>
-                  <a href={item.address}>{t('location')}</a>
+                  {
+                    item.address ?
+                    <>
+                      <a href={item.address}>{t('location')}</a>
+                    </>
+                    : <></>
+                  }
                 </TableCell>
                 <TableCell>
                   <a

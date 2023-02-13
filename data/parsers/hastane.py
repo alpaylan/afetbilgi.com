@@ -1,21 +1,23 @@
 import sys
 import json
 import pandas as pd
-
+import os
 from utils.functions import turkish_title
+
 
 def main():
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
         sys.exit(1)
-    
+
     out_path = sys.argv[1]
 
-    city_translation = json.loads(open("./utils/il_translate.json").read())
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
 
-    # canlıya alındaktan sonra sheet_id ve sheet_name değişmeli 
-    sheet_id = "10jxSHFfimCxmaGPiIYkVDSetXYXohXxZ0Pb6y_WVF5o"
-    sheet_name = "Sa%C4%9Fl%C4%B1k%20hizmetleri"
+    # canlıya alındaktan sonra sheet_id ve sheet_name değişmeli
+    sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
+    sheet_name = "Sahra%20Hastaneleri"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
@@ -23,9 +25,7 @@ def main():
     df["İl"] = df["İl"].apply(lambda x: turkish_title(x.strip()))
     df["İlçe"] = df["İlçe"].apply(lambda x: turkish_title(x.strip()))
 
-    df = df.sort_values(by=["İl"])
-
-    df = df.fillna("")
+    df = df.sort_values(by=["İl"]).fillna("")
 
     city_name = None
     options = []
@@ -51,7 +51,7 @@ def main():
                                 "items": items,
                             }
                         }
-                        
+
                     }
                 )
                 city_name = tmp_sehir
@@ -59,13 +59,13 @@ def main():
 
         items.append(
             {
-                "district": row["İlçe"],
-                "name": row["Lokasyon"],
-                "maps_url": row["Google Maps Linki"],
-                "url": row["Anons Linki"],
-                "phone_number": row["Telefon"],
-                "updated_at_date": row["Teyit Tarih"],
-                "updated_at_time": row["Teyit Saati"],
+                "district": row["İlçe"].strip(),
+                "name": row["Lokasyon"].strip(),
+                "maps_url": row["Google Maps Linki"].strip(),
+                "url": row["Anons Linki"].strip(),
+                "phone_number": row["Telefon"].strip(),
+                "updated_at_date": row["Teyit Tarih"].strip(),
+                "updated_at_time": row["Teyit Saati"].strip(),
             }
         )
     else:
@@ -83,7 +83,7 @@ def main():
                         "items": items,
                     }
                 }
-                
+
             }
         )
 
@@ -94,10 +94,27 @@ def main():
         "text_en": "Which city are you looking for healthcare services?",
         "text_ku": "Hûn li kîjan bajarî li xizmetên tendirûstiyê digerin? ",
         "text_ar": "في أي مدينة تبحث عن رعاية صحية؟",
+        'externalData': {
+            "text_tr": 'Aktif Hastaneler',
+            "text_en": 'Active Hospitals',
+            "text_ku": 'Nexweşxaneyên vekirî',
+            "text_ar": 'المستشفيات الفعالة',
+            "usefulLinks": [
+                {
+                    "name": 'Deprem Bölgesi Aktif Hastane Listesi',
+                    "url": 'https://docs.google.com/spreadsheets/d/1a785CPjKg0cVND2rl2dGnwb7q_1mPJhwWJ8UODCcttw/edit#gid=0',
+                },
+                {
+                    "name": 'LÖSEV - LÖSANTE Hastanesi Ücretsiz Hizmet',
+                    "url": 'https://www.instagram.com/p/Cocbq3JOblB/?igshid=NTdlMDg3MTY='
+                }
+            ],
+        }
     }
 
     with open(out_path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()

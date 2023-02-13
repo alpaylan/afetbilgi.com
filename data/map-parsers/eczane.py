@@ -16,7 +16,7 @@ class EczaneParser(BaseMapParser):
         query = urlencode({"sheet": "Konteynır Eczane", "tqx": "out:csv"})
 
         df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?{query}", encoding="utf-8", header=None)
-
+        df.fillna("", inplace=True)
         eczaneler = []
 
         async def process_row(row):
@@ -27,7 +27,7 @@ class EczaneParser(BaseMapParser):
                 {
                     "city": row[0],
                     "district": row[1],
-                    "location": row[2],
+                    "name": row[2],
                     "latitude": coor[0],
                     "longitude": coor[1],
                 }
@@ -39,3 +39,4 @@ class EczaneParser(BaseMapParser):
             "type": "map-container-pharmacy",
             "data": eczaneler,
         }
+

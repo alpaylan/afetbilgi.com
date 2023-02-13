@@ -8,6 +8,8 @@ from eczane import EczaneParser
 from toplanma import ToplanmaParser
 from veteriner import VeterinerParser
 from yemek import YemekParser
+from hastane import HastaneParser
+from tahliye import TahliyeParser
 
 
 async def main():
@@ -24,6 +26,8 @@ async def main():
         ToplanmaParser,
         VeterinerParser,
         YemekParser,
+        HastaneParser,
+        TahliyeParser,
     ]
 
 
@@ -38,7 +42,7 @@ async def main():
     }
 
     with open(out_path, "w+", encoding="utf-8") as f:
-        json.dump(res, f, ensure_ascii=False)
+        json.dump(res, f, ensure_ascii=False, allow_nan=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
