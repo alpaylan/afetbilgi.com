@@ -71,7 +71,7 @@ export default function Question({ paths }: { paths: string[] }) {
     const optionName = encodeURIComponent(getOptionName(option, 'tr'));
     const directLinks:Record<string,string> = {
       'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
-      "Mobil%20Tuvaletler": 'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA'
+      "Mobil%20Tuvaletler": 'https://twitter.com/sabancivakfi/status/1625146826335694849?s=46&t=XcGyniD8_Ur8EiwgP61Gqg'
     };
 
     const isDirectLink = optionName in directLinks && isRootQuestion;
