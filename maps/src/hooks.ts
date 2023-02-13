@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export interface siteStatus {
+export interface SiteStatus {
   siteStatusType : string;
   siteStatusLevel: string;
 }
@@ -20,7 +20,7 @@ export type MarkerData = {
   lastUpdate?: string;
   lastUpdateTime?: string;
   status?: boolean;
-  lastSiteStatuses?: siteStatus[];
+  lastSiteStatuses?: SiteStatus[];
   description?: string;
 }[];
 

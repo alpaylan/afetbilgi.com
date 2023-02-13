@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { Marker, Popup } from 'react-leaflet';
 import { MarkerData } from './hooks';
 import { dataTypeToLabel } from './utils/DataType';
-import { statusLevelToString, statusTypeToString } from './utils/Status';
+import { StatusLevel, statusLevelToColor, statusLevelToString, statusTypeToString } from './utils/Status';
 import getIcon from './utils/icon';
 
 function DataItem({ text, value }: { text: string, value: string }) {
@@ -31,7 +31,13 @@ export default function CustomMarker({ item, size } : { item: MarkerData[any], s
           {item.lastUpdateTime && <DataItem text='Güncelleme Tarihi' value={item.lastUpdateTime} /> }
           {item.status && <DataItem text="Durum" value={item.status ? "AÇIK" : "KAPALI"} /> }
           {item.lastSiteStatuses && item.lastSiteStatuses.map((status, index) => (
-            <DataItem key={index} text={statusTypeToString[status.siteStatusType]} value={statusLevelToString[status.siteStatusLevel]} />
+            <Box key={index} sx={{ mt: 1 }}>
+              <Typography display='inline'><b>{statusTypeToString[status.siteStatusType]}: </b></Typography>
+              {(status.siteStatusLevel !== StatusLevel.NO_NEED_REQUIRED && status.siteStatusLevel !== StatusLevel.UNKNOWN_LEVEL) &&
+              <Typography display='inline' sx={{color: statusLevelToColor[status.siteStatusLevel]}}><b>{statusLevelToString[status.siteStatusLevel]}</b></Typography>}
+              {(status.siteStatusLevel === StatusLevel.NO_NEED_REQUIRED || status.siteStatusLevel === StatusLevel.UNKNOWN_LEVEL) &&
+              <Typography display='inline' sx={{color: statusLevelToColor[status.siteStatusLevel]}}>{statusLevelToString[status.siteStatusLevel]}</Typography>}
+            </Box>
           ))}
           {item.lastUpdate && <DataItem text="Güncelleme Notu" value={item.lastUpdate} /> }
           {item.description && <Box sx={{mt: 1}}>{item.description}</Box>}
