@@ -80,26 +80,38 @@ export default function Question({ paths }: { paths: string[] }) {
     let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
     if(isDirectLink) redirectionPath = directLinks[optionName];
 
-    const ButtonComponent = <Button
-      key={`button-${optionNameLocalized}`}
-      variant='contained'
-      size='medium'
-      sx={{ m: 2, minWidth: '300px' }}
-      to={redirectionPath}
-      component= {Link}
-      endIcon={isDirectLink && <OpenInNewIcon />}
-    >
-      {optionNameLocalized.toLocaleUpperCase(i18n.language)}
-    </Button>;
-
     // Direct link buttons have underlines
     if (isDirectLink) {
-      return <MUILink underline='always'>
-        {ButtonComponent}
-      </MUILink>
+      return (
+        <MUILink underline='always'>
+          <Button
+            key={`button-${optionNameLocalized}`}
+            variant='contained'
+            size='medium'
+            sx={{ m: 2, minWidth: '300px' }}
+            href={redirectionPath}
+            target='_blank'
+            endIcon={<OpenInNewIcon />}
+          >
+            {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+          </Button>
+        </MUILink>
+      );
     }
 
-    return ButtonComponent;
+    return (
+      <Button
+        key={`button-${optionNameLocalized}`}
+        variant='contained'
+        size='medium'
+        sx={{ m: 2, minWidth: '300px' }}
+        to={redirectionPath}
+        component= {Link}
+        endIcon={isDirectLink && <OpenInNewIcon />}
+      >
+        {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+      </Button>
+    );
   };
 
   const renderOptions = () => {
