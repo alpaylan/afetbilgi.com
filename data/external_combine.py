@@ -3,10 +3,9 @@ import json
 from datetime import datetime, timedelta
 
 def convertUTCtoTurkeyTime(dateString):
-    date = datetime.strptime(dateString, '%Y-%m-%dT%H:%M:%S.%f')
+    date = datetime.strptime(dateString.split('.')[0], '%Y-%m-%dT%H:%M:%S')
     date = date + timedelta(hours=3)
     return date.isoformat()
-
 
 if len(sys.argv) < 2:
     print("Usage: python external_combine.py <basedir>")
