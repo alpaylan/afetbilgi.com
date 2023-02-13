@@ -65,6 +65,7 @@
   "data.pdf.all": "All Cities",
   "data.pdf.select": "To download the PDF, select the city and press the download button.",
   "data.pharmacy.title": "{{city}}, {{county }} Dermanxaneyan Vekin",
+  "data.pharmacy.subtitle": "Agahdariyên vê agahdariyê {{date}}ê ye. Agahdariyên her roj nûvekirin. Ji kerema xwe ji eczaneler bi agahdariyên rast re bixwînin.",
 
   "validation_status": "Rewşa verastkirinê",
   "pdf_notice": "",

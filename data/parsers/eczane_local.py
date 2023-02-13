@@ -47,7 +47,7 @@ def main():
             county_dict[row["İLÇE"]].append({
                 "name": row["ECZANE İSMİ"],
                 "address": row["ADRES"],
-                "phone": row["İLETİŞİM"],
+                "phone": [tel for tel in row["İLETİŞİM"].split("\n")],
                 "locationLink": row["KONUM LİNKİ"],
             })
 
