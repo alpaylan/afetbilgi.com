@@ -1,6 +1,12 @@
 import sys
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
+
+def convertUTCtoTurkeyTime(dateString):
+    date = datetime.strptime(dateString, '%Y-%m-%dT%H:%M:%S.%f')
+    date = date + timedelta(hours=3)
+    return date.isoformat()
+
 
 if len(sys.argv) < 2:
     print("Usage: python external_combine.py <basedir>")
@@ -22,7 +28,8 @@ for city in cities:
                 "name": item["name"],
                 "latitude": item["location"]["latitude"],
                 "longitude": item["location"]["longitude"],
-                "lastUpdate": item["updates"][0]["update"],
+                "lastUpdate": item["updates"][-1]["update"], # -1 since they sort by date in frontend
+                "lastUpdateTime": convertUTCtoTurkeyTime(["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
                 "status": item["active"],
                 "description": "Bu veri afetyardimalanlari.org'dan alınmıştır"
             })

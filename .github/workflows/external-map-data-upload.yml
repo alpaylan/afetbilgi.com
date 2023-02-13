@@ -2,6 +2,9 @@ name: External Map data upload
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feat/external-markers
 
 jobs:
   deploy:
