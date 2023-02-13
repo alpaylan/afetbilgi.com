@@ -41,14 +41,19 @@ def main():
         county_dict = {}
 
         for county in unique_counties:
+            if county == "":
+                continue
             county_dict[county] = []
 
         for _, row in city_df.iterrows():
+            if row["İLÇE"] == "":
+                continue
             county_dict[row["İLÇE"]].append({
-                "name": row["ECZANE İSMİ"],
+                "name": row["ECZANE"],
                 "address": row["ADRES"],
-                "phones": [tel for tel in row["İLETİŞİM"].split("\n")],
-                "locationLink": row["KONUM LİNKİ"],
+                "phones": [tel for tel in row["TELEFON"].split("\n")],
+                "locationLink": row["MAP LİNKİ"],
+                "info": row["BİLGİ"],
             })
 
         option_2 = []
