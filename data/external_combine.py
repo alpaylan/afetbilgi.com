@@ -27,10 +27,10 @@ for city in cities:
                 "name": item["name"],
                 "latitude": item["location"]["latitude"],
                 "longitude": item["location"]["longitude"],
-                "lastUpdate": item["updates"][-1]["update"], # -1 since they sort by date in frontend
+                "lastUpdate": item["updates"][-1]["update"] if len(item["updates"]) > 0 else "", # -1 since they sort by date in frontend
                 "lastUpdateTime": convertUTCtoTurkeyTime(item["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
                 "status": item["active"],
-                "lastSiteStatuses": item["updates"][-1]["siteStatuses"]
+                "lastSiteStatuses": item["updates"][-1]["siteStatuses"] if len(item["updates"]) > 0 else "",
                 #"description": "Bu veri afetyardimalanlari.org'dan alınmıştır" # AWS'te olduklari icin simdilik disabled
             })
 
