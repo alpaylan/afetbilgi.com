@@ -31,7 +31,7 @@ for city in cities:
                 "lastUpdateTime": convertUTCtoTurkeyTime(item["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
                 "status": item["active"],
                 "lastSiteStatuses": item["updates"][-1]["siteStatuses"] if len(item["updates"]) > 0 else "",
-                #"description": "Bu veri afetyardimalanlari.org'dan alınmıştır" # AWS'te olduklari icin simdilik disabled
+                "description": "Bu veri afetyardimalanlari.org'dan alınmıştır",
             })
 
 out =  {
