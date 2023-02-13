@@ -30,6 +30,7 @@ for city in cities:
                 "lastUpdate": item["updates"][-1]["update"], # -1 since they sort by date in frontend
                 "lastUpdateTime": convertUTCtoTurkeyTime(item["updates"][-1]["createDateTime"]), # We have to convert UTC to Turkey time
                 "status": item["active"],
+                "lastSiteStatuses": item["updates"][-1]["lastSiteStatuses"],
                 "description": "Bu veri afetyardimalanlari.org'dan alınmıştır"
             })
 

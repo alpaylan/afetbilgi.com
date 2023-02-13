@@ -1,8 +1,9 @@
-import { Box, Button } from '@mui/material';
 import React from 'react';
+import { Box, Button } from '@mui/material';
 import { Marker, Popup } from 'react-leaflet';
 import { MarkerData } from './hooks';
 import { dataTypeToLabel } from './utils/DataType';
+import { statusLevelToString, statusTypeToString } from './utils/Status';
 import getIcon from './utils/icon';
 
 function DataItem({ text, value }: { text: string, value: string }) {
@@ -29,6 +30,9 @@ export default function CustomMarker({ item, size } : { item: MarkerData[any], s
           {item.phone_number && <DataItem text="Telefon" value={item.phone_number} /> }
           {item.lastUpdateTime && <DataItem text='Güncelleme Tarihi' value={item.lastUpdateTime} /> }
           {item.status && <DataItem text="Durum" value={item.status ? "AÇIK" : "KAPALI"} /> }
+          {item.lastSiteStatuses && item.lastSiteStatuses.map((status, index) => (
+            <DataItem key={index} text={statusTypeToString[status.siteStatusType]} value={statusLevelToString[status.siteStatusLevel]} />
+          ))}
           {item.lastUpdate && <DataItem text="Güncelleme Notu" value={item.lastUpdate} /> }
           {item.description && <Box sx={{mt: 1}}>{item.description}</Box>}
 
