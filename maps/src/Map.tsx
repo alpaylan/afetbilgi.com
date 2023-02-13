@@ -6,7 +6,7 @@ import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } fr
 import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
 import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
 import { MarkerData, useMarkers } from './hooks';
-import CustomMarker from './CustomMarker';
+import {CustomMarker, MarkerPopup} from './CustomMarker';
 import { DataType, dataTypeToColor, dataTypeToLabel } from './utils/DataType';
 import { buildSearchIndex, filterMultipleTypes, searchText } from './utils/filters';
 import { dataTypeToSVG } from './svgs';
@@ -18,54 +18,49 @@ require('@changey/react-leaflet-markercluster/dist/styles.min.css');
 
 const INITIAL_ZOOM = 15;
 const MINIMUM_ICON_SIZE = 24;
-const getIconSize = (zoom: number) => Math.max(zoom ** 1.7 / 2, MINIMUM_ICON_SIZE);
+const getIconSize = (zoom: number) => Math.round(Math.max(zoom ** 1.7 / 2, MINIMUM_ICON_SIZE));
 
 const BASE_LOCATION: [number, number] = [37.57713668904397, 36.92937651365644];
 
 function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map_data"], selfLocation: [number, number] | null }){
   const [size, setSize] = useState(getIconSize(useMap().getZoom()));
-  const [bounds, setBounds] = useState(useMap().getBounds());
 
   const mapEvents = useMapEvents({
     zoomend: () => {
       setSize(getIconSize(mapEvents.getZoom()));
-      setBounds(mapEvents.getBounds());
     },
-    moveend: () => {
-      setBounds(mapEvents.getBounds());
-    }
   });
 
-  const optimizedData = useMemo(() => {
-    return filteredData.filter((item) => {
-      const { latitude, longitude } = item;
-
-      return latitude < bounds.getNorthEast().lat
-        && latitude > bounds.getSouthWest().lat
-        && longitude < bounds.getNorthEast().lng
-        && longitude > bounds.getSouthWest().lng;
-    });
-  }, [filteredData, bounds]);
+  /* if comments are toggled, at high zoom levels clustering will be disabled (may be useful for taking ss/saving as pdf) */
+  /* For now it is disabled because spiderfy'ing lets us click really close map items. */
+  /* Also beware that high disableClusteringAtZoom values (more than 50, 100) causes the canvas to freeze. */
+  /* maxClusterRadius is immutable and turning it into a function does not change that behavior. */
+  const markers = useMemo(()=>{
+    return(
+      <MarkerClusterGroup
+        // spiderfyOnMaxZoom={false}
+        maxClusterRadius={65}
+        animate={true}
+        chunkedLoading={true}
+      // disableClusteringAtZoom={180}
+      >
+        {filteredData.map((item, i) => (
+          <CustomMarker
+            key={`item-${i}`}
+            type={item.type}
+            lat={item.latitude}
+            lon={item.longitude}
+          >
+            <MarkerPopup item={item} />
+          </CustomMarker>
+        ))}
+      </MarkerClusterGroup>
+    );
+  }, [filteredData]);
 
   return (
     <>
-    {/* if comments are toggled, at high zoom levels clustering will be disabled (may be useful for taking ss/saving as pdf) */}
-    {/* For now it is disabled because spiderfy'ing lets us click really close map items. */}
-    <MarkerClusterGroup
-        // spiderfyOnMaxZoom={false}
-        maxClusterRadius={50}
-        animate={false}
-        // disableClusteringAtZoom={18}
-      >
-      {optimizedData.map((item, i) => (
-        <CustomMarker
-          key={`item-${i}`}
-          item={item}
-          size={size}
-        />
-        ))}
-
-    </MarkerClusterGroup>
+      {markers}
       {selfLocation &&
         <CircleMarker
           className="blink"
@@ -74,7 +69,7 @@ function Markers({ filteredData, selfLocation }: { filteredData: MarkerData["map
           color="white"
           fillColor={"#4F81E6"}
           fillOpacity={1}
-          radius={size / 4}
+          radius={size / 3}
           opacity={0.75}
           >
           <Popup>Sizin Konumunuz</Popup>
@@ -220,7 +215,7 @@ export default function Map() {
                         {dataTypes.includes(type)
                           ? <CheckCircleOutline style={{ color: 'white' }} />
                           : <CircleOutlined style={{ color: 'white' }} />}
-                        <Typography variant="body1" component="span" sx={{ 
+                        <Typography variant="body1" component="span" sx={{
                           ml: 1,
                           mr: 1,
                           display: 'flex'
