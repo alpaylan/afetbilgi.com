@@ -27,8 +27,9 @@ export default function CustomMarker({ item, size } : { item: MarkerData[any], s
           <Box sx={{ mb: 2  }}>{dataTypeToLabel[item.type].name_tr}</Box>
           <DataItem text="Adres" value={`${item.city}${item.county ? `, ${item.county}` : ""}`} />
           {item.phone_number && <DataItem text="Telefon" value={item.phone_number} /> }
+          {item.lastUpdateTime && <DataItem text='Güncelleme Tarihi' value={item.lastUpdateTime} /> }
           {item.status && <DataItem text="Durum" value={item.status ? "AÇIK" : "KAPALI"} /> }
-          {item.lastUpdate && <DataItem text="Son Güncelleme" value={item.lastUpdate} /> }
+          {item.lastUpdate && <DataItem text="Güncelleme Notu" value={item.lastUpdate} /> }
           {item.description && <Box sx={{mt: 1}}>{item.description}</Box>}
 
           <Box sx={{ mt: 2 }}>

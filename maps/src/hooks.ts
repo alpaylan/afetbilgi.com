@@ -13,6 +13,7 @@ export type MarkerData = {
   city?: string;
   county?: string;
   lastUpdate?: string;
+  lastUpdateTime?: string;
   status?: boolean;
   description?: string;
 }[];
