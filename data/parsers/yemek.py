@@ -135,6 +135,10 @@ def main():
                 {
                     "name": 'Deprem Bölgesi Sahra Mutfak Haritası',
                     "url": 'https://www.google.com/maps/d/embed?mid=1LspPt4CpxG6krYf2ABBZISBbqd4SZs0&ehbc=2E312F',
+                },
+                {
+                    "name": 'Glutensiz Yemek Dağıtım',
+                    "url": 'https://instagram.com/glutensizbeslenmek?igshid=YmMyMTA2M2Y='
                 }
             ],
         }
