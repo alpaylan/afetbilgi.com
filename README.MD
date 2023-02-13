@@ -27,27 +27,29 @@ The basic principles of the website, which is based on a completely human-made d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082170148671529/home_tr.png)
+![tr](/images/tr.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082239220449361/home_en.png)
+![en](/images/en.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082321785335879/home_kr.png)
+![kr](/images/kr.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082386633465947/home_ar.png)
+![ar](/images/ar.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082518271688786/im1.png)
+![Alt text](/images/kalacak_yer.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Alt text](https://media.discordapp.net/attachments/1073082111751364619/1073082640250454096/im2.png)
+![Alt text](/images/donations.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
