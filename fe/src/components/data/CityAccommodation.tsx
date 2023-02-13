@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { CityAccommodationNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function CityAccommodation({
   value,
@@ -19,14 +20,12 @@ export default function CityAccommodation({
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>
-        {t('data.city_accommodation.title', {
+      <Title
+        title={t('data.city_accommodation.title', {
           city: value.city,
         })}
-      </h3>
-      <p>
-        <b>{t('data.city_accommodation.subtitle')}</b>
-      </p>
+        subtitle={t('data.city_accommodation.subtitle') || ""}
+      />
       {/* // TO-DO: https://react.i18next.com/latest/trans-component */}
       <TableContainer component={Paper} >
         <Table >

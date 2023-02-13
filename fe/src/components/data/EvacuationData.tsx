@@ -16,6 +16,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { EvacuationDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function EvacuationData({
   value,
@@ -27,9 +28,9 @@ export default function EvacuationData({
   value.items.sort((a, b) => a.city.localeCompare(b.city));
   return (
     <Box>
-      <h3>
-        {t('data.evacuation_points.title', { city: value.items[0].city })}
-      </h3>
+      <Title
+        title={t('data.evacuation_points.title', { city: value.items[0].city })}
+      />
       {isMinWidth ? (
         <List>
           {value.items.map((item, i) => (

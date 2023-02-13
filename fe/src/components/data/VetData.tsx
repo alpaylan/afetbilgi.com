@@ -1,5 +1,6 @@
 import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';import { useTranslation } from 'react-i18next';
 import { VetNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 /* const VetLanguageHelper = ({ item, index }: { item: Vet; index: number }) => {
   const { i18n } = useTranslation();
@@ -67,11 +68,12 @@ export default function VetData({ value }: { value: VetNode }) {
 
   return (
     <Box display='flex' flexDirection='column' alignItems='center'>
-      <h3>{t('data.veterinary.title', { city: value.city })}</h3>
-
-      <p>
-        <b>{t('data.veterinary.subtitle')}</b>
-      </p>
+      <Title
+        title={t('data.veterinary.title', {
+          city: value.city,
+        })}
+        subtitle={t('data.veterinary.subtitle') || ""}
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
           <TableHead>

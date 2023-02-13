@@ -68,8 +68,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
         display: 'flex',
         flexFlow: 'column nowrap',
         justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: '50px',
+        alignItems: 'center'
       }}
     >
       {renderData()}
