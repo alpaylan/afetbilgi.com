@@ -39,3 +39,16 @@ export const useQuestionData = (paths: string[]) => {
     },
   );
 };
+
+export const useCitiesData = () => {
+  const cities = axios
+  .get("https://cdn.afetbilgi.com/md-pdf/index.json")
+  .then((res) => res.data);
+
+  return useQuery(
+    `citiesData`,
+    async () => {
+      return cities;
+    }
+  );
+}

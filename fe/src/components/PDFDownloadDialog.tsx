@@ -2,10 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import {
   Autocomplete,
-  Box, Button, Dialog, DialogContent, DialogTitle, Divider, TextField, Typography,
+  Box, Button, CircularProgress, Dialog, DialogContent, DialogTitle, Divider, TextField, Typography,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import cities from '../utils/locales/il_translate.json'
+import { useCitiesData } from "../hooks";
+import cityTranslations from '../utils/locales/il_translate.json';
 
 const upperCities = [
   "Kahramanmaraş",
@@ -25,23 +26,18 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
   const {i18n, t} = useTranslation();
   const [selectedCity, setSelectedCity] = React.useState<string | null>(null);
   
-  const citiesDict = Object.entries(cities).reduce((acc, [key, value]) => {
-    acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
-      // eslint-disable-next-line no-param-reassign
-      acc2[key2] = value2;
-      return acc2;
-    }, {} as Record<string, string>);
-    return acc;
-  }, {} as Record<string, Record<string, string>>);
+  const {data: cities, isLoading} = useCitiesData();
 
   const handleDownload = () => {
     if (selectedCity) {
-      const index = Object.keys(citiesDict).findIndex((key) => citiesDict[key][i18n.language] === selectedCity);
-      const city = Object.keys(citiesDict)[index];
-      window.open(`https://pdf.afetbilgi.com/${i18n.language}/${city}.pdf`, '_blank');
+      window.open(`https://pdf.afetbilgi.com/${i18n.language}/${selectedCity}.pdf`, '_blank');
     }
   };
 
+  const getCityTranslation = (city: string) => {
+    const translations = cityTranslations[city as keyof typeof cityTranslations];
+    return translations ? translations[i18n.language as keyof typeof translations] : city;
+  }
 
   return (
     <Dialog
@@ -109,13 +105,16 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', m: 1}}>
-                <Autocomplete
+                {isLoading ? (
+                  <CircularProgress />
+                ) : (
+                  <Autocomplete
                   id="combo-box-demo"
-                  options={Object.keys(citiesDict).map((key) => citiesDict[key][i18n.language])}
-                  getOptionLabel={(option) => option}
+                  options={cities as string[]}
+                  getOptionLabel={(option) => getCityTranslation(option)}
                   renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
                   sx={{ width: 300, alignSelf: 'center', mt: 1 }}
-                  onChange={(event, newValue) => {
+                  onChange={(_, newValue) => {
                     if (newValue) {
                       setSelectedCity(newValue);
                     } else {
@@ -123,6 +122,7 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                     }
                   }}
                 />
+                )}
               </Box>
             </Box>
             <Box sx={{ textAlign: 'center', m: 2 }}>
