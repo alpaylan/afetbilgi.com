@@ -50,6 +50,8 @@ if __name__ == "__main__":
     df["Şehir"] = df["Şehir"].apply(str.strip)
     df["Şehir"] = df["Şehir"].apply(turkish_title)
 
+    df = df.fillna("")
+
     df = df.sort_values(by='Şehir')
 
     options = []
@@ -87,7 +89,7 @@ if __name__ == "__main__":
         vets.append(
             {
                 "name": row["İsim"].strip() if not pd.isna(row["İsim"]) else None,
-                "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                "phone_number": [phone for phone in row["Telefon"].split("\n")],
                 "address": row["Konum"].strip() if not pd.isna(row["Konum"]) else None,
                 "maps_link": row["Konum Linki"].strip() if not pd.isna(row["Konum Linki"]) else None,
             }

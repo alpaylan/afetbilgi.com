@@ -103,16 +103,17 @@ export default function VetData({ value }: { value: VetNode }) {
                   )}
                 </TableCell>
                 <TableCell>
-                  {item.phone_number ? (
-                    <a
-                      href={`tel:${item.phone_number.replace(/^0/, '').replace(/ /g, '')}`}
-                      key={`item-${index}`}
-                    >
-                      {item.phone_number}
-                    </a>
-                    ) : (
-                      '-'
-                  )}
+                {item.phone_number.map((phone, idx) => (
+                        <div key={idx}>
+                          <a
+                            href={`tel:${phone
+                              ?.replace(/^0/, '')
+                              .replace(/ /g, '')}`}
+                          >
+                            {phone}
+                          </a>
+                        </div>
+                      ))}
                 </TableCell>      
               </TableRow>
             ))}
