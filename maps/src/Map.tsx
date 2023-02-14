@@ -1,6 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
-import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon, MyLocation } from '@mui/icons-material';
+import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon} from '@mui/icons-material';
+import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
@@ -104,15 +105,15 @@ function CenterView({selfLocation} : {selfLocation: [number, number]}) {
   }
 
   return (
-    <Control
-      position='topleft'>
-      <button
-        color='inherit'
-        onClick={centerPosition}
-      >
-        <MyLocation />
-      </button>
-    </Control>)
+
+      <Control
+        position='topleft'>
+        <button onClick={centerPosition}>
+          <GpsFixedIcon/>
+        </button>
+      </Control>
+
+    )
 }
 
 
