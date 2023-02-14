@@ -51,7 +51,8 @@ const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.HEALTHCARE_SERVICES]: SahraData,
   [DataType.GAS_STATION]: GasStationsData,
   [DataType.MOBILE_TOILETS]: ToiletsData,
-  [DataType.PHARMACY]: PharmacyData
+  [DataType.PHARMACY]: PharmacyData,
+  [DataType.DIGITAL_PLATFORMS]: UsefulLinksData,
 };
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
