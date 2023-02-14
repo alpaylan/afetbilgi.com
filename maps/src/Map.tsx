@@ -101,7 +101,7 @@ function CenterView({selfLocation} : {selfLocation: [number, number]}) {
   
   const map = useMap();
   const centerPosition = () => {
-      map.setView(selfLocation);
+      map.setView(selfLocation, INITIAL_ZOOM);
   }
 
   return (
