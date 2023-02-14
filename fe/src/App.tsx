@@ -14,9 +14,8 @@ import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
-import { useQuestionData } from './hooks';
-
-import cities from "./utils/locales/il_translate.json";
+import { useQuestionData, useCitiesData } from './hooks';
+import cityTranslations from './utils/locales/il_translate.json'
 
 // import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
@@ -52,11 +51,11 @@ const App = () => {
 
   const { isLoading } = useQuestionData([]);
 
-
+  const {data: cities, isLoading : isCitiesLoading} = useCitiesData();
 
   const [selectedCity, setSelectedCity] = React.useState<string | null>(LocalStorage.getObject(LocalStorage.LOCAL_STORAGE_CITY));
   
-  const citiesDict = Object.entries(cities).reduce((acc, [key, value]) => {
+  const citiesDict = Object.entries(cityTranslations).reduce((acc, [key, value]) => {
     acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
       // eslint-disable-next-line no-param-reassign
       acc2[key2] = value2;
@@ -81,7 +80,6 @@ const App = () => {
       selectedLanguage,
     );
   };
-
 
   return (
     <Box>
@@ -177,7 +175,8 @@ const App = () => {
           </Select>
         </Box>
 
-        {location.pathname === '/' && <CitySelection changeCityHandler={changeCityHandler} citiesDict={citiesDict} selectedCity={selectedCity}/>}
+        {location.pathname === '/' && !isCitiesLoading && 
+        <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>}
 
       </Box>
 
