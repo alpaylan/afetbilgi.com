@@ -108,8 +108,13 @@ function CenterView({selfLocation} : {selfLocation: [number, number]}) {
 
       <Control
         position='topleft'>
-        <button onClick={centerPosition}>
-          <GpsFixedIcon/>
+        <button 
+          onClick={centerPosition}
+          style= {{width: '35px', display: 'block', alignItems: 'center', justifyContent:'center', height:'35px', background:'rgba(150, 150, 150, 0.4)', border:'none'}}
+        >
+          <div style={{marginLeft: '-4px',width:'31px',display:'flex', alignItems: 'center', justifyContent:'center', height:'31px', background:'white'}}>
+            <GpsFixedIcon/>
+          </div>
         </button>
       </Control>
 
