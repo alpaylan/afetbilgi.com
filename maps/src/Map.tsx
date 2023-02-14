@@ -1,9 +1,10 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, CircularProgress, Divider, IconButton, InputBase, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
-import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon } from '@mui/icons-material';
+import { CheckCircleOutline, CircleOutlined, ExpandCircleDown, Search as SearchIcon, MyLocation } from '@mui/icons-material';
 import React, { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { SimpleMapScreenshoter } from 'leaflet-simple-map-screenshoter';
+import Control from 'react-leaflet-custom-control'
 import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
 import { MarkerData, useMarkers } from './hooks';
 import {CustomMarker, MarkerPopup} from './CustomMarker';
@@ -95,6 +96,27 @@ function MapDownloadButton() {
   return (<></>);
 }
 
+function CenterView({selfLocation} : {selfLocation: [number, number]}) {
+  
+  const map = useMap();
+  const centerPosition = () => {
+      map.setView(selfLocation);
+  }
+
+  return (
+    <Control
+      position='topleft'>
+      <button
+        color='inherit'
+        onClick={centerPosition}
+      >
+        <MyLocation />
+      </button>
+    </Control>)
+}
+
+
+
 export default function Map() {
   const [dataTypes, setDataTypes] = useState<string[]>(Object.values(DataType));
   const [selfLocation, setSelfLocation] = useState<[number, number] | null>(null);
@@ -147,6 +169,9 @@ export default function Map() {
         <Markers filteredData={filteredData} selfLocation={selfLocation} />
 
         <MapDownloadButton />
+        {selfLocation &&
+          <CenterView selfLocation={selfLocation} />
+        }
       </MapContainer>
 
       <Box sx={{
