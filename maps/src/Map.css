@@ -10,6 +10,26 @@
   opacity: 0.9;
 }
 
+.center-button {
+  width: 35px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height:35px;
+  background:rgba(150, 150, 150, 0.4);
+  border:none;
+}
+
+.center-button-icon {
+  margin-left: -4px;
+  width: 31px;
+  display:flex;
+  align-items: center;
+  justify-content: center; 
+  height: 31px; 
+  background: white;
+}
+
 @media (hover: hover) {
   .category-checkbox:hover {
     opacity: 1;
