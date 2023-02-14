@@ -29,7 +29,7 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint_tr ||
   option.autocompleteHint;
 
-export default function Question({ paths }: { paths: string[] }) {
+export default function Question({ paths, selectedCity }: { paths: string[], selectedCity: string | null }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
@@ -97,7 +97,12 @@ export default function Question({ paths }: { paths: string[] }) {
 
 
           else {
-            navigate(`/${optionName}`);
+            if(selectedCity) {
+              navigate(`/${optionName}/${selectedCity}`);
+            } else {
+              navigate(`/${optionName}`);
+            }
+            
           }
         } else {
           navigate(

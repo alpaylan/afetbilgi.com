@@ -4,7 +4,7 @@ import preval from 'preval.macro';
 import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select, Autocomplete, TextField } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import LocalStorage from './utils/LocalStorage';
@@ -13,6 +13,8 @@ import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
 import { useQuestionData } from './hooks';
+
+import cities from "./utils/locales/il_translate.json";
 
 // import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
@@ -31,11 +33,11 @@ const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
   buildDate.getMinutes(),
 )}`;
 
-function RootQuestion() {
+function RootQuestion({ selectedCity }: { selectedCity: string | null}) {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question paths={paths} />;
+  return <Question paths={paths} selectedCity={selectedCity}/>;
 }
 
 const App = () => {
@@ -47,6 +49,41 @@ const App = () => {
 
   const { isLoading } = useQuestionData([]);
 
+
+ 
+
+  const [selectedCity, setSelectedCity] = React.useState<string | null>(null);
+  
+  const citiesDict = Object.entries(cities).reduce((acc, [key, value]) => {
+    acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
+      // eslint-disable-next-line no-param-reassign
+      acc2[key2] = value2;
+      return acc2;
+    }, {} as Record<string, string>);
+    return acc;
+  }, {} as Record<string, Record<string, string>>);
+
+  console.log("cities",cities)
+  console.log("dict",citiesDict)
+
+  const handleDownload = () => {
+    if (selectedCity) {
+      const index = Object.keys(citiesDict).findIndex((key) => citiesDict[key][i18n.language] === selectedCity);
+      const city = Object.keys(citiesDict)[index];
+      window.open(`https://pdf.afetbilgi.com/${i18n.language}/${city}.pdf`, '_blank');
+    }
+  };
+
+  const changeCityHandler = (newValue : string) => {
+    setSelectedCity(newValue)
+    LocalStorage.storeObject(
+      LocalStorage.LOCAL_STORAGE_CITY,
+      newValue,
+    );
+  }
+
+  console.log(selectedCity)
+
   const changeLanguageHandler = (selectedLanguage: Language) => {
     i18n.changeLanguage(selectedLanguage);
     LocalStorage.storeObject(
@@ -54,6 +91,7 @@ const App = () => {
       selectedLanguage,
     );
   };
+
 
   return (
     <Box>
@@ -144,9 +182,27 @@ const App = () => {
         </Box>
       </Box>
 
+
+      {location.pathname === '/' && (
+          <Box sx={{ mt: 1 }}>
+            <Autocomplete
+              id="city-combo-box"
+              options={Object.keys(citiesDict).map((key) => citiesDict[key][i18n.language])}
+              getOptionLabel={(option) => option}
+              renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
+              sx={{ width: 300, alignSelf: 'center' }}
+              onChange={(event, newValue) => {
+                if (newValue) {
+                  changeCityHandler(newValue);
+                }
+              }}
+            />
+          </Box>
+        )}
+
       <Container sx={{ mt: 1 }}>
         <Routes>
-          <Route path='/*' element={<RootQuestion />} />
+          <Route path='/*' element={<RootQuestion selectedCity={selectedCity}/>} />
           <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>
