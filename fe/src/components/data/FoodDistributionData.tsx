@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { FoodDistributionDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function FoodDistributionData({
   value,
@@ -21,17 +22,15 @@ export default function FoodDistributionData({
   return (
     <Box
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-    >
-      <h3>
-        {t('data.food_distribution.title', {
+  >
+      <Title
+        title={t('data.food_distribution.title', {
           city: value.city,
           county: value.county,
         })}
-      </h3>
-
-      <p>
-        <b>{t('data.food_distribution.subtitle')}</b>
-      </p>
+        subtitle={t('data.food_distribution.subtitle') || ""}
+        severity='warning'
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
           <TableHead>

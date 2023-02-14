@@ -48,17 +48,15 @@ export default function Question({ paths }: { paths: string[] }) {
 
   if (!selectedNode) {
     return (
-      <Box>
-        <Box
-          sx={{
-            textAlign: 'center',
-            display: 'flex',
-            flexFlow: 'column nowrap',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography variant='h4'>{t('notFound')}</Typography>
-        </Box>
+      <Box
+        sx={{
+          textAlign: 'center',
+          display: 'flex',
+          flexFlow: 'column nowrap',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant='h4'>{t('notFound')}</Typography>
       </Box>
     );
   }
@@ -73,33 +71,45 @@ export default function Question({ paths }: { paths: string[] }) {
     const optionName = encodeURIComponent(getOptionName(option, 'tr'));
     const directLinks:Record<string,string> = {
       'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
-      "Mobil%20Tuvaletler": 'https://twitter.com/SabanciVakfi/status/1624442911554211842?cxt=HHwWhMC40ZWOl4stAAAA'
+      "Mobil%20Tuvaletler": 'https://twitter.com/sabancivakfi/status/1625146826335694849?s=46&t=XcGyniD8_Ur8EiwgP61Gqg'
     };
 
     const isDirectLink = optionName in directLinks && isRootQuestion;
     let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
     if(isDirectLink) redirectionPath = directLinks[optionName];
 
-    const ButtonComponent = <Button
-      key={`button-${optionNameLocalized}`}
-      variant='contained'
-      size='medium'
-      sx={{ m: 2, minWidth: '300px' }}
-      to={redirectionPath}
-      component= {Link}
-      endIcon={isDirectLink && <OpenInNewIcon />}
-    >
-      {optionNameLocalized.toLocaleUpperCase(i18n.language)}
-    </Button>;
-
     // Direct link buttons have underlines
     if (isDirectLink) {
-      return <MUILink underline='always'>
-        {ButtonComponent}
-      </MUILink>
+      return (
+        <MUILink underline='always'>
+          <Button
+            key={`button-${optionNameLocalized}`}
+            variant='contained'
+            size='medium'
+            sx={{ m: 2, minWidth: '300px' }}
+            href={redirectionPath}
+            target='_blank'
+            endIcon={<OpenInNewIcon />}
+          >
+            {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+          </Button>
+        </MUILink>
+      );
     }
 
-    return ButtonComponent;
+    return (
+      <Button
+        key={`button-${optionNameLocalized}`}
+        variant='contained'
+        size='medium'
+        sx={{ m: 2, minWidth: '300px' }}
+        to={redirectionPath}
+        component= {Link}
+        endIcon={isDirectLink && <OpenInNewIcon />}
+      >
+        {optionNameLocalized.toLocaleUpperCase(i18n.language)}
+      </Button>
+    );
   };
 
   const renderOptions = () => {
@@ -125,13 +135,13 @@ export default function Question({ paths }: { paths: string[] }) {
           direction={{ xs: 'column', sm: 'row' }}
           justifyContent='center'
           alignItems='center'
-          divider={<Divider orientation='vertical' flexItem sx={{ mt: 5 }} />}
+          divider={<Divider orientation='vertical' flexItem />}
           sx={{
             display: 'flex',
             flexFlow: 'row wrap',
             alignItems: 'start',
             justifyContent: 'center',
-            paddingTop: '50px',
+            mt: 2,
           }}
         >
           {Object.keys(buttonsByCategories)
@@ -144,7 +154,7 @@ export default function Question({ paths }: { paths: string[] }) {
                   display: 'flex',
                   flexFlow: 'column nowrap',
                   justifyContent: 'center',
-                  paddingTop: '50px',
+                  mb: 2
                 }}
               >
                 <Typography variant='h5'>
@@ -158,13 +168,14 @@ export default function Question({ paths }: { paths: string[] }) {
     }
     return getAutocompleteName(selectedNode, i18n.language) ? (
       <Autocomplete
+        sx={{ m: 2 }}
         id='options-autocomplete'
         renderInput={(params) => (
           <TextField
             {...params}
             label={getAutocompleteName(selectedNode, i18n.language)}
             variant='outlined'
-            sx={{ minWidth: '200px', m: 2 }}
+            sx={{ minWidth: '240px' }}
           />
         )}
         options={selectedNode.options}
@@ -195,7 +206,7 @@ export default function Question({ paths }: { paths: string[] }) {
   };
 
   return (
-    <Box>
+    <>
       <Box
         sx={{
           textAlign: 'center',
@@ -204,7 +215,7 @@ export default function Question({ paths }: { paths: string[] }) {
           justifyContent: 'center',
         }}
       >
-        <Typography variant='h4'>
+        <Typography variant='h5'>
           {selectedNode[`text_${i18n.language}`] || selectedNode.text}
         </Typography>
 
@@ -214,13 +225,13 @@ export default function Question({ paths }: { paths: string[] }) {
             flexFlow: 'row wrap',
             alignItems: 'start',
             justifyContent: 'center',
-            paddingBottom: '50px',
+            mt: 2
           }}
         >
           {renderOptions()}
           {selectedNode.externalData?.usefulLinks?.length > 0 && (
-            <Box width='100%' mt={8}>
-              <Typography variant='h4'>
+            <Box width='100%' mt={2}>
+              <Typography variant='h5' sx={{ mb: 2 }}>
                 {selectedNode.externalData[`text_${i18n.language}`] ||
                   selectedNode.externalData.text}
               </Typography>
@@ -229,6 +240,6 @@ export default function Question({ paths }: { paths: string[] }) {
           )}
         </Box>
       </Box>
-    </Box>
+    </>
   );
 }

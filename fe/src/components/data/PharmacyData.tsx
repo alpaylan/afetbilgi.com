@@ -77,6 +77,8 @@ export default function PharmacyData({
                         </div>
                       ))}
                     </Box>
+                    <br />
+                    <b>{t('details')}</b>: {item.details}
                   </CardContent>
                 </Card>
               </ListItem>
@@ -91,6 +93,7 @@ export default function PharmacyData({
                   <TableCell>{t('address')}</TableCell>
                   <TableCell>{t('map')}</TableCell>
                   <TableCell>{t('contact')}</TableCell>
+                  <TableCell>{t('details')}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -128,6 +131,9 @@ export default function PharmacyData({
                           </a>
                         </div>
                       ))}
+                    </TableCell>
+                    <TableCell>
+                      {item.details}
                     </TableCell>
                   </TableRow>
                 ))}

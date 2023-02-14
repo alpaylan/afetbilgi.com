@@ -28,6 +28,12 @@ def str_or_list(x):
     else:
         return str(x).strip()
 
+def str_or_raw_list(x):
+    if isinstance(x, list):
+        return x
+    else:
+        return str(x).strip()
+
 def process_rows(r):
     rr =  list(map(str.strip, map(str, r.values())))
 
@@ -49,6 +55,22 @@ def process_rows_list(r):
 
     for i in range(len(rr)):
         if rr[i] == "None" or rr[i] is None:
+            rows.append("-")
+        else:
+            # rows.append(rr[i].replace("\n", " - "))
+            rows.append(empty_space_replace_regex.sub(" - ", rr[i]))
+
+    return rows
+
+def process_rows_raw_list(r):
+    rr = list(map(str_or_raw_list, r.values()))
+
+    rows = []
+
+    for i in range(len(rr)):
+        if isinstance(rr[i], list):
+            rows.append(rr[i])
+        elif rr[i] == "None" or rr[i] is None:
             rows.append("-")
         else:
             # rows.append(rr[i].replace("\n", " - "))
@@ -149,9 +171,13 @@ def parse_vets(data, t):
     rows = []
 
     for r in data["vets"]:
-        rr = process_rows(r)
+        print(r)
+        rr = process_rows_raw_list(r)
 
-        rr[1] = phone_or_str(rr[1])
+        print(rr)
+        print("\n\n")
+
+        rr[1] = ", ".join(list(map(phone_or_str, rr[1])))
         rr[3] = link_or_str(rr[3], t["button.google_maps"])
 
         rows.append(rr)

@@ -10,12 +10,15 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { TelephoneDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function TelephoneData({ value }: { value: TelephoneDataNode }) {
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>{t('data.important_phone_numbers.title')}</h3>
+      <Title
+        title={t('data.important_phone_numbers.title')}
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
         <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
           <TableHead>

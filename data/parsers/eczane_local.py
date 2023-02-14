@@ -41,14 +41,19 @@ def main():
         county_dict = {}
 
         for county in unique_counties:
+            if county == "":
+                continue
             county_dict[county] = []
 
         for _, row in city_df.iterrows():
+            if row["İLÇE"] == "":
+                continue
             county_dict[row["İLÇE"]].append({
-                "name": row["ECZANE İSMİ"],
+                "name": row["ECZANE"],
                 "address": row["ADRES"],
-                "phones": [tel for tel in row["İLETİŞİM"].split("\n")],
-                "locationLink": row["KONUM LİNKİ"],
+                "phones": [tel for tel in row["TELEFON"].split("\n")],
+                "locationLink": row["MAP LİNKİ"],
+                "info": row["BİLGİ"],
             })
 
         option_2 = []
@@ -89,7 +94,19 @@ def main():
         "text_en": "Which city are you looking for open pharmacies?",
         "text_ar": "أي مدينة تبحث عن صيدليات مفتوحة؟",
         "text_ku": "Çima bajarê ku şînî şînên xwe?",
-        "options": options_1
+        "options": options_1,
+        "externalData": {
+            "text_tr": "Açık Eczaneler için Diğer Kaynaklar",
+            "text_en": "Other Sources for Open Pharmacies",
+            "text_ar": "مصادر أخرى للصيدليات المفتوحة",
+            "text_ku": "Çavkanên din ku şînî şînên xwe",
+            "usefulLinks": [
+                {
+                    "name": "AEOGK ECZANE HARİTASI",
+                    "url": "https://www.google.com/maps/d/viewer?mid=13wkgORPUQ9Rs11NYlQjeTAvxlzZOB9k&ll=37.48816070237976%2C37.88106774999997&z=8"
+                }
+            ]
+        }
     }
 
     with open(out_path, "w") as f:

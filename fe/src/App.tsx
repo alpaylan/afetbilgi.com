@@ -152,7 +152,7 @@ const App = () => {
         </Box>
       </Box>
 
-      <Container sx={{ mt: 1 }}>
+      <Container sx={{ mt: 3 }}>
         <Routes>
           <Route path='/*' element={<RootQuestion />} />
           <Route path='/about' element={<AboutUs />} />

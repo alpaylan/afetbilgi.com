@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { SahraDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 /* const detailedInfo = (t: TFunction, phone_number?: string, url?: string) => {
   if (!phone_number && !url) {
@@ -75,11 +76,11 @@ export default function SahraDistributionData({
   const { t } = useTranslation();
   return (
     <Box>
-      <h3>
-        {t('data.health_services.title', {
+      <Title
+        title={t('data.health_services.title', {
           city: value.city,
         })}
-      </h3>
+      />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
           <TableHead>
