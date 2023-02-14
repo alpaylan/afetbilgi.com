@@ -66,6 +66,8 @@
   "data.pdf.select": "PDF indirmek için şehir seçip indir butonuna basınız.",
   "data.pharmacy.title": "{{city}}, {{county }} Açık Eczaneler",
   "data.pharmacy.subtitle": "Bu bilgiler {{date}} tarihine aittir. Bilgiler her gün güncellenmektedir. Kesin bilgi için lütfen eczanelerle iletişime geçiniz.",
+  "data.digital_platforms.title": "Dijital Yardımlaşma Seferberlikleri",
+  "data.digital_platforms.subtitle": "Dijital yardımlaşma seferberlikleri ile ilgili detaylı bilgilere aşağıdaki linklerden ulaşabilirsiniz.",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",
