@@ -25,6 +25,7 @@ import TransportationsData from './data/TransportationsData';
 import GasStationsData from './data/GasStationsData';
 import ToiletsData from './data/ToiletsData';
 import PharmacyData from './data/PharmacyData';
+import DigitalPlatformData from './data/DigitalPlatformData';
 
 const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.BANK_ACCOUNT_DONATION]: BankData,
@@ -52,7 +53,7 @@ const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.GAS_STATION]: GasStationsData,
   [DataType.MOBILE_TOILETS]: ToiletsData,
   [DataType.PHARMACY]: PharmacyData,
-  [DataType.DIGITAL_PLATFORMS]: UsefulLinksData,
+  [DataType.DIGITAL_PLATFORMS]: DigitalPlatformData,
 };
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
