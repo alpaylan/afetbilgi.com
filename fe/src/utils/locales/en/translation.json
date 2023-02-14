@@ -68,7 +68,7 @@
   "data.pharmacy.title": "{{city}}, {{county }} Open Pharmacies",
   "data.pharmacy.subtitle": "This information is valid as of {{date}}. Information is updated daily. Please contact the pharmacies for accurate information.",
   "data.digital_platforms.title": "Digital Solidarity Campaigns",
-  "data.digital_platforms.subtitle": "You can support the earthquake victims by donating to the following campaigns.",
+  "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
