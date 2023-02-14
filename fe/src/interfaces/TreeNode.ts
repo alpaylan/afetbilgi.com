@@ -75,7 +75,7 @@ export interface CityAccommodationNode extends DataNode {
 
 export interface Vet {
   name: string;
-  phone_number: string;
+  phone_number: string[];
   address?: string;
   maps_link: string;
 }
@@ -241,4 +241,18 @@ export interface GasStationsDataNode extends DataNode {
   city: string;
   county: string;
   items: GasStation[];
+}
+
+export interface Pharmacy {
+  name: string;
+  address: string;
+  phones: string[];
+  locationLink: string;
+  details: string;
+}
+export interface PharmacyDataNode extends DataNode {
+  city: string;
+  county: string;
+  date: string;
+  items: Pharmacy[];
 }

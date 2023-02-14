@@ -103,6 +103,10 @@ def main():
                 {
                     "name": 'Deprem Bölgesi Aktif Hastane Listesi',
                     "url": 'https://docs.google.com/spreadsheets/d/1a785CPjKg0cVND2rl2dGnwb7q_1mPJhwWJ8UODCcttw/edit#gid=0',
+                },
+                {
+                    "name": 'LÖSEV - LÖSANTE Hastanesi Ücretsiz Hizmet',
+                    "url": 'https://www.instagram.com/p/Cocbq3JOblB/?igshid=NTdlMDg3MTY='
                 }
             ],
         }

@@ -24,6 +24,7 @@ import DonationLinksData from './data/DonationLinksData';
 import TransportationsData from './data/TransportationsData';
 import GasStationsData from './data/GasStationsData';
 import ToiletsData from './data/ToiletsData';
+import PharmacyData from './data/PharmacyData';
 
 const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.BANK_ACCOUNT_DONATION]: BankData,
@@ -50,6 +51,7 @@ const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.HEALTHCARE_SERVICES]: SahraData,
   [DataType.GAS_STATION]: GasStationsData,
   [DataType.MOBILE_TOILETS]: ToiletsData,
+  [DataType.PHARMACY]: PharmacyData
 };
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
@@ -66,8 +68,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
         display: 'flex',
         flexFlow: 'column nowrap',
         justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: '50px',
+        alignItems: 'center'
       }}
     >
       {renderData()}

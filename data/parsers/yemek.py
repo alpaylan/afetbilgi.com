@@ -20,6 +20,7 @@ def main():
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
+    df = df.fillna("")
 
     # sheet_id = "1L5zEuutakT94TBbi6VgsgUWdfIXTzyHZr3LwGVFATPE"
     # sheet_name = "Yemek%20Da%C4%9F%C4%B1t%C4%B1m%20Alanlar%C4%B1"
@@ -134,6 +135,10 @@ def main():
                 {
                     "name": 'Deprem Bölgesi Sahra Mutfak Haritası',
                     "url": 'https://www.google.com/maps/d/embed?mid=1LspPt4CpxG6krYf2ABBZISBbqd4SZs0&ehbc=2E312F',
+                },
+                {
+                    "name": 'Glutensiz Yemek Dağıtım',
+                    "url": 'https://instagram.com/glutensizbeslenmek?igshid=YmMyMTA2M2Y='
                 }
             ],
         }

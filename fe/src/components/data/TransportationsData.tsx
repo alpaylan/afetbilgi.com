@@ -1,7 +1,22 @@
-import { Paper, Box, TableContainer, Table, TableRow, TableCell, CardContent, Card, TableHead, TableBody, useMediaQuery, List, ListItem } from '@mui/material';
+import { 
+  Paper,
+  Box,
+  TableContainer,
+  Table,
+  TableRow,
+  TableCell,
+  CardContent,
+  Card,
+  TableHead,
+  TableBody,
+  useMediaQuery,
+  List,
+  ListItem
+} from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import { TransportationDataNode } from "../../interfaces/TreeNode";
+import Title from '../Title';
 
 const getValidityDateExplanation = (t: any, date: string) => {
   if (!date) return '';
@@ -14,7 +29,9 @@ export default function TransportationsData({ value } : {value: TransportationDa
 
   return (
     <Box>
-      <h3>{t('data.transportation.title')}</h3>
+      <Title
+        title={t('data.transportation.title')}
+      />
       {isMinWidth ? <List>
         {value.transportations.map((item) => (
           <ListItem key={item.name}>

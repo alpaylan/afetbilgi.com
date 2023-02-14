@@ -5,6 +5,8 @@ import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Box, Button, Container, MenuItem, Select, Autocomplete, TextField } from '@mui/material';
+import MapIcon from '@mui/icons-material/Map';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import LocalStorage from './utils/LocalStorage';
@@ -134,7 +136,7 @@ const App = () => {
           }}
         >
           {location.pathname !== '/' && (
-            <>
+            <Box sx={{ display: 'flex', flexFlow: "wrap", alignItems: "center", justifyContent: "center", mr: 1 }}>
               <Button size='large' onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
@@ -142,7 +144,7 @@ const App = () => {
               <Button size='large' onClick={() => navigate(-1)}>
                 {t('button.back')}
               </Button>
-            </>
+            </Box>
           )}
 
           <Button
@@ -150,6 +152,9 @@ const App = () => {
             onClick={() => {
               window.open('https://maps.afetbilgi.com', '_blank');
             }}
+            startIcon={<MapIcon />}
+            variant="outlined"
+            sx={{ mr: 1 }}
           >
             {t('button.map')}
           </Button>
@@ -160,13 +165,16 @@ const App = () => {
               onClick={() => {
                 setPdfDialogOpen(true);
               }}
+              startIcon={<PictureAsPdfIcon />}
+              variant="outlined"
+              sx={{ mr: 1 }}
             >
               {t('button.download')}
             </Button>
           )}
         </Box>
 
-        <Box sx={{ mt: 1 }}>
+        <Box sx={{ mt: 2 }}>
           <Select
             id='language-options-multiselect'
             size='small'
@@ -200,7 +208,7 @@ const App = () => {
           </Box>
         )}
 
-      <Container sx={{ mt: 1 }}>
+      <Container sx={{ mt: 3 }}>
         <Routes>
           <Route path='/*' element={<RootQuestion selectedCity={selectedCity}/>} />
           <Route path='/about' element={<AboutUs />} />

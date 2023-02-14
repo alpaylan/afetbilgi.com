@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ContainerPharmacyDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function ContainerPharmacyData({
   value,
@@ -26,7 +27,9 @@ export default function ContainerPharmacyData({
   value.items.sort((a, b) => a.city.localeCompare(b.city));
   return (
     <Box>
-      <h3>{t('data.container_pharmacy')}</h3>
+      <Title
+        title={t('data.container_pharmacy')}
+      />
       {isMinWidth ? (
         <List>
           {value.items.map((item, i) => (

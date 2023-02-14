@@ -11,17 +11,18 @@ import {
 } from '@mui/material';
 
 import { GatheringDataNode } from '../../interfaces/TreeNode';
+import Title from '../Title';
 
 export default function GatheringData({ value }: { value: GatheringDataNode }) {
   const { t } = useTranslation();
 
   return (
     <Box>
-      <h3>
-        {t('data.gathering.title', {
+      <Title
+        title={t('data.gathering.title', {
           city: value.city,
         })}
-      </h3>
+      />
 
       <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
         <Table sx={{ maxWidth: 650 }} aria-label='simple table'>

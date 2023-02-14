@@ -1,0 +1,36 @@
+name: External Map data upload
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "*/6 * * * *" # Run every 6 minutes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - name: Fetch data
+        run: |
+          cd data
+
+          mkdir to_upload
+
+          curl -o to_upload/afetyardimalanlari-org-ankara.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=Ankara"
+          curl -o to_upload/afetyardimalanlari-org-istanbul.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0stanbul"
+          curl -o to_upload/afetyardimalanlari-org-izmir.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0zmir"
+
+          python3 external_combine.py ./to_upload
+
+      - name: Sync JSON files
+        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com/maps/external/
