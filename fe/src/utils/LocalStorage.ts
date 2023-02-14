@@ -2,6 +2,7 @@ import { parseStringToJson } from './util';
 
 export default class LocalStorage {
   static LOCAL_STORAGE_LANGUAGE = 'language';
+  
   static LOCAL_STORAGE_CITY = "city";
 
   static storeObject(key: string, value: any) {

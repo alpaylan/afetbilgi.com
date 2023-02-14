@@ -73,9 +73,16 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
       'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
       "Mobil%20Tuvaletler": 'https://twitter.com/sabancivakfi/status/1625146826335694849?s=46&t=XcGyniD8_Ur8EiwgP61Gqg'
     };
-
+    
     const isDirectLink = optionName in directLinks && isRootQuestion;
-    let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    let redirectionPath;
+    if(selectedCity && option.value.type === 'question') {
+      // if the data city specific
+      redirectionPath = isRootQuestion?`/${optionName}/${selectedCity}`:`${location.pathname}/${optionName}`;
+    } else {
+      // if the data general for all cities
+      redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    }
     if(isDirectLink) redirectionPath = directLinks[optionName];
 
     // Direct link buttons have underlines

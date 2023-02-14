@@ -52,9 +52,8 @@ const App = () => {
   const { isLoading } = useQuestionData([]);
 
 
- 
 
-  const [selectedCity, setSelectedCity] = React.useState<string | null>(null);
+  const [selectedCity, setSelectedCity] = React.useState<string | null>(LocalStorage.getObject(LocalStorage.LOCAL_STORAGE_CITY));
   
   const citiesDict = Object.entries(cities).reduce((acc, [key, value]) => {
     acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
@@ -65,18 +64,8 @@ const App = () => {
     return acc;
   }, {} as Record<string, Record<string, string>>);
 
-  console.log("cities",cities)
-  console.log("dict",citiesDict)
 
-  const handleDownload = () => {
-    if (selectedCity) {
-      const index = Object.keys(citiesDict).findIndex((key) => citiesDict[key][i18n.language] === selectedCity);
-      const city = Object.keys(citiesDict)[index];
-      window.open(`https://pdf.afetbilgi.com/${i18n.language}/${city}.pdf`, '_blank');
-    }
-  };
-
-  const changeCityHandler = (newValue : string) => {
+  const changeCityHandler = (newValue : string | null) => {
     setSelectedCity(newValue)
     LocalStorage.storeObject(
       LocalStorage.LOCAL_STORAGE_CITY,
@@ -84,7 +73,6 @@ const App = () => {
     );
   }
 
-  console.log(selectedCity)
 
   const changeLanguageHandler = (selectedLanguage: Language) => {
     i18n.changeLanguage(selectedLanguage);
@@ -188,25 +176,23 @@ const App = () => {
             ))}
           </Select>
         </Box>
-      </Box>
 
-
-      {location.pathname === '/' && (
+        {location.pathname === '/' && (
           <Box sx={{ mt: 1 }}>
             <Autocomplete
               id="city-combo-box"
-              options={Object.keys(citiesDict).map((key) => citiesDict[key][i18n.language])}
-              getOptionLabel={(option) => option}
+              value={selectedCity}
+              options={Object.keys(citiesDict).map((key) => citiesDict[key].tr)}
+              getOptionLabel={(option) => citiesDict?.[option]?.[i18n.language]}
               renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
               sx={{ width: 300, alignSelf: 'center' }}
-              onChange={(event, newValue) => {
-                if (newValue) {
-                  changeCityHandler(newValue);
-                }
-              }}
+              onChange={(event, newValue) => changeCityHandler(newValue)}
             />
           </Box>
         )}
+
+      </Box>
+
 
       <Container sx={{ mt: 3 }}>
         <Routes>
