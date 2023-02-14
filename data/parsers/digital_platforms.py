@@ -32,7 +32,7 @@ def main():
         "type": "data",
         "data": {
             "dataType": "digital-platforms",
-            "digitalPlatforms": digitalPlatforms
+            "usefulLinks": digitalPlatforms
         }
     }
 
