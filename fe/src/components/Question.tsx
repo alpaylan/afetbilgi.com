@@ -223,7 +223,10 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
         }}
       >
         <Typography variant='h5'>
-          {selectedNode[`text_${i18n.language}`] || selectedNode.text}
+          {selectedCity ?
+          t('page.main.subtitle_city', {city: selectedCity})
+        : selectedNode[`text_${i18n.language}`] || selectedNode.text
+        }
         </Typography>
 
         <Box
