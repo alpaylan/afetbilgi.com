@@ -4,7 +4,7 @@ import preval from 'preval.macro';
 import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Box, Button, Container, MenuItem, Select, Autocomplete, TextField } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select} from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
@@ -22,6 +22,7 @@ import cities from "./utils/locales/il_translate.json";
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
 import PDFDownloadDialog from './components/PDFDownloadDialog';
+import CitySelection from './components/CitySelection';
 
 function padNumber(num: number) {
   return num < 10 ? `0${num}` : num;
@@ -63,7 +64,6 @@ const App = () => {
     }, {} as Record<string, string>);
     return acc;
   }, {} as Record<string, Record<string, string>>);
-
 
   const changeCityHandler = (newValue : string | null) => {
     setSelectedCity(newValue)
@@ -177,19 +177,7 @@ const App = () => {
           </Select>
         </Box>
 
-        {location.pathname === '/' && (
-          <Box sx={{ mt: 1 }}>
-            <Autocomplete
-              id="city-combo-box"
-              value={selectedCity}
-              options={Object.keys(citiesDict).map((key) => citiesDict[key].tr)}
-              getOptionLabel={(option) => citiesDict?.[option]?.[i18n.language]}
-              renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
-              sx={{ width: 300, alignSelf: 'center' }}
-              onChange={(event, newValue) => changeCityHandler(newValue)}
-            />
-          </Box>
-        )}
+        {location.pathname === '/' && <CitySelection changeCityHandler={changeCityHandler} citiesDict={citiesDict} selectedCity={selectedCity}/>}
 
       </Box>
 
