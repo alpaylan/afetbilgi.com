@@ -70,6 +70,8 @@
   "data.digital_platforms.title": "Digital Solidarity Campaigns",
   "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
   "data.services.title": "Services in cities outside the disaster area",
+  "service.category": "Service Category",
+  "service.specific": "Specific Service Type",
 
   "validation_status": "Is Valid",
   "pdf_notice": "This document is from afetbilgi.com. Last data validation date: {date}",
