@@ -30,10 +30,7 @@ jobs:
       - name: Run parsers
         run: |
           cd data
-
-          mkdir to_upload
           mkdir latest_datasets
-
           cd parsers
 
           python ./yemek.py ../latest_datasets/yemek.json
@@ -60,19 +57,22 @@ jobs:
 
       - name: Merge datasets
         run: |
-          python ./data/combine.py ./data/latest_datasets > ./data/to_upload/latest.json
+          python ./data/combine.py ./data/latest_datasets > ./latest.json
 
           curl -O https://s3.eu-central-1.amazonaws.com/cdn.afetbilgi.com/schema.json
-          python data/integrity_validator.py validate schema.json ./data/to_upload/latest.json
+          python data/integrity_validator.py validate schema.json ./latest.json
 
-          python data/integrity_validator.py generate ./data/to_upload/latest.json ./schema.json
-          aws s3 cp ./schema.json s3://cdn.afetbilgi.com
+          python data/integrity_validator.py generate ./latest.json ./schema.json
 
-          mkdir ./data/to_upload/datasets
-          gzip -9 -c ./data/to_upload/latest.json > "./data/to_upload/datasets/`date +%Y-%m-%d_%H-%M-%S`.json.gz"
+      - name: Backup
+        run: |
+          aws s3 cp ./schema.json "s3://afetbilgi-backup/schemas/`date +%Y-%m-%d_%H-%M-%S`.json"
+          aws s3 cp ./latest.json "s3://afetbilgi-backup/datasets/`date +%Y-%m-%d_%H-%M-%S`.json"
 
       - name: Sync JSON files
-        run: aws s3 sync ./data/to_upload/. s3://cdn.afetbilgi.com
+        run: |
+          aws s3 cp ./schema.json s3://cdn.afetbilgi.com
+          aws s3 cp ./latest.json s3://cdn.afetbilgi.com
 
       - name: Purge cache
         uses: nathanvaughn/actions-cloudflare-purge@master
