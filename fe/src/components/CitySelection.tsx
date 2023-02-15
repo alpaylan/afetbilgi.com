@@ -1,4 +1,4 @@
-import { Autocomplete, Box, TextField } from "@mui/material";
+import { Autocomplete, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 export default function CitySelection({ changeCityHandler, selectedCity, citiesDict, cities }: { changeCityHandler: (newValue: string | null) => void, selectedCity: string | null, citiesDict: Record<string, Record<string, string>>, cities: string[] | undefined }) {
@@ -8,7 +8,6 @@ export default function CitySelection({ changeCityHandler, selectedCity, citiesD
  return (
     <>
       {cities &&
-        <Box sx={{ mt: 1 }}>
           <Autocomplete
             id="city-combo-box"
             value={selectedCity}
@@ -18,7 +17,6 @@ export default function CitySelection({ changeCityHandler, selectedCity, citiesD
             sx={{ width: 300, alignSelf: 'center' }}
             onChange={(event, newValue) => changeCityHandler(newValue)}
           />
-        </Box>
       }
     </>
   );

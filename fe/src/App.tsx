@@ -158,9 +158,8 @@ const App = () => {
               {t('button.download')}
             </Button>
           )}
-        </Box>
 
-        <Box sx={{ mt: 2 }}>
+        <Box sx={{mr : 1}}>
           <Select
             id='language-options-multiselect'
             size='small'
@@ -176,7 +175,13 @@ const App = () => {
         </Box>
 
         {location.pathname === '/' && !isCitiesLoading && 
-        <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>}
+        <Box sx={{ mr: 1 }}>
+          <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>
+        </Box>
+        }
+
+        </Box>
+
 
       </Box>
 
