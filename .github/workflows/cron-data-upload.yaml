@@ -1,10 +1,6 @@
 name: Data upload (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/data-wf-cache-purge
-      
   workflow_dispatch:
 
   schedule:
