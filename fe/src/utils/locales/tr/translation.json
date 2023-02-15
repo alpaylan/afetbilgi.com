@@ -68,11 +68,14 @@
   "data.pharmacy.subtitle": "Bu bilgiler {{date}} tarihine aittir. Bilgiler her gün güncellenmektedir. Kesin bilgi için lütfen eczanelerle iletişime geçiniz.",
   "data.digital_platforms.title": "Dijital Yardımlaşma Seferberlikleri",
   "data.digital_platforms.subtitle": "Dijital yardımlaşma seferberlikleri ile ilgili detaylı bilgilere aşağıdaki linklerden ulaşabilirsiniz.",
+  "data.services.title": "Afet bölgesi dışındaki şehirlerdeki hizmetler",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",
   "validation_time": "Güncelleme Saati",
 
+  "service.category": "Servis Kategorisi",
+  "service.specific": "Spesifik Servis Tipi",
   "notFound": "Sayfa bulunamadı",
   "button.back": "Geri",
   "button.language": "Dili Değiştir",
