@@ -18,6 +18,7 @@
   height:35px;
   background:rgba(150, 150, 150, 0.4);
   border:none;
+  cursor:pointer;
 }
 
 .center-button-icon {
