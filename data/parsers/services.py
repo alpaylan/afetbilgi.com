@@ -23,10 +23,10 @@ def main():
 
         services.append(
             {
-                "city": row["İl"].strip(),
-                "county": row["İlçe"].strip(),
-                "location": row["Lokasyon"].strip(),
-                "locationLink": row["Google Maps Linki"].strip(),
+                "city": row["İl"],
+                "county": row["İlçe"],
+                "location": row["Lokasyon"],
+                "locationLink": row["Google Maps Linki"],
                 "category": row["Servis Kategorisi"],
                 "specificCategory": row["Spesifik Servis Tipi"],
                 "source": row["Anons Linki"],
