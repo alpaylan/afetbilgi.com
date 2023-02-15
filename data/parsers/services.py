@@ -23,13 +23,13 @@ def main():
 
         services.append(
             {
-                "city": row["İl"],
-                "county": row["İlçe"],
-                "location": row["Lokasyon"],
-                "locationLink": row["Google Maps Linki"],
-                "category": row["Servis Kategorisi"],
-                "specificCategory": row["Spesifik Servis Tipi"],
-                "source": row["Anons Linki"],
+                "city": row["İl"].strip(),
+                "county": row["İlçe"].strip(),
+                "location": row["Lokasyon"].strip(),
+                "locationLink": row["Google Maps Linki"].strip() if not pd.isna(row['Google Maps Linki']) else None,
+                "category": row["Servis Kategorisi"].strip() if not pd.isna(row['Servis Kategorisi']) else None,
+                "specificCategory": row["Spesifik Servis Tipi"].strip() if not pd.isna(row['Spesifik Servis Tipi']) else None,
+                "source": row["Anons Linki"].strip() if not pd.isna(row['Anons Linki']) else None,
             }
         )
 
