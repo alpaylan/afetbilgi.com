@@ -174,14 +174,15 @@ const App = () => {
           </Select>
         </Box>
 
+ 
+
+        </Box>
+
         {location.pathname === '/' && !isCitiesLoading && 
-        <Box sx={{ mt: 1, mr: 1 }}>
+        <Box sx={{ mt: 2, mr: 1 }}>
           <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>
         </Box>
         }
-
-        </Box>
-
 
       </Box>
 
