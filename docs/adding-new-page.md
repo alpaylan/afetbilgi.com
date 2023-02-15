@@ -2,7 +2,7 @@
 
 ### Step 1: Create a new .tsx page
 
-To create a new page, navigate to the [`fe/src/data`](../fe/src/data) folder and create a new .tsx file with the desired name for your new page. You can use this new page to display data, forms, or other user interfaces.
+To create a new page, navigate to the [`fe/src/data`](../fe/src/componets/data) folder and create a new .tsx file with the desired name for your new page. You can use this new page to display data, forms, or other user interfaces.
 
 ### Step 2: Update TreeNode.ts if necessary
 
