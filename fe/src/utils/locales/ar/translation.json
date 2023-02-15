@@ -67,6 +67,8 @@
   "data.pdf.select": "To download the PDF, select the city and press the download button.",
   "data.pharmacy.title": "{{city}}, {{county }} الصيدليات المفتوحة",
   "data.pharmacy.subtitle": "هذه المعلومات صالحة حتى {{date}}. يتم تحديث المعلومات يوميًا. يرجى الاتصال بالصيدليات للحصول على معلومات دقيقة.",
+  "data.digital_platforms.title": "Digital Solidarity Campaigns",
+  "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
 
   "validation_status": "حالة التحقق",
   "pdf_notice": "هذه الوثيقة مأخوذة من موقع [afetbilgi.com](https://afetbilgi.com). آخر تاريخ للتحقق من صحة البيانات: {date}",
