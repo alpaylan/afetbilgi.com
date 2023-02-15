@@ -27,9 +27,9 @@ def main():
                 "county": row["İlçe"].strip(),
                 "location": row["Lokasyon"].strip(),
                 "locationLink": row["Google Maps Linki"].strip(),
-                "category": row["Servis Kategorisi"].strip(),
-                "specificCategory": row["Spesifik Servis Tipi"].strip(),
-                "source": row["Anons Linki"].strip(),
+                "category": row["Servis Kategorisi"],
+                "specificCategory": row["Spesifik Servis Tipi"],
+                "source": row["Anons Linki"],
             }
         )
 
