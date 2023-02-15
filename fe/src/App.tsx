@@ -116,7 +116,7 @@ const App = () => {
           sx={{
             textAlign: 'center',
             display: 'flex',
-            flexFlow: 'row nowrap',
+            flexFlow: 'row wrap',
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -159,7 +159,7 @@ const App = () => {
             </Button>
           )}
 
-        <Box sx={{mr : 1}}>
+        <Box sx={{ mt : 1, mr : 1}}>
           <Select
             id='language-options-multiselect'
             size='small'
