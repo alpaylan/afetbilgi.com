@@ -23,6 +23,12 @@ import { getCategoryOfTreeNode } from '../utils/category';
 
 import JSX = jsx.JSX;
 
+const checkCityHasData = ( option : OptionNode, selectedCity : string ) => {
+  const node = option as any;
+  const existingCities = node.value.options as any[];
+  return existingCities.some(item => item?.name === selectedCity || item?.name_tr === selectedCity);
+}
+
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
 
@@ -35,7 +41,7 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -78,6 +84,9 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
     let redirectionPath;
     if(selectedCity && option.value.type === 'question') {
       // if the data city specific
+      if ( !checkCityHasData(option, selectedCity) ) {
+         return(<></>);
+      }
       redirectionPath = isRootQuestion?`/${optionName}/${selectedCity}`:`${location.pathname}/${optionName}`;
     } else {
       // if the data general for all cities
