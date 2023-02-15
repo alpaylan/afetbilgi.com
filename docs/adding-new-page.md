@@ -14,4 +14,4 @@ You should add translations for the new page in each language used in the projec
 
 ### Step 4: Add related mappings
 
-Finally, add the related mapping to the [`Data.tsx`](../fe/src/components/Data.tsx) `pageMappings` object and the `dataTypeToCategoryMap` object in [`TreeNode.ts`](../fe/src/variables/TreeNode.ts). This will allow the new page to be displayed in the correct category in the project's navigation s
+Finally, add the related mapping to the [`Data.tsx`](../fe/src/components/Data.tsx) `pageMappings` object and the `dataTypeToCategoryMap` object in [`TreeNode.ts`](../fe/src/variables/TreeNode.ts). This will allow the new page to be displayed in the correct category in the project's navigation pane.
