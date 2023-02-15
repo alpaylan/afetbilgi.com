@@ -159,7 +159,7 @@ const App = () => {
             </Button>
           )}
 
-        <Box sx={{ mt : 1, mr : 1}}>
+        <Box sx={{ mr : 1}}>
           <Select
             id='language-options-multiselect'
             size='small'
@@ -175,7 +175,7 @@ const App = () => {
         </Box>
 
         {location.pathname === '/' && !isCitiesLoading && 
-        <Box sx={{ mr: 1 }}>
+        <Box sx={{ mt: 1, mr: 1 }}>
           <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>
         </Box>
         }
