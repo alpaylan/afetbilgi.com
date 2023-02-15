@@ -2,11 +2,11 @@
 
 ### Step 1: Create a new .tsx page
 
-To create a new page, navigate to the [`fe/src/data`](../fe/src/componets/data) folder and create a new .tsx file with the desired name for your new page. You can use this new page to display data, forms, or other user interfaces.
+To create a new page, navigate to the [`fe/src/component/data`](../fe/src/componets/data) folder and create a new .tsx file with the desired name for your new page. You can use this new page to display data, forms, or other user interfaces.
 
 ### Step 2: Update TreeNode.ts if necessary
 
-If your new page requires a new interface for the data it uses, you need to update the [`TreeNode.tsx`](../fe/src/data/../interfaces/TreeNode.ts) file. This file contains the `dataTypeToCategoryMap` object, which maps each data type to a category.
+If your new page requires a new interface for the data it uses, you need to update the [`TreeNode.ts`](../fe/src/data/../interfaces/TreeNode.ts) file. This file contains the `dataTypeToCategoryMap` object, which maps each data type to a category.
 
 ### Step 3: Add translations
 
