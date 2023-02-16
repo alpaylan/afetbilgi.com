@@ -27,14 +27,16 @@ The basic principles of the website, which is based on a completely human-made d
 
 <table>
    <tr>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/tr.png?raw=true"></td>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/en.png?raw=true"></td>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kr.png?raw=true"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/tr.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/en.png?raw=true" width="400" height="400"></td>
+      </tr>
+   <tr>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kr.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/ar.png?raw=true" width="400" height="400"></td>
    </tr>
    <tr>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/ar.png?raw=true"></td>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kalacak_yer.png?raw=true"></td>
-      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/donations.png?raw=true"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kalacak_yer.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/donations.png?raw=true" width="400" height="400"></td>
    </tr>
 </table>
 
