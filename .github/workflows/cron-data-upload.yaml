@@ -1,6 +1,10 @@
 name: Data upload (cronjob)
 
 on:
+  push:
+    branches:
+      - ozansz/use-backup-bucket-in-wfs
+
   workflow_dispatch:
 
   schedule:
@@ -71,8 +75,9 @@ jobs:
 
       - name: Sync JSON files
         run: |
-          aws s3 cp ./schema.json s3://cdn.afetbilgi.com
-          aws s3 cp ./latest.json s3://cdn.afetbilgi.com
+          ### TODO: Change
+          aws s3 cp ./schema.json s3://cdn.afetbilgi.com/sazak
+          aws s3 cp ./latest.json s3://cdn.afetbilgi.com/sazak
 
       - name: Purge cache
         uses: nathanvaughn/actions-cloudflare-purge@master

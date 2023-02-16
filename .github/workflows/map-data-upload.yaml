@@ -1,6 +1,10 @@
 name: Map data upload (cronjob)
 
 on:
+  push:
+    branches:
+      - ozansz/use-backup-bucket-in-wfs
+      
   workflow_dispatch:
 
   schedule:
@@ -35,4 +39,5 @@ jobs:
           aws s3 cp ./latest.json "s3://afetbilgi-backup/map-datasets/`date +%Y-%m-%d_%H-%M-%S`.json"
 
       - name: Sync JSON files
-        run: aws s3 cp ./latest.json s3://cdn.afetbilgi.com/maps
+        ### TODO: Change
+        run: aws s3 cp ./latest.json s3://cdn.afetbilgi.com/sazak/maps
