@@ -35,11 +35,11 @@ const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
   buildDate.getMinutes(),
 )}`;
 
-function RootQuestion({ selectedCity }: { selectedCity: string | null}) {
+function RootQuestion({ cities }: { cities: string[] | null}) {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question paths={paths} selectedCity={selectedCity}/>;
+  return <Question paths={paths} cities={cities}/>;
 }
 
 const App = () => {
@@ -63,6 +63,7 @@ const App = () => {
     }, {} as Record<string, string>);
     return acc;
   }, {} as Record<string, Record<string, string>>);
+
 
   const changeCityHandler = (newValue : string | null) => {
     setSelectedCity(newValue)
@@ -189,7 +190,7 @@ const App = () => {
 
       <Container sx={{ mt: 3 }}>
         <Routes>
-          <Route path='/*' element={<RootQuestion selectedCity={selectedCity}/>} />
+          <Route path='/*' element={<RootQuestion cities={cities}/>} />
           <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>

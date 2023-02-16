@@ -37,22 +37,35 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint_tr ||
   option.autocompleteHint;
 
-export default function Question({ paths, selectedCity }: { paths: string[], selectedCity: string | null }) {
+export default function Question({ paths, cities }: { paths: string[], cities: string[] | null }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const { data: selectedNode, isLoading } = useQuestionData(paths);
+
+  let finalPaths = paths;
+  let selectedCity = null as string | null;
+  const possibleCityName = decodeURIComponent(paths[0]);
+  const isPathNameCity = paths.length > 0 && cities?.some( city => city === possibleCityName );
+  if(isPathNameCity) {
+    selectedCity = possibleCityName;
+    finalPaths = [];
+  }
+
+  
+
+  const { data: selectedNode, isLoading } = useQuestionData(finalPaths);
 
   if (isLoading) {
     return <></>;
   }
 
-  if (!selectedNode) {
+
+  if (!selectedNode && !isPathNameCity) {
     return (
       <Box
         sx={{
@@ -71,7 +84,9 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
     return <Data dataNode={selectedNode as any} />;
   }
 
-  const isRootQuestion = location.pathname === '/';
+
+
+  const isRootQuestion = location.pathname === '/' || isPathNameCity;
   const renderOptionButton = (option: OptionNode) => {
     const optionNameLocalized = getOptionName(option, i18n.language);
     const optionName = encodeURIComponent(getOptionName(option, 'tr'));
