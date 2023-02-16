@@ -1,6 +1,8 @@
 import sys
 import json
 import pandas as pd
+from utils.functions import turkish_title
+import os
 
 def main():
     if len(sys.argv) != 2:
@@ -9,17 +11,78 @@ def main():
 
     out_path = sys.argv[1]
 
+    city_translation = json.loads(open(
+        f"{os.path.realpath(os.path.dirname(__file__))}/utils/il_translate.json").read())
+
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Afet%20B%C3%B6lgesi%20D%C4%B1%C5%9F%C4%B1ndaki%20%C5%9Eehirlerdeki%20Hizmetler"
 
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
+    df = df.fillna("")
 
-    services = []
+    df["İl"] = df["İl"].apply(str.strip)
+    df["İl"] = df["İl"].apply(turkish_title)
+    df["Servis Kategorisi"] = df["Servis Kategorisi"].apply(str.strip)
+    df["Servis Kategorisi"] = df["Servis Kategorisi"].apply(turkish_title)
+
+    df.sort_values(["İl", "Servis Kategorisi"])
+
+    unique_cities = df["İl"].unique()
+    options = []
+
+    for city in unique_cities:
+        city_df = df[df["İl"] == city]
+        unique_category = city_df["Servis Kategorisi"].unique()
+        category_dict = {}
+        for category in unique_category:
+            category_dict[category] = []
+
+        for _, row in city_df.iterrows():
+            category_dict[row["Servis Kategorisi"]].append(
+                {
+                    "city": row["İl"].strip(),
+                    "county": row["İlçe"].strip(),
+                    "location": row["Lokasyon"].strip(),
+                    "locationLink": row["Google Maps Linki"].strip() if not pd.isna(row['Google Maps Linki']) else None,
+                    "specificCategory": row["Spesifik Servis Tipi"].strip() if not pd.isna(row['Spesifik Servis Tipi']) else None,
+                    "source": row["Anons Linki"].strip() if not pd.isna(row['Anons Linki']) else None,
+                }
+            )
+        option_2 = []
+        for k, v in category_dict.items():
+            option_2.append(
+                {
+                    "name": turkish_title(k.strip()),
+                    "value": {
+                        "type": "data",
+                        "data": {
+                            "dataType": "services",
+                            "city": turkish_title(city.strip()),
+                            "category": turkish_title(k.strip()),
+                            "items": v,
+                        },
+                    },
+                }
+            )
+        
+        options.append(
+            {
+                "name": turkish_title(city.strip()),
+                "value": {
+                    "type": "question",
+                    "text_tr": f"{city_translation[turkish_title(city.strip())]['tr']} şehrinde bilgi almak istediğiniz kategoriyi seçiniz.",
+                    "text_en": f"Select the category you want to get information about service opportunities in {city_translation[turkish_title(city.strip())]['en']}",
+                    "text_ar": f"حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في {city_translation[turkish_title(city.strip())]['ar']}",
+                    "text_ku": f"Bilindînên yemekên {city_translation[turkish_title(city.strip())]['ku']} li ser şehirê xwe hilbijêrin",
+                    "options": option_2,
+                },
+            }
+        )
 
 
-    for _, row in df.iterrows():
+    """ for _, row in df.iterrows():
 
         services.append(
             {
@@ -31,14 +94,19 @@ def main():
                 "specificCategory": row["Spesifik Servis Tipi"].strip() if not pd.isna(row['Spesifik Servis Tipi']) else None,
                 "source": row["Anons Linki"].strip() if not pd.isna(row['Anons Linki']) else None,
             }
-        )
+        ) """
 
     data = {
-        "type": "data",
-        "data": {
-            "dataType": "services",
-            "services": services
-        }
+        "type": "question",
+        "autocompleteHint_tr": "Şehir",
+        "autocompleteHint_en": "City",
+        "autocompleteHint_ar": "مدينة",
+        "autocompleteHint_ku": "Bajar",
+        "text_tr": "Görmek istediğiniz şehrin ismini yazınız.",
+        "text_en": "Please enter the name of the city you want to see.",
+        "text_ku": "",
+        "text_ar": "",
+        "options": options,
     }
 
     with open(out_path, "w+", encoding="utf-8") as f:
