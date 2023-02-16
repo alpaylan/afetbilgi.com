@@ -257,14 +257,16 @@ export interface PharmacyDataNode extends DataNode {
   items: Pharmacy[];
 }
 
+export interface Services {
+  city: string;
+  county: string;
+  location?: string;
+  locationLink?: string;
+  specificCategory?: string;
+  source?: string;
+}
 export interface ServicesDataNode extends DataNode {
-  services: {
-    city: string;
-    county: string;
-    location?: string;
-    locationLink?: string;
-    category: string;
-    specificCategory?: string;
-    source?: string;
-  }[];
+  city: string;
+  category: string;
+  items: Services[];
 }

@@ -4,6 +4,7 @@ import {
     Card,
     List,
     ListItem,
+    Typography,
   } from '@mui/material';
   import { useTranslation } from 'react-i18next';
   import { ServicesDataNode } from '../../interfaces/TreeNode';
@@ -15,14 +16,17 @@ import {
     value: ServicesDataNode;
   }) {
     const { t } = useTranslation();
-    value.services.sort((a, b) => a.city.localeCompare(b.city));
+
     return (
       <Box>
         <Title
           title={t('data.services.title')}
         />
+        <Typography variant="h6" sx={{ mt: 2 }}>
+          {t('service.category')}: {value.category}
+        </Typography>
         <List>
-            {value.services.map((item, i) => (
+            {value.items.map((item, i) => (
               <ListItem key={i}>
                 <Card sx={{ width: '100%' }}>
                   <CardContent>
@@ -34,16 +38,6 @@ import {
                     <br />
                     <b>{t('location')}</b>: {item.location}
                     <br />
-                    {
-                      item.category ?
-                      <>
-                      <br />
-                      <b>{t('service.category')}: </b>{' '}
-                        {item.category}
-                      <br />
-                      </>
-                      : ''
-                    }
                     {
                       item.specificCategory ?
                       <>
@@ -70,7 +64,6 @@ import {
                       item.locationLink ?
                       <>
                       <br />
-                      <b>{t('map')}: </b>{' '}
                       <a href={item.locationLink} target='_blank'>
                         {t('map')}
                       </a>

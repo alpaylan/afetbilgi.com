@@ -74,27 +74,12 @@ def main():
                     "type": "question",
                     "text_tr": f"{city_translation[turkish_title(city.strip())]['tr']} şehrinde bilgi almak istediğiniz kategoriyi seçiniz.",
                     "text_en": f"Select the category you want to get information about service opportunities in {city_translation[turkish_title(city.strip())]['en']}",
-                    "text_ar": f"حدد المنطقة التي تريد الحصول على معلومات حول امكانيات تناول الطعام فيها في {city_translation[turkish_title(city.strip())]['ar']}",
-                    "text_ku": f"Bilindînên yemekên {city_translation[turkish_title(city.strip())]['ku']} li ser şehirê xwe hilbijêrin",
+                    "text_ar": f"حدد الفئة التي تريد الحصول على معلومات عنها في {city_translation[turkish_title(city.strip())]['ar']}.",
+                    "text_ku": f"Kategoriya ku hûn dixwazin li bajarê {city_translation[turkish_title(city.strip())]['ku']} agahdarî bistînin hilbijêrin.",
                     "options": option_2,
                 },
             }
         )
-
-
-    """ for _, row in df.iterrows():
-
-        services.append(
-            {
-                "city": row["İl"].strip(),
-                "county": row["İlçe"].strip(),
-                "location": row["Lokasyon"].strip(),
-                "locationLink": row["Google Maps Linki"].strip() if not pd.isna(row['Google Maps Linki']) else None,
-                "category": row["Servis Kategorisi"].strip() if not pd.isna(row['Servis Kategorisi']) else None,
-                "specificCategory": row["Spesifik Servis Tipi"].strip() if not pd.isna(row['Spesifik Servis Tipi']) else None,
-                "source": row["Anons Linki"].strip() if not pd.isna(row['Anons Linki']) else None,
-            }
-        ) """
 
     data = {
         "type": "question",
@@ -102,10 +87,10 @@ def main():
         "autocompleteHint_en": "City",
         "autocompleteHint_ar": "مدينة",
         "autocompleteHint_ku": "Bajar",
-        "text_tr": "Görmek istediğiniz şehrin ismini yazınız.",
-        "text_en": "Please enter the name of the city you want to see.",
-        "text_ku": "",
-        "text_ar": "",
+        "text_tr": "Servisler hakkında bilgi almak istediğiniz şehri seçiniz",
+        "text_en": "Select the city you want to get information about services",
+        "text_ku": "Bajarê ku hûn dixwazin li ser karûbaran agahdarî bistînin hilbijêrin",
+        "text_ar": "حدد المدينة التي تريد تلقي معلومات حول الخدمات فيها",
         "options": options,
     }
 
