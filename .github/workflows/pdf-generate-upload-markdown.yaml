@@ -1,10 +1,6 @@
 name: PDF upload with Markdown (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/use-backup-bucket-in-wfs
-      
   workflow_dispatch:
 
   schedule:
@@ -44,8 +40,7 @@ jobs:
           aws s3 cp ./pdf-backups "s3://afetbilgi-backup/pdfs/`date +%Y-%m-%d_%H-%M-%S`" --recursive
 
       - name: Sync PDFs
-        ### TODO: Change
-        run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/sazak/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
+        run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
 
       - name: Purge cache
         run: |
