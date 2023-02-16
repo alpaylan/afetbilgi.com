@@ -35,11 +35,12 @@ const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
   buildDate.getMinutes(),
 )}`;
 
-function RootQuestion({ cities }: { cities: string[] | null}) {
-  const location = useLocation();
-  const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question paths={paths} cities={cities}/>;
+
+function RootQuestion({ paths, selectedCity }: { paths : string[], selectedCity: string | null}) {
+  
+
+  return <Question paths={paths} selectedCity={selectedCity}/>;
 }
 
 const App = () => {
@@ -51,9 +52,8 @@ const App = () => {
 
   const { isLoading } = useQuestionData([]);
 
-  const {data: cities, isLoading : isCitiesLoading} = useCitiesData();
-
-  const [selectedCity, setSelectedCity] = React.useState<string | null>(LocalStorage.getObject(LocalStorage.LOCAL_STORAGE_CITY));
+  const {data: citiesRaw, isLoading : isCitiesLoading} = useCitiesData();
+  const cities = citiesRaw as string[] | undefined;
   
   const citiesDict = Object.entries(cityTranslations).reduce((acc, [key, value]) => {
     acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
@@ -65,12 +65,23 @@ const App = () => {
   }, {} as Record<string, Record<string, string>>);
 
 
+  const paths = location.pathname.split('/').filter((p) => p !== '');
+  let finalPaths = paths;
+  let selectedCity = null as string | null;
+  const possibleCityName = decodeURIComponent(paths[0]);
+  const isPathNameCity = paths.length > 0 && cities?.some( city => city === possibleCityName );
+  if(isPathNameCity) {
+    selectedCity = possibleCityName;
+    finalPaths = [];
+  }
+
   const changeCityHandler = (newValue : string | null) => {
-    setSelectedCity(newValue)
-    LocalStorage.storeObject(
-      LocalStorage.LOCAL_STORAGE_CITY,
-      newValue,
-    );
+    if(newValue) {
+      navigate( `/${newValue}` );
+    } else {
+      navigate( `/` );
+    }
+
   }
 
 
@@ -179,7 +190,7 @@ const App = () => {
 
         </Box>
 
-        {location.pathname === '/' && !isCitiesLoading && 
+        { (location.pathname === '/' || isPathNameCity) && !isCitiesLoading && 
         <Box sx={{ mt: 2, mr: 1 }}>
           <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>
         </Box>
@@ -190,7 +201,7 @@ const App = () => {
 
       <Container sx={{ mt: 3 }}>
         <Routes>
-          <Route path='/*' element={<RootQuestion cities={cities}/>} />
+          <Route path='/*' element={<RootQuestion paths={finalPaths} selectedCity={selectedCity}/>} />
           <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>
