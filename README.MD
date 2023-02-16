@@ -40,6 +40,8 @@ The basic principles of the website, which is based on a completely human-made d
    </tr>
 </table>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Kullanılan teknolojiler/Tech Stack
 
 [![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=&borderRadius=0&fontSize=15&showBorder=false&lineCount=2&theme=github_dark&hideBg=true&hideTitle=true&line1=React,React,61DAFB;TypeScript,TypeScript,3178C6;)](https://github-readme-tech-stack.vercel.app/api/cards?title=&borderRadius=0&fontSize=15&showBorder=false&lineCount=2&theme=github_dark&hideBg=true&hideTitle=true&line1=React,React,61DAFB;TypeScript,TypeScript,3178C6;)
