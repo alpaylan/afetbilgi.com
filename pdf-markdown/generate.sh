@@ -12,14 +12,16 @@ aws s3 cp s3://cdn.afetbilgi.com/latest.json ./latest.json
 mkdir md-generated
 cd md-generated
 
+mkdir backups
+
 for lang in ${langs[@]}; do
     mkdir $lang
-    mkdir $lang/backups
+    mkdir backups/$lang
     cd $lang
     python ../../pdf-markdown/main.py $lang ../../latest.json afetbilgi.md all
     md-to-pdf afetbilgi.md
-    cp afetbilgi.md "backups/`date +%Y-%m-%d_%H-%M-%S`.md"
-    cp afetbilgi.pdf "backups/`date +%Y-%m-%d_%H-%M-%S`.pdf"
+    cp afetbilgi.md "../backups/$lang/`date +%Y-%m-%d_%H-%M-%S`.md"
+    cp afetbilgi.pdf "../backups/$lang/`date +%Y-%m-%d_%H-%M-%S`.pdf"
     cd ..
 done
 
@@ -31,12 +33,6 @@ for city in $(cat index.json | jq -r '.[]'); do
         
         python ../../pdf-markdown/main.py $lang ../../latest.json "$city.md" $city
         md-to-pdf "$city.md"
-        
-        # Too much space usage
-        # Find a way to delete old backups later
-        #
-        # cp "$city.md" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.md"
-        # cp "$city.pdf" "backups/$city-`date +%Y-%m-%d_%H-%M-%S`.pdf"
 
         cd ..
     done

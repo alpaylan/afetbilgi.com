@@ -92,7 +92,7 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
           <TableHead>
             <TableRow>
               <TableCell>{t('name')}</TableCell>
-              <TableCell>{t('map')}</TableCell>
+              <TableCell>{t('source')}</TableCell>
               <TableCell>{t('contact')}</TableCell>
             </TableRow>
           </TableHead>
@@ -111,7 +111,7 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
                       href={item.url}
                       target="_blank"
                     >
-                      {t('map')}
+                      {t('source')}
                     </a>
                     </>
                     : <></>
