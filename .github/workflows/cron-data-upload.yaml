@@ -1,10 +1,6 @@
 name: Data upload (cronjob)
 
 on:
-  push:
-    branches:
-      - ozansz/remote-version
-      
   workflow_dispatch:
 
   schedule:
