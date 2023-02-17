@@ -1,6 +1,7 @@
 {
   "page.main.title": "الصفحة الرئيسية",
   "page.main.subtitle": "الرجاء تحديد الموضوع الذي تريد تلقي معلومات عنه",
+  "page.main.subtitle_city": "Select the topic you want to get information about the province of {{city}}.",
   "page.about.title": "تواصل / من نحن",
   "page.about.body.1": "http://afetbilgi.com/ is a website created by a group of METU students and graduates to verify and deliver important information to fight against February 6, 2023, Pazarcık Earthquake.",
   "page.about.body.2": "This website is based on a completely human-made database and works with accuracy, speed, and simplicity principles. When contacting us, we strongly ask you to deliver only verified information and cooperate with us to prevent disinformation.",
