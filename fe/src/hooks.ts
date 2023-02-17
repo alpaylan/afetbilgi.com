@@ -40,28 +40,17 @@ export const useQuestionData = (paths: string[]) => {
   );
 };
 
-export const useCitiesData = () => {
-  const cities = axios
-  .get("https://cdn.afetbilgi.com/md-pdf/index.json")
-  .then((res) => res.data);
+export const useCitiesData = () => useQuery(
+  `citiesData`,
+  () => axios
+    .get("https://cdn.afetbilgi.com/md-pdf/index.json")
+    .then((res) => res.data)
+);
 
-  return useQuery(
-    `citiesData`,
-    async () => {
-      return cities;
-    }
-  );
-}
-
-export const useLastBuildDate = () => {
-  const lastVersion = axios
+export const useLastBuildDate = () => useQuery(
+  `lastVersion`,
+  () => axios
   .get("https://cdn.afetbilgi.com/version")
-  .then((res) => res.data);
+  .then((res) => res.data)
+);
 
-  return useQuery(
-    `lastVersion`,
-    async () => {
-      return String(await lastVersion).trim();
-    }
-  );
-}

@@ -21,7 +21,6 @@
     "cross-env": "^7.0.3",
     "i18next": "^22.4.9",
     "material-react-toastify": "1.0.1",
-    "preval.macro": "^5.0.0",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
@@ -32,7 +31,6 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.19",
-    "@types/preval.macro": "^3.0.0",
     "@types/react": "^18.0.27",
     "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-dom": "^18.0.10",
