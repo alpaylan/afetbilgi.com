@@ -52,3 +52,16 @@ export const useCitiesData = () => {
     }
   );
 }
+
+export const useLastBuildDate = () => {
+  const lastVersion = axios
+  .get("https://cdn.afetbilgi.com/version")
+  .then((res) => res.data);
+
+  return useQuery(
+    `lastVersion`,
+    async () => {
+      return String(await lastVersion).trim();
+    }
+  );
+}
