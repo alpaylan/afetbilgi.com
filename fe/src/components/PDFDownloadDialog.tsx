@@ -1,32 +1,32 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import CloseIcon from '@mui/icons-material/Close';
 import {
   Autocomplete,
   Box, Button, CircularProgress, Dialog, DialogContent, DialogTitle, Divider, TextField, Typography,
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import { useCitiesData } from "../hooks";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { useCitiesData } from '../hooks';
 import cityTranslations from '../utils/locales/il_translate.json';
 
 const upperCities = [
-  "Kahramanmaraş",
-  "Gaziantep",
-  "Malatya",
-  "Diyarbakır",
-  "Kilis",
-  "Şanlıurfa",
-  "Adıyaman",
-  "Hatay",
-  "Osmaniye",
-  "Adana"
-]
+  'Kahramanmaraş',
+  'Gaziantep',
+  'Malatya',
+  'Diyarbakır',
+  'Kilis',
+  'Şanlıurfa',
+  'Adıyaman',
+  'Hatay',
+  'Osmaniye',
+  'Adana',
+];
 
-
-export default function PDFDownloadDialog({open, onClose} : {open: boolean, onClose: () => void}) {
-  const {i18n, t} = useTranslation();
+export default function PDFDownloadDialog({ open, onClose } : { open: boolean, onClose: () => void }) {
+  const { i18n, t } = useTranslation();
   const [selectedCity, setSelectedCity] = React.useState<string | null>(null);
-  
-  const {data: cities, isLoading} = useCitiesData();
+
+  const { data: cities, isLoading } = useCitiesData();
 
   const handleDownload = () => {
     if (selectedCity) {
@@ -37,7 +37,7 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
   const getCityTranslation = (city: string) => {
     const translations = cityTranslations[city as keyof typeof cityTranslations];
     return translations ? translations[i18n.language as keyof typeof translations] : city;
-  }
+  };
 
   return (
     <Dialog
@@ -56,7 +56,11 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
           <CloseIcon />
         </Button>
       </Box>
-      <DialogTitle sx={{ textAlign: 'center' }}> {t('data.pdf.title')} </DialogTitle>
+      <DialogTitle sx={{ textAlign: 'center' }}>
+        {' '}
+        {t('data.pdf.title')}
+        {' '}
+      </DialogTitle>
       <DialogContent>
         <Box>
           <div>
@@ -67,16 +71,20 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
             </Box>
             <Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-                <Button variant="contained" color="success" onClick={() => {
-                  window.open(`https://pdf.afetbilgi.com/${i18n.language}`, '_blank');
-                }}>
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => {
+                    window.open(`https://pdf.afetbilgi.com/${i18n.language}`, '_blank');
+                  }}
+                >
                   <Typography variant="button" component="span">
                     {t('data.pdf.all')}
                   </Typography>
                 </Button>
               </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mt: 1 }}>
-                {upperCities.map((city) => (
+                {upperCities.map(city => (
                   <Button
                     key={city}
                     variant="contained"
@@ -94,34 +102,34 @@ export default function PDFDownloadDialog({open, onClose} : {open: boolean, onCl
                 ))}
               </Box>
               <Divider sx={{ m: 2 }} />
-              <Box sx={{ display: 'flex', justifyContent: 'center', mt : 1 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
                 <Typography variant="h6" component="span">
                   {t('data.pdf.or')}
                 </Typography>
               </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'center', mt : 1 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
                 <Typography component="span">
                   {t('data.pdf.select')}
                 </Typography>
               </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'center', m: 1}}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', m: 1 }}>
                 {isLoading ? (
                   <CircularProgress />
                 ) : (
                   <Autocomplete
-                  id="combo-box-demo"
-                  options={cities as string[]}
-                  getOptionLabel={(option) => getCityTranslation(option)}
-                  renderInput={(params) => <TextField {...params} label={t('data.pdf.citySelect')} />}
-                  sx={{ width: 300, alignSelf: 'center', mt: 1 }}
-                  onChange={(_, newValue) => {
-                    if (newValue) {
-                      setSelectedCity(newValue);
-                    } else {
-                      setSelectedCity(null);
-                    }
-                  }}
-                />
+                    id="combo-box-demo"
+                    options={cities as string[]}
+                    getOptionLabel={option => getCityTranslation(option)}
+                    renderInput={params => <TextField {...params} label={t('data.pdf.citySelect')} />}
+                    sx={{ width: 300, alignSelf: 'center', mt: 1 }}
+                    onChange={(_, newValue) => {
+                      if (newValue) {
+                        setSelectedCity(newValue);
+                      } else {
+                        setSelectedCity(null);
+                      }
+                    }}
+                  />
                 )}
               </Box>
             </Box>

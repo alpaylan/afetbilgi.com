@@ -2,13 +2,14 @@ import {
   Box,
   Paper,
   Table,
+  TableBody,
+  TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { CityAccommodationNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -24,11 +25,11 @@ export default function CityAccommodation({
         title={t('data.city_accommodation.title', {
           city: value.city,
         })}
-        subtitle={t('data.city_accommodation.subtitle') || ""}
+        subtitle={t('data.city_accommodation.subtitle') || ''}
       />
       {/* // TO-DO: https://react.i18next.com/latest/trans-component */}
-      <TableContainer component={Paper} >
-        <Table >
+      <TableContainer component={Paper}>
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>{t('location')}</TableCell>
@@ -37,35 +38,42 @@ export default function CityAccommodation({
             </TableRow>
           </TableHead>
           <TableBody>
-          {value.items.map((item, i) => (
-            <TableRow
-              key={i}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component='th' scope='row'>
-                {item.name}
-              </TableCell>
-              <TableCell>
-                {
-                  item.address ?
-                  <>
-                  <a href={item.address}>{t('location')}</a>
-                  </>
-                  : <></>
-                }
-                
-              </TableCell>
-              <TableCell>
-                {item.url ? <>
-                  {t('data.city_accommodation.link_explanation_p1')}{' '}
-                  <a href={item.url} target='_blank' rel='noreferrer'>
-                  {t('data.city_accommodation.link_explanation_p2')}.
-                  </a>{' '}
+            {value.items.map((item, i) => (
+              <TableRow
+                key={i}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {item.name}
+                </TableCell>
+                <TableCell>
+                  {
+                    item.address
+                      ? (
+                        <>
+                          <a href={item.address}>{t('location')}</a>
+                        </>
+                      )
+                      : <></>
+                  }
 
-                  <br />
-                </> : <></>}
-              </TableCell>
-            </TableRow>
+                </TableCell>
+                <TableCell>
+                  {item.url ? (
+                    <>
+                      {t('data.city_accommodation.link_explanation_p1')}
+                      {' '}
+                      <a href={item.url} target="_blank" rel="noreferrer">
+                        {t('data.city_accommodation.link_explanation_p2')}
+                        .
+                      </a>
+                      {' '}
+
+                      <br />
+                    </>
+                  ) : <></>}
+                </TableCell>
+              </TableRow>
             ))}
           </TableBody>
         </Table>

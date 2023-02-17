@@ -183,7 +183,6 @@ export interface SahraDataNode extends DataNode {
   items: SahraItem[];
 }
 
-
 export interface VpnDataNode extends DataNode {
   items: {
     name: string;

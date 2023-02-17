@@ -2,13 +2,14 @@ import {
   Box,
   Paper,
   Table,
+  TableBody,
+  TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { StemCellDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -29,21 +30,29 @@ export default function StemCellData({ value }: { value: StemCellDataNode }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {value.items.map((item) => (
+            {value.items.map(item => (
               <TableRow
                 key={item.address + item.city}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
-                  {item.area} / <b> {item.city}</b>
+                <TableCell component="th" scope="row">
+                  {item.area}
+                  {' '}
+                  /
+                  <b>
+                    {' '}
+                    {item.city}
+                  </b>
                 </TableCell>
                 <TableCell>
                   {
-                    item.address ?
-                    <>
-                      <a href={item.address}>{t('location')}</a>
-                    </>
-                    : <></>
+                    item.address
+                      ? (
+                        <>
+                          <a href={item.address}>{t('location')}</a>
+                        </>
+                      )
+                      : <></>
                   }
                 </TableCell>
                 <TableCell>

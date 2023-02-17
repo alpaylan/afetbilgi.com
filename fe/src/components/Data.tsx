@@ -1,32 +1,33 @@
-import { FC } from 'react';
 import { Box } from '@mui/material';
+import { FC } from 'react';
+
 import { DataNode } from '../interfaces/TreeNode';
-import BankData from './data/BankData';
-import CityAccommodation from './data/CityAccommodation';
-import CreditCardData from './data/CreditCardData';
-import HelpItemData from './data/HelpItemData';
-import GatheringData from './data/GatheringData';
-import URLData from './data/URLData';
-import SMSData from './data/SMSData';
-import BloodDonationData from './data/BloodDonationData';
-import TelephoneData from './data/PhoneData';
-import ArticleData from './data/ArticleData';
-import UsefulLinksData from './data/UsefulLinksdata';
-import StemCellData from './data/StemCellData';
-import VetData from './data/VetData';
-import FoodDistributionData from './data/FoodDistributionData';
-import VpnData from './data/VpnData';
-import SahraData from './data/SahraData';
-import ContainerPharmacyData from './data/ContainerPharmacyData';
 import { DataType } from '../variables/TreeNode';
-import EvacuationData from './data/EvacuationData';
-import DonationLinksData from './data/DonationLinksData';
-import TransportationsData from './data/TransportationsData';
-import GasStationsData from './data/GasStationsData';
-import ToiletsData from './data/ToiletsData';
-import PharmacyData from './data/PharmacyData';
+import ArticleData from './data/ArticleData';
+import BankData from './data/BankData';
+import BloodDonationData from './data/BloodDonationData';
+import CityAccommodation from './data/CityAccommodation';
+import ContainerPharmacyData from './data/ContainerPharmacyData';
+import CreditCardData from './data/CreditCardData';
 import DigitalPlatformData from './data/DigitalPlatformData';
+import DonationLinksData from './data/DonationLinksData';
+import EvacuationData from './data/EvacuationData';
+import FoodDistributionData from './data/FoodDistributionData';
+import GasStationsData from './data/GasStationsData';
+import GatheringData from './data/GatheringData';
+import HelpItemData from './data/HelpItemData';
+import PharmacyData from './data/PharmacyData';
+import TelephoneData from './data/PhoneData';
+import SahraData from './data/SahraData';
 import ServicesData from './data/ServicesData';
+import SMSData from './data/SMSData';
+import StemCellData from './data/StemCellData';
+import ToiletsData from './data/ToiletsData';
+import TransportationsData from './data/TransportationsData';
+import URLData from './data/URLData';
+import UsefulLinksData from './data/UsefulLinksdata';
+import VetData from './data/VetData';
+import VpnData from './data/VpnData';
 
 const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.BANK_ACCOUNT_DONATION]: BankData,
@@ -72,7 +73,7 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
         display: 'flex',
         flexFlow: 'column nowrap',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       {renderData()}

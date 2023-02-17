@@ -1,19 +1,20 @@
 import {
-  Paper,
   Box,
-  TableContainer,
-  Table,
-  TableRow,
-  TableCell,
-  CardContent,
   Card,
-  TableHead,
-  TableBody,
-  useMediaQuery,
+  CardContent,
   List,
   ListItem,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { ContainerPharmacyDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -36,25 +37,38 @@ export default function ContainerPharmacyData({
             <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
-                  <b>{t('city')}</b>: {item.city}
+                  <b>{t('city')}</b>
+                  :
+                  {item.city}
                   <br />
                   <br />
-                  <b>{t('district')}</b>: {item.district}
+                  <b>{t('district')}</b>
+                  :
+                  {item.district}
                   <br />
                   <br />
-                  <b>{t('location')}</b>: {item.location}
+                  <b>{t('location')}</b>
+                  :
+                  {item.location}
                   <br />
                   {
-                    item.locationLink ?
-                    <>
-                    <br />
-                    <b>{t('map')}: </b>{' '}
-                    <a href={item.locationLink} target='_blank'>
-                      {t('map')}
-                    </a>
-                    <br />
-                    </>
-                    : ''
+                    item.locationLink
+                      ? (
+                        <>
+                          <br />
+                          <b>
+                            {t('map')}
+                            :
+                            {' '}
+                          </b>
+                          {' '}
+                          <a href={item.locationLink} target="_blank" rel="noreferrer">
+                            {t('map')}
+                          </a>
+                          <br />
+                        </>
+                      )
+                      : ''
 
                   }
                   <br />
@@ -75,21 +89,24 @@ export default function ContainerPharmacyData({
               </TableRow>
             </TableHead>
             <TableBody>
-              {value.items.map((item) => (
+              {value.items.map(item => (
                 <TableRow
                   key={item.location + item.city}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component='th' scope='row'>
+                  <TableCell component="th" scope="row">
                     {item.city}
                   </TableCell>
                   <TableCell>{item.district}</TableCell>
                   <TableCell>{item.location}</TableCell>
-                  <TableCell>{
-                      item.locationLink ?
-                      <a href={item.locationLink} target='_blank'>
-                        {t('location')}
-                      </a> : ''
+                  <TableCell>
+                    {
+                      item.locationLink
+                        ? (
+                          <a href={item.locationLink} target="_blank" rel="noreferrer">
+                            {t('location')}
+                          </a>
+                        ) : ''
                     }
                   </TableCell>
                 </TableRow>

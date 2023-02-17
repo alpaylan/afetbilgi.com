@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { FoodDistributionDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -22,14 +23,14 @@ export default function FoodDistributionData({
   return (
     <Box
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-  >
+    >
       <Title
         title={t('data.food_distribution.title', {
           city: value.city,
           county: value.county,
         })}
-        subtitle={t('data.food_distribution.subtitle') || ""}
-        severity='warning'
+        subtitle={t('data.food_distribution.subtitle') || ''}
+        severity="warning"
       />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
@@ -46,30 +47,34 @@ export default function FoodDistributionData({
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
+                <TableCell component="th" scope="row">
                   {item.name}
                 </TableCell>
                 <TableCell>
                   {
-                    item.maps_url ?
-                    <>
-                    <a href={item.maps_url} target='_blank'>
-                      {t('location')}
-                    </a>
-                    </>
-                    : <></>
+                    item.maps_url
+                      ? (
+                        <>
+                          <a href={item.maps_url} target="_blank" rel="noreferrer">
+                            {t('location')}
+                          </a>
+                        </>
+                      )
+                      : <></>
                   }
-                  
+
                 </TableCell>
                 <TableCell>
                   {
-                    item.url ?
-                    <>
-                    <a href={item.url} target='_blank'>
-                      {t('details')}
-                    </a>
-                    </>
-                    : <></>
+                    item.url
+                      ? (
+                        <>
+                          <a href={item.url} target="_blank" rel="noreferrer">
+                            {t('details')}
+                          </a>
+                        </>
+                      )
+                      : <></>
                   }
                 </TableCell>
               </TableRow>

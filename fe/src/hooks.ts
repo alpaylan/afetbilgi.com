@@ -3,15 +3,16 @@
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
+
 import { TreeNodeType } from './variables/TreeNode';
 
 const d = new Date();
-const version = d.getDate().toString().concat(".", d.getHours().toString(), d.getMinutes().toString());
+const version = d.getDate().toString().concat('.', d.getHours().toString(), d.getMinutes().toString());
 const baseQuestionData = axios
-  .get(process.env.REACT_APP_TEST_DATA ?
-    `/latest.json?${version.concat(d.getSeconds().toString())}` :
-    `https://cdn.afetbilgi.com/latest.json`)
-  .then((res) => res.data);
+  .get(process.env.REACT_APP_TEST_DATA
+    ? `/latest.json?${version.concat(d.getSeconds().toString())}`
+    : 'https://cdn.afetbilgi.com/latest.json')
+  .then(res => res.data);
 
 export const useQuestionData = (paths: string[]) => {
   const { i18n } = useTranslation();
@@ -31,8 +32,8 @@ export const useQuestionData = (paths: string[]) => {
           (o: any) => o.name_tr === decodedPath || o.name === decodedPath,
         );
 
-        currNode = (foundNode?.[`value_${i18n.language}`] ||
-          foundNode?.value) as any;
+        currNode = (foundNode?.[`value_${i18n.language}`]
+          || foundNode?.value) as any;
       }
 
       return currNode;
@@ -41,16 +42,15 @@ export const useQuestionData = (paths: string[]) => {
 };
 
 export const useCitiesData = () => useQuery(
-  `citiesData`,
+  'citiesData',
   () => axios
-    .get("https://cdn.afetbilgi.com/md-pdf/index.json")
-    .then((res) => res.data)
+    .get('https://cdn.afetbilgi.com/md-pdf/index.json')
+    .then(res => res.data),
 );
 
 export const useLastBuildDate = () => useQuery(
-  `lastVersion`,
+  'lastVersion',
   () => axios
-  .get("https://cdn.afetbilgi.com/version")
-  .then((res) => res.data)
+    .get('https://cdn.afetbilgi.com/version')
+    .then(res => res.data),
 );
-
