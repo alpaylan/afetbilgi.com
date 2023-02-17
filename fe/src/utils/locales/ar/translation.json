@@ -69,6 +69,10 @@
   "data.pharmacy.subtitle": "هذه المعلومات صالحة حتى {{date}}. يتم تحديث المعلومات يوميًا. يرجى الاتصال بالصيدليات للحصول على معلومات دقيقة.",
   "data.digital_platforms.title": "Digital Solidarity Campaigns",
   "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
+  "data.services.title": "Services in Cities Outside the Disaster Area",
+  "data.services.subtitle": "You can find the services you need in the cities outside the disaster area from the links below.",
+  "service.category": "Service Category",
+  "service.specific": "Specific Service Type",
 
   "validation_status": "حالة التحقق",
   "pdf_notice": "هذه الوثيقة مأخوذة من موقع [afetbilgi.com](https://afetbilgi.com). آخر تاريخ للتحقق من صحة البيانات: {date}",

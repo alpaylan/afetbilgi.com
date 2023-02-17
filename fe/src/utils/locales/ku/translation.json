@@ -69,7 +69,10 @@
   "data.pharmacy.subtitle": "Agahdariyên vê agahdariyê {{date}}ê ye. Agahdariyên her roj nûvekirin. Ji kerema xwe ji eczaneler bi agahdariyên rast re bixwînin.",
   "data.digital_platforms.title": "Digital Solidarity Campaigns",
   "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
-
+  "data.services.title": "Services in Cities Outside the Disaster Area",
+  "service.category": "Service Category",
+  "service.specific": "Specific Service Type",
+  
   "validation_status": "Rewşa verastkirinê",
   "pdf_notice": "",
   "validation_time": "",

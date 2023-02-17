@@ -256,3 +256,17 @@ export interface PharmacyDataNode extends DataNode {
   date: string;
   items: Pharmacy[];
 }
+
+export interface Services {
+  city: string;
+  county: string;
+  location?: string;
+  locationLink?: string;
+  specificCategory?: string;
+  source?: string;
+}
+export interface ServicesDataNode extends DataNode {
+  city: string;
+  category: string;
+  items: Services[];
+}

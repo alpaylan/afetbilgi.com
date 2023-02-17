@@ -1,5 +1,4 @@
 import React from 'react';
-import preval from 'preval.macro';
 
 import './App.css';
 
@@ -14,27 +13,13 @@ import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
-import { useQuestionData, useCitiesData } from './hooks';
+import { useQuestionData, useCitiesData, useLastBuildDate } from './hooks';
 import cityTranslations from './utils/locales/il_translate.json'
 
-// import { downloadPDF } from './utils/downloadPDF';
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
 import PDFDownloadDialog from './components/PDFDownloadDialog';
 import CitySelection from './components/CitySelection';
-
-function padNumber(num: number) {
-  return num < 10 ? `0${num}` : num;
-}
-
-const buildTimestamp = preval`module.exports = new Date().getTime();`;
-const buildDate = new Date(buildTimestamp);
-const buildDateString = `${padNumber(buildDate.getDate())}.${padNumber(
-  buildDate.getMonth() + 1,
-)}.${buildDate.getFullYear()} ${padNumber(buildDate.getHours())}:${padNumber(
-  buildDate.getMinutes(),
-)}`;
-
 
 
 function RootQuestion({ paths, selectedCity }: { paths : string[], selectedCity: string | null}) {
@@ -51,6 +36,7 @@ const App = () => {
   const [pdfDialogOpen, setPdfDialogOpen] = React.useState(false);
 
   const { isLoading } = useQuestionData([]);
+  const {data: lastBuildDate} = useLastBuildDate();
 
   const {data: citiesRaw, isLoading : isCitiesLoading} = useCitiesData();
   const cities = citiesRaw as string[] | undefined;
@@ -214,7 +200,7 @@ const App = () => {
         </Box>
       )}
       <Box sx={{ textAlign: 'center', p: 2 }}>
-        {t('last_update')}: {buildDateString}
+        {t('last_update')}: {lastBuildDate}
       </Box>
       <PDFDownloadDialog
         open={pdfDialogOpen}

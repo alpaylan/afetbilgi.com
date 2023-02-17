@@ -10,7 +10,7 @@ const version = d.getDate().toString().concat(".", d.getHours().toString(), d.ge
 const baseQuestionData = axios
   .get(process.env.REACT_APP_TEST_DATA ?
     `/latest.json?${version.concat(d.getSeconds().toString())}` :
-    `https://cdn.afetbilgi.com/latest.json?v=${version}`)
+    `https://cdn.afetbilgi.com/latest.json`)
   .then((res) => res.data);
 
 export const useQuestionData = (paths: string[]) => {
@@ -40,15 +40,17 @@ export const useQuestionData = (paths: string[]) => {
   );
 };
 
-export const useCitiesData = () => {
-  const cities = axios
-  .get("https://cdn.afetbilgi.com/md-pdf/index.json")
-  .then((res) => res.data);
+export const useCitiesData = () => useQuery(
+  `citiesData`,
+  () => axios
+    .get("https://cdn.afetbilgi.com/md-pdf/index.json")
+    .then((res) => res.data)
+);
 
-  return useQuery(
-    `citiesData`,
-    async () => {
-      return cities;
-    }
-  );
-}
+export const useLastBuildDate = () => useQuery(
+  `lastVersion`,
+  () => axios
+  .get("https://cdn.afetbilgi.com/version")
+  .then((res) => res.data)
+);
+

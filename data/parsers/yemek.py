@@ -139,6 +139,10 @@ def main():
                 {
                     "name": 'Glutensiz Yemek Dağıtım',
                     "url": 'https://instagram.com/glutensizbeslenmek?igshid=YmMyMTA2M2Y='
+                },
+                {
+                    "name": 'MEB Yemek Hizmet Noktaları',
+                    "url": 'http://dhgm.meb.gov.tr/meb_mutfak/',
                 }
             ],
         }

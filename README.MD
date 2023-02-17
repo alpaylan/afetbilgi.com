@@ -25,31 +25,20 @@ Tamamen insan eliyle oluşturulan bir veri tabanına dayanan sitenin işleyişin
 
 The basic principles of the website, which is based on a completely human-made database, are accuracy, speed, and simplicity. When contacting us, we ask you to provide only confirmed information and to work with us to prevent the spread of false information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![tr](/images/tr.png)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![en](/images/en.png)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![kr](/images/kr.png)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![ar](/images/ar.png)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![Alt text](/images/kalacak_yer.png)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-![Alt text](/images/donations.png)
+<table>
+   <tr>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/tr.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/en.png?raw=true" width="400" height="400"></td>
+      </tr>
+   <tr>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kr.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/ar.png?raw=true" width="400" height="400"></td>
+   </tr>
+   <tr>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/kalacak_yer.png?raw=true" width="400" height="400"></td>
+      <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/donations.png?raw=true" width="400" height="400"></td>
+   </tr>
+</table>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

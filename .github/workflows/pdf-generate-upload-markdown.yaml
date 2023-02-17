@@ -34,6 +34,11 @@ jobs:
           chmod +x ./pdf-markdown/generate.sh
           ./pdf-markdown/generate.sh
 
+      - name: Backup
+        run: |
+          mv md-generated/backups pdf-backups
+          aws s3 cp ./pdf-backups "s3://afetbilgi-backup/pdfs/`date +%Y-%m-%d_%H-%M-%S`" --recursive
+
       - name: Sync PDFs
         run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
 
