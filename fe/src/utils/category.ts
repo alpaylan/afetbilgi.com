@@ -8,8 +8,8 @@ import {
 export const getCategoryOfTreeNode = (treeNode: TreeNode): Category => {
   if (treeNode.type === TreeNodeType.NODE_TYPE_DATA) {
     return (
-      dataTypeToCategoryMap[(treeNode as DataNode).data.dataType] ??
-      Category.OTHER
+      dataTypeToCategoryMap[(treeNode as DataNode).data.dataType]
+      ?? Category.OTHER
     );
   }
 

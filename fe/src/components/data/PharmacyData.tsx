@@ -1,19 +1,20 @@
 import {
-  Paper,
   Box,
-  TableContainer,
-  Table,
-  TableRow,
-  TableCell,
-  TableHead,
-  TableBody,
-  useMediaQuery,
+  Card,
+  CardContent,
   List,
   ListItem,
-  CardContent,
-  Card,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { PharmacyDataNode } from '../../interfaces/TreeNode';
 
 export default function PharmacyData({
@@ -21,13 +22,12 @@ export default function PharmacyData({
 }: {
   value: PharmacyDataNode;
 }) {
-
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
 
   return (
     <Box
-    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       <h3>
         {t('data.pharmacy.title', {
@@ -36,9 +36,11 @@ export default function PharmacyData({
         })}
       </h3>
       <p>
-        <b>{t('data.pharmacy.subtitle', {
-          date: value.date,
-        })}</b>
+        <b>
+          {t('data.pharmacy.subtitle', {
+            date: value.date,
+          })}
+        </b>
       </p>
       {
         isMinWidth ? (
@@ -47,21 +49,30 @@ export default function PharmacyData({
               <ListItem key={i}>
                 <Card sx={{ width: '100%' }}>
                   <CardContent>
-                    <b>{t('city')}</b>: {value.city} / {value.county}
+                    <b>{t('city')}</b>
+                    :
+                    {value.city}
+                    {' '}
+                    /
+                    {value.county}
                     <br />
                     <br />
-                    <b>{t('location')}</b>: {item.address}
+                    <b>{t('location')}</b>
+                    :
+                    {item.address}
                     <br />
                     <br />
                     {
-                      item.locationLink ?
-                      <>
-                        <a href={item.locationLink} target='_blank'>
-                          {t('map')}
-                        </a>
-                        <br />
-                      </>
-                      : <></>
+                      item.locationLink
+                        ? (
+                          <>
+                            <a href={item.locationLink} target="_blank" rel="noreferrer">
+                              {t('map')}
+                            </a>
+                            <br />
+                          </>
+                        )
+                        : <></>
                     }
 
                     <Box sx={{ mt: 1 }}>
@@ -78,7 +89,9 @@ export default function PharmacyData({
                       ))}
                     </Box>
                     <br />
-                    <b>{t('details')}</b>: {item.details}
+                    <b>{t('details')}</b>
+                    :
+                    {item.details}
                   </CardContent>
                 </Card>
               </ListItem>
@@ -102,7 +115,7 @@ export default function PharmacyData({
                     key={index}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
-                    <TableCell component='th' scope='row'>
+                    <TableCell component="th" scope="row">
                       {item.name}
                     </TableCell>
                     <TableCell>
@@ -110,13 +123,15 @@ export default function PharmacyData({
                     </TableCell>
                     <TableCell>
                       {
-                        item.locationLink ?
-                        <>
-                          <a href={item.locationLink} target='_blank'>
-                            {t('map')}
-                          </a>
-                        </>
-                        : <></>
+                        item.locationLink
+                          ? (
+                            <>
+                              <a href={item.locationLink} target="_blank" rel="noreferrer">
+                                {t('map')}
+                              </a>
+                            </>
+                          )
+                          : <></>
                       }
                     </TableCell>
                     <TableCell>

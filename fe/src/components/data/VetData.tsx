@@ -1,4 +1,8 @@
-import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';import { useTranslation } from 'react-i18next';
+import {
+  Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+} from '@mui/material';
+import { useTranslation } from 'react-i18next';
+
 import { VetNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -67,12 +71,12 @@ export default function VetData({ value }: { value: VetNode }) {
   const { t } = useTranslation();
 
   return (
-    <Box display='flex' flexDirection='column' alignItems='center'>
+    <Box display="flex" flexDirection="column" alignItems="center">
       <Title
         title={t('data.veterinary.title', {
           city: value.city,
         })}
-        subtitle={t('data.veterinary.subtitle') || ""}
+        subtitle={t('data.veterinary.subtitle') || ''}
       />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
@@ -89,32 +93,33 @@ export default function VetData({ value }: { value: VetNode }) {
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>{item.name}</TableCell>
+                <TableCell component="th" scope="row">{item.name}</TableCell>
                 <TableCell>
                   {item.maps_link ? (
                     <a
                       href={item.maps_link}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       {item.address || '-'}
                     </a>
-                    ) : (
-                      '-'
+                  ) : (
+                    '-'
                   )}
                 </TableCell>
                 <TableCell>
-                {item.phone_number.map((phone, idx) => (
-                        <div key={idx}>
-                          <a
-                            href={`tel:${phone
-                              ?.replace(/^0/, '')
-                              .replace(/ /g, '')}`}
-                          >
-                            {phone}
-                          </a>
-                        </div>
-                      ))}
-                </TableCell>      
+                  {item.phone_number.map((phone, idx) => (
+                    <div key={idx}>
+                      <a
+                        href={`tel:${phone
+                          ?.replace(/^0/, '')
+                          .replace(/ /g, '')}`}
+                      >
+                        {phone}
+                      </a>
+                    </div>
+                  ))}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

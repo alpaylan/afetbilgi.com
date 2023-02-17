@@ -1,5 +1,8 @@
-import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import {
+  Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+} from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { HelpItemNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -76,7 +79,7 @@ import Title from '../Title';
       )}
     </Paper>
   );
-} */;
+} */
 
 export default function HelpItemData({ value }: { value: HelpItemNode }) {
   const { t } = useTranslation();
@@ -102,28 +105,32 @@ export default function HelpItemData({ value }: { value: HelpItemNode }) {
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>{item.name}</TableCell>
+                <TableCell component="th" scope="row">{item.name}</TableCell>
                 <TableCell>
                   {
-                    item.url ?
-                    <>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                    >
-                      {t('source')}
-                    </a>
-                    </>
-                    : <></>
+                    item.url
+                      ? (
+                        <>
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {t('source')}
+                          </a>
+                        </>
+                      )
+                      : <></>
                   }
-                  
+
                 </TableCell>
                 <TableCell>
-                <a
+                  <a
                     href={`tel:+90${item.phone_number ? item.phone_number.replace(/^0/, '').replace(/ /g, '') : ''}`}
                     target="_blank"
+                    rel="noreferrer"
                   >
-                    {item.phone_number} 
+                    {item.phone_number}
                   </a>
                 </TableCell>
               </TableRow>

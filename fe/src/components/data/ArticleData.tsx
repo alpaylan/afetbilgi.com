@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { ArticleDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -70,10 +71,10 @@ export default function ArticleData({ value }: { value: ArticleDataNode }) {
       <Title
         title={t('data.important_articles.title')}
         subtitle={t('data.important_articles.subtitle') || ''}
-        severity='info'
+        severity="info"
       />
       <TableContainer component={Paper} sx={{ maxWidth: 650 }}>
-        <Table sx={{ maxWidth: 650 }} aria-label='simple table'>
+        <Table sx={{ maxWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>{t('data.important_articles.article_title')}</TableCell>
@@ -87,14 +88,14 @@ export default function ArticleData({ value }: { value: ArticleDataNode }) {
                 key={i}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
+                <TableCell component="th" scope="row">
                   {item.title}
                 </TableCell>
                 <TableCell>
                   {item.author}
                 </TableCell>
                 <TableCell>
-                  <a href={item.url} target='_blank' rel='noreferrer'>
+                  <a href={item.url} target="_blank" rel="noreferrer">
                     {t('Link')}
                   </a>
                 </TableCell>

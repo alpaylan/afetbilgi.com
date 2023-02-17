@@ -1,25 +1,32 @@
-import { Container, Typography, Box, Paper, Stack, Divider, Avatar } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { Avatar, Box, Container, Divider, Paper, Stack, Typography } from '@mui/material';
 import Link from '@mui/material/Link';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutUs() {
   const { t } = useTranslation();
 
   return (
     <Box>
-      <Container maxWidth="sm" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <Typography variant="h3" align="center" sx={{mt: 4}}>
-            {t('page.about.title')}
+      <Container maxWidth="sm" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Typography variant="h3" align="center" sx={{ mt: 4 }}>
+          {t('page.about.title')}
         </Typography>
-        <Paper sx={{p: 2, mt: 2}}>
-          <Typography variant="subtitle1" align="center" sx={{mt: 4}}>
-              {t('page.about.body.1')}
-              <br /> <br />
-              {t('page.about.body.2')}
+        <Paper sx={{ p: 2, mt: 2 }}>
+          <Typography variant="subtitle1" align="center" sx={{ mt: 4 }}>
+            {t('page.about.body.1')}
+            <br />
+            {' '}
+            <br />
+            {t('page.about.body.2')}
           </Typography>
-          <Typography sx={{mt: 4}} variant="subtitle1" align="center">
-              <b>{t('contact')}:</b> <a href="mailto:info@afetbilgi.com">info@afetbilgi.com</a>
-              <br />
+          <Typography sx={{ mt: 4 }} variant="subtitle1" align="center">
+            <b>
+              {t('contact')}
+              :
+            </b>
+            {' '}
+            <a href="mailto:info@afetbilgi.com">info@afetbilgi.com</a>
+            <br />
           </Typography>
           <Stack
             direction="row"
@@ -44,4 +51,4 @@ export default function AboutUs() {
       </Container>
     </Box>
   );
-};
+}

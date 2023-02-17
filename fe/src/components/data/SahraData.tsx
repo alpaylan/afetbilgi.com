@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { SahraDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -96,21 +97,23 @@ export default function SahraDistributionData({
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
+                <TableCell component="th" scope="row">
                   {item.district}
                 </TableCell>
-                <TableCell component='th' scope='row'>
+                <TableCell component="th" scope="row">
                   {item.name}
                 </TableCell>
                 <TableCell>
                   {
-                    item.maps_url ?
-                    <>
-                    <a href={item.maps_url} target='_blank'>
-                      {t('location')}
-                    </a>
-                    </>
-                    : <></>
+                    item.maps_url
+                      ? (
+                        <>
+                          <a href={item.maps_url} target="_blank" rel="noreferrer">
+                            {t('location')}
+                          </a>
+                        </>
+                      )
+                      : <></>
                   }
                 </TableCell>
               </TableRow>

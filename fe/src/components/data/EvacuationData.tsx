@@ -1,17 +1,17 @@
 import {
-  Paper,
   Box,
-  TableContainer,
-  Table,
-  TableRow,
-  TableCell,
-  CardContent,
   Card,
-  TableHead,
-  TableBody,
-  useMediaQuery,
+  CardContent,
   List,
   ListItem,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
@@ -37,21 +37,30 @@ export default function EvacuationData({
             <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
-                  <b>{t('city')}</b>: {item.city} / {item.county}
+                  <b>{t('city')}</b>
+                  :
+                  {item.city}
+                  {' '}
+                  /
+                  {item.county}
                   <br />
                   <br />
-                  <b>{t('location')}</b>: {item.address}
+                  <b>{t('location')}</b>
+                  :
+                  {item.address}
                   <br />
                   <br />
                   {
-                    item.map_link ?
-                    <>
-                      <a href={item.map_link} target='_blank'>
-                        {t('map')}
-                      </a>
-                      <br />
-                    </>
-                    : <></>
+                    item.map_link
+                      ? (
+                        <>
+                          <a href={item.map_link} target="_blank" rel="noreferrer">
+                            {t('map')}
+                          </a>
+                          <br />
+                        </>
+                      )
+                      : <></>
                   }
 
                   <Box sx={{ mt: 1 }}>
@@ -89,20 +98,24 @@ export default function EvacuationData({
                   key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component='th' scope='row'>
-                    {item.city} {item.county}
+                  <TableCell component="th" scope="row">
+                    {item.city}
+                    {' '}
+                    {item.county}
                   </TableCell>
                   <TableCell>{item.address}</TableCell>
                   <TableCell>
-                  {
-                    item.map_link ?
-                    <>
-                      <a href={item.map_link} target='_blank'>
-                        {t('map')}
-                      </a>
-                    </>
-                    : <></>
-                  }
+                    {
+                      item.map_link
+                        ? (
+                          <>
+                            <a href={item.map_link} target="_blank" rel="noreferrer">
+                              {t('map')}
+                            </a>
+                          </>
+                        )
+                        : <></>
+                    }
                   </TableCell>
                   <TableCell>
                     {item.contacts.map((contact, idx) => (

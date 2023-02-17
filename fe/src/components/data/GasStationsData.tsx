@@ -1,19 +1,20 @@
 import {
-  Paper,
   Box,
-  TableContainer,
-  Table,
-  TableRow,
-  TableCell,
-  CardContent,
   Card,
-  TableHead,
-  TableBody,
-  useMediaQuery,
+  CardContent,
   List,
   ListItem,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  useMediaQuery,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
 import { GasStationsDataNode } from '../../interfaces/TreeNode';
 import Title from '../Title';
 
@@ -38,21 +39,30 @@ export default function GasStationsData({
             <ListItem key={i}>
               <Card sx={{ width: '100%' }}>
                 <CardContent>
-                  <b>{t('city')}</b>: {value.city} / {value.county}
+                  <b>{t('city')}</b>
+                  :
+                  {value.city}
+                  {' '}
+                  /
+                  {value.county}
                   <br />
                   <br />
-                  <b>{t('location')}</b>: {item.address}
+                  <b>{t('location')}</b>
+                  :
+                  {item.address}
                   <br />
                   <br />
                   {
-                    item.maps_link ?
-                    <>
-                    <a href={item.maps_link} target='_blank'>
-                      {t('map')}
-                    </a>
-                    <br />
-                    </>
-                    : <></>
+                    item.maps_link
+                      ? (
+                        <>
+                          <a href={item.maps_link} target="_blank" rel="noreferrer">
+                            {t('map')}
+                          </a>
+                          <br />
+                        </>
+                      )
+                      : <></>
                   }
 
                   {item.telephone && (
@@ -90,19 +100,23 @@ export default function GasStationsData({
                   key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component='th' scope='row'>
-                    {value.city} {value.county}
+                  <TableCell component="th" scope="row">
+                    {value.city}
+                    {' '}
+                    {value.county}
                   </TableCell>
                   <TableCell>{item.address}</TableCell>
                   <TableCell>
                     {
-                      item.maps_link ?
-                      <>
-                      <a href={item.maps_link} target='_blank'>
-                        {t('location')}
-                      </a>
-                      </>
-                      : <></>
+                      item.maps_link
+                        ? (
+                          <>
+                            <a href={item.maps_link} target="_blank" rel="noreferrer">
+                              {t('location')}
+                            </a>
+                          </>
+                        )
+                        : <></>
                     }
                   </TableCell>
                   <TableCell>

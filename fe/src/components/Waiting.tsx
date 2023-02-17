@@ -1,11 +1,11 @@
-import React from 'react';
 import { CircularProgress } from '@mui/material';
 import Backdrop from '@mui/material/Backdrop';
+import React from 'react';
 
-export default function Waiting(props: { open: boolean }) {
+export default function Waiting({ open }: { open: boolean }) {
   return (
-    <Backdrop open={props.open}>
-      <CircularProgress color='inherit' />
+    <Backdrop open={open}>
+      <CircularProgress color="inherit" />
     </Backdrop>
   );
 }
