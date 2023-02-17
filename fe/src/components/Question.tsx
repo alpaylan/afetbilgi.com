@@ -23,6 +23,12 @@ import { getCategoryOfTreeNode } from '../utils/category';
 
 import JSX = jsx.JSX;
 
+const checkCityHasData = ( option : OptionNode, selectedCity : string ) => {
+  const node = option as any;
+  const existingCities = node.value.options as any[];
+  return existingCities.some(item => item?.name === selectedCity || item?.name_tr === selectedCity);
+}
+
 const getOptionName = (option: any, lang: string) =>
   option[`name_${lang}`] || option.name_tr || option.name;
 
@@ -31,7 +37,7 @@ const getAutocompleteName = (option: any, lang: string) =>
   option.autocompleteHint_tr ||
   option.autocompleteHint;
 
-export default function Question({ paths }: { paths: string[] }) {
+export default function Question({ paths, selectedCity }: { paths: string[], selectedCity: string | null }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
@@ -46,7 +52,8 @@ export default function Question({ paths }: { paths: string[] }) {
     return <></>;
   }
 
-  if (!selectedNode) {
+
+  if (!selectedNode && !selectedCity) {
     return (
       <Box
         sx={{
@@ -65,7 +72,9 @@ export default function Question({ paths }: { paths: string[] }) {
     return <Data dataNode={selectedNode as any} />;
   }
 
-  const isRootQuestion = location.pathname === '/';
+
+
+  const isRootQuestion = location.pathname === '/' || selectedCity;
   const renderOptionButton = (option: OptionNode) => {
     const optionNameLocalized = getOptionName(option, i18n.language);
     const optionName = encodeURIComponent(getOptionName(option, 'tr'));
@@ -73,9 +82,19 @@ export default function Question({ paths }: { paths: string[] }) {
       'K%C4%B1z%C4%B1lay%20Kan%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1': 'https://www.kanver.org/KanHizmetleri/KanBagisiNoktalari',
       "Mobil%20Tuvaletler": 'https://twitter.com/sabancivakfi/status/1625146826335694849?s=46&t=XcGyniD8_Ur8EiwgP61Gqg'
     };
-
+    
     const isDirectLink = optionName in directLinks && isRootQuestion;
-    let redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    let redirectionPath;
+    if(selectedCity && option.value.type === 'question') {
+      // if the data city specific
+      if ( !checkCityHasData(option, selectedCity) ) {
+         return(<></>);
+      }
+      redirectionPath = isRootQuestion?`/${optionName}/${selectedCity}`:`${location.pathname}/${optionName}`;
+    } else {
+      // if the data general for all cities
+      redirectionPath = isRootQuestion?`/${optionName}`:`${location.pathname}/${optionName}`;
+    }
     if(isDirectLink) redirectionPath = directLinks[optionName];
 
     // Direct link buttons have underlines
@@ -216,7 +235,10 @@ export default function Question({ paths }: { paths: string[] }) {
         }}
       >
         <Typography variant='h5'>
-          {selectedNode[`text_${i18n.language}`] || selectedNode.text}
+          {selectedCity && isRootQuestion ?
+          t('page.main.subtitle_city', {city: selectedCity})
+        : selectedNode[`text_${i18n.language}`] || selectedNode.text
+        }
         </Typography>
 
         <Box

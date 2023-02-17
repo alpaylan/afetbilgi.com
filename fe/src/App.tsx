@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select} from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
@@ -13,17 +13,19 @@ import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
 import Question from './components/Question';
 import Waiting from './components/Waiting';
-import { useQuestionData, useLastBuildDate } from './hooks';
+import { useQuestionData, useCitiesData, useLastBuildDate } from './hooks';
+import cityTranslations from './utils/locales/il_translate.json'
 
 import AboutUs from './components/AboutUs';
 import SitesFab from './components/SitesFab';
 import PDFDownloadDialog from './components/PDFDownloadDialog';
+import CitySelection from './components/CitySelection';
 
-function RootQuestion() {
-  const location = useLocation();
-  const paths = location.pathname.split('/').filter((p) => p !== '');
 
-  return <Question paths={paths} />;
+function RootQuestion({ paths, selectedCity }: { paths : string[], selectedCity: string | null}) {
+  
+
+  return <Question paths={paths} selectedCity={selectedCity}/>;
 }
 
 const App = () => {
@@ -35,6 +37,39 @@ const App = () => {
 
   const { isLoading } = useQuestionData([]);
   const {data: lastBuildDate} = useLastBuildDate();
+
+  const {data: citiesRaw, isLoading : isCitiesLoading} = useCitiesData();
+  const cities = citiesRaw as string[] | undefined;
+  
+  const citiesDict = Object.entries(cityTranslations).reduce((acc, [key, value]) => {
+    acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
+      // eslint-disable-next-line no-param-reassign
+      acc2[key2] = value2;
+      return acc2;
+    }, {} as Record<string, string>);
+    return acc;
+  }, {} as Record<string, Record<string, string>>);
+
+
+  const paths = location.pathname.split('/').filter((p) => p !== '');
+  let finalPaths = paths;
+  let selectedCity = null as string | null;
+  const possibleCityName = decodeURIComponent(paths[0]);
+  const isPathNameCity = paths.length > 0 && cities?.some( city => city === possibleCityName );
+  if(isPathNameCity) {
+    selectedCity = possibleCityName;
+    finalPaths = [];
+  }
+
+  const changeCityHandler = (newValue : string | null) => {
+    if(newValue) {
+      navigate( `/${newValue}` );
+    } else {
+      navigate( `/` );
+    }
+
+  }
+
 
   const changeLanguageHandler = (selectedLanguage: Language) => {
     i18n.changeLanguage(selectedLanguage);
@@ -79,7 +114,7 @@ const App = () => {
           sx={{
             textAlign: 'center',
             display: 'flex',
-            flexFlow: 'row nowrap',
+            flexFlow: 'row wrap',
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -121,9 +156,8 @@ const App = () => {
               {t('button.download')}
             </Button>
           )}
-        </Box>
 
-        <Box sx={{ mt: 2 }}>
+        <Box sx={{ mr : 1}}>
           <Select
             id='language-options-multiselect'
             size='small'
@@ -137,11 +171,23 @@ const App = () => {
             ))}
           </Select>
         </Box>
+
+ 
+
+        </Box>
+
+        { (location.pathname === '/' || isPathNameCity) && !isCitiesLoading && 
+        <Box sx={{ mt: 2, mr: 1 }}>
+          <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity}/>
+        </Box>
+        }
+
       </Box>
+
 
       <Container sx={{ mt: 3 }}>
         <Routes>
-          <Route path='/*' element={<RootQuestion />} />
+          <Route path='/*' element={<RootQuestion paths={finalPaths} selectedCity={selectedCity}/>} />
           <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>
