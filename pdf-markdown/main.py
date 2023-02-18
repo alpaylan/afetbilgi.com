@@ -120,7 +120,7 @@ def main():
     if city_filter is not None:
         title += f" - {city_filter}"
 
-    root = MDNode(title, translation["pdf_notice"].format(date=now), None, city_translate_table, lang)
+    root = MDNode(title, translation["pdf_notice"].format(date=now), None, city_translate_table, lang, translation)
 
     root.add_children(md_nodes)
     root.sort_children()
