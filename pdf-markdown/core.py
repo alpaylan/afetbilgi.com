@@ -16,13 +16,14 @@ class MDTable:
         return s
 
 class MDNode:
-    def __init__(self, header: str, body: str, table: MDTable, city_translate_table: dict = None, lang = None):
-        self.header = header
+    def __init__(self, header: str, body: str, table: MDTable, city_translate_table: dict = None, lang = None, word_translation_table=None):
+        self.header = header.strip()
         self.body = body
         self.table = table
         self.children = []
         self.city_translate_table = city_translate_table
         self.lang = lang
+        self.word_translation_table = word_translation_table
 
     def add_child(self, child: "MDNode"):
         self.children.append(child)
@@ -36,6 +37,9 @@ class MDNode:
 
         if self.body != "":
             s += f"\n\n{self.body}"
+
+        if depth == 1:
+            s += "\n\n" + self.table_of_contents()
 
         if self.table is not None:
             s += "\n\n" + self.table.to_string()
@@ -76,3 +80,11 @@ class MDNode:
                 new_children.append(c)
 
         self.children = new_children
+
+    def sort_children(self):
+        self.children = sorted(self.children, key=lambda x: x.header)
+
+    def table_of_contents(self):
+        items = [f"* [{x.header.title()}](#{x.header.lower().replace(' ', '-')})" for x in self.children]
+
+        return f"## {self.word_translation_table['TOC']}" + "\n\n" + "\n".join(items)
