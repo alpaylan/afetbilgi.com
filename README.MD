@@ -25,6 +25,12 @@ Tamamen insan eliyle oluşturulan bir veri tabanına dayanan sitenin işleyişin
 
 The basic principles of the website, which is based on a completely human-made database, are accuracy, speed, and simplicity. When contacting us, we ask you to provide only confirmed information and to work with us to prevent the spread of false information.
 
+## Infrastructure
+
+![afetbilgi.com Infrastructure](./images/afetbilgi-infra.png)
+
+## Website UI
+
 <table>
    <tr>
       <td><img src="https://github.com/alpaylan/afetbilgi.com/blob/main/images/tr.png?raw=true" width="400" height="400"></td>
