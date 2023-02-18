@@ -6,10 +6,14 @@
   "page.about.body.1": "http://afetbilgi.com/ is a website created by a group of METU students and graduates to verify and deliver important information to fight against February 6, 2023, Pazarcık Earthquake.",
   "page.about.body.2": "This website is based on a completely human-made database and works with accuracy, speed, and simplicity principles. When contacting us, we strongly ask you to deliver only verified information and cooperate with us to prevent disinformation.",
 
-  "page.tooltip.depremyardim": "Website that you can use to search for earthquake victims and help them.",
-  "page.tooltip.afetharita": "Website that you can use to show help notifications on the map.",
-  "page.tooltip.depremio": "Website that you can use to help earthquake victims with food.",
-  "page.tooltip.discord": "Discord server that we use to develop our projects and communicate with each other.",
+  "page.tooltip.depremyardim.title": "depremyardim.com",
+  "page.tooltip.depremyardim.desc": "Website that you can use to search for earthquake victims and help them.",
+  "page.tooltip.afetharita.title": "afetharita.com",
+  "page.tooltip.afetharita.desc": "Website that you can use to show help notifications on the map.",
+  "page.tooltip.depremio.title": "deprem.io",
+  "page.tooltip.depremio.desc": "Website that you can use to help earthquake victims with food.",
+  "page.tooltip.discord.title": "Discord",
+  "page.tooltip.discord.desc": "Discord server that we use to develop our projects and communicate with each other.", 
   "page.tooltip.twitter": "Our Twitter account to reach us via Twitter",
 
   "category.victim.name": "General Needs",
