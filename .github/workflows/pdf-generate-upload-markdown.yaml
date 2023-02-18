@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - ozansz/enhance_pdf_gen
-      
+
   workflow_dispatch:
 
   schedule:
@@ -38,15 +38,15 @@ jobs:
           chmod +x ./pdf-markdown/generate.sh
           ./pdf-markdown/generate.sh
 
-      - name: Backup
-        run: |
-          mv md-generated/backups pdf-backups
-          aws s3 cp ./pdf-backups "s3://afetbilgi-backup/pdfs/`date +%Y-%m-%d_%H-%M-%S`" --recursive
+      # - name: Backup
+      #   run: |
+      #     mv md-generated/backups pdf-backups
+      #     aws s3 cp ./pdf-backups "s3://afetbilgi-backup/pdfs/`date +%Y-%m-%d_%H-%M-%S`" --recursive
 
       - name: Sync PDFs
-        run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
+        run: aws s3 sync md-generated/. s3://cdn.afetbilgi.com/sazak/md-pdf --metadata-directive REPLACE --metadata Content-Disposition=attachment
 
-      - name: Purge cache
-        run: |
-          pip install -r requirements.txt
-          CF_ZONE=${{ secrets.CLOUDFLARE_ZONE }} CF_TOKEN=${{ secrets.CLOUDFLARE_AUTH_KEY }} python pdf-markdown/purge_cache.py md-generated/index.json
+      # - name: Purge cache
+      #   run: |
+      #     pip install -r requirements.txt
+      #     CF_ZONE=${{ secrets.CLOUDFLARE_ZONE }} CF_TOKEN=${{ secrets.CLOUDFLARE_AUTH_KEY }} python pdf-markdown/purge_cache.py md-generated/index.json
