@@ -126,7 +126,7 @@ def parse_food(data, t):
 
         rows.append(rr)
 
-    return MDTable([t["location"], t["address"], t["source"], t["telephone"], t["last_update"], "Güncelleme Saati"], rows)
+    return MDTable([t["location"], t["address"], t["source"], t["telephone"], t["last_update"], "Güncelleme Saati (Update Time)"], rows)
 
 def parse_pharmacy(data, t):
     rows = []
@@ -171,11 +171,7 @@ def parse_vets(data, t):
     rows = []
 
     for r in data["vets"]:
-        print(r)
         rr = process_rows_raw_list(r)
-
-        print(rr)
-        print("\n\n")
 
         rr[1] = ", ".join(list(map(phone_or_str, rr[1])))
         rr[3] = link_or_str(rr[3], t["button.google_maps"])
@@ -234,7 +230,81 @@ def parse_evacuation_points(data, t):
 
         rows.append(rr)
 
-    return MDTable([t["city"], t["district"], "Yer", t["map"], t["address"], t["telephone"], t["source"]], rows)
+    return MDTable([t["city"], t["district"], "Yer (Place)", t["map"], t["address"], t["telephone"], t["source"]], rows)
+
+def parse_healthcare_services(data, t):
+    rows = []
+
+    for r in data["items"]:
+        rr = process_rows(r)
+
+        if rr[2] != "-":
+            rr[2] = link_or_str(rr[2], t["button.google_maps"])
+
+        if rr[3] != "-":
+            rr[3] = link_or_str(rr[3], t['source'])
+
+        if rr[4] != "-":
+            rr[4] = phone_or_str(rr[4])
+
+        rows.append(rr)
+
+    return MDTable([t["district"], t["location"], t["map"], t["source"], t["telephone"], t["last_update"], "Güncelleme Saati (Update Time)"], rows)
+
+def parse_digital_platforms(data, t):
+    rows = []
+
+    for r in data["usefulLinks"]:
+        rr = process_rows(r)
+
+        domain = urlparse(rr[1]).netloc
+        rr[1] = link_or_str(rr[1], domain)
+
+        rows.append(rr)
+
+    return MDTable([t["name"], t["website"]], rows)
+
+def parse_transportations(data, t):
+    rows = []
+
+    for r in data["transportations"]:
+        rr = process_rows(r)
+
+        domain = urlparse(rr[1]).netloc
+        rr[1] = link_or_str(rr[1], domain)
+
+        rows.append(rr)
+
+    return MDTable([t["name"], t["website"], t['source'], t['data.transportation.validationDate'], t['details'], t['data.transportation.validityDate']], rows)
+
+def parse_gas_stations(data, t):
+    rows = []
+
+    for r in data["items"]:
+        rr = process_rows(r)
+
+        if rr[2] != "-":
+            rr[2] = phone_or_str(rr[2])
+
+        if rr[3] != "-":
+            rr[3] = link_or_str(rr[3], t["button.google_maps"])
+
+        rows.append(rr)
+
+    return MDTable([t["name"], t["address"], t["telephone"], t["map"]], rows)
+
+def parse_local_pharmacy_list(data, t):
+    rows = []
+
+    for r in data["items"]:
+        rr = process_rows_raw_list(r)
+
+        rr[2] = ", ".join(list(map(phone_or_str, rr[2])))
+        rr[3] = link_or_str(rr[3], t["button.google_maps"])
+
+        rows.append(rr)
+
+    return MDTable([t["name"], t["address"], t["telephone"], t["map"], t['details']], rows)
 
 data_type_parsers = {
     "city-accommodation": parse_city_accom,
@@ -245,9 +315,13 @@ data_type_parsers = {
     "useful-links": parse_links,
     "data-vet": parse_vets,
     "help-item-list": parse_help_item_list,
-    # "blood-donationlist": lambda _: 
     "stem-cell-donation": parse_stemcell,
     "beneficial-articles": parse_beneficial_articles,
     "evacuation-points": parse_evacuation_points,
+    "healthcare-services": parse_healthcare_services,
+    "digital-platforms": parse_digital_platforms,
+    "transportations": parse_transportations,
+    "gas_stations": parse_gas_stations,
+    "local-pharmacy-list": parse_local_pharmacy_list,
 }
 

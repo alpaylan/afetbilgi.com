@@ -45,6 +45,9 @@ def parse_question(title, options, translation, lang):
     n = MDNode(title, "", None)
     n.add_children(children)
 
+    if len(n.children) == 0:
+        return None
+
     return n
 
 def parse_option_node(opt, translation, lang):
@@ -120,6 +123,7 @@ def main():
     root = MDNode(title, translation["pdf_notice"].format(date=now), None, city_translate_table, lang)
 
     root.add_children(md_nodes)
+    root.sort_children()
     root.filter(city_filter)
 
     with open(target, "w") as f:

@@ -76,3 +76,6 @@ class MDNode:
                 new_children.append(c)
 
         self.children = new_children
+
+    def sort_children(self):
+        self.children = sorted(self.children, key=lambda x: x.header)
