@@ -24,6 +24,7 @@ export interface Article {
   title: string;
   author: string;
   url: string;
+  added_last_day?: boolean;
 }
 
 export interface ArticleDataNode extends DataNode {
@@ -44,6 +45,7 @@ export interface BankDataNode extends DataNode {
     erc?: string;
     avalanche?: string;
     url?: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -57,6 +59,7 @@ export interface BloodDonationNode extends DataNode {
     cell_phone_number?: string;
     fax?: string;
     url?: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -68,6 +71,8 @@ export interface CityAccommodationNode extends DataNode {
     url: string;
     address?: string;
 
+    added_last_day?: boolean;
+
     // TODO: Add back after data migration, this is a temporary fix
     // is_validated: boolean;
   }[];
@@ -78,6 +83,7 @@ export interface Vet {
   phone_number: string[];
   address?: string;
   maps_link: string;
+  added_last_day?: boolean;
 }
 
 export interface VetNode extends DataNode {
@@ -88,6 +94,7 @@ export interface VetNode extends DataNode {
 export interface CreditCardNode extends DataNode {
   name: string;
   url: string;
+  added_last_day?: boolean;
 }
 
 export interface GatheringDataNode extends DataNode {
@@ -96,6 +103,7 @@ export interface GatheringDataNode extends DataNode {
     name: string;
     url: string;
     source: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -104,6 +112,7 @@ export interface HelpItem {
   location?: string;
   url: string;
   phone_number: string;
+  added_last_day?: boolean;
 }
 
 export interface HelpItemNode extends DataNode {
@@ -118,6 +127,7 @@ export interface Phone {
   is_plain: boolean;
   phones: string[];
   details: string;
+  added_last_day?: boolean;
 }
 
 export interface SMSDataNode extends DataNode {
@@ -125,6 +135,7 @@ export interface SMSDataNode extends DataNode {
   sms: string;
   number: string;
   amount: string;
+  added_last_day?: boolean;
 }
 
 export interface TelephoneDataNode extends DataNode {
@@ -135,12 +146,14 @@ export interface URLDataNode extends DataNode {
   name: string;
   short_description?: string;
   url: string;
+  added_last_day?: boolean;
 }
 
 export interface UsefulLink {
   category: string;
   name: string;
   url: string;
+  added_last_day?: boolean;
 }
 
 export interface UsefulLinksDataNode extends DataNode {
@@ -156,6 +169,7 @@ export interface StemCellDataItem {
   city: string;
   address: string;
   phone: string;
+  added_last_day?: boolean;
 }
 
 export interface FoodDistribution {
@@ -165,6 +179,7 @@ export interface FoodDistribution {
   phone_number?: string;
   updated_at_date: string;
   updated_at_time: string;
+  added_last_day?: boolean;
 }
 export interface FoodDistributionDataNode extends DataNode {
   city: string;
@@ -180,6 +195,7 @@ export interface SahraItem {
   phone_number?: string;
   updated_at_date: string;
   updated_at_time: string;
+  added_last_day?: boolean;
 }
 
 export interface SahraDataNode extends DataNode {
@@ -191,6 +207,7 @@ export interface VpnDataNode extends DataNode {
   items: {
     name: string;
     url: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -199,6 +216,7 @@ export interface ContainerPharmacy {
   district: string;
   location: string;
   locationLink: string;
+  added_last_day?: boolean;
 }
 export interface ContainerPharmacyDataNode extends DataNode {
   items: ContainerPharmacy[];
@@ -213,6 +231,7 @@ export interface EvacuationDataNode extends DataNode {
     address: string;
     contacts: string[];
     validator: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -220,6 +239,7 @@ export interface DonationLinksDataNode extends DataNode {
   items: {
     name: string;
     url: string;
+    added_last_day?: boolean;
   }[];
 }
 export interface TransportationDataNode extends DataNode {
@@ -230,6 +250,7 @@ export interface TransportationDataNode extends DataNode {
     validation_date: string;
     description: string;
     validity_date: string;
+    added_last_day?: boolean;
   }[];
 }
 
@@ -239,6 +260,7 @@ export interface GasStation {
   telephone?: string;
   maps_link: string;
   info?: string;
+  added_last_day?: boolean;
 }
 export interface GasStationsDataNode extends DataNode {
   city: string;
@@ -252,6 +274,7 @@ export interface Pharmacy {
   phones: string[];
   locationLink: string;
   details: string;
+  added_last_day?: boolean;
 }
 export interface PharmacyDataNode extends DataNode {
   city: string;
@@ -267,6 +290,7 @@ export interface Services {
   locationLink?: string;
   specificCategory?: string;
   source?: string;
+  added_last_day?: boolean;
 }
 export interface ServicesDataNode extends DataNode {
   city: string;

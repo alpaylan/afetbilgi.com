@@ -90,6 +90,7 @@ export default function VetData({ value }: { value: VetNode }) {
           <TableBody>
             {value.vets.map((item, index) => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >

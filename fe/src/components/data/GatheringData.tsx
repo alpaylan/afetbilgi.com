@@ -41,6 +41,7 @@ export default function GatheringData({ value }: { value: GatheringDataNode }) {
           <TableBody>
             {items.map(item => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={item.name}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >

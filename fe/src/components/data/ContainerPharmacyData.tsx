@@ -91,6 +91,7 @@ export default function ContainerPharmacyData({
             <TableBody>
               {value.items.map(item => (
                 <TableRow
+                  className={item.added_last_day ? 'new-data-item' : ''}
                   key={item.location + item.city}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >

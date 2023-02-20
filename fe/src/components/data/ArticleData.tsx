@@ -85,6 +85,7 @@ export default function ArticleData({ value }: { value: ArticleDataNode }) {
           <TableBody>
             {value.articles.map((item, i) => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={i}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >

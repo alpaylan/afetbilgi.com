@@ -26,6 +26,7 @@ export default function EvacuationData({
   const { t } = useTranslation();
   const isMinWidth = useMediaQuery('(max-width:600px)');
   value.items.sort((a, b) => a.city.localeCompare(b.city));
+  console.log(value.items);
   return (
     <Box>
       <Title
@@ -95,6 +96,7 @@ export default function EvacuationData({
             <TableBody>
               {value.items.map((item, index) => (
                 <TableRow
+                  className={item.added_last_day ? 'new-data-item' : ''}
                   key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >

@@ -32,6 +32,7 @@ export default function StemCellData({ value }: { value: StemCellDataNode }) {
           <TableBody>
             {value.items.map(item => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={item.address + item.city}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
