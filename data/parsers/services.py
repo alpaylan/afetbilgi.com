@@ -16,8 +16,9 @@ def main():
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     sheet_name = "Afet%20B%C3%B6lgesi%20D%C4%B1%C5%9F%C4%B1ndaki%20%C5%9Eehirlerdeki%20Hizmetler"
+    sheet_gid = "1597946944"
 
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={sheet_gid}"
 
     df = pd.read_csv(url, encoding="utf-8")
     df = df.fillna("")
