@@ -12,13 +12,12 @@ else:
     os.exit(1)
 
 def walk(options1, options2):
-    if len(options1) > 0 and options1[0]['value']['type'] == 'question':
+    if options1 and len(options1) > 0 and options1[0]['value']['type'] == 'question':
         for i in range(len(options1)):
-            if 'options' in options1[i]['value'] and 'options' in options2[i]['value']:
-                walk(
-                    options1[i]['value']['options'] if i < len(options1) else None,
-                    options2[i]['value']['options'] if i < len(options2) else None
-                )
+            walk(
+                options1[i]['value']['options'] if options1 and i < len(options1) and 'options' in options1[i]['value']  else None,
+                options2[i]['value']['options'] if options2 and i < len(options2) and  'options' in options2[i]['value'] else None
+            )
 
     else:
         options1_set = set()
