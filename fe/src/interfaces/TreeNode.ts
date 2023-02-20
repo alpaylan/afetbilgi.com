@@ -116,6 +116,7 @@ export interface Phone {
   name: string;
   phone_number: string;
   is_plain: boolean;
+  phones: string[];
 }
 
 export interface SMSDataNode extends DataNode {

@@ -54,6 +54,7 @@ if __name__ == "__main__":
                 "category": row["category"],
                 "name": row["name"],
                 "phone_number": row["phone_number"],
+                "phones": row["phone_number"].split("\n"),
             }
         )
 

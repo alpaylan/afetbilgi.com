@@ -45,17 +45,17 @@ export default function TelephoneData({ value }: { value: TelephoneDataNode }) {
                   {item.name}
                 </TableCell>
                 <TableCell>
-                  <a
-                    href={
-                      item.is_plain
-                        ? `tel:${item.phone_number}`
-                        : `tel:+90${item.phone_number
-                          .replace(/^0/, '')
-                          .replace(/ /g, '')}`
-                    }
-                  >
-                    {item.phone_number}
-                  </a>
+                  {item.phones.map((phone, idx) => (
+                      <div key={idx}>
+                        <a
+                          href={`tel:${phone
+                            ?.replace(/^0/, '')
+                            .replace(/ /g, '')}`}
+                        >
+                          {phone}
+                        </a>
+                      </div>
+                    ))}
                 </TableCell>
               </TableRow>
             ))}
