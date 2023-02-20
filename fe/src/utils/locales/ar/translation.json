@@ -71,7 +71,7 @@
   "data.digital_platforms.subtitle": "You can find details of digital solidarity campaigns from the links below.",
   "data.services.title": "Services in Cities Outside the Disaster Area",
   "data.services.subtitle": "You can find the services you need in the cities outside the disaster area from the links below.",
-  "data.emergency_areas.title": "مناطق التجمع الطارئة في {{county}}، {{city}}",
+  "data.emergency_areas.title": "مناطق التجمع الطارئة في {{county}}، {{city}}في",
   "service.category": "Service Category",
   "service.specific": "Specific Service Type",
   
