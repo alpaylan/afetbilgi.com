@@ -16,6 +16,11 @@ import Title from '../Title';
 export default function GatheringData({ value }: { value: GatheringDataNode }) {
   const { t } = useTranslation();
 
+  const items = value.items.slice().sort((a, b) => {
+    if (a.url && !b.url) return -1;
+    return 0;
+  });
+
   return (
     <Box>
       <Title
@@ -34,7 +39,7 @@ export default function GatheringData({ value }: { value: GatheringDataNode }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {value.items.map(item => (
+            {items.map(item => (
               <TableRow
                 key={item.name}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
