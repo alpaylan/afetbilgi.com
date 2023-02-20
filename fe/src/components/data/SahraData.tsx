@@ -75,6 +75,12 @@ export default function SahraDistributionData({
   value: SahraDataNode;
 }) {
   const { t } = useTranslation();
+
+  const items = value.items.slice().sort((a, b) => {
+    if (a.maps_url && !b.maps_url) return -1;
+    return 0;
+  });
+
   return (
     <Box>
       <Title
@@ -92,7 +98,7 @@ export default function SahraDistributionData({
             </TableRow>
           </TableHead>
           <TableBody>
-            {value.items.map((item, index) => (
+            {items.map((item, index) => (
               <TableRow
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

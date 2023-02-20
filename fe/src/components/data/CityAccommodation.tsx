@@ -19,6 +19,11 @@ export default function CityAccommodation({
   value: CityAccommodationNode;
 }) {
   const { t } = useTranslation();
+  const items = value.items.slice().sort((a, b) => {
+    if (a.address && !b.address) return -1;
+    return 0;
+  });
+
   return (
     <Box>
       <Title
@@ -38,7 +43,7 @@ export default function CityAccommodation({
             </TableRow>
           </TableHead>
           <TableBody>
-            {value.items.map((item, i) => (
+            {items.map((item, i) => (
               <TableRow
                 key={i}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
