@@ -11,6 +11,7 @@ import ContainerPharmacyData from './data/ContainerPharmacyData';
 import CreditCardData from './data/CreditCardData';
 import DigitalPlatformData from './data/DigitalPlatformData';
 import DonationLinksData from './data/DonationLinksData';
+import EmergencyGatheringData from './data/EmergencyGathering';
 import EvacuationData from './data/EvacuationData';
 import FoodDistributionData from './data/FoodDistributionData';
 import GasStationsData from './data/GasStationsData';
@@ -57,6 +58,7 @@ const pageMappings: Record<string, FC<{ value: any }>> = {
   [DataType.PHARMACY]: PharmacyData,
   [DataType.DIGITAL_PLATFORMS]: DigitalPlatformData,
   [DataType.SERVICES]: ServicesData,
+  [DataType.EMERGENCY_GATHERING]: EmergencyGatheringData,
 };
 
 export default function Data({ dataNode }: { dataNode: DataNode }) {
