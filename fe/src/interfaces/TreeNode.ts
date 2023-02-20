@@ -112,6 +112,7 @@ export interface HelpItemNode extends DataNode {
 }
 
 export interface Phone {
+  category: string;
   name: string;
   phone_number: string;
   is_plain: boolean;

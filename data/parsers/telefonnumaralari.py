@@ -34,13 +34,14 @@ if __name__ == "__main__":
     out_path = sys.argv[1]
 
     sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
-    sheet_name = "%C3%96nemli%20Telefon%20Numaralar%C4%B1"
+    sheet_name = "%C3%96nemli%20Telefon%20Numaralar%C4%B1%28Yeni%29"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     df = pd.read_csv(url, encoding="utf-8")
     # df = pd.read_csv("phone-numbers.csv", encoding="utf-8")
 
     df = df.rename(columns={
+        "Kategori": "category",
         "Kurum": "name",
         "Telefon Numarası": "phone_number",
     })
@@ -50,6 +51,7 @@ if __name__ == "__main__":
     for _, row in df.iterrows():
         phones.append(
             {
+                "category": row["category"],
                 "name": row["name"],
                 "phone_number": row["phone_number"],
             }
