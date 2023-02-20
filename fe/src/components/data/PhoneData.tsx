@@ -30,6 +30,10 @@ export default function TelephoneData({ value }: { value: TelephoneDataNode }) {
                 {t('telephone')}
 &nbsp;(g)
               </TableCell>
+              <TableCell>
+                {t('details')}
+              </TableCell>
+
             </TableRow>
           </TableHead>
           <TableBody>
@@ -46,16 +50,19 @@ export default function TelephoneData({ value }: { value: TelephoneDataNode }) {
                 </TableCell>
                 <TableCell>
                   {item.phones.map((phone, idx) => (
-                      <div key={idx}>
-                        <a
-                          href={`tel:${phone
-                            ?.replace(/^0/, '')
-                            .replace(/ /g, '')}`}
-                        >
-                          {phone}
-                        </a>
-                      </div>
-                    ))}
+                    <div key={idx}>
+                      <a
+                        href={`tel:${phone
+                          ?.replace(/^0/, '')
+                          .replace(/ /g, '')}`}
+                      >
+                        {phone}
+                      </a>
+                    </div>
+                  ))}
+                </TableCell>
+                <TableCell>
+                  {item.details}
                 </TableCell>
               </TableRow>
             ))}

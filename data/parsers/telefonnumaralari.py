@@ -40,10 +40,13 @@ if __name__ == "__main__":
     df = pd.read_csv(url, encoding="utf-8")
     # df = pd.read_csv("phone-numbers.csv", encoding="utf-8")
 
+    df = df.fillna("")
+
     df = df.rename(columns={
         "Kategori": "category",
         "Kurum": "name",
         "Telefon Numarası": "phone_number",
+        "Detaylar": "details",
     })
     # print(df)
     
@@ -55,6 +58,7 @@ if __name__ == "__main__":
                 "name": row["name"],
                 "phone_number": row["phone_number"],
                 "phones": row["phone_number"].split("\n"),
+                "details": row["details"],
             }
         )
 
