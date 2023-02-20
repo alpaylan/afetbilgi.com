@@ -89,6 +89,7 @@ export default function UsefulLinksData({
         <Table>
           <TableHead>
             <TableRow>
+              <TableCell>{t('category')}</TableCell>
               <TableCell>{t('name')}</TableCell>
               <TableCell>{t('details')}</TableCell>
             </TableRow>
@@ -99,6 +100,9 @@ export default function UsefulLinksData({
                 key={i}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
+                <TableCell>
+                  {item.category}
+                </TableCell>
                 <TableCell component="th" scope="row">
                   {item.name}
                 </TableCell>

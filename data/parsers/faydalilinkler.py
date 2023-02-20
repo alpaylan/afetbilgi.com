@@ -10,7 +10,7 @@ def main():
     out_path = sys.argv[1]
 
     sheet_id = "136czRg-KSQ4zW_1rP1vwJpMFi57GeDeN_0Wh-bFNCjw"
-    sheet_name = "%C3%96nemli%20Web%20Siteleri"
+    sheet_name = "%C3%96nemli%20Web%20Siteleri%20%28Yeni%29"
 
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
@@ -25,6 +25,7 @@ def main():
             {
                 "name": row["İsim"].strip(),
                 "url": row["Link"].strip(),
+                "category": row["Kategori"].strip(),
             }
         )
 
