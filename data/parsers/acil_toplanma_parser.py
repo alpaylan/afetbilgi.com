@@ -27,8 +27,6 @@ def main():
     df["İlçe"] = df["İlçe"].apply(turkish_title)
     df["Mahalle"] = df["Mahalle"].apply(str.strip)
     df["Mahalle"] = df["Mahalle"].apply(turkish_title)
-    df["Sokak"] = df["Sokak"].apply(str.strip)
-    df["Sokak"] = df["Sokak"].apply(turkish_title)
     df["Adres"] = df["Adres"].apply(str.strip)
     df["Adres"] = df["Adres"].apply(turkish_title)
 
