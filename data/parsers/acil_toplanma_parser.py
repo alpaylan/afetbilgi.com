@@ -30,6 +30,8 @@ def main():
     df["Adres"] = df["Adres"].apply(str.strip)
     df["Adres"] = df["Adres"].apply(turkish_title)
 
+    
+    df = df.sort_values(by=["İl", "İlçe", "Mahalle", "Toplanma Alanı"])
     unique_cities = df["İl"].unique()
     options_1 = []
 
@@ -39,6 +41,7 @@ def main():
         options_2 = []
         for county in unique_counties:
             county_df = city_df[city_df["İlçe"] == county]
+
             unique_neighborhoods = county_df["Mahalle"].unique()
 
             neighborhood_dict = {}
