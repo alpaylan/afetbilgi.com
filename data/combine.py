@@ -7,6 +7,7 @@ if len(sys.argv) >= 2:
     basedir = sys.argv[1]
 
 data_points = [
+  { 'name_tr': 'Acil Toplanma Alanları', 'name_en': 'Emergency Gathering Areas', 'name_ku': 'Cihên Toplûkê', "name_ar": "مواقع تجمعات الطوارئ", 'path': f'{basedir}/acil_toplanma_alanlari.json' },
   { 'name_ar': 'مناطق تجميع آمنة', 'name_tr': 'Güvenli Toplanma Alanları', 'name_en': 'Safe Gathering Places', 'name_ku': 'Qadên Ewle Bo Kombûnê', 'path': f'{basedir}/toplanma.json' },
   { 'name_ar': 'نقاط الإخلاء', 'name_tr': 'Tahliye Noktaları', 'name_en': 'Evacuation Points', 'name_ku': 'Xalên valakirinê', 'path': f'{basedir}/tahliye.json' },
   { 'name_ar': 'ملاجئ مؤقتة', 'name_tr': 'Geçici Barınma Alanları', 'name_en': 'Temporary Accommodation Places', 'name_ku': 'Bicîhbûna Demkî', 'path': f'{basedir}/barinma.json' },
@@ -27,7 +28,6 @@ data_points = [
   { 'name_ar': 'المحطة البنزين', 'name_tr': 'Benzin İstasyonları', 'name_en': 'Gas Stations', 'name_ku': 'Stasyona sotemeniyê', 'path': f'{basedir}/akaryakit.json' },
   { 'name_ar': 'المرحاض المتنقل', 'name_tr': 'Mobil Tuvaletler', 'name_en': 'Mobile Toilets', 'name_ku': 'Destavxaneyên mobîl', 'path': f'{basedir}/mobil_tuvalet.json' },
   { 'name_tr': 'Açık Eczaneler', 'name_en': 'Open Pharmacies', 'name_ku': 'Dermanxaneyên vekirî', "name_ar": "صيدليات مفتوحة", 'path': f'{basedir}/eczane_local.json' },
-  # { 'name_tr': 'Acil Toplanma Alanları', 'name_en': 'Emergency Gathering Areas', 'name_ku': 'Cihên Toplûkê', "name_ar": "مواقع تجمعات الطوارئ", 'path': f'{basedir}/acil_toplanma_alanlari.json' },
 
   # { 'name_tr': 'VPN', 'path': f'{basedir}/vpn.json' },
 #   STAGING

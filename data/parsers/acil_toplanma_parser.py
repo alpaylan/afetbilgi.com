@@ -62,10 +62,14 @@ def main():
                     "name": k,
                     "value": {
                         "type": "data",
-                        "city": city,
-                        "county": county,
-                        "neighborhood": k,
-                        "items": v
+                        "data": {
+                            "dataType": "emergency-gathering",
+                            "city": city,
+                            "county": county,
+                            "neighborhood": k,
+                            "items": v
+                        }
+                        
                     }
                 })
         

@@ -99,6 +99,19 @@ export interface GatheringDataNode extends DataNode {
   }[];
 }
 
+export interface EmergencyGatheringData {
+  name: string;
+  address: string;
+  maps_link: string;
+}
+
+export interface EmergencyGatheringDataNode extends DataNode {
+  city: string;
+  county: string;
+  neighborhood: string;
+  items: EmergencyGatheringData[];
+}
+
 export interface HelpItem {
   name: string;
   location?: string;
