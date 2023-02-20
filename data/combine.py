@@ -27,7 +27,7 @@ data_points = [
   { 'name_ar': 'المحطة البنزين', 'name_tr': 'Benzin İstasyonları', 'name_en': 'Gas Stations', 'name_ku': 'Stasyona sotemeniyê', 'path': f'{basedir}/akaryakit.json' },
   { 'name_ar': 'المرحاض المتنقل', 'name_tr': 'Mobil Tuvaletler', 'name_en': 'Mobile Toilets', 'name_ku': 'Destavxaneyên mobîl', 'path': f'{basedir}/mobil_tuvalet.json' },
   { 'name_tr': 'Açık Eczaneler', 'name_en': 'Open Pharmacies', 'name_ku': 'Dermanxaneyên vekirî', "name_ar": "صيدليات مفتوحة", 'path': f'{basedir}/eczane_local.json' },
-  { 'name_tr': 'Acil Toplanma Alanları', 'name_en': 'Emergency Gathering Areas', 'name_ku': 'Cihên Toplûkê', "name_ar": "مواقع تجمعات الطوارئ", 'path': f'{basedir}/acil_toplanma_alanlari.json' },
+  # { 'name_tr': 'Acil Toplanma Alanları', 'name_en': 'Emergency Gathering Areas', 'name_ku': 'Cihên Toplûkê', "name_ar": "مواقع تجمعات الطوارئ", 'path': f'{basedir}/acil_toplanma_alanlari.json' },
 
   # { 'name_tr': 'VPN', 'path': f'{basedir}/vpn.json' },
 #   STAGING
