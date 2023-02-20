@@ -37,7 +37,6 @@ export default function EmergencyAreasData({
             <TableRow>
               <TableCell>{t('name')}</TableCell>
               <TableCell>{t('map')}</TableCell>
-              <TableCell>{t('details')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -54,17 +53,6 @@ export default function EmergencyAreasData({
                     <>
                       <a href={item.maps_url} target='_blank' rel='noreferrer'>
                         {t('location')}
-                      </a>
-                    </>
-                  ) : (
-                    <></>
-                  )}
-                </TableCell>
-                <TableCell>
-                  {item.url ? (
-                    <>
-                      <a href={item.url} target='_blank' rel='noreferrer'>
-                        {t('details')}
                       </a>
                     </>
                   ) : (
