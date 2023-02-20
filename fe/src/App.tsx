@@ -20,7 +20,7 @@ import LocalStorage from './utils/LocalStorage';
 import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
 
-function RootQuestion({ paths, selectedCity }: { paths : string[], selectedCity: string | null }) {
+function RootQuestion({ paths, selectedCity }: { paths: string[]; selectedCity: string | null }) {
   return <Question paths={paths} selectedCity={selectedCity} />;
 }
 
@@ -35,7 +35,13 @@ function App() {
   const { data: lastBuildDate } = useLastBuildDate();
 
   const { data: citiesRaw, isLoading: isCitiesLoading } = useCitiesData();
-  const cities = citiesRaw as string[] | undefined;
+  const closeCities = ['Mardin', 'Şanlıurfa', 'Diyarbakır', 'Mersin', 'Adana', 'Gaziantep', 'Kahramanmaraş', 'Hatay'];
+  let cities = citiesRaw as string[] | undefined;
+  cities = cities?.sort((a, b) => {
+    if (closeCities.findIndex(c => c === a) < closeCities.findIndex(c => c === b)) return 1;
+    if (closeCities.findIndex(c => c === a) > closeCities.findIndex(c => c === b)) return -1;
+    return 0;
+  });
 
   const citiesDict = Object.entries(cityTranslations).reduce((acc, [key, value]) => {
     acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
@@ -56,7 +62,7 @@ function App() {
     finalPaths = [];
   }
 
-  const changeCityHandler = (newValue : string | null) => {
+  const changeCityHandler = (newValue: string | null) => {
     if (newValue) {
       navigate(`/${newValue}`);
     } else {
@@ -66,10 +72,7 @@ function App() {
 
   const changeLanguageHandler = (selectedLanguage: Language) => {
     i18n.changeLanguage(selectedLanguage);
-    LocalStorage.storeObject(
-      LocalStorage.LOCAL_STORAGE_LANGUAGE,
-      selectedLanguage,
-    );
+    LocalStorage.storeObject(LocalStorage.LOCAL_STORAGE_LANGUAGE, selectedLanguage);
   };
 
   return (
@@ -113,7 +116,15 @@ function App() {
           }}
         >
           {location.pathname !== '/' && (
-            <Box sx={{ display: 'flex', flexFlow: 'wrap', alignItems: 'center', justifyContent: 'center', mr: 1 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexFlow: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'center',
+                mr: 1,
+              }}
+            >
               <Button size="large" onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
@@ -164,16 +175,18 @@ function App() {
               ))}
             </Select>
           </Box>
-
         </Box>
 
-        { (location.pathname === '/' || isPathNameCity) && !isCitiesLoading
-        && (
+        {(location.pathname === '/' || isPathNameCity) && !isCitiesLoading && (
           <Box sx={{ mt: 2, mr: 1 }}>
-            <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity} />
+            <CitySelection
+              changeCityHandler={changeCityHandler}
+              cities={cities}
+              citiesDict={citiesDict}
+              selectedCity={selectedCity}
+            />
           </Box>
         )}
-
       </Box>
 
       <Container sx={{ mt: 3 }}>
@@ -185,9 +198,7 @@ function App() {
 
       {location.pathname === '/' && (
         <Box sx={{ textAlign: 'center', p: 2 }}>
-          <Button onClick={() => navigate('/about')}>
-            {t('page.about.title')}
-          </Button>
+          <Button onClick={() => navigate('/about')}>{t('page.about.title')}</Button>
         </Box>
       )}
       <Box sx={{ textAlign: 'center', p: 2 }}>
@@ -195,10 +206,7 @@ function App() {
         :
         {lastBuildDate}
       </Box>
-      <PDFDownloadDialog
-        open={pdfDialogOpen}
-        onClose={() => setPdfDialogOpen(false)}
-      />
+      <PDFDownloadDialog open={pdfDialogOpen} onClose={() => setPdfDialogOpen(false)} />
     </Box>
   );
 }
