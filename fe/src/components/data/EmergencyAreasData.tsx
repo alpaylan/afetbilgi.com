@@ -29,7 +29,7 @@ export default function EmergencyAreasData({
           city: value.city,
           county: value.county,
         })}
-        severity='warning'
+        severity="warning"
       />
       <TableContainer component={Paper} sx={{ maxWidth: 650, minWidth: 100 }}>
         <Table sx={{ maxWidth: 650, minWidth: 100 }}>
@@ -45,13 +45,13 @@ export default function EmergencyAreasData({
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
+                <TableCell component="th" scope="row">
                   {item.name}
                 </TableCell>
                 <TableCell>
                   {item.maps_url ? (
                     <>
-                      <a href={item.maps_url} target='_blank' rel='noreferrer'>
+                      <a href={item.maps_url} target="_blank" rel="noreferrer">
                         {t('location')}
                       </a>
                     </>
