@@ -50,6 +50,7 @@ jobs:
           python3 ./eczane_local.py ../latest_datasets/eczane_local.json
           python3 ./digital_platforms.py ../latest_datasets/digital_platforms.json
           python3 ./services.py ../latest_datasets/services.json
+          python3 ./acil_toplanma_parser.py ../latest_datasets/acil_toplanma_alanlari.json
 
           cp ../datasets/vpn.json ../latest_datasets/vpn.json
           cp ../datasets/blood.json ../latest_datasets/blood.json
