@@ -30,6 +30,8 @@ def walk_by_key(option1, option2, key):
 
     for item in option2[key]:
         item["added_last_day"] = hash_dist(item) not in compare_set
+        if "data" in item:
+            item["data"]["added_last_day"] = item["added_last_day"]
 
 def walk_by_type(option1, option2):
     if "type" in option2 and option2["type"] == "question":
@@ -99,4 +101,4 @@ for option2 in new_data["options"]:
 
         walk_by_type(option1["value"], option2["value"])
 
-print(json.dumps(new_data, ensure_ascii=False, allow_nan=False, indent=4))
+print(json.dumps(new_data, ensure_ascii=False, allow_nan=False))
