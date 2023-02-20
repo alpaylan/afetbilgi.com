@@ -70,6 +70,7 @@
   "data.digital_platforms.title": "Dijital Yardımlaşma Seferberlikleri",
   "data.digital_platforms.subtitle": "Dijital yardımlaşma seferberlikleri ile ilgili detaylı bilgilere aşağıdaki linklerden ulaşabilirsiniz.",
   "data.services.title": "Afet Bölgesi Dışındaki Şehirlerdeki Hizmetler",
+  "data.emergency_areas.title": "{{city}}, {{county}} Acil Toplanma Alanları",
 
   "validation_status": "Doğrulanma Durumu",
   "pdf_notice": "Bu belge [afetbilgi.com](https://afetbilgi.com) sitesinden alınmıştır. Verilerin son doğrulanma tarihi: {date}",

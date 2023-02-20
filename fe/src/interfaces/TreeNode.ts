@@ -269,3 +269,14 @@ export interface ServicesDataNode extends DataNode {
   category: string;
   items: Services[];
 }
+
+export interface EmergencyAreas {
+  name: string;
+  maps_url?: string;
+  address?: string;
+}
+export interface EmergencyAreasDataNode extends DataNode {
+  city: string;
+  county: string;
+  items: EmergencyAreas[];
+}
