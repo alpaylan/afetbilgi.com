@@ -46,7 +46,7 @@ def walk(options1, options2):
             else:
                 group2['added_last_day'] = False
 
-base_data = requests.get('https://cdn.afetbilgi.com/latest.json')
+base_data = requests.get('https://cdn.afetbilgi.com/2023-02-20_16-12-37.json')
 
 with open(new_data_path, 'r') as f:
     new_data = json.load(f)
