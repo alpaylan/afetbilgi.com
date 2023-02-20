@@ -53,4 +53,4 @@ with open(new_data_path, 'r') as f:
 
 walk(base_data.json()['options'], new_data['options'])
 
-print(json.dumps(new_data, ensure_ascii=False, allow_nan=False, indent=4))
+print(json.dumps(new_data, ensure_ascii=False, allow_nan=False))
