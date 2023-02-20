@@ -11,7 +11,7 @@ const version = d.getDate().toString().concat('.', d.getHours().toString(), d.ge
 const baseQuestionData = axios
   .get(process.env.REACT_APP_TEST_DATA
     ? `/latest.json?${version.concat(d.getSeconds().toString())}`
-    : 'https://cdn.afetbilgi.com/latest_new.json')
+    : 'https://cdn.afetbilgi.com/latest.json')
   .then(res => res.data);
 
 export const useQuestionData = (paths: string[]) => {

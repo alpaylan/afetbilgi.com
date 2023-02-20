@@ -76,8 +76,6 @@ export default function Data({ dataNode }: { dataNode: DataNode }) {
         alignItems: 'center',
       }}
     >
-      {(dataNode as any).added_last_day && <Box sx={{ pb: 1 }}>Son 24 saat içinde güncellenmiştir</Box>}
-
       {renderData()}
     </Box>
   );
