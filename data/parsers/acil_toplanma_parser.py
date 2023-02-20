@@ -75,6 +75,10 @@ def main():
                 "name": county,
                 "value": {
                     "type": "question",
+                    "autocompleteHint_tr": "Mahalle",
+                    "autocompleteHint_en": "Neighborhood",
+                    "autocompleteHint_ar": "حي",
+                    "autocompleteHint_ku": "Hev",
                     "text_tr": f"{county} ilçesinde hangi mahallede acil toplanma alanı arıyorsunuz?",
                     "text_en": f"Which neighborhood in {county} are you looking for an emergency meeting area?",
                     "text_ar": f"أي حي في {county} تبحث عن منطقة اجتماعات طارئة؟",
@@ -83,30 +87,39 @@ def main():
                 }
             })
 
-        options_1.append({
-            "name": city,
-            "value": {
-                "type": "question",
-                "text_tr": f"{city} ilinde hangi ilçede acil toplanma alanı arıyorsunuz?",
-                "text_en": f"Which county in {city} are you looking for an emergency meeting area?",
-                "text_ar": f"في أي محافظة في {city} تبحث عن منطقة اجتماعات طارئة؟",
-                "text_ku": f"Li {city} çi ilçeyê hûn ji bo biryarên xebatê ya xweşî re hatine?",
-                "options": options_2
-            }
-        })
+        # options_1.append({
+        #     "name": city,
+        #     "value": {
+        #         "type": "question",
+        #         "text_tr": f"{city} ilinde hangi ilçede acil toplanma alanı arıyorsunuz?",
+        #         "text_en": f"Which county in {city} are you looking for an emergency meeting area?",
+        #         "text_ar": f"في أي محافظة في {city} تبحث عن منطقة اجتماعات طارئة؟",
+        #         "text_ku": f"Li {city} çi ilçeyê hûn ji bo biryarên xebatê ya xweşî re hatine?",
+        #         "options": options_2
+        #     }
+        # })
 
     data = {
         "type": "question",
-        "text_tr": "Hangi ilde acil toplanma alanı arıyorsunuz?",
-        "text_en": "Which city are you looking for an emergency meeting area?",
-        "text_ar": "في أي مدينة تبحث عن منطقة اجتماعات طارئة؟",
-        "text_ku": "Li çi şehre hûn ji bo biryarên xebatê ya xweşî re hatine?",
-        "autocompleteHint_tr": "Şehir",
-        "autocompleteHint_en": "City",
-        "autocompleteHint_ar": "مدينة",
-        "autocompleteHint_ku": "Bajar",
-        "options": options_1
+        "text_tr": "Hangi ilçede acil toplanma alanı arıyorsunuz?",
+        "text_en": "Which county are you looking for an emergency meeting area?",
+        "text_ar": "في أي محافظة تبحث عن منطقة اجتماعات طارئة؟",
+        "text_ku": "Li çi ilçeyê hûn ji bo biryarên xebatê ya xweşî re hatine?",
+        "options": options_2
     }
+
+    # data = {
+    #     "type": "question",
+    #     "text_tr": "Hangi ilde acil toplanma alanı arıyorsunuz?",
+    #     "text_en": "Which city are you looking for an emergency meeting area?",
+    #     "text_ar": "في أي مدينة تبحث عن منطقة اجتماعات طارئة؟",
+    #     "text_ku": "Li çi şehre hûn ji bo biryarên xebatê ya xweşî re hatine?",
+    #     "autocompleteHint_tr": "Şehir",
+    #     "autocompleteHint_en": "City",
+    #     "autocompleteHint_ar": "مدينة",
+    #     "autocompleteHint_ku": "Bajar",
+    #     "options": options_1
+    # }
 
     with open(out_path, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
