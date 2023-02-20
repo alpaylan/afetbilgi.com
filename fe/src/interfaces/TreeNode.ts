@@ -135,6 +135,7 @@ export interface URLDataNode extends DataNode {
 }
 
 export interface UsefulLink {
+  category: string;
   name: string;
   url: string;
 }
