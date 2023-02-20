@@ -20,7 +20,7 @@ import LocalStorage from './utils/LocalStorage';
 import { Language } from './utils/types';
 import { LANGUAGES } from './utils/util';
 
-function RootQuestion({ paths, selectedCity }: { paths : string[], selectedCity: string | null }) {
+function RootQuestion({ paths, selectedCity }: { paths: string[]; selectedCity: string | null }) {
   return <Question paths={paths} selectedCity={selectedCity} />;
 }
 
@@ -35,7 +35,13 @@ function App() {
   const { data: lastBuildDate } = useLastBuildDate();
 
   const { data: citiesRaw, isLoading: isCitiesLoading } = useCitiesData();
-  const cities = citiesRaw as string[] | undefined;
+  const closeCities = ['Mardin', 'Şanlıurfa', 'Diyarbakır', 'Mersin', 'Adana', 'Gaziantep', 'Kahramanmaraş', 'Hatay'];
+  let cities = citiesRaw as string[] | undefined;
+  cities = cities?.sort((a, b) => {
+    if (closeCities.findIndex((c) => c === a) < closeCities.findIndex((c) => c === b)) return 1;
+    if (closeCities.findIndex((c) => c === a) > closeCities.findIndex((c) => c === b)) return -1;
+    return 0;
+  });
 
   const citiesDict = Object.entries(cityTranslations).reduce((acc, [key, value]) => {
     acc[key] = Object.entries(value).reduce((acc2, [key2, value2]) => {
@@ -46,17 +52,17 @@ function App() {
     return acc;
   }, {} as Record<string, Record<string, string>>);
 
-  const paths = location.pathname.split('/').filter(p => p !== '');
+  const paths = location.pathname.split('/').filter((p) => p !== '');
   let finalPaths = paths;
   let selectedCity = null as string | null;
   const possibleCityName = decodeURIComponent(paths[0]);
-  const isPathNameCity = paths.length > 0 && cities?.some(city => city === possibleCityName);
+  const isPathNameCity = paths.length > 0 && cities?.some((city) => city === possibleCityName);
   if (isPathNameCity) {
     selectedCity = possibleCityName;
     finalPaths = [];
   }
 
-  const changeCityHandler = (newValue : string | null) => {
+  const changeCityHandler = (newValue: string | null) => {
     if (newValue) {
       navigate(`/${newValue}`);
     } else {
@@ -66,10 +72,7 @@ function App() {
 
   const changeLanguageHandler = (selectedLanguage: Language) => {
     i18n.changeLanguage(selectedLanguage);
-    LocalStorage.storeObject(
-      LocalStorage.LOCAL_STORAGE_LANGUAGE,
-      selectedLanguage,
-    );
+    LocalStorage.storeObject(LocalStorage.LOCAL_STORAGE_LANGUAGE, selectedLanguage);
   };
 
   return (
@@ -113,24 +116,32 @@ function App() {
           }}
         >
           {location.pathname !== '/' && (
-            <Box sx={{ display: 'flex', flexFlow: 'wrap', alignItems: 'center', justifyContent: 'center', mr: 1 }}>
-              <Button size="large" onClick={() => navigate('/')}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexFlow: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'center',
+                mr: 1,
+              }}
+            >
+              <Button size='large' onClick={() => navigate('/')}>
                 {t('page.main.title')}
               </Button>
 
-              <Button size="large" onClick={() => navigate(-1)}>
+              <Button size='large' onClick={() => navigate(-1)}>
                 {t('button.back')}
               </Button>
             </Box>
           )}
 
           <Button
-            size="large"
+            size='large'
             onClick={() => {
               window.open('https://maps.afetbilgi.com', '_blank');
             }}
             startIcon={<MapIcon />}
-            variant="outlined"
+            variant='outlined'
             sx={{ mr: 1 }}
           >
             {t('button.map')}
@@ -138,12 +149,12 @@ function App() {
 
           {location.pathname !== '/about' && (
             <Button
-              size="large"
+              size='large'
               onClick={() => {
                 setPdfDialogOpen(true);
               }}
               startIcon={<PictureAsPdfIcon />}
-              variant="outlined"
+              variant='outlined'
               sx={{ mr: 1 }}
             >
               {t('button.download')}
@@ -152,10 +163,10 @@ function App() {
 
           <Box sx={{ mr: 1 }}>
             <Select
-              id="language-options-multiselect"
-              size="small"
+              id='language-options-multiselect'
+              size='small'
               value={i18n.language}
-              onChange={e => changeLanguageHandler(e.target.value as Language)}
+              onChange={(e) => changeLanguageHandler(e.target.value as Language)}
             >
               {LANGUAGES.map(({ key, name }) => (
                 <MenuItem key={key} value={key}>
@@ -164,41 +175,36 @@ function App() {
               ))}
             </Select>
           </Box>
-
         </Box>
 
-        { (location.pathname === '/' || isPathNameCity) && !isCitiesLoading
-        && (
+        {(location.pathname === '/' || isPathNameCity) && !isCitiesLoading && (
           <Box sx={{ mt: 2, mr: 1 }}>
-            <CitySelection changeCityHandler={changeCityHandler} cities={cities} citiesDict={citiesDict} selectedCity={selectedCity} />
+            <CitySelection
+              changeCityHandler={changeCityHandler}
+              cities={cities}
+              citiesDict={citiesDict}
+              selectedCity={selectedCity}
+            />
           </Box>
         )}
-
       </Box>
 
       <Container sx={{ mt: 3 }}>
         <Routes>
-          <Route path="/*" element={<RootQuestion paths={finalPaths} selectedCity={selectedCity} />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path='/*' element={<RootQuestion paths={finalPaths} selectedCity={selectedCity} />} />
+          <Route path='/about' element={<AboutUs />} />
         </Routes>
       </Container>
 
       {location.pathname === '/' && (
         <Box sx={{ textAlign: 'center', p: 2 }}>
-          <Button onClick={() => navigate('/about')}>
-            {t('page.about.title')}
-          </Button>
+          <Button onClick={() => navigate('/about')}>{t('page.about.title')}</Button>
         </Box>
       )}
       <Box sx={{ textAlign: 'center', p: 2 }}>
-        {t('last_update')}
-        :
-        {lastBuildDate}
+        {t('last_update')}:{lastBuildDate}
       </Box>
-      <PDFDownloadDialog
-        open={pdfDialogOpen}
-        onClose={() => setPdfDialogOpen(false)}
-      />
+      <PDFDownloadDialog open={pdfDialogOpen} onClose={() => setPdfDialogOpen(false)} />
     </Box>
   );
 }
