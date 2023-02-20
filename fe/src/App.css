@@ -11,18 +11,5 @@ body {
 }
 
 .new-data-item {
-  position: relative;
-}
-
-.new-data-item::after {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  right: 100%;
-  padding-left: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  content: " * ";
-  color: red;
+  background-color: rgba(166, 220, 206, 0.2);
 }
