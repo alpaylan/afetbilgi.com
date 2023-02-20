@@ -132,9 +132,9 @@ export default function Question({ paths, selectedCity }: { paths: string[], sel
         [key in Category as string]: JSX.Element[];
       } = {
         [Category.VICTIM]: [],
+        [Category.RESOURCES]: [],
         [Category.HEALTH]: [],
         [Category.HELPER]: [],
-        [Category.RESOURCES]: [],
         [Category.OTHER]: [],
       };
 
