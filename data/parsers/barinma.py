@@ -190,6 +190,10 @@ def main():
                 {
                     "name": "Emlakjet Evin Umut Olsun",
                     "url": "https://www.emlakjet.com/evin-umut-olsun/"
+                },
+                {
+                    "name": "Evim Yuvan Olsun (AFAD)",
+                    "url": "https://evimyuvanolsun.org/"
                 }
             ],
         },
