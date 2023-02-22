@@ -52,4 +52,15 @@ class PhoneNumberColumn(Column):
                 return False
         return True
 
+class CategoryColumn(Column, ABC):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+    
+class CityColumn(CategoryColumn):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
+        self.type = "city"
+
+    def validate(self, value) -> bool:
+        pass
 
