@@ -13,7 +13,8 @@ if len(sys.argv) < 2:
 else:
     basedir = sys.argv[1]
 
-cities = ['istanbul', 'ankara', 'izmir']
+# cities = ['istanbul', 'ankara', 'izmir']
+cities = ['ankara', 'izmir']
 
 result = []
 
