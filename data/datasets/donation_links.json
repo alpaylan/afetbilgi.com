@@ -18,6 +18,14 @@
             {
                 "name": "Kızılay",
                 "url": "https://www.kizilay.org.tr/bagis"
+            },
+            {
+                "name": "Unicef TL Bağış",
+                "url": "https://bagis.unicefturk.org/guneydogudepremi"
+            },
+            {
+                "name": "Unicef USD/EUR Bağış",
+                "url": "https://bagis.unicefturk.org/turkiye_earthquake"
             }
         ]
     }
