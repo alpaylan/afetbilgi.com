@@ -27,7 +27,7 @@ jobs:
           mkdir to_upload
 
           curl -o to_upload/afetyardimalanlari-org-ankara.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=Ankara"
-          curl -o to_upload/afetyardimalanlari-org-istanbul.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0stanbul"
+          # curl -o to_upload/afetyardimalanlari-org-istanbul.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0stanbul"
           curl -o to_upload/afetyardimalanlari-org-izmir.json "https://pfkuirisqb.execute-api.eu-central-1.amazonaws.com/sites?cityFilter=%C4%B0zmir"
 
           python3 external_combine.py ./to_upload
