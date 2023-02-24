@@ -140,3 +140,7 @@ __pycache__/
 latest.json
 CHANGELOG.md
 maps/src/tempData.json
+
+.terraform/
+.terraform.lock.hcl
+*.tfstate
