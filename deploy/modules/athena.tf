@@ -58,10 +58,45 @@ select
     date_parse(max(requestdatetime), '%d/%b/%Y:%T +0000') as to_ts
 from ${aws_s3_bucket.public_data.bucket}
 where
-    date_parse(requestdatetime, '%d/%b/%Y:%T +0000') >= date_add('day', -1, current_date)
-    AND date_parse(requestdatetime, '%d/%b/%Y:%T +0000') < current_date
+    date_parse(requestdatetime, '%d/%b/%Y:%T +0000') >= date_add('day', -1, current_timestamp)
+    AND date_parse(requestdatetime, '%d/%b/%Y:%T +0000') < current_timestamp
 group by remoteip
 order by requests desc
-limit 50
+EOF
+}
+
+resource "aws_athena_named_query" "prod_data_bucket_daily_operations_count" {
+    name = "Prod data bucket daily operations count"
+    database = aws_athena_database.s3_access_logs.name
+    query = <<EOF
+select
+    operation,
+    count(operation) as requests,
+    date_parse(min(requestdatetime), '%d/%b/%Y:%T +0000') as from_ts,
+    date_parse(max(requestdatetime), '%d/%b/%Y:%T +0000') as to_ts
+from ${aws_s3_bucket.public_data.bucket}
+where
+    date_parse(requestdatetime, '%d/%b/%Y:%T +0000') >= date_add('day', -1, current_timestamp)
+    AND date_parse(requestdatetime, '%d/%b/%Y:%T +0000') < current_timestamp
+group by operation
+order by requests desc
+EOF
+}
+
+resource "aws_athena_named_query" "prod_data_bucket_hourly_operations_count_with_10m_window" {
+    name = "Prod data bucket hourly operations count with 10m window"
+    database = aws_athena_database.s3_access_logs.name
+    query = <<EOF
+select
+    operation,
+    count(operation) as requests,
+    date_parse(min(requestdatetime), '%d/%b/%Y:%T +0000') as from_ts,
+    date_parse(max(requestdatetime), '%d/%b/%Y:%T +0000') as to_ts
+from ${aws_s3_bucket.public_data.bucket}
+where
+    date_parse(requestdatetime, '%d/%b/%Y:%T +0000') >= date_add('minute', -70, current_timestamp)
+    AND date_parse(requestdatetime, '%d/%b/%Y:%T +0000') < date_add('minute', -10, current_timestamp)
+group by operation
+order by requests desc
 EOF
 }
