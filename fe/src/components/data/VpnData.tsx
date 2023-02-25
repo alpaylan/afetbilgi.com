@@ -31,6 +31,7 @@ export default function VpnData({ value }: { value: VpnDataNode }) {
           <TableBody>
             {value.items.map(item => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={item.name}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >

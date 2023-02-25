@@ -100,6 +100,7 @@ export default function SahraDistributionData({
           <TableBody>
             {items.map((item, index) => (
               <TableRow
+                className={item.added_last_day ? 'new-data-item' : ''}
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >

@@ -9,3 +9,7 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+.new-data-item {
+  background-color: rgba(166, 220, 206, 0.2);
+}
