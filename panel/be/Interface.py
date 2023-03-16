@@ -7,7 +7,8 @@ import json
 import boto3
 import uuid
 from boto3.dynamodb.conditions import Key, Attr
-
+import numpy as np
+import math
 class Interface:
     def __init__(self) -> None:
         # Setup connection to dynamodb via 
@@ -23,6 +24,8 @@ class Interface:
                 return self.handle_new_table_request(req)
             case NewEntryRequest():
                 return self.handle_new_entry_request(req)
+            case BatchEntryRequest():
+                return self.handle_batch_entry_request(req)
             case UpdateEntryRequest():
                 return self.handle_update_entry_request(req)
             case GetTableEntriesRequest():
@@ -95,6 +98,10 @@ class Interface:
         return True
 
     def get_table(self, table_name: str) -> Table:
+        version = self.get_latest_table_version(table_name)
+        if version is None:
+            return False
+        table_name = f"{table_name}-{version}"
         table = next(filter(lambda table: table['table_name']['S'] == table_name, self.tables))
         columns = json.loads(table['columns']['S'])
         return Table(table_name, columns)
@@ -143,12 +150,9 @@ class Interface:
             return int(response['Items'][0]['version']['N'])
 
     def handle_get_table_entries_request(self, req: GetTableEntriesRequest) -> dict[str, dict]:
-        version = self.get_latest_table_version(req.table_name)
-        if version is None:
-            return False
-        table_name = f"{req.table_name}-{version}"
+        table = self.get_table(req.table_name)
         
-        response = self.dynamo.scan(TableName=table_name)
+        response = self.dynamo.scan(TableName=table.table_name)
         entries = {}
         # Get latest versions
         for item in response['Items']:
@@ -162,9 +166,8 @@ class Interface:
             del entry['id']
 
         # Inline types
-
         for entry in entries.values():
-            for column in self.get_table(table_name).columns:
+            for column in table.columns:
                 entry[column.name] = entry[column.name]['S']
 
         return entries
@@ -182,3 +185,30 @@ class Interface:
         for table_name in self.ind_table_names:
             tables[table_name] = self.handle_get_table_entries_request(GetTableEntriesRequest(table_name))
         return tables
+
+    def handle_batch_entry_request(self, req: BatchEntryRequest) -> bool:
+        items = []
+        table = self.get_table(req.table_name)
+        for entry in req.entries:
+            item = {
+                "id": { "S": str(uuid.uuid4()) },
+                "version": { "N": "0" }
+            }
+
+            for column in table.columns:
+                if isinstance(entry[column.name], float) and math.isnan(entry[column.name]):
+                    item[column.name] = { "S" : "" }
+                else:
+                    item[column.name] = { "S" : entry[column.name] }
+            items.append(item)
+        
+        print(items)
+
+        for itemset in np.array_split(items, 25):
+            self.dynamo.batch_write_item(
+                RequestItems={
+                    table.table_name: [{'PutRequest': {'Item': item}} for item in itemset]
+                }
+            )
+
+        return True

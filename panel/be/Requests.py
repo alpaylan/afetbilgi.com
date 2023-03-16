@@ -45,6 +45,12 @@ class NewEntryRequest(Request):
         self.table_name = table_name
         self.entry = entry
 
+class BatchEntryRequest(Request):
+    def __init__(self, table_name: str, entries: list[dict[str, str]]):
+        self.table_name = table_name
+        self.entries = entries
+
+
 class UpdateEntryRequest(Request):
     def __init__(self, table_name: str, id: uuid.uuid4, entry: dict[str, str]):
         self.table_name = table_name

@@ -44,29 +44,35 @@ def test1():
 
 def test2():
     interface = Interface()
+    # interface.request(
+    #     NewTableSchemaRequest(
+    #         "eczane",
+    #         [
+    #             ("Şehir", "text"),
+    #             ("İlçe", "text"),
+    #             ("Konum", "text"),
+    #             ("Konum Linki", "link")
+    #         ]
+    #     )
+    # )
+
+    entries = interface.get_table("eczane").import_csv("eczane.csv")
+
+
     interface.request(
-        NewTableSchemaRequest(
+        BatchEntryRequest(
             "eczane",
-            [
-                ("Şehir", "text"),
-                ("İlçe", "text"),
-                ("Konum", "text"),
-                ("Konum Linki", "link")
-            ]
+            entries
         )
     )
+    # indexer = Indexer([("Şehir", "What is your city?"), ("İlçe", "What is your district?")], ContainerPharmacyList)
 
-    interface.get_table("eczane").import_csv("eczane.csv")
+    # csv = interface.get_table("eczane").get_csv()
+    # df = pd.read_csv(StringIO(csv))
 
+    # datatree = DataTree(df, indexer)
 
-    indexer = Indexer([("Şehir", "What is your city?"), ("İlçe", "What is your district?")], ContainerPharmacyList)
-
-    csv = interface.get_table("eczane").get_csv()
-    df = pd.read_csv(StringIO(csv))
-
-    datatree = DataTree(df, indexer)
-
-    print(datatree.to_json())
+    # print(datatree.to_json())
 
 
 
@@ -74,9 +80,9 @@ def test2():
 if __name__ == "__main__":
     
     # test1()
-    # test2()
+    test2()
 
-    interface = Interface()
+    # interface = Interface()
     # interface.request(
     #     NewTableSchemaRequest(
     #         "test", 
@@ -101,6 +107,29 @@ if __name__ == "__main__":
     #     }
     # ))
 
-    print(interface.request(
-        GetTableSchemaRequest("test")
-    ))
+    # print(interface.request(
+    #     GetTableSchemaRequest("test")
+    # ))
+
+    # interface.request(
+    #     BatchEntryRequest(
+    #         "test",
+    #         [
+    #             {
+    #                 "name": "Alperen",
+    #                 "phone": "555-555-5555",
+    #                 "address": "333 Zain St",
+    #             },
+    #             {
+    #                 "name": "Yiğit",
+    #                 "phone": "555-555-5555",
+    #                 "address": "554 Kain St",
+    #             },
+    #             {
+    #                 "name": "Ozan",
+    #                 "phone": "333-333-3333",
+    #                 "address": "342 In St",
+    #             },
+    #         ]
+    #     )
+    # )
