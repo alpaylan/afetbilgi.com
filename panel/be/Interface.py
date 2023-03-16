@@ -87,7 +87,6 @@ class Interface:
         for column in self.get_table(table_name).columns:
             item[column.name] = { "S" : req.entry[column.name] }
 
-        print(item)
         self.dynamo.put_item(
             TableName=table_name,
             Item=item
@@ -98,7 +97,6 @@ class Interface:
     def get_table(self, table_name: str) -> Table:
         table = next(filter(lambda table: table['table_name']['S'] == table_name, self.tables))
         columns = json.loads(table['columns']['S'])
-        print(columns)
         return Table(table_name, columns)
         
     
@@ -120,7 +118,6 @@ class Interface:
         for column in self.get_table(table_name).columns:
             item[column.name] = { "S" : req.entry[column.name] }
 
-        print(item)
         self.dynamo.put_item(
             TableName=table_name,
             Item=item
@@ -129,8 +126,6 @@ class Interface:
         return True
 
     def get_latest_item_version(self, table_name: str, id: str) -> None | int:
-        print(table_name, id)
-        print(Key('id').eq(id))
         response = self.dynamo.query(
             TableName=table_name,
             ExpressionAttributeValues={
@@ -185,6 +180,5 @@ class Interface:
     def handle_get_all_data_request(self, _: GetAllDataRequest) -> dict[str, dict[str, dict]]:
         tables = {}
         for table_name in self.ind_table_names:
-            print(table_name)
             tables[table_name] = self.handle_get_table_entries_request(GetTableEntriesRequest(table_name))
         return tables
