@@ -51,3 +51,14 @@ class UpdateEntryRequest(Request):
         self.entry = entry
         self.id = id
 
+class GetTableEntriesRequest(Request):
+    def __init__(self, table_name: str):
+        self.table_name = table_name
+
+class GetTableSchemaRequest(Request):
+    def __init__(self, table_name: str):
+        self.table_name = table_name
+
+class GetAllDataRequest(Request):
+    def __init__(self):
+        pass

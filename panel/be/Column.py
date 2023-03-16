@@ -24,6 +24,12 @@ class Column(ABC):
         }
         return column_dict[column["field_type"]](column["field_name"])
     
+    def __str__(self) -> str:
+        return f"Column(name={self.name}, type={self.type})"
+
+    def __repr__(self) -> str:
+        return f'{{"field_type": "{self.type}", "field_name": "{self.name}"}}'
+    
 class TextColumn(Column):
     def __init__(self, name: str) -> None:
         super().__init__(name)

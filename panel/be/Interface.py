@@ -1,5 +1,5 @@
 
-from Requests import Request, NewTableSchemaRequest, NewEntryRequest, UpdateEntryRequest
+from Requests import *
 from Column import Column
 from Table import Table
 
@@ -12,10 +12,10 @@ class Interface:
     def __init__(self) -> None:
         # Setup connection to dynamodb via 
         self.dynamo = boto3.client('dynamodb', region_name='us-east-1')
-        self.table_names = self.dynamo.list_tables()['TableNames']
-        self.table_names.remove('tables')
+        self.all_table_names = self.dynamo.list_tables()['TableNames']
+        self.all_table_names.remove('tables')
+        self.ind_table_names = list(set(map(lambda name: name.split('-')[0], self.all_table_names)))
         self.tables = self.dynamo.scan(TableName='tables')['Items']
-        print(self.tables)
 
     def request(self, req: Request) -> bool:
         match req:
@@ -25,12 +25,18 @@ class Interface:
                 return self.handle_new_entry_request(req)
             case UpdateEntryRequest():
                 return self.handle_update_entry_request(req)
+            case GetTableEntriesRequest():
+                return self.handle_get_table_entries_request(req)
+            case GetTableSchemaRequest():
+                return self.handle_get_table_schema_request(req)
+            case GetAllDataRequest():
+                return self.handle_get_all_data_request(req)
             case _:
                 return False
 
 
     def get_latest_table_version(self, table_name: str) -> None | int:
-        table_names = map(lambda name: tuple(name.split('-')), self.table_names)
+        table_names = map(lambda name: tuple(name.split('-')), self.all_table_names)
         latest_table_versions = {}
         for name, version in table_names:
             if name not in latest_table_versions or version > latest_table_versions[name]:
@@ -87,6 +93,8 @@ class Interface:
             Item=item
         )
 
+        return True
+
     def get_table(self, table_name: str) -> Table:
         table = next(filter(lambda table: table['table_name']['S'] == table_name, self.tables))
         columns = json.loads(table['columns']['S'])
@@ -118,6 +126,8 @@ class Interface:
             Item=item
         )
 
+        return True
+
     def get_latest_item_version(self, table_name: str, id: str) -> None | int:
         print(table_name, id)
         print(Key('id').eq(id))
@@ -136,3 +146,45 @@ class Interface:
             return None
         else:
             return int(response['Items'][0]['version']['N'])
+
+    def handle_get_table_entries_request(self, req: GetTableEntriesRequest) -> dict[str, dict]:
+        version = self.get_latest_table_version(req.table_name)
+        if version is None:
+            return False
+        table_name = f"{req.table_name}-{version}"
+        
+        response = self.dynamo.scan(TableName=table_name)
+        entries = {}
+        # Get latest versions
+        for item in response['Items']:
+            if item['id']['S'] not in entries\
+                or int(item['version']['N']) > int(entries[item['id']['S']]['version']['N']):
+                entries[item['id']['S']] = item
+
+        # Remove version
+        for entry in entries.values():
+            del entry['version']        
+            del entry['id']
+
+        # Inline types
+
+        for entry in entries.values():
+            for column in self.get_table(table_name).columns:
+                entry[column.name] = entry[column.name]['S']
+
+        return entries
+    
+
+    def handle_get_table_schema_request(self, req: GetTableSchemaRequest) -> dict[str, str]:
+        version = self.get_latest_table_version(req.table_name)
+        if version is None:
+            return False
+        table_name = f"{req.table_name}-{version}"
+        return self.get_table(table_name).columns
+
+    def handle_get_all_data_request(self, _: GetAllDataRequest) -> dict[str, dict[str, dict]]:
+        tables = {}
+        for table_name in self.ind_table_names:
+            print(table_name)
+            tables[table_name] = self.handle_get_table_entries_request(GetTableEntriesRequest(table_name))
+        return tables
