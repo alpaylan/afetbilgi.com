@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
 import './App.css';
-import { Box } from '@mui/material';
+import { authToken as authTokenAtom } from './atoms/AuthToken';
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login';
+import { isValidToken } from './util/Auth';
 
-function App() {
-  return <Box component='div'>Panel</Box>;
-}
+const App = () => {
+  const navigate = useNavigate();
+
+  const authToken = useRecoilValue(authTokenAtom);
+
+  useEffect(() => {
+    if (!isValidToken(authToken)) {
+      navigate('login');
+    } else {
+      navigate('');
+    }
+  }, [authToken]);
+
+  return (
+    <Routes>
+      <Route path='login' element={<Login />} />
+      <Route path='*' element={<Dashboard />} />
+    </Routes>
+  );
+};
 
 export default App;

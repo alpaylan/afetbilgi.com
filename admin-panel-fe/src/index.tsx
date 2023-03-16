@@ -6,6 +6,8 @@ import { ToastContainer } from 'material-react-toastify';
 import 'material-react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -21,19 +23,23 @@ const root = ReactDOM.createRoot(
 root.render(
   <CacheProvider value={muiCache}>
     <React.StrictMode>
-      <ThemeProvider theme={createTheme()}>
-        <App />
-        <ToastContainer
-          position='top-center'
-          autoClose={6000}
-          hideProgressBar={false}
-          newestOnTop={true}
-          closeOnClick
-          rtl={false}
-          draggable
-          pauseOnHover
-        />
-      </ThemeProvider>
+      <RecoilRoot>
+        <BrowserRouter>
+          <ThemeProvider theme={createTheme()}>
+            <App />
+            <ToastContainer
+              position='top-center'
+              autoClose={6000}
+              hideProgressBar={false}
+              newestOnTop={true}
+              closeOnClick
+              rtl={false}
+              draggable
+              pauseOnHover
+            />
+          </ThemeProvider>
+        </BrowserRouter>
+      </RecoilRoot>
     </React.StrictMode>
   </CacheProvider>,
 );
