@@ -6,7 +6,7 @@ import numpy as np
 from Column import Column
 
 class Table:
-    def __init__(self, table_name: str, columns: list[tuple[str, str]]) -> None:
+    def __init__(self, table_name: str, columns: list[dict[str, str]]) -> None:
         self.table_name = table_name
         self.columns: list[Column] = list(map(lambda c: Column.mkColumn(c), columns))
         self.content: list[list[str]] = []

@@ -1,7 +1,7 @@
 
 from Column import Column
 from Table import Table
-from Requests import Request, NewTableSchemaRequest, NewEntryRequest
+from Requests import Request, NewTableSchemaRequest, NewEntryRequest, UpdateEntryRequest
 from Interface import Interface
 from DataTree import DataTree
 from Indexer import Indexer
@@ -73,8 +73,31 @@ def test2():
 
 if __name__ == "__main__":
     
-    test1()
+    # test1()
     # test2()
 
+    interface = Interface()
+    # interface.request(
+    #     NewTableSchemaRequest(
+    #         "test", 
+    #         [("name", "text"), ("phone", "phone_number") , ("address", "text")]
+    #     )
+    # )
 
+    # interface.request(NewEntryRequest("test", 
+    #     {
+    #         "name": "Ahmet",
+    #         "phone": "555-555-5555",
+    #         "address": "123 Main St",
+    #     }
+    # ))
+
+    interface.request(UpdateEntryRequest("test", 
+        "6df13f8d-8b91-4448-80a0-942e76c3bac2",
+        {
+            "name": "Ahmet",
+            "phone": "555-555-3333",
+            "address": "523 Main St",
+        }
+    ))
 

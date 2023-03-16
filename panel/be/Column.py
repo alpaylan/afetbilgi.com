@@ -16,13 +16,13 @@ class Column(ABC):
         return True
     
     @staticmethod
-    def mkColumn(column: tuple[str, str]) -> Column:
+    def mkColumn(column: dict[str, str]) -> Column:
         column_dict = {
             "text": TextColumn,
             "link": LinkColumn,
             "phone_number": PhoneNumberColumn
         }
-        return column_dict[column[1]](column[0])
+        return column_dict[column["field_type"]](column["field_name"])
     
 class TextColumn(Column):
     def __init__(self, name: str) -> None:
