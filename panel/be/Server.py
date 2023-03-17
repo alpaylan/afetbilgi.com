@@ -1,10 +1,27 @@
-
 from flask import Flask, request, jsonify
 from Interface import Interface
 from Requests import *
+from dotenv import load_dotenv
+from panel.be.UserUtils import UserUtils
+from os import environ
 
+load_dotenv
 app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = environ.get('JWT_SECRET_KEY')
+app.config['AWS_REGION'] = environ.get('AWS_REGION')
+app.config['AWS_ACCESS_KEY_ID'] = environ.get('AWS_ACCESS_KEY_ID')
+app.config['AWS_SECRET_ACCESS_KEY'] = environ.get('AWS_SECRET_ACCESS_KEY')
 interface = Interface()
+
+@app.route('/accounts/login', methods=['POST'])
+def login():
+    req = request.get_json()
+    return UserUtils.login(req['username'], req['password'])
+
+@app.route('/accounts/register', methods=['POST'])
+def register():
+    req = request.get_json()
+    return UserUtils.register(req['username'], req['password'])
 
 @app.route('/new_table_schema', methods=['POST'])
 def new_table_schema():
