@@ -1,0 +1,50 @@
+{
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "delete": "Delete",
+  "edit": "Edit",
+  "logout": "Logout",
+  "password": "Password",
+  "save": "Save",
+  "title": "Afet Bilgi Admin Panel",
+  "username": "Username",
+  "view_more": "View more",
+
+  "assignment.action": "Action",
+  "assignment.assign": "Assign",
+  "assignment.row_count": "Row Count",
+  "assignment.rows_in_stage": "rows in stage",
+  "assignment.stage": "Stage",
+  "assignment.table_name": "Table Name",
+  "assignment.view": "View",
+
+  "column.boolean": "Boolean",
+  "column.text": "Text",
+  "column.link": "Link",
+  "column.phone_number": "Phone Number",
+
+  "dashboard.assigned_to_me": "Assigned to Me",
+
+  "drawer.assignments": "Assignments",
+  "drawer.home": "Home",
+  "drawer.pipeline": "Pipeline",
+  "drawer.tables": "Tables",
+
+  "pipeline.new_stage": "New Stage",
+  "pipeline.page_description": "You can view and edit pipeline stages in this page",
+  "pipeline.pipeline_stages": "Pipeline Stages",
+
+  "pipeline_modal.stage_id": "Stage ID",
+  "pipeline_modal.stage_name": "Stage Name",
+  "pipeline_modal.title": "Add New Pipeline Stage",
+
+  "table.table_definitions": "Table Definitions",
+  "table.name": "Name",
+  "table.columns": "Columns",
+  "table.last_updated_at": "Last Updated At",
+  "table.last_updated_by": "Last Updated By",
+  "table.new_table_definition": "New Table",
+  "table.page_description": "You can view and edit table definitions in this page",
+
+  "table_modal.title": "Modify Table Definition"
+}
