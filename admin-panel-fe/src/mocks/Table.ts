@@ -48,7 +48,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 1',
+    name: 'Table 1A',
     columns: [
       {
         name: 'Text Column',
@@ -67,7 +67,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 2',
+    name: 'Table 2A',
     columns: [
       {
         name: 'Text Column 1',
@@ -94,7 +94,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 1',
+    name: 'Table 1B',
     columns: [
       {
         name: 'Text Column',
@@ -113,7 +113,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 2',
+    name: 'Table 2B',
     columns: [
       {
         name: 'Text Column 1',
@@ -140,7 +140,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 2',
+    name: 'Table 2C',
     columns: [
       {
         name: 'Text Column 1',
@@ -167,7 +167,7 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
-    name: 'Table 2',
+    name: 'Table 2D',
     columns: [
       {
         name: 'Text Column 1',

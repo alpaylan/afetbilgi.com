@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil';
 import './App.css';
 import { authToken as authTokenAtom } from './atoms/AuthToken';
 import Dashboard from './components/Dashboard/Dashboard';
+import DataPage from './components/DataPage/DataPage';
 import Login from './components/Login';
 import PipelinePage from './components/Pipeline/PipelinePage';
 import TablesPage from './components/TablesPage/TablesPage';
@@ -29,6 +30,7 @@ const App = () => {
       <Route path='login' element={<Login />} />
       <Route path='tables' element={<TablesPage />} />
       <Route path='pipeline' element={<PipelinePage />} />
+      <Route path='data' element={<DataPage />} />
       <Route path='*' element={<Dashboard />} />
     </Routes>
   );

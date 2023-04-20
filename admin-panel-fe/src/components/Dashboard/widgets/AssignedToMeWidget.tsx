@@ -21,17 +21,21 @@ import {
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useRecoilValue } from 'recoil';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { dataFilters as dataFiltersAtom } from '../../../atoms/Data';
 import { pipelineStages as pipelineStagesAtom } from '../../../atoms/Pipeline';
 import { Assignment } from '../../../interfaces/Assignment';
 import { getAssignments } from '../../../services/Assignment';
 import { commonColors, commonStyles } from '../../../util/Style';
 
-// TODO
 const AssignedToMeWidget = () => {
   const { t } = useTranslation();
 
+  const navigate = useNavigate();
+
   const pipelineStages = useRecoilValue(pipelineStagesAtom);
+  const setDataFilters = useSetRecoilState(dataFiltersAtom);
 
   const [loading, setLoading] = useState(false);
   const [assignments, setAssignments] = useState<Assignment[]>([]);
@@ -52,6 +56,32 @@ const AssignedToMeWidget = () => {
     setStageToAssign(pipelineStages[0]?.id ?? '');
   }, [pipelineStages]);
 
+  const handleNavigate = (to: string) => {
+    if (navigate) {
+      navigate(to);
+    }
+  };
+
+  const handleViewAllAssigned = () => {
+    setDataFilters({
+      selectedTableNames: [],
+      selectedStages: [],
+      onlyAssignedToMe: true,
+    });
+
+    handleNavigate('/data');
+  };
+
+  const handleViewAssignment = (tableName: string, stage: string) => {
+    setDataFilters({
+      selectedTableNames: [tableName],
+      selectedStages: [stage],
+      onlyAssignedToMe: true,
+    });
+
+    handleNavigate('/data');
+  };
+
   const handleChangeRowsToAssign = (e: any) => {
     setRowsToAssign(Math.max(0, parseInt(e.target.value as string, 10) ?? 0));
   };
@@ -64,7 +94,6 @@ const AssignedToMeWidget = () => {
     pipelineStages.find((stage) => stage.id === stageID)?.name ?? stageID;
 
   const fieldNameStyle = {
-    fontFamily: 'Roboto',
     fontStyle: 'normal',
     fontWeight: 500,
     fontSize: '14px',
@@ -82,6 +111,7 @@ const AssignedToMeWidget = () => {
           color='primary'
           size='small'
           endIcon={<ChevronRight />}
+          onClick={handleViewAllAssigned}
           sx={commonStyles.buttonText}
         >
           {t('view_more')}
@@ -151,6 +181,12 @@ const AssignedToMeWidget = () => {
                       <Button
                         color='primary'
                         size='small'
+                        onClick={() =>
+                          handleViewAssignment(
+                            assignment.tableName,
+                            assignment.stageID,
+                          )
+                        }
                         sx={{ ...commonStyles.buttonText, p: 0 }}
                       >
                         {t('assignment.view')}

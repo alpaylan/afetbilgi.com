@@ -25,6 +25,11 @@
 
   "dashboard.assigned_to_me": "Assigned to Me",
 
+  "data.data": "Data",
+  "data.page_description": "You can view and edit data for each table in this page",
+  "data.rows": "Rows",
+  "data.tables": "Tables",
+
   "drawer.assignments": "Assignments",
   "drawer.home": "Home",
   "drawer.pipeline": "Pipeline",

@@ -49,7 +49,6 @@ const TableDefinitionsWidget = () => {
   };
 
   const fieldNameStyle = {
-    fontFamily: 'Roboto',
     fontStyle: 'normal',
     fontWeight: 500,
     fontSize: '14px',
