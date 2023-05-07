@@ -1,6 +1,7 @@
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import HomeIcon from '@mui/icons-material/Home';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import {
   Box,
@@ -37,6 +38,14 @@ const SideMenu = (props: SideMenuProps) => {
               <HomeIcon color='primary' />
             </ListItemIcon>
             <ListItemText primary={t('drawer.home')} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key='data' disablePadding>
+          <ListItemButton onClick={() => handleNavigate('/data')}>
+            <ListItemIcon>
+              <LibraryBooksIcon color='primary' />
+            </ListItemIcon>
+            <ListItemText primary={t('drawer.data')} />
           </ListItemButton>
         </ListItem>
         <ListItem key='assignments' disablePadding>

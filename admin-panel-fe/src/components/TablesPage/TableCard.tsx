@@ -2,7 +2,7 @@ import { ChevronRight } from '@mui/icons-material';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import { Box, Button, Card, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { TableDefinition } from '../../interfaces/Table';
+import { TableDefinition } from '../../interfaces/TableDefinition';
 import { formatLocalTime } from '../../util/DateTime';
 import { commonColors, commonStyles } from '../../util/Style';
 

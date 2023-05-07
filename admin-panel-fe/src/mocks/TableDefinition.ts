@@ -1,4 +1,4 @@
-import { ColumnType, TableDefinition } from '../interfaces/Table';
+import { ColumnType, TableDefinition } from '../interfaces/TableDefinition';
 
 export const mockTableDefinitions: TableDefinition[] = [
   {
@@ -7,14 +7,17 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: false,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Eren',
@@ -26,22 +29,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: false,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: false,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',
@@ -53,14 +61,17 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Eren',
@@ -72,22 +83,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',
@@ -99,14 +115,17 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Eren',
@@ -118,22 +137,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',
@@ -145,22 +169,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',
@@ -172,22 +201,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',
@@ -199,22 +233,27 @@ export const mockTableDefinitions: TableDefinition[] = [
       {
         name: 'Text Column 1',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Colum 2',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Text Column 3',
         type: ColumnType.TEXT,
+        required: true,
       },
       {
         name: 'Link Column',
         type: ColumnType.LINK,
+        required: true,
       },
       {
         name: 'Phone Number Column',
         type: ColumnType.PHONE_NUMBER,
+        required: true,
       },
     ],
     lastUpdatedBy: 'Emre',

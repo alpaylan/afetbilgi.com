@@ -18,6 +18,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
+import { uniq } from 'lodash';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -64,7 +65,9 @@ const AssignedToMeWidget = () => {
 
   const handleViewAllAssigned = () => {
     setDataFilters({
-      selectedTableNames: [],
+      selectedTableNames: uniq(
+        assignments.map((assignment) => assignment.tableName),
+      ),
       selectedStages: [],
       onlyAssignedToMe: true,
     });
@@ -223,7 +226,7 @@ const AssignedToMeWidget = () => {
               size='small'
               value={stageToAssign}
               onChange={handleChangeStageToAssign}
-              sx={{ ml: 0.5 }}
+              sx={{ ml: 1 }}
             >
               {pipelineStages.map((stage) => (
                 <MenuItem id={stage.id} value={stage.id} key={stage.id}>

@@ -1,5 +1,5 @@
-import { TableDefinition } from '../interfaces/Table';
-import { mockTableDefinitions } from '../mocks/Table';
+import { TableDefinition } from '../interfaces/TableDefinition';
+import { mockTableDefinitions } from '../mocks/TableDefinition';
 
 // TODO
 export const createTableDefinition = async (

@@ -17,7 +17,7 @@ import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { TableDefinition } from '../../../interfaces/Table';
+import { TableDefinition } from '../../../interfaces/TableDefinition';
 import { getTableDefinitions } from '../../../services/Table';
 import { formatLocalTime } from '../../../util/DateTime';
 import { commonColors, commonStyles } from '../../../util/Style';

@@ -1,6 +1,6 @@
 import { Assignment } from '../interfaces/Assignment';
 import { mockPipelineStages } from './Pipeline';
-import { mockTableDefinitions } from './Table';
+import { mockTableDefinitions } from './TableDefinition';
 
 export const mockAssignments: Assignment[] = [
   {

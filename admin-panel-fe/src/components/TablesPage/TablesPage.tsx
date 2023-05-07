@@ -3,7 +3,7 @@ import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TableDefinition } from '../../interfaces/Table';
+import { TableDefinition } from '../../interfaces/TableDefinition';
 import { getTableDefinitions } from '../../services/Table';
 import { commonColors, commonStyles } from '../../util/Style';
 import Appbar from '../Appbar/Appbar';
@@ -44,6 +44,9 @@ const TablesPage = () => {
   };
 
   const handleModifyTableDefinitions = () => {
+    toast.success(
+      tableDefinitionToEdit ? t('table.updated') : t('table.created'),
+    );
     setTableDefinitionToEdit(undefined);
     setShowNewTableDefinitionDialog(false);
     refreshTableDefinitions();

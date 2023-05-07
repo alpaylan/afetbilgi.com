@@ -1,4 +1,4 @@
-import { TableDefinition } from '../interfaces/Table';
+import { TableDefinition } from '../interfaces/TableDefinition';
 
 export const getDefaultTableDefinition = (): TableDefinition => ({
   name: '',

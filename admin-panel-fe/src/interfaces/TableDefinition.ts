@@ -8,6 +8,7 @@ export enum ColumnType {
 export interface ColumnDefinition {
   name: string;
   type: ColumnType;
+  required: boolean;
 }
 
 export interface TableDefinition {

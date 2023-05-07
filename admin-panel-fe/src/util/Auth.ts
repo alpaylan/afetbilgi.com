@@ -14,3 +14,5 @@ export const storeAuthToken = (authToken: string | null) => {
 
 export const loadAuthToken = (): string =>
   localStorage.getItem('authToken') ?? '';
+
+export const getUsername = (): string => 'Eren Erişken';

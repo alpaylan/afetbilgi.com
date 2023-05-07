@@ -5,11 +5,13 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import {
   Box,
   Button,
+  Checkbox,
   Dialog,
   DialogActions,
   DialogContent,
   DialogTitle,
   Divider,
+  FormControlLabel,
   IconButton,
   MenuItem,
   Select,
@@ -20,7 +22,10 @@ import { cloneDeep, isEmpty } from 'lodash';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ColumnType, TableDefinition } from '../../../interfaces/Table';
+import {
+  ColumnType,
+  TableDefinition,
+} from '../../../interfaces/TableDefinition';
 import {
   createTableDefinition,
   deleteTableDefinition,
@@ -100,7 +105,11 @@ const EditTableDefinitionDialog = (props: EditTableDefinitionDialogProps) => {
 
   const handleAdd = () => {
     const newState = cloneDeep(currentState);
-    newState.columns.push({ name: 'New Column', type: ColumnType.TEXT });
+    newState.columns.push({
+      name: 'New Column',
+      type: ColumnType.TEXT,
+      required: true,
+    });
     setCurrentState(newState);
   };
 
@@ -128,6 +137,13 @@ const EditTableDefinitionDialog = (props: EditTableDefinitionDialogProps) => {
   const handleChangeColumnType = (e: any, columnIndex: number) => {
     const newState = cloneDeep(currentState);
     newState.columns[columnIndex].type = e.target.value;
+    setCurrentState(newState);
+  };
+
+  const handleToggleRequired = (columnIndex: number) => {
+    const newState = cloneDeep(currentState);
+    newState.columns[columnIndex].required =
+      !currentState.columns[columnIndex].required;
     setCurrentState(newState);
   };
 
@@ -232,16 +248,23 @@ const EditTableDefinitionDialog = (props: EditTableDefinitionDialogProps) => {
                     flexDirection: 'row',
                     flexGrow: 1,
                     pt: 1,
+                    pb: 1,
+                    pl: 1.5,
                     backgroundColor,
                   }}
                 >
                   <TextField
-                    variant='standard'
+                    variant='outlined'
                     size='small'
                     value={column.name}
                     onChange={(e) => handleChangeColumnName(e, i)}
+                    sx={{ backgroundColor: commonColors.white }}
                   />
-                  <Box component='div' sx={{ flexGrow: 1, minWidth: 50 }} />{' '}
+                  <Box
+                    component='div'
+                    onClick={() => setFocusedColumn(i)}
+                    sx={{ flexGrow: 1, minWidth: 50 }}
+                  />
                   <Select
                     variant='standard'
                     size='small'
@@ -264,6 +287,26 @@ const EditTableDefinitionDialog = (props: EditTableDefinitionDialogProps) => {
                       );
                     })}
                   </Select>
+                  <Box
+                    component='div'
+                    onClick={() => setFocusedColumn(i)}
+                    sx={{ flexGrow: 1, minWidth: 50 }}
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={column.required}
+                        onChange={() => handleToggleRequired(i)}
+                        size='small'
+                      />
+                    }
+                    label={
+                      <Typography sx={commonStyles.body2}>
+                        {t('column.required')}
+                      </Typography>
+                    }
+                    sx={{ mt: 'auto', mb: 'auto' }}
+                  />
                 </Box>
               );
             })}
