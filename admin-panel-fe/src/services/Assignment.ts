@@ -8,6 +8,7 @@ export const getAssignments = async (): Promise<Assignment[]> => {
 export const assignRow = async (
   tableName: string,
   rowID: string,
+  userID?: string,
 ): Promise<void> => {
-  console.log('Assigning ', tableName, ' ', rowID);
+  console.log('Assigning ', tableName, ' ', rowID, ' ', userID);
 };

@@ -1,20 +1,28 @@
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
+  Avatar,
   Box,
   Button,
   Drawer,
   IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
   Paper,
+  Popover,
   Typography,
 } from '@mui/material';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { authToken as authTokenAtom } from '../../atoms/AuthToken';
-import { storeAuthToken } from '../../util/Auth';
-import { commonStyles } from '../../util/Style';
+import { getUsername, storeAuthToken } from '../../util/Auth';
+import { commonColors, commonStyles } from '../../util/Style';
 import SideMenu from './SideMenu';
 
 const Appbar = () => {
@@ -22,9 +30,17 @@ const Appbar = () => {
 
   const navigate = useNavigate();
 
+  const buttonRef = useRef();
+  const containerRef = useRef();
+
   const setAuthToken = useSetRecoilState(authTokenAtom);
 
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [showDrawer, setShowDrawer] = useState(false);
+
+  const handleClickUserMenu = (event: any) => {
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleNavigate = (to: string) => {
     if (navigate) {
@@ -37,6 +53,13 @@ const Appbar = () => {
     setAuthToken('');
   };
 
+  const getAvatarValue = () =>
+    getUsername()
+      .split(' ')
+      .map((name) => name.slice(0, 1))
+      .slice(0, 2)
+      .join('');
+
   return (
     <>
       <Drawer
@@ -47,7 +70,11 @@ const Appbar = () => {
         <SideMenu onClose={() => setShowDrawer(false)} />
       </Drawer>
       <Paper sx={{ flexGrow: 1, padding: 1 }}>
-        <Box component='div' sx={{ flexDirection: 'row', display: 'flex' }}>
+        <Box
+          component='div'
+          ref={containerRef}
+          sx={{ flexDirection: 'row', display: 'flex' }}
+        >
           <IconButton onClick={() => setShowDrawer(true)}>
             <MenuIcon />
           </IconButton>
@@ -65,13 +92,86 @@ const Appbar = () => {
             {t('title')}
           </Typography>
           <Box component='div' flexGrow={1} />
-          <Button
-            onClick={handleLogout}
-            endIcon={<LogoutIcon />}
-            sx={{ textTransform: 'none' }}
+          <Popover
+            id={anchorEl ? 'popover' : undefined}
+            open={!!anchorEl}
+            anchorEl={anchorEl}
+            container={containerRef.current}
+            onClose={() => setAnchorEl(null)}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           >
-            {t('logout')}
-          </Button>
+            <Box
+              component='div'
+              sx={{ display: 'flex', flexDirection: 'column' }}
+            >
+              <List>
+                <ListItem key='profile' disablePadding>
+                  <ListItemButton onClick={() => handleNavigate('/profile')}>
+                    <ListItemIcon>
+                      <AccountCircleIcon color='primary' />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={
+                        <Typography sx={commonStyles.body1}>
+                          {t('menu.profile')}
+                        </Typography>
+                      }
+                    />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem key='logout' disablePadding>
+                  <ListItemButton onClick={handleLogout}>
+                    <ListItemIcon>
+                      <LogoutIcon color='primary' />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={
+                        <Typography sx={commonStyles.body1}>
+                          {t('menu.logout')}
+                        </Typography>
+                      }
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>
+          </Popover>
+          <Box component='div' ref={buttonRef}>
+            <Button
+              onClick={handleClickUserMenu}
+              sx={{ textTransform: 'none' }}
+            >
+              <Box
+                component='div'
+                sx={{ display: 'flex', flexDirection: 'row' }}
+              >
+                <Avatar
+                  sx={{
+                    width: 32,
+                    height: 32,
+                    fontSize: 15,
+                    p: 0.25,
+                    mt: 'auto',
+                    mb: 'auto',
+                    mr: 1.5,
+                    backgroundColor: commonColors.primary,
+                  }}
+                >
+                  {getAvatarValue()}
+                </Avatar>
+                <Typography
+                  sx={{
+                    ...commonStyles.h6,
+                    color: commonColors.black,
+                    mt: 'auto',
+                    mb: 'auto',
+                  }}
+                >
+                  {getUsername()}
+                </Typography>
+              </Box>
+            </Button>
+          </Box>
         </Box>
       </Paper>
     </>

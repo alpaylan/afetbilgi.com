@@ -10,7 +10,7 @@ import { mockDataStatistics } from '../mocks/Data';
 import { mockPipelineStages } from '../mocks/Pipeline';
 import { mockTableDefinitions } from '../mocks/TableDefinition';
 import { mockUsers } from '../mocks/User';
-import { getUsername } from '../util/Auth';
+import { getUserID } from '../util/Auth';
 import { generateRandomColumnValue } from '../util/Column';
 import { getRandomElement, getRandomPastTime } from '../util/Misc';
 
@@ -32,7 +32,7 @@ export const getData = async (filters: DataFilters): Promise<TableData[]> => {
     const rows: Row[] = [];
     for (let i = 0; i < rowCount; i += 1) {
       const assignedTo =
-        Math.random() > 0.5 ? undefined : getRandomElement(mockUsers).name;
+        Math.random() > 0.5 ? undefined : getRandomElement(mockUsers).id;
 
       rows.push({
         id: i.toString(),
@@ -44,7 +44,7 @@ export const getData = async (filters: DataFilters): Promise<TableData[]> => {
         stage: isEmpty(filters.selectedStages)
           ? getRandomElement(mockPipelineStages).id
           : getRandomElement(filters.selectedStages),
-        assignedTo: filters.onlyAssignedToMe ? getUsername() : assignedTo,
+        assignedTo: filters.onlyAssignedToMe ? getUserID() : assignedTo,
       });
     }
 

@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import DataPage from './components/DataPage/DataPage';
 import Login from './components/Login';
 import PipelinePage from './components/Pipeline/PipelinePage';
+import ProfilePage from './components/Profile/ProfilePage';
 import TablesPage from './components/TablesPage/TablesPage';
 import { isValidToken, loadAuthToken } from './util/Auth';
 
@@ -31,6 +32,7 @@ const App = () => {
       <Route path='tables' element={<TablesPage />} />
       <Route path='pipeline' element={<PipelinePage />} />
       <Route path='data' element={<DataPage />} />
+      <Route path='profile' element={<ProfilePage />} />
       <Route path='*' element={<Dashboard />} />
     </Routes>
   );

@@ -15,14 +15,16 @@ import { isEmpty } from 'lodash';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { dataFilters as dataFiltersAtom } from '../../atoms/Data';
 import { pipelineStages as pipelineStagesAtom } from '../../atoms/Pipeline';
+import { users as usersAtom } from '../../atoms/User';
 import { TableData } from '../../interfaces/Data';
 import { TableDefinition } from '../../interfaces/TableDefinition';
 import { getData } from '../../services/Data';
 import { getPipelineStages } from '../../services/Pipeline';
 import { getTableDefinitions } from '../../services/Table';
+import { getUsers } from '../../services/User';
 import { commonColors, commonStyles } from '../../util/Style';
 import Appbar from '../Appbar/Appbar';
 import Waiting from '../Waiting';
@@ -34,9 +36,11 @@ const DataPage = () => {
   const [dataFilters, setDataFilters] = useRecoilState(dataFiltersAtom);
   const [pipelineStages, setPipelineStages] =
     useRecoilState(pipelineStagesAtom);
+  const setUsers = useSetRecoilState(usersAtom);
 
   const [loadingTableDefinitions, setLoadingTableDefinitions] = useState(false);
   const [loadingPipelineStages, setLoadingPipelineStages] = useState(false);
+  const [loadingUsers, setLoadingUsers] = useState(false);
   const [loadingDataList, setLoadingDataList] = useState(false);
   const [tableDefinitions, setTableDefinitions] = useState<TableDefinition[]>(
     [],
@@ -69,6 +73,12 @@ const DataPage = () => {
       .then((fetchedPipelineStages) => setPipelineStages(fetchedPipelineStages))
       .catch((err) => toast.error(err.message))
       .finally(() => setLoadingPipelineStages(false));
+
+    setLoadingUsers(true);
+    getUsers()
+      .then((users) => setUsers(users))
+      .catch((err) => toast.error(err.message))
+      .finally(() => setLoadingUsers(false));
   }, []);
 
   useEffect(refreshDataList, [dataFilters]);
@@ -89,7 +99,10 @@ const DataPage = () => {
   };
 
   const loading =
-    loadingDataList || loadingPipelineStages || loadingTableDefinitions;
+    loadingDataList ||
+    loadingPipelineStages ||
+    loadingTableDefinitions ||
+    loadingUsers;
 
   return (
     <Box component='div'>

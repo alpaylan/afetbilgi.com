@@ -19,7 +19,7 @@ import {
   moveRowToPreviousStage,
   updateRow,
 } from '../../../services/Data';
-import { getUsername } from '../../../util/Auth';
+import { getUserID } from '../../../util/Auth';
 import { getEmptyRow } from '../../../util/Data';
 import { commonStyles } from '../../../util/Style';
 import ConfirmDialog from '../../ConfirmDialog';
@@ -53,7 +53,7 @@ const DataDialog = (props: DataDialogProps) => {
   const [step, setStep] = useState(Step.EDIT);
   const [loading, setLoading] = useState(false);
 
-  const isEditing = props.row?.assignedTo === getUsername();
+  const isEditing = props.row?.assignedTo === getUserID();
 
   useEffect(() => {
     if (props.row) {

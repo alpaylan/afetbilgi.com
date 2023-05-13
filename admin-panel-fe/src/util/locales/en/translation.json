@@ -3,7 +3,6 @@
   "confirm": "Confirm",
   "delete": "Delete",
   "edit": "Edit",
-  "logout": "Logout",
   "password": "Password",
   "save": "Save",
   "title": "Afet Bilgi Admin Panel",
@@ -79,6 +78,9 @@
   "data.upload.title": "Upload Data",
   "data.upload.upload": "Upload",
 
+  "menu.logout": "Logout",
+  "menu.profile": "Profile",
+
   "drawer.assignments": "Assignments",
   "drawer.home": "Home",
   "drawer.pipeline": "Pipeline",
@@ -92,6 +94,10 @@
   "pipeline_modal.stage_id": "Stage ID",
   "pipeline_modal.stage_name": "Stage Name",
   "pipeline_modal.title": "Add New Pipeline Stage",
+
+  "profile.title": "User Profile",
+  "profile.roles": "Roles",
+  "profile.authorized_pipeline_stages": "Authorized Pipeline Stages",
 
   "table.table_definitions": "Table Definitions",
   "table.name": "Name",

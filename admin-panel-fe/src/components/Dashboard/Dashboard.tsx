@@ -14,18 +14,18 @@ const Dashboard = () => {
         spacing={3}
         columns={12}
         justifyContent='center'
-        sx={{ padding: 2 }}
+        sx={{ paddingX: 3, paddingY: 2 }}
       >
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
           <DataStatisticsWidget />
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
           <PipelineWidget />
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
           <TableDefinitionsWidget />
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
           <AssignedToMeWidget />
         </Grid>
       </Grid>

@@ -18,7 +18,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { uniq } from 'lodash';
+import { isEmpty, uniq } from 'lodash';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -28,6 +28,7 @@ import { dataFilters as dataFiltersAtom } from '../../../atoms/Data';
 import { pipelineStages as pipelineStagesAtom } from '../../../atoms/Pipeline';
 import { Assignment } from '../../../interfaces/Assignment';
 import { getAssignments } from '../../../services/Assignment';
+import { getAuthorizedPipelineStages } from '../../../util/Auth';
 import { commonColors, commonStyles } from '../../../util/Style';
 
 const AssignedToMeWidget = () => {
@@ -43,6 +44,12 @@ const AssignedToMeWidget = () => {
   const [rowsToAssign, setRowsToAssign] = useState(10);
   const [stageToAssign, setStageToAssign] = useState('');
 
+  const authorizedPipelineStages = getAuthorizedPipelineStages();
+
+  const filteredPipelineStages = pipelineStages.filter((stage) =>
+    authorizedPipelineStages.includes(stage.id),
+  );
+
   useEffect(() => {
     setLoading(true);
     getAssignments()
@@ -54,7 +61,7 @@ const AssignedToMeWidget = () => {
   }, []);
 
   useEffect(() => {
-    setStageToAssign(pipelineStages[0]?.id ?? '');
+    setStageToAssign(filteredPipelineStages[0]?.id ?? '');
   }, [pipelineStages]);
 
   const handleNavigate = (to: string) => {
@@ -200,49 +207,76 @@ const AssignedToMeWidget = () => {
               </TableBody>
             </Table>
           </TableContainer>
-          <Divider sx={{ mt: 2 }} />
-          <Box
-            component='div'
-            sx={{
-              display: 'flex',
-              flexDirection: 'row-wrap',
-              flexGrow: 1,
-              justifyContent: 'center',
-              mt: 1,
-            }}
-          >
-            <Typography>{t('assignment.assign')}</Typography>
-            <TextField
-              variant='standard'
-              size='small'
-              type='number'
-              value={rowsToAssign}
-              onChange={handleChangeRowsToAssign}
-              sx={{ ml: 0.5, mr: 0.5, width: 70 }}
-            />
-            <Typography>{t('assignment.rows_in_stage')}</Typography>
-            <Select
-              variant='standard'
-              size='small'
-              value={stageToAssign}
-              onChange={handleChangeStageToAssign}
-              sx={{ ml: 1 }}
+          {!isEmpty(filteredPipelineStages) && (
+            <Box
+              component='div'
+              sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center' }}
             >
-              {pipelineStages.map((stage) => (
-                <MenuItem id={stage.id} value={stage.id} key={stage.id}>
-                  {stage.name}
-                </MenuItem>
-              ))}
-            </Select>
-            <IconButton
-              size='small'
-              color='primary'
-              sx={{ mt: -0.5, ml: 2, p: 0 }}
-            >
-              <SendIcon fontSize='small' />
-            </IconButton>
-          </Box>
-          <Divider sx={{ mt: 1 }} />
+              <Paper
+                sx={{
+                  minWidth: '70%',
+                  mt: 2.5,
+                  pt: 0.5,
+                  pb: 1.5,
+                  pl: 1.5,
+                  pr: 1.5,
+                  backgroundColor: commonColors.gray2,
+                }}
+              >
+                <Box
+                  component='div'
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'row-wrap',
+                    flexGrow: 1,
+                    justifyContent: 'center',
+                    mt: 1,
+                  }}
+                >
+                  <Typography sx={{ mt: 'auto', mb: 'auto' }}>
+                    {t('assignment.assign')}
+                  </Typography>
+                  <TextField
+                    variant='outlined'
+                    size='small'
+                    type='number'
+                    value={rowsToAssign}
+                    onChange={handleChangeRowsToAssign}
+                    sx={{
+                      ml: 0.5,
+                      mr: 0.5,
+                      width: 70,
+                      backgroundColor: commonColors.white,
+                    }}
+                  />
+                  <Typography sx={{ mt: 'auto', mb: 'auto' }}>
+                    {t('assignment.rows_in_stage')}
+                  </Typography>
+                  <Select
+                    variant='outlined'
+                    size='small'
+                    value={stageToAssign}
+                    onChange={handleChangeStageToAssign}
+                    sx={{
+                      ml: 0.5,
+                      mt: 'auto',
+                      mb: 'auto',
+                      backgroundColor: commonColors.white,
+                    }}
+                  >
+                    {filteredPipelineStages.map((stage) => (
+                      <MenuItem id={stage.id} value={stage.id} key={stage.id}>
+                        {stage.name}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                  <IconButton size='small' color='primary' sx={{ ml: 2, p: 0 }}>
+                    <SendIcon fontSize='small' />
+                  </IconButton>
+                </Box>
+              </Paper>
+            </Box>
+          )}
         </Box>
       )}
     </Paper>

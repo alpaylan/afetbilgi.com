@@ -1,7 +1,7 @@
 import { DataFilters, DataStatistics, Row } from '../interfaces/Data';
 import { PipelineStage } from '../interfaces/Pipeline';
 import { TableDefinition } from '../interfaces/TableDefinition';
-import { getUsername } from './Auth';
+import { getUserID } from './Auth';
 
 export const getDefaultDataStatistics = (): DataStatistics => ({
   tableCount: 0,
@@ -22,6 +22,6 @@ export const getEmptyRow = (
   columns: tableDefinition.columns.map(() => ''),
   lastUpdatedBy: '',
   lastUpdatedAt: new Date(),
-  assignedTo: getUsername(),
+  assignedTo: getUserID(),
   stage: pipelineStages[0].id,
 });

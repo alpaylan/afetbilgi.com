@@ -27,7 +27,7 @@ export const commonColors = {
   infoYellow: '#EAB600',
   yellowLightest: '#FFFEF1',
   yellowDark: '#382C00',
-  primary: '#3F51B5',
+  primary: '#4350AF',
 };
 
 export const commonStyles = {

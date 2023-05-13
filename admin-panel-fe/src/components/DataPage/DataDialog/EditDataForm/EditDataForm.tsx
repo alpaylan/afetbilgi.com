@@ -8,7 +8,7 @@ import {
   ColumnType,
   TableDefinition,
 } from '../../../../interfaces/TableDefinition';
-import { getUsername } from '../../../../util/Auth';
+import { getUserID } from '../../../../util/Auth';
 import TextFieldInput from './TextFieldInput';
 
 interface EditDataFormProps {
@@ -28,7 +28,7 @@ const EditDataForm = (props: EditDataFormProps) => {
   }, [props.currentState]);
 
   const handleChange = (index: number, newValue: string) => {
-    if (props.currentState?.assignedTo === getUsername()) {
+    if (props.currentState?.assignedTo === getUserID()) {
       const newColumns = cloneDeep(props.currentState.columns);
       newColumns[index] = newValue;
       props.onEdit({ ...props.currentState, columns: newColumns });
@@ -44,7 +44,7 @@ const EditDataForm = (props: EditDataFormProps) => {
       case ColumnType.TEXT:
         return (
           <TextFieldInput
-            disabled={props.currentState.assignedTo !== getUsername()}
+            disabled={props.currentState.assignedTo !== getUserID()}
             value={props.currentState.columns[index]}
             onChange={(newValue) => handleChange(index, newValue)}
             columnDefinition={columnDefinition}
@@ -53,7 +53,7 @@ const EditDataForm = (props: EditDataFormProps) => {
       default:
         return (
           <TextFieldInput
-            disabled={props.currentState.assignedTo !== getUsername()}
+            disabled={props.currentState.assignedTo !== getUserID()}
             value={props.currentState.columns[index]}
             onChange={(newValue) => handleChange(index, newValue)}
             columnDefinition={columnDefinition}

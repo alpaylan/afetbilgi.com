@@ -22,7 +22,7 @@ import {
   ColumnDefinition,
   ColumnType,
 } from '../../../interfaces/TableDefinition';
-import { getUsername } from '../../../util/Auth';
+import { getAuthorizedPipelineStages, getUserID } from '../../../util/Auth';
 import { formatLocalTime } from '../../../util/DateTime';
 import { commonColors, commonStyles } from '../../../util/Style';
 import DataDialog from '../DataDialog/DataDialog';
@@ -49,6 +49,8 @@ const DataTable = (props: DataTableProps) => {
   });
   const [showNewRowDialog, setShowNewRowDialog] = useState(false);
   const [showUploadDialog, setShowUploadDialog] = useState(false);
+
+  const authorizedPipelineStages = getAuthorizedPipelineStages();
 
   // TODO
   const renderColumn = (definition: ColumnDefinition, value: string) => {
@@ -209,10 +211,11 @@ const DataTable = (props: DataTableProps) => {
                     tableName={props.tableData.tableName}
                     rowID={row.id}
                     assignedTo={row.assignedTo}
+                    assignable={authorizedPipelineStages.includes(row.stage)}
                     onAssign={props.onUpdate}
                   />
                   <ActionButtonCell
-                    editable={row.assignedTo === getUsername()}
+                    editable={row.assignedTo === getUserID()}
                     onClick={() => setClickedRow(row)}
                   />
                 </TableRow>
