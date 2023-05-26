@@ -11,6 +11,8 @@ import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
+import { dataFilters as dataFiltersAtom } from '../../../atoms/Data';
+import { localeConfig as localeConfigAtom } from '../../../atoms/Locale';
 import { pipelineStages as pipelineStagesAtom } from '../../../atoms/Pipeline';
 import { Row } from '../../../interfaces/Data';
 import { TableDefinition } from '../../../interfaces/TableDefinition';
@@ -38,6 +40,8 @@ interface DataDialogProps {
 const DataDialog = (props: DataDialogProps) => {
   const { t } = useTranslation();
 
+  const dataFilters = useRecoilValue(dataFiltersAtom);
+  const localeConfig = useRecoilValue(localeConfigAtom);
   const pipelineStages = useRecoilValue(pipelineStagesAtom);
 
   enum Step {
@@ -117,9 +121,15 @@ const DataDialog = (props: DataDialogProps) => {
 
   const getTitle = (): string => {
     if (props.row) {
+      const localeName = t(
+        `locale.${dataFilters.selectedLocale ?? localeConfig.defaultLocale}`,
+      );
+
       return isEditing
-        ? t('data.dialog.title.edit')
-        : t('data.dialog.title.view');
+        ? t('data.dialog.title.edit', {
+            locale: localeName,
+          })
+        : t('data.dialog.title.view', { locale: localeName });
     }
 
     return t('data.dialog.title.create');

@@ -1,6 +1,5 @@
 import { DateTime } from 'luxon';
 import { TokenPayload } from '../interfaces/Auth';
-import { mockUserTokenPayload } from '../mocks/Auth';
 
 // TODO
 export const isValidToken = (authToken: string | null): boolean => {
@@ -8,7 +7,16 @@ export const isValidToken = (authToken: string | null): boolean => {
     return false;
   }
 
-  return DateTime.fromISO(authToken).plus({ minute: 20 }) > DateTime.now();
+  try {
+    const tokenObject = JSON.parse(authToken);
+
+    return (
+      DateTime.fromISO(tokenObject.issuedAt).plus({ minute: 20 }) >
+      DateTime.now()
+    );
+  } catch {
+    return false;
+  }
 };
 
 export const storeAuthToken = (authToken: string | null) => {
@@ -19,7 +27,23 @@ export const storeAuthToken = (authToken: string | null) => {
 export const loadAuthToken = (): string =>
   localStorage.getItem('authToken') ?? '';
 
-export const getTokenPayload = (): TokenPayload => mockUserTokenPayload;
+export const getEmptyTokenPayload = (): TokenPayload => ({
+  userID: '',
+  username: '',
+  email: '',
+  authorizedPipelineStages: [],
+  roles: [],
+});
+
+export const getTokenPayload = (): TokenPayload => {
+  try {
+    const authToken = JSON.parse(loadAuthToken());
+
+    return authToken.payload ?? getEmptyTokenPayload();
+  } catch {
+    return getEmptyTokenPayload();
+  }
+};
 
 export const getUserID = (): string => getTokenPayload().userID;
 export const getUsername = (): string => getTokenPayload().username;

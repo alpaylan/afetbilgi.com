@@ -9,6 +9,7 @@ export interface DataFilters {
   selectedTableNames: string[];
   selectedStages: string[];
   onlyAssignedToMe: boolean;
+  selectedLocale?: string;
 }
 
 export interface Row {

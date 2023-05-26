@@ -1,5 +1,5 @@
 import { ChevronRight } from '@mui/icons-material';
-import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
 import { Box, Button, Card, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { TableDefinition } from '../../interfaces/TableDefinition';
@@ -49,7 +49,7 @@ const TableCard = (props: TableCardProps) => {
           component='div'
           sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1 }}
         >
-          <TextSnippetIcon
+          <BackupTableIcon
             color='primary'
             sx={{ mt: 'auto', mb: 'auto', mr: 1 }}
           />

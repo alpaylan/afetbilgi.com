@@ -5,6 +5,7 @@ import './App.css';
 import { authToken as authTokenAtom } from './atoms/AuthToken';
 import Dashboard from './components/Dashboard/Dashboard';
 import DataPage from './components/DataPage/DataPage';
+import LocalesPage from './components/Locale/LocalesPage';
 import Login from './components/Login';
 import PipelinePage from './components/Pipeline/PipelinePage';
 import ProfilePage from './components/Profile/ProfilePage';
@@ -33,6 +34,7 @@ const App = () => {
       <Route path='pipeline' element={<PipelinePage />} />
       <Route path='data' element={<DataPage />} />
       <Route path='profile' element={<ProfilePage />} />
+      <Route path='locales' element={<LocalesPage />} />
       <Route path='*' element={<Dashboard />} />
     </Routes>
   );

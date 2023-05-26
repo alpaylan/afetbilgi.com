@@ -6,8 +6,8 @@ export const mockPipelineStages: PipelineStage[] = [
     name: 'Draft',
   },
   {
-    id: 'TRANSLATION',
-    name: 'Translation',
+    id: 'INSPECTION',
+    name: 'Inspection',
   },
   {
     id: 'VERIFICATION',

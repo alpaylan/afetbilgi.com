@@ -3,6 +3,7 @@ import Appbar from '../Appbar/Appbar';
 import AssignedToMeWidget from './widgets/AssignedToMeWidget';
 import DataStatisticsWidget from './widgets/DataStatisticsWidget';
 import PipelineWidget from './widgets/PipelineWidget';
+import SupportedLocalesWidget from './widgets/SupportedLocalesWidget';
 import TableDefinitionsWidget from './widgets/TableDefinitionsWidget';
 
 const Dashboard = () => {
@@ -27,6 +28,9 @@ const Dashboard = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <AssignedToMeWidget />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <SupportedLocalesWidget />
         </Grid>
       </Grid>
     </Box>

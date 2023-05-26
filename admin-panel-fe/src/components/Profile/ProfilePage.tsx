@@ -5,7 +5,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilState } from 'recoil';
 import { pipelineStages as pipelineStagesAtom } from '../../atoms/Pipeline';
+import { Action } from '../../interfaces/Action';
 import { getPipelineStages } from '../../services/Pipeline';
+import { getAllowedActions } from '../../util/Action';
 import { getTokenPayload } from '../../util/Auth';
 import { commonStyles } from '../../util/Style';
 import Appbar from '../Appbar/Appbar';
@@ -32,6 +34,12 @@ const ProfilePage = () => {
 
   const filteredPipelineStages = pipelineStages.filter((stage) =>
     tokenPayload.authorizedPipelineStages.includes(stage.id),
+  );
+
+  const allowedActions = getAllowedActions();
+  const disallowedActions = Object.keys(Action).filter(
+    (action) =>
+      action !== Action.ALL && !allowedActions.includes(action as Action),
   );
 
   const loading = loadingPipelineStages;
@@ -79,7 +87,9 @@ const ProfilePage = () => {
         <ProfileField
           fieldName={t('profile.roles')}
           value={
-            isEmpty(tokenPayload.roles) ? '-' : tokenPayload.roles.join(', ')
+            isEmpty(tokenPayload.roles)
+              ? '-'
+              : tokenPayload.roles.map((role) => t(`role.${role}`)).join(', ')
           }
         />
         <ProfileField
@@ -88,6 +98,24 @@ const ProfilePage = () => {
             isEmpty(filteredPipelineStages)
               ? '-'
               : filteredPipelineStages.map((stage) => stage.name).join(', ')
+          }
+        />
+        <ProfileField
+          fieldName={t('profile.authorized_actions')}
+          value={
+            isEmpty(allowedActions)
+              ? '-'
+              : allowedActions.map((action) => t(`action.${action}`)).join(', ')
+          }
+        />
+        <ProfileField
+          fieldName={t('profile.unauthorized_actions')}
+          value={
+            isEmpty(disallowedActions) || allowedActions.includes(Action.ALL)
+              ? '-'
+              : disallowedActions
+                  .map((action) => t(`action.${action}`))
+                  .join(', ')
           }
         />
       </Box>
