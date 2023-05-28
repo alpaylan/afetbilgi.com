@@ -167,7 +167,7 @@ const DataTable = (props: DataTableProps) => {
               <TableHeadCell>{t('data.table.id')}</TableHeadCell>
               <TableHeadCell>{t('data.table.columns')}</TableHeadCell>
               {props.tableData.tableDefinition.columns
-                .slice(0, 3)
+                .slice(0, 4)
                 .map((column) => (
                   <TableHeadCell>{column.name}</TableHeadCell>
                 ))}
@@ -191,7 +191,7 @@ const DataTable = (props: DataTableProps) => {
                     {row.columns.length.toString()}
                   </TableStringField>
                   {row.columns
-                    .slice(0, 3)
+                    .slice(0, 4)
                     .map((column, i) =>
                       renderColumn(
                         props.tableData.tableDefinition.columns[i],

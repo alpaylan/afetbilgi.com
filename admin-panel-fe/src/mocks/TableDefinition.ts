@@ -24,6 +24,33 @@ export const mockTableDefinitions: TableDefinition[] = [
     lastUpdatedAt: new Date(),
   },
   {
+    name: 'Secim 2023',
+    columns: [
+      {
+        name: 'Şehir',
+        type: ColumnType.TEXT,
+        required: true,
+      },
+      {
+        name: 'Recep Tayyip Erdoğan',
+        type: ColumnType.NUMBER,
+        required: true,
+      },
+      {
+        name: 'Kemal Kılıçdaroğlu',
+        type: ColumnType.NUMBER,
+        required: true,
+      },
+      {
+        name: 'Açılan sandık',
+        type: ColumnType.NUMBER,
+        required: true,
+      },
+    ],
+    lastUpdatedBy: 'Eren',
+    lastUpdatedAt: new Date(),
+  },
+  {
     name: 'Table 2',
     columns: [
       {

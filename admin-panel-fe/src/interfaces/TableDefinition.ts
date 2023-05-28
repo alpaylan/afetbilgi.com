@@ -3,6 +3,7 @@ export enum ColumnType {
   LINK = 'link',
   PHONE_NUMBER = 'phone_number',
   BOOLEAN = 'boolean',
+  NUMBER = 'number',
 }
 
 export interface ColumnDefinition {

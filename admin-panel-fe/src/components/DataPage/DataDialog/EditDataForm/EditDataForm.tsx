@@ -9,6 +9,7 @@ import {
   TableDefinition,
 } from '../../../../interfaces/TableDefinition';
 import { getUserID } from '../../../../util/Auth';
+import NumberFieldInput from './NumberFieldInput';
 import TextFieldInput from './TextFieldInput';
 
 interface EditDataFormProps {
@@ -44,6 +45,15 @@ const EditDataForm = (props: EditDataFormProps) => {
       case ColumnType.TEXT:
         return (
           <TextFieldInput
+            disabled={props.currentState.assignedTo !== getUserID()}
+            value={props.currentState.columns[index]}
+            onChange={(newValue) => handleChange(index, newValue)}
+            columnDefinition={columnDefinition}
+          />
+        );
+      case ColumnType.NUMBER:
+        return (
+          <NumberFieldInput
             disabled={props.currentState.assignedTo !== getUserID()}
             value={props.currentState.columns[index]}
             onChange={(newValue) => handleChange(index, newValue)}

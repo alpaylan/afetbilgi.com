@@ -27,6 +27,7 @@
   "column.text": "Text",
   "column.link": "Link",
   "column.phone_number": "Phone Number",
+  "column.number": "Number",
   "column.required": "Required",
 
   "dashboard.assigned_to_me": "Assigned to Me",
@@ -60,6 +61,7 @@
   "data.dialog.next": "Next",
   "data.dialog.save": "Save",
   "data.dialog.required": "This field is required",
+  "data.dialog.is_number": "Value should be a number",
 
   "data.table.action": "Action",
   "data.table.assign_to_me": "Assign to me",
@@ -89,8 +91,8 @@
   "menu.logout": "Logout",
   "menu.profile": "Profile",
 
-  "drawer.assignments": "Assignments",
   "drawer.home": "Home",
+  "drawer.locales": "Locales",
   "drawer.pipeline": "Pipeline",
   "drawer.tables": "Tables",
   "drawer.data": "Data",

@@ -1,8 +1,8 @@
-import AssignmentIcon from '@mui/icons-material/Assignment';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import TableChartIcon from '@mui/icons-material/TableChart';
+import TranslateIcon from '@mui/icons-material/Translate';
 import {
   Box,
   List,
@@ -48,20 +48,20 @@ const SideMenu = (props: SideMenuProps) => {
             <ListItemText primary={t('drawer.data')} />
           </ListItemButton>
         </ListItem>
-        <ListItem key='assignments' disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <AssignmentIcon color='primary' />
-            </ListItemIcon>
-            <ListItemText primary={t('drawer.assignments')} />
-          </ListItemButton>
-        </ListItem>
         <ListItem key='tables' disablePadding>
           <ListItemButton onClick={() => handleNavigate('/tables')}>
             <ListItemIcon>
               <TableChartIcon color='primary' />
             </ListItemIcon>
             <ListItemText primary={t('drawer.tables')} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key='tables' disablePadding>
+          <ListItemButton onClick={() => handleNavigate('/locales')}>
+            <ListItemIcon>
+              <TranslateIcon color='primary' />
+            </ListItemIcon>
+            <ListItemText primary={t('drawer.locales')} />
           </ListItemButton>
         </ListItem>
         <ListItem key='pipeline' disablePadding>
