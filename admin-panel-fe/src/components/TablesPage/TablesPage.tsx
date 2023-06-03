@@ -3,6 +3,8 @@ import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 import { toast } from 'material-react-toastify';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useRecoilState } from 'recoil';
+import { tableDefinitions as tableDefinitionsAtom } from '../../atoms/Table';
 import { TableDefinition } from '../../interfaces/TableDefinition';
 import { getTableDefinitions } from '../../services/Table';
 import { commonColors, commonStyles } from '../../util/Style';
@@ -14,10 +16,11 @@ import TableCard from './TableCard';
 const TablesPage = () => {
   const { t } = useTranslation();
 
+  const [tableDefinitions, setTableDefinitions] =
+    useRecoilState(tableDefinitionsAtom);
+
   const [loading, setLoading] = useState(false);
-  const [tableDefinitions, setTableDefinitions] = useState<TableDefinition[]>(
-    [],
-  );
+
   const [tableDefinitionToEdit, setTableDefinitionToEdit] = useState(
     undefined as TableDefinition | undefined,
   );

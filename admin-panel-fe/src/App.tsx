@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import DataPage from './components/DataPage/DataPage';
 import LocalesPage from './components/Locale/LocalesPage';
 import Login from './components/Login';
+import OutputPage from './components/Output/OutputPage';
 import PipelinePage from './components/Pipeline/PipelinePage';
 import ProfilePage from './components/Profile/ProfilePage';
 import TablesPage from './components/TablesPage/TablesPage';
@@ -35,6 +36,7 @@ const App = () => {
       <Route path='data' element={<DataPage />} />
       <Route path='profile' element={<ProfilePage />} />
       <Route path='locales' element={<LocalesPage />} />
+      <Route path='outputs' element={<OutputPage />} />
       <Route path='*' element={<Dashboard />} />
     </Routes>
   );

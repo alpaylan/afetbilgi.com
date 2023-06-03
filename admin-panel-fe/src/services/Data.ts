@@ -57,15 +57,17 @@ export const getData = async (filters: DataFilters): Promise<TableData[]> => {
 export const updateRow = async (
   tableDefinition: TableDefinition,
   row: Row,
+  locale: string,
 ): Promise<void> => {
-  console.log('Updating ', tableDefinition, ' ', row);
+  console.log('Updating ', tableDefinition, ' ', row, ' locale ', locale);
 };
 
 export const createRow = async (
   tableDefinition: TableDefinition,
   row: Row,
+  locale: string,
 ): Promise<void> => {
-  console.log('Creating ', tableDefinition, ' ', row);
+  console.log('Creating ', tableDefinition, ' ', row, ' locale ', locale);
 };
 
 export const moveRowToPreviousStage = async (

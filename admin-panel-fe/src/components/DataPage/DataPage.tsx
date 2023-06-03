@@ -19,11 +19,11 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { dataFilters as dataFiltersAtom } from '../../atoms/Data';
 import { localeConfig as localeConfigAtom } from '../../atoms/Locale';
 import { pipelineStages as pipelineStagesAtom } from '../../atoms/Pipeline';
+import { tableDefinitions as tableDefinitionsAtom } from '../../atoms/Table';
 import { users as usersAtom } from '../../atoms/User';
 import { defaultLocaleConfig } from '../../constants/Locale';
 import { Action } from '../../interfaces/Action';
 import { TableData } from '../../interfaces/Data';
-import { TableDefinition } from '../../interfaces/TableDefinition';
 import { getData } from '../../services/Data';
 import { getLocaleConfig } from '../../services/Locale';
 import { getPipelineStages } from '../../services/Pipeline';
@@ -42,6 +42,8 @@ const DataPage = () => {
   const [localeConfig, setLocaleConfig] = useRecoilState(localeConfigAtom);
   const [pipelineStages, setPipelineStages] =
     useRecoilState(pipelineStagesAtom);
+  const [tableDefinitions, setTableDefinitions] =
+    useRecoilState(tableDefinitionsAtom);
   const setUsers = useSetRecoilState(usersAtom);
 
   const [loadingLocaleConfig, setLoadingLocaleConfig] = useState(false);
@@ -49,9 +51,6 @@ const DataPage = () => {
   const [loadingTableDefinitions, setLoadingTableDefinitions] = useState(false);
   const [loadingUsers, setLoadingUsers] = useState(false);
   const [loadingDataList, setLoadingDataList] = useState(false);
-  const [tableDefinitions, setTableDefinitions] = useState<TableDefinition[]>(
-    [],
-  );
   const [tableDataList, setTableDataList] = useState<TableData[]>([]);
 
   const refreshDataList = () => {

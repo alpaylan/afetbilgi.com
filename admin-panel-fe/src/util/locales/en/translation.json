@@ -1,8 +1,10 @@
 {
+  "back": "Back",
   "cancel": "Cancel",
   "confirm": "Confirm",
   "delete": "Delete",
   "edit": "Edit",
+  "next": "Next",
   "password": "Password",
   "save": "Save",
   "title": "Rowless Admin Panel",
@@ -13,6 +15,7 @@
   "action.EDIT_ASSIGNMENTS": "Edit assignments",
   "action.EDIT_LOCALES": "Edit locales",
   "action.EDIT_USERS": "Edit users",
+  "action.EDIT_OUTPUTS": "Edit outputs",
   "action.TRANSLATE_ROWS": "Translate rows",
 
   "assignment.action": "Action",
@@ -93,6 +96,7 @@
 
   "drawer.home": "Home",
   "drawer.locales": "Locales",
+  "drawer.outputs": "Outputs",
   "drawer.pipeline": "Pipeline",
   "drawer.tables": "Tables",
   "drawer.data": "Data",
@@ -328,6 +332,39 @@
   "locales.new_locale": "New Locale",
   "locales.page_description": "You can view and edit supported locales in this page",
   "locales.supported_locales": "Supported Locales",
+
+  "output.outputs": "Outputs",
+  "output.page_description": "You can view and edit outputs in this page",
+  "output.new_output": "New Output",
+
+  "output.dialog.title.select_type": "New Output",
+  "output.dialog.title.set_page": "New Page",
+  "output.dialog.page.name": "Name",
+  "output.dialog.page.table": "Table",
+  "output.dialog.page.questions": "Questions",
+  "output.dialog.page.question": "Question",
+  "output.dialog.page.column": "Column",
+  "output.dialog.page.available": "Available",
+  "output.dialog.page.leafs": "Leafs",
+
+  "output.kind.page": "Page",
+  "output.kind.api_endpoint": "API Endpoint",
+  "output.kind.sql_database": "SQL Database",
+  "output.kind.nosql_database": "NoSQL Database",
+  "output.kind.google_sheets": "Google Sheets",
+  "output.kind.webhook": "Webhook",
+  "output.kind.coming_soon": "(Coming soon...)",
+
+  "output.summary.table": "Table",
+  "output.summary.name": "Name",
+  "output.summary.type": "Type",
+  "output.summary.active": "Active:",
+  "output.summary.last_updated_at": "Last Updated At",
+  "output.summary.last_updated_by": "Last Updated By",
+  "output.summary.toggle.error": "You don't have necessary permissions to toggle output status",
+
+  "output.widget.title": "Outputs",
+  "output.widget.active": "Is Active?",
 
   "pipeline.new_stage": "New Stage",
   "pipeline.page_description": "You can view and edit pipeline stages in this page",

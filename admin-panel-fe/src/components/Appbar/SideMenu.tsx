@@ -1,3 +1,4 @@
+import CategoryIcon from '@mui/icons-material/Category';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
@@ -70,6 +71,14 @@ const SideMenu = (props: SideMenuProps) => {
               <ChecklistIcon color='primary' />
             </ListItemIcon>
             <ListItemText primary={t('drawer.pipeline')} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key='output' disablePadding>
+          <ListItemButton onClick={() => handleNavigate('/outputs')}>
+            <ListItemIcon>
+              <CategoryIcon color='primary' />
+            </ListItemIcon>
+            <ListItemText primary={t('drawer.outputs')} />
           </ListItemButton>
         </ListItem>
       </List>

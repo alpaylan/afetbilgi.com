@@ -2,13 +2,14 @@ import { Box, Grid } from '@mui/material';
 import Appbar from '../Appbar/Appbar';
 import AssignedToMeWidget from './widgets/AssignedToMeWidget';
 import DataStatisticsWidget from './widgets/DataStatisticsWidget';
+import OutputsWidget from './widgets/OutputsWidget';
 import PipelineWidget from './widgets/PipelineWidget';
 import SupportedLocalesWidget from './widgets/SupportedLocalesWidget';
 import TableDefinitionsWidget from './widgets/TableDefinitionsWidget';
 
 const Dashboard = () => {
   return (
-    <Box component='div' flexGrow={1}>
+    <Box component='div' flexGrow={1} sx={{ pb: 3 }}>
       <Appbar />
       <Grid
         container
@@ -28,6 +29,9 @@ const Dashboard = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <AssignedToMeWidget />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <OutputsWidget />
         </Grid>
         <Grid item xs={12} sm={6}>
           <SupportedLocalesWidget />

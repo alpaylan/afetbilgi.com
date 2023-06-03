@@ -99,9 +99,17 @@ const DataDialog = (props: DataDialogProps) => {
     } else {
       let promise: Promise<void>;
       if (props.row) {
-        promise = updateRow(props.tableDefinition, currentState);
+        promise = updateRow(
+          props.tableDefinition,
+          currentState,
+          dataFilters.selectedLocale ?? localeConfig.defaultLocale,
+        );
       } else {
-        promise = createRow(props.tableDefinition, currentState);
+        promise = createRow(
+          props.tableDefinition,
+          currentState,
+          dataFilters.selectedLocale ?? localeConfig.defaultLocale,
+        );
       }
 
       setLoading(true);
