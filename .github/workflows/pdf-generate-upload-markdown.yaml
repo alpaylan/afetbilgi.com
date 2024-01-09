@@ -3,8 +3,8 @@ name: PDF upload with Markdown (cronjob)
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: "32 * * * *"
+  # schedule:
+  #   - cron: "32 * * * *"
 
 jobs:
   deploy:
