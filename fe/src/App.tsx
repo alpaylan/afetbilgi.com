@@ -2,7 +2,7 @@ import './App.css';
 
 import MapIcon from '@mui/icons-material/Map';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Box, Button, Container, MenuItem, Select } from '@mui/material';
+import { Box, Button, Container, MenuItem, Select, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -106,6 +106,11 @@ function App() {
           justifyContent: 'center',
         }}
       >
+        <Box sx={{ mb: 1 }}>
+          <Typography variant="h5" component="h1" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+            BU SAYFADAKİ BİLGİLER ÖRNEK AMAÇLI RASTGELE YARATILMIŞTIR, GERÇEK DEĞİLDİR
+          </Typography>
+        </Box>
         <Box
           sx={{
             textAlign: 'center',
@@ -134,7 +139,6 @@ function App() {
               </Button>
             </Box>
           )}
-
           <Button
             size="large"
             onClick={() => {
