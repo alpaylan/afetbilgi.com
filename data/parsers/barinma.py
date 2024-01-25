@@ -108,13 +108,14 @@ def main():
         parsed.append(
             {
                 "city": city_name,
-                "name": get_data(row["Lokasyon"]),
-               
+                "name": "Lorem Ipsum",
+
                 # TODO: Add back after data migration, this is a temporary fix
                 # "is_validated": get_data(row["Doğrulanma Durumu"]) == "Doğrulandı",
-                
-                "url": get_data(row["Link"]),
-                "address": get_data(row["Konum linki"]),
+
+                "url": "www.google.com",
+                "address": "www.google.com",
+                # get random date
                 "validation_date": get_data(row["Doğrulanma Tarihi"]),
             }
         )
@@ -152,49 +153,17 @@ def main():
             "text_ar": "مصادر أخرى توفر مساكن مؤقة",
             "usefulLinks": [
                 {
-                    "name": "Otelz.com",
-                    "url": "https://www.otelz.com/gecmisolsunturkiyem",
+                    "name": "Lores Ipsum",
+                    "url": "https://www.loremipsum.com",
                 },
                 {
-                    "name": "Turkish Airlines Holidays",
-                    "url": "https://www.turkishairlinesholidays.com/tr-tr/depremzedeler-icin-oteller",
+                    "name": "Lorem Ipsum 2",
+                    "url": "https://www.loremipsum2.com",
                 },
                 {
-                    "name": "Ahbap Güvenli Bölgeler Haritası",
-                    "url": "https://www.google.com/maps/d/u/1/viewer?mid=1aQ0TJi4q_46XAZiSLggkbTjPzLGkTzQ&ll=37.06301742072887%2C37.28739713964324&z=8",
+                    "name": "Lorem Ipsum 3",
+                    "url": "https://www.loremipsum3.com",
                 },
-                {
-                    "name": "HepsiEmlak Dostluk Çatısı",
-                    "url": "https://www.hepsiemlak.com/emlak-yasam/genel/dostluk-catisi?utm_source=sm&utm_medium=post-ads&utm_campaign=socialmedia&fbclid=PAAabu7QLa2gN0L2L7t_UIz14kmlX8tb033u1yB9T_ypjLbrFuV4qMX9NWo-s",
-                },
-                {
-                    "name": "T.C. MİLLÎ EĞİTİM BAKANLIĞI DESTEK HİZMETLERİ GENEL MÜDÜRLÜĞÜ E-DESTEK",
-                    "url": "https://dhgm.meb.gov.tr/edestek/ogretmenevi/ogretmenevi_liste.aspx",
-                },
-                {
-                    "name": "Depremzedelerin Kullanımına Açılan Tesis ve Salonlar",
-                    "url": "https://gsb.gov.tr/haber-detay.html/968"
-                },
-                {
-                    "name": "Evim Evindir",
-                    "url": "https://www.evimevindir.com/"
-                },
-                {
-                    "name": "Nilüfer Belediyesi Evim Evin Olsun",
-                    "url": "https://www.nilufer.bel.tr/haber/evim-evin-olsun"
-                },
-                {
-                    "name": "Missafir",
-                    "url": "https://www.missafir.com/ev-sahipleriyle-depremzedeleri-bulusturma-platformu/"
-                },
-                {
-                    "name": "Emlakjet Evin Umut Olsun",
-                    "url": "https://www.emlakjet.com/evin-umut-olsun/"
-                },
-                {
-                    "name": "Evim Yuvan Olsun (AFAD)",
-                    "url": "https://evimyuvanolsun.org/"
-                }
             ],
         },
     }

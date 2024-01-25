@@ -1,24 +1,16 @@
 {
-    "type": "data",
-    "data": {
-        "dataType": "vpn",
-        "items": [
-            {
-                "name": "ProtonVPN",
-                "url": "https://protonvpn.com/tr/"
-            },
-            {
-                "name": "Cloudflare Warp",
-                "url": "https://1.1.1.1/"
-            },
-            {
-                "name": "Secure VPN",
-                "url": "https://play.google.com/store/apps/details?id=com.fast.free.unblock.secure.vpn"
-            },
-            {
-                "name": "Super VPN",
-                "url": "https://play.google.com/store/apps/details?id=com.jrzheng.supervpnfree&hl=tr&gl=US&pli=1"
-            }
-        ]
-    }
+  "type": "data",
+  "data": {
+    "dataType": "vpn",
+    "items": [
+      {
+        "name": "Lorem Ipsum",
+        "url": "https://www.google.com/"
+      },
+      {
+        "name": "Lorem Ipsum",
+        "url": "https://www.google.com/"
+      }
+    ]
+  }
 }

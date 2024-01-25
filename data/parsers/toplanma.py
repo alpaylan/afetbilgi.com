@@ -79,9 +79,9 @@ def main():
 
         items.append(
             {
-                "name": row['Konum'].strip() if not pd.isna(row['Konum']) else None,
-                "url": row['Maps Linki'].strip() if not pd.isna(row['Maps Linki']) else None,
-                "source": row['Kaynak'].strip() if not pd.isna(row['Kaynak']) else None,
+                "name": "Lorem Ipsum",
+                "url": "www.google.com",
+                "source": "www.google.com",
             }
         )
     else:

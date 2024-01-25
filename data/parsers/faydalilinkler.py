@@ -2,6 +2,7 @@ import sys
 import json
 import pandas as pd
 
+
 def main():
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
@@ -18,13 +19,12 @@ def main():
 
     usefulLinks = []
 
-
     for _, row in df.iterrows():
 
         usefulLinks.append(
             {
-                "name": row["İsim"].strip(),
-                "url": row["Link"].strip(),
+                "name": "Lorem ipsum",
+                "url": "www.google.com",
                 "category": row["Kategori"].strip(),
             }
         )

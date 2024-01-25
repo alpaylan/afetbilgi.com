@@ -60,10 +60,10 @@ def main():
         items.append(
             {
                 "district": row["İlçe"].strip(),
-                "name": row["Lokasyon"].strip(),
-                "maps_url": row["Google Maps Linki"].strip(),
-                "url": row["Anons Linki"].strip(),
-                "phone_number": row["Telefon"].strip(),
+                "name": "Lorem Ipsum",
+                "maps_url": "www.loremipsum.com",
+                "url": "www.loremipsum.com",
+                "phone_number": "555 555 55 55",
                 "updated_at_date": row["Teyit Tarih"].strip(),
                 "updated_at_time": row["Teyit Saati"].strip(),
             }
@@ -101,12 +101,12 @@ def main():
             "text_ar": 'المستشفيات الفعالة',
             "usefulLinks": [
                 {
-                    "name": 'Deprem Bölgesi Aktif Hastane Listesi',
-                    "url": 'https://docs.google.com/spreadsheets/d/1a785CPjKg0cVND2rl2dGnwb7q_1mPJhwWJ8UODCcttw/edit#gid=0',
+                    "name": 'Lorem Ipsum 1',
+                    "url": 'www.loremipsum.com',
                 },
                 {
-                    "name": 'LÖSEV - LÖSANTE Hastanesi Ücretsiz Hizmet',
-                    "url": 'https://www.instagram.com/p/Cocbq3JOblB/?igshid=NTdlMDg3MTY='
+                    "name": 'Lorem Ipsum 2',
+                    "url": 'www.loremipsum.com',
                 }
             ],
         }

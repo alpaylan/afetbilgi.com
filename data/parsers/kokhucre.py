@@ -1,4 +1,4 @@
-import os 
+import os
 import sys
 import json
 import pandas as pd
@@ -14,7 +14,8 @@ if __name__ == '__main__':
     sheet_name = "K%C3%B6k%20H%C3%BCcre%20Ba%C4%9F%C4%B1%C5%9F%20Noktalar%C4%B1"
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
     df = pd.read_csv(url)
-    df.rename(columns={'BÖLGE İSMİ':'area', 'ŞEHİR':'city', 'ADRES':'address', 'TELEFON NUMARASI':'phone'}, inplace=True)
+    df.rename(columns={'BÖLGE İSMİ': 'area', 'ŞEHİR': 'city',
+              'ADRES': 'address', 'TELEFON NUMARASI': 'phone'}, inplace=True)
     json_obj = {}
     json_obj['type'] = 'data'
     json_obj['data'] = {}
@@ -23,8 +24,8 @@ if __name__ == '__main__':
         {
             'area': row['area'].strip(),
             'city': row['city'].strip(),
-            'address': row['address'].strip(),
-            'phone': row['phone'].strip()
+            'address': "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            'phone': "5555555555"
         } for _, row in df.iterrows()
     ]
     with open(out_path, "w") as f:

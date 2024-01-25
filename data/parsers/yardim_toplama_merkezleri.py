@@ -1,4 +1,4 @@
-import os 
+import os
 import sys
 import json
 import pandas as pd
@@ -17,7 +17,8 @@ if __name__ == '__main__':
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
     curr_path = os.path.dirname(os.path.realpath(__file__))
-    city_translation = json.loads(open(f"{curr_path}/utils/il_translate.json").read())
+    city_translation = json.loads(
+        open(f"{curr_path}/utils/il_translate.json").read())
 
     df = pd.read_csv(url)
     df = df.fillna("")
@@ -75,13 +76,13 @@ if __name__ == '__main__':
         city_name = turkish_title(row["Şehir"].strip())
         if city_name not in cityData:
             cityData[city_name] = []
-        
+
         cityData[city_name].append({
             "city": city_name,
-            "name": row["Kurum"].strip(),
-            "url": row["Link"].strip(),
-            "phone_number": row["Telefon Numarası"].strip(),
-            "notes": row["Açıklamalar"].strip()
+            "name": "Lorem Ipsum",
+            "url": "https://www.google.com",
+            "phone_number": "1234567890",
+            "notes": "Lorem Ipsum Dolor Sit Amet"
         })
 
     for city in cityData:
@@ -99,7 +100,6 @@ if __name__ == '__main__':
             "name_ku": city_translation[city]['ku'],
             "name_ar": city_translation[city]['ar']
         })
-
 
     with open(out_path, "w") as f:
         f.write(json.dumps(json_obj, indent=4, ensure_ascii=False))

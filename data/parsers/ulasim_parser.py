@@ -4,12 +4,13 @@ import sys
 
 from utils.functions import turkish_title
 
+
 def main():
 
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
         sys.exit(1)
-    
+
     out_path = sys.argv[1]
 
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
@@ -26,11 +27,11 @@ def main():
 
         transportations.append(
             {
-                "name": turkish_title(row["Şirket/Kampanya İsmi"].strip()),
-                "url": row["Link"].strip(),
-                "validation_type": row["Doğrulanma Yöntemi"].strip(),
-                "validation_date": row["Doğrulama Tarihi"].strip(),
-                "description": row["Açıklama"].strip(),
+                "name": "Lorem Ipsum",
+                "url": "www.loremipsum.com",
+                "validation_type": "Lorem Ipsum",
+                "validation_date": "Lorem Ipsum",
+                "description": "Lorem Ipsum Dolor Sit Amet",
                 "validity_date": row["Geçerlilik Tarihi"].strip(),
             }
         )
@@ -45,7 +46,6 @@ def main():
 
     with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-    
 
 
 if __name__ == "__main__":

@@ -1,32 +1,20 @@
 {
-    "type": "data",
-    "data": {
-        "dataType": "donation-links",
-        "items": [
-            {
-                "name": "AHBAP",
-                "url": "https://ahbap.org/bagisci-ol"
-            },
-            {
-                "name": "AFAD",
-                "url": "https://www.afad.gov.tr/depremkampanyasi2"
-            },
-            {
-                "name": "AKUT",
-                "url": "https://www.akut.org.tr/bagis-yap"
-            },
-            {
-                "name": "Kızılay",
-                "url": "https://www.kizilay.org.tr/bagis"
-            },
-            {
-                "name": "Unicef TL Bağış",
-                "url": "https://bagis.unicefturk.org/guneydogudepremi"
-            },
-            {
-                "name": "Unicef USD/EUR Bağış",
-                "url": "https://bagis.unicefturk.org/turkiye_earthquake"
-            }
-        ]
-    }
+  "type": "data",
+  "data": {
+    "dataType": "donation-links",
+    "items": [
+      {
+        "name": "Lorem ipsum dolor sit amet",
+        "url": "https://www.google.com"
+      },
+      {
+        "name": "Lorem ipsum dolor sit amet",
+        "url": "https://www.google.com"
+      },
+      {
+        "name": "Lorem ipsum dolor sit amet",
+        "url": "https://www.google.com"
+      }
+    ]
+  }
 }
