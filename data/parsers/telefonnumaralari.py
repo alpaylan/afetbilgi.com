@@ -14,16 +14,14 @@ def todict(obj, classkey=None):
     elif hasattr(obj, "__iter__") and not isinstance(obj, str):
         return [todict(v, classkey) for v in obj]
     elif hasattr(obj, "__dict__"):
-        data = dict([(key, todict(value, classkey)) 
-            for key, value in obj.__dict__.items() 
-            if not callable(value) and not key.startswith('_')])
+        data = dict([(key, todict(value, classkey))
+                     for key, value in obj.__dict__.items()
+                     if not callable(value) and not key.startswith('_')])
         if classkey is not None and hasattr(obj, "__class__"):
             data[classkey] = obj.__class__.__name__
         return data
     else:
         return obj
-
-
 
 
 if __name__ == "__main__":
@@ -49,16 +47,16 @@ if __name__ == "__main__":
         "Detaylar": "details",
     })
     # print(df)
-    
+
     phones = []
     for _, row in df.iterrows():
         phones.append(
             {
                 "category": row["category"],
-                "name": row["name"],
-                "phone_number": row["phone_number"],
-                "phones": row["phone_number"].split("\n"),
-                "details": row["details"],
+                "name": "Lorem ipsum",
+                "phone_number": "5555555555",
+                "phones": ["5555555555", "5555555555"],
+                "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
         )
 
@@ -72,4 +70,3 @@ if __name__ == "__main__":
 
     with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
-

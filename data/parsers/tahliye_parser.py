@@ -57,11 +57,11 @@ def main():
             {
                 "city": turkish_title(row['Şehir'].strip()),
                 "county": turkish_title(row['İlçe'].strip()),
-                "name": row['İsim'].strip(),
-                "map_link": row['Maps Linki'].strip(),
-                "address": row['Adres'].strip(),
-                "contacts": [x.strip() for x in row['Telefon'].split("\n")],
-                "validator": row['Teyit Merci'].strip(),
+                "name": "Lorem Ipsum",
+                "map_link": "www.google.com/maps",
+                "address": "Lorem Ipsum Dolor Sit Amet",
+                "contacts": ["+90 555 555 55 55", "+90 555 555 55 55"],
+                "validator": "Lorem Ipsum",
             }
         )
 

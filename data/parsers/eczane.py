@@ -3,6 +3,7 @@ import json
 import pandas as pd
 from urllib.parse import urlencode
 
+
 def main():
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
@@ -13,7 +14,8 @@ def main():
     sheet_id = "131Wi8A__gpRobBT3ikt5VD3rSZIPZxxtbqZTOUHUmB8"
     query = urlencode({"sheet": "Konteynır Eczane", "tqx": "out:csv"})
 
-    df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?{query}", encoding="utf-8", header=None)
+    df = pd.read_csv(
+        f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?{query}", encoding="utf-8", header=None)
     df = df.fillna("")
     dps = []
     first = True
@@ -26,8 +28,8 @@ def main():
         dps.append({
             "city": row[0].strip(),
             "district": row[1].strip(),
-            "location": row[2].strip(),
-            "locationLink": row[3].strip(),
+            "location": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "locationLink": "www.google.com",
         })
 
     data = {
@@ -40,6 +42,7 @@ def main():
 
     with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()

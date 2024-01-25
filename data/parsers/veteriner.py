@@ -88,10 +88,10 @@ if __name__ == "__main__":
 
         vets.append(
             {
-                "name": row["İsim"].strip() if not pd.isna(row["İsim"]) else None,
-                "phone_number": [phone for phone in row["Telefon"].split("\n")],
-                "address": row["Konum"].strip() if not pd.isna(row["Konum"]) else None,
-                "maps_link": row["Konum Linki"].strip() if not pd.isna(row["Konum Linki"]) else None,
+                "name": "Lorem ipsum",
+                "phone_number": ["5555555555", "5555555555"],
+                "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "maps_link": "www.google.com",
             }
         )
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
             "usefulLinks": [
                 {
                     "name": "Gönüllü Veteriner Listesi",
-                    "url": "https://docs.google.com/spreadsheets/d/1vtvYf3_9MAXABvtY9r0RFmTWKkw2L0he/htmlview?fbclid=PAAaZDIXVVVywspC1elQPFNeb5RLqQSnshJX1ASa1QQV6ThSu5zaOO93cYQO8"
+                    "url": "www.google.com"
                 }
             ]
         }

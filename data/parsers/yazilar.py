@@ -2,6 +2,7 @@ import sys
 import json
 import pandas as pd
 
+
 def main():
     if len(sys.argv) != 2:
         print(f"Usage: python {sys.argv[0]} <output-file>")
@@ -17,15 +18,14 @@ def main():
 
     articles = []
 
-
     for _, row in df.iterrows():
 
         articles.append(
             {
-                "title": row['Yazı Adı'].strip(),
-                "author": row['Yazar'].strip(),
-                "url": row['Link'].strip(),
-                "topic": row['Yazı Konusu'].strip(),
+                "title": "Lorem Ipsum",
+                "author": "Lorem Ipsum",
+                "url": "https://www.google.com",
+                "topic": "Lorem Ipsum",
             }
         )
 
@@ -39,6 +39,7 @@ def main():
 
     with open(out_path, "w+", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 if __name__ == "__main__":
     main()

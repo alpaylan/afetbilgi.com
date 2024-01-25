@@ -67,10 +67,10 @@ def main():
         for _, row in city_df.iterrows():
             ilce_dict[row[1]].append(
                 {
-                    "name": row["Lokasyon"].strip() if not pd.isna(row["Lokasyon"]) else None,
-                    "maps_url": row["Google Maps Linki"].strip() if not pd.isna(row["Google Maps Linki"]) else None,
-                    "url": row["Anons Linki"].strip() if not pd.isna(row["Anons Linki"]) else None,
-                    "phone_number": row["Telefon"].strip() if not pd.isna(row["Telefon"]) else None,
+                    "name": "Lorem ipsum",
+                    "maps_url": "https://www.loremipsum.com",
+                    "url": "https://www.loremipsum.com",
+                    "phone_number": "05555555555",
                     "updated_at_date": row["Teyit Tarih"].strip() if not pd.isna(row["Teyit Tarih"]) else None,
                     "updated_at_time": row["Teyit Saati"].strip() if not pd.isna(row["Teyit Saati"]) else None,
                 }
@@ -84,8 +84,8 @@ def main():
                         "type": "data",
                         "data": {
                             "dataType": "food-items",
-                            "city": turkish_title(city.strip()),
-                            "county": turkish_title(k.strip()),
+                            "city": turkish_title("Lorem"),
+                            "county": turkish_title("Ipsum"),
                             "items": v,
                         },
                     },
